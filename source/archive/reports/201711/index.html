@@ -1,0 +1,90 @@
+---
+layout: page
+title: FHIR Foundation report for November 2017
+---
+ 
+<strong>Events</strong>
+
+The most significant event for November was the FHIR DevDays held in Amsterdam on November 15-17. This year, 330 attendees from 49 countries attended, for a mix of keynotes, tutorials, and connectathon tracks. 
+
+DevDays remains the premiere European FHIR event. This years keynote speakers spoke about the hacking mentality, Google's FHIR based data analysis (see below) and the work of the openAPI foundation.  The tutorials covered 12 tracks and provided a wide and deep perspective over the FHIR specification and many key implementation projects around the world.
+
+For me, and several other participants, this DevDays marked a real maturity in the community, as the FHIR Community moves from having the prospect of making change in the Health IT market to actually producing real change. Once again, Furore hosted an excellent meeting, and I'm really looking forward to DevDays coming to USA next year. 
+
+Also, this month, James Agnew (HAPI lead) and I visited Vietnam along with Raymond Sarmiento from AEHIN (Asian e-Health information Nework) for the inaugural Vietnamese FHIR connectathon. Over 3 day period, between 20 and 70 people shared in tutorials and workshops on FHIR, HAPI, and how to use them in national and institution infrastructure. Though not a lot of actual data exchange happened (it was the first connectathon), there was a lot of enthusiasm, and follow up events are planned around specific projects (including the national e-health record).
+
+<strong>Community Growth</strong>
+
+Some FHIR community members asked about FHIR community growth. For member's interest, here are 2 graphical representations of the FHIR community size:
+
+Geographical source of hits on the test HAPI server:
+
+<img height="268" width="500" src="http://fhir.org/assets/images/hapi-usage-2017-11.png"/>
+
+Growth of number of chat.fhir.org members
+
+<img height="240" width="500" src="http://fhir.org/assets/images/zulip-users-2017-12.png"/>
+
+<strong>Foundation</strong>
+
+The FHIR Foundation continues to get new members - at least 65 members now. There's still a lack of clarity about how many - hopefully the glitch in the registration procedure will be sorted this month.
+
+<strong>FHIR Registry</strong>
+
+At DevDays, we had a meeting about plans for <a href="">http://registry.fhr.org</a>. The most important issue to resolve is around inclusion of the existing content on Simplifier that predates the registry, though this problem underscores that choosing what to publish in the registry, and when, will continue to be a matter of debate within the community. We will be working on roll-out processes at the New Orleans meeting.
+
+<strong>Releases</strong>
+
+This month:
+<ul>
+<li>HL7 published the STU2 release of the <a href="http://hl7.org/fhir/us/qicore/">QI-Core implementation guide</a></li>
+<li>Cerner released <a href="http://engineering.cerner.com/blog/announcing-bunsen-fhir-data-with-apache-spark/">Bunsen</a>. a framework for working with large numbers of FHIR resources. </li>
+<li>Google have provided a public <a href="https://bigquery.cloud.google.com/dataset/fhir-org-starter-project:synthea">end-point</a> using their cloud big data infrastructure to host <a href="https://github.com/synthetichealth/synthea">Synthea</a> generated data.</li>
+</ul>
+
+<strong>Data Analytics</strong>
+
+Use of FHIR for data analytics is gradually becoming a more noticeable focus of the FHIR community. This came into sharp focus at the DevDays meeting, where one of the key notes was given by Eyal Oren, a product manage with Google, focusing on their use of FHIR as the basis for the health data analytics work. 
+
+There's nothing new about using FHIR in data analytics: many companies and institutions are already using FHIR as a key part of their data acquisition process to support their data analytics. But there's a growing focus in building the data analytics using FHIR directly - using resources as the primary schema, and performing anlaysis/queries on them directly. 
+
+We'll be working to draw out 'data storage' as a recognised 4th paradigm for use of FHIR (along side RESTful API, messaging, and documents). The  community should expect to see "Data Analytics" as a theme in FHIR Release 4 that includes the RDF work, and more besides, to futher support using  of FHIR to provide data analysis.
+
+<strong>Blockchain</strong>
+
+Interest (hype) in block chain use in healthcare continues to grow without restriction. The primary use for blockchain is to provide non-tamperable  public record without needing a single point of control, which isn't really  a solution that suits many of the problems for which blockchain is proposed. 
+
+There are clearly uses for blockchain around payments, and provider qualification tracking. These may involve the use of FHIR resources. The FHIR community continues to monitor the blockchain space and debate what use cases make sense (see <a href="https://chat.fhir.org/#narrow/stream/blockchain">the Blockchain channel in chat.fhir.org</a>). As yet, no specific projects or change proposals have beeb brought to the community.
+
+We're working on holding a blockchain/HL7 standards meeting mid-next year. 
+
+<strong>Connectathon Planning</strong>
+
+We now have 26(!) tracks planned for the FHIR connectathon in New Orleans - more than ever. It's on track to be our biggest connectathon yet - consider booking your rooms early to get the HL7 rate. This one will feature some changes:
+<ul>
+<li>it's going to go all day on Sunday</li>
+<li>report back will be done on a web page, not through a presentation</li>
+<li>we have a connectathon manager to improve user experience (necessary as we scale further)</li>
+</ul>
+
+<strong>Ballot Preparation</strong>
+
+Our main focus at the moment is preparing for the January ballot. The following FHIR products will be up for ballot:
+<ul>
+<li>Full Specification: Draft for comment - this is mainly preparation for the first normative ballot, but it's also an opportunity to comment on the current version as we prepare for R4</li>
+<li>Implementation Guide for STU: Clinical Decision Support for Immunizations</li>
+<li>US Implementation Guides for STU: Core & Quality</li>
+<li>Implementation Guides: Draft for comment/Informative: Electronic Case Reporting (eCR), Personal Health Device (PHD), Point-of-care Device (PoCD), Validated Healthcare Directory</li>
+</ul>
+
+<strong>Collaborations</strong>
+<li>OpenAPI - We are working with Mo Alkady to add support for OpenAPI (swagger) specifications as a product of the standard implementation guides. </li>
+<li>Other collaborations, see next report...</li>
+
+<strong>Forthcoming events</strong>
+<ul>
+<li>FHIR Applications Round Table, New Orleans Dec 5/6</li>
+<li>WGM, New Orleans Jan 28 - Feb 2</li>
+</ul>
+
+See http://fhir.org/calendar (reminder: please let <a href="mailto:grahame@hl7.org">grahame@hl7.org</a> or <a href="mailto:wkubick@fhir.org">wkubick@fhir.org</a> of FHIR related events)

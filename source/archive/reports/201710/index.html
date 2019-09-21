@@ -1,0 +1,77 @@
+---
+layout: page
+title: FHIR Foundation Report for October 2017
+---
+
+<strong>Events</strong>
+
+The 17th International HL7 Interoperability Conference (IHIC 2017) was held on October 22-24 in Athens, Greece, with the conference motto "Re-shaping healthcare systems".  The conference was well attended, with participation from multiple European countries and elsewhere.  FHIR was a prominent theme during the conference.  The program included FHIR overview and hands-on tutorials, references to FHIR by keynote speakers and several FHIR-based paper presentations and reports during the main conference.  The final conference event was a workshop and panel presentation on FHIR: An Implementers’ Guide.  Also, concurrent with the main conference sessions on the first day, the conference included a FHIR Datathon.  This event was also well attended and attracted a more local audience of developers and implementers interested in becoming more familiar with or further developing their knowledge and use of FHIR.  The focus of the Datathon was using the FHIR API for data retrieval and analysis, drawing from a set of realistic simulated patient data represented as FHIR resources. (h/t Rob Hausam who attended)
+
+At the Snomed International Meeting in Bratislava, there was a Member Forum Workshop on Tuesday 17th October 2017 on the topic of "SNOMED CT on FHIR". The meeting included members from SNOMED International, HL7 International, and at least 16 SNOMED International Members, with a focusing on sharing and working together on common efforts related to using SNOMED CT with HL7 FHIR. Key topics discussed:
+<ul>
+<li>Fifteen Members reported on current or planned activities using SNOMED CT with FHIR. Most indicated a high level of interest in sharing and collaborating with other Members, and all Members are interested in the outcomes</li>
+<li>HL7 International are seeing an increased use of SNOMED CT in production systems, and are keen to collaborate, but have not secured any resources to pursue this work. SNOMED International is also keep to collaborate</li>
+<li>The 'SNOMED on FHIR' Confluence space (http://snomed.org/fhir), will hold meeting agendas and minutes and facilitate document sharing </li>
+<li>We agreed to set up a shared chat channel between Snomed and FHIR - this now exists at both <a href="https://chat.snomedtools.org">https://chat.snomedtools.org</a> and <a href="https://chat.fhir.org/#narrow/stream/snomed">https://chat.fhir.org</a></li>
+<li>Further work is planned</li>
+</ul>
+(h/t Linda Bird from Snomed International for contributing)
+
+On Oct 16-17, HL7 Australia held a FHIR connectathon and meeting, which included streams for Simple Patient, Australian Base Profiles, Provider Directories, and  v2 message exchange (I think this is a first for a connectathon). About 50 people attended. 
+
+On Oct 26/27, I attended a R unconference. R is a statistical and graphics programming library. See <a href="https://thefhirplace.com/2017/10/31/make-your-first-fhir-client-in-r-within-one-hour/">Furore Blog</a> and <a href="http://www.healthintersections.com.au/?p=2740)">Meeting Report</a> for details. R is a really good (best?) choice for simple analysis and graphical applications.
+
+I also attended a meeting in Vietnam to talk about FHIR and HL7 and their plans for the future. As a follow up, Vietnam is planning a FHIR connectathon next month, and planning on creating an HL7 Affiliate. (Thanks to the Asian Development Bank for supporting this work)
+
+<strong>FHIR Foundation</strong>
+
+The FHIR Foundation is still picking up members, though the initial rush has slowed.  We have ~50 individual members, and things are picking up slowly. There's still some glitches in the sign up process, and we're working to resolve those. I'll add a note to the email I send to members announcing this report seeking further input on  member benefits. 
+
+We've added a calendar to FHIR.org. Members are invited to alert us to upcoming events for inclusion in the calendar.
+
+<strong>FHIR Registry</strong> 
+
+The FHIR registry is still undergoing prototyping. We will publish some policy documents shortly that should clarify the open questions for the community, and once we've done that, we can hopefully reset the content and bring it into  production.
+
+<strong>Product Development</strong>
+
+HL7 has solid support for FHIR development for this year from the US ONC.  The support covers development of the core standard, to help us deliver FHIR R4 on time, and also actions to grow the community further; this includes support for a webmaster to develop some member and implementer  services. This support specifically prioritises bulk data access - see below. 
+
+<strong>Connectathon Planning</strong>
+
+We now have 24 tracks planned for the FHIR connectathon in New Orleans - more than ever. It's on track to be our biggest connectathon yet - consider booking your rooms early to get the HL7 rate. This one will feature some changes:
+<ul>
+<li>it's going to go all day on Sunday</li>
+<li>report back will be done on a web page, not through a presentation</li>
+<li>we will add a connectathon manager to improve user experience (necessary as we scale further)</li>
+</ul>
+  
+Some of the work on improving the user experience will come through copying techniques developed by the OpenSci community for their unconferences.
+
+<strong>Bulk Data progress</strong>
+
+The bulk data <a href="http://www.healthintersections.com.au/?p=2689">API proposal</a> has been fully implemented by test.fhir.org now, and mostly implemented by  Oridashi in Australia. HL7 is working with the Smart team at Boston Children's and ONC to further characterise the use cases, requirements and need for adopting this interface. 
+
+One issue that has come up is around access control and consent, which the API is presently silent on. We expect that the connectathon process will clarify concerns around this. 
+
+<strong>Consent</strong>
+
+More generally, consent-related issues remain difficult for the FHIR community to deal with - the breadth and variation of the approaches that are preferred (or legislated) make it very hard for any consensus about overall direction and scope to emerge in the community, and this is making it very hard to  come up with meaningful content models and connectathon tests for that  content model. This does not mean that there's not a lot of interest in  the subject - there is, but it's hard to turn that into any kind of direction, and there's little evidence that community participants expect (or even want)  any progress on this.
+
+I'm not sure what the solution is, but this is increasingly looking to me  look the biggest obstacle for the overall adoption of seamless sharing as envisaged by many people.
+
+<strong>Collaborations</strong>
+
+<ul>
+<li>Snomed Intl: See notes above from Bratislava meeting</li>
+<li>W3C: Working on leveraging the RDF work. See <a href="https://youtu.be/6wUiThBzFWA / https://github.com/BD2KOnFHIR/BLENDINGFHIRandRDF/tree/master/yosemite_talk">the yosemite_talk</a>. No obstacles reported. Planning on meeting at DevDays in Amsterdam</li>
+<li>CDISC: Will chase a report for next month<l/i>
+<li>AMA: I have a meeting with the AMA CTO next week</li>
+<li>OpenMHealth: No report yet</li>
+<li>IHE: Planning for joint work and meetings is proceeding, but not ready to announce yet</li>
+</ul>
+
+<strong>Forthcoming Meetings</strong>
+
+See <a href="http://fhir.org/calendar">http://fhir.org/calendar</a>. The most important meeting this 
+coming month is DevDays - see you in Amsterdam!

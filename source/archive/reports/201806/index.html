@@ -1,0 +1,142 @@
+---
+layout: page
+title: FHIR Foundation Monthly report - June 2018
+---
+
+<h3>Events</h3>
+
+<b>DevDays Boston</b>
+
+Much of the US FHIR community - including many members of the FHIR foundation - gathered in Boston during the middle of June for the first US FHIR DevDays. FHIR DevDays has been running in Amsterdam for several years now, and it was great to see the same feel of the meeting reproduced in USA
+
+When I present on FHIR, I say that FHIR is two things: first, a community, and then second, a technical specification. It's the community that makes the specification come to life, and for me, DevDays is the gathering most focused on what the community is - there's a lot of informal side meetings around specific technical issues. 
+
+We had many new participants, which was great. On the other hand, the meeting was at capacity, and we had to turn down a lot of participants. I felt bad about that, since many people missed out on a lot of FHIR knowledge and community engagement - we'll obviously be thinking hard about that next year.  Thanks to both Firely (from Netherlands) and HL7 for running a great meeting.
+
+The most obvious theme of the meeting - quite a lot of people commented about this on Twitter to to me personally - was the way FHIR empowers Data Analysis, and that this is becoming something real, not just a potential. More on that below. 
+
+A common question to me is to what degree FHIR is actually real: how much is it actually implemented. And for a lot of people, the answer is, 'it's all hype  but nothing is actually happening'. This is driven by slow roll out/take up and development cycles that take years. I think that DevDays showed clearly that this is real, and FHIR is about to make the transition to widely deployed. 
+
+Still, even then, the implementation is in what is niche applications for institutions: perimeter interoperability with the patient, for example. We commonly get asked: will FHIR replace existing V2 and CDA integrations - and if so, how quickly? We're generally pretty cautious how we answer that - we expect that both - and v2 in particular - will still be used for a long time. But that analysis is based on a linear extrapolation of current trends: the health will continue as it is, changing slowly (if at all). My big takeway from Boston was: disruption is coming...
+
+<blockquote>
+"Disruption is never one feature, but full set of *assumptions* that go into a business" (<a href="https://twitter.com/stevesi/status/1011285557719326721">Steven Sinofsky</a>)
+</blockquote>
+
+The question for me is 'what package of changes creates the capacity to disrupt healthcare?' Note, btw, that most people mean, by disruption, bring down big companies and creating new ones. We - the FHIR community - aren't about that - it might happen, or not. What we're interested in is disruption at a micro level: what will actually change the process of healthcare. And the broad spectrum of presentations at DevDays hints at what such a package might look like:
+
+<ul>
+<li>Connecting patients personal devices to their medical record, from providers of all sizes (GPs --> VA system)</li>
+<li>Data analysis based on large AI networks deployed into personal medical records with full control over security/privacy</li>
+<li>Hospital grade care reaching into the home </li>
+<li>smart AI services made available to all participants at the point of decision making</li>
+<li>Learning healthcare system measuring it's own performance continuously</li>
+<li>IoT deployed integrated into the system</li>
+</ul>
+
+None that is new, and you can read a list like that all over the web. FHIR is just a conduit for the kind of transformation other industries have seen - nothing special here. But what we saw at DevDays was that all of things exist to some degree or other in their parts. We're not there yet, but:
+
+<blockquote>
+"Disruption happens slowly for sure, and then quickly" (<a href="https://twitter.com/stevesi/status/1011285557719326721">Steven Sinofsky</a>)
+</blockquote>
+
+So while it's not going to happen immediately, I now believe that the assumption that change will continue at the pace we're used to is invalid, and we should challenge that assumption where ever we find it. (That's not the same as knowing what's actually going to happen!)
+
+That was my takeaway from meeting. You can see other reports:
+
+<ul>
+<li><a href="https://www.j2interactive.com/blog/fhir-dev-days-2018/">Ayesha's write up</a></li>
+<li><a href="https://twitter.com/hashtag/FHIRDevDays18?src=hash">Twitter stream</a></li>
+</ul>
+
+<b>FHIR Starter, St Petersburg</b>
+
+Immediately following Boston, Lloyd Mckenzie and I flew to St Petersburg for the Russian FHIR Starter conference. We met with 120 or so Russian implementers of FHIR (though it was advertised outside Russia, the Russia visa requirements kind of made it hard to visit, and there was only a few ex-pat Russians present). The implementers represented government departments, vendors, consultants, and academics. 
+
+The meeting featured a dynamic mix of tutorials, implemenation reports, and open discussion streams. We were really surprised at what they've done- they have several FHIR based regional projects, and they're definitely ahead of implementations in other countries. In particular, there's a regional lab ordering/reporting network already in production. Because of this, the open discussion streams foused on really hard questions that are still open issues in FHIR:
+
+<ul>
+<li>using digital signatures with the RESTful API</li>
+<li>tracking the relationship between conditions/problems and underlying causes</li>
+<li>Microbiology reporting </li>
+</ul>
+
+We encouraged the Russian FHIR community to engage a lot more with the wider international community. There's very definite problems around language, affordability, and travel rules, but they have much to teach us (even just from their questions) and they would benefit much from more engagement with the wider community. 
+
+Both Lloyd and I really enjoyed the meeting, and St Petersburg, and we'd encourage more people from the community to engage when/if they have a follow up meeting. 
+
+<b>MIHIN FHIR Meeting</b>
+
+Health Information Technology developers and business users assembled in Lansing on June 4 and 5 for Michigan’s first Meteroic Interoperability Connectathon. The event, hosted by the Michigan Health Information Network Shared Services (MiHIN) gave attendees the opportunity to learn, develop, and test applications using Fast Healthcare Interoperability Resources (FHIR®) in a collaborative environment with other participants, including representatives from the ONC, the Substance Abuse and Mental Health Services Administration (SAMHSA), the Medicaid Information Technology Architecture - Technical Architecture Committee (MITA-TAC), State of Michigan, Michigan Medicine (University of Michigan), Altarum, Henry Ford Health System, Trinity Health, Cardinal Health, United Physicians, The Physician Alliance, Blue Cross Blue Shield of Michigan, MedNetOne, NewWave, DXC, Southeast Michigan Health Information Exchange (SEMHIE), and HL7 Canada. 
+
+The event featured fourteen (14) FHIR servers pre-configured with more than 300,000 FHIR resources representing realistic, synthetic test data, representing health systems, physician organizations, health plans, Health Information Exchanges, and Health Information Network infrastructure services.  Participants developed applications to demonstrate both interoperability and quick scalability using pre-configured FHIR Pilot Interoperability Testbeds (FHIR® PITs) running with synthetic patient data distributed across multiple servers.  Additionally, thirteen FHIR PITS were interconnected in a “Ring of FHIR®” which allows the FHIR servers to query each other simulating a Qualified Health Information Network  under the 21st Century Cures Act’s draft for a Trusted Exchange Framework and Common Agreement.
+
+MiHIN now intend to interconnect more than 70 pre-configured FHIR-PITs in multiple Rings of FHIR simulating HINs or “QHINs” such as under TEFCA.  For more information on FHIR-PITs and synthetic test datat from Velatura, please visit https://www.velatura.org/fhir-pit/ and https://www.velatura.org/patient-generator/ or contact wendy.couterier@velatura.org
+
+<h3>R4 Ballot / Normative</h3>
+
+Much of the community is heads down focused on getting ready for a biggest deadline yet, publishing the FHIR Normative ballot #2 for the September ballot cycle. It's not going to easy, but it looks like we'll get there. If you want to see progress to date, the easiest place to look (other than plowing through the 1000+ tasks in gForge), is the change lists at <a href="http://build.fhir.org/ballot-intro.html#normative">http://build.fhir.org/ballot-intro.html#normative</a>
+
+We're still open for change requests for R4, but the window will close very soon. Each HL7 committee makes it's own decision, and I haven't heard of any closed windows yet, but it must be in the next couple of works for normative content. 
+
+<h3>Education</h3>
+
+HL7 is running a new kind of education stream at the September Plenary meeting called "The FHIR Experience". See <a href="http://wiki.hl7.org/index.php?title=Education_Committee#The_FHIR_Experience_.E2.80.93_An_Immersive_Hands-On_Training_Program_-_September_2018_WGM">the HL7 Wiki</a> for some additional details (still work in progress, as you can see). Other education courses available from HL7 
+
+<ul>
+<li><a href="http://www.hl7.org/events/fhir_fun.cfm?ref=nav">HL7 FHIR Fundamentals Course</a></li>
+<li><a href="http://www.hl7.org/events/webinar/fhir/summer-school/2018/07/">FHIR Summer Series</a></li>
+</ul>
+
+Of course, there's a lot of other courses and events happening, some run by FHIR Foundation members. If you want to me to list them here, or add them to the FHIR Foundation Calendar, feel free to let me know about them. 
+
+<h3>Patient Advocacy</h3>
+
+A few of us met with Dave Bronkhart (<a href="http://www.epatientdave.com/">e-Patient Dave</a>) while we were in Boston. We're planning to hold a joint meeting with <a href="https://participatorymedicine.org/">SPM</a> to talk about how to build out a more dyanmic eco-system of patient focused applications. I've heard a lot of ideas out there, but there isn't a lot of real solutions. We want to talk to SPM - who have links to many diverse patient organizations - about how to make this more real and useful.
+
+BTW, FHIR Foundation members attention is drawn to  MIDATA - <a href="https://www.midata.coop/">https://www.midata.coop/</a> - they offer a public FHIR server that allows patients to create their own records and point a regular Smart on FHIR application at it. In other words, free patient specific storage. The service isn't quite ready for prime time for a few reasons but they intend to be - so I encourage FHIR Foundation members interested in this to engage with them. In principle, this is a great service (and, since it's running on HAPI, we should expect it to be pretty conformant and stable technically).
+
+<h3>Data Analysis</h3>
+
+One very strong theme at the Boston meeting was how FHIR enables data analysis. The FHIR project's main focus is interoperability - data exchange. But one of the first areas where the benefits are most obvious is in data analytics. A number of presentations at Boston related to both how this can be done and the benefits of it. The general mechanism goes something like this:
+
+<ul>
+ <li>collect data by whatever means possible</li>
+ <li>convert to FHIR resources </li>
+ <li>store as json (or variant) in an analytics store </li>
+ <li>use existing analytics tooling (nlp, ai, sql variants etc) to project out simpler task focused data sets</li>
+ <li>report from these data sets, maybe using FHIR reporting resources (MeasureReport)</li>
+</ul>
+
+There are many variations on this theme. There's some discussion about agreeing to a standard query language at this point - there's a fair bit of consistency in current approaches, but enough differences that queries cannot be shared. If you're interested in this, perhaps you could join the discussion here: 
+
+<a href="https://chat.fhir.org/#narrow/stream/73-analytics-on.20FHIR">https://chat.fhir.org/#narrow/stream/73-analytics-on.20FHIR</a>
+
+<h3>Safety Page</h3>
+
+The FHIR specification includes a clinical safety page. The main content on the page is a check list of all the things that have come up as safety issues during the lifetime of the project; the idea is that a user works through the list checking that they've considered and handled the potential problems that arise. None of them are simple or something that can be resolved by the standard. 
+
+<a href="http://build.fhir.org/safety.html">http://build.fhir.org/safety.html</a>
+
+This page is starting to get more attention. FHIR Foundation members might want to check the page - both for your own implementations, and whether you think there's anything else we should add to the list.
+
+<h3>FHIR Foundation</h3>
+
+Membership is still growing slowly - thank you to everyone who's a member. We know that the main value proposition is to the wider community, not the members - we're still building out member services - so we really appreciate your membership. As of today, we have 190 members (if I count the numbers correctly)
+
+<h3>Collaborations</h3>
+
+<b>Gemini</b>
+
+I've had several questions about the gemini program - what it is, and where it's going (and whether specific activity X should be or is part of it). 
+ 
+Gemini is a code word for a shared project between IHE and HL7 to collaborate around the development of FHIR and FHIR IGs by both organizations. It's not exactly clear what that means yet. I think that at this stage that's a strength of the project - we have agreed to work together, but we haven't predictated what the outcomes will be. So we don't know the answer to a lot of the questions yet. I'll keep you informed as the situation develops.
+
+<h3>Upcoming Events</h3>
+<ul>
+<li><a href="https://wiki.ohie.org/display/resources/2018+OpenHIE+Community+Meeting">OpenHIE Community Meeting</a>, 31 July - 4 Aug, Arusha (Tanzania) - <connectathon will="" include="" fhir="" representation=""></connectathon></li><li><a href="http://www.hl7.org/events/working_group_meeting/2018/05/">HL7 Plenary, WGM + FHIR Connectation</a>, 28 Sept - Oct 5, Baltimore, USA</li>
+<li><a href="http://www.hl7.org/events/fhir/roundtable/2018/09/">FHIR Applications Roundtable</a>, 27-28 Sept, Washington DC, US</li>
+<li><a href="http://www.hl7.org/events/working_group_meeting/2018/09/">FHIR Connectathon and HL7 Plenary Meeting</a>, 29 Sept - 5 Oct, 2018, Baltimore, US</li>
+<li><a href="https://www.fhirdevdays.com/amsterdam/">FHIR DevDays</a>, 14-16 Nov, Amsterdam, NL</li>
+</ul>
+

@@ -1,0 +1,104 @@
+---
+layout: page
+title: FHIR Foundation Report for November 2018
+---
+
+<h3>FHIR Event: DevDays Amsterdam</h3>
+
+<p>The main (only) event this month was FHIR DevDays in Amsterdam. This was the 5th meeting, and once again it was bigger than ever before, and sold out. </p>
+
+<p>Each year, I sing the praises of the DevDays meeting, and I feel the same way again:</p>
+<ul>
+<li>Great keynotes to set the wider stage around what we trying to achieve</li>
+<li>Really interesting reports of how FHIR is being used across Europe, and the issues the implementations raise</li>
+<li>Fabulous tutorials about the specification and the eco-system around it </li>
+<li>really interesting informal sessions about open issues in the community. </li>
+</ul>
+
+<p>But I write about this every year, so I thought I'd share Ewout's thoughts (For those 
+of you who don't know Ewout, he's the intellectual driver behind DevDays):</p>
+
+<blockquote>
+<p>For us [= the organizers] this DevDays edition presented a significant shift from mainly having sessions about 
+ how to use the FHIR standard to the broader scope of how to use FHIR to change the way information is distributed 
+ and used. Personal stories from both speakers and participants provided the background for what we can achieve once 
+ systems start talking to each other. Both the number of new participants and this new breadth and depth of the 
+ community around FHIR made it clear to us that FHIR is on the brink of becoming mainstream.</p>
+<p>Another striking aspect of this edition was the overwhelming presence of big tech (Google, Microsoft, Amazon, 
+ Apple), both among the speakers and among the participants. FHIR is bringing in new players into healthcare.</p>
+</blockquote>
+
+<h3>FHIR R4</h3>
+
+<p>We're really close now! </p>
+<ul>
+<li>QA is mostly done </li>
+<li>R3 / R4 conversion work is nearly done (thanks Vadim Peretokin and Kenneth Myra for assistance)</li>
+<li>we have two unwithdrawn ballots:
+<ul>
+<li>one, we cannot contact the balloter even though the issue is resolved (that's an HL7 process problem that's never come up before and we'll fix in the future)</li>
+<li>one that may be withdrawn yet</li>
+<li>so we need to do one or two special "recirculation": ballots to check that the ballot pool is ok with us publishing in the face of the unwithdrawn negatives. This will take 2 weeks, and will open soon</li>
+</ul></li>
+<li>once the recirculation ballots are done, final build processes will begin, and will take several days</li>
+<li>we are still planning to release before the end of the year </li>
+</ul>
+ 
+
+<h3>FHIR Community</h3>
+
+<p>The FHIR specification(s) and community are so big - now. There's such a huge amount of work going on by so many people - so many people give their personal time to see us across the line (no fair that I get the media credit too often):</p>
+<ul>
+<li>balloters / QA reviewers </li>
+<li>editors / committee co-chairs / minute takes  </li>
+<li>process support / secretariat / ANSI compliance</li>
+<li>testers / implementers who give feedback or help others </li>
+<li>regulators / advocates</li>
+</ul>
+
+<p>The next report should be cover the release of R4. One of our the last things to do before publishing is to update the <a href="http://build.fhir.org/credits.html">Credits page</a>, 
+but this is a bit daunting - who to list? Feedback is welcome (to me directly, or <a href="https://chat.fhir.org/#narrow/stream/2-social/subject/Credits.20page)">chat.fhir.org</a>.</p>
+
+<h3>Packages</h3>
+
+<p>One big topic of conversation at DevDays was packages. The FHIR community is moving to use NPM packages and 
+NPM package distribution for managing the technical side of the specifications. Whether you author specifications 
+through simplifier or publish implementation guides through HL7 or the FHIR foundation, or whatever other way, we are 
+looking to distribute the processible content using NPM packages. We have a <a href="http://wiki.hl7.org/index.php?title=FHIR_NPM_Package_Spec">profile on the NPM package spec</a> 
+describing how we use packages.</p>
+
+<p>Many of the common tools in the community (validators, publishers, toolkits etc) have already been converted to 
+use packages, and <a href="http://registry.fhir.org">registry.fhir.org</a> is migrating to be a package based repository (as part of an overall effort to 
+bring registry.fhir.org to production usefulness, which it is not at this time). Packages have been generated for all the 
+IGs that HL7 or the FHIR foundation have ever published (and also for the base FHIR specifications as well). The package 
+infrastructure will soon be fully functional, and if you have any tooling that makes use of the any of the processible 
+content, it should migrate to accessing that content by the package.</p>
+
+<h3>Which FHIR versions are supported?</h3>
+
+<p>Although HL7 and the FHIR foundation host all the versions of the FHIR specification that have ever been published, the fact that they are made 
+available on the web does not mean that they are supported. "Supported" here means that HL7 considers the specification suitable for use, and/or 
+that the validator / other tools / reference libraries / test servers etc implement that version. </p>
+
+<p>The following versions are "supported":</p>
+<ul>
+<li>DSTU2</li>
+<li>STU3</li>
+<li>R4 (once released)</li>
+<li>The current build (not suitable for use, but supported by many tools)</li>
+</ul>
+
+<p>Notes:</p>
+<ul>
+<li>DSTU1 is not on the list due to disuse. No one has asked us about it for a long time. </li>
+<li>Each tool in the FHIR eco-system has it's own policy that flows from the business and technical context of the way the tool is provided, so many tools don't support all these versions</li>
+<li>By commercial arrangement, the version at <a href="http://hl7.org/fhir/2016May">http://hl7.org/fhir/2016May</a> is still supported by some tools, to support a production community using it. </li>
+</ul>
+
+<h3>Forthcoming events</h3>
+
+<ul>
+ <li><a href="http://www.hl7.org/events/working_group_meeting/2019/01/">HL7 WGM + FHIR Connectation</a>, Jan 12 - 18, San Antonio, USA</li>
+ <li>FHIR DevDays USA, 10-12 June, Redmond, WA, USA</li>
+</ul>
+

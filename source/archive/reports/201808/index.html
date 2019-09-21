@@ -1,0 +1,257 @@
+---
+layout: page
+title: FHIR Foundation Monthly report for July/August 2018
+---
+
+<h2>Ballot</h2>
+<p>
+First of all, apologies for not reporting at the end of July - this was right in the 
+middle of preparing for the publishing the FHIR R4 Ballot #2, which was our biggest 
+editorial effort yet. The ballot is now open - along with 14 different implementation 
+guides. 
+</p>
+<p>
+This is the last ballot for R4. The way the normative balloting works under HL7/ANSI 
+rules is that we can't make substantive changes to the specification - that is, 
+anything that would impact on specifications - without reballoting, and we won't be 
+reballoting before we publish R4 on schedule at the end of this year. Balloting this 
+round is limited to the changes that were made between this ballot and the last ballot. 
+Each substantive change that was made is listed on the ballot introduction page:
+</p>
+<p>
+<a href="http://hl7.org/fhir/2018Sep/ballot-intro.html">http://hl7.org/fhir/2018Sep/ballot-intro.html</a>
+</p>
+<p>
+If we don't get consensus from the HL7 balloters to the changes we made, we'll drop the 
+relevant sections of R4 back to Trial Use and publish anyway.
+</p>
+<p>
+Many individuals and committees worked really hard and/or effectively to produce the 
+ballot ready version of FHIR. It's hard, from outside the process, to appreciate just 
+how much work goes into the specification, but we processed over a 1000 ballot comments 
+and editorial changes covering things such as typos, and html style issues all the way 
+through to some major changes to identifying URLs. We'll be working to update the 
+contributer list when we publish the R4 final specification but the list is so long now 
+that it's hard to know what do with it: FHIR is a big community.
+</p>
+<h3>Ongoing comments to the ballot </h3>
+<p>
+Ballot sign up is now closed - if you have issues that you feel needs to have the weight 
+of a ballot comment, but you aren't signed up for the ballot you may be able to find a 
+balloter who will take you issue on board. Note that this means that they'll represent 
+you issue in an ongoing fashion. If you'd like help finding someone, contact me privately 
+(at <a href="mailto:fhir-director@hl7.org">fhir-director@hl7.org</a>).
+</p>
+<h2>FHIR Foundation Projects and Implementation Guides</h2>
+<p>
+The FHIR foundation publishes a few implementation guides directly - see:
+</p>
+<ul>
+<li><a href="http://www.fhir.org/guides/argonaut/r2/">http://www.fhir.org/guides/argonaut/r2/</a></li>
+<li><a href="http://www.fhir.org/guides/argonaut/pd/">http://www.fhir.org/guides/argonaut/pd/</a></li>
+<li><a href="http://www.fhir.org/guides/argonaut/pd/">http://www.fhir.org/guides/argonaut/scheduling/</a></li>
+<li><a href="http://www.fhir.org/guides/argonaut/pd/">http://www.fhir.org/guides/hspc/</a></li>
+</ul>
+
+<p>
+Several more are on the way. The FHIR foundation will also publish other IGs, using the 
+following rules:
+</p>
+<ul>
+<li>the IG must not be developed as an HL7 standards project (HL7 will publish those)</li>
+<li>the request to publish must come from a FHIR Foundation member</li>
+<li>the IG must be published under and open source license (creative commons, or a license from <a href="http://www.fhir.org/guides/argonaut/pd/">https://opensource.org/</a>)</li>
+<li>the governance and processes for maintinaing the content going forward must be clear (including how implementers report issues or propose changes)</li>
+<li>The guide must meet some technical requirements - see <a href="http://wiki.hl7.org/index.php?title=FHIR_Implementation_Guide_Publishing_Requirements#HL7.2FFHIR_Foundation_Requirements">the HL7 Wiki</a></li>
+</ul>
+  
+<p>
+FHIR Foundation members can request this by emailing me at fhir-director@hl7.org.
+</p>
+
+<h3>New Project: Analytics</h3>
+
+<p>
+We are working on creating the first formal FHIR foundation project around the area of 
+FHIR data analytics support. This is appropriately a FHIR foundation project not an HL7 
+project because there seems to be no intent to produce specifications, but rather white 
+papers around implementation techniques. The group is meeting regularly and you can 
+track/join progress here:
+</p>
+<p>
+<a href="https://chat.fhir.org/#narrow/stream/73-analytics-on.20FHIR">https://chat.fhir.org/#narrow/stream/73-analytics-on.20FHIR</a>
+</p>
+<h2>Events</h2>
+<p>
+Note: there's events that cover or mention FHIR all the time now - I can barely keep with 
+the mentions in social media etc. It's really the case that any conference anywhere in 
+the world about health IT will cover FHIR to some degree or other now. Here I mainly focus 
+on events focused on FHIR itself, or that were attended by one of the editors of the core 
+FHIR Modules. 
+</p>
+<h3>OpenHIE (Africa) </h3>
+</p>
+<p>
+OpenHIE held their first "HackConnectathon" in Arusha, Tanzania and Bryn Rhodes attended on 
+behalf of the FHIR team (thanks for squeezing family holiday time to do this), and provided 
+the following report:
+</p>
+<blockquote>
+<p>
+  FHIR was a big part of the event. The event was organized similar to a FHIR 
+  Connectathon with multiple tracks focused on different areas of the OpenHIE 
+  ecosystem. Several of the tracks ran scenarios that involved FHIR directly:
+</p>
+<p>
+  The OpenHIM track, among other scenarios, build a "mediator" (integration 
+  connector) that transforms ADX (an IHE profile for aggregate data reporting) 
+  messages to a FHIR MeasureReport. At the end of the track, the mediator was 
+  functional but needs polish, and could also serve as a template for mediators 
+  to converts other types of messages to/from FHIR.
+</p>
+<p>
+  The OpenLMIS track added the HEARTH (open source NodeJS FHIR Server) server 
+  as a microservice within the OpenLMIS microservice architecture, and built 
+  a script to transform API endpoints that allows them to have the 
+  representation of facilities on a FHIR server.
+</p>
+<p>
+  The Intro to OpenHIE track began as an introduction to FHIR and Docker, 
+  and ended up as a massive educational learning and sharing academy.
+</p>
+<p>
+  The ADX on FHIR track looked specifically at representing a particular ADX 
+  IHE profile for HIV public health indicators in the FHIR Measure and 
+  MeasureReport resources. The track worked with the authors of the IHE 
+  profile to express the HIV contents using terminologies developed with 
+  Apelon as well as a CQL library and a FHIR Measure to represent the HIV 
+  indicators.
+</p>
+<p>
+  All in all it was a very successful event, and the OpenHIE community is 
+  enthusiastically looking forward to another one!
+</p>
+</blockquote>
+
+<h3>CMS Blue Button 2.0 Developer Conference </h3>
+<p>
+This was in Washington, and Josh Mandel attended and reported on this one:
+</p>
+<blockquote>
+<p>
+  On August 13, the CMS Blue Button 2.0 team convened the first-ever 
+  Blue Button 2.0 Developer Conference at the Eisenhower Executive Office 
+  Building on the White House grounds. Blue Button 2.0 is a CMS initiative 
+  to put health care claims data in the hands of over 50M Medicare 
+  beneficiaries, building on FHIR and OAuth 2.0 to allow for seamless 
+  sharing with apps of the consumer's choice. CMS Administrator Seema Verma 
+  opened up the meeting with a forceful and personal reminder about the 
+  importance of consumer access to enable data portability and better individual 
+  opportunities to seek high-value care. We heard from members of the CMS team 
+  who presented on the motivations, the business processes, and the technology 
+  behind the Blue Button 2.0 API, and we heard from app developers who are 
+  beginning to use this API in diverse use cases including personal health 
+  apps, research participation, and insurance coverage shopping advisors.
+</p>
+<p>
+  There was strong energy and excitement at the conference about the government's 
+  ability to push forward on the state of the art, launching a production API 
+  service in 2018 for the entire Medicare fee-for-service population, and 
+  unlocking any number of downstream use cases. I was delighted for the 
+  chance to attend and to participate in two ways. First, I had the opportunity 
+  to present an overview of the Sync for Science project, which helps patients 
+  share health data with researchers. And second, to participate in Microsoft's 
+  joint announcement Amazon, Google, IBM, Oracle, and Salesforce committing to 
+  removing barriers for the adoption of technologies for healthcare 
+  interoperability. 
+</p>
+</blockquote>
+
+<h2>Partnership announcement</h2>
+<p>
+On that subject... half a dozen of the biggest names in technology – Amazon, Google, 
+Microsoft, Salesforce, IBM, and Oracle – joined together to pledge speedy progress 
+towards true health data interoperability. This was associated with the CMS Developer 
+Conference  (see above). See <a href="https://healthitanalytics.com/news/amazon-google-ibm-pledge-health-data-standards-interoperability">write up</a>.
+</p>
+<p>
+For further commentary, see <a href="https://cloudblogs.microsoft.com/industry-blog/industry/health/microsoft-amazon-google-and-ibm-issue-joint-statement-for-healthcare-interoperability/">Josh's blog</a>:
+</p>
+<p>
+Quoting from this:
+</p>
+<blockquote>
+<p>
+ Open standards, open specifications, and open source tools are essential 
+ to facilitate frictionless data exchange. This requires a variety of 
+ technical strategies and ongoing collaboration for the industry to converge 
+ and embrace emerging standards for healthcare data interoperability, such 
+ as HL7 FHIR and the Argonaut Project. 
+</p>
+<p>
+ We understand that achieving frictionless health data exchange is an 
+ ongoing process, and we commit to actively engaging among open source 
+ and open standards communities for the development of healthcare 
+ standards, and conformity assessment to foster agility to account 
+ for the accelerated pace of innovation. 
+</p>
+<p>
+ Together, we believe that a robust industry dialogue about healthcare 
+ interoperability needs will advance this cause, and hence are pleased 
+ to issue this joint statement.
+</p>
+</blockquote>
+<p>
+As you'll notice, this announcement has no specific deliverables - I think that's good. 
+There is a call for dialogue - that's a great opportunity for our community - if you 
+have an opinion about how this group could match  the accomplishments and impact of 
+the Argonaut community - feel free to join discussion here: 
+</p>
+<p>
+<a href="https://chat.fhir.org/#narrow/stream/4-implementers/subject/Cloud.20vendor.20support.20for.20FHIR">https://chat.fhir.org/#narrow/stream/4-implementers/subject/Cloud.20vendor.20support.20for.20FHIR</a>
+</p>
+
+<h2>The Gartner curve</h2>
+</p>
+We commonly get asked about the <a href="https://en.wikipedia.org/wiki/Hype_cycle">Gartner Hype Cycle</a> - where is FHIR 
+on the hype cycle?
+</p>
+<p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Gartner_Hype_Cycle.svg/480px-Gartner_Hype_Cycle.svg.png"/>
+</p>
+<p>
+For a while, it was clear that the answer was: we're on the first part the curve, and 
+hype is flying into the stratosphere (well, compared with our initial expectations). 
+But in the last year or so that hasn't really been the case. I routinely survey FHIR 
+implementers informally when I'm speaking about this, and we're starting to get 
+non-trivial numbers of people voting that we're on the 'slope of enlightment'.
+</p>
+<p>
+If we really are (if), then that's great because it means that the trough has been 
+relatively shallow, which was always our priority: to ensure that the quality of the 
+specification and the community meant that FHIR was ready for real use.
+</p>
+<p>
+The "(if)" part is because the interesting thing about FHIR is that it has such a broad 
+impact, and different parts of the specification & community are in different places in 
+the cycle. There's some very clear regards in which FHIR is still just hype (where's the 
+FHIR bus in healthcare provider institutions - only a very few have one right now). Our 
+challenge is to grow the community and infrastructure base with solid fundamentals so that 
+each individual area of work has as shallow a trough as possible.
+</p>
+
+<h2>Foundation issues </h2>
+<p>
+The HL7 board has asked the FHIR Foundation board to review the relationship between HL7 
+and the FHIR foundation. I'll prepare a separate brief for FHIR Foundation members about 
+this, seeking your opinions. 
+</p>
+<p>
+<h2>Upcoming events</h2>
+<ul>
+<li><a href="http://www.hl7.org/events/working_group_meeting/2018/09/">HL7 Plenary, WGM + FHIR Connectation</a>, 28 Sept - Oct 5, Baltimore, USA</li>
+<li><a href="http://www.hl7.org/events/fhir/roundtable/2018/09/">FHIR Applications Roundtable</a>, 27-28 Sept, Washington DC, US</li>
+<li><a href="https://www.fhirdevdays.com/amsterdam/">FHIR DevDays</a>, 14-16 Nov, Amsterdam, NL</li>
+<li><a href="https://www.dicomstandard.org/2018-dicom-educational-conference/">DICOM and FHIR @ the DICOM Educational Conference</a>, Sep 27, Brisbane, Australia</li>
+</ul>
+

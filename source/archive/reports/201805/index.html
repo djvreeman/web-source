@@ -1,0 +1,95 @@
+---
+layout: page
+title: FHIR Foundation Monthly report - April/May 2018
+---
+
+Note: Combined report for April/May because of preparing for HL7 Cologne meeting (and personal holiday in Italy before that).
+
+<h3>Events</h3>
+
+<b>HL7 Cologne</b>
+
+So the main event in the April/May time frame was the HL7 Cologne Working Group Meeting. For the FHIR project, the main focus was processing our first normative ballot. The theme of the week - though we have a very broad work program - was the GDPR legislation, which is now in force. More on both those below.
+
+The Connectathon was smaller than usual - in fact, the European connectathons are reducing in sice, which is our first experience of this. It may be related to life cycle - Europe is not generally at the point in FHIR development where connectathon attendance is beneficial (either not really doing anything, or the projects are further into implementation)? Or perhaps it's to do with people waiting on IHE? (more about that below...)
+
+<img src="http://www.healthintersections.com.au/wp-content/uploads/2018/06/connectathon-attendance.png" width="632" height="349"/>
+
+Mostly, we focused on established connectathon streams, though this meeting we held 2 dicussion based connectathon tracks around GDPR and using FHIR as a storage format. These are tracks that may turn into real interoperability exercises later, if some consensus emerges from the discussions. 
+
+We expect that the connectathon in Baltimore will have a bounce from the US, people not able to travel outside USA. 
+
+<b>FHIR North Canada</b>
+
+The fourth annual FHIR North was held on April 26th at Mohawk College in Hamilton Ontario. We had over 200 attendees. This year, the event was split into two parts - a presentation/education focused "FHIR Academy" and a development-focused "Code Camp". A sign of the increasing maturity of FHIR in the Canadian environment is that about two thirds of the participants followed the Code Camp track. Highlights included a virtual panel on FHIR adoption in Europe with speakers from the Netherlands, Norway, Germany and the UK, an update from the ONC on FHIR strategy in the U.S. and sessions on the use of CDS Hooks. The organizing committee is exploring the possibility of running a similar event in Vancouver in the October timeframe.
+
+<b>HL7 Australia Connectathon</b>
+
+HL7 Australia, in partnership with the Australian Digital Health Agency, held a connectathon in BrisbaneApril 18-20. The conenctathon had 3 main focus areas:
+
+<ul>
+<li>Provider / End-point directory</li>
+<li>Terminology Services (Australia has a FHIR Based national terminology service)</li>
+<li>Adapting Argonaut to Australian regulations (work just beginning)</li>
+</ul>
+
+<b>Chicago Ad-hoc Connectathon</b>
+
+UChicago organized a health tech hackathon with a theme of 'Trauma', Around 40 people, including organizers, and mentor worked on a variety of projects including running a few FHIR Servers during the connectathon, mostly focused on non-clinical resources such as Location, Organization, and RelatedPerson. One team implemented a $near geospatial operator for proximity detection, with an eye towards first-responder applications, adn there was discussion on IPFS might be used to to autosynchronize datasets. 
+
+<h3>R4 Ballot</h3>
+
+This is a big ballot for the team: portions of the specification are being balloted as normative, which means they will not be subject to any more breaking change. This is a mixed blessing for implementers - they'll be able to invest knowing that their development won't be subject to continual revisiting, as it is now, but it also means that we won't be able to fix things that are broken in the normative ballot. For this reason, the normative ballot is particularly important, and we had very strong participation in the ballot. 
+
+We spent a lot of time in Cologne resolving ballot issues. This was somewhat painful as we were finally forced to address some difficult (and in some cases, rather corner case issues) that we've been putting off for a long time.
+
+Fortunately, we were largely successful, and we expect that all 4 parts of the normative ballot will pass, though for at least 3 of the 4, there will be substantive changes that will go back to ballot in the Sept time frame. 
+
+Note that all of this is subject to ongoing change as ballot reconcilation continues. 
+
+One open subject that we finally come to resolution on in Cologne was around how to determing the version of a resource. See <a href="http://www.healthintersections.com.au/?p=2815">Determining the #FHIR version</a> for a write up of the outcome. 
+
+There's plenty of other signficant changes to come beyond that one - I will be blogging about these to give the community a heads up on what is coming. 
+ 
+<h3>FHIR Foundation</h3>
+
+The FHIR Foundation is continuing to represent a challenge for the HL7 Community. We do not (yet!) provide a lot of member benefits (as you well know, and several of you have told us - but we thank you for being members anyway, since this allows us to provide the essential services that the implementer community runs on). 
+
+The HL7 affiliates, in particular, are very conerned about what kind of member benefits we might offer, and whether these would erode the value proposition for being a member of an HL7 affiliate. That's an acute concern because quite a few affiliates are suffering from declining membership for a variety of reasons. 
+
+Some aspects of this are clear: 
+<ul>
+<li>the FHIR Foundation doesn't and won't provide affiliate services such as meetings</li>
+<li>the FHIR foundation won't work with national programs / projects without working with the relevant affiliate(s)</li>
+<li>The services the FHIR foundation does offer are useful for the affiliates and their members too, but are provided irrespective of whether they are members</li>
+</ul>
+
+However, other aspects aren't, and we have committed to working with the HL7 affilates to clarify this
+
+At this point in time, we have at least 134 members (I think; I'm looking at the signed up members of the members list).
+
+<h3>GDPR</h3>
+
+The General Data Protection REgulation became law in Europe on May 25. The law applies to any entity doing business in Europe, or that collects data on people residing in Europe. There's quite a lot that's not clear at all about how the law will work in practice, particularly in health, but there's some very definite requirements about reports and data interoperability and standards. 
+
+It seems as if there's some need for a FHIR Implementation guide to make it clear how to implement the mandatory parts of the regulation, but these haven't really got going (inspite of the fact that the regulation is now in force). We anticipate that as the law is clarified through test cases, the specific requirements will become more clear. in the meantime, John Moehrke is working to collate and publish what we do know - see <a href="https://healthcaresecprivacy.blogspot.com/2018/05/gdpr-on-fhir.html">GDPR on FHIR</a>, or, more generally, <a href="https://healthcaresecprivacy.blogspot.com">his blog</a>
+
+<h3>Collaborations</h3>
+
+We are continuing to work closely with many other standards organizations. In particular, we have a new collboration with IHE which is significant enough to have it's own code word ("Gemini") - though not yet far enough along to have any web presence. We're working with the IHE technical leadership to develop and document a process where we work together closely to prototype and then complete specifications together. In practice, this might mean that IHE would publish specifications using the FHIR publication tooling, and initial connectathons, while we scope out the specifications, would be done through the more informal HL7 FHIR connecatathons, while the later stages of the work would be done through the more formal and better managed IHE connectathons. 
+
+But what it exactly means isn't yet clear either to HL7 nd/or IHE members; we'll find out as time goes on and I'll report on progress here. 
+
+HL7 is also working with <a href="https://www.ga4gh.org/">GA4GH</a> to set up a formal collaboration in the interesting, challenging and dynamic genomics/healthcare space, and to ensure that our respective standards don't work against each other. The FHIR Foundation will likely play a part in this through hosting some implementation projects among the genomics community - watch this space.
+
+<h3>Upcoming Events</h3>
+<ul>
+<li><a href="http://www.lansing.org/event/meteoric-interoperability-connectathon/17816/">MIHIN Meteoric Interoperability Connectathon</a>, 4-5 June, Lansing, USA (now!)</li>
+<li><a href="https://www.fhirdevdays.com/boston/">FHIR DevDays</a>, 19-21 June, Boston, USA (Soon!)</li>
+<li><a href="http://www.wave-access.com/public_en/blog/2018/april/fhir-starter-2018-saint-petersburg%E2%80%99s-first-fhir-standard-conference-and-connectathon.aspx">FHIR STARTER Conference</a>, 25-26 June, Sankt-Peterburg, Russia (Soon!)</li>
+<li><a href="https://wiki.ohie.org/display/resources/2018+OpenHIE+Community+Meeting">OpenHIE Community Meeting</a>, 31 July - 4 Aug, Arusha (Tanzania) - <Connectathon will include FHIR + FHIR representation/li>
+<li><a href="http://www.hl7.org/events/working_group_meeting/2018/05/">HL7 Plenary, WGM + FHIR Connectation</a>, 28 Sept - Oct 5, Baltimore, USA</li>
+<li><a href="https://www.fhirdevdays.com/amsterdam/">FHIR DevDays</a>, 14-16 Nov, Amsterdam, NL</li>
+</ul>
+
+

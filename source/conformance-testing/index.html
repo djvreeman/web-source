@@ -1,0 +1,35 @@
+---
+layout: page
+title: FHIR Conformance Testing
+---
+
+The base <a href="http://hl7.org/fhir">FHIR Specification</a> defines what a valid implementation of FHIR can be. <a href="/guides/registry">Implementation Guides</a> build on the base specification to define a set of additional rules. The FHIR community provides a set of testing services so that implementers can test whether their implementation conforms to the base specification, or to any published implementation guide. This page serves as a registry of these services. 
+
+Conformance testing maybe applied in 3 different ways:
+<ul>
+ <li>Validate the resources that are exchanged. This is the easiest way to test, because resources can easily be extracted and sent (e.g. by email). For this reason, most testing services focus on the resource content. However this does not test the behavior of the system that implements or uses the data exchange</li>
+ <li>Testing servers. In this approach, a set of known inputs are provided to the server, and then tests are applied to the server responses to test that the server's response is correct. When specified carefully, this can be a very effective way to test server behavior</li>
+ <li>Testing clients. A human user - or a special application test harness - exercises the client carefully, and tests are applied to the client requests, and known inputs returned, and application behavior tested. These are the most difficult tests to automate</li>
+</ul>
+
+<em>Resource Validation</em>
+
+<ul>
+ <li>Schema: The FHIR specification provides <a href="http://hl7.org/fhir/downloads.html">schema for XML, JSON, and RDF (turtle)</a>. These are able to validate the content is structurally correct against the specification</li>
+ <li>FHIR Validator: The FHIR community provides a validator for testing resources - see <a href="http://hl7.org/fhir/validation.html">Validating Resources</a>. This can validate that the terminology content of the resource is correct, and validate it against Implementation Guides</li>
+ <li>(coming): Beyond what the FHIR validator can check, FHIR.org offers a manual validation service. In this service, FHIR experts will manually examine a resource and ensure that the content is valid against the rules that only a human can test</li>
+</ul>
+
+<em>Server Testing</em>
+
+FHIR includes a <a href="http://hl7.org/fhir/testscript.html">TestScript</a> resource that represents a set of actions and tests to be carried out on a server. The following services use the TestScript resource and other knowledge to test servers:
+<ul>
+ <li><a href="https://touchstone.aegis.net/touchstone/">Touchstone</a> - AEGIS Testing Service</li>
+ <li><a href="https://projectcrucible.org/">Crucible</a> - Mitre Test Service</li>
+</ul>
+
+<em>Client Testing</em>
+
+AEGIS <a href="https://touchstone.aegis.net/touchstone/">Touchstone</a> can also perform TestScript based testing of FHIR clients. 
+
+To add additional testing services to this list, email the <a href="mailto:grahame@hl7.org">FHIR Product Director</a>.

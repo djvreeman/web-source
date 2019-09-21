@@ -1,0 +1,118 @@
+---
+layout: page
+title: FHIR Foundation Report for October 2018
+---
+
+<h3>Events</h3>
+
+<h4>SPM</h4>
+
+<p>
+I'll start this month's report with a photo from Dave Bronkhart's keynote at the annual SPM event:
+</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"> Rallying cry from <a href="https://twitter.com/ePatientDave?ref_src=twsrc%5Etfw">@ePatientDave</a>: &quot;Don&#39;t get stuck being a proud expert on the obsolete model. 
+Enable radically disruptive data spigots. Set yourself on <a href="https://twitter.com/hashtag/FHIR?src=hash&amp;ref_src=twsrc%5Etfw">#FHIR</a>!&quot;   
+<a href="https://twitter.com/hashtag/PatientExperience?src=hash&amp;ref_src=twsrc%5Etfw">#PatientExperience</a> <a href="https://twitter.com/hashtag/PatientsIncluded?src=hash&amp;ref_src=twsrc%5Etfw">#PatientsIncluded</a> <a href="https://twitter.com/hashtag/pinksocks?src=hash&amp;ref_src=twsrc%5Etfw">#pinksocks</a> <a href="https://t.co/oFGbigmOQy">pic.twitter.com/oFGbigmOQy</a></p>&mdash; Irma Rastegayeva at #xMed Innovation Catalyst (@IrmaRaste) <a href="https://twitter.com/IrmaRaste/status/1059267154686570498?ref_src=twsrc%5Etfw">November 5, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>
+Check the top left slide. Dave will be at DevDays in Amsterdam, so I'll include a full report on what he's saying in the next report.  
+</p>
+
+<h4>SNOMED (Vancouver)</h4>
+<p>
+SNOMED International held a Day of the Dev session in Vancouver, Canada focused on helping application developers use FHIR terminology services to leverage the power of SNOMED CT. The 1-day event was a mix of education and hands on exercises with over 45 attendees. Exercises included using terminology services to help in guiding code selection and in providing decision support.
+</p>
+
+<h4>Chile</h4>
+
+<p>
+Foundation Member James Agnew visited Chile for "Tech Connect", organised by <a href="http://cens.cl/">CENS</a>, a semi-autonomous-academic organization tasked with promoting a ehealth in Chile, including interoperability. James reports:
+</p>
+<blockquote>
+<p>
+The event was a very interesting one. CENS broke the event into 3 tracks: Patient, Medication, and Referral Management. Like a standard FHIR connectathon, they had track cards at each table and track leads running the tracks. However, very different from any other FHIR connectathon event I've been to: They had a series of tasks for each track,  ranging from easy to hard. Participants had to go through the tasks for their track, and submit their results to a  server they had built (a modified HAPI server) that logged all submissions and gave them an evaluation UI where a  judge could evaluate the data sent in by the participant teams.
+</p>
+<p>
+The tasks included some pretty hard stuff. The final challenge in the referral track required the creation of  a custom Search Parameter for example. At the end, they had a few judges who looked at the results in their  evaluation tool and scored the participants. The winning team are getting tickets to DevDays Seattle as a prize.
+</p>
+</blockquote>
+<p>
+(Now there's a serious prize, generously supported by Foundation support <a href="https://www.intersystems.com/">Intersystems</a>)
+</p>
+
+<h4>Argentina</h4>
+<p>
+I visited Argentina for a series of meetings around FHIR, organised by Foundation member <a href="https://www.linkedin.com/in/diegokaminker/">Diego Kaminker</a>.  I met with Fernando Campos' team at the <a href="https://www.hospitalitaliano.org.ar/">Italian Hospital</a>, the <a href="https://www.argentina.gob.ar/salud">Department of Health</a>, and <a href="http://calilab.fba.org.ar/">CALILAB 2018</a>. 
+</p>
+<p>
+The Argentine community is actively developing several FHIR based solutions:
+</p>
+<ul>
+ <li>PIX equivalent for managing patient identities</li>
+ <li>Immunization Registration</li>
+ <li>Health referrals</li>
+</ul>
+<p>
+The Dept of Health meeting included a connectathon using a HAPI derived server acting as a PIX end-point (<a href="https://docs.google.com/document/d/1GvIEuLDSApTER5P47hOkIMmKrGUtpPNfQYbu0FwZiMY/edit">spanish documentation</a>). The Argentine community is active and well-informed (as you'd expect, given that both Diego and Fernando are very active in <a href="http://www.hl7.org/Special/committees/education/leadership.cfm">HL7 education</a>, and manage the on-line <a href="http://www.hl7.org/events/fhir_fun.cfm?ref=nav">FHIR Fundamentals</a> course). There was a particularly Argentine flavor in the background of the workshop - check the following video taken looking out the window during the connectathon:
+</p>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgrahame.grieve%2Fposts%2F10155764251017124&width=500" width="500" height="688" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+<h3>Ballot Status</h3>
+
+<p>
+The 3rd round of FHIR Normative balloting opened today, for HL7 members. This round of balloting is specifically focused on 5 specific substantive changes made to the normative parts of the FHIR ballot:
+</p>
+<ul>
+ <li >Remove VSD-11 -  Changes in <a href="http://hl7.org/fhir/2o18Dec/valueset.html#vsd-11">invariant list</a>, <a href="http://hl7.org/fhir/2o18Dec/valueset-definitions.html#vsd-11">definitions</a>;  also changes to definitions for <a href="http://hl7.org/fhir/2o18Dec/valueset-definitions.html#ValueSet.status">ValueSet.status</a>   and <a href="http://hl7.org/fhir/2o18Dec/valueset-definitions.html#ValueSet.expansion">ValueSet.expansion</a></li>
+ <li >Remove rule to use subsumes extension on CodeSystem - changes to <a href="http://hl7.org/fhir/2o18Dec/codesystem.html#hierarchy">Narrative</a></li>
+ <li >Remove "definition" from allowed types of designation: changes to <a href="http://hl7.org/fhir/2o18Dec/valueset-designation-use.html#definition">value set definition</a></li>
+ <li >Change Observation.comment to Observation.note : Annotation [0..*]: Changes in <a href="http://hl7.org/fhir/2o18Dec/observation.html#Observation.note">table</a> and <a href="http://hl7.org/fhir/2o18Dec/observation-definitions.html#Observation.note">definitions</a></li>
+ <li >Explicitly mark the rule to use the vital signs profiles as Trial Use (since those profiles are trial use):Changes in <a href="http://hl7.org/fhir/2o18Dec/observation.html#core">narrative</a></li>
+</ul> 
+<p>
+Balloting includes anyone who already balloted in rounds #1 and #2, and is closed to that group.
+</p>
+<p>
+In the mean time, preparation of the final version of R4 is proceeding at <a href="http://build.fhir.org">http://build.fhir.org</a>, and we'll be doing a call for QA shortly. 
+</p>
+
+<h3>Carequality</h3>
+
+<p>
+Carequality are creating some new workgroups to extend their technical framework to cover FHIR interfaces as well. According to <a href="https://carequality.org/fhir-technical-policy-workgroups-forming-now/">their announcement</a>:
+</p>
+<blockquote>
+ <p>
+ As adoption of HL7’s Fast Healthcare Interoperability Resources (FHIR®) Specification continues to gain momentum throughout the healthcare industry, we at Carequality believe we’re in a great position to help advance this cause. With much of the healthcare industry either starting to implement FHIR at some level, or planning to do so, we believe it’s a good time to start thinking ahead to the type of broad, nationwide deployments that Carequality governance can enable. We are, therefore, adding FHIR-Based Exchange to our existing Query-Based Document Exchange Use Case model, and are seeking volunteers for two new workgroups that will extend Carequality’s governance Framework to the FHIR exchange ecosystem
+ </p>
+</blockquote>
+<p>
+This was reported in the media as:
+</p>
+<blockquote>
+The Carequality unit of the Sequoia Project is seeking help in developing a governance structure for the FHIR data exchange standard
+</blockquote>
+<p>
+Note the subtle change of emphasis here.... expressed this way, some feathers got ruffled. So watch out for this in the media - it's hard for them to convey things without creating erroneous impressions. Anyway, I asked FHIR Foundation member Didi Davis what exactly Carequality was going to be doing with FHIR, and she responded: 
+</p>
+<blockquote>
+ <p>
+ I am attaching the <a href="http://www.fhir.org/archive/docs/carequality-fhir-workgroup-charter.pdf">Carequality FHIR-based Exchange Use Case Charter document</a> distributed to workgroup members this week. The workgroup is open to all Carequality members or non-members.  We would welcome the FHIR community to participate, but I know time is limited for all of us.  
+ </p>
+ <p>
+ Feel free to <a href="mailto:ddavis@sequoiaproject.org">contact me</a> if you have any questions as I am on both of the workgroups and happy help as needed. This really is a consensus based way of creating an IG that the Carequality Policy Framework can enable for <a href="https://carequality.org/members-and-supporters/">all networks who are implementers</a>.  These implementers exchange >11 Million documents per month today in production across the US. Carequality plans to use these workgroups to define the requirements pointing to existing standards and adding policy and other requiements where necessary to open the pipes to allow exchange using FHIR based plumbing as well.  
+ </p>
+</blockquote>
+
+<p>
+As Didi says... time is indeed limited. I'm glad to see Carequality taking on this problem, but it does overlap with other related FHIR community activities - either inside or outside HL7 (<a href="https://www.hspconsortium.org/">HSPC</a>, the <a href="https://carinalliance.com/">CARIN alliance</a>, <a href="https://www.directtrust.org/">Direct Trust</a>, <a href="https://www.commonwellalliance.org/">Commonwell</a>, etc. Carequality acknowledge this issue in their workgroup charter however that doesn't solve it - I encourage FHIR foundation members in USA to devote any time they have to keeping informed of these various activities and  identifying overlaps and alerting the relevant organizations where they diverge in the overlaps.
+</p>
+
+<h3>Upcoming Events</h3>
+<ul>
+<li><a href="https://www.fhirdevdays.com/amsterdam/">FHIR DevDays</a>, 14-16 Nov, Amsterdam, NL (Sold Out)</li>
+<li><a href="http://www.hl7.org/events/working_group_meeting/2019/01/">HL7 WGM + FHIR Connectation</a>, Jan 12 - 18, San Antonio, USA</li>
+<li>FHIR DevDays USA, 10-12 June, Redmond, WA, USA</li>
+</ul>
+
+
