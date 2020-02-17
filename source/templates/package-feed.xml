@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:fhir="http://hl7.org/fhir/feed" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>FHIR Foundation FHIR Support Packages</title>
+    <description>New Support Packages published by FHIR Foundation</description>
+    <link>http://fhir.org/packages/package-feed.xml</link>
+    <generator>HL7 FHIR Publication tooling</generator>
+    <lastBuildDate>Mon, 17 Feb 2020 10:06:23</lastBuildDate>
+    <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
+    <language>en</language>
+    <ttl>600</ttl>
+    <item>
+      <title>fhir.base.template#0.1.0</title>
+      <description>Improved error messages and vocab layour</description>
+      <link>http://fhir.org/packages/fhir.base.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.base.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Mon, 17 Feb 2020 10:06:23</pubDate>
+    </item>
+    <item>
+      <title>hl7.cda.template#0.1.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.cda.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.cda.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Mon, 17 Feb 2020 10:06:23</pubDate>
+    </item>
+    <item>
+      <title>hl7.base.template#0.1.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.base.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.base.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Mon, 17 Feb 2020 10:06:23</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.template#0.1.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.fhir.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Mon, 17 Feb 2020 10:06:23</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.template#0.0.5</title>
+      <description>First Versioned Release</description>
+      <link>http://fhir.org/packages/hl7.fhir.template/0.0.5/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.template/0.0.5/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sun, 02 Feb 2020 09:54:47</pubDate>
+    </item>
+    <item>
+      <title>hl7.base.template#0.0.1</title>
+      <description>First Versioned Release</description>
+      <link>http://fhir.org/packages/hl7.base.template/0.0.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.base.template/0.0.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sun, 02 Feb 2020 09:54:47</pubDate>
+    </item>
+    <item>
+      <title>fhir.base.template#0.0.2</title>
+      <description>First Versioned Release</description>
+      <link>http://fhir.org/packages/fhir.base.template/0.0.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.base.template/0.0.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sun, 02 Feb 2020 09:54:47</pubDate>
+    </item>
+  </channel>
+</rss>

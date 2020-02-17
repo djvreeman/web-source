@@ -1,0 +1,9 @@
+{
+  "templates" : {
+    "fhir.base.template" : "http://fhir.org/templates/fhir.base.template",
+    "hl7.base.template" : "http://fhir.org/templates/hl7.base.template",
+    "hl7.fhir.template" : "http://fhir.org/templates/hl7.fhir.template",
+    "hl7.cda.template" : "http://fhir.org/templates/hl7.cda.template",
+    "ihe.fhir.template" : "http://fhir.org/templates/ihe.fhir.template"
+  }
+}
