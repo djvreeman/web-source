@@ -1,0 +1,8 @@
+{
+  "url": "http://fhir.org/templates/fhir.base.template",
+  "package-id": "fhir.base.template",
+  "ig-ver": "0.1.0",
+  "date": "Mon, 17 Feb, 2020 22:06:22 +1100",
+  "version": "4.2.0",
+  "tool": "4.2.0 (3)"
+}

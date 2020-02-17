@@ -1,0 +1,8 @@
+{
+  "url": "http://github.com/HL7/ig-template-base",
+  "package-id": "fhir.base.template",
+  "ig-ver": "0.0.2",
+  "date": "Sun, 02 Feb, 2020 22:44:21 +1100",
+  "version": "4.2.0",
+  "tool": "4.2.0 (3)"
+}
