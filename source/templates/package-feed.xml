@@ -4,11 +4,20 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Mon, 17 Feb 2020 10:06:23</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2020 07:29:36</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>ihe.fhir.template#0.1.0</title>
+      <description>22-2-2020 - based on base template</description>
+      <link>http://fhir.org/packages/ihe.fhir.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/ihe.fhir.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sun, 23 Feb 2020 07:29:36</pubDate>
+    </item>
     <item>
       <title>fhir.base.template#0.1.0</title>
       <description>Improved error messages and vocab layour</description>
