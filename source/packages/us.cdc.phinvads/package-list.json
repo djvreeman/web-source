@@ -5,12 +5,20 @@
   "introduction": "FHIR Distribution for the the PHINVads value sets",
   "list": [
     {
+      "version": "0.4.0",
+      "desc": "More fixing fixing canonical URLs (v3 this time)",
+      "path": "http://fhir.org/packages/us.cdc.phinvads/0.4.0",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2020-08-24"
+    },
+    {
       "version": "0.3.0",
       "desc": "More fixing fixing canonical URLs",
       "path": "http://fhir.org/packages/us.cdc.phinvads/0.3.0",
       "status": "release",
       "sequence": "Publications",
-      "current": true,
       "date": "2020-08-24"
     },
     {

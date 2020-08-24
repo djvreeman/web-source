@@ -4,11 +4,20 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Mon, 24 Aug 2020 03:21:17</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 03:53:47</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>us.cdc.phinvads#0.4.0</title>
+      <description>More fixing fixing canonical URLs (v3 this time)</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Mon, 24 Aug 2020 03:53:47</pubDate>
+    </item>
     <item>
       <title>us.cdc.phinvads#0.3.0</title>
       <description>More fixing fixing canonical URLs</description>
