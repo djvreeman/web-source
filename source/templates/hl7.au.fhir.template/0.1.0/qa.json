@@ -1,0 +1,8 @@
+{
+  "url": "http://fhir.org/templates/hl7.au.fhir.template",
+  "package-id": "hl7.au.fhir.template",
+  "ig-ver": "0.1.0",
+  "date": "Fri, 03 Jul, 2020 14:31:59 +1000",
+  "version": "4.4.0",
+  "tool": "4.4.0 (3)"
+}
