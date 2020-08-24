@@ -4,11 +4,227 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Tue, 05 May 2020 06:10:06</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 03:21:17</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>us.cdc.phinvads#0.3.0</title>
+      <description>More fixing fixing canonical URLs</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.3.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.3.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Mon, 24 Aug 2020 03:21:17</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.2.0</title>
+      <description>Fix canonical URLs</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Sat, 22 Aug 2020 09:40:49</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.1.2</title>
+      <description>Populate meta.source</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.1.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.1.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Sat, 22 Aug 2020 08:02:45</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.1.1</title>
+      <description>Fix invalid file mames</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.1.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.1.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 20 Aug 2020 04:48:24</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.1.0</title>
+      <description>First release</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 20 Aug 2020 02:03:52</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.4.0</title>
+      <description>fix NUCC abstract codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 05 Aug 2020 12:48:29</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.4.0</title>
+      <description>Fix NUCC abstract codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 05 Aug 2020 12:48:29</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.0.7</title>
+      <description>Fix Code System Comparison template</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.7/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.7/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <pubDate>Fri, 31 Jul 2020 12:31:04</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.0.6</title>
+      <description>Add comparison templates</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.6/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.6/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <pubDate>Thu, 11 Jun 2020 04:33:05</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.0.5</title>
+      <description>Add questionnaire rendering resources</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.5/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.5/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <pubDate>Wed, 27 May 2020 09:04:39</pubDate>
+    </item>
+    <item>
+      <title>fhir.test.data.r4#0.2.1</title>
+      <description>Fix FHIR Versions in package description</description>
+      <link>http://fhir.org/packages/fhir.test.data.r4/0.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r4/0.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 06:10:46</pubDate>
+    </item>
+    <item>
+      <title>fhir.test.data.r3#0.2.1</title>
+      <description>Fix FHIR Versions in package description</description>
+      <link>http://fhir.org/packages/fhir.test.data.r3/0.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r3/0.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 06:10:46</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.3.2</title>
+      <description>Fix FHIR Versions in package description</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.3.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.3.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r2#0.2.1</title>
+      <description>Fix FHIR Versions in package description</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r2/0.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r2/0.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
+    </item>
+    <item>
+      <title>fhir.test.data.r2#0.2.1</title>
+      <description>Fix FHIR Versions in package description</description>
+      <link>http://fhir.org/packages/fhir.test.data.r2/0.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r2/0.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.3.1</title>
+      <description>Fix FHIR Versions in package description</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.3.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.3.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.3.1</title>
+      <description>Fix syntax errors in code systems</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.3.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.3.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 05:22:27</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver.r3#1.2.1</title>
+      <description>Fix FHIR Versions in pacakge</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver.r3/1.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r3/1.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:35:00</pubDate>
+    </item>
+    <item>
+      <title>fhir.test.data.r4#0.2.0</title>
+      <description>Add FHIR Versions to package description</description>
+      <link>http://fhir.org/packages/fhir.test.data.r4/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r4/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:33:35</pubDate>
+    </item>
+    <item>
+      <title>fhir.test.data.r3#0.2.0</title>
+      <description>Add FHIR Versions to package description</description>
+      <link>http://fhir.org/packages/fhir.test.data.r3/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r3/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:33:35</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.3.0</title>
+      <description>Add FHIR Versions to package description</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.3.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.3.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r2#0.2.0</title>
+      <description>Add FHIR Versions to package description</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r2/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r2/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
+    </item>
+    <item>
+      <title>fhir.test.data.r2#0.2.0</title>
+      <description>Add FHIR Versions to package description</description>
+      <link>http://fhir.org/packages/fhir.test.data.r2/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r2/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.3.0</title>
+      <description>Add FHIR Versions to package description</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.3.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.3.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
+    </item>
     <item>
       <title>hl7.fhir.xver-extensions#0.0.4</title>
       <description>Update R5 to 4.4.0</description>

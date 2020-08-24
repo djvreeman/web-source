@@ -12,19 +12,26 @@
       "current": true
     },
     {
+      "version": "0.2.0",
+      "desc": "04-07-2020 - using proper colors and remove unneeded files",
+      "path": "https://build.fhir.org/ig/IHE/ihe-ig-template/0.2.0",
+      "status": "release",
+      "current": true,
+      "date": "2020-07-08"
+    },
+    {
       "version": "0.1.0",
       "desc": "22-2-2020 - based on base template",
       "path": "https://build.fhir.org/ig/IHE/ihe-ig-template/0.1.0",
       "status": "release",
-      "current": true,
-      "date": "2020-02-23"
+      "date": "2020-02-22"
     },
     {
       "version": "0.0.2",
-      "date": "2020-02-05",
       "desc": "First Release",
       "path": "http://fhir.org/templates/ihe.fhir.template/0.0.2",
       "status": "release",
+      "date": "2020-02-05",
       "sequence": "Publications"
     }
   ]

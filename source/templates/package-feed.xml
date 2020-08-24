@@ -4,11 +4,74 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Sun, 23 Feb 2020 07:29:36</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 05:29:03</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>fhir.base.template#0.1.1</title>
+      <description>Copy button, mapping folder, better overrides</description>
+      <link>http://fhir.org/packages/fhir.base.template/0.1.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.base.template/0.1.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
+    <item>
+      <title>ihe.fhir.template#0.2.0</title>
+      <description>04-07-2020 - using proper colors and remove unneeded files</description>
+      <link>http://fhir.org/packages/ihe.fhir.template/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/ihe.fhir.template/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
+    <item>
+      <title>hl7.cda.template#0.1.2</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.cda.template/0.1.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.cda.template/0.1.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
+    <item>
+      <title>hl7.base.template#0.2.1</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.base.template/0.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.base.template/0.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
+    <item>
+      <title>hl7.au.fhir.template#0.1.2</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.au.fhir.template/0.1.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.au.fhir.template/0.1.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
+    <item>
+      <title>hl7.au.base.template#0.1.2</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.au.base.template/0.1.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.au.base.template/0.1.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.template#0.2.1</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/packages/hl7.fhir.template/0.2.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.template/0.2.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 08 Jul 2020 05:29:03</pubDate>
+    </item>
     <item>
       <title>ihe.fhir.template#0.1.0</title>
       <description>22-2-2020 - based on base template</description>

@@ -1,8 +1,8 @@
 {
   "url": "http://fhir.org/templates/hl7.base.template",
   "package-id": "hl7.base.template",
-  "ig-ver": "0.1.0",
-  "date": "Mon, 17 Feb, 2020 22:06:21 +1100",
-  "version": "4.2.0",
-  "tool": "4.2.0 (3)"
+  "ig-ver": "0.2.1",
+  "date": "Wed, 08 Jul, 2020 17:29:00 +1000",
+  "version": "4.4.0",
+  "tool": "4.4.0 (3)"
 }

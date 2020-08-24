@@ -4,6 +4,8 @@
     "hl7.base.template" : "http://fhir.org/templates/hl7.base.template",
     "hl7.fhir.template" : "http://fhir.org/templates/hl7.fhir.template",
     "hl7.cda.template" : "http://fhir.org/templates/hl7.cda.template",
-    "ihe.fhir.template" : "http://fhir.org/templates/ihe.fhir.template"
+    "ihe.fhir.template" : "http://fhir.org/templates/ihe.fhir.template",
+    "hl7.au.base.template" : "http://fhir.org/templates/hl7.au.base.template",
+    "hl7.au.fhir.template" : "http://fhir.org/templates/hl7.au.fhir.template"
   }
 }

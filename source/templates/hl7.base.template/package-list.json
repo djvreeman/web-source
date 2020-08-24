@@ -12,21 +12,37 @@
       "current": true
     },
     {
+      "version": "0.2.1",
+      "desc": "Upgrade for dependency on fhir.base.template",
+      "path": "http://fhir.org/templates/hl7.base.template/0.2.1",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2020-07-08"
+    },
+    {
+      "version": "0.2.0",
+      "desc": "Added validation of package-list, jira spec file generation",
+      "path": "http://fhir.org/templates/hl7.base.template/0.2.0",
+      "status": "release",
+      "sequence": "Publications",
+      "date": "2020-07-08"
+    },
+    {
       "version": "0.1.0",
       "desc": "Upgrade for dependency on fhir.base.template",
       "path": "http://fhir.org/templates/hl7.base.template/0.1.0",
       "status": "release",
       "sequence": "Publications",
-      "current": true,
       "date": "2020-02-17"
     },
     {
       "version": "0.0.1",
-      "date": "2020-02-03",
       "desc": "First Release",
       "path": "http://fhir.org/templates/fhir.base.template/0.0.1",
       "status": "release",
-      "sequence": "Publications"
+      "sequence": "Publications",
+      "date": "2020-02-03"
     }
   ]
 }
