@@ -5,8 +5,12 @@ function th(tr, caption) {
 }
 
 function escapeHTML(s) {
+  if (s == null) {
+    return "";
+  }
   return s.replace('//&', '&amp;').replace('//<', '&lt;').replace('/ />', '&gt;');
 }
+
 let url = 'https://raw.githubusercontent.com/FHIR/ig-registry/master/fhir-ig-list.json';
 
 function buildTable(data) {

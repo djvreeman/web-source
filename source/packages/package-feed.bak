@@ -4,11 +4,21 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Tue, 25 Aug 2020 10:15:32</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2020 03:48:09</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>us.nlm.vsac#0.1.0</title>
+      <description>First Publication</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 25 Aug 2020 03:48:09</pubDate>
+    </item>
     <item>
       <title>us.cdc.phinvads#0.7.0</title>
       <description>Really fix Snomed versions correctly</description>
@@ -16,6 +26,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.7.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Tue, 25 Aug 2020 10:15:32</pubDate>
     </item>
     <item>
@@ -25,6 +36,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.6.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Tue, 25 Aug 2020 06:57:59</pubDate>
     </item>
     <item>
@@ -34,6 +46,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.5.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Mon, 24 Aug 2020 04:48:56</pubDate>
     </item>
     <item>
@@ -43,6 +56,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.4.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Mon, 24 Aug 2020 03:53:47</pubDate>
     </item>
     <item>
@@ -52,6 +66,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.3.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Mon, 24 Aug 2020 03:21:17</pubDate>
     </item>
     <item>
@@ -61,6 +76,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Sat, 22 Aug 2020 09:40:49</pubDate>
     </item>
     <item>
@@ -70,6 +86,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.1.2/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Sat, 22 Aug 2020 08:02:45</pubDate>
     </item>
     <item>
@@ -79,6 +96,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.1.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Thu, 20 Aug 2020 04:48:24</pubDate>
     </item>
     <item>
@@ -88,6 +106,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Thu, 20 Aug 2020 02:03:52</pubDate>
     </item>
     <item>
@@ -97,6 +116,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.4.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 05 Aug 2020 12:48:29</pubDate>
     </item>
     <item>
@@ -106,6 +126,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.4.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 05 Aug 2020 12:48:29</pubDate>
     </item>
     <item>
@@ -115,6 +136,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.7/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Fri, 31 Jul 2020 12:31:04</pubDate>
     </item>
     <item>
@@ -124,6 +146,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.6/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Thu, 11 Jun 2020 04:33:05</pubDate>
     </item>
     <item>
@@ -133,6 +156,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.5/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 27 May 2020 09:04:39</pubDate>
     </item>
     <item>
@@ -142,6 +166,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r4/0.2.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 13 May 2020 06:10:46</pubDate>
     </item>
     <item>
@@ -151,6 +176,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r3/0.2.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 06:10:46</pubDate>
     </item>
     <item>
@@ -160,6 +186,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.3.2/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
     </item>
     <item>
@@ -169,6 +196,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r2/0.2.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
     </item>
     <item>
@@ -178,6 +206,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r2/0.2.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
     </item>
     <item>
@@ -187,6 +216,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.3.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 13 May 2020 06:10:45</pubDate>
     </item>
     <item>
@@ -196,6 +226,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.3.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 05:22:27</pubDate>
     </item>
     <item>
@@ -205,6 +236,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r3/1.2.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 04:35:00</pubDate>
     </item>
     <item>
@@ -214,6 +246,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r4/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 13 May 2020 04:33:35</pubDate>
     </item>
     <item>
@@ -223,6 +256,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r3/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 04:33:35</pubDate>
     </item>
     <item>
@@ -232,6 +266,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.3.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
     </item>
     <item>
@@ -241,6 +276,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r2/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
     </item>
     <item>
@@ -250,6 +286,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r2/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
       <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
     </item>
     <item>
@@ -259,6 +296,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.3.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 13 May 2020 04:33:34</pubDate>
     </item>
     <item>
@@ -268,6 +306,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.4/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Tue, 05 May 2020 06:10:06</pubDate>
     </item>
     <item>
@@ -277,6 +316,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Thu, 30 Apr 2020 02:25:20</pubDate>
     </item>
     <item>
@@ -286,6 +326,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Thu, 30 Apr 2020 02:25:20</pubDate>
     </item>
     <item>
@@ -295,6 +336,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.4/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 15 Apr 2020 04:25:03</pubDate>
     </item>
     <item>
@@ -304,6 +346,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.3/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Sun, 12 Apr 2020 08:33:59</pubDate>
     </item>
     <item>
@@ -313,6 +356,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r4/1.2.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Fri, 13 Mar 2020 10:01:11</pubDate>
     </item>
     <item>
@@ -322,6 +366,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r3/1.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Mon, 02 Mar 2020 05:03:08</pubDate>
     </item>
     <item>
@@ -331,6 +376,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r4/1.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Mon, 02 Mar 2020 05:03:08</pubDate>
     </item>
     <item>
@@ -340,6 +386,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.2/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Mon, 02 Mar 2020 01:44:25</pubDate>
     </item>
     <item>
@@ -349,6 +396,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r4/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:33</pubDate>
     </item>
     <item>
@@ -358,6 +406,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r3/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:33</pubDate>
     </item>
     <item>
@@ -367,6 +416,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:32</pubDate>
     </item>
     <item>
@@ -376,6 +426,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r2/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:32</pubDate>
     </item>
     <item>
@@ -385,6 +436,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.test.data.r2/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:32</pubDate>
     </item>
     <item>
@@ -394,6 +446,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r3/1.0.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:32</pubDate>
     </item>
     <item>
@@ -403,6 +456,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver.r4/1.0.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:32</pubDate>
     </item>
     <item>
@@ -412,6 +466,7 @@
       <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.1.0/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
       <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Sun, 01 Mar 2020 10:51:32</pubDate>
     </item>
     <item>
@@ -420,8 +475,8 @@
       <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.1/package.tgz</link>
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.1/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
-      <fhir:version>4.0</fhir:version>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Wed, 18 Dec 2019 18:37:06</pubDate>
     </item>
     <item>
@@ -430,8 +485,8 @@
       <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.3/package.tgz</link>
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.3/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
-      <fhir:version>4.1</fhir:version>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Mon, 16 Dec 2019 06:10:06</pubDate>
     </item>
     <item>
@@ -440,8 +495,8 @@
       <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.2/package.tgz</link>
       <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.2/package.tgz</guid>
       <dc:creator>FHIR Project</dc:creator>
-      <fhir:version>4.1</fhir:version>
       <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
       <pubDate>Tue, 19 Nov 2019 09:25:06</pubDate>
     </item>
   </channel>
