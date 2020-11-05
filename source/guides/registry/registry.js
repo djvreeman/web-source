@@ -150,12 +150,49 @@ function applyReleaseFilter(list) {
 function applyTextFilter(list) {
   var e = document.getElementById('search-filter');
   var searchWord = e.value.toLowerCase();
-  if (searchWord.length < 2)
+  if (searchWord.length < 2) {
     return list;
+  }
   return list.filter(function(guide) {
-    return guide.name.toLowerCase().indexOf(searchWord) != -1 || guide.description.toLowerCase().indexOf(searchWord) != -1 
-      || guide['npm-name'].toLowerCase().indexOf(searchWord) != -1;
+    return guideNameContainsSearchTerm(guide, searchWord)
+        || guideDescriptionContainsSearchTerm(guide, searchWord)
+        || guideNpmNameContainsSearchTerm(guide, searchWord);
   });
+}
+
+/**
+ * Returns true if the guide name contains the search term.
+ * @param guide IG to check.
+ * @param searchTerm String to search for.
+ * @returns {boolean} True, if a match is found.
+ */
+function guideNameContainsSearchTerm(guide, searchTerm) {
+  return guide.name.toLowerCase().indexOf(searchTerm) !== -1
+}
+
+/**
+ * Returns true if the guide description contains the search term.
+ * @param guide IG to check.
+ * @param searchTerm String to search for.
+ * @returns {boolean} True, if a match is found.
+ */
+function guideDescriptionContainsSearchTerm(guide, searchTerm) {
+  return guide.description.toLowerCase().indexOf(searchTerm) !== -1
+}
+
+/**
+ * Returns true if the guide npm-name contains the search term.
+ * @param guide IG to check.
+ * @param searchTerm String to search for.
+ * @returns {boolean} True, if a match is found.
+ */
+function guideNpmNameContainsSearchTerm(guide, searchTerm) {
+  // The npm-name can be null for some entries so we need to filter for that
+  if (guide['npm-name'] != null) {
+    return guide['npm-name'].toLowerCase().indexOf(searchTerm) !== -1;
+  } else {
+    return false
+  }
 }
 
 function applyFilters() {
