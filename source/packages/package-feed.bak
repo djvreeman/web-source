@@ -4,11 +4,261 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Tue, 25 Aug 2020 03:48:09</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jun 2021 09:33:00</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>fhir.tx.support.r3#0.13.0</title>
+      <description>Add MVX, MDC and ICD-10 (WHO)</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.13.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.13.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Tue, 15 Jun 2021 09:33:00</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.13.0</title>
+      <description>Add MVX, MDC and ICD-10 (WHO)</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.13.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.13.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Tue, 15 Jun 2021 09:32:57</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.12.0</title>
+      <description>Update CVX code system version</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.12.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.12.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Fri, 16 Apr 2021 06:56:29</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.12.0</title>
+      <description>Update CVX code system version</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.12.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.12.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Fri, 16 Apr 2021 06:56:27</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.11.0</title>
+      <description>Update CVX code system</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.11.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.11.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Thu, 15 Apr 2021 06:03:00</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.11.0</title>
+      <description>Update CVX code system</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.11.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.11.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Thu, 15 Apr 2021 06:02:58</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.10.0</title>
+      <description>Update ICD-9-CM codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.10.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.10.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Thu, 10 Dec 2020 02:51:57</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.10.0</title>
+      <description>Update ICD-9-CM codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.10.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.10.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Thu, 10 Dec 2020 02:51:54</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.6</title>
+      <description>fix stated FHIRversion for package</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.6/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.6/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 10 Dec 2020 02:38:35</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.4.0</title>
+      <description>update for new value sets</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 01 Dec 2020 10:00:04</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.9.0</title>
+      <description>Add jurisdiction and fix ATC</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.9.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.9.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Tue, 01 Dec 2020 09:59:57</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.9.0</title>
+      <description>Add jurisdiction value set</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.9.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.9.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 01 Dec 2020 09:59:55</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.0.8</title>
+      <description>Add prism to pubpack</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.8/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.8/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 01 Dec 2020 09:59:52</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.3.0</title>
+      <description>fix character set issues in ICD-10 for 'Charcôt's' (2.16.840.1.113883.3.666.5.903 and 2.16.840.1.113883.3.666.5.2259)</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.3.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.3.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 17 Nov 2020 08:47:11</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.8.0</title>
+      <description>Update ICD-10-CM to list all codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.8.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.8.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Tue, 17 Nov 2020 08:47:06</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.8.0</title>
+      <description>Update ICD-10-CM to list all codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.8.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.8.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 17 Nov 2020 08:47:04</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.7.0</title>
+      <description>Update ATC code system</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.7.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.7.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Tue, 20 Oct 2020 04:35:04</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.7.0</title>
+      <description>Update ATC Code system</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.7.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.7.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 20 Oct 2020 04:35:04</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.6.0</title>
+      <description>fix dependency</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.6.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.6.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Thu, 08 Oct 2020 10:17:10</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.6.0</title>
+      <description>Update NUCC Package</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.6.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.6.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 08 Oct 2020 10:17:09</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.5.0</title>
+      <description>fix dependency</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.5.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.5.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Thu, 24 Sep 2020 03:09:25</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r2#0.3.0</title>
+      <description>Fix Dependency</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r2/0.3.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r2/0.3.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>1.0.2</fhir:version>
+      <pubDate>Thu, 24 Sep 2020 03:09:24</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.5.0</title>
+      <description>Fix Dependency</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.5.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.5.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 24 Sep 2020 03:09:24</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.5</title>
+      <description>Update R5 to 4.5.0</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.5/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.5/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 17 Sep 2020 12:50:45</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.2.0</title>
+      <description>Fix canonical URL to http://cts.nlm.nih.gov/fhir/ValueSet/</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Fri, 04 Sep 2020 05:43:05</pubDate>
+    </item>
     <item>
       <title>us.nlm.vsac#0.1.0</title>
       <description>First Publication</description>
