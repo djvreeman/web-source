@@ -4,11 +4,41 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Tue, 15 Jun 2021 09:33:00</lastBuildDate>
+    <lastBuildDate>Thu, 02 Sep 2021 02:34:18</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>fhir.tx.support.r3#0.14.0</title>
+      <description>Add AIR</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.14.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.14.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Thu, 02 Sep 2021 02:34:18</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.14.0</title>
+      <description>Add AIR</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.14.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.14.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Thu, 02 Sep 2021 02:34:15</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.0.9</title>
+      <description>Add icons for questionnaire rendering</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.0.9/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.0.9/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0</fhir:version>
+      <pubDate>Wed, 16 Jun 2021 12:08:18</pubDate>
+    </item>
     <item>
       <title>fhir.tx.support.r3#0.13.0</title>
       <description>Add MVX, MDC and ICD-10 (WHO)</description>
