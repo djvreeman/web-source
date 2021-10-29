@@ -256,3 +256,6 @@ build-iPhoneSimulator/
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/jekyll,java-web,webstorm,intellij+all,ruby
+/Gemfile
+/Gemfile.lock
+/source/templates/package-feed.bak

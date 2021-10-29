@@ -4,11 +4,91 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Fri, 17 Sep 2021 09:30:45</lastBuildDate>
+    <lastBuildDate>Sat, 30 Oct 2021 09:12:47</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>fhir.tx.support.r3#0.19.0</title>
+      <description>Move DICOM content to fhir.dicom package</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.19.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.19.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Sat, 30 Oct 2021 09:12:47</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.18.0</title>
+      <description>Move DICOM content to fhir.dicom package</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.18.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.18.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Sat, 30 Oct 2021 09:12:46</pubDate>
+    </item>
+    <item>
+      <title>fhir.dicom#2021.4.20210910</title>
+      <description>First release for 2021d</description>
+      <link>http://fhir.org/packages/fhir.dicom/2021.4.20210910/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.dicom/2021.4.20210910/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Sat, 30 Oct 2021 09:12:46</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.18.0</title>
+      <description>Fix coding issues in 3166 (duplicate codes)</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.18.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.18.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Fri, 22 Oct 2021 09:58:30</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.17.0</title>
+      <description>Fix coding issues in 3166 (duplicate codes)</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.17.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.17.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Fri, 22 Oct 2021 09:58:29</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.17.0</title>
+      <description>Fix AIR &amp; ATC identifier format errors</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.17.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.17.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Mon, 18 Oct 2021 11:17:36</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.16.0</title>
+      <description>Update ATC to include all codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.16.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.16.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Tue, 12 Oct 2021 07:32:36</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.16.0</title>
+      <description>Update ATC to include all codes</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.16.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.16.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Tue, 12 Oct 2021 07:32:34</pubDate>
+    </item>
     <item>
       <title>fhir.tx.support.r3#0.15.0</title>
       <description>Fix CVX designations + Initial add of IPS valuesets</description>
