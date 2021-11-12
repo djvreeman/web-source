@@ -4,11 +4,38 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/templates/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Fri, 03 Sep 2021 07:28:42</lastBuildDate>
+    <lastBuildDate>Fri, 12 Nov 2021 09:48:50</lastBuildDate>
     <atom:link href="http://fhir.org/templates/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>cqf.fhir.template#0.0.2</title>
+      <description>First Release</description>
+      <link>http://fhir.org/templates/cqf.fhir.template/0.0.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/cqf.fhir.template/0.0.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Fri, 12 Nov 2021 09:48:50</pubDate>
+    </item>
+    <item>
+      <title>hl7.davinci.template#0.1.0</title>
+      <description>First release</description>
+      <link>http://fhir.org/templates/hl7.davinci.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.davinci.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Fri, 12 Nov 2021 08:45:31</pubDate>
+    </item>
+    <item>
+      <title>hl7.dk.fhir.template#0.0.1</title>
+      <description>First release</description>
+      <link>http://fhir.org/templates/hl7.dk.fhir.template/0.0.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.dk.fhir.template/0.0.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Wed, 10 Nov 2021 12:38:17</pubDate>
+    </item>
     <item>
       <title>fhir.base.template#0.2.2</title>
       <description>release updated version of onload.xslt for Sushi users</description>

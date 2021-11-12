@@ -1,0 +1,8 @@
+{
+  "url": "http://fhir.org/templates/hl7.davinci.template",
+  "package-id": "hl7.davinci.template",
+  "ig-ver": "0.1.0",
+  "date": "Fri, 12 Nov, 2021 08:45:30 +1100",
+  "version": "4.6.0",
+  "tool": "4.6.0 (3)"
+}

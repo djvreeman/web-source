@@ -1,0 +1,24 @@
+﻿{
+  "package-id": "hl7.davinci.template",
+  "title": "Template for all Da VInci FHIR implementation guides",
+  "canonical": "http://fhir.org/templates/hl7.davinci.template",
+  "introduction": "This is the basic template for FHIR Guides published by the HL7 Da Vinci project",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/HL7/ig-template-davinci/",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.1.0",
+      "desc": "First release",
+      "path": "http://fhir.org/templates/hl7.davinci.template/0.1.0",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2021-11-12"
+    }
+  ]
+}

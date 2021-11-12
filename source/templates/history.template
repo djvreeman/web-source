@@ -1,0 +1,29 @@
+---
+layout: page
+title: Publication History - {{id}}
+---
+  <script type="application/javascript" src="history-cm.js"> </script>
+  <script type="application/javascript" src="http://hl7.org/fhir/history.js"> </script>
+
+<div class="col-12">
+
+<h2>Publication (Version) History for {{id}}</h2>
+
+<div id="intro"></div>
+
+<div id="history-data"></div>
+<style>
+    #history-data table td { padding-right: 1em; }
+</style>
+
+<p>
+  <span id="ig-footer">{{id}} </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+</p>
+
+<!--- Include in the page --->
+<script>
+var pageJSON = '{{pl}}';
+load(pageJSON);
+</script>
+
