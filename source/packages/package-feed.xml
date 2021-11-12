@@ -4,11 +4,21 @@
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Sat, 30 Oct 2021 09:12:47</lastBuildDate>
+    <lastBuildDate>Thu, 04 Nov 2021 09:37:42</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.7</title>
+      <description>Add FHIR 4.6 to the package</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.7/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.7/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 04 Nov 2021 09:37:42</pubDate>
+    </item>
     <item>
       <title>fhir.tx.support.r3#0.19.0</title>
       <description>Move DICOM content to fhir.dicom package</description>
