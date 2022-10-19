@@ -1,0 +1,96 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "example-rec-05-mme-with-timeofday-context",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"example-rec-05-mme-with-timeofday-context\" </p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Community <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-medicationrequest-category.html\">MedicationRequest Category Codes</a>#community)</span></p><p><b>medication</b>: oxycodone hydrochloride 60 MG 12 HR Extended Release Oral Tablet <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-rxNorm.html\">RxNorm</a>#1049593)</span></p><p><b>subject</b>: <a href=\"Patient-patient-mme-with-timeofday.html\">Patient/patient-mme-with-timeofday</a></p><p><b>authoredOn</b>: 2020-06-26</p><blockquote><p><b>dispenseRequest</b></p><p><b>validityPeriod</b>: 2020-06-25 --&gt; 2020-12-25</p><p><b>numberOfRepeatsAllowed</b>: 0</p><p><b>quantity</b>: 90 tablet</p></blockquote></div>"
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "community"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1049593",
+        "display": "oxycodone hydrochloride 60 MG 12 HR Extended Release Oral Tablet"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-mme-with-timeofday"
+  },
+  "authoredOn": "2020-06-26",
+  "_authoredOn": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+        "valueExpression": {
+          "language": "text/cql",
+          "expression": "Today()"
+        }
+      }
+    ]
+  },
+  "dosageInstruction": [
+    {
+      "timing": {
+        "repeat": {
+          "boundsPeriod": {
+            "start": "2020-09-28"
+          },
+          "timeOfDay": [
+            "10:00:00",
+            "22:00:00"
+          ]
+        }
+      },
+      "asNeededBoolean": false,
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 10,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "validityPeriod": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+          "valueExpression": {
+            "language": "text/cql",
+            "expression": "FHIR.Period { start: FHIR.dateTime { value: Today() }, end: FHIR.dateTime { value: Today() + 6 months } }"
+          }
+        }
+      ],
+      "start": "2020-06-25",
+      "end": "2020-12-25"
+    },
+    "numberOfRepeatsAllowed": 0,
+    "quantity": {
+      "value": 90,
+      "unit": "tablet"
+    },
+    "expectedSupplyDuration": {
+      "value": 45,
+      "unit": "Day",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  }
+}

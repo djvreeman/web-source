@@ -1,0 +1,112 @@
+﻿CDCMMECQLCalculator : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: 1.1.89
+Generated Thu Nov 25 15:16:46 AEDT 2021. FHIR version 4.0.1 for fhir.cdc.opioid-mme-r4#3.0.0 (canonical = http://fhir.org/guides/cdc/opioid-mme-r4)
+ Build Errors : 0 / 0 / 0
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-ConversionFactors : 0 / 0 / 18
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-ConversionFactorsTests : 0 / 0 / 8
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-MMECalculator : 0 / 0 / 18
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-MMECalculatorTests : 0 / 0 / 8
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKData : 0 / 0 / 18
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKDataTests : 0 / 0 / 8
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKLogic : 0 / 0 / 18
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKLogicTests : 0 / 0 / 8
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\ConversionFactorsClinicalTests\cfct-example\codesystem-cfct-example-CDCMMEClinicalConversionFactors : 0 / 0 / 3
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\ConversionFactorsClinicalTests\cfct-example\patient-cfct-example : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\ConversionFactorsTests\cft-example\patient-cft-example : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-greater-than-fifty\GuidanceResponse-patient-mme-greater-than-fifty : 0 / 0 / 2
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-greater-than-fifty\example-rec-05-mme-greater-than-fifty-context : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-greater-than-fifty\patient-mme-greater-than-fifty : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-less-than-fifty\GuidanceResponse-patient-mme-less-than-fifty : 0 / 0 / 2
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-less-than-fifty\example-rec-05-mme-less-than-fifty-context : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-less-than-fifty\patient-mme-less-than-fifty : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-with-timeofday\GuidanceResponse-patient-mme-with-timeofday : 0 / 0 / 2
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-with-timeofday\example-rec-05-mme-with-timeofday-context : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-with-timeofday\patient-mme-with-timeofday : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-no-meds\patient-no-meds : 0 / 0 / 1
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\vocabulary\codesystem\codesystem-CDCMMEClinicalConversionFactors : 0 / 0 / 15
+ C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\vocabulary\codesystem\codesystem-CDCMMEUsageContextCodes : 0 / 0 / 13
+ MMEMedicationRequest : 0 / 0 / 1
+ c:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\opioid-mme-r4 : 0 / 0 / 1
+</table>
+
+== n/a ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-ConversionFactors.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-ConversionFactorsTests.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-MMECalculator.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-MMECalculatorTests.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKData.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKDataTests.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKLogic.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\resources\library\library-OMTKLogicTests.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\ConversionFactorsClinicalTests\cfct-example\codesystem-cfct-example-CDCMMEClinicalConversionFactors.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\ConversionFactorsClinicalTests\cfct-example\patient-cfct-example.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\ConversionFactorsTests\cft-example\patient-cft-example.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-greater-than-fifty\GuidanceResponse-patient-mme-greater-than-fifty.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-greater-than-fifty\example-rec-05-mme-greater-than-fifty-context.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-greater-than-fifty\patient-mme-greater-than-fifty.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-less-than-fifty\GuidanceResponse-patient-mme-less-than-fifty.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-less-than-fifty\example-rec-05-mme-less-than-fifty-context.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-less-than-fifty\patient-mme-less-than-fifty.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-with-timeofday\GuidanceResponse-patient-mme-with-timeofday.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-with-timeofday\example-rec-05-mme-with-timeofday-context.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-mme-with-timeofday\patient-mme-with-timeofday.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\tests\MMECalculatorTests\patient-no-meds\patient-no-meds.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\vocabulary\codesystem\codesystem-CDCMMEClinicalConversionFactors.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\vocabulary\codesystem\codesystem-CDCMMEUsageContextCodes.json ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\profiles\medicationrequest-profile-spreadsheet.xml ==
+
+
+== C:\temp\fhir.cdc.opioid-mme-r4#3.0.0-milestone\input\opioid-mme-r4.xml ==
+
+

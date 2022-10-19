@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="8abc3704-13e1-412c-90bd-f6d4c6e4b41c"/>
+  <meta>
+    <lastUpdated value="2022-03-29T15:50:36.104+11:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/NoDecaf"/>
+    <resource>
+      <ValueSet>
+        <id value="NoDecaf"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 1 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2021</p>
+            <p>All codes in this table are from the system 
+              <a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-snomed-CT.html">
+                <code>http://snomed.info/sct</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-64100000"> </a>  
+                  <a href="http://snomed.info/id/64100000">64100000</a>
+                </td>
+                <td>No</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/NoDecaf"/>
+        <version value="1.4.2022"/>
+        <name value="NoDecaf"/>
+        <title value="Decaf is for the weak"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="No, Just No"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:6fb8187d-3f80-4589-9919-f3aba6229f61"/>
+          <timestamp value="2022-03-29T15:50:55+11:00"/>
+          <total value="1"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="limitedExpansion"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210731"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="64100000"/>
+            <display value="No"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBAlcoholVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBAlcoholVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 9 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBAlcohol.html">Alcohol List v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBAlcohol.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-BOURBON"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-BOURBON">BOURBON</a>
+                </td>
+                <td>bourbon</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-RUM"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-RUM">RUM</a>
+                </td>
+                <td>rum</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-BAILEYS"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-BAILEYS">BAILEYS</a>
+                </td>
+                <td>Baileys</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-GIN"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-GIN">GIN</a>
+                </td>
+                <td>gin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-RYE"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-RYE">RYE</a>
+                </td>
+                <td>rye</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-VODKA"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-VODKA">VODKA</a>
+                </td>
+                <td>vodka</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-CINNAMON"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-CINNAMON">CINNAMON</a>
+                </td>
+                <td>cinnamon schnapps</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-HAZELNUT"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-HAZELNUT">HAZELNUT</a>
+                </td>
+                <td>hazelnut  liqueur</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBAlcohol-CHOCOLATE"> </a>  
+                  <a href="CodeSystem-HBAlcohol.html#HBAlcohol-CHOCOLATE">CHOCOLATE</a>
+                </td>
+                <td>chocolate Liqueur</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBAlcoholVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBAlcoholVS"/>
+        <title value="Alcohol Additive Value Set"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="Alcohol liquids for use in coffee"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:acc02f3e-fa5a-4f00-95c8-dd774d893d67"/>
+          <timestamp value="2022-03-29T15:50:56+11:00"/>
+          <total value="9"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="BOURBON"/>
+            <display value="bourbon"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="RUM"/>
+            <display value="rum"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="BAILEYS"/>
+            <display value="Baileys"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="GIN"/>
+            <display value="gin"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="RYE"/>
+            <display value="rye"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="VODKA"/>
+            <display value="vodka"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="CINNAMON"/>
+            <display value="cinnamon schnapps"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="HAZELNUT"/>
+            <display value="hazelnut  liqueur"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol"/>
+            <code value="CHOCOLATE"/>
+            <display value="chocolate Liqueur"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBMilkVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBMilkVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 8 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBMilks.html">Milks List v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBMilks.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-RICEMILK"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-RICEMILK">RICEMILK</a>
+                </td>
+                <td>Rice Milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-ALMOND"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-ALMOND">ALMOND</a>
+                </td>
+                <td>Almond Milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-SKIM"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-SKIM">SKIM</a>
+                </td>
+                <td>Skim Milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-SOY"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-SOY">SOY</a>
+                </td>
+                <td>Soy Milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-FULLCREAM"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-FULLCREAM">FULLCREAM</a>
+                </td>
+                <td>Full Cream Milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-COCONUT"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-COCONUT">COCONUT</a>
+                </td>
+                <td>Coconut Milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-HALF"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-HALF">HALF</a>
+                </td>
+                <td>Half and Half</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBMilks-TABLE"> </a>  
+                  <a href="CodeSystem-HBMilks.html#HBMilks-TABLE">TABLE</a>
+                </td>
+                <td>Table Cream</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBMilkVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBMilkVS"/>
+        <title value="Milk Additive Value Set"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="Milk and milk-like liquids for use in coffee"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e31dba1a-019e-4334-bb18-8f97b51e2fa9"/>
+          <timestamp value="2022-03-29T15:50:57+11:00"/>
+          <total value="8"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="RICEMILK"/>
+            <display value="Rice Milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="ALMOND"/>
+            <display value="Almond Milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="SKIM"/>
+            <display value="Skim Milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="SOY"/>
+            <display value="Soy Milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="FULLCREAM"/>
+            <display value="Full Cream Milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="COCONUT"/>
+            <display value="Coconut Milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="HALF"/>
+            <display value="Half and Half"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks"/>
+            <code value="TABLE"/>
+            <display value="Table Cream"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSyrupVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBSyrupVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 10 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBSyrups.html">Syrups List v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBSyrups.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-VANILLA"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-VANILLA">VANILLA</a>
+                </td>
+                <td>Vanilla</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-CARAMEL"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-CARAMEL">CARAMEL</a>
+                </td>
+                <td>Caramel</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-HAZELNUT"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-HAZELNUT">HAZELNUT</a>
+                </td>
+                <td>Hazelnut</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-CHOCOLATE"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-CHOCOLATE">CHOCOLATE</a>
+                </td>
+                <td>Chocolate</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-LAVENDER"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-LAVENDER">LAVENDER</a>
+                </td>
+                <td>Lavender</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-BUTTERSCOTCH"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-BUTTERSCOTCH">BUTTERSCOTCH</a>
+                </td>
+                <td>Butterscotch</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-IRISH"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-IRISH">IRISH</a>
+                </td>
+                <td>Irish Cream</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-ORANGE"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-ORANGE">ORANGE</a>
+                </td>
+                <td>Orange Blossom</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-RASPBERRY"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-RASPBERRY">RASPBERRY</a>
+                </td>
+                <td>Raspberry</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSyrups-ALMOND"> </a>  
+                  <a href="CodeSystem-HBSyrups.html#HBSyrups-ALMOND">ALMOND</a>
+                </td>
+                <td>Almond</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSyrupVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBSyrupVS"/>
+        <title value="Syrup Additive Value Set"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="Syrups for use in coffee"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:15127411-cef7-4a21-bc6a-22f40bbd18ea"/>
+          <timestamp value="2022-03-29T15:50:57+11:00"/>
+          <total value="10"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="VANILLA"/>
+            <display value="Vanilla"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="CARAMEL"/>
+            <display value="Caramel"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="HAZELNUT"/>
+            <display value="Hazelnut"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="CHOCOLATE"/>
+            <display value="Chocolate"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="LAVENDER"/>
+            <display value="Lavender"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="BUTTERSCOTCH"/>
+            <display value="Butterscotch"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="IRISH"/>
+            <display value="Irish Cream"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="ORANGE"/>
+            <display value="Orange Blossom"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="RASPBERRY"/>
+            <display value="Raspberry"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups"/>
+            <code value="ALMOND"/>
+            <display value="Almond"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSizeVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBDrinkSizeVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBDrinkSize.html">Drink Size v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBDrinkSize.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBDrinkSize-SMALL"> </a>  
+                  <a href="CodeSystem-HBDrinkSize.html#HBDrinkSize-SMALL">SMALL</a>
+                </td>
+                <td>Small</td>
+                <td>You call that a coffee?</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBDrinkSize-MED"> </a>  
+                  <a href="CodeSystem-HBDrinkSize.html#HBDrinkSize-MED">MED</a>
+                </td>
+                <td>Medium</td>
+                <td>Not enough</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBDrinkSize-LARGE"> </a>  
+                  <a href="CodeSystem-HBDrinkSize.html#HBDrinkSize-LARGE">LARGE</a>
+                </td>
+                <td>Large</td>
+                <td>That will get you started</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBDrinkSize-XLARGE"> </a>  
+                  <a href="CodeSystem-HBDrinkSize.html#HBDrinkSize-XLARGE">XLARGE</a>
+                </td>
+                <td>Extra Large</td>
+                <td>Single meeting size</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBDrinkSize-PROG"> </a>  
+                  <a href="CodeSystem-HBDrinkSize.html#HBDrinkSize-PROG">PROG</a>
+                </td>
+                <td>Programmer size</td>
+                <td>Just over a pot</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSizeVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBDrinkSizeVS"/>
+        <title value="Size of Beverage to be Consumed"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="You want how much?"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:d1f0a97e-b2eb-4083-a34f-f28b1353e65a"/>
+          <timestamp value="2022-03-29T15:51:01+11:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize"/>
+            <code value="SMALL"/>
+            <display value="Small"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize"/>
+            <code value="MED"/>
+            <display value="Medium"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize"/>
+            <code value="LARGE"/>
+            <display value="Large"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize"/>
+            <code value="XLARGE"/>
+            <display value="Extra Large"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize"/>
+            <code value="PROG"/>
+            <display value="Programmer size"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSweetenersVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBSweetenersVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 7 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBSweeteners.html">Sweeteners List v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBSweeteners.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-STEVIA"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-STEVIA">STEVIA</a>
+                </td>
+                <td>Stevia</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-HONEY"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-HONEY">HONEY</a>
+                </td>
+                <td>Honey</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-WSUGAR"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-WSUGAR">WSUGAR</a>
+                </td>
+                <td>White Sugar</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-BSUGAR"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-BSUGAR">BSUGAR</a>
+                </td>
+                <td>Brown Sugar</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-AGAVE"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-AGAVE">AGAVE</a>
+                </td>
+                <td>Agave Nectar</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-MAPLE"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-MAPLE">MAPLE</a>
+                </td>
+                <td>Maple Syrup</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSweeteners-MOLASSES"> </a>  
+                  <a href="CodeSystem-HBSweeteners.html#HBSweeteners-MOLASSES">MOLASSES</a>
+                </td>
+                <td>Molasses</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSweetenersVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBSweetenersVS"/>
+        <title value="Sweeteners Additive Value Set"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="Sweeteners liquids for use in coffee"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:6c87b56a-5b1c-4273-a71c-f401834d3705"/>
+          <timestamp value="2022-03-29T15:51:01+11:00"/>
+          <total value="7"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="STEVIA"/>
+            <display value="Stevia"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="HONEY"/>
+            <display value="Honey"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="WSUGAR"/>
+            <display value="White Sugar"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="BSUGAR"/>
+            <display value="Brown Sugar"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="AGAVE"/>
+            <display value="Agave Nectar"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="MAPLE"/>
+            <display value="Maple Syrup"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"/>
+            <code value="MOLASSES"/>
+            <display value="Molasses"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBBeverageVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBBeverageVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 23 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBBeverages.html">Hot Beverage List v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBBeverages.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-DRIP"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-DRIP">DRIP</a>
+                </td>
+                <td>Drip or filtered</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-FRENCHPRESS"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-FRENCHPRESS">FRENCHPRESS</a>
+                </td>
+                <td>French press or cafetière</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-COLDBREW"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-COLDBREW">COLDBREW</a>
+                </td>
+                <td>Cold brew</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-PERC"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-PERC">PERC</a>
+                </td>
+                <td>Percolated</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-TURKISH"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-TURKISH">TURKISH</a>
+                </td>
+                <td>Turkish coffee</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-MOKA"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-MOKA">MOKA</a>
+                </td>
+                <td>Moka</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-VACUUM"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-VACUUM">VACUUM</a>
+                </td>
+                <td>Vacuum coffee</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-ESPRESSO"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-ESPRESSO">ESPRESSO</a>
+                </td>
+                <td>Espresso</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-COFWESP"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-COFWESP">COFWESP</a>
+                </td>
+                <td>Coffee with espresso</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-COFWTEA"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-COFWTEA">COFWTEA</a>
+                </td>
+                <td>Coffee with tea</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-ICED"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-ICED">ICED</a>
+                </td>
+                <td>Iced Coffee</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-FRAPPE"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-FRAPPE">FRAPPE</a>
+                </td>
+                <td>Frappé</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-FREDDOESP"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-FREDDOESP">FREDDOESP</a>
+                </td>
+                <td>Freddo Espresso</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-FREDDOCAP"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-FREDDOCAP">FREDDOCAP</a>
+                </td>
+                <td>Freddo Cappuccino</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-AFFOFATO"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-AFFOFATO">AFFOFATO</a>
+                </td>
+                <td>Affogato</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-BABYCCINO"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-BABYCCINO">BABYCCINO</a>
+                </td>
+                <td>Babyccino</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-MEDICI"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-MEDICI">MEDICI</a>
+                </td>
+                <td>Caffè Medici</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-TOUBA"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-TOUBA">TOUBA</a>
+                </td>
+                <td>Café Touba</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-COFMILK"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-COFMILK">COFMILK</a>
+                </td>
+                <td>Coffee milk</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-DOUBLE"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-DOUBLE">DOUBLE</a>
+                </td>
+                <td>Double Double</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-EGGCOF"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-EGGCOF">EGGCOF</a>
+                </td>
+                <td>Egg coffee</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-INDIAN"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-INDIAN">INDIAN</a>
+                </td>
+                <td>Indian filter coffee</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBBeverages-POCILLO"> </a>  
+                  <a href="CodeSystem-HBBeverages.html#HBBeverages-POCILLO">POCILLO</a>
+                </td>
+                <td>Pocillo</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBBeverageVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBBeverageVS"/>
+        <title value="Hot Beverages Value Set"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="All beverages allowed to be made via Hot Beverage"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:5d8b1708-aac3-4c9d-b37e-776f61c8cc44"/>
+          <timestamp value="2022-03-29T15:51:01+11:00"/>
+          <total value="23"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="DRIP"/>
+            <display value="Drip or filtered"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="FRENCHPRESS"/>
+            <display value="French press or cafetière"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="COLDBREW"/>
+            <display value="Cold brew"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="PERC"/>
+            <display value="Percolated"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="TURKISH"/>
+            <display value="Turkish coffee"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="MOKA"/>
+            <display value="Moka"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="VACUUM"/>
+            <display value="Vacuum coffee"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="ESPRESSO"/>
+            <display value="Espresso"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="COFWESP"/>
+            <display value="Coffee with espresso"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="COFWTEA"/>
+            <display value="Coffee with tea"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="ICED"/>
+            <display value="Iced Coffee"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="FRAPPE"/>
+            <display value="Frappé"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="FREDDOESP"/>
+            <display value="Freddo Espresso"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="FREDDOCAP"/>
+            <display value="Freddo Cappuccino"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="AFFOFATO"/>
+            <display value="Affogato"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="BABYCCINO"/>
+            <display value="Babyccino"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="MEDICI"/>
+            <display value="Caffè Medici"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="TOUBA"/>
+            <display value="Café Touba"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="COFMILK"/>
+            <display value="Coffee milk"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="DOUBLE"/>
+            <display value="Double Double"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="EGGCOF"/>
+            <display value="Egg coffee"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="INDIAN"/>
+            <display value="Indian filter coffee"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages"/>
+            <code value="POCILLO"/>
+            <display value="Pocillo"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSpiceVS"/>
+    <resource>
+      <ValueSet>
+        <id value="HBSpiceVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-HBSpice.html">Spice List v1.4.2022 (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-HBSpice.html">
+                <code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSpice-CINNAMON"> </a>  
+                  <a href="CodeSystem-HBSpice.html#HBSpice-CINNAMON">CINNAMON</a>
+                </td>
+                <td>cinnamon</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSpice-NUTMEG"> </a>  
+                  <a href="CodeSystem-HBSpice.html#HBSpice-NUTMEG">NUTMEG</a>
+                </td>
+                <td>nutmeg</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSpice-LAVENDER"> </a>  
+                  <a href="CodeSystem-HBSpice.html#HBSpice-LAVENDER">LAVENDER</a>
+                </td>
+                <td>lavender</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSpice-CARDAMOM"> </a>  
+                  <a href="CodeSystem-HBSpice.html#HBSpice-CARDAMOM">CARDAMOM</a>
+                </td>
+                <td>cardamom</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.org-guides-acme-HotBeverage-CodeSystem-HBSpice-SALT"> </a>  
+                  <a href="CodeSystem-HBSpice.html#HBSpice-SALT">SALT</a>
+                </td>
+                <td>salt</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSpiceVS"/>
+        <version value="1.4.2022"/>
+        <name value="HBSpiceVS"/>
+        <title value="Spice Additive Value Set"/>
+        <status value="active"/>
+        <date value="2022-03-29T15:50:36+11:00"/>
+        <publisher value="Dave Pyke &amp; John Moehrke"/>
+        <contact>
+          <name value="Dave Pyke &amp; John Moehrke"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://github.com/DavidPyke/HotBeverage"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="David Pyke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="david@pyke.ca"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="John Moehrke"/>
+          <telecom>
+            <system value="email"/>
+            <value value="JohnMoehrke@gmail.com"/>
+            <use value="work"/>
+          </telecom>
+        </contact>
+        <description value="Spice liquids for use in coffee"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:632f5911-0a43-4a11-82df-c138d1ca304f"/>
+          <timestamp value="2022-03-29T15:51:03+11:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice|1.4.2022"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice"/>
+            <code value="CINNAMON"/>
+            <display value="cinnamon"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice"/>
+            <code value="NUTMEG"/>
+            <display value="nutmeg"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice"/>
+            <code value="LAVENDER"/>
+            <display value="lavender"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice"/>
+            <code value="CARDAMOM"/>
+            <display value="cardamom"/>
+          </contains>
+          <contains>
+            <system value="http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice"/>
+            <code value="SALT"/>
+            <display value="salt"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

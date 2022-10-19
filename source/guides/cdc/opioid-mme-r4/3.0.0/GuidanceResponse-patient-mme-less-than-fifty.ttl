@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-mme-r4/GuidanceResponse/patient-mme-less-than-fifty> a fhir:GuidanceResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "patient-mme-less-than-fifty"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"patient-mme-less-than-fifty\" </p></div><p><b>module</b>: <a href=\"http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests\">http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests</a></p><p><b>status</b>: success</p><p><b>subject</b>: <a href=\"Patient-patient-mme-less-than-fifty.html\">Patient/patient-mme-less-than-fifty</a></p><p><b>outputParameters</b>: <a name=\"output\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"output\" </p></div><h3>Parameters</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>TotalMME</td><td>30.0 {MME}/d<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {MME}/d = '{MME}/d')</span></td></tr></table></blockquote></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Parameters;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "output" ];
+     fhir:Parameters.parameter [
+       fhir:index 0;
+       fhir:Parameters.parameter.name [ fhir:value "TotalMME" ];
+       fhir:Parameters.parameter.valueQuantity [
+         fhir:Quantity.value [ fhir:value "30.0"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "{MME}/d" ]
+       ]
+     ]
+  ];
+  fhir:GuidanceResponse.moduleCanonical [
+     fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests";
+     fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests>
+  ];
+  fhir:GuidanceResponse.status [ fhir:value "success"];
+  fhir:GuidanceResponse.subject [
+     fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/patient-mme-less-than-fifty>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-mme-less-than-fifty" ]
+  ];
+  fhir:GuidanceResponse.outputParameters [
+     fhir:Reference.reference [ fhir:value "#output" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-mme-r4/GuidanceResponse/patient-mme-less-than-fifty.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

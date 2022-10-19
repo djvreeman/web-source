@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cfct-example-CDCMMEClinicalConversionFactors"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Properties</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>conversion-factor</td><td>decimal</td><td>Defines the conversion factor for a specific ingredient, when the conversion factor is the same for all dose forms and dose amounts for the ingredient. The value of this property will be the decimal representation of the conversion factor.</td></tr><tr><td>dose-form-conversion-factor</td><td>string</td><td>Defines the conversion factor for an ingredient when the conversion factor varies by the dose form of the medication. The value of this property will be a string of the form &lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@&lt;doses-per-day&gt;], e.g. 970789:130, where '970789' is the RxNorm dose form code, and '130' is the decimal representation of the conversion factor. An example of a per-day conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay, expressed as a decimal with a maximum of 8 digits after the decimal.</td></tr><tr><td>dose-range-conversion-factor</td><td>string</td><td>Defines the conversion factor for an ingredient when the conversion factor varies by the overall dose of the medication. The value of this property will be a string of the form &lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;, e.g. 1-20:4. Note that the low-value or high-value may be a wildcard '*' to indicate the range continues (e.g. '61-*:12' indicates the range is 61 or greater).</td></tr></table><p/><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>conversion-factor</b></td><td><b>dose-form-conversion-factor</b></td><td><b>dose-range-conversion-factor</b></td></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=2670">2670</a><a name="cfct-example-CDCMMEClinicalConversionFactors-2670"> </a></td><td>Codeine</td><td>0.15</td><td/><td/></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=4337">4337</a><a name="cfct-example-CDCMMEClinicalConversionFactors-4337"> </a></td><td>Fentanyl</td><td/><td>316987:7200@0.33333333</td><td/></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=5489">5489</a><a name="cfct-example-CDCMMEClinicalConversionFactors-5489"> </a></td><td>Hydrocodone</td><td>1</td><td/><td/></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=3423">3423</a><a name="cfct-example-CDCMMEClinicalConversionFactors-3423"> </a></td><td>Hydromorphone</td><td>4</td><td/><td/></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=6813">6813</a><a name="cfct-example-CDCMMEClinicalConversionFactors-6813"> </a></td><td>Methadone</td><td/><td/><td>1-20:4, 21-40:8, 41-60:10, 61-*:12</td></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=7052">7052</a><a name="cfct-example-CDCMMEClinicalConversionFactors-7052"> </a></td><td>Morphine</td><td>1</td><td/><td/></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=7804">7804</a><a name="cfct-example-CDCMMEClinicalConversionFactors-7804"> </a></td><td>Oxycodone</td><td>1.5</td><td/><td/></tr><tr><td><a style="white-space:nowrap" href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=7814">7814</a><a name="cfct-example-CDCMMEClinicalConversionFactors-7814"> </a></td><td>Oxymorphone</td><td>3</td><td/><td/></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/codesystem-sourceReference">
+    <valueUri value="https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf"/>
+  </extension>
+  <url value="http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/cfct-example-CDCMMEClinicalConversionFactors"/>
+  <version value="3.0.0"/>
+  <name value="ExampleCDCMMEClinicalConversionFactors"/>
+  <title value="Example CDC MME Clinical Conversion Factors"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2021-11-25T15:15:41+11:00"/>
+  <publisher value="Alphora"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://alphora.com"/>
+    </telecom>
+  </contact>
+  <description value="**Example Code System to support Testing (Copy of ClinicalConversion Factors)**. This Code System Supplement is a copy of the CDC Clinical Conversion Factors code system supplement to support testing. See the original CDC Clinical Conversion Factors code system supplement for documentation of the code system supplement properties."/>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+      <display value="Clinical Focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="182888003"/>
+        <display value="Medication requested (situation)"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+      <display value="Clinical Focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="82423001"/>
+        <display value="Chronic pain (finding)"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="task"/>
+      <display value="Workflow Task"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes"/>
+        <code value="mme-calculation"/>
+        <display value="MME Calculation"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="840"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Copyright 2019+ Centers for Disease Control and Prevention (CDC)"/>
+  <content value="supplement"/>
+  <supplements value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+  <property>
+    <code value="conversion-factor"/>
+    <description value="Defines the conversion factor for a specific ingredient, when the conversion factor is the same for all dose forms and dose amounts for the ingredient. The value of this property will be the decimal representation of the conversion factor."/>
+    <type value="decimal"/>
+  </property>
+  <property>
+    <code value="dose-form-conversion-factor"/>
+    <description value="Defines the conversion factor for an ingredient when the conversion factor varies by the dose form of the medication. The value of this property will be a string of the form &lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@&lt;doses-per-day&gt;], e.g. 970789:130, where &#39;970789&#39; is the RxNorm dose form code, and &#39;130&#39; is the decimal representation of the conversion factor. An example of a per-day conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay, expressed as a decimal with a maximum of 8 digits after the decimal."/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="dose-range-conversion-factor"/>
+    <description value="Defines the conversion factor for an ingredient when the conversion factor varies by the overall dose of the medication. The value of this property will be a string of the form &lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;, e.g. 1-20:4. Note that the low-value or high-value may be a wildcard &#39;*&#39; to indicate the range continues (e.g. &#39;61-*:12&#39; indicates the range is 61 or greater)."/>
+    <type value="string"/>
+  </property>
+  <concept>
+    <code value="2670"/>
+    <display value="Codeine"/>
+    <property>
+      <code value="conversion-factor"/>
+      <valueDecimal value="0.15"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="4337"/>
+    <display value="Fentanyl"/>
+    <property>
+      <code value="dose-form-conversion-factor"/>
+      <valueString value="316987:7200@0.33333333"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="5489"/>
+    <display value="Hydrocodone"/>
+    <property>
+      <code value="conversion-factor"/>
+      <valueDecimal value="1"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="3423"/>
+    <display value="Hydromorphone"/>
+    <property>
+      <code value="conversion-factor"/>
+      <valueDecimal value="4"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="6813"/>
+    <display value="Methadone"/>
+    <property>
+      <code value="dose-range-conversion-factor"/>
+      <valueString value="1-20:4"/>
+    </property>
+    <property>
+      <code value="dose-range-conversion-factor"/>
+      <valueString value="21-40:8"/>
+    </property>
+    <property>
+      <code value="dose-range-conversion-factor"/>
+      <valueString value="41-60:10"/>
+    </property>
+    <property>
+      <code value="dose-range-conversion-factor"/>
+      <valueString value="61-*:12"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="7052"/>
+    <display value="Morphine"/>
+    <property>
+      <code value="conversion-factor"/>
+      <valueDecimal value="1"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="7804"/>
+    <display value="Oxycodone"/>
+    <property>
+      <code value="conversion-factor"/>
+      <valueDecimal value="1.5"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="7814"/>
+    <display value="Oxymorphone"/>
+    <property>
+      <code value="conversion-factor"/>
+      <valueDecimal value="3"/>
+    </property>
+  </concept>
+</CodeSystem>

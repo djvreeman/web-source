@@ -1,0 +1,156 @@
+[
+  {
+    "id": "HBAlcohol",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBAlcohol",
+    "version": "1.4.2022",
+    "name": "HBAlcohol"
+  },
+  {
+    "id": "HBBeverages",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBBeverages",
+    "version": "1.4.2022",
+    "name": "HBBeverages"
+  },
+  {
+    "id": "HBDrinkSize",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize",
+    "version": "1.4.2022",
+    "name": "HBDrinkSize"
+  },
+  {
+    "id": "HBMilks",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBMilks",
+    "version": "1.4.2022",
+    "name": "HBMilks"
+  },
+  {
+    "id": "HBSpice",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice",
+    "version": "1.4.2022",
+    "name": "HBSpice"
+  },
+  {
+    "id": "HBSweeteners",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners",
+    "version": "1.4.2022",
+    "name": "HBSweeteners"
+  },
+  {
+    "id": "HBSyrups",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSyrups",
+    "version": "1.4.2022",
+    "name": "HBSyrups"
+  },
+  {
+    "id": "StarSizeVsDrinkSize",
+    "type": "ConceptMap",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ConceptMap/StarSizeVsDrinkSize",
+    "version": "1.4.2022",
+    "name": "StarSizeVsDrinkSize"
+  },
+  {
+    "id": "fhir.acme.hotbeverage",
+    "type": "ImplementationGuide",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ImplementationGuide/fhir.acme.hotbeverage",
+    "version": "1.4.2022",
+    "name": "HotBeverage"
+  },
+  {
+    "id": "BrewedBeverage",
+    "type": "StructureDefinition",
+    "url": "http://fhir.org/guides/acme/HotBeverage/StructureDefinition/BrewedBeverage",
+    "version": "1.4.2022",
+    "name": "BrewedBeverage"
+  },
+  {
+    "id": "BrewedLog",
+    "type": "StructureDefinition",
+    "url": "http://fhir.org/guides/acme/HotBeverage/StructureDefinition/BrewedLog",
+    "version": "1.4.2022",
+    "name": "BrewedLog"
+  },
+  {
+    "id": "HBAlcoholVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBAlcoholVS",
+    "version": "1.4.2022",
+    "name": "HBAlcoholVS"
+  },
+  {
+    "id": "HBBeverageVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBBeverageVS",
+    "version": "1.4.2022",
+    "name": "HBBeverageVS"
+  },
+  {
+    "id": "HBDrinkSizeVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSizeVS",
+    "version": "1.4.2022",
+    "name": "HBDrinkSizeVS"
+  },
+  {
+    "id": "HBMilkVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBMilkVS",
+    "version": "1.4.2022",
+    "name": "HBMilkVS"
+  },
+  {
+    "id": "HBSpiceVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSpiceVS",
+    "version": "1.4.2022",
+    "name": "HBSpiceVS"
+  },
+  {
+    "id": "HBSweetenersVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSweetenersVS",
+    "version": "1.4.2022",
+    "name": "HBSweetenersVS"
+  },
+  {
+    "id": "HBSyrupVS",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSyrupVS",
+    "version": "1.4.2022",
+    "name": "HBSyrupVS"
+  },
+  {
+    "id": "NoDecaf",
+    "type": "ValueSet",
+    "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/NoDecaf",
+    "version": "1.4.2022",
+    "name": "NoDecaf"
+  },
+  {
+    "id": "hbstop",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/OperationDefinition/BB-Stop",
+    "version": "1.4.2022",
+    "name": "HBstop"
+  },
+  {
+    "id": "hbwhen",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/OperationDefinition/BB-When",
+    "version": "1.4.2022",
+    "name": "HBwhen"
+  },
+  {
+    "id": "hbbrew",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/OperationDefinition/Brew",
+    "version": "1.4.2022",
+    "name": "HBbrew"
+  }
+]

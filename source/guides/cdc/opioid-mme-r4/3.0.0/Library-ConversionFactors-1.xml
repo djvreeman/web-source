@@ -1,0 +1,2187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorVersion="1.3" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="371">
+         <a:s>library ConversionFactors version '3.0.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="ConversionFactors" system="http://fhir.org/guides/cdc/opioid-mme-r4" version="3.0.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="46:1-46:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>/*
+This library provides logic to determine the appropriate conversion factor to be
+used for calculating Morphine Milligram Equivalent (MME) for a given medication.
+
+The conversion factors are configurable using a CodeSystem supplement. This
+implementation guide contains one conversion factor table:
+
+CDCMMEClinicalConversionFactors
+
+The Clinical Conversion Factors table uses values from CDC guidance here:
+https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf
+
+The CodeSystem supplements are configured with 3 types of properties:
+
+* conversion-factor: Defines the conversion factor for a specific ingredient,
+when the conversion factor is the same for all dose forms and dose amounts for
+the ingredient. The value of this property will be the decimal representation of
+the conversion factor.
+* dose-form-conversion-factor: Defines the conversion factor for an ingredient
+when the conversion factor varies by the dose form of the medication. The value
+of this property will be a string of the form
+&lt;dose-form-code>:&lt;conversion-factor>[@&lt;doses-per-day>],
+e.g. 970789:130, where '970789' is the RxNorm dose form code, and '130' is the
+decimal representation of the conversion factor. An example of a per-day
+conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm
+dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay,
+expressed as a decimal with a maximum of 8 digits after the decimal.
+* dose-range-conversion-factor: Defines the conversion factor for an ingredient
+when the conversion factor varies by the overall dose of the medication. The
+value of this property will be a string of the form
+&lt;low-value>-&lt;high-value>:&lt;conversion-factor>,
+e.g. 1-20:4. Note that the low-value or high-value may be a wildcard '*' to
+indicate the range continues (e.g. '61-*:12' indicates the range is 61 or greater).
+
+For a given ingredient, only one of 'dose-form' or 'dose-range' will be present,
+with or without an ingredient-specific conversion factor. The properties together
+will enable a unique conversion factor to be determined if the input is within
+the expected range. If the input is outside the expected range, and there is no
+ingredient-specific conversion-factor specified, implementations should indicate
+a conversion factor could not be determined from the supplied information.
+All conversion factors supplied in these supplements are in 'mg/d'.
+*/using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="48:1-48:35" localIdentifier="FHIRHelpers" path="http://hl7.org/fhir/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="11" locator="56:1-56:43" name="ErrorLevel" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="11">
+               <a:s>parameter ErrorLevel </a:s>
+               <a:s r="10">
+                  <a:s>String</a:s>
+               </a:s>
+               <a:s> default </a:s>
+               <a:s r="9">
+                  <a:s>'Trace'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="9" locator="56:37-56:43" valueType="t:String" value="Trace" xsi:type="Literal"/>
+         <parameterTypeSpecifier localId="10" locator="56:22-56:27" name="t:String" xsi:type="NamedTypeSpecifier"/>
+      </def>
+      <def localId="13" locator="67:1-67:47" name="ConversionFactorSupplementName" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="13">
+               <a:s>/*
+If this parameter is supplied, it specifies the name of the code system supplement
+to be used to supply conversion factors for the calculator. If this parameter is not
+provided, the _single_ CodeSystem with a task usage context code of &quot;mme-calculation&quot;
+from the CDCMMEUsageContextCodes code system will be used to provide conversion factors.
+If neither of these configurations is available, the hard-coded conversion factors
+in GetConversionFactor will be used. The hard-coded conversion factors use the
+clinical conversion factors only.
+*/parameter ConversionFactorSupplementName </a:s>
+               <a:s r="12">
+                  <a:s>String</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="12" locator="67:42-67:47" name="t:String" xsi:type="NamedTypeSpecifier"/>
+      </def>
+   </parameters>
+   <codeSystems>
+      <def localId="3" locator="50:1-50:91" name="Usage Context Type" id="http://terminology.hl7.org/CodeSystem/usage-context-type" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>codesystem &quot;Usage Context Type&quot;: 'http://terminology.hl7.org/CodeSystem/usage-context-type'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="51:1-51:119" name="CDC MME Usage Context Codes" id="http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>codesystem &quot;CDC MME Usage Context Codes&quot;: 'http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <codes>
+      <def localId="6" locator="53:1-53:59" name="Task Usage Context" id="task" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>code &quot;Task Usage Context&quot;: 'task' from </a:s>
+               <a:s r="5">
+                  <a:s>&quot;Usage Context Type&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="5" locator="53:40-53:59" name="Usage Context Type"/>
+      </def>
+      <def localId="8" locator="54:1-54:76" name="MME Calculation" id="mme-calculation" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>code &quot;MME Calculation&quot;: 'mme-calculation' from </a:s>
+               <a:s r="7">
+                  <a:s>&quot;CDC MME Usage Context Codes&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="7" locator="54:48-54:76" name="CDC MME Usage Context Codes"/>
+      </def>
+   </codes>
+   <contexts>
+      <def locator="69:1-69:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="69:1-69:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="69:1-69:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="55" locator="124:1-136:3" name="ConversionFactorSupplement" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="55">
+               <a:s>define ConversionFactorSupplement:
+  </a:s>
+               <a:s r="54">
+                  <a:s>singleton from </a:s>
+                  <a:s r="53">
+                     <a:s>(
+    </a:s>
+                     <a:s r="53">
+                        <a:s>
+                           <a:s r="27">
+                              <a:s r="26">
+                                 <a:s r="26">
+                                    <a:s>[CodeSystem]</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> C</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="52">
+                           <a:s>where </a:s>
+                           <a:s r="52">
+                              <a:s r="32">
+                                 <a:s r="30">
+                                    <a:s r="29">
+                                       <a:s r="28">
+                                          <a:s>C</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="29">
+                                          <a:s>supplements</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="30">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> = </a:s>
+                                 <a:s r="31">
+                                    <a:s>'http://www.nlm.nih.gov/research/umls/rxnorm'</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+      and </a:s>
+                              <a:s r="51">
+                                 <a:s>(
+        </a:s>
+                                 <a:s r="51">
+                                    <a:s r="37">
+                                       <a:s r="35">
+                                          <a:s r="34">
+                                             <a:s r="33">
+                                                <a:s>C</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="34">
+                                                <a:s>name</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="35">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> = </a:s>
+                                       <a:s r="36">
+                                          <a:s>ConversionFactorSupplementName</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+          or </a:s>
+                                    <a:s r="50">
+                                       <a:s>exists </a:s>
+                                       <a:s r="49">
+                                          <a:s>(
+            </a:s>
+                                          <a:s r="49">
+                                             <a:s>
+                                                <a:s r="39">
+                                                   <a:s r="38">
+                                                      <a:s>
+                                                         <a:s>C.useContext</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s> UC</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s>
+              </a:s>
+                                             <a:s r="48">
+                                                <a:s>where </a:s>
+                                                <a:s r="48">
+                                                   <a:s r="43">
+                                                      <a:s r="41">
+                                                         <a:s r="40">
+                                                            <a:s>UC</a:s>
+                                                         </a:s>
+                                                         <a:s>.</a:s>
+                                                         <a:s r="41">
+                                                            <a:s>code</a:s>
+                                                         </a:s>
+                                                      </a:s>
+                                                      <a:s> ~ </a:s>
+                                                      <a:s r="42">
+                                                         <a:s>&quot;Task Usage Context&quot;</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s>
+                and </a:s>
+                                                   <a:s r="47">
+                                                      <a:s r="45">
+                                                         <a:s r="44">
+                                                            <a:s>UC</a:s>
+                                                         </a:s>
+                                                         <a:s>.</a:s>
+                                                         <a:s r="45">
+                                                            <a:s>value</a:s>
+                                                         </a:s>
+                                                      </a:s>
+                                                      <a:s> ~ </a:s>
+                                                      <a:s r="46">
+                                                         <a:s>&quot;MME Calculation&quot;</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>
+          )</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>
+      )</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="54" locator="125:3-136:3" xsi:type="SingletonFrom">
+            <operand localId="53" locator="125:18-136:3" xsi:type="Query">
+               <source localId="27" locator="126:5-126:18" alias="C">
+                  <expression localId="26" locator="126:5-126:16" dataType="fhir:CodeSystem" templateId="http://hl7.org/fhir/StructureDefinition/CodeSystem" xsi:type="Retrieve"/>
+               </source>
+               <where localId="52" locator="127:7-135:7" xsi:type="And">
+                  <operand localId="32" locator="127:13-127:79" xsi:type="Equal">
+                     <operand localId="30" locator="127:13-127:31" path="value" xsi:type="Property">
+                        <source localId="29" locator="127:13-127:25" path="supplements" scope="C" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="31" locator="127:35-127:79" valueType="t:String" value="http://www.nlm.nih.gov/research/umls/rxnorm" xsi:type="Literal"/>
+                  </operand>
+                  <operand localId="51" locator="128:11-135:7" xsi:type="Or">
+                     <operand localId="37" locator="129:9-129:53" xsi:type="Equal">
+                        <operand localId="35" locator="129:9-129:20" path="value" xsi:type="Property">
+                           <source localId="34" locator="129:9-129:14" path="name" scope="C" xsi:type="Property"/>
+                        </operand>
+                        <operand localId="36" locator="129:24-129:53" name="ConversionFactorSupplementName" xsi:type="ParameterRef"/>
+                     </operand>
+                     <operand localId="50" locator="130:14-134:11" xsi:type="Exists">
+                        <operand localId="49" locator="130:21-134:11" xsi:type="Query">
+                           <source localId="39" locator="131:13-131:27" alias="UC">
+                              <expression localId="38" locator="131:13-131:24" path="useContext" scope="C" xsi:type="Property"/>
+                           </source>
+                           <where localId="48" locator="132:15-133:48" xsi:type="And">
+                              <operand localId="43" locator="132:21-132:50" xsi:type="Equivalent">
+                                 <operand name="ToCode" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                    <operand localId="41" locator="132:21-132:27" path="code" scope="UC" xsi:type="Property"/>
+                                 </operand>
+                                 <operand localId="42" locator="132:31-132:50" name="Task Usage Context" xsi:type="CodeRef"/>
+                              </operand>
+                              <operand localId="47" locator="133:21-133:48" xsi:type="Equivalent">
+                                 <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                    <operand asType="fhir:CodeableConcept" xsi:type="As">
+                                       <operand localId="45" locator="133:21-133:28" path="value" scope="UC" xsi:type="Property"/>
+                                    </operand>
+                                 </operand>
+                                 <operand xsi:type="ToConcept">
+                                    <operand localId="46" locator="133:32-133:48" name="MME Calculation" xsi:type="CodeRef"/>
+                                 </operand>
+                              </operand>
+                           </where>
+                        </operand>
+                     </operand>
+                  </operand>
+               </where>
+            </operand>
+         </expression>
+      </def>
+      <def localId="128" locator="141:1-142:48" name="ToRangeValue" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="128">
+               <a:s>/*
+Converts a range value boundary to a Decimal (or null for a wildcard)
+*/define function ToRangeValue(value </a:s>
+               <a:s r="120">
+                  <a:s>System.String</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="127">
+                  <a:s r="127">
+                     <a:s>if </a:s>
+                     <a:s r="123">
+                        <a:s r="121">
+                           <a:s>value</a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="122">
+                           <a:s>'*'</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="124"> then null else </a:s>
+                     <a:s r="126">
+                        <a:s>ToDecimal(</a:s>
+                        <a:s r="125">
+                           <a:s>value</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="127" locator="142:3-142:48" xsi:type="If">
+            <condition localId="123" locator="142:6-142:16" xsi:type="Equal">
+               <operand localId="121" locator="142:6-142:10" name="value" xsi:type="OperandRef"/>
+               <operand localId="122" locator="142:14-142:16" valueType="t:String" value="*" xsi:type="Literal"/>
+            </condition>
+            <then asType="t:Decimal" xsi:type="As">
+               <operand localId="124" locator="142:23-142:26" xsi:type="Null"/>
+            </then>
+            <else localId="126" locator="142:33-142:48" xsi:type="ToDecimal">
+               <operand localId="125" locator="142:43-142:47" name="value" xsi:type="OperandRef"/>
+            </else>
+         </expression>
+         <operand name="value">
+            <operandTypeSpecifier localId="120" locator="141:36-141:48" name="t:String" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="137" locator="149:1-152:79" name="ToDoseRange" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="137">
+               <a:s>/*
+Converts the property value of a dose-range-conversion-factor property to the dose range
+&lt;low-value>-&lt;high-value>:&lt;conversion-factor>
+Note that low-value and/or high-value may be wildcards '*'
+*/define function ToDoseRange(propertyValue </a:s>
+               <a:s r="105">
+                  <a:s>FHIR.string</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="136">
+                  <a:s r="136">
+                     <a:s>
+                        <a:s r="107">
+                           <a:s r="106">
+                              <a:s r="106">({ : })</a:s>
+                           </a:s>
+                           <a:s> X</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s>
+                        <a:s>let </a:s>
+                        <a:s r="116">
+                           <a:s>rangeValues: </a:s>
+                           <a:s r="115">
+                              <a:s>Split(</a:s>
+                              <a:s r="113">
+                                 <a:s r="111">
+                                    <a:s>Split(</a:s>
+                                    <a:s r="109">
+                                       <a:s r="108">
+                                          <a:s>propertyValue</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="109">
+                                          <a:s>value</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="110">
+                                       <a:s>':'</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s r="112">[0]</a:s>
+                              </a:s>
+                              <a:s>, </a:s>
+                              <a:s r="114">
+                                 <a:s>'-'</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="135">
+                        <a:s>return </a:s>
+                        <a:s r="134">
+                           <a:s>Interval[</a:s>
+                           <a:s r="129">
+                              <a:s>ToRangeValue(</a:s>
+                              <a:s r="119">
+                                 <a:s r="117">
+                                    <a:s>rangeValues</a:s>
+                                 </a:s>
+                                 <a:s r="118">[0]</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="133">
+                              <a:s>ToRangeValue(</a:s>
+                              <a:s r="132">
+                                 <a:s r="130">
+                                    <a:s>rangeValues</a:s>
+                                 </a:s>
+                                 <a:s r="131">[1]</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s>]</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="136" locator="150:3-152:79" xsi:type="Query">
+            <source localId="107" locator="150:3-150:11" alias="X">
+               <expression localId="106" locator="150:3-150:9" xsi:type="Tuple"/>
+            </source>
+            <let localId="116" locator="151:9-151:67" identifier="rangeValues">
+               <expression localId="115" locator="151:22-151:67" xsi:type="Split">
+                  <stringToSplit localId="113" locator="151:28-151:61" xsi:type="Indexer">
+                     <operand localId="111" locator="151:28-151:58" xsi:type="Split">
+                        <stringToSplit localId="109" locator="151:34-151:52" path="value" xsi:type="Property">
+                           <source localId="108" locator="151:34-151:46" name="propertyValue" xsi:type="OperandRef"/>
+                        </stringToSplit>
+                        <separator localId="110" locator="151:55-151:57" valueType="t:String" value=":" xsi:type="Literal"/>
+                     </operand>
+                     <operand localId="112" locator="151:60" valueType="t:Integer" value="0" xsi:type="Literal"/>
+                  </stringToSplit>
+                  <separator localId="114" locator="151:64-151:66" valueType="t:String" value="-" xsi:type="Literal"/>
+               </expression>
+            </let>
+            <return localId="135" locator="152:5-152:79">
+               <expression localId="134" locator="152:12-152:79" lowClosed="true" highClosed="true" xsi:type="Interval">
+                  <low localId="129" locator="152:21-152:48" name="ToRangeValue" xsi:type="FunctionRef">
+                     <operand localId="119" locator="152:34-152:47" xsi:type="Indexer">
+                        <operand localId="117" locator="152:34-152:44" name="rangeValues" xsi:type="QueryLetRef"/>
+                        <operand localId="118" locator="152:46" valueType="t:Integer" value="0" xsi:type="Literal"/>
+                     </operand>
+                  </low>
+                  <high localId="133" locator="152:51-152:78" name="ToRangeValue" xsi:type="FunctionRef">
+                     <operand localId="132" locator="152:64-152:77" xsi:type="Indexer">
+                        <operand localId="130" locator="152:64-152:74" name="rangeValues" xsi:type="QueryLetRef"/>
+                        <operand localId="131" locator="152:76" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                     </operand>
+                  </high>
+               </expression>
+            </return>
+         </expression>
+         <operand name="propertyValue">
+            <operandTypeSpecifier localId="105" locator="149:43-149:53" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="150" locator="158:1-159:47" name="ToDoseRangeConversionFactor" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="150">
+               <a:s>/*
+Converts the property value of a dose-range-conversion-factor property to the conversion factor
+&lt;low-value>-&lt;high-value>:&lt;conversion-factor>
+*/define function ToDoseRangeConversionFactor(propertyValue </a:s>
+               <a:s r="142">
+                  <a:s>FHIR.string</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="149">
+                  <a:s r="149">
+                     <a:s>ToDecimal(</a:s>
+                     <a:s r="148">
+                        <a:s r="146">
+                           <a:s>Split(</a:s>
+                           <a:s r="144">
+                              <a:s r="143">
+                                 <a:s>propertyValue</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="144">
+                                 <a:s>value</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="145">
+                              <a:s>':'</a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="147">[1]</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="149" locator="159:3-159:47" xsi:type="ToDecimal">
+            <operand localId="148" locator="159:13-159:46" xsi:type="Indexer">
+               <operand localId="146" locator="159:13-159:43" xsi:type="Split">
+                  <stringToSplit localId="144" locator="159:19-159:37" path="value" xsi:type="Property">
+                     <source localId="143" locator="159:19-159:31" name="propertyValue" xsi:type="OperandRef"/>
+                  </stringToSplit>
+                  <separator localId="145" locator="159:40-159:42" valueType="t:String" value=":" xsi:type="Literal"/>
+               </operand>
+               <operand localId="147" locator="159:45" valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </operand>
+         </expression>
+         <operand name="propertyValue">
+            <operandTypeSpecifier localId="142" locator="158:59-158:69" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="171" locator="165:1-166:36" name="ToDoseForm" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="171">
+               <a:s>/*
+Converts the property value of a dose-form-conversion-factor property to the dose form
+&lt;dose-form-code>:&lt;conversion-factor>
+*/define function ToDoseForm(propertyValue </a:s>
+               <a:s r="164">
+                  <a:s>FHIR.string</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="170">
+                  <a:s r="170">
+                     <a:s r="168">
+                        <a:s>Split(</a:s>
+                        <a:s r="166">
+                           <a:s r="165">
+                              <a:s>propertyValue</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="166">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="167">
+                           <a:s>':'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s r="169">[0]</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="170" locator="166:3-166:36" xsi:type="Indexer">
+            <operand localId="168" locator="166:3-166:33" xsi:type="Split">
+               <stringToSplit localId="166" locator="166:9-166:27" path="value" xsi:type="Property">
+                  <source localId="165" locator="166:9-166:21" name="propertyValue" xsi:type="OperandRef"/>
+               </stringToSplit>
+               <separator localId="167" locator="166:30-166:32" valueType="t:String" value=":" xsi:type="Literal"/>
+            </operand>
+            <operand localId="169" locator="166:35" valueType="t:Integer" value="0" xsi:type="Literal"/>
+         </expression>
+         <operand name="propertyValue">
+            <operandTypeSpecifier localId="164" locator="165:42-165:52" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="213" locator="182:1-185:93" name="ToDoseFormDosesPerDayConversionFactor" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="213">
+               <a:s>/*
+Converts the property value of a dose-form-conversion-factor property to the conversion factor
+if the property includes a doses-per-day value
+*/define function ToDoseFormDosesPerDayConversionFactor(propertyValue </a:s>
+               <a:s r="187">
+                  <a:s>FHIR.string</a:s>
+               </a:s>
+               <a:s>, dosesPerDay </a:s>
+               <a:s r="188">
+                  <a:s>System.Decimal</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="212">
+                  <a:s r="212">
+                     <a:s>
+                        <a:s r="190">
+                           <a:s r="189">
+                              <a:s>
+                                 <a:s>propertyValue</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> P</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s>
+                        <a:s>let </a:s>
+                        <a:s r="195">
+                           <a:s>components: </a:s>
+                           <a:s r="194">
+                              <a:s>Split(</a:s>
+                              <a:s r="192">
+                                 <a:s r="191">
+                                    <a:s>P</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="192">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>, </a:s>
+                              <a:s r="193">
+                                 <a:s>'@'</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="211">
+                        <a:s>return </a:s>
+                        <a:s r="210">
+                           <a:s r="201">
+                              <a:s>(</a:s>
+                              <a:s r="201">
+                                 <a:s r="199">
+                                    <a:s>ToDecimal(</a:s>
+                                    <a:s r="198">
+                                       <a:s r="196">
+                                          <a:s>components</a:s>
+                                       </a:s>
+                                       <a:s r="197">[1]</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s> / </a:s>
+                                 <a:s r="200">
+                                    <a:s>dosesPerDay</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s> * </a:s>
+                           <a:s r="209">
+                              <a:s>ToDecimal(</a:s>
+                              <a:s r="208">
+                                 <a:s r="206">
+                                    <a:s>Split(</a:s>
+                                    <a:s r="204">
+                                       <a:s r="202">
+                                          <a:s>components</a:s>
+                                       </a:s>
+                                       <a:s r="203">[0]</a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="205">
+                                       <a:s>':'</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s r="207">[1]</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="212" locator="183:3-185:93" xsi:type="Query">
+            <source localId="190" locator="183:3-183:17" alias="P">
+               <expression localId="189" locator="183:3-183:15" name="propertyValue" xsi:type="OperandRef"/>
+            </source>
+            <let localId="195" locator="184:9-184:39" identifier="components">
+               <expression localId="194" locator="184:21-184:39" xsi:type="Split">
+                  <stringToSplit localId="192" locator="184:27-184:33" path="value" scope="P" xsi:type="Property"/>
+                  <separator localId="193" locator="184:36-184:38" valueType="t:String" value="@" xsi:type="Literal"/>
+               </expression>
+            </let>
+            <return localId="211" locator="185:5-185:93">
+               <expression localId="210" locator="185:12-185:93" xsi:type="Multiply">
+                  <operand localId="201" locator="185:12-185:51" xsi:type="Divide">
+                     <operand localId="199" locator="185:13-185:36" xsi:type="ToDecimal">
+                        <operand localId="198" locator="185:23-185:35" xsi:type="Indexer">
+                           <operand localId="196" locator="185:23-185:32" name="components" xsi:type="QueryLetRef"/>
+                           <operand localId="197" locator="185:34" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                        </operand>
+                     </operand>
+                     <operand localId="200" locator="185:40-185:50" name="dosesPerDay" xsi:type="OperandRef"/>
+                  </operand>
+                  <operand localId="209" locator="185:55-185:93" xsi:type="ToDecimal">
+                     <operand localId="208" locator="185:65-185:92" xsi:type="Indexer">
+                        <operand localId="206" locator="185:65-185:89" xsi:type="Split">
+                           <stringToSplit localId="204" locator="185:71-185:83" xsi:type="Indexer">
+                              <operand localId="202" locator="185:71-185:80" name="components" xsi:type="QueryLetRef"/>
+                              <operand localId="203" locator="185:82" valueType="t:Integer" value="0" xsi:type="Literal"/>
+                           </stringToSplit>
+                           <separator localId="205" locator="185:86-185:88" valueType="t:String" value=":" xsi:type="Literal"/>
+                        </operand>
+                        <operand localId="207" locator="185:91" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                     </operand>
+                  </operand>
+               </expression>
+            </return>
+         </expression>
+         <operand name="propertyValue">
+            <operandTypeSpecifier localId="187" locator="182:69-182:79" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="dosesPerDay">
+            <operandTypeSpecifier localId="188" locator="182:94-182:107" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="223" locator="172:1-176:49" name="ToDoseFormConversionFactor" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="223">
+               <a:s>/*
+Converts the property value of a dose-form-conversion-factor property to the conversion factor
+&lt;dose-form-code>:&lt;conversion-factor>[@doses-per-day]
+*/define function ToDoseFormConversionFactor(propertyValue </a:s>
+               <a:s r="177">
+                  <a:s>FHIR.string</a:s>
+               </a:s>
+               <a:s>, dosesPerDay </a:s>
+               <a:s r="178">
+                  <a:s>System.Decimal</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="222">
+                  <a:s r="222">
+                     <a:s>if </a:s>
+                     <a:s r="184">
+                        <a:s r="182">
+                           <a:s>PositionOf(</a:s>
+                           <a:s r="179">
+                              <a:s>'@'</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="181">
+                              <a:s r="180">
+                                 <a:s>propertyValue</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="181">
+                                 <a:s>value</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="183"> > 0</a:s>
+                     </a:s>
+                     <a:s> then
+    </a:s>
+                     <a:s r="214">
+                        <a:s>ToDoseFormDosesPerDayConversionFactor(</a:s>
+                        <a:s r="185">
+                           <a:s>propertyValue</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="186">
+                           <a:s>dosesPerDay</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>
+  else
+    </a:s>
+                     <a:s r="221">
+                        <a:s>ToDecimal(</a:s>
+                        <a:s r="220">
+                           <a:s r="218">
+                              <a:s>Split(</a:s>
+                              <a:s r="216">
+                                 <a:s r="215">
+                                    <a:s>propertyValue</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="216">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>, </a:s>
+                              <a:s r="217">
+                                 <a:s>':'</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s r="219">[1]</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="222" locator="173:3-176:49" xsi:type="If">
+            <condition localId="184" locator="173:6-173:45" xsi:type="Greater">
+               <operand localId="182" locator="173:6-173:41" xsi:type="PositionOf">
+                  <pattern localId="179" locator="173:17-173:19" valueType="t:String" value="@" xsi:type="Literal"/>
+                  <string localId="181" locator="173:22-173:40" path="value" xsi:type="Property">
+                     <source localId="180" locator="173:22-173:34" name="propertyValue" xsi:type="OperandRef"/>
+                  </string>
+               </operand>
+               <operand localId="183" locator="173:45" valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </condition>
+            <then localId="214" locator="174:5-174:69" name="ToDoseFormDosesPerDayConversionFactor" xsi:type="FunctionRef">
+               <operand localId="185" locator="174:43-174:55" name="propertyValue" xsi:type="OperandRef"/>
+               <operand localId="186" locator="174:58-174:68" name="dosesPerDay" xsi:type="OperandRef"/>
+            </then>
+            <else localId="221" locator="176:5-176:49" xsi:type="ToDecimal">
+               <operand localId="220" locator="176:15-176:48" xsi:type="Indexer">
+                  <operand localId="218" locator="176:15-176:45" xsi:type="Split">
+                     <stringToSplit localId="216" locator="176:21-176:39" path="value" xsi:type="Property">
+                        <source localId="215" locator="176:21-176:33" name="propertyValue" xsi:type="OperandRef"/>
+                     </stringToSplit>
+                     <separator localId="217" locator="176:42-176:44" valueType="t:String" value=":" xsi:type="Literal"/>
+                  </operand>
+                  <operand localId="219" locator="176:47" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               </operand>
+            </else>
+         </expression>
+         <operand name="propertyValue">
+            <operandTypeSpecifier localId="177" locator="172:58-172:68" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="dosesPerDay">
+            <operandTypeSpecifier localId="178" locator="172:83-172:96" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="236" locator="191:1-192:21" name="ToConversionFactor" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="236">
+               <a:s>/*
+Returns the conversion factor for a conversion-factor property
+NOTE: These functions are used to avoid use of _is_ and _as_
+*/define function ToConversionFactor(propertyValue </a:s>
+               <a:s r="233">
+                  <a:s>FHIR.decimal</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="235">
+                  <a:s r="235">
+                     <a:s r="234">
+                        <a:s>propertyValue</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="235">
+                        <a:s>value</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="235" locator="192:3-192:21" path="value" xsi:type="Property">
+            <source localId="234" locator="192:3-192:15" name="propertyValue" xsi:type="OperandRef"/>
+         </expression>
+         <operand name="propertyValue">
+            <operandTypeSpecifier localId="233" locator="191:50-191:61" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="241" locator="200:1-226:7" name="LookupConversionFactor" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="241">
+               <a:s>/*
+Looks up the conversion factor for the given ingredient, daily dose, and dose form from the
+configured conversion factor supplement, if available.
+
+If no conversion factor supplement is configured, returns null
+*/define function LookupConversionFactor(ingredientCode </a:s>
+               <a:s r="22">
+                  <a:s>System.Code</a:s>
+               </a:s>
+               <a:s>, dailyDose </a:s>
+               <a:s r="23">
+                  <a:s>System.Quantity</a:s>
+               </a:s>
+               <a:s>, doseFormCode </a:s>
+               <a:s r="24">
+                  <a:s>System.Code</a:s>
+               </a:s>
+               <a:s>, dosesPerDay </a:s>
+               <a:s r="25">
+                  <a:s>System.Decimal</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="240">
+                  <a:s r="240">
+                     <a:s>
+                        <a:s r="57">
+                           <a:s r="56">
+                              <a:s>
+                                 <a:s>ConversionFactorSupplement</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> CFS</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s>
+                        <a:s>let
+      </a:s>
+                        <a:s r="68">
+                           <a:s>ingredientConcept: </a:s>
+                           <a:s r="67">
+                              <a:s>singleton from </a:s>
+                              <a:s r="66">
+                                 <a:s>(</a:s>
+                                 <a:s r="66">
+                                    <a:s>
+                                       <a:s r="59">
+                                          <a:s r="58">
+                                             <a:s>
+                                                <a:s>CFS.&quot;concept&quot;</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> C</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> </a:s>
+                                    <a:s r="65">
+                                       <a:s>where </a:s>
+                                       <a:s r="65">
+                                          <a:s r="62">
+                                             <a:s r="61">
+                                                <a:s r="60">
+                                                   <a:s>C</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="61">
+                                                   <a:s>code</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="62">
+                                                <a:s>value</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> = </a:s>
+                                          <a:s r="64">
+                                             <a:s r="63">
+                                                <a:s>ingredientCode</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="64">
+                                                <a:s>code</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="78">
+                           <a:s>conversionFactor: </a:s>
+                           <a:s r="77">
+                              <a:s>singleton from </a:s>
+                              <a:s r="76">
+                                 <a:s>(</a:s>
+                                 <a:s r="76">
+                                    <a:s>
+                                       <a:s r="70">
+                                          <a:s r="69">
+                                             <a:s>
+                                                <a:s>ingredientConcept.property</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> P</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> </a:s>
+                                    <a:s r="75">
+                                       <a:s>where </a:s>
+                                       <a:s r="75">
+                                          <a:s r="73">
+                                             <a:s r="72">
+                                                <a:s r="71">
+                                                   <a:s>P</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="72">
+                                                   <a:s>code</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="73">
+                                                <a:s>value</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> = </a:s>
+                                          <a:s r="74">
+                                             <a:s>'conversion-factor'</a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="87">
+                           <a:s>doseFormConversionFactors: </a:s>
+                           <a:s r="86">
+                              <a:s>(</a:s>
+                              <a:s r="86">
+                                 <a:s>
+                                    <a:s r="80">
+                                       <a:s r="79">
+                                          <a:s>
+                                             <a:s>ingredientConcept.property</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> P</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> </a:s>
+                                 <a:s r="85">
+                                    <a:s>where </a:s>
+                                    <a:s r="85">
+                                       <a:s r="83">
+                                          <a:s r="82">
+                                             <a:s r="81">
+                                                <a:s>P</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="82">
+                                                <a:s>code</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="83">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> = </a:s>
+                                       <a:s r="84">
+                                          <a:s>'dose-form-conversion-factor'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="96">
+                           <a:s>doseRangeConversionFactors: </a:s>
+                           <a:s r="95">
+                              <a:s>(</a:s>
+                              <a:s r="95">
+                                 <a:s>
+                                    <a:s r="89">
+                                       <a:s r="88">
+                                          <a:s>
+                                             <a:s>ingredientConcept.property</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> P</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> </a:s>
+                                 <a:s r="94">
+                                    <a:s>where </a:s>
+                                    <a:s r="94">
+                                       <a:s r="92">
+                                          <a:s r="91">
+                                             <a:s r="90">
+                                                <a:s>P</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="91">
+                                                <a:s>code</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="92">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> = </a:s>
+                                       <a:s r="93">
+                                          <a:s>'dose-range-conversion-factor'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="239">
+                        <a:s>return
+      </a:s>
+                        <a:s r="238">
+                           <a:s>Coalesce
+      (
+        </a:s>
+                           <a:s r="230">
+                              <a:s>case
+          </a:s>
+                              <a:s r="155">
+                                 <a:s>when </a:s>
+                                 <a:s r="98">
+                                    <a:s>exists </a:s>
+                                    <a:s r="97">
+                                       <a:s>(</a:s>
+                                       <a:s r="97">
+                                          <a:s>doseRangeConversionFactors</a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> then
+            </a:s>
+                                 <a:s r="154">
+                                    <a:s>singleton from </a:s>
+                                    <a:s r="153">
+                                       <a:s>(
+              </a:s>
+                                       <a:s r="153">
+                                          <a:s>
+                                             <a:s r="100">
+                                                <a:s r="99">
+                                                   <a:s>
+                                                      <a:s>doseRangeConversionFactors</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s> DRCF</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>
+                </a:s>
+                                          <a:s r="139">
+                                             <a:s>where </a:s>
+                                             <a:s r="139">
+                                                <a:s r="102">
+                                                   <a:s r="101">
+                                                      <a:s>dailyDose</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="102">
+                                                      <a:s>value</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s> in </a:s>
+                                                <a:s r="138">
+                                                   <a:s>ToDoseRange(</a:s>
+                                                   <a:s r="104">
+                                                      <a:s r="103">
+                                                         <a:s>DRCF</a:s>
+                                                      </a:s>
+                                                      <a:s>.</a:s>
+                                                      <a:s r="104">
+                                                         <a:s>value</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s>)</a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>
+                </a:s>
+                                          <a:s r="152">
+                                             <a:s>return </a:s>
+                                             <a:s r="151">
+                                                <a:s>ToDoseRangeConversionFactor(</a:s>
+                                                <a:s r="141">
+                                                   <a:s r="140">
+                                                      <a:s>DRCF</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="141">
+                                                      <a:s>value</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s>)</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>
+            )</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+          </a:s>
+                              <a:s r="228">
+                                 <a:s>when </a:s>
+                                 <a:s r="157">
+                                    <a:s>exists </a:s>
+                                    <a:s r="156">
+                                       <a:s>(</a:s>
+                                       <a:s r="156">
+                                          <a:s>doseFormConversionFactors</a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> then
+            </a:s>
+                                 <a:s r="227">
+                                    <a:s>singleton from </a:s>
+                                    <a:s r="226">
+                                       <a:s>(
+              </a:s>
+                                       <a:s r="226">
+                                          <a:s>
+                                             <a:s r="159">
+                                                <a:s r="158">
+                                                   <a:s>
+                                                      <a:s>doseFormConversionFactors</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s> DFCF</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>
+                </a:s>
+                                          <a:s r="173">
+                                             <a:s>where </a:s>
+                                             <a:s r="173">
+                                                <a:s r="161">
+                                                   <a:s r="160">
+                                                      <a:s>doseFormCode</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="161">
+                                                      <a:s>code</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s> = </a:s>
+                                                <a:s r="172">
+                                                   <a:s>ToDoseForm(</a:s>
+                                                   <a:s r="163">
+                                                      <a:s r="162">
+                                                         <a:s>DFCF</a:s>
+                                                      </a:s>
+                                                      <a:s>.</a:s>
+                                                      <a:s r="163">
+                                                         <a:s>value</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s>)</a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>
+                </a:s>
+                                          <a:s r="225">
+                                             <a:s>return </a:s>
+                                             <a:s r="224">
+                                                <a:s>ToDoseFormConversionFactor(</a:s>
+                                                <a:s r="175">
+                                                   <a:s r="174">
+                                                      <a:s>DFCF</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="175">
+                                                      <a:s>value</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s>, </a:s>
+                                                <a:s r="176">
+                                                   <a:s>dosesPerDay</a:s>
+                                                </a:s>
+                                                <a:s>)</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>
+            )</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s r="229">
+          else null
+        end</a:s>
+                           </a:s>
+                           <a:s>,
+        </a:s>
+                           <a:s r="237">
+                              <a:s>ToConversionFactor(</a:s>
+                              <a:s r="232">
+                                 <a:s r="231">
+                                    <a:s>conversionFactor</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="232">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s>
+      )</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="240" locator="201:3-226:7" xsi:type="Query">
+            <source localId="57" locator="201:3-201:32" alias="CFS">
+               <expression localId="56" locator="201:3-201:28" name="ConversionFactorSupplement" xsi:type="ExpressionRef"/>
+            </source>
+            <let localId="68" locator="203:7-203:98" identifier="ingredientConcept">
+               <expression localId="67" locator="203:26-203:98" xsi:type="SingletonFrom">
+                  <operand localId="66" locator="203:41-203:98" xsi:type="Query">
+                     <source localId="59" locator="203:42-203:56" alias="C">
+                        <expression localId="58" locator="203:42-203:54" path="concept" scope="CFS" xsi:type="Property"/>
+                     </source>
+                     <where localId="65" locator="203:58-203:97" xsi:type="Equal">
+                        <operand localId="62" locator="203:64-203:75" path="value" xsi:type="Property">
+                           <source localId="61" locator="203:64-203:69" path="code" scope="C" xsi:type="Property"/>
+                        </operand>
+                        <operand localId="64" locator="203:79-203:97" path="code" xsi:type="Property">
+                           <source localId="63" locator="203:79-203:92" name="ingredientCode" xsi:type="OperandRef"/>
+                        </operand>
+                     </where>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="78" locator="204:7-204:110" identifier="conversionFactor">
+               <expression localId="77" locator="204:25-204:110" xsi:type="SingletonFrom">
+                  <operand localId="76" locator="204:40-204:110" xsi:type="Query">
+                     <source localId="70" locator="204:41-204:68" alias="P">
+                        <expression localId="69" locator="204:41-204:66" path="property" xsi:type="Property">
+                           <source name="ingredientConcept" xsi:type="QueryLetRef"/>
+                        </expression>
+                     </source>
+                     <where localId="75" locator="204:70-204:109" xsi:type="Equal">
+                        <operand localId="73" locator="204:76-204:87" path="value" xsi:type="Property">
+                           <source localId="72" locator="204:76-204:81" path="code" scope="P" xsi:type="Property"/>
+                        </operand>
+                        <operand localId="74" locator="204:91-204:109" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                     </where>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="87" locator="205:7-205:114" identifier="doseFormConversionFactors">
+               <expression localId="86" locator="205:34-205:114" xsi:type="Query">
+                  <source localId="80" locator="205:35-205:62" alias="P">
+                     <expression localId="79" locator="205:35-205:60" path="property" xsi:type="Property">
+                        <source name="ingredientConcept" xsi:type="QueryLetRef"/>
+                     </expression>
+                  </source>
+                  <where localId="85" locator="205:64-205:113" xsi:type="Equal">
+                     <operand localId="83" locator="205:70-205:81" path="value" xsi:type="Property">
+                        <source localId="82" locator="205:70-205:75" path="code" scope="P" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="84" locator="205:85-205:113" valueType="t:String" value="dose-form-conversion-factor" xsi:type="Literal"/>
+                  </where>
+               </expression>
+            </let>
+            <let localId="96" locator="206:7-206:116" identifier="doseRangeConversionFactors">
+               <expression localId="95" locator="206:35-206:116" xsi:type="Query">
+                  <source localId="89" locator="206:36-206:63" alias="P">
+                     <expression localId="88" locator="206:36-206:61" path="property" xsi:type="Property">
+                        <source name="ingredientConcept" xsi:type="QueryLetRef"/>
+                     </expression>
+                  </source>
+                  <where localId="94" locator="206:65-206:115" xsi:type="Equal">
+                     <operand localId="92" locator="206:71-206:82" path="value" xsi:type="Property">
+                        <source localId="91" locator="206:71-206:76" path="code" scope="P" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="93" locator="206:86-206:115" valueType="t:String" value="dose-range-conversion-factor" xsi:type="Literal"/>
+                  </where>
+               </expression>
+            </let>
+            <return localId="239" locator="207:5-226:7">
+               <expression localId="238" locator="208:7-226:7" xsi:type="Coalesce">
+                  <operand localId="230" locator="210:9-224:11" xsi:type="Case">
+                     <caseItem localId="155" locator="211:11-216:13">
+                        <when localId="98" locator="211:16-211:50" xsi:type="Exists">
+                           <operand localId="97" locator="211:23-211:50" name="doseRangeConversionFactors" xsi:type="QueryLetRef"/>
+                        </when>
+                        <then localId="154" locator="212:13-216:13" xsi:type="SingletonFrom">
+                           <operand localId="153" locator="212:28-216:13" xsi:type="Query">
+                              <source localId="100" locator="213:15-213:45" alias="DRCF">
+                                 <expression localId="99" locator="213:15-213:40" name="doseRangeConversionFactors" xsi:type="QueryLetRef"/>
+                              </source>
+                              <where localId="139" locator="214:17-214:64" xsi:type="In">
+                                 <operand localId="102" locator="214:23-214:37" path="value" xsi:type="Property">
+                                    <source localId="101" locator="214:23-214:31" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand localId="138" locator="214:42-214:64" name="ToDoseRange" xsi:type="FunctionRef">
+                                    <operand asType="fhir:string" xsi:type="As">
+                                       <operand localId="104" locator="214:54-214:63" path="value" scope="DRCF" xsi:type="Property"/>
+                                    </operand>
+                                 </operand>
+                              </where>
+                              <return localId="152" locator="215:17-215:62">
+                                 <expression localId="151" locator="215:24-215:62" name="ToDoseRangeConversionFactor" xsi:type="FunctionRef">
+                                    <operand asType="fhir:string" xsi:type="As">
+                                       <operand localId="141" locator="215:52-215:61" path="value" scope="DRCF" xsi:type="Property"/>
+                                    </operand>
+                                 </expression>
+                              </return>
+                           </operand>
+                        </then>
+                     </caseItem>
+                     <caseItem localId="228" locator="217:11-222:13">
+                        <when localId="157" locator="217:16-217:49" xsi:type="Exists">
+                           <operand localId="156" locator="217:23-217:49" name="doseFormConversionFactors" xsi:type="QueryLetRef"/>
+                        </when>
+                        <then localId="227" locator="218:13-222:13" xsi:type="SingletonFrom">
+                           <operand localId="226" locator="218:28-222:13" xsi:type="Query">
+                              <source localId="159" locator="219:15-219:44" alias="DFCF">
+                                 <expression localId="158" locator="219:15-219:39" name="doseFormConversionFactors" xsi:type="QueryLetRef"/>
+                              </source>
+                              <where localId="173" locator="220:17-220:64" xsi:type="Equal">
+                                 <operand localId="161" locator="220:23-220:39" path="code" xsi:type="Property">
+                                    <source localId="160" locator="220:23-220:34" name="doseFormCode" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand localId="172" locator="220:43-220:64" name="ToDoseForm" xsi:type="FunctionRef">
+                                    <operand asType="fhir:string" xsi:type="As">
+                                       <operand localId="163" locator="220:54-220:63" path="value" scope="DFCF" xsi:type="Property"/>
+                                    </operand>
+                                 </operand>
+                              </where>
+                              <return localId="225" locator="221:17-221:74">
+                                 <expression localId="224" locator="221:24-221:74" name="ToDoseFormConversionFactor" xsi:type="FunctionRef">
+                                    <operand asType="fhir:string" xsi:type="As">
+                                       <operand localId="175" locator="221:51-221:60" path="value" scope="DFCF" xsi:type="Property"/>
+                                    </operand>
+                                    <operand localId="176" locator="221:63-221:73" name="dosesPerDay" xsi:type="OperandRef"/>
+                                 </expression>
+                              </return>
+                           </operand>
+                        </then>
+                     </caseItem>
+                     <else asType="t:Decimal" xsi:type="As">
+                        <operand localId="229" locator="223:16-223:19" xsi:type="Null"/>
+                     </else>
+                  </operand>
+                  <operand localId="237" locator="225:9-225:50" name="ToConversionFactor" xsi:type="FunctionRef">
+                     <operand asType="fhir:decimal" xsi:type="As">
+                        <operand localId="232" locator="225:28-225:49" path="value" xsi:type="Property">
+                           <source localId="231" locator="225:28-225:43" name="conversionFactor" xsi:type="QueryLetRef"/>
+                        </operand>
+                     </operand>
+                  </operand>
+               </expression>
+            </return>
+         </expression>
+         <operand name="ingredientCode">
+            <operandTypeSpecifier localId="22" locator="200:55-200:65" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="dailyDose">
+            <operandTypeSpecifier localId="23" locator="200:78-200:92" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="doseFormCode">
+            <operandTypeSpecifier localId="24" locator="200:108-200:118" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="dosesPerDay">
+            <operandTypeSpecifier localId="25" locator="200:133-200:146" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="350" locator="93:1-122:3" name="GetConversionFactor" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="350">
+               <a:s>/*
+Returns the conversion factor for the given ingredient
+
+CDC Guidance:
+https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf
+
+|Opioid (strength in mg except where noted)     |MME Conversion Factor*|
+|-----------------------------------------------|----------------------|
+|Codeine                                        |                 0.15 |
+|Fentanyl, transdermal patch (MCG/HR)           |                 2.4  |
+|Hydrocodone                                    |                 1    |
+|Hydromorphone                                  |                 4    |
+|Methadone                                      |                      |
+|  1-20 mg/d                                    |                 4    |
+|  21-40 mg/d                                   |                 8    |
+|  41-60 mg/d                                   |                10    |
+|  61-80+ mg/d                                  |                12    |
+| Morphine                                      |                 1    |
+| Oxycodone                                     |                 1.5  |
+| Oxymorphone                                   |                 3    |
+
+*/define function GetConversionFactor(ingredientCode </a:s>
+               <a:s r="14">
+                  <a:s>System.Code</a:s>
+               </a:s>
+               <a:s>, dailyDose </a:s>
+               <a:s r="15">
+                  <a:s>System.Quantity</a:s>
+               </a:s>
+               <a:s>, doseFormCode </a:s>
+               <a:s r="16">
+                  <a:s>System.Code</a:s>
+               </a:s>
+               <a:s>, dosesPerDay </a:s>
+               <a:s r="17">
+                  <a:s>System.Decimal</a:s>
+               </a:s>
+               <a:s>):
+  </a:s>
+               <a:s r="349">
+                  <a:s r="349">
+                     <a:s>Coalesce(
+    </a:s>
+                     <a:s r="242">
+                        <a:s>LookupConversionFactor(</a:s>
+                        <a:s r="18">
+                           <a:s>ingredientCode</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="19">
+                           <a:s>dailyDose</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="20">
+                           <a:s>doseFormCode</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="21">
+                           <a:s>dosesPerDay</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>,
+    </a:s>
+                     <a:s r="348">
+                        <a:s>case </a:s>
+                        <a:s r="245">
+                           <a:s>ToInteger(</a:s>
+                           <a:s r="244">
+                              <a:s r="243">
+                                 <a:s>ingredientCode</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="244">
+                                 <a:s>code</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="248">
+                           <a:s r="246">when 2670 then 0.15</a:s>
+                        </a:s>
+                        <a:s> /*	Codeine */
+      </a:s>
+                        <a:s r="271">
+                           <a:s r="249">when 4337 then </a:s>
+                           <a:s r="270">
+                              <a:s>( /*	Fentanyl */
+        </a:s>
+                              <a:s r="270">
+                                 <a:s>case
+          </a:s>
+                                 <a:s r="260">
+                                    <a:s>when </a:s>
+                                    <a:s r="254">
+                                       <a:s r="252">
+                                          <a:s>ToInteger(</a:s>
+                                          <a:s r="251">
+                                             <a:s r="250">
+                                                <a:s>doseFormCode</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="251">
+                                                <a:s>code</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                       <a:s r="253"> = 316987</a:s>
+                                    </a:s>
+                                    <a:s> then </a:s>
+                                    <a:s r="259">
+                                       <a:s r="257">
+                                          <a:s>(</a:s>
+                                          <a:s r="257">
+                                             <a:s r="255">0.33333333 / </a:s>
+                                             <a:s r="256">
+                                                <a:s>dosesPerDay</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                       <a:s r="258"> * 7200</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> /* Transdermal system */
+          else </a:s>
+                                 <a:s r="269">
+                                    <a:s r="261">Message(null, true, </a:s>
+                                    <a:s r="263">
+                                       <a:s>'OMTKLogic.GetConversionFactor.UnknownDoseForm'</a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="264">
+                                       <a:s>ErrorLevel</a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="268">
+                                       <a:s r="265">
+                                          <a:s>'Unknown dose form code '</a:s>
+                                       </a:s>
+                                       <a:s> &amp; </a:s>
+                                       <a:s r="267">
+                                          <a:s r="266">
+                                             <a:s>doseFormCode</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="267">
+                                             <a:s>code</a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s>
+        end</a:s>
+                              </a:s>
+                              <a:s>
+      )</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="274">
+                           <a:s r="272">when 5489 then 1</a:s>
+                        </a:s>
+                        <a:s> /*	Hydrocodone */
+      </a:s>
+                        <a:s r="277">
+                           <a:s r="275">when 3423 then 4</a:s>
+                        </a:s>
+                        <a:s> /*	Hydromorphone */
+      </a:s>
+                        <a:s r="329">
+                           <a:s r="278">when 6813 then </a:s>
+                           <a:s r="328">
+                              <a:s>( /*	Methadone */
+        </a:s>
+                              <a:s r="328">
+                                 <a:s>case
+          </a:s>
+                                 <a:s r="285">
+                                    <a:s>when </a:s>
+                                    <a:s r="283">
+                                       <a:s r="280">
+                                          <a:s r="279">
+                                             <a:s>dailyDose</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="280">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s r="281"> between 1 and 20</a:s>
+                                    </a:s>
+                                    <a:s r="284"> then 4</a:s>
+                                 </a:s>
+                                 <a:s>
+          </a:s>
+                                 <a:s r="292">
+                                    <a:s>when </a:s>
+                                    <a:s r="290">
+                                       <a:s r="287">
+                                          <a:s r="286">
+                                             <a:s>dailyDose</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="287">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s r="288"> between 21 and 40</a:s>
+                                    </a:s>
+                                    <a:s r="291"> then 8</a:s>
+                                 </a:s>
+                                 <a:s>
+          </a:s>
+                                 <a:s r="299">
+                                    <a:s>when </a:s>
+                                    <a:s r="297">
+                                       <a:s r="294">
+                                          <a:s r="293">
+                                             <a:s>dailyDose</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="294">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s r="295"> between 41 and 60</a:s>
+                                    </a:s>
+                                    <a:s r="298"> then 10</a:s>
+                                 </a:s>
+                                 <a:s>
+          </a:s>
+                                 <a:s r="305">
+                                    <a:s>when </a:s>
+                                    <a:s r="303">
+                                       <a:s r="301">
+                                          <a:s r="300">
+                                             <a:s>dailyDose</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="301">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s r="302"> >= 61</a:s>
+                                    </a:s>
+                                    <a:s r="304"> then 12</a:s>
+                                 </a:s>
+                                 <a:s>
+          </a:s>
+                                 <a:s r="318">
+                                    <a:s>when </a:s>
+                                    <a:s r="311">
+                                       <a:s r="307">
+                                          <a:s r="306">
+                                             <a:s>dailyDose</a:s>
+                                          </a:s>
+                                          <a:s> is null</a:s>
+                                       </a:s>
+                                       <a:s> or </a:s>
+                                       <a:s r="310">
+                                          <a:s r="309">
+                                             <a:s r="308">
+                                                <a:s>dailyDose</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="309">
+                                                <a:s>value</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> is null</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> then
+            </a:s>
+                                    <a:s r="317">
+                                       <a:s r="312">Message(null, true, </a:s>
+                                       <a:s r="314">
+                                          <a:s>'OMTKLogic.GetConversionFactor.DailyDoseNull'</a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="315">
+                                          <a:s>ErrorLevel</a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="316">
+                                          <a:s>'Daily dose is required to determine methadone conversion factor'</a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>
+          else </a:s>
+                                 <a:s r="327">
+                                    <a:s r="319">Message(null, </a:s>
+                                    <a:s r="323">
+                                       <a:s r="321">
+                                          <a:s r="320">
+                                             <a:s>dailyDose</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="321">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s r="322"> &lt; 1</a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="324">
+                                       <a:s>'OMTKLogic.GetConversionFactor.DailyDoseLessThanOne'</a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="325">
+                                       <a:s>ErrorLevel</a:s>
+                                    </a:s>
+                                    <a:s>, </a:s>
+                                    <a:s r="326">
+                                       <a:s>'Daily dose less than 1'</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s>
+        end</a:s>
+                              </a:s>
+                              <a:s>
+      )</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="332">
+                           <a:s r="330">when 7052 then 1</a:s>
+                        </a:s>
+                        <a:s> /*	Morphine */
+      </a:s>
+                        <a:s r="335">
+                           <a:s r="333">when 7804 then 1.5</a:s>
+                        </a:s>
+                        <a:s> /*	Oxycodone */
+      </a:s>
+                        <a:s r="338">
+                           <a:s r="336">when 7814 then 3</a:s>
+                        </a:s>
+                        <a:s> /*	Oxymorphone */
+      else </a:s>
+                        <a:s r="347">
+                           <a:s r="339">Message(null, true, </a:s>
+                           <a:s r="341">
+                              <a:s>'OMTKLogic.GetConversionFactor.UnknownIngredientCode'</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="342">
+                              <a:s>ErrorLevel</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="346">
+                              <a:s r="343">
+                                 <a:s>'Unknown ingredient code: '</a:s>
+                              </a:s>
+                              <a:s> &amp; </a:s>
+                              <a:s r="345">
+                                 <a:s r="344">
+                                    <a:s>ingredientCode</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="345">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s>
+    end</a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="349" locator="94:3-122:3" xsi:type="Coalesce">
+            <operand localId="242" locator="95:5-95:80" name="LookupConversionFactor" xsi:type="FunctionRef">
+               <operand localId="18" locator="95:28-95:41" name="ingredientCode" xsi:type="OperandRef"/>
+               <operand localId="19" locator="95:44-95:52" name="dailyDose" xsi:type="OperandRef"/>
+               <operand localId="20" locator="95:55-95:66" name="doseFormCode" xsi:type="OperandRef"/>
+               <operand localId="21" locator="95:69-95:79" name="dosesPerDay" xsi:type="OperandRef"/>
+            </operand>
+            <operand localId="348" locator="96:5-121:7" xsi:type="Case">
+               <comparand localId="245" locator="96:10-96:39" xsi:type="ToInteger">
+                  <operand localId="244" locator="96:20-96:38" path="code" xsi:type="Property">
+                     <source localId="243" locator="96:20-96:33" name="ingredientCode" xsi:type="OperandRef"/>
+                  </operand>
+               </comparand>
+               <caseItem localId="248" locator="97:7-97:25">
+                  <when localId="246" locator="97:12-97:15" valueType="t:Integer" value="2670" xsi:type="Literal"/>
+                  <then localId="247" locator="97:22-97:25" valueType="t:Decimal" value="0.15" xsi:type="Literal"/>
+               </caseItem>
+               <caseItem localId="271" locator="98:7-103:7">
+                  <when localId="249" locator="98:12-98:15" valueType="t:Integer" value="4337" xsi:type="Literal"/>
+                  <then localId="270" locator="98:22-103:7" xsi:type="Case">
+                     <caseItem localId="260" locator="100:11-100:91">
+                        <when localId="254" locator="100:16-100:52" xsi:type="Equal">
+                           <operand localId="252" locator="100:16-100:43" xsi:type="ToInteger">
+                              <operand localId="251" locator="100:26-100:42" path="code" xsi:type="Property">
+                                 <source localId="250" locator="100:26-100:37" name="doseFormCode" xsi:type="OperandRef"/>
+                              </operand>
+                           </operand>
+                           <operand localId="253" locator="100:47-100:52" valueType="t:Integer" value="316987" xsi:type="Literal"/>
+                        </when>
+                        <then localId="259" locator="100:59-100:91" xsi:type="Multiply">
+                           <operand localId="257" locator="100:59-100:84" xsi:type="Divide">
+                              <operand localId="255" locator="100:60-100:69" valueType="t:Decimal" value="0.33333333" xsi:type="Literal"/>
+                              <operand localId="256" locator="100:73-100:83" name="dosesPerDay" xsi:type="OperandRef"/>
+                           </operand>
+                           <operand xsi:type="ToDecimal">
+                              <operand localId="258" locator="100:88-100:91" valueType="t:Integer" value="7200" xsi:type="Literal"/>
+                           </operand>
+                        </then>
+                     </caseItem>
+                     <else asType="t:Decimal" xsi:type="As">
+                        <operand localId="269" locator="101:16-101:142" xsi:type="Message">
+                           <source localId="261" locator="101:24-101:27" xsi:type="Null"/>
+                           <condition localId="262" locator="101:30-101:33" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+                           <code localId="263" locator="101:36-101:82" valueType="t:String" value="OMTKLogic.GetConversionFactor.UnknownDoseForm" xsi:type="Literal"/>
+                           <severity localId="264" locator="101:85-101:94" name="ErrorLevel" xsi:type="ParameterRef"/>
+                           <message localId="268" locator="101:97-101:141" xsi:type="Concatenate">
+                              <operand xsi:type="Coalesce">
+                                 <operand localId="265" locator="101:97-101:121" valueType="t:String" value="Unknown dose form code " xsi:type="Literal"/>
+                                 <operand valueType="t:String" value="" xsi:type="Literal"/>
+                              </operand>
+                              <operand xsi:type="Coalesce">
+                                 <operand localId="267" locator="101:125-101:141" path="code" xsi:type="Property">
+                                    <source localId="266" locator="101:125-101:136" name="doseFormCode" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand valueType="t:String" value="" xsi:type="Literal"/>
+                              </operand>
+                           </message>
+                        </operand>
+                     </else>
+                  </then>
+               </caseItem>
+               <caseItem localId="274" locator="104:7-104:22">
+                  <when localId="272" locator="104:12-104:15" valueType="t:Integer" value="5489" xsi:type="Literal"/>
+                  <then xsi:type="ToDecimal">
+                     <operand localId="273" locator="104:22" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                  </then>
+               </caseItem>
+               <caseItem localId="277" locator="105:7-105:22">
+                  <when localId="275" locator="105:12-105:15" valueType="t:Integer" value="3423" xsi:type="Literal"/>
+                  <then xsi:type="ToDecimal">
+                     <operand localId="276" locator="105:22" valueType="t:Integer" value="4" xsi:type="Literal"/>
+                  </then>
+               </caseItem>
+               <caseItem localId="329" locator="106:7-116:7">
+                  <when localId="278" locator="106:12-106:15" valueType="t:Integer" value="6813" xsi:type="Literal"/>
+                  <then xsi:type="ToDecimal">
+                     <operand localId="328" locator="106:22-116:7" xsi:type="Case">
+                        <caseItem localId="285" locator="108:11-108:54">
+                           <when localId="283" locator="108:16-108:47" xsi:type="And">
+                              <operand xsi:type="GreaterOrEqual">
+                                 <operand localId="280" locator="108:16-108:30" path="value" xsi:type="Property">
+                                    <source localId="279" locator="108:16-108:24" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="281" locator="108:40" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                                 </operand>
+                              </operand>
+                              <operand xsi:type="LessOrEqual">
+                                 <operand localId="280" locator="108:16-108:30" path="value" xsi:type="Property">
+                                    <source localId="279" locator="108:16-108:24" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="282" locator="108:46-108:47" valueType="t:Integer" value="20" xsi:type="Literal"/>
+                                 </operand>
+                              </operand>
+                           </when>
+                           <then localId="284" locator="108:54" valueType="t:Integer" value="4" xsi:type="Literal"/>
+                        </caseItem>
+                        <caseItem localId="292" locator="109:11-109:55">
+                           <when localId="290" locator="109:16-109:48" xsi:type="And">
+                              <operand xsi:type="GreaterOrEqual">
+                                 <operand localId="287" locator="109:16-109:30" path="value" xsi:type="Property">
+                                    <source localId="286" locator="109:16-109:24" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="288" locator="109:40-109:41" valueType="t:Integer" value="21" xsi:type="Literal"/>
+                                 </operand>
+                              </operand>
+                              <operand xsi:type="LessOrEqual">
+                                 <operand localId="287" locator="109:16-109:30" path="value" xsi:type="Property">
+                                    <source localId="286" locator="109:16-109:24" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="289" locator="109:47-109:48" valueType="t:Integer" value="40" xsi:type="Literal"/>
+                                 </operand>
+                              </operand>
+                           </when>
+                           <then localId="291" locator="109:55" valueType="t:Integer" value="8" xsi:type="Literal"/>
+                        </caseItem>
+                        <caseItem localId="299" locator="110:11-110:56">
+                           <when localId="297" locator="110:16-110:48" xsi:type="And">
+                              <operand xsi:type="GreaterOrEqual">
+                                 <operand localId="294" locator="110:16-110:30" path="value" xsi:type="Property">
+                                    <source localId="293" locator="110:16-110:24" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="295" locator="110:40-110:41" valueType="t:Integer" value="41" xsi:type="Literal"/>
+                                 </operand>
+                              </operand>
+                              <operand xsi:type="LessOrEqual">
+                                 <operand localId="294" locator="110:16-110:30" path="value" xsi:type="Property">
+                                    <source localId="293" locator="110:16-110:24" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="296" locator="110:47-110:48" valueType="t:Integer" value="60" xsi:type="Literal"/>
+                                 </operand>
+                              </operand>
+                           </when>
+                           <then localId="298" locator="110:55-110:56" valueType="t:Integer" value="10" xsi:type="Literal"/>
+                        </caseItem>
+                        <caseItem localId="305" locator="111:11-111:44">
+                           <when localId="303" locator="111:16-111:36" xsi:type="GreaterOrEqual">
+                              <operand localId="301" locator="111:16-111:30" path="value" xsi:type="Property">
+                                 <source localId="300" locator="111:16-111:24" name="dailyDose" xsi:type="OperandRef"/>
+                              </operand>
+                              <operand xsi:type="ToDecimal">
+                                 <operand localId="302" locator="111:35-111:36" valueType="t:Integer" value="61" xsi:type="Literal"/>
+                              </operand>
+                           </when>
+                           <then localId="304" locator="111:43-111:44" valueType="t:Integer" value="12" xsi:type="Literal"/>
+                        </caseItem>
+                        <caseItem localId="318" locator="112:11-113:157">
+                           <when localId="311" locator="112:16-112:59" xsi:type="Or">
+                              <operand localId="307" locator="112:16-112:32" xsi:type="IsNull">
+                                 <operand localId="306" locator="112:16-112:24" name="dailyDose" xsi:type="OperandRef"/>
+                              </operand>
+                              <operand localId="310" locator="112:37-112:59" xsi:type="IsNull">
+                                 <operand localId="309" locator="112:37-112:51" path="value" xsi:type="Property">
+                                    <source localId="308" locator="112:37-112:45" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                              </operand>
+                           </when>
+                           <then asType="t:Integer" xsi:type="As">
+                              <operand localId="317" locator="113:13-113:157" xsi:type="Message">
+                                 <source localId="312" locator="113:21-113:24" xsi:type="Null"/>
+                                 <condition localId="313" locator="113:27-113:30" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+                                 <code localId="314" locator="113:33-113:77" valueType="t:String" value="OMTKLogic.GetConversionFactor.DailyDoseNull" xsi:type="Literal"/>
+                                 <severity localId="315" locator="113:80-113:89" name="ErrorLevel" xsi:type="ParameterRef"/>
+                                 <message localId="316" locator="113:92-113:156" valueType="t:String" value="Daily dose is required to determine methadone conversion factor" xsi:type="Literal"/>
+                              </operand>
+                           </then>
+                        </caseItem>
+                        <else asType="t:Integer" xsi:type="As">
+                           <operand localId="327" locator="114:16-114:141" xsi:type="Message">
+                              <source localId="319" locator="114:24-114:27" xsi:type="Null"/>
+                              <condition localId="323" locator="114:30-114:48" xsi:type="Less">
+                                 <operand localId="321" locator="114:30-114:44" path="value" xsi:type="Property">
+                                    <source localId="320" locator="114:30-114:38" name="dailyDose" xsi:type="OperandRef"/>
+                                 </operand>
+                                 <operand xsi:type="ToDecimal">
+                                    <operand localId="322" locator="114:48" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                                 </operand>
+                              </condition>
+                              <code localId="324" locator="114:51-114:102" valueType="t:String" value="OMTKLogic.GetConversionFactor.DailyDoseLessThanOne" xsi:type="Literal"/>
+                              <severity localId="325" locator="114:105-114:114" name="ErrorLevel" xsi:type="ParameterRef"/>
+                              <message localId="326" locator="114:117-114:140" valueType="t:String" value="Daily dose less than 1" xsi:type="Literal"/>
+                           </operand>
+                        </else>
+                     </operand>
+                  </then>
+               </caseItem>
+               <caseItem localId="332" locator="117:7-117:22">
+                  <when localId="330" locator="117:12-117:15" valueType="t:Integer" value="7052" xsi:type="Literal"/>
+                  <then xsi:type="ToDecimal">
+                     <operand localId="331" locator="117:22" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                  </then>
+               </caseItem>
+               <caseItem localId="335" locator="118:7-118:24">
+                  <when localId="333" locator="118:12-118:15" valueType="t:Integer" value="7804" xsi:type="Literal"/>
+                  <then localId="334" locator="118:22-118:24" valueType="t:Decimal" value="1.5" xsi:type="Literal"/>
+               </caseItem>
+               <caseItem localId="338" locator="119:7-119:22">
+                  <when localId="336" locator="119:12-119:15" valueType="t:Integer" value="7814" xsi:type="Literal"/>
+                  <then xsi:type="ToDecimal">
+                     <operand localId="337" locator="119:22" valueType="t:Integer" value="3" xsi:type="Literal"/>
+                  </then>
+               </caseItem>
+               <else asType="t:Decimal" xsi:type="As">
+                  <operand localId="347" locator="120:12-120:148" xsi:type="Message">
+                     <source localId="339" locator="120:20-120:23" xsi:type="Null"/>
+                     <condition localId="340" locator="120:26-120:29" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+                     <code localId="341" locator="120:32-120:84" valueType="t:String" value="OMTKLogic.GetConversionFactor.UnknownIngredientCode" xsi:type="Literal"/>
+                     <severity localId="342" locator="120:87-120:96" name="ErrorLevel" xsi:type="ParameterRef"/>
+                     <message localId="346" locator="120:99-120:147" xsi:type="Concatenate">
+                        <operand xsi:type="Coalesce">
+                           <operand localId="343" locator="120:99-120:125" valueType="t:String" value="Unknown ingredient code: " xsi:type="Literal"/>
+                           <operand valueType="t:String" value="" xsi:type="Literal"/>
+                        </operand>
+                        <operand xsi:type="Coalesce">
+                           <operand localId="345" locator="120:129-120:147" path="code" xsi:type="Property">
+                              <source localId="344" locator="120:129-120:142" name="ingredientCode" xsi:type="OperandRef"/>
+                           </operand>
+                           <operand valueType="t:String" value="" xsi:type="Literal"/>
+                        </operand>
+                     </message>
+                  </operand>
+               </else>
+            </operand>
+         </expression>
+         <operand name="ingredientCode">
+            <operandTypeSpecifier localId="14" locator="93:52-93:62" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="dailyDose">
+            <operandTypeSpecifier localId="15" locator="93:75-93:89" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="doseFormCode">
+            <operandTypeSpecifier localId="16" locator="93:105-93:115" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+         <operand name="dosesPerDay">
+            <operandTypeSpecifier localId="17" locator="93:130-93:143" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+   </statements>
+</library>

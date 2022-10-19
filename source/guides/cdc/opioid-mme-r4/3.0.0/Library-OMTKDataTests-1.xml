@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorVersion="1.3" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="22">
+         <a:s>library OMTKDataTests version '3.0.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OMTKDataTests" system="http://fhir.org/guides/cdc/opioid-mme-r4" version="3.0.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+   </usings>
+   <includes>
+      <def localId="1" locator="3:1-3:32" localIdentifier="OMTKData" path="http://fhir.org/guides/cdc/opioid-mme-r4/OMTKData" version="3.0.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OMTKData</a:s>
+               </a:s>
+               <a:s> version '3.0.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <statements>
+      <def localId="15" locator="5:1-8:75" name="TestDoseForms" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="15">
+               <a:s>define TestDoseForms:
+  </a:s>
+               <a:s r="14">
+                  <a:s>
+                     <a:s r="3">
+                        <a:s r="2">
+                           <a:s>
+                              <a:s>OMTKData.DrugIngredients</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> DI</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="7">
+                     <a:s>where </a:s>
+                     <a:s r="7">
+                        <a:s r="5">
+                           <a:s r="4">
+                              <a:s>DI</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="5">
+                              <a:s>ingredientCode</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="6"> = 4337</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="13">
+                     <a:s>return </a:s>
+                     <a:s r="12">
+                        <a:s>{ </a:s>
+                        <a:s>
+                           <a:s>doseFormCode: </a:s>
+                           <a:s r="9">
+                              <a:s r="8">
+                                 <a:s>DI</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="9">
+                                 <a:s>doseFormCode</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>doseFormName: </a:s>
+                           <a:s r="11">
+                              <a:s r="10">
+                                 <a:s>DI</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="11">
+                                 <a:s>doseFormName</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="14" locator="6:3-8:75" xsi:type="Query">
+            <source localId="3" locator="6:3-6:29" alias="DI">
+               <expression localId="2" locator="6:3-6:26" name="DrugIngredients" libraryName="OMTKData" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="7" locator="7:5-7:34" xsi:type="Equal">
+               <operand localId="5" locator="7:11-7:27" path="ingredientCode" scope="DI" xsi:type="Property"/>
+               <operand localId="6" locator="7:31-7:34" valueType="t:Integer" value="4337" xsi:type="Literal"/>
+            </where>
+            <return localId="13" locator="8:5-8:75">
+               <expression localId="12" locator="8:12-8:75" xsi:type="Tuple">
+                  <element name="doseFormCode">
+                     <value localId="9" locator="8:28-8:42" path="doseFormCode" scope="DI" xsi:type="Property"/>
+                  </element>
+                  <element name="doseFormName">
+                     <value localId="11" locator="8:59-8:73" path="doseFormName" scope="DI" xsi:type="Property"/>
+                  </element>
+               </expression>
+            </return>
+         </expression>
+      </def>
+      <def localId="22" locator="10:1-12:26" name="TestUnits" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="22">
+               <a:s>define TestUnits:
+  </a:s>
+               <a:s r="21">
+                  <a:s>
+                     <a:s r="17">
+                        <a:s r="16">
+                           <a:s>
+                              <a:s>OMTKData.DrugIngredients</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> DI</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="20">
+                     <a:s>return </a:s>
+                     <a:s r="19">
+                        <a:s r="18">
+                           <a:s>DI</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="19">
+                           <a:s>strengthUnit</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="21" locator="11:3-12:26" xsi:type="Query">
+            <source localId="17" locator="11:3-11:29" alias="DI">
+               <expression localId="16" locator="11:3-11:26" name="DrugIngredients" libraryName="OMTKData" xsi:type="ExpressionRef"/>
+            </source>
+            <return localId="20" locator="12:5-12:26">
+               <expression localId="19" locator="12:12-12:26" path="strengthUnit" scope="DI" xsi:type="Property"/>
+            </return>
+         </expression>
+      </def>
+   </statements>
+</library>

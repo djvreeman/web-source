@@ -1,0 +1,227 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/cfct-example-CDCMMEClinicalConversionFactors> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cfct-example-CDCMMEClinicalConversionFactors"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablecodesystem";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablecodesystem>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Properties</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>conversion-factor</td><td>decimal</td><td>Defines the conversion factor for a specific ingredient, when the conversion factor is the same for all dose forms and dose amounts for the ingredient. The value of this property will be the decimal representation of the conversion factor.</td></tr><tr><td>dose-form-conversion-factor</td><td>string</td><td>Defines the conversion factor for an ingredient when the conversion factor varies by the dose form of the medication. The value of this property will be a string of the form &lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@&lt;doses-per-day&gt;], e.g. 970789:130, where '970789' is the RxNorm dose form code, and '130' is the decimal representation of the conversion factor. An example of a per-day conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay, expressed as a decimal with a maximum of 8 digits after the decimal.</td></tr><tr><td>dose-range-conversion-factor</td><td>string</td><td>Defines the conversion factor for an ingredient when the conversion factor varies by the overall dose of the medication. The value of this property will be a string of the form &lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;, e.g. 1-20:4. Note that the low-value or high-value may be a wildcard '*' to indicate the range continues (e.g. '61-*:12' indicates the range is 61 or greater).</td></tr></table><p/><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>conversion-factor</b></td><td><b>dose-form-conversion-factor</b></td><td><b>dose-range-conversion-factor</b></td></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=2670\">2670</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-2670\"> </a></td><td>Codeine</td><td>0.15</td><td/><td/></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=4337\">4337</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-4337\"> </a></td><td>Fentanyl</td><td/><td>316987:7200@0.33333333</td><td/></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=5489\">5489</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-5489\"> </a></td><td>Hydrocodone</td><td>1</td><td/><td/></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=3423\">3423</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-3423\"> </a></td><td>Hydromorphone</td><td>4</td><td/><td/></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=6813\">6813</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-6813\"> </a></td><td>Methadone</td><td/><td/><td>1-20:4, 21-40:8, 41-60:10, 61-*:12</td></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=7052\">7052</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-7052\"> </a></td><td>Morphine</td><td>1</td><td/><td/></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=7804\">7804</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-7804\"> </a></td><td>Oxycodone</td><td>1.5</td><td/><td/></tr><tr><td><a style=\"white-space:nowrap\" href=\"https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=7814\">7814</a><a name=\"cfct-example-CDCMMEClinicalConversionFactors-7814\"> </a></td><td>Oxymorphone</td><td>3</td><td/><td/></tr></table></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability" ];
+     fhir:Extension.valueCode [ fhir:value "shareable" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability" ];
+     fhir:Extension.valueCode [ fhir:value "publishable" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel" ];
+     fhir:Extension.valueCode [ fhir:value "structured" ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/codesystem-sourceReference" ];
+     fhir:Extension.valueUri [ fhir:value "https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf" ]
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/cfct-example-CDCMMEClinicalConversionFactors"];
+  fhir:CodeSystem.version [ fhir:value "3.0.0"];
+  fhir:CodeSystem.name [ fhir:value "ExampleCDCMMEClinicalConversionFactors"];
+  fhir:CodeSystem.title [ fhir:value "Example CDC MME Clinical Conversion Factors"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.date [ fhir:value "2021-11-25T15:15:41+11:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "Alphora"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://alphora.com" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "**Example Code System to support Testing (Copy of ClinicalConversion Factors)**. This Code System Supplement is a copy of the CDC Clinical Conversion Factors code system supplement to support testing. See the original CDC Clinical Conversion Factors code system supplement for documentation of the code system supplement properties."];
+  fhir:CodeSystem.useContext [
+     fhir:index 0;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ];
+       fhir:Coding.display [ fhir:value "Clinical Focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:182888003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "182888003" ];
+         fhir:Coding.display [ fhir:value "Medication requested (situation)" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ];
+       fhir:Coding.display [ fhir:value "Clinical Focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:82423001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "82423001" ];
+         fhir:Coding.display [ fhir:value "Chronic pain (finding)" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "task" ];
+       fhir:Coding.display [ fhir:value "Workflow Task" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes" ];
+         fhir:Coding.code [ fhir:value "mme-calculation" ];
+         fhir:Coding.display [ fhir:value "MME Calculation" ]
+       ]
+     ]
+  ];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "840" ]
+     ]
+  ];
+  fhir:CodeSystem.copyright [ fhir:value "Copyright 2019+ Centers for Disease Control and Prevention (CDC)"];
+  fhir:CodeSystem.content [ fhir:value "supplement"];
+  fhir:CodeSystem.supplements [
+     fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm";
+     fhir:link <http://www.nlm.nih.gov/research/umls/rxnorm>
+  ];
+  fhir:CodeSystem.property [
+     fhir:index 0;
+     fhir:CodeSystem.property.code [ fhir:value "conversion-factor" ];
+     fhir:CodeSystem.property.description [ fhir:value "Defines the conversion factor for a specific ingredient, when the conversion factor is the same for all dose forms and dose amounts for the ingredient. The value of this property will be the decimal representation of the conversion factor." ];
+     fhir:CodeSystem.property.type [ fhir:value "decimal" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.property.code [ fhir:value "dose-form-conversion-factor" ];
+     fhir:CodeSystem.property.description [ fhir:value "Defines the conversion factor for an ingredient when the conversion factor varies by the dose form of the medication. The value of this property will be a string of the form <dose-form-code>:<conversion-factor>[@<doses-per-day>], e.g. 970789:130, where '970789' is the RxNorm dose form code, and '130' is the decimal representation of the conversion factor. An example of a per-day conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay, expressed as a decimal with a maximum of 8 digits after the decimal." ];
+     fhir:CodeSystem.property.type [ fhir:value "string" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.property.code [ fhir:value "dose-range-conversion-factor" ];
+     fhir:CodeSystem.property.description [ fhir:value "Defines the conversion factor for an ingredient when the conversion factor varies by the overall dose of the medication. The value of this property will be a string of the form <low-value>-<high-value>:<conversion-factor>, e.g. 1-20:4. Note that the low-value or high-value may be a wildcard '*' to indicate the range continues (e.g. '61-*:12' indicates the range is 61 or greater)." ];
+     fhir:CodeSystem.property.type [ fhir:value "string" ]
+  ];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "2670" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Codeine" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "0.15"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "4337" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Fentanyl" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "dose-form-conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "316987:7200@0.33333333" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "5489" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Hydrocodone" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "3423" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Hydromorphone" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "4"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "6813" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Methadone" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "dose-range-conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "1-20:4" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeSystem.concept.property.code [ fhir:value "dose-range-conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "21-40:8" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeSystem.concept.property.code [ fhir:value "dose-range-conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "41-60:10" ]
+     ], [
+       fhir:index 3;
+       fhir:CodeSystem.concept.property.code [ fhir:value "dose-range-conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "61-*:12" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "7052" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Morphine" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "7804" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Oxycodone" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "1.5"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "7814" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Oxymorphone" ];
+     fhir:CodeSystem.concept.property [
+       fhir:index 0;
+       fhir:CodeSystem.concept.property.code [ fhir:value "conversion-factor" ];
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/cfct-example-CDCMMEClinicalConversionFactors.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

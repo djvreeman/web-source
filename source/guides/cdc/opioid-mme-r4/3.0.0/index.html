@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Home Page - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home Page</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+  <h2>Home Page</h2>
+  
+  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#intro">Introduction</a></li><li><a href="#overview">Overview</a></li><li><a href="#contents">Contents</a></li><li><a href="#data-elements">Data Elements</a></li><li><a href="#usage">Usage</a></li><li><a href="#tests">Tests</a></li><li><a href="#omtkdata">OMTK Data</a></li><li><a href="#references">References and Disclaimers</a></li><li><a href="#acknowledgements">Acknowledgements</a></li></ul></div>
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="intro">  </a>
+  <h3>Introduction</h3>
+	<p>
+    This implementation guide provides Morphine Milligram Equivalent (MME) calculation logic as described by the
+    Centers For Disease Control and Prevention (CDC) Guideline for Prescribing Opioids for Chronic Pain — United
+    States, 2016, hereafter referred to as the CDC Opioid Prescribing Guideline, or just <em>the Guideline</em>:
+  </p>
+
+  <p><a href="https://www.cdc.gov/mmwr/volumes/65/rr/rr6501e1.htm">CDC Guideline for Prescribing Opioids for Chronic Pain</a></p>
+
+  <p>The MME calculator is expressed using <a href="http://cql.hl7.org">Clinical Quality Language (CQL)</a>,
+  and can be applied to Health Level 7 (HL7) <a href="http://hl7.org/fhir">Fast Healthcare Interoperability Resources (FHIR)</a>. A
+  primary use case for this calculator is <a href="https://www.cdc.gov/mmwr/volumes/65/rr/rr6501e1.htm#5_When_opioids_are_started">Recommendation #5</a>
+  of the Guideline:</p>
+
+<p>
+    <strong>When opioids are started, providers should prescribe the lowest effective dosage.
+    Providers should use caution when prescribing opioids at any dosage, should carefully
+    reassess evidence of individual benefits and risks when considering increasing dosage
+    to ≥50 morphine milligram equivalents (MME)/day, and should avoid increasing dosage
+    to ≥90 MME/day or carefully justify a decision to titrate dosage to &gt;90 MME/day
+    <em>(recommendation category: A, evidence type: 3)</em>.</strong>
+</p>
+
+  <p>
+    This implementation guide was developed based on work initially done as part of the
+    <a href="https://confluence.hl7.org/display/CQIWC/Clinical+Quality+Framework">Clinical Quality Framework (CQF)</a>
+    Initiative, a public-private partnership sponsored by the Centers for Medicare &amp; Medicaid Services (CMS) and
+    the U.S. Office of the National Coordinator for Health Information Technology (ONC) to identify, develop, and harmonize
+    standards for clinical decision support and electronic clinical quality measurement, as well as a joint effort by
+    the Centers for Disease Control and Prevention (CDC) and the Office of the National Coordinator for Health IT (ONC)
+    focused on improving processes for the development of standardized, shareable, computable decision support artifacts
+    using the CDC Opioid Prescribing Guideline as a model case.
+  </p>
+
+  <p>
+    Feedback and contributions are welcome and can be submitted using the New Issue link in the footer of every page. Discussions on the
+    use of this IG as well as other CQF projects take place regularly on the <a href="https://confluence.hl7.org/display/CDS/CPGonFHIR">CPG-on-FHIR calls</a>,
+    a subworkgroup of the HL7 Clinical Decision Support Workgroup.
+  </p>
+
+  <a name="overview">  </a>
+  <h3>Overview</h3>
+
+  <p>
+    The MME calculation information provided above is based on conversion factors for each of the various opioids.
+    Due to the possibility of combination drugs, the component ingredients of a drug need to be considered in
+    order to correctly determine the opioid ingredient strength. To determine this, the calculator requires
+    drug component information to be available. This information can be determined using the <a href="https://rxnav.nlm.nih.gov/">RxNav Application Programming Interface (API)</a>.
+    To avoid having to include a service call to this API during the calculation, the required information is
+    cached according to the process described <a href="http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base">here</a>.
+  </p>
+
+  <p>
+    That process results in a Microsoft Access database. Within Clinical Quality Language (CQL), that data can be accessed by defining a
+    data model (using CQL <a href="https://cql.hl7.org/07-physicalrepresentation.html#data-model-references">ModelInfo</a>)
+    and using that to retrieve data from that database. However, that approach would introduce a run-time dependency
+    for the MME calculator that would then need to be distributed with the calculator, as well as require
+    implementing systems to support access using this data model. To avoid this runtime dependency, the
+    data are converted to a "pure" CQL expression, and distributed in the OMTKData CQL library.
+  </p>
+
+  <p>
+    For a more detailed description of the MME calculator, refer to the <a href="mme-calculator.html">MME Calculator</a> page in this guide.
+  </p>
+
+  <p>
+    For a detailed description of configuration of conversion factors, refer to the <a href="conversion-factors.html">Conversion Factors</a> page in this guide.
+  </p>
+
+  <p>
+    For a discussion of the process used to create and maintain the OMTKData library, see the <a href="omtkdata-processing.html">Opioid Terminology Management Knowledge (OMTK) Data Processing</a> page in this guide.
+  </p>
+
+  <a name="contents">  </a>
+  <h3>Contents</h3>
+
+  <p><a href="toc.html">Table of Contents</a></p>
+
+  <p>
+    The MME calculation logic is contained within four libraries:
+  </p>
+
+  <ul>
+    <li><b><a href="Library-ConversionFactors.html">ConversionFactors</a></b> - Logic to determine appropriate conversion factor for a given ingredient, dose form, and dose quantity.</li>
+    <li><b><a href="Library-OMTKData.html">OMTKData</a></b> - The RxNorm drug ingredient data required to determine the strength of individual ingredients within combination drugs.</li>
+    <li><b><a href="Library-OMTKLogic.html">OMTKLogic</a></b> - The core MME calculator, expressed in pure CQL and independent of any particular data model</li>
+    <li><b><a href="Library-MMECalculator.html">MMECalculator</a></b> - Logic to apply the MME calculator to FHIR R4 MedicationRequest resources</li>
+  </ul>
+
+  <p>
+    Layering the calculator in this way enables it to be used with different data models. In particular, the calculator
+    is being used with <a href="http://ecqi.healthit.gov/qdm">Quality Data Model</a> as part of the specification of a Potential Opioid Overuse electronic
+    Clinical Quality Measure (eCQM), and as part of the computable representation of the CDC Opioid Prescribing Guideline in
+    both <a href="http://hl7.org/fhir/STU3">FHIR STU3</a> and <a href="http://hl7.org/fhir/R4">FHIR R4</a> versions.
+  </p>
+
+  <p>
+    Note that because FHIR implementation guides typically only target a single FHIR version, the canonical base and package id
+    for this implementation guide include the `r4` designator to distinguish packages targeting FHIR R4.
+  </p>
+
+  <a name="data-elements">  </a>
+  <h3>Data Elements</h3>
+
+  <p>
+    The FHIR R4 MME calculator only uses the MedicationRequest resource. To ensure proper functioning with this calculator,
+    this implementation guide defines a MedicationRequest profile. Resources used with this calculator must conform to this
+    profile in order to produce the expected results:
+  </p>
+
+  <ul>
+    <li><a href="StructureDefinition-mmemedicationrequest.html">MMEMedicationRequest</a></li>
+  </ul>
+
+  <a name="usage">  </a>
+  <h3>Usage</h3>
+
+  <p>
+    The calculator is intended to be used by referencing this content IG as a dependency, allowing the calculator
+    to be referenced by including the MMECalculator in a CQL library:
+  </p>
+
+  <pre><code class="language-cql">library Example version '0.1.0'
+
+using FHIR version '4.0.1'
+
+include fhir.cdc."opioid-mme-r4".MMECalculator version '3.0.0'
+
+context Patient
+
+define TotalMME: MMECalculator.TotalMME([MedicationRequest])</code></pre>
+
+  <p>
+    This example library calls the <code>TotalMME</code> function of the <code>MMECalculator</code> library,
+    passing the set of <code>MedicationRequest</code> resources for the patient in context. The calculator
+    uses whatever medication requests it is given to calculate a total MME for a point-in-time. The calculator
+    does not attempt to do any filtering of the medication requests it is given, that logic is the responsibility
+    of the caller, so a production usage would of course include filtering to determine active medication requests.
+  </p>
+
+  <p>
+    The result of the <code>TotalMME</code> expression is then a CQL <a href="https://cql.hl7.org/09-b-cqlreference.html#quantity"><code>Quantity</code></a> value, with
+    units of <code>{MME}/d</code>, representing the combined Morphine Milligram Equivalent (MME) value of the input prescriptions.
+  </p>
+
+  <p>
+    To use the MMECalculator in this way, declare this implementation guide as a dependency using the <code>dependsOn</code>
+    element of the <code>ImplementationGuide</code> resource:
+  </p>
+
+  <pre><code class="language-xml">&lt;dependsOn&gt;
+  &lt;packageId value="fhir.cdc.opioid-mme-r4"/&gt;
+  &lt;version value="dev"/&gt;
+&lt;/dependsOn&gt;</code></pre>
+
+  <div class="info">
+    <p>
+      Note the use of the <code>dev</code> value for version. This value indicates that
+      the version to be used is available locally. Until the Opioid MME calculator is published
+      in a permanent site, this is the approach that must be taken because the publication tooling
+      has no way to look up the required package listing.
+    </p>
+  </div>
+
+  <a name="tests">  </a>
+  <h3>Tests</h3>
+
+  <p>
+    To validate the functionality of the MME Calculator, this implementation guide includes test
+    cases for a representative set of opioids for both the core calculator, as well as the FHIR R4
+    calculator:
+  </p>
+
+  <ul>
+    <!--<li><b><a href="Library-OMTKDataTests.html">OMTKDataTests</a></b> - Tests of the DrugIngredient Data.</li>-->
+    <li><b><a href="Library-OMTKLogicTests.html">OMTKLogicTests</a></b> - Tests for the core MME calculator</li>
+    <li><b><a href="Library-MMECalculatorTests.html">MMECalculatorTests</a></b> - Tests the FHIR r4 calculator</li>
+  </ul>
+
+  <p>
+    The core calculator tests are expressed in pure CQL as expressions with expected result values. For example:
+  </p>
+
+  <pre><code class="language-cql">// 100 mg X (60 tablets/30 days) X 0.4 = 80 MME/day
+  define TestDrug_Tapentadol: {
+    rxNormCode: Code '1148797' from OMTKLogic.RXNORM display '12 HR tapentadol 100 MG Extended Release Oral Tablet',
+    doseQuantity: 1 '{tab}',
+    dosesPerDay: 2.0,
+    mme: 80 '{MME}/d'
+  }</code></pre>
+
+  <p>
+    This test indicates that for the drug '12 HR tapentadol 100 MG Extended Release Oral Tablet',
+    prescribed at 2 tablets per day, the expected result is 80 '{MME}/d'.
+  </p>
+
+  <p>
+    See the CQL content of the <a href="Library-OMTKLogicTests.html#cql-content">OMTKLogicTests</a> library
+    for a complete description of the tests.
+  </p>
+
+  <p>
+    Tests for the FHIR R4 MME calculator involve test MedicationRequest resources, contained in the <code>tests</code> folder
+    of the source for this implementation guide:
+  </p>
+
+  <pre><code>input
+  |-- tests
+        |-- MMECalculatorTests // This folder is the same name as the library under test
+              |-- patient-mme-greater-than-fifty // Folders at this level are named the same as the id of the patient under test
+                    |-- Patient // Folders at this level are the name of the resource type in the test
+                          |-- patient-mme-greater-than-fifty.json // The patient resource as a JSON file
+                    |-- MedicationRequest
+                          |-- example-rec-05-mme-greater-than-fifty-context.json // The medication request resource as a JSON file
+              |-- patient-mme-less-than-fifty
+                    |-- Patient
+                    |-- MedicationRequest
+                    |-- ...
+              |-- ... // more test cases can be added by adding to this list</code></pre>
+
+  <a name="omtkdata"> </a>
+  <h3>OMTK Data</h3>
+
+  <p>
+    The calculator provided here uses per-ingredient strength values for combination drugs with opioid ingredients.
+    This data is gathered from RxNorm using the RxNav API, and distributed as a CQL library. The process for producing
+    and maintaining this information as RxNorm data is updated over time is provided in the following topic:
+  </p>
+
+  <p><a href="omtkdata-processing.html">Opioid Terminology Management Knowledge (OMTK) Data Processing</a></p>
+
+  <a name="references">  </a>
+  <h3>References and Disclaimers</h3>
+
+  <p><b>RxNorm</b>: This product uses publicly available data courtesy of the U.S. National Library of Medicine (NLM),
+    National Institutes of Health, Department of Health and Human Services; NLM is not responsible for
+    the product and does not endorse or recommend this or any other product.</p>
+
+  <p>Nelson SJ, Zeng K, Kilbourne J, Powell T, Moore R. Normalized names for clinical drugs: RxNorm at 6 years.<br/>
+  J Am Med Inform Assoc. 2011 Jul-Aug;18(4)441-8. doi: 10.1136/amiajnl-2011-000116.<br/>
+  Epub 2011 Apr 21. PubMed PMID: 21515544; PubMed Central PMCID: PMC3128404.<br/>
+  <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/">Full text</a></p>
+
+  <p><b>UCUM</b>: This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it,
+    subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table,
+    UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a>.<br/>
+    The current complete UCUM table, UCUM Specification are available for download at <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a>.<br/>
+    The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization.<br/>
+    All rights reserved.</p>
+
+  <p>THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+  <p>Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain — United States, 2016. MMWR Recmm Rep 2016;65(No. RR-1):1–49. DOI: <a href="http://dx.doi.org/10.15585/mmwr.rr6501e1">http://dx.doi.org/10.15585/mmwr.rr6501</a>.</p>
+
+  <p><b>MME Calculation</b>: National Center for Injury Prevention and Control. Calculating total daily dose of opioids for safer dosage.
+    Atlanta, GA: Centers for Disease Control and Prevention; <a href="https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf">https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf</a>,
+    accessed November 19th, 2020.</p>
+
+  <p>NOTE: Do not use the calculated dose in MMEs to determine dosage for converting
+    one opioid to another—the new opioid should be lower to avoid unintentional overdose
+    caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics.
+    Consult the medication label.</p>
+
+  <p>NOTE: Refer to the Cautions associated with use of this content on the <a href="conversion-factors.html#cautions">Conversion Factors</a> and <a href="mme-calculator.html#cautions">MME Calculator</a> pages.</p>
+
+  <p><b>License and Disclaimer</b>: This content is licensed under an <a href="license.html">Apache 2.0 License</a> with the following additional disclaimer:</p>
+
+  <p><b>Health-Related Additional Disclaimer of Warranty and Limitation of Liability</b></p>
+
+  <p>In the United States, or any other jurisdictions where they may apply, the following
+  additional disclaimer of warranty and limitation of liability are hereby incorporated
+  into the terms and conditions of Apache License 2.0:</p>
+
+  <ul>
+    <li>a. No warranties of any kind whatsoever are made as to the results that You will obtain from relying upon the covered code (or any information or content obtained by way of the covered code), including but not limited to compliance with privacy laws or regulations or clinical care industry standards and protocols. Use of the covered code is not a substitute for a health care provider's standard practice or professional judgment.  Any decision with regard to the appropriateness of, or the validity or reliability of information or content made available by the covered code, is the sole responsibility of the health care provider. Consequently, it is incumbent upon each health care provider to verify all medical history and treatment plans with each patient.</li>
+    <li>b. Under no circumstances and under no legal theory, whether tort (including negligence), contract, or otherwise, shall any Contributor, or anyone who distributes Covered Software as permitted by the license, be liable to You for any indirect, special, incidental, consequential damages of any character including, without limitation, damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other damages or losses, of any nature whatsoever (direct or otherwise) on account of or associated with the use or inability to use the covered content (including, without limitation, the use of  information or content made available by the covered code, all  documentation associated therewith, and the failure of the covered code to comply with privacy laws and regulations or clinical care industry standards and protocols), even if such party shall have been informed of the possibility of such damages.</li>
+  </ul>
+
+  <p>The findings and conclusions on this website are those of the authors and do not necessarily
+    represent the official position of, the Centers for Disease Control and Prevention/the Agency
+    for Toxic Substances and Disease Registry, or the other organizations involved, nor does the
+    mention of trade names, commercial products, or organizations imply endorsement by the U.S.
+    Government.</p>
+
+  <a name="acknowledgements">  </a>
+  <h3>Acknowledgements</h3>
+
+  <table class="grid">
+  	<thead>
+  		<tr>
+  			<th>Contributing Authors</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+      <tr>
+  			<td>Bryn Rhodes</td>
+  		</tr>
+      <tr>
+  			<td>Floyd Eisenberg, MD, MPH</td>
+  		</tr>
+      <tr>
+  			<td>Kensaku Kawamoto, MD, PhD, MHS</td>
+  		</tr>
+      <tr>
+        <td>Robert McClure, MD</td>
+      </tr>
+  	</tbody>
+  </table>
+</div>
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:13+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

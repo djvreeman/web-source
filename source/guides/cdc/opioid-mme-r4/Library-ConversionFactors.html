@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4 - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7.5"}
+    h3,h4,h5,h6{--heading-prefix:"7.5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-ConversionFactors.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-ConversionFactors.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-ConversionFactors.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Library: Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4</h2>
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">ConversionFactors</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;">http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">3.0.0</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Name: </b></th>
+            <td style="padding-left: 4px;">ConversionFactors</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 4px;">active</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Experimental: </b></th>
+            <td style="padding-left: 4px;">false</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span>http://terminology.hl7.org/CodeSystem/library-type</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>logic-library</span>
+                        </p>
+                        
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2021-11-25T15:15:41+11:00</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">Alphora</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;">This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library.</td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Capability: </b></th>
+          <td style="padding-left: 4px;">
+            shareable computable publishable executable 
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Representation Level: </b></th>
+          <td style="padding-left: 4px;">
+            structured
+          </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Use Context: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>182888003</td>
+                        <td>Medication requested (situation)</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>82423001</td>
+                        <td>Chronic pain (finding)</td>
+                      </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Jurisdiction: </b></th>
+            <td style="padding-left: 4px;">840</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Usage: </b></th>
+            <td style="padding-left: 4px;">NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label.</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Copyright: </b></th>
+            <td style="padding-left: 4px;">Copyright 2019+ Centers for Disease Control and Prevention (CDC)</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Last Review Date: </b></th>
+            <td style="padding-left: 4px;">2020-09-26</td>
+        </tr>
+        
+        
+        
+        <tr>
+          <th scope="row"><b>Related Artifacts: </b></th>
+          <td style="padding-left: 4px;">
+            
+            <p><b>Documentation</b></p>
+            <ul>
+              
+                <li><a href="http://fhir.org/guides/cdc/opioid-mme-r4/conversion-factors.html">Conversion Factors Conversion Factors</a></li>
+              
+            </ul>
+            
+            
+            <p><b>References</b></p>
+            <ul>
+              
+                <li>Nelson SJ, Zeng K, Kilbourne J, Powell T, Moore R. Normalized names for clinical drugs: RxNorm at 6 years.<br/>J Am Med Inform Assoc. 2011 Jul-Aug;18(4)441-8. doi: 10.1136/amiajnl-2011-000116.<br/>Epub 2011 Apr 21. PubMed PMID: 21515544; PubMed Central PMCID: PMC3128404.<br/>[Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/)<br/><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/</a></li>
+              
+                <li>Schadow G, McDonald CJ. The Unified Code for Units of Measure. Regenstrief Institute, Inc. and the UCUM Organization, 2017. Version 2.1, Revision 442. http://unitsofmeasure.org<br/><a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></li>
+              
+                <li>Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain — United States, 2016. MMWR Recomm Rep 2016;65(No. RR-1):1–49. DOI: http://dx.doi.org/10.15585/mmwr.rr6501e1<br/><a href="http://dx.doi.org/10.15585/mmwr.rr6501e1">http://dx.doi.org/10.15585/mmwr.rr6501e1</a></li>
+              
+                <li>National Center for Injury Prevention and Control. Calculating total daily dose of opioids for safer dosage.<br/>Atlanta, GA: Centers for Disease Control and Prevention; https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf, accessed November 19th, 2020<br/><a href="https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf">https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf</a></li>
+              
+            </ul>
+            
+            
+            <p><b>Dependencies</b></p>
+            <ul>
+              
+                <li>http://terminology.hl7.org/CodeSystem/usage-context-type</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes</li>
+              
+            </ul>
+            
+            
+            
+            
+            
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Parameters: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>In/Out</b></th></tr>
+              
+                <tr><th>ErrorLevel</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>ConversionFactorSupplementName</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>ConversionFactorSupplement</th><th>CodeSystem</th><th>0</th><th>1</th><th>out</th></tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Data Requirements:</b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Type</b></th><th><b>Profile</b></th><th><b>MS</b></th><th><b>Code Filter</b></th></tr>
+              
+                <tr>
+                  <th>Patient</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Patient</th>
+                  <th/>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>CodeSystem</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/CodeSystem</th>
+                  <th>;;;;;;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><a id="cql-content"><b>Content: </b></a> text/cql</th></tr>
+              <tr><td><pre><code class="language-cql">library ConversionFactors version '3.0.0'
+
+/*
+This library provides logic to determine the appropriate conversion factor to be
+used for calculating Morphine Milligram Equivalent (MME) for a given medication.
+
+The conversion factors are configurable using a CodeSystem supplement. This
+implementation guide contains one conversion factor table:
+
+CDCMMEClinicalConversionFactors
+
+The Clinical Conversion Factors table uses values from CDC guidance here:
+https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf
+
+The CodeSystem supplements are configured with 3 types of properties:
+
+* conversion-factor: Defines the conversion factor for a specific ingredient,
+when the conversion factor is the same for all dose forms and dose amounts for
+the ingredient. The value of this property will be the decimal representation of
+the conversion factor.
+* dose-form-conversion-factor: Defines the conversion factor for an ingredient
+when the conversion factor varies by the dose form of the medication. The value
+of this property will be a string of the form
+&lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@&lt;doses-per-day&gt;],
+e.g. 970789:130, where '970789' is the RxNorm dose form code, and '130' is the
+decimal representation of the conversion factor. An example of a per-day
+conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm
+dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay,
+expressed as a decimal with a maximum of 8 digits after the decimal.
+* dose-range-conversion-factor: Defines the conversion factor for an ingredient
+when the conversion factor varies by the overall dose of the medication. The
+value of this property will be a string of the form
+&lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;,
+e.g. 1-20:4. Note that the low-value or high-value may be a wildcard '*' to
+indicate the range continues (e.g. '61-*:12' indicates the range is 61 or greater).
+
+For a given ingredient, only one of 'dose-form' or 'dose-range' will be present,
+with or without an ingredient-specific conversion factor. The properties together
+will enable a unique conversion factor to be determined if the input is within
+the expected range. If the input is outside the expected range, and there is no
+ingredient-specific conversion-factor specified, implementations should indicate
+a conversion factor could not be determined from the supplied information.
+All conversion factors supplied in these supplements are in 'mg/d'.
+*/
+
+using FHIR version '4.0.1'
+
+include FHIRHelpers version '4.0.1'
+
+codesystem &quot;Usage Context Type&quot;: 'http://terminology.hl7.org/CodeSystem/usage-context-type'
+codesystem &quot;CDC MME Usage Context Codes&quot;: 'http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes'
+
+code &quot;Task Usage Context&quot;: 'task' from &quot;Usage Context Type&quot;
+code &quot;MME Calculation&quot;: 'mme-calculation' from &quot;CDC MME Usage Context Codes&quot;
+
+parameter ErrorLevel String default 'Trace'
+
+/*
+If this parameter is supplied, it specifies the name of the code system supplement
+to be used to supply conversion factors for the calculator. If this parameter is not
+provided, the _single_ CodeSystem with a task usage context code of &quot;mme-calculation&quot;
+from the CDCMMEUsageContextCodes code system will be used to provide conversion factors.
+If neither of these configurations is available, the hard-coded conversion factors
+in GetConversionFactor will be used. The hard-coded conversion factors use the
+clinical conversion factors only.
+*/
+parameter ConversionFactorSupplementName String
+
+context Patient
+
+/*
+Returns the conversion factor for the given ingredient
+
+CDC Guidance:
+https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf
+
+|Opioid (strength in mg except where noted)     |MME Conversion Factor*|
+|-----------------------------------------------|----------------------|
+|Codeine                                        |                 0.15 |
+|Fentanyl, transdermal patch (MCG/HR)           |                 2.4  |
+|Hydrocodone                                    |                 1    |
+|Hydromorphone                                  |                 4    |
+|Methadone                                      |                      |
+|  1-20 mg/d                                    |                 4    |
+|  21-40 mg/d                                   |                 8    |
+|  41-60 mg/d                                   |                10    |
+|  61-80+ mg/d                                  |                12    |
+| Morphine                                      |                 1    |
+| Oxycodone                                     |                 1.5  |
+| Oxymorphone                                   |                 3    |
+
+*/
+define function GetConversionFactor(ingredientCode System.Code, dailyDose System.Quantity, doseFormCode System.Code, dosesPerDay System.Decimal):
+  Coalesce(
+    LookupConversionFactor(ingredientCode, dailyDose, doseFormCode, dosesPerDay),
+    case ToInteger(ingredientCode.code)
+      when 2670 then 0.15 /*	Codeine */
+      when 4337 then ( /*	Fentanyl */
+        case
+          when ToInteger(doseFormCode.code) = 316987 then (0.33333333 / dosesPerDay) * 7200 /* Transdermal system */
+          else Message(null, true, 'OMTKLogic.GetConversionFactor.UnknownDoseForm', ErrorLevel, 'Unknown dose form code ' &amp; doseFormCode.code)
+        end
+      )
+      when 5489 then 1 /*	Hydrocodone */
+      when 3423 then 4 /*	Hydromorphone */
+      when 6813 then ( /*	Methadone */
+        case
+          when dailyDose.value between 1 and 20 then 4
+          when dailyDose.value between 21 and 40 then 8
+          when dailyDose.value between 41 and 60 then 10
+          when dailyDose.value &gt;= 61 then 12
+          when dailyDose is null or dailyDose.value is null then
+            Message(null, true, 'OMTKLogic.GetConversionFactor.DailyDoseNull', ErrorLevel, 'Daily dose is required to determine methadone conversion factor')
+          else Message(null, dailyDose.value &lt; 1, 'OMTKLogic.GetConversionFactor.DailyDoseLessThanOne', ErrorLevel, 'Daily dose less than 1')
+        end
+      )
+      when 7052 then 1 /*	Morphine */
+      when 7804 then 1.5 /*	Oxycodone */
+      when 7814 then 3 /*	Oxymorphone */
+      else Message(null, true, 'OMTKLogic.GetConversionFactor.UnknownIngredientCode', ErrorLevel, 'Unknown ingredient code: ' &amp; ingredientCode.code)
+    end
+  )
+
+define ConversionFactorSupplement:
+  singleton from (
+    [CodeSystem] C
+      where C.supplements.value = 'http://www.nlm.nih.gov/research/umls/rxnorm'
+      and (
+        C.name.value = ConversionFactorSupplementName
+          or exists (
+            C.useContext UC
+              where UC.code ~ &quot;Task Usage Context&quot;
+                and UC.value ~ &quot;MME Calculation&quot;
+          )
+      )
+  )
+
+/*
+Converts a range value boundary to a Decimal (or null for a wildcard)
+*/
+define function ToRangeValue(value System.String):
+  if value = '*' then null else ToDecimal(value)
+
+/*
+Converts the property value of a dose-range-conversion-factor property to the dose range
+&lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;
+Note that low-value and/or high-value may be wildcards '*'
+*/
+define function ToDoseRange(propertyValue FHIR.string):
+  ({ : }) X
+    let rangeValues: Split(Split(propertyValue.value, ':')[0], '-')
+    return Interval[ToRangeValue(rangeValues[0]), ToRangeValue(rangeValues[1])]
+
+/*
+Converts the property value of a dose-range-conversion-factor property to the conversion factor
+&lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;
+*/
+define function ToDoseRangeConversionFactor(propertyValue FHIR.string):
+  ToDecimal(Split(propertyValue.value, ':')[1])
+
+/*
+Converts the property value of a dose-form-conversion-factor property to the dose form
+&lt;dose-form-code&gt;:&lt;conversion-factor&gt;
+*/
+define function ToDoseForm(propertyValue FHIR.string):
+  Split(propertyValue.value, ':')[0]
+
+/*
+Converts the property value of a dose-form-conversion-factor property to the conversion factor
+&lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@doses-per-day]
+*/
+define function ToDoseFormConversionFactor(propertyValue FHIR.string, dosesPerDay System.Decimal):
+  if PositionOf('@', propertyValue.value) &gt; 0 then
+    ToDoseFormDosesPerDayConversionFactor(propertyValue, dosesPerDay)
+  else
+    ToDecimal(Split(propertyValue.value, ':')[1])
+
+/*
+Converts the property value of a dose-form-conversion-factor property to the conversion factor
+if the property includes a doses-per-day value
+*/
+define function ToDoseFormDosesPerDayConversionFactor(propertyValue FHIR.string, dosesPerDay System.Decimal):
+  propertyValue P
+    let components: Split(P.value, '@')
+    return (ToDecimal(components[1]) / dosesPerDay) * ToDecimal(Split(components[0], ':')[1])
+
+/*
+Returns the conversion factor for a conversion-factor property
+NOTE: These functions are used to avoid use of _is_ and _as_
+*/
+define function ToConversionFactor(propertyValue FHIR.decimal):
+  propertyValue.value
+
+/*
+Looks up the conversion factor for the given ingredient, daily dose, and dose form from the
+configured conversion factor supplement, if available.
+
+If no conversion factor supplement is configured, returns null
+*/
+define function LookupConversionFactor(ingredientCode System.Code, dailyDose System.Quantity, doseFormCode System.Code, dosesPerDay System.Decimal):
+  ConversionFactorSupplement CFS
+    let
+      ingredientConcept: singleton from (CFS.&quot;concept&quot; C where C.code.value = ingredientCode.code),
+      conversionFactor: singleton from (ingredientConcept.property P where P.code.value = 'conversion-factor'),
+      doseFormConversionFactors: (ingredientConcept.property P where P.code.value = 'dose-form-conversion-factor'),
+      doseRangeConversionFactors: (ingredientConcept.property P where P.code.value = 'dose-range-conversion-factor')
+    return
+      Coalesce
+      (
+        case
+          when exists (doseRangeConversionFactors) then
+            singleton from (
+              doseRangeConversionFactors DRCF
+                where dailyDose.value in ToDoseRange(DRCF.value)
+                return ToDoseRangeConversionFactor(DRCF.value)
+            )
+          when exists (doseFormConversionFactors) then
+            singleton from (
+              doseFormConversionFactors DFCF
+                where doseFormCode.code = ToDoseForm(DFCF.value)
+                return ToDoseFormConversionFactor(DFCF.value, dosesPerDay)
+            )
+          else null
+        end,
+        ToConversionFactor(conversionFactor.value)
+      )
+</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+xml</th></tr>
+              <tr><td><pre><code>Encoded data (159884 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+json</th></tr>
+              <tr><td><pre><code>Encoded data (778100 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+    </table>
+</div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:15+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,450 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4 - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7.8"}
+    h3,h4,h5,h6{--heading-prefix:"7.8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Library-MMECalculatorTests.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-MMECalculatorTests.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-MMECalculatorTests.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4 - JSON Representation</h2>
+
+<p><a href="Library-MMECalculatorTests.json" no-download="true">Raw json</a> | <a href="Library-MMECalculatorTests.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/library.html#Library">resourceType</a>" : "Library",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a>" : "MMECalculatorTests",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n    &lt;table class=\&quot;grid dict\&quot;&gt;\n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Id: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;MMECalculatorTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Url: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Version: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;3.0.0&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Name: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;MMECalculatorTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Title: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Status: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;active&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Experimental: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;true&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Type: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n                \n                    \n                        \n                        &lt;p style=\&quot;margin-bottom: 5px;\&quot;&gt;\n                            &lt;b&gt;system: &lt;/b&gt; &lt;span&gt;http://terminology.hl7.org/CodeSystem/library-type&lt;/span&gt;\n                        &lt;/p&gt;\n                        \n                        \n                        &lt;p style=\&quot;margin-bottom: 5px;\&quot;&gt;\n                            &lt;b&gt;code: &lt;/b&gt; &lt;span&gt;logic-library&lt;/span&gt;\n                        &lt;/p&gt;\n                        \n                        \n                    \n                \n                \n            &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Date: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;2021-11-25T15:13:44+11:00&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Publisher: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;Alphora&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Description: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;This library contains tests to validate the functionality of the FHIR R4 MME calculator&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Knowledge Capability: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            shareable computable publishable executable \n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Knowledge Representation Level: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            structured\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Jurisdiction: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;840&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Copyright: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;Copyright 2019+ Centers for Disease Control and Prevention (CDC)&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Related Artifacts: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            \n            \n            \n            &lt;p&gt;&lt;b&gt;Dependencies&lt;/b&gt;&lt;/p&gt;\n            &lt;ul&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculator|3.0.0&lt;/li&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic|3.0.0&lt;/li&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKData|3.0.0&lt;/li&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors|3.0.0&lt;/li&gt;\n              \n                &lt;li&gt;http://terminology.hl7.org/CodeSystem/usage-context-type&lt;/li&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes&lt;/li&gt;\n              \n            &lt;/ul&gt;\n            \n            \n            \n            \n            \n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Parameters: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            &lt;table class=\&quot;grid-dict\&quot;&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Min&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Max&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;In/Out&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;&lt;th&gt;ErrorLevel&lt;/th&gt;&lt;th&gt;string&lt;/th&gt;&lt;th&gt;0&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;in&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;&lt;th&gt;ConversionFactorSupplementName&lt;/th&gt;&lt;th&gt;string&lt;/th&gt;&lt;th&gt;0&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;in&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;&lt;th&gt;Patient&lt;/th&gt;&lt;th&gt;Patient&lt;/th&gt;&lt;th&gt;0&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;out&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;&lt;th&gt;TotalMME&lt;/th&gt;&lt;th&gt;Quantity&lt;/th&gt;&lt;th&gt;0&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;out&lt;/th&gt;&lt;/tr&gt;\n              \n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Data Requirements:&lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            &lt;table class=\&quot;grid-dict\&quot;&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Profile&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;MS&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Code Filter&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;\n                  &lt;th&gt;Patient&lt;/th&gt;\n                  &lt;th&gt;http://hl7.org/fhir/StructureDefinition/Patient&lt;/th&gt;\n                  &lt;th&gt;&lt;/th&gt;\n                  &lt;th&gt;\n                    \n                  &lt;/th&gt;\n                &lt;/tr&gt;\n              \n                &lt;tr&gt;\n                  &lt;th&gt;MedicationRequest&lt;/th&gt;\n                  &lt;th&gt;http://hl7.org/fhir/StructureDefinition/MedicationRequest&lt;/th&gt;\n                  &lt;th&gt;&lt;/th&gt;\n                  &lt;th&gt;\n                    \n                  &lt;/th&gt;\n                &lt;/tr&gt;\n              \n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n          &lt;td colspan=\&quot;2\&quot;&gt;\n            &lt;table&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;a id=\&quot;cql-content\&quot;&gt;&lt;b&gt;Content: &lt;/b&gt;&lt;/a&gt; text/cql&lt;/th&gt;&lt;/tr&gt;\n              &lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code class=\&quot;language-cql\&quot;&gt;library MMECalculatorTests version '3.0.0'\r\n\r\nusing FHIR version '4.0.1'\r\n\r\ninclude FHIRHelpers version '4.0.1'\r\ninclude MMECalculator version '3.0.0'\r\ninclude OMTKLogic version '3.0.0'\r\ninclude OMTKData version '3.0.0'\r\n\r\ncontext Patient\r\n\r\n//define MedicationRequestCode: [MedicationRequest] M return M.medication\r\n//define MedicationRequestRxNormCode: [MedicationRequest] M return OMTKLogic.GetMedicationCode(M.medication)\r\n/*\r\ndefine MedicationRequestRxNormCode:\r\n  (([MedicationRequest] M return M.medication C return FHIRHelpers.ToConcept(C)).codes) X\r\n    where X.system = 'http://www.nlm.nih.gov/research/umls/rxnorm'\r\n      return {\r\n        drugCode: X.code,\r\n        code:\r\n          singleton from (\r\n            OMTKData.DrugIngredients DI\r\n              where DI.drugCode = ToInteger(X.code)\r\n              return Code {\r\n                code: ToString(DI.drugCode),\r\n                system: 'http://www.nlm.nih.gov/research/umls/rxnorm',\r\n                display: DI.drugName\r\n              }\r\n          )\r\n      }\r\n*/\r\n//define MedicationRequestRxNormCodings:\r\n//  [MedicationRequest] M\r\n//    return (M.medication.coding C where C.system = 'http://www.nlm.nih.gov/research/umls/rxnorm' return C.code)\r\n//define MedicationRequests: [MedicationRequest]\r\n//define Prescriptions: MMECalculator.Prescriptions([MedicationRequest])\r\ndefine TotalMME: MMECalculator.TotalMME([MedicationRequest])\r\n&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;\n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        \n        &lt;tr&gt;\n          &lt;td colspan=\&quot;2\&quot;&gt;\n            &lt;table&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Content: &lt;/b&gt; application/elm+xml&lt;/th&gt;&lt;/tr&gt;\n              &lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;Encoded data (7612 characters)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;\n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        &lt;tr&gt;\n          &lt;td colspan=\&quot;2\&quot;&gt;\n            &lt;table&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Content: &lt;/b&gt; application/elm+json&lt;/th&gt;&lt;/tr&gt;\n              &lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;Encoded data (22120 characters)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;\n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n    &lt;/table&gt;\n&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "shareable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "computable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "publishable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "executable"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "structured"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a>" : "http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a>" : "3.0.0",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a>" : "MMECalculatorTests",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.title">title</a>" : "Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.experimental">experimental</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/library-type",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "logic-library"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a>" : "2021-11-25T15:13:44+11:00",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a>" : "Alphora",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://alphora.com"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.description">description</a>" : "This library contains tests to validate the functionality of the FHIR R4 MME calculator",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "840"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.copyright">copyright</a>" : "Copyright 2019+ Centers for Disease Control and Prevention (CDC)",
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.topic">topic</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Opioid Prescribing"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Morphine Milligram Equivalent (MME)"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Floyd Eisenberg, MD, MPH"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Kensaku Kawamoto, MD, PhD, MHS"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Robert McClure, MD"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Bryn Rhodes"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a>" : "depends-on",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>" : "Library MMECalculator",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>" : "http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculator|3.0.0"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a>" : "depends-on",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>" : "Library OMTKLogic",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>" : "http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic|3.0.0"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a>" : "depends-on",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>" : "Library OMTKData",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>" : "http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKData|3.0.0"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a>" : "depends-on",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>" : "Library ConversionFactors",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>" : "http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors|3.0.0"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a>" : "depends-on",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>" : "Code system Usage Context Type",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>" : "http://terminology.hl7.org/CodeSystem/usage-context-type"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a>" : "depends-on",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>" : "Code system CDC MME Usage Context Codes",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>" : "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.parameter">parameter</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a>" : "ErrorLevel",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">use</a>" : "in",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.min">min</a>" : 0,
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.max">max</a>" : "1",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">type</a>" : "string"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a>" : "ConversionFactorSupplementName",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">use</a>" : "in",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.min">min</a>" : 0,
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.max">max</a>" : "1",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">type</a>" : "string"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a>" : "Patient",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">use</a>" : "out",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.min">min</a>" : 0,
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.max">max</a>" : "1",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">type</a>" : "Patient"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a>" : "TotalMME",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">use</a>" : "out",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.min">min</a>" : 0,
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.max">max</a>" : "1",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">type</a>" : "Quantity"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a>" : "Patient",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a>" : [
+        "http://hl7.org/fhir/StructureDefinition/Patient"
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a>" : "MedicationRequest",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a>" : [
+        "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/library.html#Library.content">content</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "text/cql",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>" : "bGlicmFyeSBNTUVDYWxjdWxhdG9yVGVzdHMgdmVyc2lvbiAnMy4wLjAnDQoNCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnDQoNCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnNC4wLjEnDQppbmNsdWRlIE1NRUNhbGN1bGF0b3IgdmVyc2lvbiAnMy4wLjAnDQppbmNsdWRlIE9NVEtMb2dpYyB2ZXJzaW9uICczLjAuMCcNCmluY2x1ZGUgT01US0RhdGEgdmVyc2lvbiAnMy4wLjAnDQoNCmNvbnRleHQgUGF0aWVudA0KDQovL2RlZmluZSBNZWRpY2F0aW9uUmVxdWVzdENvZGU6IFtNZWRpY2F0aW9uUmVxdWVzdF0gTSByZXR1cm4gTS5tZWRpY2F0aW9uDQovL2RlZmluZSBNZWRpY2F0aW9uUmVxdWVzdFJ4Tm9ybUNvZGU6IFtNZWRpY2F0aW9uUmVxdWVzdF0gTSByZXR1cm4gT01US0xvZ2ljLkdldE1lZGljYXRpb25Db2RlKE0ubWVkaWNhdGlvbikNCi8qDQpkZWZpbmUgTWVkaWNhdGlvblJlcXVlc3RSeE5vcm1Db2RlOg0KICAoKFtNZWRpY2F0aW9uUmVxdWVzdF0gTSByZXR1cm4gTS5tZWRpY2F0aW9uIEMgcmV0dXJuIEZISVJIZWxwZXJzLlRvQ29uY2VwdChDKSkuY29kZXMpIFgNCiAgICB3aGVyZSBYLnN5c3RlbSA9ICdodHRwOi8vd3d3Lm5sbS5uaWguZ292L3Jlc2VhcmNoL3VtbHMvcnhub3JtJw0KICAgICAgcmV0dXJuIHsNCiAgICAgICAgZHJ1Z0NvZGU6IFguY29kZSwNCiAgICAgICAgY29kZToNCiAgICAgICAgICBzaW5nbGV0b24gZnJvbSAoDQogICAgICAgICAgICBPTVRLRGF0YS5EcnVnSW5ncmVkaWVudHMgREkNCiAgICAgICAgICAgICAgd2hlcmUgREkuZHJ1Z0NvZGUgPSBUb0ludGVnZXIoWC5jb2RlKQ0KICAgICAgICAgICAgICByZXR1cm4gQ29kZSB7DQogICAgICAgICAgICAgICAgY29kZTogVG9TdHJpbmcoREkuZHJ1Z0NvZGUpLA0KICAgICAgICAgICAgICAgIHN5c3RlbTogJ2h0dHA6Ly93d3cubmxtLm5paC5nb3YvcmVzZWFyY2gvdW1scy9yeG5vcm0nLA0KICAgICAgICAgICAgICAgIGRpc3BsYXk6IERJLmRydWdOYW1lDQogICAgICAgICAgICAgIH0NCiAgICAgICAgICApDQogICAgICB9DQoqLw0KLy9kZWZpbmUgTWVkaWNhdGlvblJlcXVlc3RSeE5vcm1Db2RpbmdzOg0KLy8gIFtNZWRpY2F0aW9uUmVxdWVzdF0gTQ0KLy8gICAgcmV0dXJuIChNLm1lZGljYXRpb24uY29kaW5nIEMgd2hlcmUgQy5zeXN0ZW0gPSAnaHR0cDovL3d3dy5ubG0ubmloLmdvdi9yZXNlYXJjaC91bWxzL3J4bm9ybScgcmV0dXJuIEMuY29kZSkNCi8vZGVmaW5lIE1lZGljYXRpb25SZXF1ZXN0czogW01lZGljYXRpb25SZXF1ZXN0XQ0KLy9kZWZpbmUgUHJlc2NyaXB0aW9uczogTU1FQ2FsY3VsYXRvci5QcmVzY3JpcHRpb25zKFtNZWRpY2F0aW9uUmVxdWVzdF0pDQpkZWZpbmUgVG90YWxNTUU6IE1NRUNhbGN1bGF0b3IuVG90YWxNTUUoW01lZGljYXRpb25SZXF1ZXN0XSkNCg=="
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "application/elm+xml",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>" : "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxsaWJyYXJ5IHhtbG5zPSJ1cm46aGw3LW9yZzplbG06cjEiIHhtbG5zOnQ9InVybjpobDctb3JnOmVsbS10eXBlczpyMSIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6Zmhpcj0iaHR0cDovL2hsNy5vcmcvZmhpciIgeG1sbnM6cWRtNDM9InVybjpoZWFsdGhpdC1nb3Y6cWRtOnY0XzMiIHhtbG5zOnFkbTUzPSJ1cm46aGVhbHRoaXQtZ292OnFkbTp2NV8zIiB4bWxuczphPSJ1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjEiPg0KICAgPGFubm90YXRpb24gdHJhbnNsYXRvclZlcnNpb249IjEuMyIgdHJhbnNsYXRvck9wdGlvbnM9IkVuYWJsZUFubm90YXRpb25zLEVuYWJsZUxvY2F0b3JzLERpc2FibGVMaXN0RGVtb3Rpb24sRGlzYWJsZUxpc3RQcm9tb3Rpb24iIHhzaTp0eXBlPSJhOkNxbFRvRWxtSW5mbyIvPg0KICAgPGFubm90YXRpb24geHNpOnR5cGU9ImE6QW5ub3RhdGlvbiI+DQogICAgICA8YTpzIHI9IjkiPg0KICAgICAgICAgPGE6cz5saWJyYXJ5IE1NRUNhbGN1bGF0b3JUZXN0cyB2ZXJzaW9uICczLjAuMCc8L2E6cz4NCiAgICAgIDwvYTpzPg0KICAgPC9hbm5vdGF0aW9uPg0KICAgPGlkZW50aWZpZXIgaWQ9Ik1NRUNhbGN1bGF0b3JUZXN0cyIgc3lzdGVtPSJodHRwOi8vZmhpci5vcmcvZ3VpZGVzL2NkYy9vcGlvaWQtbW1lLXI0IiB2ZXJzaW9uPSIzLjAuMCIvPg0KICAgPHNjaGVtYUlkZW50aWZpZXIgaWQ9InVybjpobDctb3JnOmVsbSIgdmVyc2lvbj0icjEiLz4NCiAgIDx1c2luZ3M+DQogICAgICA8ZGVmIGxvY2FsSWRlbnRpZmllcj0iU3lzdGVtIiB1cmk9InVybjpobDctb3JnOmVsbS10eXBlczpyMSIvPg0KICAgICAgPGRlZiBsb2NhbElkPSIxIiBsb2NhdG9yPSIzOjEtMzoyNiIgbG9jYWxJZGVudGlmaWVyPSJGSElSIiB1cmk9Imh0dHA6Ly9obDcub3JnL2ZoaXIiIHZlcnNpb249IjQuMC4xIj4NCiAgICAgICAgIDxhbm5vdGF0aW9uIHhzaTp0eXBlPSJhOkFubm90YXRpb24iPg0KICAgICAgICAgICAgPGE6cyByPSIxIj4NCiAgICAgICAgICAgICAgIDxhOnM+dXNpbmcgPC9hOnM+DQogICAgICAgICAgICAgICA8YTpzPg0KICAgICAgICAgICAgICAgICAgPGE6cz5GSElSPC9hOnM+DQogICAgICAgICAgICAgICA8L2E6cz4NCiAgICAgICAgICAgICAgIDxhOnM+IHZlcnNpb24gJzQuMC4xJzwvYTpzPg0KICAgICAgICAgICAgPC9hOnM+DQogICAgICAgICA8L2Fubm90YXRpb24+DQogICAgICA8L2RlZj4NCiAgIDwvdXNpbmdzPg0KICAgPGluY2x1ZGVzPg0KICAgICAgPGRlZiBsb2NhbElkPSIyIiBsb2NhdG9yPSI1OjEtNTozNSIgbG9jYWxJZGVudGlmaWVyPSJGSElSSGVscGVycyIgcGF0aD0iaHR0cDovL2ZoaXIub3JnL2d1aWRlcy9jZGMvb3Bpb2lkLW1tZS1yNC9GSElSSGVscGVycyIgdmVyc2lvbj0iNC4wLjEiPg0KICAgICAgICAgPGFubm90YXRpb24geHNpOnR5cGU9ImE6QW5ub3RhdGlvbiI+DQogICAgICAgICAgICA8YTpzIHI9IjIiPg0KICAgICAgICAgICAgICAgPGE6cz5pbmNsdWRlIDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cz4NCiAgICAgICAgICAgICAgICAgIDxhOnM+RkhJUkhlbHBlcnM8L2E6cz4NCiAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cz4gdmVyc2lvbiAnNC4wLjEnPC9hOnM+DQogICAgICAgICAgICA8L2E6cz4NCiAgICAgICAgIDwvYW5ub3RhdGlvbj4NCiAgICAgIDwvZGVmPg0KICAgICAgPGRlZiBsb2NhbElkPSIzIiBsb2NhdG9yPSI2OjEtNjozNyIgbG9jYWxJZGVudGlmaWVyPSJNTUVDYWxjdWxhdG9yIiBwYXRoPSJodHRwOi8vZmhpci5vcmcvZ3VpZGVzL2NkYy9vcGlvaWQtbW1lLXI0L01NRUNhbGN1bGF0b3IiIHZlcnNpb249IjMuMC4wIj4NCiAgICAgICAgIDxhbm5vdGF0aW9uIHhzaTp0eXBlPSJhOkFubm90YXRpb24iPg0KICAgICAgICAgICAgPGE6cyByPSIzIj4NCiAgICAgICAgICAgICAgIDxhOnM+aW5jbHVkZSA8L2E6cz4NCiAgICAgICAgICAgICAgIDxhOnM+DQogICAgICAgICAgICAgICAgICA8YTpzPk1NRUNhbGN1bGF0b3I8L2E6cz4NCiAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cz4gdmVyc2lvbiAnMy4wLjAnPC9hOnM+DQogICAgICAgICAgICA8L2E6cz4NCiAgICAgICAgIDwvYW5ub3RhdGlvbj4NCiAgICAgIDwvZGVmPg0KICAgICAgPGRlZiBsb2NhbElkPSI0IiBsb2NhdG9yPSI3OjEtNzozMyIgbG9jYWxJZGVudGlmaWVyPSJPTVRLTG9naWMiIHBhdGg9Imh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY2RjL29waW9pZC1tbWUtcjQvT01US0xvZ2ljIiB2ZXJzaW9uPSIzLjAuMCI+DQogICAgICAgICA8YW5ub3RhdGlvbiB4c2k6dHlwZT0iYTpBbm5vdGF0aW9uIj4NCiAgICAgICAgICAgIDxhOnMgcj0iNCI+DQogICAgICAgICAgICAgICA8YTpzPmluY2x1ZGUgPC9hOnM+DQogICAgICAgICAgICAgICA8YTpzPg0KICAgICAgICAgICAgICAgICAgPGE6cz5PTVRLTG9naWM8L2E6cz4NCiAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cz4gdmVyc2lvbiAnMy4wLjAnPC9hOnM+DQogICAgICAgICAgICA8L2E6cz4NCiAgICAgICAgIDwvYW5ub3RhdGlvbj4NCiAgICAgIDwvZGVmPg0KICAgICAgPGRlZiBsb2NhbElkPSI1IiBsb2NhdG9yPSI4OjEtODozMiIgbG9jYWxJZGVudGlmaWVyPSJPTVRLRGF0YSIgcGF0aD0iaHR0cDovL2ZoaXIub3JnL2d1aWRlcy9jZGMvb3Bpb2lkLW1tZS1yNC9PTVRLRGF0YSIgdmVyc2lvbj0iMy4wLjAiPg0KICAgICAgICAgPGFubm90YXRpb24geHNpOnR5cGU9ImE6QW5ub3RhdGlvbiI+DQogICAgICAgICAgICA8YTpzIHI9IjUiPg0KICAgICAgICAgICAgICAgPGE6cz5pbmNsdWRlIDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cz4NCiAgICAgICAgICAgICAgICAgIDxhOnM+T01US0RhdGE8L2E6cz4NCiAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cz4gdmVyc2lvbiAnMy4wLjAnPC9hOnM+DQogICAgICAgICAgICA8L2E6cz4NCiAgICAgICAgIDwvYW5ub3RhdGlvbj4NCiAgICAgIDwvZGVmPg0KICAgPC9pbmNsdWRlcz4NCiAgIDxjb250ZXh0cz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iMTA6MS0xMDoxNSIgbmFtZT0iUGF0aWVudCIvPg0KICAgPC9jb250ZXh0cz4NCiAgIDxzdGF0ZW1lbnRzPg0KICAgICAgPGRlZiBsb2NhdG9yPSIxMDoxLTEwOjE1IiBuYW1lPSJQYXRpZW50IiBjb250ZXh0PSJQYXRpZW50Ij4NCiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJTaW5nbGV0b25Gcm9tIj4NCiAgICAgICAgICAgIDxvcGVyYW5kIGxvY2F0b3I9IjEwOjEtMTA6MTUiIGRhdGFUeXBlPSJmaGlyOlBhdGllbnQiIHRlbXBsYXRlSWQ9Imh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9QYXRpZW50IiB4c2k6dHlwZT0iUmV0cmlldmUiLz4NCiAgICAgICAgIDwvZXhwcmVzc2lvbj4NCiAgICAgIDwvZGVmPg0KICAgICAgPGRlZiBsb2NhbElkPSI5IiBsb2NhdG9yPSIzNzoxLTM3OjYwIiBuYW1lPSJUb3RhbE1NRSIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+DQogICAgICAgICA8YW5ub3RhdGlvbiB4c2k6dHlwZT0iYTpBbm5vdGF0aW9uIj4NCiAgICAgICAgICAgIDxhOnMgcj0iOSI+DQogICAgICAgICAgICAgICA8YTpzPi8vZGVmaW5lIE1lZGljYXRpb25SZXF1ZXN0Q29kZTogW01lZGljYXRpb25SZXF1ZXN0XSBNIHJldHVybiBNLm1lZGljYXRpb24KLy9kZWZpbmUgTWVkaWNhdGlvblJlcXVlc3RSeE5vcm1Db2RlOiBbTWVkaWNhdGlvblJlcXVlc3RdIE0gcmV0dXJuIE9NVEtMb2dpYy5HZXRNZWRpY2F0aW9uQ29kZShNLm1lZGljYXRpb24pCi8qCmRlZmluZSBNZWRpY2F0aW9uUmVxdWVzdFJ4Tm9ybUNvZGU6CiAgKChbTWVkaWNhdGlvblJlcXVlc3RdIE0gcmV0dXJuIE0ubWVkaWNhdGlvbiBDIHJldHVybiBGSElSSGVscGVycy5Ub0NvbmNlcHQoQykpLmNvZGVzKSBYCiAgICB3aGVyZSBYLnN5c3RlbSA9ICdodHRwOi8vd3d3Lm5sbS5uaWguZ292L3Jlc2VhcmNoL3VtbHMvcnhub3JtJwogICAgICByZXR1cm4gewogICAgICAgIGRydWdDb2RlOiBYLmNvZGUsCiAgICAgICAgY29kZToKICAgICAgICAgIHNpbmdsZXRvbiBmcm9tICgKICAgICAgICAgICAgT01US0RhdGEuRHJ1Z0luZ3JlZGllbnRzIERJCiAgICAgICAgICAgICAgd2hlcmUgREkuZHJ1Z0NvZGUgPSBUb0ludGVnZXIoWC5jb2RlKQogICAgICAgICAgICAgIHJldHVybiBDb2RlIHsKICAgICAgICAgICAgICAgIGNvZGU6IFRvU3RyaW5nKERJLmRydWdDb2RlKSwKICAgICAgICAgICAgICAgIHN5c3RlbTogJ2h0dHA6Ly93d3cubmxtLm5paC5nb3YvcmVzZWFyY2gvdW1scy9yeG5vcm0nLAogICAgICAgICAgICAgICAgZGlzcGxheTogREkuZHJ1Z05hbWUKICAgICAgICAgICAgICB9CiAgICAgICAgICApCiAgICAgIH0KKi8KLy9kZWZpbmUgTWVkaWNhdGlvblJlcXVlc3RSeE5vcm1Db2RpbmdzOgovLyAgW01lZGljYXRpb25SZXF1ZXN0XSBNCi8vICAgIHJldHVybiAoTS5tZWRpY2F0aW9uLmNvZGluZyBDIHdoZXJlIEMuc3lzdGVtID0gJ2h0dHA6Ly93d3cubmxtLm5paC5nb3YvcmVzZWFyY2gvdW1scy9yeG5vcm0nIHJldHVybiBDLmNvZGUpCi8vZGVmaW5lIE1lZGljYXRpb25SZXF1ZXN0czogW01lZGljYXRpb25SZXF1ZXN0XQovL2RlZmluZSBQcmVzY3JpcHRpb25zOiBNTUVDYWxjdWxhdG9yLlByZXNjcmlwdGlvbnMoW01lZGljYXRpb25SZXF1ZXN0XSlkZWZpbmUgVG90YWxNTUU6IDwvYTpzPg0KICAgICAgICAgICAgICAgPGE6cyByPSI4Ij4NCiAgICAgICAgICAgICAgICAgIDxhOnMgcj0iNiI+DQogICAgICAgICAgICAgICAgICAgICA8YTpzPk1NRUNhbGN1bGF0b3I8L2E6cz4NCiAgICAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgICAgICAgPGE6cz4uPC9hOnM+DQogICAgICAgICAgICAgICAgICA8YTpzIHI9IjgiPg0KICAgICAgICAgICAgICAgICAgICAgPGE6cz5Ub3RhbE1NRSg8L2E6cz4NCiAgICAgICAgICAgICAgICAgICAgIDxhOnMgcj0iNyI+DQogICAgICAgICAgICAgICAgICAgICAgICA8YTpzPltNZWRpY2F0aW9uUmVxdWVzdF08L2E6cz4NCiAgICAgICAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgICAgICAgICAgPGE6cz4pPC9hOnM+DQogICAgICAgICAgICAgICAgICA8L2E6cz4NCiAgICAgICAgICAgICAgIDwvYTpzPg0KICAgICAgICAgICAgPC9hOnM+DQogICAgICAgICA8L2Fubm90YXRpb24+DQogICAgICAgICA8ZXhwcmVzc2lvbiBsb2NhbElkPSI4IiBsb2NhdG9yPSIzNzoxOC0zNzo2MCIgbmFtZT0iVG90YWxNTUUiIGxpYnJhcnlOYW1lPSJNTUVDYWxjdWxhdG9yIiB4c2k6dHlwZT0iRnVuY3Rpb25SZWYiPg0KICAgICAgICAgICAgPG9wZXJhbmQgbG9jYWxJZD0iNyIgbG9jYXRvcj0iMzc6NDEtMzc6NTkiIGRhdGFUeXBlPSJmaGlyOk1lZGljYXRpb25SZXF1ZXN0IiB0ZW1wbGF0ZUlkPSJodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vTWVkaWNhdGlvblJlcXVlc3QiIHhzaTp0eXBlPSJSZXRyaWV2ZSIvPg0KICAgICAgICAgPC9leHByZXNzaW9uPg0KICAgICAgPC9kZWY+DQogICA8L3N0YXRlbWVudHM+DQo8L2xpYnJhcnk+DQo="
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "application/elm+json",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>" : "ew0KICAibGlicmFyeSIgOiB7DQogICAgInR5cGUiIDogIkxpYnJhcnkiLA0KICAgICJpZGVudGlmaWVyIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJWZXJzaW9uZWRJZGVudGlmaWVyIiwNCiAgICAgICJpZCIgOiAiTU1FQ2FsY3VsYXRvclRlc3RzIiwNCiAgICAgICJzeXN0ZW0iIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY2RjL29waW9pZC1tbWUtcjQiLA0KICAgICAgInZlcnNpb24iIDogIjMuMC4wIg0KICAgIH0sDQogICAgInNjaGVtYUlkZW50aWZpZXIiIDogew0KICAgICAgInR5cGUiIDogIlZlcnNpb25lZElkZW50aWZpZXIiLA0KICAgICAgImlkIiA6ICJ1cm46aGw3LW9yZzplbG0iLA0KICAgICAgInZlcnNpb24iIDogInIxIg0KICAgIH0sDQogICAgInVzaW5ncyIgOiB7DQogICAgICAidHlwZSIgOiAiTGlicmFyeSRVc2luZ3MiLA0KICAgICAgImRlZiIgOiBbIHsNCiAgICAgICAgInR5cGUiIDogIlVzaW5nRGVmIiwNCiAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiU3lzdGVtIiwNCiAgICAgICAgInVyaSIgOiAidXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxIg0KICAgICAgfSwgew0KICAgICAgICAidHlwZSIgOiAiVXNpbmdEZWYiLA0KICAgICAgICAiYW5ub3RhdGlvbiIgOiBbIHsNCiAgICAgICAgICAicyIgOiB7DQogICAgICAgICAgICAicyIgOiBbIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgIiIsICJ1c2luZyAiIF0NCiAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgIH0sIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgew0KICAgICAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICAgICAicyIgOiBbICJGSElSIiBdDQogICAgICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgICAgICB9IF0NCiAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgIH0sIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgIiB2ZXJzaW9uICIsICInNC4wLjEnIiBdDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9IF0sDQogICAgICAgICAgICAiciIgOiAiMSINCiAgICAgICAgICB9DQogICAgICAgIH0gXSwNCiAgICAgICAgImxvY2FsSWQiIDogIjEiLA0KICAgICAgICAibG9jYXRvciIgOiAiMzoxLTM6MjYiLA0KICAgICAgICAibG9jYWxJZGVudGlmaWVyIiA6ICJGSElSIiwNCiAgICAgICAgInVyaSIgOiAiaHR0cDovL2hsNy5vcmcvZmhpciIsDQogICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgImluY2x1ZGVzIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJMaWJyYXJ5JEluY2x1ZGVzIiwNCiAgICAgICJkZWYiIDogWyB7DQogICAgICAgICJ0eXBlIiA6ICJJbmNsdWRlRGVmIiwNCiAgICAgICAgImFubm90YXRpb24iIDogWyB7DQogICAgICAgICAgInMiIDogew0KICAgICAgICAgICAgInMiIDogWyB7DQogICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAicyIgOiBbICIiLCAiaW5jbHVkZSAiIF0NCiAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgIH0sIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgew0KICAgICAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICAgICAicyIgOiBbICJGSElSSGVscGVycyIgXQ0KICAgICAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICAgICAgfSBdDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9LCB7DQogICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAicyIgOiBbICIgdmVyc2lvbiAiLCAiJzQuMC4xJyIgXQ0KICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgfSBdLA0KICAgICAgICAgICAgInIiIDogIjIiDQogICAgICAgICAgfQ0KICAgICAgICB9IF0sDQogICAgICAgICJsb2NhbElkIiA6ICIyIiwNCiAgICAgICAgImxvY2F0b3IiIDogIjU6MS01OjM1IiwNCiAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiRkhJUkhlbHBlcnMiLA0KICAgICAgICAicGF0aCIgOiAiaHR0cDovL2ZoaXIub3JnL2d1aWRlcy9jZGMvb3Bpb2lkLW1tZS1yNC9GSElSSGVscGVycyIsDQogICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSINCiAgICAgIH0sIHsNCiAgICAgICAgInR5cGUiIDogIkluY2x1ZGVEZWYiLA0KICAgICAgICAiYW5ub3RhdGlvbiIgOiBbIHsNCiAgICAgICAgICAicyIgOiB7DQogICAgICAgICAgICAicyIgOiBbIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgIiIsICJpbmNsdWRlICIgXQ0KICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgfSwgew0KICAgICAgICAgICAgICAibmFtZSIgOiAie3VybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMX1zIiwNCiAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICJ2YWx1ZSIgOiB7DQogICAgICAgICAgICAgICAgInMiIDogWyB7DQogICAgICAgICAgICAgICAgICAibmFtZSIgOiAie3VybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMX1zIiwNCiAgICAgICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiB7DQogICAgICAgICAgICAgICAgICAgICJzIiA6IFsgIk1NRUNhbGN1bGF0b3IiIF0NCiAgICAgICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgICAgIH0gXQ0KICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgfSwgew0KICAgICAgICAgICAgICAibmFtZSIgOiAie3VybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMX1zIiwNCiAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICJ2YWx1ZSIgOiB7DQogICAgICAgICAgICAgICAgInMiIDogWyAiIHZlcnNpb24gIiwgIiczLjAuMCciIF0NCiAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgIH0gXSwNCiAgICAgICAgICAgICJyIiA6ICIzIg0KICAgICAgICAgIH0NCiAgICAgICAgfSBdLA0KICAgICAgICAibG9jYWxJZCIgOiAiMyIsDQogICAgICAgICJsb2NhdG9yIiA6ICI2OjEtNjozNyIsDQogICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIk1NRUNhbGN1bGF0b3IiLA0KICAgICAgICAicGF0aCIgOiAiaHR0cDovL2ZoaXIub3JnL2d1aWRlcy9jZGMvb3Bpb2lkLW1tZS1yNC9NTUVDYWxjdWxhdG9yIiwNCiAgICAgICAgInZlcnNpb24iIDogIjMuMC4wIg0KICAgICAgfSwgew0KICAgICAgICAidHlwZSIgOiAiSW5jbHVkZURlZiIsDQogICAgICAgICJhbm5vdGF0aW9uIiA6IFsgew0KICAgICAgICAgICJzIiA6IHsNCiAgICAgICAgICAgICJzIiA6IFsgew0KICAgICAgICAgICAgICAibmFtZSIgOiAie3VybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMX1zIiwNCiAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICJ2YWx1ZSIgOiB7DQogICAgICAgICAgICAgICAgInMiIDogWyAiIiwgImluY2x1ZGUgIiBdDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9LCB7DQogICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAicyIgOiBbIHsNCiAgICAgICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAgICAgInMiIDogWyAiT01US0xvZ2ljIiBdDQogICAgICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgICAgICB9IF0NCiAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgIH0sIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgIiB2ZXJzaW9uICIsICInMy4wLjAnIiBdDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9IF0sDQogICAgICAgICAgICAiciIgOiAiNCINCiAgICAgICAgICB9DQogICAgICAgIH0gXSwNCiAgICAgICAgImxvY2FsSWQiIDogIjQiLA0KICAgICAgICAibG9jYXRvciIgOiAiNzoxLTc6MzMiLA0KICAgICAgICAibG9jYWxJZGVudGlmaWVyIiA6ICJPTVRLTG9naWMiLA0KICAgICAgICAicGF0aCIgOiAiaHR0cDovL2ZoaXIub3JnL2d1aWRlcy9jZGMvb3Bpb2lkLW1tZS1yNC9PTVRLTG9naWMiLA0KICAgICAgICAidmVyc2lvbiIgOiAiMy4wLjAiDQogICAgICB9LCB7DQogICAgICAgICJ0eXBlIiA6ICJJbmNsdWRlRGVmIiwNCiAgICAgICAgImFubm90YXRpb24iIDogWyB7DQogICAgICAgICAgInMiIDogew0KICAgICAgICAgICAgInMiIDogWyB7DQogICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAicyIgOiBbICIiLCAiaW5jbHVkZSAiIF0NCiAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgIH0sIHsNCiAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICJzIiA6IFsgew0KICAgICAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICAgICAicyIgOiBbICJPTVRLRGF0YSIgXQ0KICAgICAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICAgICAgfSBdDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9LCB7DQogICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAicyIgOiBbICIgdmVyc2lvbiAiLCAiJzMuMC4wJyIgXQ0KICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgfSBdLA0KICAgICAgICAgICAgInIiIDogIjUiDQogICAgICAgICAgfQ0KICAgICAgICB9IF0sDQogICAgICAgICJsb2NhbElkIiA6ICI1IiwNCiAgICAgICAgImxvY2F0b3IiIDogIjg6MS04OjMyIiwNCiAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiT01US0RhdGEiLA0KICAgICAgICAicGF0aCIgOiAiaHR0cDovL2ZoaXIub3JnL2d1aWRlcy9jZGMvb3Bpb2lkLW1tZS1yNC9PTVRLRGF0YSIsDQogICAgICAgICJ2ZXJzaW9uIiA6ICIzLjAuMCINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgImNvbnRleHRzIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJMaWJyYXJ5JENvbnRleHRzIiwNCiAgICAgICJkZWYiIDogWyB7DQogICAgICAgICJ0eXBlIiA6ICJDb250ZXh0RGVmIiwNCiAgICAgICAgImxvY2F0b3IiIDogIjEwOjEtMTA6MTUiLA0KICAgICAgICAibmFtZSIgOiAiUGF0aWVudCINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgInN0YXRlbWVudHMiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkU3RhdGVtZW50cyIsDQogICAgICAiZGVmIiA6IFsgew0KICAgICAgICAidHlwZSIgOiAiRXhwcmVzc2lvbkRlZiIsDQogICAgICAgICJleHByZXNzaW9uIiA6IHsNCiAgICAgICAgICAidHlwZSIgOiAiU2luZ2xldG9uRnJvbSIsDQogICAgICAgICAgIm9wZXJhbmQiIDogew0KICAgICAgICAgICAgInR5cGUiIDogIlJldHJpZXZlIiwNCiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxMDoxLTEwOjE1IiwNCiAgICAgICAgICAgICJkYXRhVHlwZSIgOiAie2h0dHA6Ly9obDcub3JnL2ZoaXJ9UGF0aWVudCIsDQogICAgICAgICAgICAidGVtcGxhdGVJZCIgOiAiaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1BhdGllbnQiDQogICAgICAgICAgfQ0KICAgICAgICB9LA0KICAgICAgICAibG9jYXRvciIgOiAiMTA6MS0xMDoxNSIsDQogICAgICAgICJuYW1lIiA6ICJQYXRpZW50IiwNCiAgICAgICAgImNvbnRleHQiIDogIlBhdGllbnQiDQogICAgICB9LCB7DQogICAgICAgICJ0eXBlIiA6ICJFeHByZXNzaW9uRGVmIiwNCiAgICAgICAgImV4cHJlc3Npb24iIDogew0KICAgICAgICAgICJ0eXBlIiA6ICJGdW5jdGlvblJlZiIsDQogICAgICAgICAgIm9wZXJhbmQiIDogWyB7DQogICAgICAgICAgICAidHlwZSIgOiAiUmV0cmlldmUiLA0KICAgICAgICAgICAgImxvY2FsSWQiIDogIjciLA0KICAgICAgICAgICAgImxvY2F0b3IiIDogIjM3OjQxLTM3OjU5IiwNCiAgICAgICAgICAgICJkYXRhVHlwZSIgOiAie2h0dHA6Ly9obDcub3JnL2ZoaXJ9TWVkaWNhdGlvblJlcXVlc3QiLA0KICAgICAgICAgICAgInRlbXBsYXRlSWQiIDogImh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9NZWRpY2F0aW9uUmVxdWVzdCINCiAgICAgICAgICB9IF0sDQogICAgICAgICAgImxvY2FsSWQiIDogIjgiLA0KICAgICAgICAgICJsb2NhdG9yIiA6ICIzNzoxOC0zNzo2MCIsDQogICAgICAgICAgIm5hbWUiIDogIlRvdGFsTU1FIiwNCiAgICAgICAgICAibGlicmFyeU5hbWUiIDogIk1NRUNhbGN1bGF0b3IiDQogICAgICAgIH0sDQogICAgICAgICJhbm5vdGF0aW9uIiA6IFsgew0KICAgICAgICAgICJzIiA6IHsNCiAgICAgICAgICAgICJzIiA6IFsgew0KICAgICAgICAgICAgICAibmFtZSIgOiAie3VybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMX1zIiwNCiAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICJ2YWx1ZSIgOiB7DQogICAgICAgICAgICAgICAgInMiIDogWyAiLy9kZWZpbmUgTWVkaWNhdGlvblJlcXVlc3RDb2RlOiBbTWVkaWNhdGlvblJlcXVlc3RdIE0gcmV0dXJuIE0ubWVkaWNhdGlvblxuLy9kZWZpbmUgTWVkaWNhdGlvblJlcXVlc3RSeE5vcm1Db2RlOiBbTWVkaWNhdGlvblJlcXVlc3RdIE0gcmV0dXJuIE9NVEtMb2dpYy5HZXRNZWRpY2F0aW9uQ29kZShNLm1lZGljYXRpb24pXG4vKlxuZGVmaW5lIE1lZGljYXRpb25SZXF1ZXN0UnhOb3JtQ29kZTpcbiAgKChbTWVkaWNhdGlvblJlcXVlc3RdIE0gcmV0dXJuIE0ubWVkaWNhdGlvbiBDIHJldHVybiBGSElSSGVscGVycy5Ub0NvbmNlcHQoQykpLmNvZGVzKSBYXG4gICAgd2hlcmUgWC5zeXN0ZW0gPSAnaHR0cDovL3d3dy5ubG0ubmloLmdvdi9yZXNlYXJjaC91bWxzL3J4bm9ybSdcbiAgICAgIHJldHVybiB7XG4gICAgICAgIGRydWdDb2RlOiBYLmNvZGUsXG4gICAgICAgIGNvZGU6XG4gICAgICAgICAgc2luZ2xldG9uIGZyb20gKFxuICAgICAgICAgICAgT01US0RhdGEuRHJ1Z0luZ3JlZGllbnRzIERJXG4gICAgICAgICAgICAgIHdoZXJlIERJLmRydWdDb2RlID0gVG9JbnRlZ2VyKFguY29kZSlcbiAgICAgICAgICAgICAgcmV0dXJuIENvZGUge1xuICAgICAgICAgICAgICAgIGNvZGU6IFRvU3RyaW5nKERJLmRydWdDb2RlKSxcbiAgICAgICAgICAgICAgICBzeXN0ZW06ICdodHRwOi8vd3d3Lm5sbS5uaWguZ292L3Jlc2VhcmNoL3VtbHMvcnhub3JtJyxcbiAgICAgICAgICAgICAgICBkaXNwbGF5OiBESS5kcnVnTmFtZVxuICAgICAgICAgICAgICB9XG4gICAgICAgICAgKVxuICAgICAgfVxuKi9cbi8vZGVmaW5lIE1lZGljYXRpb25SZXF1ZXN0UnhOb3JtQ29kaW5nczpcbi8vICBbTWVkaWNhdGlvblJlcXVlc3RdIE1cbi8vICAgIHJldHVybiAoTS5tZWRpY2F0aW9uLmNvZGluZyBDIHdoZXJlIEMuc3lzdGVtID0gJ2h0dHA6Ly93d3cubmxtLm5paC5nb3YvcmVzZWFyY2gvdW1scy9yeG5vcm0nIHJldHVybiBDLmNvZGUpXG4vL2RlZmluZSBNZWRpY2F0aW9uUmVxdWVzdHM6IFtNZWRpY2F0aW9uUmVxdWVzdF1cbi8vZGVmaW5lIFByZXNjcmlwdGlvbnM6IE1NRUNhbGN1bGF0b3IuUHJlc2NyaXB0aW9ucyhbTWVkaWNhdGlvblJlcXVlc3RdKSIsICJkZWZpbmUgIiwgIlRvdGFsTU1FIiwgIjogIiBdDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9LCB7DQogICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAicyIgOiBbIHsNCiAgICAgICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAgICAgInMiIDogWyB7DQogICAgICAgICAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICAgICAgICAgInMiIDogWyAiTU1FQ2FsY3VsYXRvciIgXQ0KICAgICAgICAgICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgICAgICAgICAgfSBdLA0KICAgICAgICAgICAgICAgICAgICAiciIgOiAiNiINCiAgICAgICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgICAgIH0sIHsNCiAgICAgICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAgICAgInMiIDogWyAiLiIgXQ0KICAgICAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICAgICAgfSwgew0KICAgICAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICAgICAicyIgOiBbIHsNCiAgICAgICAgICAgICAgICAgICAgICAibmFtZSIgOiAie3VybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMX1zIiwNCiAgICAgICAgICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAgICAgICAgICJzY29wZSIgOiAiamF2YXgueG1sLmJpbmQuSkFYQkVsZW1lbnQkR2xvYmFsU2NvcGUiLA0KICAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiB7DQogICAgICAgICAgICAgICAgICAgICAgICAicyIgOiBbICJUb3RhbE1NRSIsICIoIiBdDQogICAgICAgICAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgICAgICAgICAiZ2xvYmFsU2NvcGUiIDogdHJ1ZQ0KICAgICAgICAgICAgICAgICAgICB9LCB7DQogICAgICAgICAgICAgICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgICAgICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgICAgICAgICAgICAgInMiIDogWyB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAiZGVjbGFyZWRUeXBlIiA6ICJvcmcuaGw3LmNxbF9hbm5vdGF0aW9ucy5yMS5OYXJyYXRpdmUiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAicyIgOiBbICJbIiwgIk1lZGljYXRpb25SZXF1ZXN0IiwgIl0iIF0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgICAgICAgICAgICAgIH0gXSwNCiAgICAgICAgICAgICAgICAgICAgICAgICJyIiA6ICI3Ig0KICAgICAgICAgICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgICAgICAgICAgfSwgew0KICAgICAgICAgICAgICAgICAgICAgICJuYW1lIiA6ICJ7dXJuOmhsNy1vcmc6Y3FsLWFubm90YXRpb25zOnIxfXMiLA0KICAgICAgICAgICAgICAgICAgICAgICJkZWNsYXJlZFR5cGUiIDogIm9yZy5obDcuY3FsX2Fubm90YXRpb25zLnIxLk5hcnJhdGl2ZSIsDQogICAgICAgICAgICAgICAgICAgICAgInNjb3BlIiA6ICJqYXZheC54bWwuYmluZC5KQVhCRWxlbWVudCRHbG9iYWxTY29wZSIsDQogICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IHsNCiAgICAgICAgICAgICAgICAgICAgICAgICJzIiA6IFsgIikiIF0NCiAgICAgICAgICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICAgICAgICAgIH0gXSwNCiAgICAgICAgICAgICAgICAgICAgInIiIDogIjgiDQogICAgICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgICAgICAgICB9IF0sDQogICAgICAgICAgICAgICAgInIiIDogIjgiDQogICAgICAgICAgICAgIH0sDQogICAgICAgICAgICAgICJnbG9iYWxTY29wZSIgOiB0cnVlDQogICAgICAgICAgICB9IF0sDQogICAgICAgICAgICAiciIgOiAiOSINCiAgICAgICAgICB9DQogICAgICAgIH0gXSwNCiAgICAgICAgImxvY2FsSWQiIDogIjkiLA0KICAgICAgICAibG9jYXRvciIgOiAiMzc6MS0zNzo2MCIsDQogICAgICAgICJuYW1lIiA6ICJUb3RhbE1NRSIsDQogICAgICAgICJjb250ZXh0IiA6ICJQYXRpZW50IiwNCiAgICAgICAgImFjY2Vzc0xldmVsIiA6ICJQdWJsaWMiDQogICAgICB9IF0NCiAgICB9LA0KICAgICJhbm5vdGF0aW9uIiA6IFsgew0KICAgICAgInRyYW5zbGF0b3JWZXJzaW9uIiA6ICIxLjMiLA0KICAgICAgInRyYW5zbGF0b3JPcHRpb25zIiA6ICJFbmFibGVBbm5vdGF0aW9ucyxFbmFibGVMb2NhdG9ycyxEaXNhYmxlTGlzdERlbW90aW9uLERpc2FibGVMaXN0UHJvbW90aW9uIg0KICAgIH0sIHsNCiAgICAgICJzIiA6IHsNCiAgICAgICAgInMiIDogWyB7DQogICAgICAgICAgIm5hbWUiIDogInt1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjF9cyIsDQogICAgICAgICAgImRlY2xhcmVkVHlwZSIgOiAib3JnLmhsNy5jcWxfYW5ub3RhdGlvbnMucjEuTmFycmF0aXZlIiwNCiAgICAgICAgICAic2NvcGUiIDogImphdmF4LnhtbC5iaW5kLkpBWEJFbGVtZW50JEdsb2JhbFNjb3BlIiwNCiAgICAgICAgICAidmFsdWUiIDogew0KICAgICAgICAgICAgInMiIDogWyAiIiwgImxpYnJhcnkgTU1FQ2FsY3VsYXRvclRlc3RzIHZlcnNpb24gJzMuMC4wJyIgXQ0KICAgICAgICAgIH0sDQogICAgICAgICAgImdsb2JhbFNjb3BlIiA6IHRydWUNCiAgICAgICAgfSBdLA0KICAgICAgICAiciIgOiAiOSINCiAgICAgIH0NCiAgICB9IF0NCiAgfQ0KfQ=="
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:13+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

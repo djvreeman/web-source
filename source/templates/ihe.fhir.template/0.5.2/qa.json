@@ -1,0 +1,8 @@
+{
+  "url": "http://fhir.org/templates/ihe.fhir.template",
+  "package-id": "ihe.fhir.template",
+  "ig-ver": "0.5.2",
+  "date": "Fri, 01 Apr, 2022 10:14:17 +1100",
+  "version": "5.0.0-snapshot1",
+  "tool": "5.0.0-snapshot1 (3)"
+}

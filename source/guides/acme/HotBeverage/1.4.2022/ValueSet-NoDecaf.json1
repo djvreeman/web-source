@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "NoDecaf",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/64100000\">64100000</a></td><td>No</td></tr></table></li></ul></div>"
+  },
+  "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/NoDecaf",
+  "version": "1.4.2022",
+  "name": "NoDecaf",
+  "title": "Decaf is for the weak",
+  "status": "active",
+  "date": "2022-03-29T15:50:36+11:00",
+  "publisher": "Dave Pyke & John Moehrke",
+  "contact": [
+    {
+      "name": "Dave Pyke & John Moehrke",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/DavidPyke/HotBeverage"
+        },
+        {
+          "system": "email",
+          "value": "david@pyke.ca"
+        }
+      ]
+    },
+    {
+      "name": "David Pyke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "david@pyke.ca",
+          "use": "work"
+        }
+      ]
+    },
+    {
+      "name": "John Moehrke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "JohnMoehrke@gmail.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "No, Just No",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "64100000",
+            "display": "No"
+          }
+        ]
+      }
+    ]
+  }
+}

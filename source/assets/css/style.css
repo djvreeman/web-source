@@ -79,7 +79,7 @@ p {
 a:link,
 a:visited {
   color: #c70000;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -594,7 +594,7 @@ div#branding strong {
 }
 
 #branding a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #wrapper #container .breadcrumb {

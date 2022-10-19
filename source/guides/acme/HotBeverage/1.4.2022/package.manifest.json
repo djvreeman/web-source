@@ -1,0 +1,8 @@
+{
+  "version": "1.4.2022",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "date": "20220329155016",
+  "name": "fhir.acme.hotbeverage"
+}

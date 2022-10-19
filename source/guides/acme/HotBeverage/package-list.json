@@ -1,0 +1,25 @@
+﻿{
+  "package-id": "fhir.acme.hotbeverage",
+  "title": "HotBeverage FHIR Implementation Guide",
+  "canonical": "http://fhir.org/guides/acme/HotBeverage",
+  "introduction": "Based on IETF [RFC 2324 - Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)](https://tools.ietf.org/html/rfc2324) and its update, [RFC 7168 - The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)](https://tools.ietf.org/html/rfc7168), this resource allows for the fulfillment of a device request for an artfully brewed caffeinated beverage, but coffee shares this quality with many other varied preparations based on the filtration of plant material.  Foremost, among these are the category of brews based on the straining of water through prepared leaves from a tea tree.",
+  "category": "Humor",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/DavidPyke/HotBeverage/branches/master/index.html",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "1.4.2022",
+      "desc": "Definitive release for April 1st",
+      "path": "http://fhir.org/guides/acme/HotBeverage/1.4.2022",
+      "status": "release",
+      "fhirversion": "4.0.1",
+      "sequence": "Definitive",
+      "date": "2022-03-29"
+    }
+  ]
+}

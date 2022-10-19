@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorVersion="1.3" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="287">
+         <a:s>library OMTKLogicTests version '3.0.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OMTKLogicTests" system="http://fhir.org/guides/cdc/opioid-mme-r4" version="3.0.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="2:1-2:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="3:1-3:33" localIdentifier="OMTKLogic" path="http://fhir.org/guides/cdc/opioid-mme-r4/OMTKLogic" version="3.0.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OMTKLogic</a:s>
+               </a:s>
+               <a:s> version '3.0.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <statements>
+      <def localId="8" locator="6:1-6:51" name="TestToUCUM_MG" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="8">
+               <a:s>// define function ToUCUM(unit String):define TestToUCUM_MG: </a:s>
+               <a:s r="7">
+                  <a:s r="5">
+                     <a:s r="3">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="5">
+                        <a:s>ToUCUM(</a:s>
+                        <a:s r="4">
+                           <a:s>'MG'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="6">
+                     <a:s>'mg'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="7" locator="6:23-6:51" xsi:type="Equal">
+            <operand localId="5" locator="6:23-6:44" name="ToUCUM" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="4" locator="6:40-6:43" valueType="t:String" value="MG" xsi:type="Literal"/>
+            </operand>
+            <operand localId="6" locator="6:48-6:51" valueType="t:String" value="mg" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="14" locator="7:1-7:76" name="TestToUCUM_MGPerACTUAT" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="14">
+               <a:s>define TestToUCUM_MGPerACTUAT: </a:s>
+               <a:s r="13">
+                  <a:s r="11">
+                     <a:s r="9">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="11">
+                        <a:s>ToUCUM(</a:s>
+                        <a:s r="10">
+                           <a:s>'MG/ACTUAT'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="12">
+                     <a:s>'mg/{actuat}'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="13" locator="7:32-7:76" xsi:type="Equal">
+            <operand localId="11" locator="7:32-7:60" name="ToUCUM" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="10" locator="7:49-7:59" valueType="t:String" value="MG/ACTUAT" xsi:type="Literal"/>
+            </operand>
+            <operand localId="12" locator="7:64-7:76" valueType="t:String" value="mg/{actuat}" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="20" locator="8:1-8:62" name="TestToUCUM_MGPerML" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="20">
+               <a:s>define TestToUCUM_MGPerML: </a:s>
+               <a:s r="19">
+                  <a:s r="17">
+                     <a:s r="15">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="17">
+                        <a:s>ToUCUM(</a:s>
+                        <a:s r="16">
+                           <a:s>'MG/ML'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="18">
+                     <a:s>'mg/mL'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="19" locator="8:28-8:62" xsi:type="Equal">
+            <operand localId="17" locator="8:28-8:52" name="ToUCUM" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="16" locator="8:45-8:51" valueType="t:String" value="MG/ML" xsi:type="Literal"/>
+            </operand>
+            <operand localId="18" locator="8:56-8:62" valueType="t:String" value="mg/mL" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="26" locator="9:1-9:61" name="TestToUCUM_MGPerHR" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="26">
+               <a:s>define TestToUCUM_MGPerHR: </a:s>
+               <a:s r="25">
+                  <a:s r="23">
+                     <a:s r="21">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="23">
+                        <a:s>ToUCUM(</a:s>
+                        <a:s r="22">
+                           <a:s>'MG/HR'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="24">
+                     <a:s>'mg/h'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="25" locator="9:28-9:61" xsi:type="Equal">
+            <operand localId="23" locator="9:28-9:52" name="ToUCUM" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="22" locator="9:45-9:51" valueType="t:String" value="MG/HR" xsi:type="Literal"/>
+            </operand>
+            <operand localId="24" locator="9:56-9:61" valueType="t:String" value="mg/h" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="31" locator="10:1-10:62" name="TestToUCUM_Unknown" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="31">
+               <a:s>define TestToUCUM_Unknown: </a:s>
+               <a:s r="30">
+                  <a:s r="29">
+                     <a:s r="27">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="29">
+                        <a:s>ToUCUM(</a:s>
+                        <a:s r="28">
+                           <a:s>'Unknown'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> is null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="30" locator="10:28-10:62" xsi:type="IsNull">
+            <operand localId="29" locator="10:28-10:54" name="ToUCUM" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="28" locator="10:45-10:53" valueType="t:String" value="Unknown" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="38" locator="13:1-13:54" name="TestToDaily_h" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="38">
+               <a:s>// define function ToDaily(frequency Integer, period Quantity):define TestToDaily_h: </a:s>
+               <a:s r="37">
+                  <a:s r="35">
+                     <a:s r="32">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="35">
+                        <a:s r="33">ToDaily(2, </a:s>
+                        <a:s r="34">
+                           <a:s>4 'h'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="36"> = 12</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="37" locator="13:23-13:54" xsi:type="Equal">
+            <operand localId="35" locator="13:23-13:49" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="33" locator="13:41" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               <operand localId="34" locator="13:44-13:48" value="4" unit="h" xsi:type="Quantity"/>
+            </operand>
+            <operand xsi:type="ToDecimal">
+               <operand localId="36" locator="13:53-13:54" valueType="t:Integer" value="12" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="45" locator="14:1-14:59" name="TestToDaily_min" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="45">
+               <a:s>define TestToDaily_min: </a:s>
+               <a:s r="44">
+                  <a:s r="42">
+                     <a:s r="39">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="42">
+                        <a:s r="40">ToDaily(1, </a:s>
+                        <a:s r="41">
+                           <a:s>30 'min'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="43"> = 48</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="44" locator="14:25-14:59" xsi:type="Equal">
+            <operand localId="42" locator="14:25-14:54" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="40" locator="14:43" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <operand localId="41" locator="14:46-14:53" value="30" unit="min" xsi:type="Quantity"/>
+            </operand>
+            <operand xsi:type="ToDecimal">
+               <operand localId="43" locator="14:58-14:59" valueType="t:Integer" value="48" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="52" locator="15:1-15:57" name="TestToDaily_s" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="52">
+               <a:s>define TestToDaily_s: </a:s>
+               <a:s r="51">
+                  <a:s r="49">
+                     <a:s r="46">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="49">
+                        <a:s r="47">ToDaily(1, </a:s>
+                        <a:s r="48">
+                           <a:s>30 's'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="50"> = 2880</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="51" locator="15:23-15:57" xsi:type="Equal">
+            <operand localId="49" locator="15:23-15:50" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="47" locator="15:41" valueType="t:Integer" value="1" xsi:type="Literal"/>
+               <operand localId="48" locator="15:44-15:49" value="30" unit="s" xsi:type="Quantity"/>
+            </operand>
+            <operand xsi:type="ToDecimal">
+               <operand localId="50" locator="15:54-15:57" valueType="t:Integer" value="2880" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="59" locator="16:1-16:53" name="TestToDaily_d" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="59">
+               <a:s>define TestToDaily_d: </a:s>
+               <a:s r="58">
+                  <a:s r="56">
+                     <a:s r="53">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="56">
+                        <a:s r="54">ToDaily(4, </a:s>
+                        <a:s r="55">
+                           <a:s>1 'd'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="57"> = 4</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="58" locator="16:23-16:53" xsi:type="Equal">
+            <operand localId="56" locator="16:23-16:49" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="54" locator="16:41" valueType="t:Integer" value="4" xsi:type="Literal"/>
+               <operand localId="55" locator="16:44-16:48" value="1" unit="d" xsi:type="Quantity"/>
+            </operand>
+            <operand xsi:type="ToDecimal">
+               <operand localId="57" locator="16:53" valueType="t:Integer" value="4" xsi:type="Literal"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="66" locator="17:1-17:64" name="TestToDaily_wk" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="66">
+               <a:s>define TestToDaily_wk: </a:s>
+               <a:s r="65">
+                  <a:s r="63">
+                     <a:s r="60">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="63">
+                        <a:s r="61">ToDaily(2, </a:s>
+                        <a:s r="62">
+                           <a:s>1 'wk'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="64"> = 0.28571428</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="65" locator="17:24-17:64" xsi:type="Equal">
+            <operand localId="63" locator="17:24-17:51" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="61" locator="17:42" valueType="t:Integer" value="2" xsi:type="Literal"/>
+               <operand localId="62" locator="17:45-17:50" value="1" unit="wk" xsi:type="Quantity"/>
+            </operand>
+            <operand localId="64" locator="17:55-17:64" valueType="t:Decimal" value="0.28571428" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="73" locator="18:1-18:65" name="TestToDaily_mo" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="73">
+               <a:s>define TestToDaily_mo: </a:s>
+               <a:s r="72">
+                  <a:s r="70">
+                     <a:s r="67">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="70">
+                        <a:s r="68">ToDaily(10, </a:s>
+                        <a:s r="69">
+                           <a:s>1 'mo'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="71"> = 0.33333333</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="72" locator="18:24-18:65" xsi:type="Equal">
+            <operand localId="70" locator="18:24-18:52" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="68" locator="18:42-18:43" valueType="t:Integer" value="10" xsi:type="Literal"/>
+               <operand localId="69" locator="18:46-18:51" value="1" unit="mo" xsi:type="Quantity"/>
+            </operand>
+            <operand localId="71" locator="18:56-18:65" valueType="t:Decimal" value="0.33333333" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="80" locator="19:1-19:63" name="TestToDaily_a" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="80">
+               <a:s>define TestToDaily_a: </a:s>
+               <a:s r="79">
+                  <a:s r="77">
+                     <a:s r="74">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="77">
+                        <a:s r="75">ToDaily(10, </a:s>
+                        <a:s r="76">
+                           <a:s>1 'a'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="78"> = 0.02739726</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="79" locator="19:23-19:63" xsi:type="Equal">
+            <operand localId="77" locator="19:23-19:50" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="75" locator="19:41-19:42" valueType="t:Integer" value="10" xsi:type="Literal"/>
+               <operand localId="76" locator="19:45-19:49" value="1" unit="a" xsi:type="Quantity"/>
+            </operand>
+            <operand localId="78" locator="19:54-19:63" valueType="t:Decimal" value="0.02739726" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="86" locator="20:1-20:65" name="TestToDaily_unknown" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="86">
+               <a:s>define TestToDaily_unknown: </a:s>
+               <a:s r="85">
+                  <a:s r="84">
+                     <a:s r="81">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="84">
+                        <a:s r="82">ToDaily(10, </a:s>
+                        <a:s r="83">
+                           <a:s>1 'mg'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> is null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="85" locator="20:29-20:65" xsi:type="IsNull">
+            <operand localId="84" locator="20:29-20:57" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="82" locator="20:47-20:48" valueType="t:Integer" value="10" xsi:type="Literal"/>
+               <operand localId="83" locator="20:51-20:56" value="1" unit="mg" xsi:type="Quantity"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="91" locator="35:1-35:95" name="TestIngredients_Fentanyl" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="91">
+               <a:s>//define function EnsureMicrogramQuantity(strength Quantity):
+//define TestEnsureMicrogramQuantityNormal: OMTKLogic.EnsureMicrogramQuantity(10 'mg') = 10 'mg'
+//define TestEnsureMicrogramQuantityMicrogram: OMTKLogic.EnsureMicrogramQuantity(0.001 'mg') = 1 'ug'
+//define TestEnsureMicrogramQuantityMicrogramPerML: OMTKLogic.EnsureMicrogramQuantity(0.05 'mg/mL') = 50 'ug/mL'
+
+//define function GetIngredients(rxNormCode Code):
+//GetIngredients:
+//  List&lt;{
+//    rxNormCode Code,
+//    doseFormCode Code,
+//    ingredientCode code,
+//    strength Quantity
+//  }>define TestIngredients_Fentanyl: </a:s>
+               <a:s r="90">
+                  <a:s r="87">
+                     <a:s>OMTKLogic</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="90">
+                     <a:s>GetIngredients(</a:s>
+                     <a:s r="89">
+                        <a:s>Code '1603495' from </a:s>
+                        <a:s r="88">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="90" locator="35:34-35:95" name="GetIngredients" libraryName="OMTKLogic" xsi:type="FunctionRef">
+            <operand localId="89" locator="35:59-35:94" code="1603495" xsi:type="Code">
+               <system localId="88" locator="35:79-35:94" name="RXNORM" libraryName="OMTKLogic"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="96" locator="36:1-36:101" name="TestIngredients_Fentanyl_Spray" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="96">
+               <a:s>define TestIngredients_Fentanyl_Spray: </a:s>
+               <a:s r="95">
+                  <a:s r="92">
+                     <a:s>OMTKLogic</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="95">
+                     <a:s>GetIngredients(</a:s>
+                     <a:s r="94">
+                        <a:s>Code '1115577' from </a:s>
+                        <a:s r="93">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="95" locator="36:40-36:101" name="GetIngredients" libraryName="OMTKLogic" xsi:type="FunctionRef">
+            <operand localId="94" locator="36:65-36:100" code="1115577" xsi:type="Code">
+               <system localId="93" locator="36:85-36:100" name="RXNORM" libraryName="OMTKLogic"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="101" locator="37:1-37:107" name="TestIngredients_Fentanyl_Ropivicaine" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="101">
+               <a:s>define TestIngredients_Fentanyl_Ropivicaine: </a:s>
+               <a:s r="100">
+                  <a:s r="97">
+                     <a:s>OMTKLogic</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="100">
+                     <a:s>GetIngredients(</a:s>
+                     <a:s r="99">
+                        <a:s>Code '1233687' from </a:s>
+                        <a:s r="98">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="100" locator="37:46-37:107" name="GetIngredients" libraryName="OMTKLogic" xsi:type="FunctionRef">
+            <operand localId="99" locator="37:71-37:106" code="1233687" xsi:type="Code">
+               <system localId="98" locator="37:91-37:106" name="RXNORM" libraryName="OMTKLogic"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="106" locator="38:1-38:95" name="TestIngredients_Methadone" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="106">
+               <a:s>define TestIngredients_Methadone: </a:s>
+               <a:s r="105">
+                  <a:s r="102">
+                     <a:s>OMTKLogic</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="105">
+                     <a:s>GetIngredients(</a:s>
+                     <a:s r="104">
+                        <a:s>Code '864706' from </a:s>
+                        <a:s r="103">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="105" locator="38:35-38:95" name="GetIngredients" libraryName="OMTKLogic" xsi:type="FunctionRef">
+            <operand localId="104" locator="38:60-38:94" code="864706" xsi:type="Code">
+               <system localId="103" locator="38:79-38:94" name="RXNORM" libraryName="OMTKLogic"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="113" locator="42:1-42:212" name="TestDrug_Fentanyl_Transdermal" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="113">
+               <a:s>// 25 µg/hr fentanyl patch X (10 patches/ 30 days) X 7.2  = 60 MME/day
+// See this issue for discussion: https://github.com/cqframework/opioid-cds/issues/60define TestDrug_Fentanyl_Transdermal: </a:s>
+               <a:s r="112">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="108">
+                        <a:s>Code '245134' from </a:s>
+                        <a:s r="107">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display '72 HR fentanyl 0.025 MG/HR Transdermal System'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="109">
+                        <a:s>1 '{patch}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="110">dosesPerDay: 0.3333</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="111">
+                        <a:s>60 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="112" locator="42:39-42:212" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="108" locator="42:53-42:143" code="245134" display="72 HR fentanyl 0.025 MG/HR Transdermal System" xsi:type="Code">
+                  <system localId="107" locator="42:72-42:87" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="109" locator="42:160-42:170" value="1" unit="{patch}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="110" locator="42:186-42:191" valueType="t:Decimal" value="0.3333" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="111" locator="42:199-42:210" value="60" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="120" locator="45:1-45:219" name="TestDrug_Fentanyl_0375_Transdermal" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="120">
+               <a:s>// 37.5 µg/hr fentanyl patch X (10 patches/ 30 days) X 7.2  = 90 MME/daydefine TestDrug_Fentanyl_0375_Transdermal: </a:s>
+               <a:s r="119">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="115">
+                        <a:s>Code '1603495' from </a:s>
+                        <a:s r="114">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display '72 HR fentanyl 0.0375 MG/HR Transdermal System'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="116">
+                        <a:s>1 '{patch}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="117">dosesPerDay: 0.3333</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="118">
+                        <a:s>90 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="119" locator="45:44-45:219" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="115" locator="45:58-45:150" code="1603495" display="72 HR fentanyl 0.0375 MG/HR Transdermal System" xsi:type="Code">
+                  <system localId="114" locator="45:78-45:93" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="116" locator="45:167-45:177" value="1" unit="{patch}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="117" locator="45:193-45:198" valueType="t:Decimal" value="0.3333" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="118" locator="45:206-45:217" value="90" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="129" locator="48:1-48:247" name="TestDrug_Fentanyl_Injection" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="129">
+               <a:s>// Injection calculation not supporteddefine TestDrug_Fentanyl_Injection: </a:s>
+               <a:s r="128">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="122">
+                        <a:s>Code '1244687' from </a:s>
+                        <a:s r="121">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display 'fentanyl 0.004 MG/ML / ropivacaine hydrochloride 2 MG/ML Injectable Solution'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="123">
+                        <a:s>1 '{injection}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="124">dosesPerDay: 1.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="127">
+                        <a:s r="125">null as </a:s>
+                        <a:s r="126">
+                           <a:s>Quantity</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="128" locator="48:37-48:247" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="122" locator="48:51-48:173" code="1244687" display="fentanyl 0.004 MG/ML / ropivacaine hydrochloride 2 MG/ML Injectable Solution" xsi:type="Code">
+                  <system localId="121" locator="48:71-48:86" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="123" locator="48:190-48:204" value="1" unit="{injection}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="124" locator="48:220-48:222" valueType="t:Decimal" value="1.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="127" locator="48:230-48:245" strict="false" xsi:type="As">
+                  <operand localId="125" locator="48:230-48:233" xsi:type="Null"/>
+                  <asTypeSpecifier localId="126" locator="48:238-48:245" name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+               </value>
+            </element>
+         </expression>
+      </def>
+      <def localId="136" locator="53:1-53:193" name="TestDrug_Methadone" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="136">
+               <a:s>// 10 MG methadone X (180 tablets/ 30 days) X 10 = 600 MME/day
+// NOTE: Methodone has variable equivalency based on route, dose, and length of use. Buprenorphine and methadone are excluded from calculation in some systems.
+// They are still considered relevant opioids, but no MME calculation is given in those systems.define TestDrug_Methadone: </a:s>
+               <a:s r="135">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="131">
+                        <a:s>Code '864706' from </a:s>
+                        <a:s r="130">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display 'methadone hydrochloride 10 MG Oral Tablet'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="132">
+                        <a:s>2 '{tab}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="133">dosesPerDay: 3.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="134">
+                        <a:s>600 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="135" locator="53:28-53:193" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="131" locator="53:42-53:128" code="864706" display="methadone hydrochloride 10 MG Oral Tablet" xsi:type="Code">
+                  <system localId="130" locator="53:61-53:76" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="132" locator="53:145-53:153" value="2" unit="{tab}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="133" locator="53:169-53:171" valueType="t:Decimal" value="3.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="134" locator="53:179-53:191" value="600" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="143" locator="57:1-57:183" name="TestDrug_Fentanyl_Spray" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="143">
+               <a:s>// 0.4 MG fentanyl spray X (90 sprays/ 30 days) X 160 = 192 MME/day
+// NOTE: Had to add Metered Dose Nasal Spray as a dose form code to the GetConversionFactor for Fentanyl, same category as other spraysdefine TestDrug_Fentanyl_Spray: </a:s>
+               <a:s r="142">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="138">
+                        <a:s>Code '1115577' from </a:s>
+                        <a:s r="137">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display 'fentaNYL 0.4 MG/ACTUAT'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="139">
+                        <a:s>1 '{actuat}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="140">dosesPerDay: 3.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="141">
+                        <a:s>192 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="142" locator="57:33-57:183" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="138" locator="57:47-57:115" code="1115577" display="fentaNYL 0.4 MG/ACTUAT" xsi:type="Code">
+                  <system localId="137" locator="57:67-57:82" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="139" locator="57:132-57:143" value="1" unit="{actuat}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="140" locator="57:159-57:161" valueType="t:Decimal" value="3.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="141" locator="57:169-57:181" value="192" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="150" locator="61:1-61:184" name="TestDrug_Fentanyl_Film" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="150">
+               <a:s>// 1.2 mg buccal film X (60 films/ 30 days) X 180 = 432 MME/day
+// NOTE: This drug is not in our OMTKData, not sure why 858087 is an SDC RXCUI and the code is active, and was introduced in 2009define TestDrug_Fentanyl_Film: </a:s>
+               <a:s r="149">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="145">
+                        <a:s>Code '858087' from </a:s>
+                        <a:s r="144">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display 'fentanyl 1.2 MG Buccal Film'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="146">
+                        <a:s>1 '{film}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="147">dosesPerDay: 2.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="148">
+                        <a:s>432 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="149" locator="61:32-61:184" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="145" locator="61:46-61:118" code="858087" display="fentanyl 1.2 MG Buccal Film" xsi:type="Code">
+                  <system localId="144" locator="61:65-61:80" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="146" locator="61:135-61:144" value="1" unit="{film}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="147" locator="61:160-61:162" valueType="t:Decimal" value="2.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="148" locator="61:170-61:182" value="432" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="157" locator="64:1-64:204" name="TestDrug_Fentanyl_Mucosal_Spray" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="157">
+               <a:s>// 0.1 mg fentanyl spray X (90 sprays/ 30 days) X 160 = 48 MME/daydefine TestDrug_Fentanyl_Mucosal_Spray: </a:s>
+               <a:s r="156">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="152">
+                        <a:s>Code '1237050' from </a:s>
+                        <a:s r="151">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display 'fentanyl 0.1 MG/ACTUAT Mucosal Spray'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="153">
+                        <a:s>1 '{actuat}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="154">dosesPerDay: 3.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="155">
+                        <a:s>48 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="156" locator="64:41-64:204" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="152" locator="64:55-64:137" code="1237050" display="fentanyl 0.1 MG/ACTUAT Mucosal Spray" xsi:type="Code">
+                  <system localId="151" locator="64:75-64:90" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="153" locator="64:154-64:165" value="1" unit="{actuat}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="154" locator="64:181-64:183" valueType="t:Decimal" value="3.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="155" locator="64:191-64:202" value="48" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="164" locator="67:1-67:193" name="TestDrug_Oxycodone" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="164">
+               <a:s>// 10 mg oxycodone tablets X (120 tablets/ 30 days) X 1.5 = 60 MME/daydefine TestDrug_Oxycodone: </a:s>
+               <a:s r="163">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="159">
+                        <a:s>Code '1049683' from </a:s>
+                        <a:s r="158">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display 'oxycodone hydrochloride 10 MG Oral Tablet'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="160">
+                        <a:s>1 '{tab}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="161">dosesPerDay: 4.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="162">
+                        <a:s>60 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="163" locator="67:28-67:193" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="159" locator="67:42-67:129" code="1049683" display="oxycodone hydrochloride 10 MG Oral Tablet" xsi:type="Code">
+                  <system localId="158" locator="67:62-67:77" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="160" locator="67:146-67:154" value="1" unit="{tab}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="161" locator="67:170-67:172" valueType="t:Decimal" value="4.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="162" locator="67:180-67:191" value="60" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="171" locator="70:1-70:219" name="TestDrug_Oxycodone_ER" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="171">
+               <a:s>// 30 mg oxycodone tables X (60 tablets/ 30 days) X 1.5 = 90 MME/daydefine TestDrug_Oxycodone_ER: </a:s>
+               <a:s r="170">
+                  <a:s>{ </a:s>
+                  <a:s>
+                     <a:s>rxNormCode: </a:s>
+                     <a:s r="166">
+                        <a:s>Code '1049574' from </a:s>
+                        <a:s r="165">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                        <a:s> display '12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>doseQuantity: </a:s>
+                     <a:s r="167">
+                        <a:s>1 '{tab}'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s r="168">dosesPerDay: 2.0</a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s>
+                     <a:s>mme: </a:s>
+                     <a:s r="169">
+                        <a:s>90 '{MME}/d'</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="170" locator="70:31-70:219" xsi:type="Tuple">
+            <element name="rxNormCode">
+               <value localId="166" locator="70:45-70:155" code="1049574" display="12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet" xsi:type="Code">
+                  <system localId="165" locator="70:65-70:80" name="RXNORM" libraryName="OMTKLogic"/>
+               </value>
+            </element>
+            <element name="doseQuantity">
+               <value localId="167" locator="70:172-70:180" value="1" unit="{tab}" xsi:type="Quantity"/>
+            </element>
+            <element name="dosesPerDay">
+               <value localId="168" locator="70:196-70:198" valueType="t:Decimal" value="2.0" xsi:type="Literal"/>
+            </element>
+            <element name="mme">
+               <value localId="169" locator="70:206-70:217" value="90" unit="{MME}/d" xsi:type="Quantity"/>
+            </element>
+         </expression>
+      </def>
+      <def localId="182" locator="80:1-90:1" name="TestDrugs" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="182">
+               <a:s>// TODO: Determine how this will be reflected, I don't see any RxNav data that uses bottles?
+// For example, a butorphanol spray is packaged as a 2.5ml bottle.
+// This MME file indicates the strength is 10mg/ml and the conversion factor is 7.
+// The prescription data lists a quantity of 1 and a days supply of 30.
+// If it is determined that the quantity likely reflects the number of bottles,
+// the quantity should be changed to 2.5 since each bottle of that butorphanol
+// product contains 2.5 ml. Using the formula above, this yields 10mg/ml  x 2.5ml/30 days x 7= 5.8 MME/day.define TestDrugs: </a:s>
+               <a:s r="181">
+                  <a:s>{
+  </a:s>
+                  <a:s r="172">
+                     <a:s>TestDrug_Fentanyl_Transdermal</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="173">
+                     <a:s>TestDrug_Fentanyl_0375_Transdermal</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="174">
+                     <a:s>TestDrug_Fentanyl_Injection</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="175">
+                     <a:s>TestDrug_Methadone</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="176">
+                     <a:s>TestDrug_Fentanyl_Spray</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="177">
+                     <a:s>TestDrug_Fentanyl_Film</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="178">
+                     <a:s>TestDrug_Fentanyl_Mucosal_Spray</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="179">
+                     <a:s>TestDrug_Oxycodone</a:s>
+                  </a:s>
+                  <a:s>,
+  </a:s>
+                  <a:s r="180">
+                     <a:s>TestDrug_Oxycodone_ER</a:s>
+                  </a:s>
+                  <a:s>
+}</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="181" locator="80:19-90:1" xsi:type="List">
+            <element localId="172" locator="81:3-81:31" name="TestDrug_Fentanyl_Transdermal" xsi:type="ExpressionRef"/>
+            <element localId="173" locator="82:3-82:36" name="TestDrug_Fentanyl_0375_Transdermal" xsi:type="ExpressionRef"/>
+            <element localId="174" locator="83:3-83:29" name="TestDrug_Fentanyl_Injection" xsi:type="ExpressionRef"/>
+            <element localId="175" locator="84:3-84:20" name="TestDrug_Methadone" xsi:type="ExpressionRef"/>
+            <element localId="176" locator="85:3-85:25" name="TestDrug_Fentanyl_Spray" xsi:type="ExpressionRef"/>
+            <element localId="177" locator="86:3-86:24" name="TestDrug_Fentanyl_Film" xsi:type="ExpressionRef"/>
+            <element localId="178" locator="87:3-87:33" name="TestDrug_Fentanyl_Mucosal_Spray" xsi:type="ExpressionRef"/>
+            <element localId="179" locator="88:3-88:20" name="TestDrug_Oxycodone" xsi:type="ExpressionRef"/>
+            <element localId="180" locator="89:3-89:23" name="TestDrug_Oxycodone_ER" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="187" locator="93:1-93:58" name="TestStripPer_Null" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="187">
+               <a:s>//define function StripPer(unit String):define TestStripPer_Null: </a:s>
+               <a:s r="186">
+                  <a:s r="185">
+                     <a:s r="183">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="185">
+                        <a:s r="184">StripPer(null)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> is null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="186" locator="93:27-93:58" xsi:type="IsNull">
+            <operand localId="185" locator="93:27-93:50" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand asType="t:String" xsi:type="As">
+                  <operand localId="184" locator="93:46-93:49" xsi:type="Null"/>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="193" locator="94:1-94:54" name="TestStripPer_Empty" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="193">
+               <a:s>define TestStripPer_Empty: </a:s>
+               <a:s r="192">
+                  <a:s r="190">
+                     <a:s r="188">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="190">
+                        <a:s>StripPer(</a:s>
+                        <a:s r="189">
+                           <a:s>''</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="191">
+                     <a:s>''</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="192" locator="94:28-94:54" xsi:type="Equal">
+            <operand localId="190" locator="94:28-94:49" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="189" locator="94:47-94:48" valueType="t:String" value="" xsi:type="Literal"/>
+            </operand>
+            <operand localId="191" locator="94:53-94:54" valueType="t:String" value="" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="199" locator="95:1-95:62" name="TestStripPer_Tab" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="199">
+               <a:s>define TestStripPer_Tab: </a:s>
+               <a:s r="198">
+                  <a:s r="196">
+                     <a:s r="194">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="196">
+                        <a:s>StripPer(</a:s>
+                        <a:s r="195">
+                           <a:s>'{tab}'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="197">
+                     <a:s>'{tab}'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="198" locator="95:26-95:62" xsi:type="Equal">
+            <operand localId="196" locator="95:26-95:52" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="195" locator="95:45-95:51" valueType="t:String" value="{tab}" xsi:type="Literal"/>
+            </operand>
+            <operand localId="197" locator="95:56-95:62" valueType="t:String" value="{tab}" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="205" locator="96:1-96:55" name="TestStripPer_MG" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="205">
+               <a:s>define TestStripPer_MG: </a:s>
+               <a:s r="204">
+                  <a:s r="202">
+                     <a:s r="200">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="202">
+                        <a:s>StripPer(</a:s>
+                        <a:s r="201">
+                           <a:s>'mg'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="203">
+                     <a:s>'mg'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="204" locator="96:25-96:55" xsi:type="Equal">
+            <operand localId="202" locator="96:25-96:48" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="201" locator="96:44-96:47" valueType="t:String" value="mg" xsi:type="Literal"/>
+            </operand>
+            <operand localId="203" locator="96:52-96:55" valueType="t:String" value="mg" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="211" locator="97:1-97:61" name="TestStripPer_UGPerH" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="211">
+               <a:s>define TestStripPer_UGPerH: </a:s>
+               <a:s r="210">
+                  <a:s r="208">
+                     <a:s r="206">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="208">
+                        <a:s>StripPer(</a:s>
+                        <a:s r="207">
+                           <a:s>'ug/h'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="209">
+                     <a:s>'ug'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="210" locator="97:29-97:61" xsi:type="Equal">
+            <operand localId="208" locator="97:29-97:54" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="207" locator="97:48-97:53" valueType="t:String" value="ug/h" xsi:type="Literal"/>
+            </operand>
+            <operand localId="209" locator="97:58-97:61" valueType="t:String" value="ug" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="217" locator="98:1-98:67" name="TestStripPer_MGPerTab" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="217">
+               <a:s>define TestStripPer_MGPerTab: </a:s>
+               <a:s r="216">
+                  <a:s r="214">
+                     <a:s r="212">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="214">
+                        <a:s>StripPer(</a:s>
+                        <a:s r="213">
+                           <a:s>'mg/{tab}'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="215">
+                     <a:s>'mg'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="216" locator="98:31-98:67" xsi:type="Equal">
+            <operand localId="214" locator="98:31-98:60" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="213" locator="98:50-98:59" valueType="t:String" value="mg/{tab}" xsi:type="Literal"/>
+            </operand>
+            <operand localId="215" locator="98:64-98:67" valueType="t:String" value="mg" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="223" locator="99:1-99:67" name="TestStripPer_Multiple" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="223">
+               <a:s>define TestStripPer_Multiple: </a:s>
+               <a:s r="222">
+                  <a:s r="220">
+                     <a:s r="218">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="220">
+                        <a:s>StripPer(</a:s>
+                        <a:s r="219">
+                           <a:s>'mg/h/h'</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> = </a:s>
+                  <a:s r="221">
+                     <a:s>'mg/h'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="222" locator="99:31-99:67" xsi:type="Equal">
+            <operand localId="220" locator="99:31-99:58" name="StripPer" libraryName="OMTKLogic" xsi:type="FunctionRef">
+               <operand localId="219" locator="99:50-99:57" valueType="t:String" value="mg/h/h" xsi:type="Literal"/>
+            </operand>
+            <operand localId="221" locator="99:62-99:67" valueType="t:String" value="mg/h" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="250" locator="102:1-108:3" name="TestGetDailyDose" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="250">
+               <a:s>//define function GetDailyDose(ingredientCode Code, strength Quantity, doseFormCode Code, doseQuantity Quantity, dosesPerDay Decimal):define TestGetDailyDose:
+  </a:s>
+               <a:s r="249">
+                  <a:s>flatten </a:s>
+                  <a:s r="248">
+                     <a:s>(
+    </a:s>
+                     <a:s r="248">
+                        <a:s>
+                           <a:s r="225">
+                              <a:s r="224">
+                                 <a:s>
+                                    <a:s>TestDrugs</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> D</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s>
+                           <a:s>let </a:s>
+                           <a:s r="230">
+                              <a:s>i: </a:s>
+                              <a:s r="229">
+                                 <a:s r="226">
+                                    <a:s>OMTKLogic</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="229">
+                                    <a:s>GetIngredients(</a:s>
+                                    <a:s r="228">
+                                       <a:s r="227">
+                                          <a:s>D</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="228">
+                                          <a:s>rxNormCode</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="247">
+                           <a:s>return </a:s>
+                           <a:s r="246">
+                              <a:s>
+                                 <a:s r="232">
+                                    <a:s r="231">
+                                       <a:s>
+                                          <a:s>i</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> I</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        </a:s>
+                              <a:s r="245">
+                                 <a:s>return </a:s>
+                                 <a:s r="244">
+                                    <a:s r="233">
+                                       <a:s>OMTKLogic</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="244">
+                                       <a:s>GetDailyDose(</a:s>
+                                       <a:s r="235">
+                                          <a:s r="234">
+                                             <a:s>I</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="235">
+                                             <a:s>ingredientCode</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="237">
+                                          <a:s r="236">
+                                             <a:s>I</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="237">
+                                             <a:s>strength</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="239">
+                                          <a:s r="238">
+                                             <a:s>I</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="239">
+                                             <a:s>doseFormCode</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="241">
+                                          <a:s r="240">
+                                             <a:s>D</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="241">
+                                             <a:s>doseQuantity</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="243">
+                                          <a:s r="242">
+                                             <a:s>D</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="243">
+                                             <a:s>dosesPerDay</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="249" locator="103:3-108:3" xsi:type="Flatten">
+            <operand localId="248" locator="103:11-108:3" xsi:type="Query">
+               <source localId="225" locator="104:5-104:15" alias="D">
+                  <expression localId="224" locator="104:5-104:13" name="TestDrugs" xsi:type="ExpressionRef"/>
+               </source>
+               <let localId="230" locator="105:11-105:51" identifier="i">
+                  <expression localId="229" locator="105:14-105:51" name="GetIngredients" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                     <operand localId="228" locator="105:39-105:50" path="rxNormCode" scope="D" xsi:type="Property"/>
+                  </expression>
+               </let>
+               <return localId="247" locator="106:7-107:114">
+                  <expression localId="246" locator="106:14-107:114" xsi:type="Query">
+                     <source localId="232" locator="106:14-106:16" alias="I">
+                        <expression localId="231" locator="106:14" name="i" xsi:type="QueryLetRef"/>
+                     </source>
+                     <return localId="245" locator="107:9-107:114">
+                        <expression localId="244" locator="107:16-107:114" name="GetDailyDose" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                           <operand localId="235" locator="107:39-107:54" path="ingredientCode" scope="I" xsi:type="Property"/>
+                           <operand localId="237" locator="107:57-107:66" path="strength" scope="I" xsi:type="Property"/>
+                           <operand localId="239" locator="107:69-107:82" path="doseFormCode" scope="I" xsi:type="Property"/>
+                           <operand localId="241" locator="107:85-107:98" path="doseQuantity" scope="D" xsi:type="Property"/>
+                           <operand localId="243" locator="107:101-107:113" path="dosesPerDay" scope="D" xsi:type="Property"/>
+                        </expression>
+                     </return>
+                  </expression>
+               </return>
+            </operand>
+         </expression>
+      </def>
+      <def localId="282" locator="114:1-122:5" name="TestCalculateMMEs" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="282">
+               <a:s>//define function GetMedicationName(rxNormCode Code):
+//define function GetDailyDoseDescription(ingredientCode Code, ingredientName String, strength Quantity, doseFormCode Code, doseFormName String, doseQuantity Quantity, dosesPerDay Decimal, dailyDose Quantity):
+
+//define function CalculateMMEs(medications List&lt;Tuple { rxNormCode Code, doseQuantity Quantity, dosesPerDay Decimal }>):define TestCalculateMMEs:
+  </a:s>
+               <a:s r="281">
+                  <a:s>
+                     <a:s r="252">
+                        <a:s r="251">
+                           <a:s>
+                              <a:s>TestDrugs</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> D</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s>
+                     <a:s>let </a:s>
+                     <a:s r="267">
+                        <a:s>mmes: </a:s>
+                        <a:s r="266">
+                           <a:s r="253">
+                              <a:s>OMTKLogic</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="266">
+                              <a:s>CalculateMMEs(</a:s>
+                              <a:s r="265">
+                                 <a:s>{ </a:s>
+                                 <a:s r="264">
+                                    <a:s>
+                                       <a:s r="255">
+                                          <a:s r="254">
+                                             <a:s>
+                                                <a:s>D</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> d</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> </a:s>
+                                    <a:s r="263">
+                                       <a:s>return </a:s>
+                                       <a:s r="262">
+                                          <a:s>{ </a:s>
+                                          <a:s>
+                                             <a:s>rxNormCode: </a:s>
+                                             <a:s r="257">
+                                                <a:s r="256">
+                                                   <a:s>d</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="257">
+                                                   <a:s>rxNormCode</a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>, </a:s>
+                                          <a:s>
+                                             <a:s>doseQuantity: </a:s>
+                                             <a:s r="259">
+                                                <a:s r="258">
+                                                   <a:s>d</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="259">
+                                                   <a:s>doseQuantity</a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>, </a:s>
+                                          <a:s>
+                                             <a:s>dosesPerDay: </a:s>
+                                             <a:s r="261">
+                                                <a:s r="260">
+                                                   <a:s>d</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="261">
+                                                   <a:s>dosesPerDay</a:s>
+                                                </a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>}</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="280">
+                     <a:s>return </a:s>
+                     <a:s r="279">
+                        <a:s>{
+      </a:s>
+                        <a:s>
+                           <a:s>rxNormCode: </a:s>
+                           <a:s r="269">
+                              <a:s r="268">
+                                 <a:s>D</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="269">
+                                 <a:s>rxNormCode</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s>
+                           <a:s>mme: </a:s>
+                           <a:s r="272">
+                              <a:s>Sum(</a:s>
+                              <a:s r="271">
+                                 <a:s r="270">
+                                    <a:s>mmes</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="271">
+                                    <a:s>mme</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s>
+                           <a:s>expectedMme: </a:s>
+                           <a:s r="274">
+                              <a:s r="273">
+                                 <a:s>D</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="274">
+                                 <a:s>mme</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s>
+                           <a:s>description: </a:s>
+                           <a:s r="278">
+                              <a:s>Combine(</a:s>
+                              <a:s r="276">
+                                 <a:s r="275">
+                                    <a:s>mmes</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="276">
+                                    <a:s>dailyDoseDescription</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>, </a:s>
+                              <a:s r="277">
+                                 <a:s>', '</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    }</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="281" locator="115:3-122:5" xsi:type="Query">
+            <source localId="252" locator="115:3-115:13" alias="D">
+               <expression localId="251" locator="115:3-115:11" name="TestDrugs" xsi:type="ExpressionRef"/>
+            </source>
+            <let localId="267" locator="116:9-116:139" identifier="mmes">
+               <expression localId="266" locator="116:15-116:139" name="CalculateMMEs" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                  <operand localId="265" locator="116:39-116:138" xsi:type="List">
+                     <element localId="264" locator="116:41-116:137" xsi:type="Query">
+                        <source localId="255" locator="116:41-116:43" alias="d">
+                           <expression localId="254" locator="116:41" name="D" xsi:type="AliasRef"/>
+                        </source>
+                        <return localId="263" locator="116:45-116:137">
+                           <expression localId="262" locator="116:52-116:137" xsi:type="Tuple">
+                              <element name="rxNormCode">
+                                 <value localId="257" locator="116:66-116:77" path="rxNormCode" scope="d" xsi:type="Property"/>
+                              </element>
+                              <element name="doseQuantity">
+                                 <value localId="259" locator="116:94-116:107" path="doseQuantity" scope="d" xsi:type="Property"/>
+                              </element>
+                              <element name="dosesPerDay">
+                                 <value localId="261" locator="116:123-116:135" path="dosesPerDay" scope="d" xsi:type="Property"/>
+                              </element>
+                           </expression>
+                        </return>
+                     </element>
+                  </operand>
+               </expression>
+            </let>
+            <return localId="280" locator="117:5-122:5">
+               <expression localId="279" locator="117:12-122:5" xsi:type="Tuple">
+                  <element name="rxNormCode">
+                     <value localId="269" locator="118:19-118:30" path="rxNormCode" scope="D" xsi:type="Property"/>
+                  </element>
+                  <element name="mme">
+                     <value localId="272" locator="119:12-119:24" xsi:type="Sum">
+                        <source localId="271" locator="119:16-119:23" xsi:type="Query">
+                           <source alias="$this">
+                              <expression localId="270" locator="119:16-119:19" name="mmes" xsi:type="QueryLetRef"/>
+                           </source>
+                           <where xsi:type="Not">
+                              <operand xsi:type="IsNull">
+                                 <operand path="mme" xsi:type="Property">
+                                    <source name="$this" xsi:type="AliasRef"/>
+                                 </operand>
+                              </operand>
+                           </where>
+                           <return distinct="false">
+                              <expression path="mme" xsi:type="Property">
+                                 <source name="$this" xsi:type="AliasRef"/>
+                              </expression>
+                           </return>
+                        </source>
+                     </value>
+                  </element>
+                  <element name="expectedMme">
+                     <value localId="274" locator="120:20-120:24" path="mme" scope="D" xsi:type="Property"/>
+                  </element>
+                  <element name="description">
+                     <value localId="278" locator="121:20-121:59" xsi:type="Combine">
+                        <source localId="276" locator="121:28-121:52" xsi:type="Query">
+                           <source alias="$this">
+                              <expression localId="275" locator="121:28-121:31" name="mmes" xsi:type="QueryLetRef"/>
+                           </source>
+                           <where xsi:type="Not">
+                              <operand xsi:type="IsNull">
+                                 <operand path="dailyDoseDescription" xsi:type="Property">
+                                    <source name="$this" xsi:type="AliasRef"/>
+                                 </operand>
+                              </operand>
+                           </where>
+                           <return distinct="false">
+                              <expression path="dailyDoseDescription" xsi:type="Property">
+                                 <source name="$this" xsi:type="AliasRef"/>
+                              </expression>
+                           </return>
+                        </source>
+                        <separator localId="277" locator="121:55-121:58" valueType="t:String" value=", " xsi:type="Literal"/>
+                     </value>
+                  </element>
+               </expression>
+            </return>
+         </expression>
+      </def>
+      <def localId="287" locator="125:1-125:89" name="TestGetIngredients" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="287">
+               <a:s>define TestGetIngredients: </a:s>
+               <a:s r="286">
+                  <a:s r="283">
+                     <a:s>OMTKLogic</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="286">
+                     <a:s>GetIngredients(</a:s>
+                     <a:s r="285">
+                        <a:s>Code '1049221' from </a:s>
+                        <a:s r="284">
+                           <a:s>OMTKLogic.RXNORM</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="286" locator="125:28-125:89" name="GetIngredients" libraryName="OMTKLogic" xsi:type="FunctionRef">
+            <operand localId="285" locator="125:53-125:88" code="1049221" xsi:type="Code">
+               <system localId="284" locator="125:73-125:88" name="RXNORM" libraryName="OMTKLogic"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

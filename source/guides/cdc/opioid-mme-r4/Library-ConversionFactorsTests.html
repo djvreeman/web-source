@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Tests for the Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4 - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7.6"}
+    h3,h4,h5,h6{--heading-prefix:"7.6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tests for the Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-ConversionFactorsTests.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-ConversionFactorsTests.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-ConversionFactorsTests.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Library: Tests for the Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4</h2>
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">ConversionFactorsTests</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;">http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactorsTests</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">3.0.0</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Name: </b></th>
+            <td style="padding-left: 4px;">ConversionFactorsTests</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Tests for the Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 4px;">active</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Experimental: </b></th>
+            <td style="padding-left: 4px;">true</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span>http://terminology.hl7.org/CodeSystem/library-type</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>logic-library</span>
+                        </p>
+                        
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2021-11-25T15:15:41+11:00</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">Alphora</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;">This library contains logic to test configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library.</td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Capability: </b></th>
+          <td style="padding-left: 4px;">
+            shareable computable publishable executable 
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Representation Level: </b></th>
+          <td style="padding-left: 4px;">
+            structured
+          </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Use Context: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>182888003</td>
+                        <td>Medication requested (situation)</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>82423001</td>
+                        <td>Chronic pain (finding)</td>
+                      </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Jurisdiction: </b></th>
+            <td style="padding-left: 4px;">840</td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Copyright: </b></th>
+            <td style="padding-left: 4px;">Copyright 2019+ Centers for Disease Control and Prevention (CDC)</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Last Review Date: </b></th>
+            <td style="padding-left: 4px;">2020-09-26</td>
+        </tr>
+        
+        
+        
+        <tr>
+          <th scope="row"><b>Related Artifacts: </b></th>
+          <td style="padding-left: 4px;">
+            
+            
+            
+            <p><b>Dependencies</b></p>
+            <ul>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors|3.0.0</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic|3.0.0</li>
+              
+                <li>http://www.nlm.nih.gov/research/umls/rxnorm</li>
+              
+                <li>http://terminology.hl7.org/CodeSystem/usage-context-type</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes</li>
+              
+            </ul>
+            
+            
+            
+            
+            
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Parameters: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>In/Out</b></th></tr>
+              
+                <tr><th>ConversionFactorSupplementName</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>ErrorLevel</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_161</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1191</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1223</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1767</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1819</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1819_Film</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1841</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_1886</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_2101</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_2354</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_2400</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_2670</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_3423</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_3498</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_4337</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_4337_TransdermalSystem</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_4337_NasalSpray</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_4337_BuccalFilm</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_5032</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_5489</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_5640</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6102</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6378</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6754</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6813</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6813_30</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6813_50</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_6813_70</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_7052</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_7242</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_7243</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_7804</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_7814</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_8001</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_8163</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_8175</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_8745</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_8896</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_9009</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_10689</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_10849</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_19759</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_19860</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_22696</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_22697</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_23088</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_27084</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_35780</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_237005</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_636827</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_787390</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetConversionFactor_Message</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestConversionFactorSupplementName</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestConversionFactorSupplement</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToRangeValueValid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToRangeValueValidDecimal</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToRangeValueWildcard</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToRangeValueInvalid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseRangeValid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseRangeBeginning</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseRangeEnding</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseRangeInvalid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToRangeConversionFactor</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToRangeConversionFactorInvalid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseForm</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseFormInvalid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseFormConversionFactor</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseFormConversionFactorInvalid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseFormDosesPerDayConversionFactor</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDoseFormDosesPerDayConversionFactorInvalid</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToConversionFactor</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Data Requirements:</b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Type</b></th><th><b>Profile</b></th><th><b>MS</b></th><th><b>Code Filter</b></th></tr>
+              
+                <tr>
+                  <th>Patient</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Patient</th>
+                  <th/>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><a id="cql-content"><b>Content: </b></a> text/cql</th></tr>
+              <tr><td><pre><code class="language-cql">library ConversionFactorsTests version '3.0.0'
+
+using FHIR version '4.0.1'
+
+include ConversionFactors version '3.0.0'
+include OMTKLogic version '3.0.0'
+
+// Ingredient Codes
+code acetaminophen: '161' from OMTKLogic.RXNORM display 'acetaminophen'
+code aspirin: '1191' from OMTKLogic.RXNORM display 'aspirin'
+code atropine: '1223' from OMTKLogic.RXNORM display 'atropine'
+code bromodiphenhydramine: '19759' from OMTKLogic.RXNORM display 'bromodiphenhydramine'
+code brompheniramine: '1767' from OMTKLogic.RXNORM display 'brompheniramine'
+code buprenorphine: '1819' from OMTKLogic.RXNORM display 'buprenorphine'
+code butalbital: '19860' from OMTKLogic.RXNORM display 'butalbital'
+code butorphanol: '1841' from OMTKLogic.RXNORM display 'butorphanol'
+code caffeine: '1886' from OMTKLogic.RXNORM display 'caffeine'
+code carisoprodol: '2101' from OMTKLogic.RXNORM display 'carisoprodol'
+code chlorcyclizine: '2354' from OMTKLogic.RXNORM display 'chlorcyclizine'
+code chlorpheniramine: '2400' from OMTKLogic.RXNORM display 'chlorpheniramine'
+code codeine: '2670' from OMTKLogic.RXNORM display 'codeine'
+code dexbrompheniramine: '22696' from OMTKLogic.RXNORM display 'dexbrompheniramine'
+code dexchlorpheniramine: '22697' from OMTKLogic.RXNORM display 'dexchlorpheniramine'
+code dihydrocodeine: '23088' from OMTKLogic.RXNORM display 'dihydrocodeine'
+code diphenhydramine: '3498' from OMTKLogic.RXNORM display 'diphenhydramine'
+code fentanyl: '4337' from OMTKLogic.RXNORM display 'fentanyl'
+code guaiacolsulfonate: '636827' from OMTKLogic.RXNORM display 'guaiacolsulfonate'
+code guaifenesin: '5032' from OMTKLogic.RXNORM display 'guaifenesin'
+code homatropine: '27084' from OMTKLogic.RXNORM display 'homatropine'
+code hydrocodone: '5489' from OMTKLogic.RXNORM display 'hydrocodone'
+code hydromorphone: '3423' from OMTKLogic.RXNORM display 'hydromorphone'
+code ibuprofen: '5640' from OMTKLogic.RXNORM display 'ibuprofen'
+code kaolin: '6102' from OMTKLogic.RXNORM display 'kaolin'
+code levomethadyl: '237005' from OMTKLogic.RXNORM display 'levomethadyl'
+code levorphanol: '6378' from OMTKLogic.RXNORM display 'levorphanol'
+code meperidine: '6754' from OMTKLogic.RXNORM display 'levorphanol'
+code methadone: '6813' from OMTKLogic.RXNORM display 'methadone'
+code morphine: '7052' from OMTKLogic.RXNORM display 'morphine'
+code naloxone: '7242' from OMTKLogic.RXNORM display 'naloxone'
+code naltrexone: '7243' from OMTKLogic.RXNORM display 'naltrexone'
+code oxycodone: '7804' from OMTKLogic.RXNORM display 'oxycodone'
+code oxymorphone: '7814' from OMTKLogic.RXNORM display 'oxymorphone'
+code pentazocine: '8001' from OMTKLogic.RXNORM display 'pentazocine'
+code phenylephrine: '8163' from OMTKLogic.RXNORM display 'phenylephrine'
+code phenylpropanolamine: '8175' from OMTKLogic.RXNORM display 'phenylpropanolamine'
+code promethazine: '8745' from OMTKLogic.RXNORM display 'promethazine'
+code pseudoephedrine: '8896' from OMTKLogic.RXNORM display 'pseudoephedrine'
+code pyrilamine: '9009' from OMTKLogic.RXNORM display 'pyrilamine'
+code ropivacaine: '35780' from OMTKLogic.RXNORM display 'ropivacaine'
+code tapentadol: '787390' from OMTKLogic.RXNORM display 'tapentadol'
+code tramadol: '10689' from OMTKLogic.RXNORM display 'tramadol'
+code triprolidine: '10849' from OMTKLogic.RXNORM display 'triprolidine'
+
+// Dose Form Codes
+code &quot;Transdermal System&quot;: '316987' from OMTKLogic.RXNORM display 'Transdermal System'
+code &quot;Oral Tablet&quot;: '317541' from OMTKLogic.RXNORM display 'Oral Tablet'
+code &quot;Buccal Tablet&quot;: '970789' from OMTKLogic.RXNORM display 'Buccal Tablet'
+code &quot;Chewable Tablet&quot;: '91058' from OMTKLogic.RXNORM display 'Chewable Tablet'
+code &quot;Sublingual Tablet&quot;: '317007' from OMTKLogic.RXNORM display 'Sublingual Tablet'
+code &quot;Oral Lozenge&quot;: '316992' from OMTKLogic.RXNORM display 'Oral Lozenge'
+code &quot;Oral Capsule&quot;: '316965' from OMTKLogic.RXNORM display 'Oral Capsule'
+code &quot;Buccal Film&quot;: '858080' from OMTKLogic.RXNORM display 'Buccal Film'
+code &quot;Nasal Spray&quot;: '126542' from OMTKLogic.RXNORM display 'Nasal Spray'
+code &quot;Mucosal Spray&quot;: '346163' from OMTKLogic.RXNORM display 'Mucosal Spray'
+code &quot;Metered Dose Nasal Spray&quot;: '1797831' from OMTKLogic.RXNORM display 'Metered Dose Nasal Spray'
+code &quot;Topical Ointment&quot;: '316985' from OMTKLogic.RXNORM display 'Topical Ointment'
+code &quot;Extended Release Oral Capsule&quot;: '316943' from OMTKLogic.RXNORM display 'Extended Release Oral Capsule'
+code &quot;Extended Release Oral Tablet&quot;: '316946' from OMTKLogic.RXNORM display 'Extended Release Oral Tablet'
+code &quot;Oral Solution&quot;: '316968' from OMTKLogic.RXNORM display 'Oral Solution'
+code &quot;Injection&quot;: '1649574' from OMTKLogic.RXNORM display 'Injection'
+code &quot;Prefilled Syringe&quot;: '721656' from OMTKLogic.RXNORM display 'Prefilled Syringe'
+
+context Patient
+
+//define function GetConversionFactor(ingredientCode System.Code, dailyDose System.Quantity, doseFormCode System.Code):
+//define function GetConversionFactor(ingredientCode Code, dailyDose Quantity, doseFormCode Code):
+//These are the default conversion factors if no conversion factor supplement is configured. They are equivalent to the clinical conversion factors.
+define TestGetConversionFactor_161: ConversionFactors.GetConversionFactor(acetaminophen, 200 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_1191: ConversionFactors.GetConversionFactor(aspirin, 200 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_1223: ConversionFactors.GetConversionFactor(atropine, 0.6 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_1767: ConversionFactors.GetConversionFactor(brompheniramine, 1 'mg', &quot;Chewable Tablet&quot;, null) is null
+define TestGetConversionFactor_1819: ConversionFactors.GetConversionFactor(buprenorphine, 0.02 'mg/h', &quot;Transdermal System&quot;, 0.14285714) is null
+define TestGetConversionFactor_1819_Film: ConversionFactors.GetConversionFactor(buprenorphine, 0.075 'mg', &quot;Buccal Film&quot;, null) is null
+define TestGetConversionFactor_1841: ConversionFactors.GetConversionFactor(butorphanol, 1 'mg/{actuat}', &quot;Metered Dose Nasal Spray&quot;, null) is null
+define TestGetConversionFactor_1886: ConversionFactors.GetConversionFactor(caffeine, 100 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_2101: ConversionFactors.GetConversionFactor(carisoprodol, 250 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_2354: ConversionFactors.GetConversionFactor(chlorcyclizine, 25 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_2400: ConversionFactors.GetConversionFactor(chlorpheniramine, 0.5 'mg', &quot;Chewable Tablet&quot;, null) is null
+define TestGetConversionFactor_2670: ConversionFactors.GetConversionFactor(codeine, 12.5 'mg', &quot;Oral Tablet&quot;, null) = 0.15
+define TestGetConversionFactor_3423: ConversionFactors.GetConversionFactor(hydromorphone, 1 'mg', &quot;Oral Tablet&quot;, null) = 4
+define TestGetConversionFactor_3498: ConversionFactors.GetConversionFactor(diphenhydramine, 18.75 'mg', &quot;Oral Capsule&quot;, null) is null
+define TestGetConversionFactor_4337: ConversionFactors.GetConversionFactor(fentanyl, 0.1 'mg', &quot;Buccal Tablet&quot;, null) is null
+define TestGetConversionFactor_4337_TransdermalSystem: ConversionFactors.GetConversionFactor(fentanyl, 0.012 'mg/h', &quot;Transdermal System&quot;, 0.33333333) = 7200
+define TestGetConversionFactor_4337_NasalSpray: ConversionFactors.GetConversionFactor(fentanyl, 0.1 'mg/{actuat}', &quot;Mucosal Spray&quot;, null) is null
+define TestGetConversionFactor_4337_BuccalFilm: ConversionFactors.GetConversionFactor(fentanyl, 1.2 'mg', &quot;Buccal Film&quot;, null) is null
+define TestGetConversionFactor_5032: ConversionFactors.GetConversionFactor(guaifenesin, 100 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_5489: ConversionFactors.GetConversionFactor(hydrocodone, 10 'mg', &quot;Oral Tablet&quot;, null) = 1
+define TestGetConversionFactor_5640: ConversionFactors.GetConversionFactor(ibuprofen, 100 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_6102: ConversionFactors.GetConversionFactor(kaolin, 0.145 'mg/mg', &quot;Topical Ointment&quot;, null) is null
+define TestGetConversionFactor_6378: ConversionFactors.GetConversionFactor(levorphanol, 2 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_6754: ConversionFactors.GetConversionFactor(meperidine, 100 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_6813: ConversionFactors.GetConversionFactor(methadone, 10 'mg', &quot;Oral Tablet&quot;, null) = 4
+define TestGetConversionFactor_6813_30: ConversionFactors.GetConversionFactor(methadone, 30 'mg', &quot;Oral Tablet&quot;, null) = 8
+define TestGetConversionFactor_6813_50: ConversionFactors.GetConversionFactor(methadone, 50 'mg', &quot;Oral Tablet&quot;, null) = 10
+define TestGetConversionFactor_6813_70: ConversionFactors.GetConversionFactor(methadone, 70 'mg', &quot;Oral Tablet&quot;, null) = 12
+define TestGetConversionFactor_7052: ConversionFactors.GetConversionFactor(morphine, 10 'mg', &quot;Oral Tablet&quot;, null) = 1
+define TestGetConversionFactor_7242: ConversionFactors.GetConversionFactor(naloxone, 0.7 'mg', &quot;Buccal Film&quot;, null) is null
+define TestGetConversionFactor_7243: ConversionFactors.GetConversionFactor(naltrexone, 100 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_7804: ConversionFactors.GetConversionFactor(oxycodone, 36 'mg', &quot;Extended Release Oral Capsule&quot;, null) = 1.5
+define TestGetConversionFactor_7814: ConversionFactors.GetConversionFactor(oxymorphone, 10 'mg', &quot;Oral Tablet&quot;, null) = 3
+define TestGetConversionFactor_8001: ConversionFactors.GetConversionFactor(pentazocine, 50 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_8163: ConversionFactors.GetConversionFactor(phenylephrine, 10 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_8175: ConversionFactors.GetConversionFactor(phenylpropanolamine, 18 'mg', &quot;Extended Release Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_8745: ConversionFactors.GetConversionFactor(promethazine, 10 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_8896: ConversionFactors.GetConversionFactor(pseudoephedrine, 45 'mg', &quot;Oral Capsule&quot;, null) is null
+define TestGetConversionFactor_9009: ConversionFactors.GetConversionFactor(pyrilamine, 10 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_10689: ConversionFactors.GetConversionFactor(tramadol, 100 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_10849: ConversionFactors.GetConversionFactor(triprolidine, 2.5 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_19759: ConversionFactors.GetConversionFactor(bromodiphenhydramine, 2.5 'mg/mL', &quot;Oral Solution&quot;, null) is null
+define TestGetConversionFactor_19860: ConversionFactors.GetConversionFactor(butalbital, 50 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_22696: ConversionFactors.GetConversionFactor(dexbrompheniramine, 1 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_22697: ConversionFactors.GetConversionFactor(dexchlorpheniramine, 2 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_23088: ConversionFactors.GetConversionFactor(dihydrocodeine, 16 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_27084: ConversionFactors.GetConversionFactor(homatropine, 5 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_35780: ConversionFactors.GetConversionFactor(ropivacaine, 10 'mg/mL', &quot;Injection&quot;, null) is null
+define TestGetConversionFactor_237005: ConversionFactors.GetConversionFactor(levomethadyl, 10 'mg/mL', &quot;Oral Solution&quot;, null) is null
+define TestGetConversionFactor_636827: ConversionFactors.GetConversionFactor(guaiacolsulfonate, 70 'mg/mL', &quot;Oral Solution&quot;, null) is null
+define TestGetConversionFactor_787390: ConversionFactors.GetConversionFactor(tapentadol, 50 'mg', &quot;Oral Tablet&quot;, null) is null
+define TestGetConversionFactor_Message: ConversionFactors.GetConversionFactor(null, 10 'mg', null, null) is null
+
+//define ConversionFactorSupplement:
+define TestConversionFactorSupplementName: ConversionFactors.ConversionFactorSupplementName is null
+define TestConversionFactorSupplement: ConversionFactors.ConversionFactorSupplement is null
+
+/*
+Converts a range value boundary to a Decimal (or null for a wildcard)
+*/
+//define function ToRangeValue(value System.String):
+define TestToRangeValueValid: ConversionFactors.ToRangeValue('1') = 1
+define TestToRangeValueValidDecimal: ConversionFactors.ToRangeValue('0.15') = 0.15
+define TestToRangeValueWildcard: ConversionFactors.ToRangeValue('*') is null
+define TestToRangeValueInvalid: ConversionFactors.ToRangeValue('foo') is null
+
+/*
+Converts the property value of a dose-range-conversion-factor property to the dose range
+&lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;
+Note that low-value and/or high-value may be wildcards '*'
+*/
+//define function ToDoseRange(propertyValue FHIR.string):
+define TestToDoseRangeValid: ConversionFactors.ToDoseRange(FHIR.string { value: '1-2:12' }) = Interval[1, 2]
+define TestToDoseRangeBeginning: ConversionFactors.ToDoseRange(FHIR.string { value: '*-5:12'}) = Interval[-9999999999999999999999999999.99999999, 5]
+define TestToDoseRangeEnding: ConversionFactors.ToDoseRange(FHIR.string { value: '1-*:12'}) = Interval[1, 9999999999999999999999999999.99999999]
+define TestToDoseRangeInvalid: ConversionFactors.ToDoseRange(FHIR.string { value: 'foo' }) is null
+
+/*
+Converts the property value of a dose-range-conversion-factor property to the conversion factor
+&lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;
+*/
+//define function ToDoseRangeConversionFactor(propertyValue FHIR.string):
+define TestToRangeConversionFactor: ConversionFactors.ToDoseRangeConversionFactor(FHIR.string { value: '1-2:12' }) = 12
+define TestToRangeConversionFactorInvalid: ConversionFactors.ToDoseRangeConversionFactor(FHIR.string { value: 'foo' }) is null
+
+/*
+Converts the property value of a dose-form-conversion-factor property to the dose form
+&lt;dose-form-code&gt;:&lt;conversion-factor&gt;
+*/
+//define function ToDoseForm(propertyValue FHIR.string):
+define TestToDoseForm: ConversionFactors.ToDoseForm(FHIR.string { value: '12345:12' }) = '12345'
+define TestToDoseFormInvalid: ConversionFactors.ToDoseForm(FHIR.string { value: 'foo' }) = 'foo'
+
+/*
+Converts the property value of a dose-form-conversion-factor property to the conversion factor
+&lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@doses-per-day]
+*/
+//define function ToDoseFormConversionFactor(propertyValue FHIR.string):
+define TestToDoseFormConversionFactor: ConversionFactors.ToDoseFormConversionFactor(FHIR.string { value: '12345:12' }, null) = 12
+define TestToDoseFormConversionFactorInvalid: ConversionFactors.ToDoseFormConversionFactor(FHIR.string { value: 'foo' }, null) is null
+
+/*
+Converts the property value of a dose-form-conversion-factor property to the conversion factor
+if the property includes a doses-per-day value
+*/
+define TestToDoseFormDosesPerDayConversionFactor: ConversionFactors.ToDoseFormDosesPerDayConversionFactor(FHIR.string { value: '12345:12@0.5' }, 0.5) = 12
+define TestToDoseFormDosesPerDayConversionFactorInvalid: ConversionFactors.ToDoseFormDosesPerDayConversionFactor(FHIR.string { value: 'foo' }, null) is null
+
+/*
+Returns the conversion factor for a conversion-factor property
+NOTE: These functions are used to avoid use of _is_ and _as_
+*/
+//define function ToConversionFactor(propertyValue FHIR.decimal):
+define TestToConversionFactor: ConversionFactors.ToConversionFactor(FHIR.decimal { value: 12 }) = 12
+
+/*
+Looks up the conversion factor for the given ingredient, daily dose, and dose form from the
+configured conversion factor supplement, if available.
+
+If no conversion factor supplement is configured, returns null
+*/
+//define function LookupConversionFactor(ingredientCode System.Code, dailyDose System.Quantity, doseFormCode System.Code):
+// This function is tested in different test libraries, one for each code system supplement defined
+</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+xml</th></tr>
+              <tr><td><pre><code>Encoded data (242880 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+json</th></tr>
+              <tr><td><pre><code>Encoded data (1042704 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+    </table>
+</div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:15+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

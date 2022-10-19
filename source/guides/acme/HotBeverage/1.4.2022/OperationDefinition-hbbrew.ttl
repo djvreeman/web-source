@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/acme/HotBeverage/OperationDefinition/hbbrew> a fhir:OperationDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hbbrew"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HBbrew</h2><p>OPERATION: HBbrew</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/OperationDefinition/Brew</pre><div><p>The brew operation sends the BrewedBeverage resource to the Coffee/Tea brewing Device</p>\n</div><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>BevBrew</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#canonical\">canonical</a></td><td/><td><div><p>The BrewedBeverage Resource that dictates the beverage to be brewed and the requested additions (if any)</p>\n</div></td></tr></table><div><p>The effect of invoking this operation is to initiate the Brew operation on the appropriate device with the inclusion of the\nrequested additions</p>\n</div></div>"
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/OperationDefinition/Brew"];
+  fhir:OperationDefinition.version [ fhir:value "1.4.2022"];
+  fhir:OperationDefinition.name [ fhir:value "HBbrew"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2020-04-01T09:29:23+11:00"^^xsd:dateTime];
+  fhir:OperationDefinition.publisher [ fhir:value "Dave Pyke & John Moehrke"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Dave Pyke & John Moehrke" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/DavidPyke/HotBeverage" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "david@pyke.ca" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "David Pyke" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "david@pyke.ca" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ContactDetail.name [ fhir:value "John Moehrke" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "JohnMoehrke@gmail.com" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "The brew operation sends the BrewedBeverage resource to the Coffee/Tea brewing Device"];
+  fhir:OperationDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:OperationDefinition.code [ fhir:value "data-requirements"];
+  fhir:OperationDefinition.comment [ fhir:value "The effect of invoking this operation is to initiate the Brew operation on the appropriate device with the inclusion of the \r\n  requested additions"];
+  fhir:OperationDefinition.system [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.instance [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.parameter.name [ fhir:value "BevBrew" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "1"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The BrewedBeverage Resource that dictates the beverage to be brewed and the requested additions (if any)" ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "canonical" ];
+     fhir:OperationDefinition.parameter.targetProfile [
+       fhir:value "http://fhir.org/guides/acme/HotBeverage/StructureDefinition/BrewedBeverage";
+       fhir:index 0;
+       fhir:link <http://fhir.org/guides/acme/HotBeverage/StructureDefinition/BrewedBeverage>
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/acme/HotBeverage/OperationDefinition/hbbrew.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

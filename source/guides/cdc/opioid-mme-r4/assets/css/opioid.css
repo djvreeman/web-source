@@ -1,0 +1,81 @@
+#segment-footer > .container {
+  background-color: #105EAB;
+}
+.navbar-inverse {
+  background-color: #105EAB;
+}
+#hl7-nav {
+  line-height: 50px;
+  float: left;
+  margin-top: 16px;
+  color: #808080;
+}
+#hl7-nav a {
+  color: inherit;
+}
+#hl7-logo {
+  float: left;
+  margin-left: 6px;
+}
+#hl7-search {
+  line-height: 50px;
+  float: right;
+  margin-top: 16px;
+  color: maroon;
+}
+#hl7-search a {
+  color: inherit;
+}
+#fhir-nav {
+  line-height: 50px;
+  float: right;
+  margin-top: 16px;
+  color: #808080;
+}
+#fhir-logo {
+  float: right;
+  margin-left: 6px;
+}
+
+/* / Accordion Styling / */
+* {
+  box-sizing: border-box
+}
+details-wrapper {
+   width: 75vw;
+   box-shadow:0 0 1px 2px #BFBFBF;
+}
+
+details {
+   padding: .5rem;
+   font: 1rem/1.2 sans-serif;
+}
+
+summary {
+  font-size: 22px;
+  background-color: #f5f7f6;
+  list-style: none;
+  height:20%;
+  outline:none;
+}
+
+.title {
+  display:flex;
+  margin-left: 2%;
+  color: black;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+   padding-right: .25rem;
+   content: '+ '; /* Instead of Triangle closed */
+}
+
+details[open] summary::before {
+   padding-right: .25rem;
+   font-style: italic;
+   content: '- '; /* Instead of Triangle open */
+}

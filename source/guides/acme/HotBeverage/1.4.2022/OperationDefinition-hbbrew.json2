@@ -1,0 +1,79 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "hbbrew",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HBbrew</h2><p>OPERATION: HBbrew</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/OperationDefinition/Brew</pre><div><p>The brew operation sends the BrewedBeverage resource to the Coffee/Tea brewing Device</p>\n</div><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>BevBrew</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#canonical\">canonical</a></td><td/><td><div><p>The BrewedBeverage Resource that dictates the beverage to be brewed and the requested additions (if any)</p>\n</div></td></tr></table><div><p>The effect of invoking this operation is to initiate the Brew operation on the appropriate device with the inclusion of the\nrequested additions</p>\n</div></div>"
+  },
+  "url": "http://hl7.org/fhir/OperationDefinition/Brew",
+  "version": "1.4.2022",
+  "name": "HBbrew",
+  "status": "draft",
+  "kind": "operation",
+  "date": "2020-04-01T09:29:23+11:00",
+  "publisher": "Dave Pyke & John Moehrke",
+  "contact": [
+    {
+      "name": "Dave Pyke & John Moehrke",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/DavidPyke/HotBeverage"
+        },
+        {
+          "system": "email",
+          "value": "david@pyke.ca"
+        }
+      ]
+    },
+    {
+      "name": "David Pyke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "david@pyke.ca",
+          "use": "work"
+        }
+      ]
+    },
+    {
+      "name": "John Moehrke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "JohnMoehrke@gmail.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The brew operation sends the BrewedBeverage resource to the Coffee/Tea brewing Device",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "code": "data-requirements",
+  "comment": "The effect of invoking this operation is to initiate the Brew operation on the appropriate device with the inclusion of the \r\n  requested additions",
+  "system": false,
+  "type": true,
+  "instance": true,
+  "parameter": [
+    {
+      "name": "BevBrew",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "The BrewedBeverage Resource that dictates the beverage to be brewed and the requested additions (if any)",
+      "type": "canonical",
+      "targetProfile": [
+        "http://fhir.org/guides/acme/HotBeverage/StructureDefinition/BrewedBeverage"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "url": "http://fhir.org/templates/fhir.ca.template",
+  "package-id": "fhir.ca.template",
+  "ig-ver": "0.2.0",
+  "date": "Fri, 16 Sep, 2022 13:36:11 -0400",
+  "version": "5.0.0-ballot",
+  "tool": "5.0.0-ballot (3)"
+}

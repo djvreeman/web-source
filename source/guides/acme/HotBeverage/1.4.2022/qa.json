@@ -1,0 +1,12 @@
+{
+  "url": "http://fhir.org/guides/acme/HotBeverage/ImplementationGuide/fhir.acme.hotbeverage",
+  "name": "HotBeverage",
+  "package-id": "fhir.acme.hotbeverage",
+  "ig-ver": "1.4.2022",
+  "date": "Tue, 29 Mar, 2022 15:50:36 +1100",
+  "errs": 0,
+  "warnings": 0,
+  "hints": 0,
+  "version": "4.0.1",
+  "tool": "5.0.0-snapshot1 (3)"
+}

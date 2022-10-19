@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "HBSweetenersVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-HBSweeteners.html\"><code>http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners</code></a></li></ul></div>"
+  },
+  "url": "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBSweetenersVS",
+  "version": "1.4.2022",
+  "name": "HBSweetenersVS",
+  "title": "Sweeteners Additive Value Set",
+  "status": "active",
+  "date": "2022-03-29T15:50:36+11:00",
+  "publisher": "Dave Pyke & John Moehrke",
+  "contact": [
+    {
+      "name": "Dave Pyke & John Moehrke",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/DavidPyke/HotBeverage"
+        },
+        {
+          "system": "email",
+          "value": "david@pyke.ca"
+        }
+      ]
+    },
+    {
+      "name": "David Pyke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "david@pyke.ca",
+          "use": "work"
+        }
+      ]
+    },
+    {
+      "name": "John Moehrke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "JohnMoehrke@gmail.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Sweeteners liquids for use in coffee",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSweeteners"
+      }
+    ]
+  }
+}

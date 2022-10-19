@@ -1,0 +1,77 @@
+{
+  "package": "fhir.cdc.opioid-mme-r4",
+  "version": "3.0.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "840",
+  "extensions": [],
+  "profiles": {
+    "MedicationRequest": [
+      {
+        "url": "http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest",
+        "title": "MMEMedicationRequest"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/codesystem-author": [
+      "CodeSystem"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/codesystem-sourceReference": [
+      "CodeSystem"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/codesystem-warning": [
+      "CodeSystem"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-expression": [
+      "MedicationRequest.authoredOn",
+      "MedicationRequest.dispenseRequest.validityPeriod"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix": [
+      "Patient.contact.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthTime": [
+      "Patient.birthDate"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability": [
+      "CodeSystem",
+      "Library"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel": [
+      "CodeSystem",
+      "Library"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-rationale": [
+      "MedicationRequest"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-relatedArtifact": [
+      "CodeSystem"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-topic": [
+      "CodeSystem"
+    ]
+  }
+}

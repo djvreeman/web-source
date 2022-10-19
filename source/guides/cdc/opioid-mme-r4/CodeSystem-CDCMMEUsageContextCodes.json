@@ -1,0 +1,112 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "CDCMMEUsageContextCodes",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablecodesystem",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">mme-calculation<a name=\"CDCMMEUsageContextCodes-mme-calculation\"> </a></td><td>MME Calculation</td><td>The clinical task of calculating the Morphine Milligram Equivalent (MME) for a medication, or set of medications for a patient.</td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-sourceReference",
+      "valueUri": "https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-author",
+      "valueString": "Floyd Eisenberg, MD, MPH"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-author",
+      "valueString": "Kensaku Kawamoto, MD, PhD, MHS"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-author",
+      "valueString": "Robert McClure, MD"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-author",
+      "valueString": "Bryn Rhodes"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-topic",
+      "valueCodeableConcept": {
+        "text": "Opioid Prescribing"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-topic",
+      "valueCodeableConcept": {
+        "text": "Morphine Milligram Equivalent (MME)"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/codesystem-warning",
+      "valueMarkdown": "NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label."
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-relatedArtifact",
+      "valueRelatedArtifact": {
+        "type": "documentation",
+        "label": "Conversion Factors",
+        "display": "Conversion Factors",
+        "url": "http://fhir.org/guides/cdc/opioid-mme-r4/conversion-factors.html"
+      }
+    }
+  ],
+  "url": "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes",
+  "version": "3.0.0",
+  "name": "CDCMMEUsageContextCodes",
+  "title": "CDC MME Usage Context Codes",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-11-25T15:15:41+11:00",
+  "publisher": "Alphora",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://alphora.com"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System defines usage context codes used to configure the MME Conversion Factors Code System Supplement. If there is a single CodeSystem supplement to the RxNorm code system with a usage context of task and a code of 'mme-calculation', it will be used as the conversion factors for the calculator. See the Conversion Factors documentation for a description of the Code System supplements that can carry this configuration.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "840"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright 2019+ Centers for Disease Control and Prevention (CDC)",
+  "caseSensitive": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "mme-calculation",
+      "display": "MME Calculation",
+      "definition": "The clinical task of calculating the Morphine Milligram Equivalent (MME) for a medication, or set of medications for a patient."
+    }
+  ]
+}

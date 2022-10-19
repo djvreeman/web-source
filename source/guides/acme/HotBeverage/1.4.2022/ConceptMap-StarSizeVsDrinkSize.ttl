@@ -1,0 +1,117 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/acme/HotBeverage/ConceptMap/StarSizeVsDrinkSize> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "StarSizeVsDrinkSize"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>StarSizeVsDrinkSize (http://fhir.org/guides/acme/HotBeverage/ConceptMap/StarSizeVsDrinkSize)</h2><p>Mapping from (not specified) to <a href=\"ValueSet-HBDrinkSizeVS.html\">http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSizeVS</a></p><p>ACTIVE. Published on 2022-03-09 by Dave Pyke &amp; John Moehrke (Dave Pyke &amp; John Moehrke: <a href=\"https://github.com/DavidPyke/HotBeverage\">https://github.com/DavidPyke/H...</a>, <a href=\"mailto:david@pyke.ca\">david@pyke.ca</a>, David Pyke: <a href=\"mailto:david@pyke.ca\">david@pyke.ca</a>, John Moehrke: <a href=\"mailto:JohnMoehrke@gmail.com\">JohnMoehrke@gmail.com</a>). </p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td></tr><tr><td colspan=\"3\">Mapping from <code>https://customerservice.starbucks.com/app/answers/detail/a_id/3113</code> to <code>http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSize</code></td></tr><tr><td>Small</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>SMALL</td></tr><tr><td>Tall</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SMALL</td></tr><tr><td>Grande</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>MED</td></tr><tr><td>Venti</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>LARGE</td></tr><tr><td>Trenta</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equal\">is equal to</a></td><td>XLARGE</td></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://fhir.org/guides/acme/HotBeverage/ConceptMap/StarSizeVsDrinkSize"];
+  fhir:ConceptMap.version [ fhir:value "1.4.2022"];
+  fhir:ConceptMap.name [ fhir:value "StarSizeVsDrinkSize"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.date [ fhir:value "2022-03-09"^^xsd:date];
+  fhir:ConceptMap.publisher [ fhir:value "Dave Pyke & John Moehrke"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Dave Pyke & John Moehrke" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/DavidPyke/HotBeverage" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "david@pyke.ca" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "David Pyke" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "david@pyke.ca" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ContactDetail.name [ fhir:value "John Moehrke" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "JohnMoehrke@gmail.com" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ];
+  fhir:ConceptMap.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:ConceptMap.targetCanonical [
+     fhir:value "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSizeVS";
+     fhir:link <http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSizeVS>
+  ];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.source [ fhir:value "https://customerservice.starbucks.com/app/answers/detail/a_id/3113" ];
+     fhir:ConceptMap.group.target [ fhir:value "http://fhir.org/guides/acme/HotBeverage/ValueSet/HBDrinkSize" ];
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "Small" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SMALL" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equal" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "Tall" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SMALL" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "Grande" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MED" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equal" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "Venti" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LARGE" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equal" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "Trenta" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "XLARGE" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equal" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/acme/HotBeverage/ConceptMap/StarSizeVsDrinkSize.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

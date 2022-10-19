@@ -1,0 +1,93 @@
+[
+  {
+    "id": "CDCMMEClinicalConversionFactors",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEClinicalConversionFactors",
+    "version": "3.0.0",
+    "name": "CDCMMEClinicalConversionFactors"
+  },
+  {
+    "id": "CDCMMEUsageContextCodes",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes",
+    "version": "3.0.0",
+    "name": "CDCMMEUsageContextCodes"
+  },
+  {
+    "id": "cfct-example-CDCMMEClinicalConversionFactors",
+    "type": "CodeSystem",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/cfct-example-CDCMMEClinicalConversionFactors",
+    "version": "3.0.0",
+    "name": "ExampleCDCMMEClinicalConversionFactors"
+  },
+  {
+    "id": "fhir.cdc.opioid-mme-r4",
+    "type": "ImplementationGuide",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4",
+    "version": "3.0.0",
+    "name": "CDCMMECQLCalculator"
+  },
+  {
+    "id": "ConversionFactors",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors",
+    "version": "3.0.0",
+    "name": "ConversionFactors"
+  },
+  {
+    "id": "ConversionFactorsTests",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactorsTests",
+    "version": "3.0.0",
+    "name": "ConversionFactorsTests"
+  },
+  {
+    "id": "MMECalculator",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculator",
+    "version": "3.0.0",
+    "name": "MMECalculator"
+  },
+  {
+    "id": "MMECalculatorTests",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests",
+    "version": "3.0.0",
+    "name": "MMECalculatorTests"
+  },
+  {
+    "id": "OMTKData",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKData",
+    "version": "3.0.0",
+    "name": "OMTKData"
+  },
+  {
+    "id": "OMTKDataTests",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKDataTests",
+    "version": "3.0.0",
+    "name": "OMTKDataTests"
+  },
+  {
+    "id": "OMTKLogic",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic",
+    "version": "3.0.0",
+    "name": "OMTKLogic"
+  },
+  {
+    "id": "OMTKLogicTests",
+    "type": "Library",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogicTests",
+    "version": "3.0.0",
+    "name": "OMTKLogicTests"
+  },
+  {
+    "id": "mmemedicationrequest",
+    "type": "StructureDefinition",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest",
+    "version": "3.0.0",
+    "name": "MMEMedicationRequest"
+  }
+]

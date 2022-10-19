@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Opioid Management Terminology Knowledge Logic - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7.11"}
+    h3,h4,h5,h6{--heading-prefix:"7.11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Opioid Management Terminology Knowledge Logic</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-OMTKLogic.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-OMTKLogic.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-OMTKLogic.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Library: Opioid Management Terminology Knowledge Logic</h2>
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">OMTKLogic</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;">http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">3.0.0</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Name: </b></th>
+            <td style="padding-left: 4px;">OMTKLogic</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Opioid Management Terminology Knowledge Logic</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 4px;">active</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Experimental: </b></th>
+            <td style="padding-left: 4px;">false</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span>http://terminology.hl7.org/CodeSystem/library-type</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>logic-library</span>
+                        </p>
+                        
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2021-11-25T15:13:44+11:00</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">Alphora</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;">This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline.</td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Capability: </b></th>
+          <td style="padding-left: 4px;">
+            shareable computable publishable executable 
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Representation Level: </b></th>
+          <td style="padding-left: 4px;">
+            structured
+          </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Use Context: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>182888003</td>
+                        <td>Medication requested (situation)</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>82423001</td>
+                        <td>Chronic pain (finding)</td>
+                      </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Jurisdiction: </b></th>
+            <td style="padding-left: 4px;">840</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Usage: </b></th>
+            <td style="padding-left: 4px;">NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label.</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Copyright: </b></th>
+            <td style="padding-left: 4px;">Copyright 2019+ Centers for Disease Control and Prevention (CDC)</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Last Review Date: </b></th>
+            <td style="padding-left: 4px;">2020-09-26</td>
+        </tr>
+        
+        
+        
+        <tr>
+          <th scope="row"><b>Related Artifacts: </b></th>
+          <td style="padding-left: 4px;">
+            
+            <p><b>Documentation</b></p>
+            <ul>
+              
+                <li><a href="http://fhir.org/guides/cdc/opioid-mme-r4/mme-calculator.html">MME Calculator MME Calculator</a></li>
+              
+            </ul>
+            
+            
+            <p><b>References</b></p>
+            <ul>
+              
+                <li>Nelson SJ, Zeng K, Kilbourne J, Powell T, Moore R. Normalized names for clinical drugs: RxNorm at 6 years.<br/>J Am Med Inform Assoc. 2011 Jul-Aug;18(4)441-8. doi: 10.1136/amiajnl-2011-000116.<br/>Epub 2011 Apr 21. PubMed PMID: 21515544; PubMed Central PMCID: PMC3128404.<br/>[Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/)<br/><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/</a></li>
+              
+                <li>Schadow G, McDonald CJ. The Unified Code for Units of Measure. Regenstrief Institute, Inc. and the UCUM Organization, 2017. Version 2.1, Revision 442. http://unitsofmeasure.org<br/><a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></li>
+              
+                <li>Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain — United States, 2016. MMWR Recomm Rep 2016;65(No. RR-1):1–49. DOI: http://dx.doi.org/10.15585/mmwr.rr6501e1<br/><a href="http://dx.doi.org/10.15585/mmwr.rr6501e1">http://dx.doi.org/10.15585/mmwr.rr6501e1</a></li>
+              
+                <li>National Center for Injury Prevention and Control. Calculating total daily dose of opioids for safer dosage.<br/>Atlanta, GA: Centers for Disease Control and Prevention; https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf, accessed November 19th, 2020<br/><a href="https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf">https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf</a></li>
+              
+            </ul>
+            
+            
+            <p><b>Dependencies</b></p>
+            <ul>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKData|3.0.0</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors|3.0.0</li>
+              
+                <li>http://www.nlm.nih.gov/research/umls/rxnorm</li>
+              
+                <li>http://terminology.hl7.org/CodeSystem/usage-context-type</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes</li>
+              
+            </ul>
+            
+            
+            
+            
+            
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Parameters: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>In/Out</b></th></tr>
+              
+                <tr><th>ErrorLevel</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>ConversionFactorSupplementName</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><a id="cql-content"><b>Content: </b></a> text/cql</th></tr>
+              <tr><td><pre><code class="language-cql">library OMTKLogic version '3.0.0'
+
+/*
+This library provides functionality for calculating Morphine Milligram
+Equivalents (MME) for opioid medications, as described in the CDC Opioid
+Prescribing Guideline.
+
+The functionality in this library was developed based on the Java-based
+implementation described [here](http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-3-core-logic-processing-java-class),
+as well as the MME conversion calculation published as part of the CDC Opioid
+Prescribing Guideline.
+
+Note that the logic in this library (and specifically the conversion factors captured here)
+are based on the 2016 version of the publication available from the CDC here:
+https://www.cdc.gov/drugoverdose/modules/data-files.html
+
+National Center for Injury Prevention and Control. CDC compilation of benzodiazepines,
+muscle relaxants, stimulants, zolpidem, and opioid analgesics with oral morphine milligram
+equivalent conversion factors, 2018 version. Atlanta, GA: Centers for Disease Control
+and Prevention; 2018. Available at https://www.cdc.gov/drugoverdose/resources/data.html
+
+This version of the OMTKLogic library uses the OMTKData library as the
+source for drug ingredient and strength information, rather than the
+OMTK data source. This library has no external dependencies and so
+can run in an environment that supports pure CQL.
+
+NOTE: For performance, all terminology comparisons in this library use
+direct integer comparison of the RxNorm codes.
+
+This product uses publicly available data courtesy of the U.S. National Library of Medicine (NLM),
+National Institutes of Health, Department of Health and Human Services; NLM is not responsible for
+the product and does not endorse or recommend this or any other product.
+
+Nelson SJ, Zeng K, Kilbourne J, Powell T, Moore R. Normalized names for clinical drugs: RxNorm at 6 years.
+J Am Med Inform Assoc. 2011 Jul-Aug;18(4)441-8. doi: 10.1136/amiajnl-2011-000116.
+Epub 2011 Apr 21. PubMed PMID: 21515544; PubMed Central PMCID: PMC3128404.
+[Full text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/)
+*/
+
+include OMTKData version '3.0.0' called OMTKData
+include ConversionFactors version '3.0.0' called ConversionFactors
+
+codesystem &quot;RXNORM&quot;: 'http://www.nlm.nih.gov/research/umls/rxnorm'
+
+parameter ErrorLevel String default 'Warning'
+
+define function Msg(code String, errorLevel String, message String):
+  {
+    code: code,
+    errorLevel: errorLevel,
+    message: message
+  }
+
+/*
+Normalizes the input units to UCUM units
+
+The values listed here are the only ones currently present in the OMTK data
+
+Based on the HL7 UCUM subset here:
+http://download.hl7.de/documents/ucum/ucumdata.html
+*/
+define function ToUCUM(unit String):
+  case unit
+    when 'MG' then 'mg'
+    when 'MG/ACTUAT' then 'mg/{actuat}'
+    when 'MG/HR' then 'mg/h'
+    when 'MG/ML' then 'mg/mL'
+    else Message(null, true, 'OMTKLogic.ToUCUM.UnknownUnit', ErrorLevel, 'Unknown unit ' &amp; unit)
+  end
+
+define function ToUCUM_Msg(unit String):
+  unit U
+    let result: ToUCUM(U)
+    return {
+      result: result,
+      message:
+        if result is null then
+          Msg('OMTKLogic.ToUCUM.UnknownUnit', ErrorLevel, 'Unknown unit' &amp; unit)
+        else
+          null
+    }
+
+/*
+  Calculates daily frequency given frequency within a period
+*/
+define function ToDaily(frequency Integer, period Quantity):
+  case period.unit
+    when 'h' then frequency * (24.0 / period.value)
+    when 'min' then frequency * (24.0 / period.value) * 60
+    when 's' then frequency * (24.0 / period.value) * 60 * 60
+    when 'd' then frequency * (24.0 / period.value) / 24
+    when 'wk' then frequency * (24.0 / period.value) / (24 * 7)
+    when 'mo' then frequency * (24.0 / period.value) / (24 * 30) /* assuming 30 days in month */
+    when 'a' then frequency * (24.0 / period.value) / (24 * 365) /* assuming 365 days in year */
+    when 'hour' then frequency * (24.0 / period.value)
+    when 'minute' then frequency * (24.0 / period.value) * 60
+    when 'second' then frequency * (24.0 / period.value) * 60 * 60
+    when 'day' then frequency * (24.0 / period.value) / 24
+    when 'week' then frequency * (24.0 / period.value) / (24 * 7)
+    when 'month' then frequency * (24.0 / period.value) / (24 * 30) /* assuming 30 days in month */
+    when 'year' then frequency * (24.0 / period.value) / (24 * 365) /* assuming 365 days in year */
+    when 'hours' then frequency * (24.0 / period.value)
+    when 'minutes' then frequency * (24.0 / period.value) * 60
+    when 'seconds' then frequency * (24.0 / period.value) * 60 * 60
+    when 'days' then frequency * (24.0 / period.value) / 24
+    when 'weeks' then frequency * (24.0 / period.value) / (24 * 7)
+    when 'months' then frequency * (24.0 / period.value) / (24 * 30) /* assuming 30 days in month */
+    when 'years' then frequency * (24.0 / period.value) / (24 * 365) /* assuming 365 days in year */
+    else Message(null, true, 'OMTKLogic.ToDaily.UnknownUnit', ErrorLevel, 'Unknown unit ' &amp; period.unit)
+  end
+
+define function ToDaily_Msg(frequency Integer, period Quantity):
+  frequency F
+    let result: ToDaily(frequency, period)
+    return {
+      result: result,
+      message:
+        if result is null then
+          Msg('OMTKLogic.ToDaily.UnknownUnit', ErrorLevel, 'Unknown unit ' &amp; period.unit)
+        else
+          null
+    }
+
+/*
+Returns the opioid ingredients and their strengths that
+make up the drug identified by the given rxNormCode as a list of tuples:
+
+List&lt;Tuple {
+  rxNormCode Code,
+  doseFormCode Code,
+  doseFormName String,
+  ingredientCode Code,
+  ingredientName String,
+  strength Quantity
+}&gt;
+*/
+
+/*
+GetIngredients:
+  List&lt;{
+    rxNormCode Code,
+    doseFormCode Code,
+    ingredientCode code,
+    strength Quantity
+  }&gt;
+*/
+define function GetIngredients(rxNormCode Code):
+  OMTKData.DrugIngredients DI
+    where DI.drugCode = ToInteger(rxNormCode.code)
+    return {
+      rxNormCode: Code { code: ToString(DI.drugCode), system: 'http://www.nlm.nih.gov/research/umls/rxnorm', display: DI.drugName },
+      doseFormCode: Code { code: ToString(DI.doseFormCode), system: 'http://www.nlm.nih.gov/research/umls/rxnorm', display: DI.doseFormName },
+      ingredientCode: Code { code: ToString(DI.ingredientCode), system: 'http://www.nlm.nih.gov/research/umls/rxnorm', display: DI.ingredientName },
+      strength: Quantity {
+        value: DI.strengthValue,
+        unit: ToUCUM(DI.strengthUnit)
+      }
+    }
+
+/*
+Returns the first RxNorm code in the given concept that matches a drug code
+specified in OMTKData.
+*/
+define function GetMedicationCode(concept Concept):
+  First(
+    ((concept.codes) C
+      where C.system = 'http://www.nlm.nih.gov/research/umls/rxnorm'
+        return singleton from (
+          OMTKData.DrugIngredients DI
+            where DI.drugCode = ToInteger(C.code)
+            return Code {
+              code: ToString(DI.drugCode),
+              system: 'http://www.nlm.nih.gov/research/umls/rxnorm',
+              display: DI.drugName
+            }
+        )
+    ) X
+      where X is not null
+  )
+
+/*
+Returns the display of the given concept, if present, otherwise, looks up medication
+names for any RxNormCodes within the concept using the GetMedicationName function
+*/
+define function GetMedicationConceptName(concept Concept):
+  if concept.display is null then
+    First(
+      (concept.codes) C
+        where C.system = 'http://www.nlm.nih.gov/research/umls/rxnorm'
+        return GetMedicationName(C)
+    )
+  else
+    concept.display
+
+/*
+Returns the display of the given code, if present, otherwise looks it up from the OMTK data
+*/
+define function GetMedicationName(rxNormCode Code):
+  if rxNormCode.display is null then
+    singleton from (
+      OMTKData.DrugIngredients DI
+        where DI.drugCode = ToInteger(rxNormCode.code)
+        return DI.drugName
+    )
+    else rxNormCode.display
+
+/*
+Returns the display of the given ingredient, if present, otherwise looks it up from the OMTK data
+*/
+define function GetIngredientName(ingredientCode Code):
+  if ingredientCode.display is null then
+    singleton from (
+      OMTKData.DrugIngredients DI
+        where DI.ingredientCode = ToInteger(ingredientCode.code)
+        return DI.ingredientName
+    )
+    else ingredientCode.display
+
+/*
+Returns the display of the given dose form, if present, otherwise looks it up from the OMTK data
+*/
+define function GetDoseFormName(doseFormCode Code):
+  if doseFormCode.display is null then
+    singleton from (
+      OMTKData.DrugIngredients DI
+        where DI.doseFormCode = ToInteger(doseFormCode.code)
+        return DI.doseFormName
+    )
+    else doseFormCode.display
+
+/*
+  Removes the last per argument from a unit
+  NOTE: Rewrote to not use LastPositionOf, since that function is not implemented in the JS engine
+  https://github.com/cqframework/cql-execution/issues/147
+*/
+define function StripPer(unit String):
+  unit X
+    let split: Split(unit, '/'),
+      splitCount: Count(split)
+    return
+      if splitCount &gt; 1 then
+        Substring(unit, 0, Length(unit) - Length(split[splitCount - 1]) - 1)
+      else
+        unit
+
+/*
+define function StripPer(unit String):
+  if LastPositionOf('/', unit) &gt;= 0
+    then Substring(unit, 0, LastPositionOf('/', unit))
+    else unit
+*/
+
+/*
+  Calculates daily dose for a specific ingredient based on the ingredient strength,
+  dose form, dose quantity, and daily frequency.
+  In addition, returns a textual description of the daily dose.
+  Tuple { result: Quantity, description: String }
+*/
+define function GetDailyDose(ingredientCode Code, strength Quantity, doseFormCode Code, doseQuantity Quantity, dosesPerDay Decimal):
+  case
+    when dosesPerDay is null or doseQuantity is null or strength is null or strength.value is null or strength.unit is null then
+      {
+        result: null as Quantity,
+        description: 'Missing doses per day, dose quantity, and/or strength'
+      }
+	  /* if patch --&gt; daily dose = dose value (e.g, number patches with doseQuantity unit = &quot;patch&quot;) * per-hour strength */
+    when ToInteger(doseFormCode.code) = 316987 then
+      /* buprenorphine or fentanyl patch */
+      if ToInteger(ingredientCode.code) in { 1819, 4337 } then
+        (Quantity { value: dosesPerDay * doseQuantity.value * strength.value, unit: strength.unit }) dailyDose
+          return {
+            result: dailyDose,
+            description: GetIngredientName(ingredientCode) &amp; ' patch: ' &amp; ToString(doseQuantity.value) &amp; ' * ' &amp; ToString(dosesPerDay) &amp; '/d * ' &amp; ToString(strength) &amp; ' = ' + ToString(dailyDose)
+          }
+      else
+        {
+          result: null as Quantity,
+          description: 'Unknown patch ingredient: ' &amp; ingredientCode.code &amp; ':' &amp; ingredientCode.display
+        }
+
+    /* if dose unit in actual mass units (mg or ug -- when it's a single med) --&gt; daily dose = numTimesPerDay * dose */
+    when doseQuantity.unit in { 'mg', 'ug' } then
+      (Quantity { value: dosesPerDay * doseQuantity.value, unit: doseQuantity.unit }) dailyDose
+        return {
+          result: dailyDose,
+          description: GetIngredientName(ingredientCode) + ' ' + GetDoseFormName(doseFormCode) + ': ' + ToString(dosesPerDay) + '/d * ' + ToString(doseQuantity) + ' = ' + ToString(dailyDose)
+        }
+
+    /* if doseQuantity is in actual volume units (mL) --&gt; daily dose = numTimesPerDay * dose * strength */
+    when doseQuantity.unit = 'mL' and (PositionOf('/mL', strength.unit) = Length(strength.unit) - 3) then
+      (Quantity { value: dosesPerDay * doseQuantity.value * strength.value, unit: StripPer(strength.unit) }) dailyDose
+        return {
+          result: dailyDose,
+          description: GetIngredientName(ingredientCode) + ' ' + GetDoseFormName(doseFormCode) + ': ' + ToString(dosesPerDay) + '/d * ' + ToString(doseQuantity) + ' * ' &amp; ToString(strength) &amp; ' = ' + ToString(dailyDose)
+        }
+
+		/* if doseQuantity is not in actual units (e.g., 1 tab, 1 spray -- when it's a combo med with a unit of tablet, or it's mg/actuat) --&gt;  daily dose = numTimesPerDay * dose value * strength value */
+    else
+      (Quantity { value: dosesPerDay * doseQuantity.value * strength.value, unit: StripPer(strength.unit) }) dailyDose
+        return {
+          result: dailyDose,
+          description: GetIngredientName(ingredientCode) + ' ' + GetDoseFormName(doseFormCode) + ': ' + ToString(dosesPerDay) + '/d * ' + ToString(doseQuantity) + ' * ' + ToString(strength) + ' = ' + ToString(dailyDose)
+        }
+  end
+
+/*
+  Calculates MMEs for the given input prescription information and returns it
+  as a list of tuples:
+
+  List&lt;Tuple {
+    rxNormCode Code,
+    doseFormCode Code,
+    doseQuantity Quantity,
+    dosesPerDay Decimal,
+    ingredientCode Code,
+    strength Quantity,
+    dailyDose Quantity,
+    dailyDoseDescription String,
+    conversionFactor Decimal,
+    mme Quantity
+  }&gt;
+*/
+define function CalculateMMEs(medications List&lt;Tuple { rxNormCode Code, doseQuantity Quantity, dosesPerDay Decimal }&gt;):
+  Flatten(
+    medications M
+      let Ingredients: GetIngredients(M.rxNormCode)
+      return
+        Ingredients I
+          let
+            adjustedDoseQuantity: M.doseQuantity,
+            dailyDose: GetDailyDose(I.ingredientCode, I.strength, I.doseFormCode, adjustedDoseQuantity, M.dosesPerDay),
+            factor: ConversionFactors.GetConversionFactor(I.ingredientCode, dailyDose.result, I.doseFormCode, M.dosesPerDay)
+          return {
+            rxNormCode: M.rxNormCode,
+            doseFormCode: I.doseFormCode,
+            doseQuantity: adjustedDoseQuantity,
+            dosesPerDay: M.dosesPerDay,
+            ingredientCode: I.ingredientCode,
+            strength: I.strength,
+            dailyDose: dailyDose.result,
+            dailyDoseDescription: dailyDose.description &amp; (' * factor: ' + Coalesce(ToString(factor), 'No conversion factor available')),
+            conversionFactor: factor,
+            mme: Quantity(
+              Round(dailyDose.result.value * factor, 1),
+              '{MME}/d'
+            )
+          }
+  )
+
+define function Quantity(value Decimal, unit String):
+  if value is not null then
+    Quantity { value: value, unit: unit }
+  else
+    null
+</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+xml</th></tr>
+              <tr><td><pre><code>Encoded data (391084 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+json</th></tr>
+              <tr><td><pre><code>Encoded data (2041164 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+    </table>
+</div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:13+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

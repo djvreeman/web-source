@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorVersion="1.3" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="9">
+         <a:s>library MMECalculatorTests version '3.0.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="MMECalculatorTests" system="http://fhir.org/guides/cdc/opioid-mme-r4" version="3.0.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-mme-r4/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:37" localIdentifier="MMECalculator" path="http://fhir.org/guides/cdc/opioid-mme-r4/MMECalculator" version="3.0.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>MMECalculator</a:s>
+               </a:s>
+               <a:s> version '3.0.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="7:1-7:33" localIdentifier="OMTKLogic" path="http://fhir.org/guides/cdc/opioid-mme-r4/OMTKLogic" version="3.0.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OMTKLogic</a:s>
+               </a:s>
+               <a:s> version '3.0.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="8:1-8:32" localIdentifier="OMTKData" path="http://fhir.org/guides/cdc/opioid-mme-r4/OMTKData" version="3.0.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OMTKData</a:s>
+               </a:s>
+               <a:s> version '3.0.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <contexts>
+      <def locator="10:1-10:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="10:1-10:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="10:1-10:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="9" locator="37:1-37:60" name="TotalMME" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="9">
+               <a:s>//define MedicationRequestCode: [MedicationRequest] M return M.medication
+//define MedicationRequestRxNormCode: [MedicationRequest] M return OMTKLogic.GetMedicationCode(M.medication)
+/*
+define MedicationRequestRxNormCode:
+  (([MedicationRequest] M return M.medication C return FHIRHelpers.ToConcept(C)).codes) X
+    where X.system = 'http://www.nlm.nih.gov/research/umls/rxnorm'
+      return {
+        drugCode: X.code,
+        code:
+          singleton from (
+            OMTKData.DrugIngredients DI
+              where DI.drugCode = ToInteger(X.code)
+              return Code {
+                code: ToString(DI.drugCode),
+                system: 'http://www.nlm.nih.gov/research/umls/rxnorm',
+                display: DI.drugName
+              }
+          )
+      }
+*/
+//define MedicationRequestRxNormCodings:
+//  [MedicationRequest] M
+//    return (M.medication.coding C where C.system = 'http://www.nlm.nih.gov/research/umls/rxnorm' return C.code)
+//define MedicationRequests: [MedicationRequest]
+//define Prescriptions: MMECalculator.Prescriptions([MedicationRequest])define TotalMME: </a:s>
+               <a:s r="8">
+                  <a:s r="6">
+                     <a:s>MMECalculator</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="8">
+                     <a:s>TotalMME(</a:s>
+                     <a:s r="7">
+                        <a:s>[MedicationRequest]</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="8" locator="37:18-37:60" name="TotalMME" libraryName="MMECalculator" xsi:type="FunctionRef">
+            <operand localId="7" locator="37:41-37:59" dataType="fhir:MedicationRequest" templateId="http://hl7.org/fhir/StructureDefinition/MedicationRequest" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+   </statements>
+</library>

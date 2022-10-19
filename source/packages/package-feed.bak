@@ -1,14 +1,214 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:fhir="http://hl7.org/fhir/feed" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
   <channel>
     <title>FHIR Foundation FHIR Support Packages</title>
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/packages/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Sat, 30 Oct 2021 09:12:47</lastBuildDate>
+    <lastBuildDate>Tue, 18 Oct 2022 10:08:57 +1100</lastBuildDate>
     <atom:link href="http://fhir.org/packages/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>fhir.dicom#2022.4.20221006</title>
+      <description>First release for 2022d</description>
+      <link>http://fhir.org/packages/fhir.dicom/2022.4.20221006/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.dicom/2022.4.20221006/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 18 Oct 2022 10:08:57 +1100</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.1.2</title>
+      <description>Add new ICONS for CDS Hooks Json support</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.1.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.1.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Tool</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Mon, 10 Oct 2022 05:11:16 +1100</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.8.0</title>
+      <description>Updated release</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.8.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.8.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Tue, 04 Oct 2022 05:20:10 +1100</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.12.0</title>
+      <description>Update FHIR Dependency version</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.12.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.12.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Wed, 27 Jul 2022 06:40:52</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.11.0</title>
+      <description>Update PHINVads value sets</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.11.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.11.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Tue, 26 Jul 2022 10:11:14</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.1.1</title>
+      <description>Add CapabilityStatement Difference template</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.1.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.1.1/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Tool</fhir:kind>
+      <fhir:version>current</fhir:version>
+      <pubDate>Fri, 24 Jun 2022 05:07:49</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r3#0.20.0</title>
+      <description>Update Snomed IPS Free Set</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r3/0.20.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r3/0.20.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>IG</fhir:kind>
+      <fhir:version>3.0.2</fhir:version>
+      <pubDate>Wed, 22 Jun 2022 11:07:05</pubDate>
+    </item>
+    <item>
+      <title>fhir.tx.support.r4#0.19.0</title>
+      <description>Update Snomed IPS Free Set</description>
+      <link>http://fhir.org/packages/fhir.tx.support.r4/0.19.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.tx.support.r4/0.19.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>IG</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Wed, 22 Jun 2022 11:07:04</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.7.0</title>
+      <description>Add expansions to package</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.7.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.7.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Sat, 11 Jun 2022 09:04:37</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.10.0</title>
+      <description>Actually Fix stated FHIR version</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.10.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.10.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Mon, 06 Jun 2022 10:31:31</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.6.0</title>
+      <description>Fix stated FHIR version</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.6.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.6.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Sun, 05 Jun 2022 08:43:36</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.9.0</title>
+      <description>Fix stated FHIR version</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.9.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.9.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0</fhir:version>
+      <pubDate>Sun, 05 Jun 2022 08:43:32</pubDate>
+    </item>
+    <item>
+      <title>us.nlm.vsac#0.5.0</title>
+      <description>Update for new value sets (May 2022)</description>
+      <link>http://fhir.org/packages/us.nlm.vsac/0.5.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.nlm.vsac/0.5.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0</fhir:version>
+      <pubDate>Thu, 26 May 2022 11:41:10</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.pubpack#0.1.0</title>
+      <description>Add icons for conformance rendering</description>
+      <link>http://fhir.org/packages/hl7.fhir.pubpack/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.pubpack/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 26 May 2022 11:41:06</pubDate>
+    </item>
+    <item>
+      <title>us.cdc.phinvads#0.8.0</title>
+      <description>Update from Source</description>
+      <link>http://fhir.org/packages/us.cdc.phinvads/0.8.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/us.cdc.phinvads/0.8.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0</fhir:version>
+      <pubDate>Thu, 26 May 2022 03:14:49</pubDate>
+    </item>
+    <item>
+      <title>fhir.dicom#2022.1.20220124</title>
+      <description>First release for 2022a</description>
+      <link>http://fhir.org/packages/fhir.dicom/2022.1.20220124/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/fhir.dicom/2022.1.20220124/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Conformance</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Tue, 15 Mar 2022 03:24:36</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.11</title>
+      <description>Add missing modifier flags to elements in R2</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.11/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.11/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Wed, 09 Mar 2022 03:54:45</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.10</title>
+      <description>Add missing modifier flags to elements in R3</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.10/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.10/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Wed, 09 Mar 2022 09:34:11</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.9</title>
+      <description>Update R5 Definitions using enhanced format</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.9/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.9/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>Tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 03 Mar 2022 12:28:01</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.xver-extensions#0.0.7</title>
+      <description>Add FHIR 4.6 to the package</description>
+      <link>http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.7/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/packages/hl7.fhir.xver-extensions/0.0.7/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.tool</fhir:kind>
+      <fhir:version>4.0.1</fhir:version>
+      <pubDate>Thu, 04 Nov 2021 09:37:42</pubDate>
+    </item>
     <item>
       <title>fhir.tx.support.r3#0.19.0</title>
       <description>Move DICOM content to fhir.dicom package</description>

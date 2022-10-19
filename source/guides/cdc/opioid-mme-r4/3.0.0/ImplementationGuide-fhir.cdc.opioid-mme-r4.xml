@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="fhir.cdc.opioid-mme-r4"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CDCMMECQLCalculator</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4</pre><div><p>Opioid Morphine Milligram Equivalent (MME) calculation logic in FHIR and Clinical Quality Language (CQL)</p>
+</div></div>
+  </text>
+  <url value="http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4"/>
+  <version value="3.0.0"/>
+  <name value="CDCMMECQLCalculator"/>
+  <title value="CDC MME CQL Calculator"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2021-11-25T15:13:44+11:00"/>
+  <publisher value="Alphora"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://alphora.com"/>
+    </telecom>
+  </contact>
+  <description value="Opioid Morphine Milligram Equivalent (MME) calculation logic in FHIR and Clinical Quality Language (CQL)"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="840"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Copyright 2019+ Centers for Disease Control and Prevention (CDC)"/>
+  <packageId value="fhir.cdc.opioid-mme-r4"/>
+  <license value="Apache-2.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="cpg">
+    <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"/>
+    <packageId value="hl7.fhir.uv.cpg"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <dependsOn id="cqf">
+    <uri value="http://fhir.org/guides/cqf/ImplementationGuide/fhir.cqf.common"/>
+    <packageId value="fhir.cqf.common"/>
+    <version value="4.0.1"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2019+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="templates/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://fhir.org/guides/cdc/opioid-mme-r4/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <grouping id="medicationrequest-profile-spreadsheet.xml">
+      <name value="MMEMedicationRequest"/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/cfct-example"/>
+      </reference>
+      <name value="Conversion Factors Clinical Tests - Patient"/>
+      <description value="Test patient for the Conversion Factors Clinical Tests"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/cft-example"/>
+      </reference>
+      <name value="Conversion Factors Tests - Patient"/>
+      <description value="Test patient for the Conversion Factors Tests"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/example-rec-05-mme-greater-than-fifty-context"/>
+      </reference>
+      <name value="MME Calculator Tests - Greater than Fifty - MedicationRequest"/>
+      <description value="Test MedicationRequest for the Greater than Fifty test case of the MME Calculator"/>
+      <exampleCanonical value="http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="GuidanceResponse"/>
+      </extension>
+      <reference>
+        <reference value="GuidanceResponse/patient-mme-greater-than-fifty"/>
+      </reference>
+      <name value="MME Calculator Tests - Greater than Fifty - GuidanceResponse"/>
+      <description value="Expected GuidanceResponse result for the Greater than Fifty test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-mme-greater-than-fifty"/>
+      </reference>
+      <name value="MME Calculator Tests - Greater than Fifty - Patient"/>
+      <description value="Test patient for the Greater than Fifty test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/example-rec-05-mme-less-than-fifty-context"/>
+      </reference>
+      <name value="MME Calculator Tests - Less than Fifty - MedicationRequest"/>
+      <description value="Test MedicationRequest for the Less than Fifty test case of the MME Calculator"/>
+      <exampleCanonical value="http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="GuidanceResponse"/>
+      </extension>
+      <reference>
+        <reference value="GuidanceResponse/patient-mme-less-than-fifty"/>
+      </reference>
+      <name value="MME Calculator Tests - Less than Fifty - GuidanceResponse"/>
+      <description value="Expected GuidanceResponse result for the Less than Fifty test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-mme-less-than-fifty"/>
+      </reference>
+      <name value="MME Calculator Tests - Less than Fifty - Patient"/>
+      <description value="Test patient for the Less than Fifty test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/example-rec-05-mme-with-timeofday-context"/>
+      </reference>
+      <name value="MME Calculator Tests - With Time of Day - MedicationRequest"/>
+      <description value="Test MedicationRequest for the With Time of Day test case of the MME Calculator"/>
+      <exampleCanonical value="http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="GuidanceResponse"/>
+      </extension>
+      <reference>
+        <reference value="GuidanceResponse/patient-mme-with-timeofday"/>
+      </reference>
+      <name value="MME Calculator Tests - With Time of Day - GuidanceResponse"/>
+      <description value="Expected GuidanceResponse result for the With Time of Day test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-mme-with-timeofday"/>
+      </reference>
+      <name value="MME Calculator Tests - With Time of Day - Patient"/>
+      <description value="Test patient for the With Time of Day test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-no-meds"/>
+      </reference>
+      <name value="MME Calculator Tests - No Meds - Patient"/>
+      <description value="Test patient for the No Meds test case of the MME Calculator"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/ConversionFactors"/>
+      </reference>
+      <name value="Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4"/>
+      <description value="This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/ConversionFactorsTests"/>
+      </reference>
+      <name value="Tests for the Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4"/>
+      <description value="This library contains logic to test configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/MMECalculator"/>
+      </reference>
+      <name value="Morphine Milligram Equivalent (MME) Calculator for FHIR R4"/>
+      <description value="This library contains logic to surface the MME calculation functionality provided by the OMTKLogic library by extracting appropriate information from FHIR R4 MedicationRequest resource."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/MMECalculatorTests"/>
+      </reference>
+      <name value="Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4"/>
+      <description value="This library contains tests to validate the functionality of the FHIR R4 MME calculator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/OMTKData"/>
+      </reference>
+      <name value="Opioid Management Terminology Knowledge Data"/>
+      <description value="This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.&#xD;&#xA;The content was produced using the process described [here](http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base)."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/OMTKDataTests"/>
+      </reference>
+      <name value="Tests for the Opioid Management Terminology Knowledge Data Library"/>
+      <description value="This library contains tests of the OMTKData library"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/OMTKLogic"/>
+      </reference>
+      <name value="Opioid Management Terminology Knowledge Logic"/>
+      <description value="This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/OMTKLogicTests"/>
+      </reference>
+      <name value="Tests of the Opioid Management Terminology Knowledge Logic library"/>
+      <description value="This library tests the MME calculator provided by the OMTKLogic library"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CDCMMEClinicalConversionFactors"/>
+      </reference>
+      <name value="CDC MME Clinical Conversion Factors"/>
+      <description value="This Code System Supplement defines clinical conversion factors for calculating Morphine Milligram Equivalence (MME), as described in the CDC Opioid Prescribing Guideline. The supplement defines conversions factors for ingredients in one of 3 ways: 1, as a direct conversion factor for the ingredient, 2, as a dose-form-specific conversion factor for the ingredient, and 3, as a dose-quantity-ranged conversion factor for the ingredient. See the descriptions for each property for information on how the values are represented for the different conversion factors. For a given ingredient, only one of &#39;dose-form&#39; or &#39;dose-range&#39; will be present, with or without an ingredient-specific conversion factor. The properties together will enable a unique conversion factor to be determined if the input is within the expected range. If the input is outside the expected range, and there is no ingredient-specific conversion-factor specified, implementations should indicate a conversion factor could not be determined from the supplied information. All conversion factors supplied in this supplement are in &#39;mg/d&#39;."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CDCMMEUsageContextCodes"/>
+      </reference>
+      <name value="CDC MME Usage Context Codes"/>
+      <description value="This Code System defines usage context codes used to configure the MME Conversion Factors Code System Supplement. If there is a single CodeSystem supplement to the RxNorm code system with a usage context of task and a code of &#39;mme-calculation&#39;, it will be used as the conversion factors for the calculator. See the Conversion Factors documentation for a description of the Code System supplements that can carry this configuration."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cfct-example-CDCMMEClinicalConversionFactors"/>
+      </reference>
+      <name value="Example CDC MME Clinical Conversion Factors"/>
+      <description value="**Example Code System to support Testing (Copy of ClinicalConversion Factors)**. This Code System Supplement is a copy of the CDC Clinical Conversion Factors code system supplement to support testing. See the original CDC Clinical Conversion Factors code system supplement for documentation of the code system supplement properties."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mmemedicationrequest"/>
+      </reference>
+      <name value="MMEMedicationRequest"/>
+      <description value="Defines the minimum expectations for a MedicationRequest that can be used to successfully calculate Morphine Milligram Equivalent (MME)/day according to the CDC Opioid Prescribing guideline"/>
+      <groupingId value="medicationrequest-profile-spreadsheet.xml"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home Page"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="mme-calculator.html"/>
+        <title value="MME Calculator"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="conversion-factors.html"/>
+        <title value="Conversion Factors"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="omtkdata-processing.html"/>
+        <title value="OMTK Data Processing"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="license.html"/>
+        <title value="License"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/pagecontent"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources/activitydefinition"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources/capabilitystatement"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources/library"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources/measure"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources/plandefinition"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources/questionnaire"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary/codesystem"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary/valueset"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/tests/ConversionFactorsClinicalTests/cfct-example"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/tests/ConversionFactorsTests/cft-example"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/tests/MMECalculatorTests/patient-mme-greater-than-fifty"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/tests/MMECalculatorTests/patient-mme-less-than-fifty"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/tests/MMECalculatorTests/patient-mme-with-timeofday"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/tests/MMECalculatorTests/patient-no-meds"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

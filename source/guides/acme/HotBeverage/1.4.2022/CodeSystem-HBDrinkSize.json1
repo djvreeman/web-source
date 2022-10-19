@@ -1,0 +1,91 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "HBDrinkSize",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">SMALL<a name=\"HBDrinkSize-SMALL\"> </a></td><td>Small</td><td>You call that a coffee?</td></tr><tr><td style=\"white-space:nowrap\">MED<a name=\"HBDrinkSize-MED\"> </a></td><td>Medium</td><td>Not enough</td></tr><tr><td style=\"white-space:nowrap\">LARGE<a name=\"HBDrinkSize-LARGE\"> </a></td><td>Large</td><td>That will get you started</td></tr><tr><td style=\"white-space:nowrap\">XLARGE<a name=\"HBDrinkSize-XLARGE\"> </a></td><td>Extra Large</td><td>Single meeting size</td></tr><tr><td style=\"white-space:nowrap\">PROG<a name=\"HBDrinkSize-PROG\"> </a></td><td>Programmer size</td><td>Just over a pot</td></tr></table></div>"
+  },
+  "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBDrinkSize",
+  "version": "1.4.2022",
+  "name": "HBDrinkSize",
+  "title": "Drink Size",
+  "status": "active",
+  "date": "2022-03-29T15:50:36+11:00",
+  "publisher": "Dave Pyke & John Moehrke",
+  "contact": [
+    {
+      "name": "Dave Pyke & John Moehrke",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/DavidPyke/HotBeverage"
+        },
+        {
+          "system": "email",
+          "value": "david@pyke.ca"
+        }
+      ]
+    },
+    {
+      "name": "David Pyke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "david@pyke.ca",
+          "use": "work"
+        }
+      ]
+    },
+    {
+      "name": "John Moehrke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "JohnMoehrke@gmail.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "How much did you want?",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": false,
+  "content": "complete",
+  "count": 5,
+  "concept": [
+    {
+      "code": "SMALL",
+      "display": "Small",
+      "definition": "You call that a coffee?"
+    },
+    {
+      "code": "MED",
+      "display": "Medium",
+      "definition": "Not enough"
+    },
+    {
+      "code": "LARGE",
+      "display": "Large",
+      "definition": "That will get you started"
+    },
+    {
+      "code": "XLARGE",
+      "display": "Extra Large",
+      "definition": "Single meeting size"
+    },
+    {
+      "code": "PROG",
+      "display": "Programmer size",
+      "definition": "Just over a pot"
+    }
+  ]
+}

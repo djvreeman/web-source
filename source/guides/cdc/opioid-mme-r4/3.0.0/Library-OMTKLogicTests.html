@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Tests of the Opioid Management Terminology Knowledge Logic library - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7.12"}
+    h3,h4,h5,h6{--heading-prefix:"7.12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tests of the Opioid Management Terminology Knowledge Logic library</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-OMTKLogicTests.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-OMTKLogicTests.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-OMTKLogicTests.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Library: Tests of the Opioid Management Terminology Knowledge Logic library</h2>
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">OMTKLogicTests</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;">http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogicTests</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">3.0.0</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Name: </b></th>
+            <td style="padding-left: 4px;">OMTKLogicTests</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Tests of the Opioid Management Terminology Knowledge Logic library</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 4px;">active</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Experimental: </b></th>
+            <td style="padding-left: 4px;">true</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span>http://terminology.hl7.org/CodeSystem/library-type</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>logic-library</span>
+                        </p>
+                        
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2021-11-25T15:13:44+11:00</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">Alphora</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;">This library tests the MME calculator provided by the OMTKLogic library</td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Capability: </b></th>
+          <td style="padding-left: 4px;">
+            shareable computable publishable executable 
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Representation Level: </b></th>
+          <td style="padding-left: 4px;">
+            structured
+          </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Jurisdiction: </b></th>
+            <td style="padding-left: 4px;">840</td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Copyright: </b></th>
+            <td style="padding-left: 4px;">Copyright 2019+ Centers for Disease Control and Prevention (CDC)</td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+          <th scope="row"><b>Related Artifacts: </b></th>
+          <td style="padding-left: 4px;">
+            
+            
+            
+            <p><b>Dependencies</b></p>
+            <ul>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic|3.0.0</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKData|3.0.0</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors|3.0.0</li>
+              
+                <li>http://www.nlm.nih.gov/research/umls/rxnorm</li>
+              
+                <li>http://terminology.hl7.org/CodeSystem/usage-context-type</li>
+              
+                <li>http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes</li>
+              
+            </ul>
+            
+            
+            
+            
+            
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Parameters: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>In/Out</b></th></tr>
+              
+                <tr><th>ErrorLevel</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>ConversionFactorSupplementName</th><th>string</th><th>0</th><th>1</th><th>in</th></tr>
+              
+                <tr><th>TestToUCUM_MG</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToUCUM_MGPerACTUAT</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToUCUM_MGPerML</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToUCUM_MGPerHR</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToUCUM_Unknown</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_h</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_min</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_s</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_d</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_wk</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_mo</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_a</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestToDaily_unknown</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestIngredients_Fentanyl</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestIngredients_Fentanyl_Spray</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestIngredients_Fentanyl_Ropivicaine</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestIngredients_Methadone</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Fentanyl_Transdermal</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Fentanyl_0375_Transdermal</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Fentanyl_Injection</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Methadone</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Fentanyl_Spray</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Fentanyl_Film</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Fentanyl_Mucosal_Spray</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Oxycodone</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrug_Oxycodone_ER</th><th>Any</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestDrugs</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_Null</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_Empty</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_Tab</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_MG</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_UGPerH</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_MGPerTab</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestStripPer_Multiple</th><th>boolean</th><th>0</th><th>1</th><th>out</th></tr>
+              
+                <tr><th>TestGetDailyDose</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestCalculateMMEs</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+                <tr><th>TestGetIngredients</th><th>Any</th><th>0</th><th>*</th><th>out</th></tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><a id="cql-content"><b>Content: </b></a> text/cql</th></tr>
+              <tr><td><pre><code class="language-cql">library OMTKLogicTests version '3.0.0'
+using FHIR version '4.0.1'
+include OMTKLogic version '3.0.0'
+
+// define function ToUCUM(unit String):
+define TestToUCUM_MG: OMTKLogic.ToUCUM('MG') = 'mg'
+define TestToUCUM_MGPerACTUAT: OMTKLogic.ToUCUM('MG/ACTUAT') = 'mg/{actuat}'
+define TestToUCUM_MGPerML: OMTKLogic.ToUCUM('MG/ML') = 'mg/mL'
+define TestToUCUM_MGPerHR: OMTKLogic.ToUCUM('MG/HR') = 'mg/h'
+define TestToUCUM_Unknown: OMTKLogic.ToUCUM('Unknown') is null
+
+// define function ToDaily(frequency Integer, period Quantity):
+define TestToDaily_h: OMTKLogic.ToDaily(2, 4 'h') = 12
+define TestToDaily_min: OMTKLogic.ToDaily(1, 30 'min') = 48
+define TestToDaily_s: OMTKLogic.ToDaily(1, 30 's') = 2880
+define TestToDaily_d: OMTKLogic.ToDaily(4, 1 'd') = 4
+define TestToDaily_wk: OMTKLogic.ToDaily(2, 1 'wk') = 0.28571428
+define TestToDaily_mo: OMTKLogic.ToDaily(10, 1 'mo') = 0.33333333
+define TestToDaily_a: OMTKLogic.ToDaily(10, 1 'a') = 0.02739726
+define TestToDaily_unknown: OMTKLogic.ToDaily(10, 1 'mg') is null
+
+//define function EnsureMicrogramQuantity(strength Quantity):
+//define TestEnsureMicrogramQuantityNormal: OMTKLogic.EnsureMicrogramQuantity(10 'mg') = 10 'mg'
+//define TestEnsureMicrogramQuantityMicrogram: OMTKLogic.EnsureMicrogramQuantity(0.001 'mg') = 1 'ug'
+//define TestEnsureMicrogramQuantityMicrogramPerML: OMTKLogic.EnsureMicrogramQuantity(0.05 'mg/mL') = 50 'ug/mL'
+
+//define function GetIngredients(rxNormCode Code):
+//GetIngredients:
+//  List&lt;{
+//    rxNormCode Code,
+//    doseFormCode Code,
+//    ingredientCode code,
+//    strength Quantity
+//  }&gt;
+define TestIngredients_Fentanyl: OMTKLogic.GetIngredients(Code '1603495' from OMTKLogic.RXNORM)
+define TestIngredients_Fentanyl_Spray: OMTKLogic.GetIngredients(Code '1115577' from OMTKLogic.RXNORM)
+define TestIngredients_Fentanyl_Ropivicaine: OMTKLogic.GetIngredients(Code '1233687' from OMTKLogic.RXNORM)
+define TestIngredients_Methadone: OMTKLogic.GetIngredients(Code '864706' from OMTKLogic.RXNORM)
+
+// 25 µg/hr fentanyl patch X (10 patches/ 30 days) X 7.2  = 60 MME/day
+// See this issue for discussion: https://github.com/cqframework/opioid-cds/issues/60
+define TestDrug_Fentanyl_Transdermal: { rxNormCode: Code '245134' from OMTKLogic.RXNORM display '72 HR fentanyl 0.025 MG/HR Transdermal System', doseQuantity: 1 '{patch}', dosesPerDay: 0.3333, mme: 60 '{MME}/d' }
+
+// 37.5 µg/hr fentanyl patch X (10 patches/ 30 days) X 7.2  = 90 MME/day
+define TestDrug_Fentanyl_0375_Transdermal: { rxNormCode: Code '1603495' from OMTKLogic.RXNORM display '72 HR fentanyl 0.0375 MG/HR Transdermal System', doseQuantity: 1 '{patch}', dosesPerDay: 0.3333, mme: 90 '{MME}/d' }
+
+// Injection calculation not supported
+define TestDrug_Fentanyl_Injection: { rxNormCode: Code '1244687' from OMTKLogic.RXNORM display 'fentanyl 0.004 MG/ML / ropivacaine hydrochloride 2 MG/ML Injectable Solution', doseQuantity: 1 '{injection}', dosesPerDay: 1.0, mme: null as Quantity }
+
+// 10 MG methadone X (180 tablets/ 30 days) X 10 = 600 MME/day
+// NOTE: Methodone has variable equivalency based on route, dose, and length of use. Buprenorphine and methadone are excluded from calculation in some systems.
+// They are still considered relevant opioids, but no MME calculation is given in those systems.
+define TestDrug_Methadone: { rxNormCode: Code '864706' from OMTKLogic.RXNORM display 'methadone hydrochloride 10 MG Oral Tablet', doseQuantity: 2 '{tab}', dosesPerDay: 3.0, mme: 600 '{MME}/d' }
+
+// 0.4 MG fentanyl spray X (90 sprays/ 30 days) X 160 = 192 MME/day
+// NOTE: Had to add Metered Dose Nasal Spray as a dose form code to the GetConversionFactor for Fentanyl, same category as other sprays
+define TestDrug_Fentanyl_Spray: { rxNormCode: Code '1115577' from OMTKLogic.RXNORM display 'fentaNYL 0.4 MG/ACTUAT', doseQuantity: 1 '{actuat}', dosesPerDay: 3.0, mme: 192 '{MME}/d' }
+
+// 1.2 mg buccal film X (60 films/ 30 days) X 180 = 432 MME/day
+// NOTE: This drug is not in our OMTKData, not sure why 858087 is an SDC RXCUI and the code is active, and was introduced in 2009
+define TestDrug_Fentanyl_Film: { rxNormCode: Code '858087' from OMTKLogic.RXNORM display 'fentanyl 1.2 MG Buccal Film', doseQuantity: 1 '{film}', dosesPerDay: 2.0, mme: 432 '{MME}/d' }
+
+// 0.1 mg fentanyl spray X (90 sprays/ 30 days) X 160 = 48 MME/day
+define TestDrug_Fentanyl_Mucosal_Spray: { rxNormCode: Code '1237050' from OMTKLogic.RXNORM display 'fentanyl 0.1 MG/ACTUAT Mucosal Spray', doseQuantity: 1 '{actuat}', dosesPerDay: 3.0, mme: 48 '{MME}/d' }
+
+// 10 mg oxycodone tablets X (120 tablets/ 30 days) X 1.5 = 60 MME/day
+define TestDrug_Oxycodone: { rxNormCode: Code '1049683' from OMTKLogic.RXNORM display 'oxycodone hydrochloride 10 MG Oral Tablet', doseQuantity: 1 '{tab}', dosesPerDay: 4.0, mme: 60 '{MME}/d' }
+
+// 30 mg oxycodone tables X (60 tablets/ 30 days) X 1.5 = 90 MME/day
+define TestDrug_Oxycodone_ER: { rxNormCode: Code '1049574' from OMTKLogic.RXNORM display '12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet', doseQuantity: 1 '{tab}', dosesPerDay: 2.0, mme: 90 '{MME}/d' }
+
+// TODO: Determine how this will be reflected, I don't see any RxNav data that uses bottles?
+// For example, a butorphanol spray is packaged as a 2.5ml bottle.
+// This MME file indicates the strength is 10mg/ml and the conversion factor is 7.
+// The prescription data lists a quantity of 1 and a days supply of 30.
+// If it is determined that the quantity likely reflects the number of bottles,
+// the quantity should be changed to 2.5 since each bottle of that butorphanol
+// product contains 2.5 ml. Using the formula above, this yields 10mg/ml  x 2.5ml/30 days x 7= 5.8 MME/day.
+
+define TestDrugs: {
+  TestDrug_Fentanyl_Transdermal,
+  TestDrug_Fentanyl_0375_Transdermal,
+  TestDrug_Fentanyl_Injection,
+  TestDrug_Methadone,
+  TestDrug_Fentanyl_Spray,
+  TestDrug_Fentanyl_Film,
+  TestDrug_Fentanyl_Mucosal_Spray,
+  TestDrug_Oxycodone,
+  TestDrug_Oxycodone_ER
+}
+
+//define function StripPer(unit String):
+define TestStripPer_Null: OMTKLogic.StripPer(null) is null
+define TestStripPer_Empty: OMTKLogic.StripPer('') = ''
+define TestStripPer_Tab: OMTKLogic.StripPer('{tab}') = '{tab}'
+define TestStripPer_MG: OMTKLogic.StripPer('mg') = 'mg'
+define TestStripPer_UGPerH: OMTKLogic.StripPer('ug/h') = 'ug'
+define TestStripPer_MGPerTab: OMTKLogic.StripPer('mg/{tab}') = 'mg'
+define TestStripPer_Multiple: OMTKLogic.StripPer('mg/h/h') = 'mg/h'
+
+//define function GetDailyDose(ingredientCode Code, strength Quantity, doseFormCode Code, doseQuantity Quantity, dosesPerDay Decimal):
+define TestGetDailyDose:
+  flatten (
+    TestDrugs D
+      let i: OMTKLogic.GetIngredients(D.rxNormCode)
+      return i I
+        return OMTKLogic.GetDailyDose(I.ingredientCode, I.strength, I.doseFormCode, D.doseQuantity, D.dosesPerDay)
+  )
+
+//define function GetMedicationName(rxNormCode Code):
+//define function GetDailyDoseDescription(ingredientCode Code, ingredientName String, strength Quantity, doseFormCode Code, doseFormName String, doseQuantity Quantity, dosesPerDay Decimal, dailyDose Quantity):
+
+//define function CalculateMMEs(medications List&lt;Tuple { rxNormCode Code, doseQuantity Quantity, dosesPerDay Decimal }&gt;):
+define TestCalculateMMEs:
+  TestDrugs D
+    let mmes: OMTKLogic.CalculateMMEs({ D d return { rxNormCode: d.rxNormCode, doseQuantity: d.doseQuantity, dosesPerDay: d.dosesPerDay }})
+    return {
+      rxNormCode: D.rxNormCode,
+      mme: Sum(mmes.mme),
+      expectedMme: D.mme,
+      description: Combine(mmes.dailyDoseDescription, ', ')
+    }
+
+
+define TestGetIngredients: OMTKLogic.GetIngredients(Code '1049221' from OMTKLogic.RXNORM)
+</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+xml</th></tr>
+              <tr><td><pre><code>Encoded data (114888 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+json</th></tr>
+              <tr><td><pre><code>Encoded data (548680 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+    </table>
+</div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:13+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

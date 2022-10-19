@@ -1,0 +1,821 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "fhir.cdc.opioid-mme-r4"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CDCMMECQLCalculator</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4</pre><div><p>Opioid Morphine Milligram Equivalent (MME) calculation logic in FHIR and Clinical Quality Language (CQL)</p>\n</div></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4"];
+  fhir:ImplementationGuide.version [ fhir:value "3.0.0"];
+  fhir:ImplementationGuide.name [ fhir:value "CDCMMECQLCalculator"];
+  fhir:ImplementationGuide.title [ fhir:value "CDC MME CQL Calculator"];
+  fhir:ImplementationGuide.status [ fhir:value "active"];
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ImplementationGuide.date [ fhir:value "2021-11-25T15:15:41+11:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "Alphora"];
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://alphora.com" ]
+     ]
+  ];
+  fhir:ImplementationGuide.description [ fhir:value "Opioid Morphine Milligram Equivalent (MME) calculation logic in FHIR and Clinical Quality Language (CQL)"];
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "840" ]
+     ]
+  ];
+  fhir:ImplementationGuide.copyright [ fhir:value "Copyright 2019+ Centers for Disease Control and Prevention (CDC)"];
+  fhir:ImplementationGuide.packageId [ fhir:value "fhir.cdc.opioid-mme-r4"];
+  fhir:ImplementationGuide.license [ fhir:value "Apache-2.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "cpg" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg";
+       fhir:link <http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.cpg" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.0.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "cqf" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.org/guides/cqf/ImplementationGuide/fhir.cqf.common";
+       fhir:link <http://fhir.org/guides/cqf/ImplementationGuide/fhir.cqf.common>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "fhir.cqf.common" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.1" ]
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2019+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "release" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "templates/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.grouping [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "medicationrequest-profile-spreadsheet.xml" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "MMEMedicationRequest" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/cfct-example>;
+         fhir:Reference.reference [ fhir:value "Patient/cfct-example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Conversion Factors Clinical Tests - Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test patient for the Conversion Factors Clinical Tests" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/cft-example>;
+         fhir:Reference.reference [ fhir:value "Patient/cft-example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Conversion Factors Tests - Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test patient for the Conversion Factors Tests" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/MedicationRequest/example-rec-05-mme-greater-than-fifty-context>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/example-rec-05-mme-greater-than-fifty-context" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - Greater than Fifty - MedicationRequest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test MedicationRequest for the Greater than Fifty test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest";
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest>
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "GuidanceResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/GuidanceResponse/patient-mme-greater-than-fifty>;
+         fhir:Reference.reference [ fhir:value "GuidanceResponse/patient-mme-greater-than-fifty" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - Greater than Fifty - GuidanceResponse" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Expected GuidanceResponse result for the Greater than Fifty test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/patient-mme-greater-than-fifty>;
+         fhir:Reference.reference [ fhir:value "Patient/patient-mme-greater-than-fifty" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - Greater than Fifty - Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test patient for the Greater than Fifty test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/MedicationRequest/example-rec-05-mme-less-than-fifty-context>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/example-rec-05-mme-less-than-fifty-context" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - Less than Fifty - MedicationRequest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test MedicationRequest for the Less than Fifty test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest";
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest>
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "GuidanceResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/GuidanceResponse/patient-mme-less-than-fifty>;
+         fhir:Reference.reference [ fhir:value "GuidanceResponse/patient-mme-less-than-fifty" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - Less than Fifty - GuidanceResponse" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Expected GuidanceResponse result for the Less than Fifty test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/patient-mme-less-than-fifty>;
+         fhir:Reference.reference [ fhir:value "Patient/patient-mme-less-than-fifty" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - Less than Fifty - Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test patient for the Less than Fifty test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/MedicationRequest/example-rec-05-mme-with-timeofday-context>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/example-rec-05-mme-with-timeofday-context" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - With Time of Day - MedicationRequest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test MedicationRequest for the With Time of Day test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest";
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest>
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "GuidanceResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/GuidanceResponse/patient-mme-with-timeofday>;
+         fhir:Reference.reference [ fhir:value "GuidanceResponse/patient-mme-with-timeofday" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - With Time of Day - GuidanceResponse" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Expected GuidanceResponse result for the With Time of Day test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/patient-mme-with-timeofday>;
+         fhir:Reference.reference [ fhir:value "Patient/patient-mme-with-timeofday" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - With Time of Day - Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test patient for the With Time of Day test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Patient/patient-no-meds>;
+         fhir:Reference.reference [ fhir:value "Patient/patient-no-meds" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MME Calculator Tests - No Meds - Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Test patient for the No Meds test case of the MME Calculator" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactors>;
+         fhir:Reference.reference [ fhir:value "Library/ConversionFactors" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library." ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/ConversionFactorsTests>;
+         fhir:Reference.reference [ fhir:value "Library/ConversionFactorsTests" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Tests for the Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains logic to test configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library." ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculator>;
+         fhir:Reference.reference [ fhir:value "Library/MMECalculator" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Morphine Milligram Equivalent (MME) Calculator for FHIR R4" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains logic to surface the MME calculation functionality provided by the OMTKLogic library by extracting appropriate information from FHIR R4 MedicationRequest resource." ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/MMECalculatorTests>;
+         fhir:Reference.reference [ fhir:value "Library/MMECalculatorTests" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Tests for the Morphine Milligram Equivalent (MME) Calculator for FHIR R4" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains tests to validate the functionality of the FHIR R4 MME calculator" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKData>;
+         fhir:Reference.reference [ fhir:value "Library/OMTKData" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid Management Terminology Knowledge Data" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base)." ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKDataTests>;
+         fhir:Reference.reference [ fhir:value "Library/OMTKDataTests" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Tests for the Opioid Management Terminology Knowledge Data Library" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains tests of the OMTKData library" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogic>;
+         fhir:Reference.reference [ fhir:value "Library/OMTKLogic" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid Management Terminology Knowledge Logic" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline." ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/Library/OMTKLogicTests>;
+         fhir:Reference.reference [ fhir:value "Library/OMTKLogicTests" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Tests of the Opioid Management Terminology Knowledge Logic library" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library tests the MME calculator provided by the OMTKLogic library" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEClinicalConversionFactors>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/CDCMMEClinicalConversionFactors" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC MME Clinical Conversion Factors" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Code System Supplement defines clinical conversion factors for calculating Morphine Milligram Equivalence (MME), as described in the CDC Opioid Prescribing Guideline. The supplement defines conversions factors for ingredients in one of 3 ways: 1, as a direct conversion factor for the ingredient, 2, as a dose-form-specific conversion factor for the ingredient, and 3, as a dose-quantity-ranged conversion factor for the ingredient. See the descriptions for each property for information on how the values are represented for the different conversion factors. For a given ingredient, only one of 'dose-form' or 'dose-range' will be present, with or without an ingredient-specific conversion factor. The properties together will enable a unique conversion factor to be determined if the input is within the expected range. If the input is outside the expected range, and there is no ingredient-specific conversion-factor specified, implementations should indicate a conversion factor could not be determined from the supplied information. All conversion factors supplied in this supplement are in 'mg/d'." ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/CDCMMEUsageContextCodes" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC MME Usage Context Codes" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Code System defines usage context codes used to configure the MME Conversion Factors Code System Supplement. If there is a single CodeSystem supplement to the RxNorm code system with a usage context of task and a code of 'mme-calculation', it will be used as the conversion factors for the calculator. See the Conversion Factors documentation for a description of the Code System supplements that can carry this configuration." ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/cfct-example-CDCMMEClinicalConversionFactors>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/cfct-example-CDCMMEClinicalConversionFactors" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example CDC MME Clinical Conversion Factors" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Example Code System to support Testing (Copy of ClinicalConversion Factors)**. This Code System Supplement is a copy of the CDC Clinical Conversion Factors code system supplement to support testing. See the original CDC Clinical Conversion Factors code system supplement for documentation of the code system supplement properties." ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/StructureDefinition/mmemedicationrequest>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mmemedicationrequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MMEMedicationRequest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines the minimum expectations for a MedicationRequest that can be used to successfully calculate Morphine Milligram Equivalent (MME)/day according to the CDC Opioid Prescribing guideline" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrequest-profile-spreadsheet.xml" ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home Page" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "mme-calculator.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "MME Calculator" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "conversion-factors.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Conversion Factors" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "omtkdata-processing.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "OMTK Data Processing" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "license.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "License" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/pagecontent" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/activitydefinition" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/capabilitystatement" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/library" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/measure" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/plandefinition" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/questionnaire" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary/codesystem" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary/valueset" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/tests/ConversionFactorsClinicalTests/cfct-example" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/tests/ConversionFactorsTests/cft-example" ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/tests/MMECalculatorTests/patient-mme-greater-than-fifty" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/tests/MMECalculatorTests/patient-mme-less-than-fifty" ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/tests/MMECalculatorTests/patient-mme-with-timeofday" ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/tests/MMECalculatorTests/patient-no-meds" ]
+     ], [
+       fhir:index 15;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 16;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 17;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 18;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 19;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 20;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 21;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 22;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 23;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 24;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 25;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 26;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 27;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 28;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

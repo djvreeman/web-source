@@ -261,3 +261,5 @@ build-iPhoneSimulator/
 /source/templates/package-feed.bak
 /source/guides/cqf/common
 /source/guides/ig-build-zips
+
+.DS_Store

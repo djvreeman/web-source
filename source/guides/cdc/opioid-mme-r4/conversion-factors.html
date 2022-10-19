@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CDC.OPIOID-MME-R4\Conversion Factors - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+<div id="hl7-nav">
+    <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CDC MME CQL Calculator</span><br/>3.0.0 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="mme-calculator.html">MME Calculator</a></li>
+  <li><a href="conversion-factors.html">Conversion Factors</a></li>
+  <li><a href="omtkdata-processing.html">OMTK Data Processing</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Conversion Factors</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CDC Opioid MME Calculator (v3.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+  <h2>Conversion Factors</h2>
+  
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#cautions" id="markdown-toc-cautions">Cautions</a></li>
+</ul>
+
+</div>
+<p>The Morphine Milligram Equivalent (MME) calculator provides for configurable
+conversion factors, allowing the same calculator logic to be used in different
+settings and for different purposes. These conversion factors are configurable
+using a CodeSystem supplement. This implementation guide contains one conversion
+factor table:</p>
+
+<ul>
+  <li><a href="CodeSystem-CDCMMEClinicalConversionFactors.html">CDCMMEClinicalConversionFactors</a></li>
+</ul>
+
+<p>The Clinical Conversion Factors table uses values from CDC guidance here:
+https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf</p>
+
+<p>The CodeSystem supplements are configured with 3 types of properties:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conversion-factor</code>: Defines the conversion factor for a specific ingredient,
+when the conversion factor is the same for all dose forms and dose amounts for
+the ingredient. The value of this property will be the decimal representation of
+the conversion factor.</li>
+  <li><code class="language-plaintext highlighter-rouge">dose-form-conversion-factor</code>: Defines the conversion factor for an ingredient when the conversion factor varies by the dose form of the medication. The value of this property will be a string of the form <code class="language-plaintext highlighter-rouge">&lt;dose-form-code&gt;:&lt;conversion-factor&gt;[@&lt;doses-per-day&gt;]</code>, e.g. 970789:130, where ‘970789’ is the RxNorm dose form code, and ‘130’ is the decimal representation of the conversion factor. An example of a per-day conversion factor is fentanyl, 316987:7200@0.33333333, where 316987 is RxNorm dose form code, 7200 is the conversion factor, and 0.33333333 is the dosesPerDay, expressed as a decimal with a maximum of 8 digits after the decimal.</li>
+  <li><code class="language-plaintext highlighter-rouge">dose-range-conversion-factor</code>: Defines the conversion factor for an ingredient
+when the conversion factor varies by the overall dose of the medication. The
+value of this property will be a string of the form <code class="language-plaintext highlighter-rouge">&lt;low-value&gt;-&lt;high-value&gt;:&lt;conversion-factor&gt;</code>,
+e.g. 1-20:4. Note that the low-value or high-value may be a wildcard ‘<em>’ to
+indicate the range continues (e.g. ‘61-</em>:12’ indicates the range is 61 or greater).</li>
+</ul>
+
+<p>For a given ingredient, only one of ‘dose-form’ or ‘dose-range’ will be present,
+with or without an ingredient-specific conversion factor. The properties together
+will enable a unique conversion factor to be determined if the input is within
+the expected range. If the input is outside the expected range, and there is no
+ingredient-specific conversion-factor specified, implementations should indicate
+a conversion factor could not be determined from the supplied information.</p>
+
+<p>All conversion factors supplied in these supplements are in ‘mg/d’. When the
+published references use other units, appropriate conversions have been applied
+to provide the conversion factor in consistent units to the calculator.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>The MME calculator looks up conversion factor configuration by:</p>
+
+<ol>
+  <li>Looking for a CodeSystem that is a supplement to RxNorm and has a name matching the <code class="language-plaintext highlighter-rouge">ConversionFactorSupplementName</code> parameter defined in the <code class="language-plaintext highlighter-rouge">ConversionFactors</code> CQL library.</li>
+  <li>Looking for a CodeSystem that is a supplement to RxNorm and has a <a href="http://hl7.org/fhir/codesystem-usage-context-type.html"><code class="language-plaintext highlighter-rouge">task</code> usage context</a> of <code class="language-plaintext highlighter-rouge">mme-calculation</code>, as defined in the CDC MME Usage Context Codes code system published in this implementation guide.</li>
+  <li>Using the hard-coded conversion factors returned by the <code class="language-plaintext highlighter-rouge">GetConversionFactor</code> function, which are the same as the clinical conversion factors, including conversion factors for methadone (on a sliding scale by dose quantity) and transdermal fentanyl (given as a daily factor, specified with a standard patch duration of 3 days).</li>
+</ol>
+
+<p>Systems that only need to support one set of conversion factors can be configured with only the appropriate code system supplement, and don’t need to provide the <code class="language-plaintext highlighter-rouge">ConversionFactorSupplementName</code> parameter as part of execution. However, systems that support run-time selection of conversion factors (i.e. a service) need all available code system supplements and can use the <code class="language-plaintext highlighter-rouge">ConversionFactorSupplementName</code> parameter to distinguish which conversion factor set to use.</p>
+
+<h3 id="cautions">Cautions</h3>
+
+<blockquote>
+  <p><strong>Caution</strong>: The conversion factors supplied with this content are provided by the CDC as part of the Opioid Prescribing Guideline. Configuring the calculator to use conversion factors other than those provided here should be done with extreme caution and under the direction of appropriate clinical expertise.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Caution</strong>: Buprenorphine, as a partial opioid agonist, is not associated with overdose in the same dose-dependent manner as observed with medications that are full opioid agonists, and is not/should not be included in the calculator</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Caution</strong>: Equianalgesic dose conversions are only estimates and cannot account for individual variability in genetics and pharmacokinetics.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cdc.opioid-mme-r4#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 25, 2021 15:15+1100">2021-11-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+       
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-mme-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

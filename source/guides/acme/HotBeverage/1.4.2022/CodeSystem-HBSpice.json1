@@ -1,0 +1,86 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "HBSpice",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CINNAMON<a name=\"HBSpice-CINNAMON\"> </a></td><td>cinnamon</td></tr><tr><td style=\"white-space:nowrap\">NUTMEG<a name=\"HBSpice-NUTMEG\"> </a></td><td>nutmeg</td></tr><tr><td style=\"white-space:nowrap\">LAVENDER<a name=\"HBSpice-LAVENDER\"> </a></td><td>lavender</td></tr><tr><td style=\"white-space:nowrap\">CARDAMOM<a name=\"HBSpice-CARDAMOM\"> </a></td><td>cardamom</td></tr><tr><td style=\"white-space:nowrap\">SALT<a name=\"HBSpice-SALT\"> </a></td><td>salt</td></tr></table></div>"
+  },
+  "url": "http://fhir.org/guides/acme/HotBeverage/CodeSystem/HBSpice",
+  "version": "1.4.2022",
+  "name": "HBSpice",
+  "title": "Spice List",
+  "status": "active",
+  "date": "2022-03-29T15:50:36+11:00",
+  "publisher": "Dave Pyke & John Moehrke",
+  "contact": [
+    {
+      "name": "Dave Pyke & John Moehrke",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/DavidPyke/HotBeverage"
+        },
+        {
+          "system": "email",
+          "value": "david@pyke.ca"
+        }
+      ]
+    },
+    {
+      "name": "David Pyke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "david@pyke.ca",
+          "use": "work"
+        }
+      ]
+    },
+    {
+      "name": "John Moehrke",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "JohnMoehrke@gmail.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Spice to be added, if desired",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": false,
+  "content": "complete",
+  "count": 5,
+  "concept": [
+    {
+      "code": "CINNAMON",
+      "display": "cinnamon"
+    },
+    {
+      "code": "NUTMEG",
+      "display": "nutmeg"
+    },
+    {
+      "code": "LAVENDER",
+      "display": "lavender"
+    },
+    {
+      "code": "CARDAMOM",
+      "display": "cardamom"
+    },
+    {
+      "code": "SALT",
+      "display": "salt"
+    }
+  ]
+}
