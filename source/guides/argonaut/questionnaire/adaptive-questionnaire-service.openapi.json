@@ -1,0 +1,259 @@
+﻿{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Argonaut Adaptive Questionnaire Service CapabilityStatement",
+    "description": "This section outlines conformance requirements for the Argonaut Questionnaire Adaptive QuestionService.  It is responsible for providing questions in response to requests and  determining the next question and calculation of the score for an Adaptive Questionnaires.  It supports the Argonaut Adaptive QuestionnaireResponse Profile and the transactions associated with the adaptive questionnaires.   Note that the Argonaut Profile and next-question OperationDefinition identify the structural constraints, terminology bindings and invariants.",
+    "license": {
+      "url": "http://spdx.org/licenses/CC0-1.0.html"
+    },
+    "version": "1.0.0",
+    "contact": {
+      "name": "The Argonaut Project"
+    }
+  },
+  "externalDocs": {
+    "url": "http://fhir.org/guides/argonaut/questionnaire/CapabilityStatement/adaptive-questionnaire-service",
+    "description": "FHIR CapabilityStatement"
+  },
+  "paths": {
+    "/QuestionnaireResponse": {
+      "summary": "manage the collection of resources of type QuestionnaireResponse",
+      "description": "Access to services to manage the collection of all resources of type QuestionnaireResponse",
+      "get": {
+        "summary": "Search all resources based on a set of criteria",
+        "operationId": "searchQuestionnaireResponse",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/Bundle.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/QuestionnaireResponse/{rid}": {
+      "summary": "Read/Write/etc resource instance of type QuestionnaireResponse",
+      "description": "Access to services to manage the state of a single resource of type QuestionnaireResponse",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readQuestionnaireResponse",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/QuestionnaireResponse"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/QuestionnaireResponse/{rid}/_history/{hid}": {
+      "summary": "Read past versions of resource instance of type QuestionnaireResponse",
+      "description": "Access to previous versions of a single resource of type QuestionnaireResponse",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadQuestionnaireResponse",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/QuestionnaireResponse"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/QuestionnaireResponse.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "summary": {
+        "summary": {
+          "name": "_summary",
+          "in": "query",
+          "description": "Requests the server to return a designated subset of the resource",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "true",
+              "text",
+              "data",
+              "count",
+              "false"
+            ]
+          }
+        }
+      },
+      "format": {
+        "format": {
+          "name": "_format",
+          "in": "query",
+          "description": "Specify alternative response formats by their MIME-types (when a client is unable acccess accept: header)",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "schema": {
+            "type": "string",
+            "format": "mime-type"
+          }
+        }
+      },
+      "pretty": {
+        "pretty": {
+          "name": "_pretty",
+          "in": "query",
+          "description": "Ask for a pretty printed response for human convenience",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      "elements": {
+        "elements": {
+          "name": "_elements",
+          "in": "query",
+          "description": "Requests the server to return a collection of elements from the resource",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "explode": false,
+          "schema": {
+            "type": "array",
+            "format": "string"
+          }
+        }
+      }
+    }
+  }
+}

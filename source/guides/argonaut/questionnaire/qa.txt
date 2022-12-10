@@ -1,0 +1,289 @@
+﻿Argonaut Questionnaire : Validation Results
+=========================================
+
+err = 28, warn = 48, info = 102
+Generated Thu Apr 18 13:14:53 AEST 2019. FHIR version 3.0.1 for fhir.argonaut.questionnaire#1.0.0 (canonical = http://fhir.org/guides/argonaut/questionnaire)
+
+ Build Errors : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-audit-c : 0 / 6
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-dast : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-phq9 : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-sampler : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\encounter-example-encounter1 : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\patient-example-subject1 : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\practitioner-example-prov-admin1 : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-audit-c : 2 / 4
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-dast : 6 / 3
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-housing : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-phq9 : 2 / 2
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-sampler : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-audit-c : 0 / 1
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-dast : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-housing : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-phq9 : 0 / 1
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-sampler : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-sampler-contained-patient : 0 / 4
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-itemorder : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-multipleAnd : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-multipleOr : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-responsePeriod : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-timelimit : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-adaptive-questionnaire-service : 1 / 3
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-answerbank : 1 / 14
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-argo-questionnaire-provider-ehr : 1 / 24
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-assessmentbank : 1 / 13
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\ig : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\operationdefinition-next-q : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-patient-birthdate : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-context-type : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-context-type-value : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-context-value : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-publisher : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-status : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-title : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-version : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-author : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-context : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-patient : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-questionnaire : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-source : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-status : 0 / 0
+ argo_adap_questionnaireresponse : 0 / 0
+ argo_questionnaire : 0 / 0
+ argo_questionnaire_valueset : 0 / 0
+ argo_questionnaireresponse : 0 / 0
+</table>
+
+== n/a ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-audit-c.json ==
+WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.contained.item[3].code: The display "How often do you have a drink containing alcohol" is not a valid display for the code {http://loinc.org}68518-0 - should be one of ["How often do you have a drink containing alcohol [SAMHSA]",]
+WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.contained.item[4].code: The display "How many standard drinks containing alcohol do you have on a typical day" is not a valid display for the code {http://loinc.org}68519-8 - should be one of ["How many standard drinks containing alcohol do you have on a typical day [SAMHSA]",]
+WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.contained.item[5].code: The display "How often do you have 6 or more drinks on 1 occasion" is not a valid display for the code {http://loinc.org}68520-6 - should be one of ["How often do you have 6 or more drinks on 1 occasion [SAMHSA]",]
+WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.questionnaire.contained.item[3].code: The display "How often do you have a drink containing alcohol" is not a valid display for the code {http://loinc.org}68518-0 - should be one of ["How often do you have a drink containing alcohol [SAMHSA]",]
+WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.questionnaire.contained.item[4].code: The display "How many standard drinks containing alcohol do you have on a typical day" is not a valid display for the code {http://loinc.org}68519-8 - should be one of ["How many standard drinks containing alcohol do you have on a typical day [SAMHSA]",]
+WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.questionnaire.contained.item[5].code: The display "How often do you have 6 or more drinks on 1 occasion" is not a valid display for the code {http://loinc.org}68520-6 - should be one of ["How often do you have 6 or more drinks on 1 occasion [SAMHSA]",]
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-dast.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-phq9.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\adaptive-questionnaireresponse-example-sampler.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\encounter-example-encounter1.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\patient-example-subject1.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\practitioner-example-prov-admin1.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-audit-c.json ==
+WARNING: Questionnaire/questionnaire-example-audit-c: Questionnaire.item[1].code: The display "How often do you have a drink containing alcohol" is not a valid display for the code {http://loinc.org}68518-0 - should be one of ["How often do you have a drink containing alcohol [SAMHSA]",]
+WARNING: Questionnaire/questionnaire-example-audit-c: Questionnaire.item[2].code: The display "How many standard drinks containing alcohol do you have on a typical day" is not a valid display for the code {http://loinc.org}68519-8 - should be one of ["How many standard drinks containing alcohol do you have on a typical day [SAMHSA]",]
+WARNING: Questionnaire/questionnaire-example-audit-c: Questionnaire.item[3].code: The display "How often do you have 6 or more drinks on 1 occasion" is not a valid display for the code {http://loinc.org}68520-6 - should be one of ["How often do you have 6 or more drinks on 1 occasion [SAMHSA]",]
+INFORMATION: Questionnaire/questionnaire-example-audit-c: Questionnaire.item[4].extension[3]: This element does not match any known slice for the profile http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire
+ERROR: Questionnaire/questionnaire-example-audit-c: Questionnaire.item[4].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/designNote is unknown, and not allowed here
+ERROR: Questionnaire/questionnaire-example-audit-c: Questionnaire.item[4].extension[3].url: URL value 'http://hl7.org/fhir/StructureDefinition/designNote' does not resolve
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-dast.json ==
+INFORMATION: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].extension[3]: This element does not match any known slice for the profile http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/designNote is unknown, and not allowed here
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].extension[3].url: URL value 'http://hl7.org/fhir/StructureDefinition/designNote' does not resolve
+INFORMATION: Questionnaire/questionnaire-example-dast: Questionnaire.item[2].extension[3]: This element does not match any known slice for the profile http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[2].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/designNote is unknown, and not allowed here
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[2].extension[3].url: URL value 'http://hl7.org/fhir/StructureDefinition/designNote' does not resolve
+INFORMATION: Questionnaire/questionnaire-example-dast: Questionnaire.item[2].item.extension[3]: This element does not match any known slice for the profile http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[2].item.extension[3]: The extension http://hl7.org/fhir/StructureDefinition/designNote is unknown, and not allowed here
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[2].item.extension[3].url: URL value 'http://hl7.org/fhir/StructureDefinition/designNote' does not resolve
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-housing.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-phq9.json ==
+WARNING: Questionnaire/questionnaire-example-phq9: Questionnaire.code: The display "PHQ-9 quick depression assessment panel" is not a valid display for the code {http://loinc.org}44249-1 - should be one of ["PHQ-9 quick depression assessment panel [Reported.PHQ]",]
+INFORMATION: Questionnaire/questionnaire-example-phq9: Questionnaire.item[1].item[11].extension[3]: This element does not match any known slice for the profile http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire
+ERROR: Questionnaire/questionnaire-example-phq9: Questionnaire.item[1].item[11].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/designNote is unknown, and not allowed here
+ERROR: Questionnaire/questionnaire-example-phq9: Questionnaire.item[1].item[11].extension[3].url: URL value 'http://hl7.org/fhir/StructureDefinition/designNote' does not resolve
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaire-example-sampler.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-audit-c.json ==
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit-c: QuestionnaireResponse.item.answer: Error null validating Coding against Questionnaire Options
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-dast.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-housing.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-phq9.json ==
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: Error null validating Coding against Questionnaire Options
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-sampler.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\examples\questionnaireresponse-example-sampler-contained-patient.json ==
+INFORMATION: QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient: QuestionnaireResponse.contained.name: Could not verify slice for profile http://hl7.org/fhir/StructureDefinition/Reference
+INFORMATION: QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient: QuestionnaireResponse.contained.gender: Could not verify slice for profile http://hl7.org/fhir/StructureDefinition/Reference
+INFORMATION: QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient: QuestionnaireResponse.contained.birthDate: Could not verify slice for profile http://hl7.org/fhir/StructureDefinition/Reference
+INFORMATION: QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient: QuestionnaireResponse.contained.address: Could not verify slice for profile http://hl7.org/fhir/StructureDefinition/Reference
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-itemorder.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-multipleAnd.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-multipleOr.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-responsePeriod.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\StructureDefinition-extension-timelimit.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-adaptive-questionnaire-service.json ==
+WARNING: CapabilityStatement/adaptive-questionnaire-service: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/adaptive-questionnaire-service: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/adaptive-questionnaire-service: CapabilityStatement.patchFormat: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/adaptive-questionnaire-service: CapabilityStatement.implementationGuide[2]: URL value 'http://hl7.org/fhir/us/core/STU2/ImplementationGuide/us-core-ig' does not resolve
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-answerbank.json ==
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.patchFormat: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/answerbank: CapabilityStatement.implementationGuide[2]: URL value 'http://hl7.org/fhir/us/core/STU2/ImplementationGuide/us-core-ig' does not resolve
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[7].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[8].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[9].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[10].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[11].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/answerbank: CapabilityStatement.rest.resource.extension[12].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-argo-questionnaire-provider-ehr.json ==
+WARNING: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.patchFormat: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.implementationGuide[2]: URL value 'http://hl7.org/fhir/us/core/STU2/ImplementationGuide/us-core-ig' does not resolve
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[7].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[8].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[9].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[10].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[1].extension[11].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[7].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[8].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[9].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[10].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[11].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argo-questionnaire-provider-ehr: CapabilityStatement.rest.resource[2].extension[12].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\capabilitystatement-assessmentbank.json ==
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.patchFormat: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/assessmentbank: CapabilityStatement.implementationGuide[2]: URL value 'http://hl7.org/fhir/us/core/STU2/ImplementationGuide/us-core-ig' does not resolve
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[7].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[8].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[9].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[10].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resource.extension[11].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\ig.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\operationdefinition-next-q.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-patient-birthdate.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-context-type.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-context-type-value.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-context-value.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-publisher.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-status.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-title.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaire-version.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-author.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-context.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-patient.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-questionnaire.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-source.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\searchparameter-questionnaireresponse-status.json ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\profile-derived-qr-spreadsheet.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\profile-base-q-spreadsheet.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\profile-base-qcvs-spreadsheet.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.questionnaire#1.0.0\source\resources\profile-base-qr-spreadsheet.xml ==
+
+

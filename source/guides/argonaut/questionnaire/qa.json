@@ -1,0 +1,12 @@
+﻿{
+  "url": "http://fhir.org/guides/argonaut/questionnaire/ImplementationGuide/fhir.argonaut.questionnaire-1.0.0",
+  "name": "Argonaut Questionnaire",
+  "package-id": "fhir.argonaut.questionnaire",
+  "ig-ver": "1.0.0",
+  "date": "Thu, 18 Apr, 2019 13:13:22 +1000",
+  "errs": 28,
+  "warnings": 48,
+  "hints": 102,
+  "version": "3.0.1",
+  "tool": "4.1.0 (3)"
+}
