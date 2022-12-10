@@ -1,0 +1,185 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/CapabilityStatement/server> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "server"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Provider Directory Server</h2><div><p>This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td>The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:  - Argonaut Provider Directory Endpoint - Argonaut Provider Directory Location - Argonaut Provider Directory Organization - Argonaut Provider Directory Practitioner - Argonaut Provider Directory PractitionerRole   The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions.</td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b>Read</b></th><th><b>V-Read</b></th><th><b>Search</b></th><th><b>Update</b></th><th><b>Updates</b></th><th><b>Create</b></th><th><b>Delete</b></th><th><b>History</b></th></tr><tr><td>Practitioner</td><td><a href=\"http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html\">http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html</a></td><td>y</td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Organization</td><td><a href=\"http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html\">http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html</a></td><td>y</td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr></table></div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://fhir.org/guides/argonaut-pd/CapabilityStatement/server"];
+  fhir:CapabilityStatement.name [ fhir:value "Argonaut Provider Directory Server"];
+  fhir:CapabilityStatement.status [ fhir:value "draft"];
+  fhir:CapabilityStatement.date [ fhir:value "2016-11-13"^^xsd:date];
+  fhir:CapabilityStatement.publisher [ fhir:value "FHIR Project Team"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://build.fhir.org" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide."];
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "1.7.0"];
+  fhir:CapabilityStatement.acceptUnknown [ fhir:value "extensions"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.profile [
+     fhir:index 0;
+     fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html>;
+     fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-locatino.html>;
+     fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-locatino.html" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-endpoint.html>;
+     fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-endpoint.html" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitionerrole.html>;
+     fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitionerrole.html" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-organization.html>;
+     fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-organization.html" ]
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:  - Argonaut Provider Directory Endpoint - Argonaut Provider Directory Location - Argonaut Provider Directory Organization - Argonaut Provider Directory Practitioner - Argonaut Provider Directory PractitionerRole   The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions." ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "Argonaut Provider Directory Servers SHALL implement the security requirements documented in the Argonaute Provider Directory IG." ]
+     ];
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Practitioner" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html>;
+         fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) " ]
+       ], [
+         fhir:index 1;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Provider Directory Provider by id" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "name" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://build.fhir.org/practitioner.html#search" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 1;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "family" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://build.fhir.org/practitioner.html#search" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 2;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "given" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://build.fhir.org/practitioner.html#search" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 3;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://build.fhir.org/practitioner.html#search" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Organization" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:link <http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html>;
+         fhir:Reference.reference [ fhir:value "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) " ]
+       ], [
+         fhir:index 1;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Provider Directory Provider Organization by id" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "name" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://build.fhir.org/Organization.html#search" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 1;
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation " ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://build.fhir.org/Organization.html#search" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

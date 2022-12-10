@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/Location/example-location-3> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-location-3"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-location";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-location-3</p><p><b>meta</b>: </p><p><b>identifier</b>: 29</p><p><b>status</b>: active</p><p><b>name</b>: Health Level Seven International - Amherst</p><p><b>description</b>: HL7 Headquarters - East</p><p><b>telecom</b>: ph: (+1) 734-677-7777</p><p><b>address</b>: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002</p><h3>Positions</h3><table class=\"grid\"><tr><td>-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td>*</td><td>-72.519854</td><td>42.373222</td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-example-organization-2.html\">Generated Summary: id: example-organization-2; 1063494177, 00-0000000; active; name: Saint Luke's Hospital of Kansas City; ph: (816)932-2000(WORK), http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city(WORK)</a></p></div>"
+  ];
+  fhir:Location.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.acme.org/location" ];
+     fhir:Identifier.value [ fhir:value "29" ]
+  ];
+  fhir:Location.status [ fhir:value "active"];
+  fhir:Location.name [ fhir:value "Health Level Seven International - Amherst"];
+  fhir:Location.description [ fhir:value "HL7 Headquarters - East"];
+  fhir:Location.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 734-677-7777" ]
+  ];
+  fhir:Location.address [
+     fhir:Address.text [ fhir:value "3300 Washtenaw Avenue, Suite 227 Amherst MA 01002" ];
+     fhir:Address.line [
+       fhir:value "3300 Washtenaw Avenue, Suite 227";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Amherst" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01002" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ];
+  fhir:Location.position [
+     fhir:Location.position.longitude [ fhir:value "-72.519854"^^xsd:decimal ];
+     fhir:Location.position.latitude [ fhir:value "42.373222"^^xsd:decimal ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <http://fhir.org/guides/argonaut-pd/Organization/example-organization-2>;
+     fhir:Reference.reference [ fhir:value "Organization/example-organization-2" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/Location/example-location-3.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

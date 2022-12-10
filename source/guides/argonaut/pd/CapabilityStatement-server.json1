@@ -1,0 +1,381 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "server",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n\n\t\t<h2 id=\"capabilitystatements-defined-for-this-guide\" class=\"no_toc\">CapabilityStatements Defined for this Guide</h2>\n\n\t\t\n\n\t\t<ul id=\"markdown-toc\">\n\t\t  <li><a href=\"#server\" id=\"markdown-toc-server\">Conformance requirements for an Argonaut Provider Directory Server</a>    <ul>\n\t\t      <li><a href=\"#behavior\" id=\"markdown-toc-behavior\">Behavior</a></li>\n\t\t      <li><a href=\"#security\" id=\"markdown-toc-security\">Security:</a></li>\n\t\t      <li><a href=\"#profile-interaction-summary\" id=\"markdown-toc-profile-interaction-summary\">Profile Interaction Summary:</a></li>\n\t\t      <li><a href=\"#resource--details\" id=\"markdown-toc-resource--details\">Resource  Details:</a>        <ul>\n\t\t          <li><a href=\"#endpoint\" id=\"markdown-toc-endpoint\">1. Endpoint</a></li>\n\t\t          <li><a href=\"#location\" id=\"markdown-toc-location\">2. Location</a></li>\n\t\t          <li><a href=\"#organization\" id=\"markdown-toc-organization\">3. Organization</a></li>\n\t\t          <li><a href=\"#practitioner\" id=\"markdown-toc-practitioner\">4. Practitioner</a></li>\n\t\t          <li><a href=\"#practitionerrole\" id=\"markdown-toc-practitionerrole\">5. PractitionerRole</a></li>\n\t\t        </ul>\n\t\t      </li>\n\t\t    </ul>\n\t\t  </li>\n\n\t\t</ul>\n\n\t\t\n\n\t\t<p>This section outlines conformance requirements for each of the Provider Directory actors identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Provider Directory actors.</p>\n\n\t\t<h3 id=\"server\">Conformance requirements for an Argonaut Provider Directory Server</h3>\n\n\n\n\t\t<ul>\n\t\t  <li>FHIR Version: 3.0.0</li>\n\t\t  <li>Supported formats: xml, json</li>\n\t\t  <li>Published: 2017-04-30</li>\n\t\t  <li>Published by: Argonaut</li>\n\t\t</ul>\n\n\t\t<p>The Section describes the expected capabilities of the Provider Directory actor which is responsible for providing responses to the queries submitted by Client applications. It describes the complete list of FHIR profiles, RESTful operations, and search parameters supported by US Provider Directory Servers. Provider Directory Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</p>\n\n\t\t<h4 id=\"behavior\">Behavior</h4>\n\n\t\t<p>Description: The Provider Directory Server <strong>SHALL</strong>:</p>\n\n\t\t<ul>\n\t\t  <li>Support the following US Provider Directory resource profiles:\n\t\t    <ul>\n\t\t      <li>Argonaut Endpoint</li>\n\t\t      <li>Argonaut Location</li>\n\t\t      <li>Argonaut Organization</li>\n\t\t      <li>Argonaut Practitioner</li>\n\t\t      <li>Argonaut PractitionerRole</li>\n\t\t    </ul>\n\t\t  </li>\n\t\t  <li>Return the following response classes:\n\t\t    <ul>\n\t\t      <li>(Status 200): successful operation</li>\n\t\t      <li>(Status 400): invalid parameter</li>\n\t\t      <li>(Status 401/4xx): unauthorized request</li>\n\t\t      <li>(Status 403): insufficient scope</li>\n\t\t      <li>(Status 404): unknown resource</li>\n\t\t      <li>(Status 410): deleted resource.</li>\n\t\t    </ul>\n\t\t  </li>\n\t\t  <li>Implement the RESTful behavior according to the FHIR specification.</li>\n\t\t  <li>Support <em>json</em> resource formats for all Provider Directory interactions.</li>\n\t\t  <li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li>\n\t\t</ul>\n\n\t\t<h4 id=\"security\">Security:</h4>\n\n\t\t<p>US Provider Directory Servers <strong>SHALL</strong>:</p>\n\n\t\t<ul>\n\t\t  <li>Implement the security requirements documented in the <a href=\"http://hl7.org/fhir/us/core/STU1/security.html\">US Core IG</a>.</li>\n\t\t  <li>A server has ensured that every API request includes a valid Authorization token, supplied via: <code class=\"highlighter-rouge\">Authorization: Bearer {server-specific-token-here}</code></li>\n\t\t  <li>A server has rejected any unauthorized requests by returning an <code class=\"highlighter-rouge\">HTTP 401</code> Unauthorized response code.</li>\n\t\t</ul>\n\n\t\t<h4 id=\"profile-interaction-summary\">Profile Interaction Summary:</h4>\n\n\t\t<ul>\n\t\t  <li>All servers <strong>SHALL</strong> make available the <a href=\"http://hl7.org/fhir/STU3/http.html#read\">read</a> and <a href=\"http://hl7.org/fhir/STU3/http.html#search\">search</a> interactions for the Profiles the server chooses to support.</li>\n\t\t  <li>All servers <strong>SHOULD</strong> make available the <a href=\"http://hl7.org/fhir/STU3/http.html#vread\">vread</a> and <a href=\"http://hl7.org/fhir/STU3/http.html#history\">history-instance</a> interactions for the Profiles the server chooses to support.</li>\n\t\t</ul>\n\n\t\t<p><strong>Summary of Provider Directory search criteria</strong></p>\n\n\t\t<p>Specific server search capabilities are described in detail below in each of the resource sections.  When returning a PractitionerRole, a Practitioner and Endpoint <strong>SHALL</strong> be included. When searching on Organization or Location, a server <strong>SHALL</strong> support the _include parameter for the endpoint parameter. The client application must properly process a bundle when all resources are included, and must be able to retrieve them when not included.</p>\n\n\t\t<table class=\"grid\">\n\t\t  <thead>\n\t\t    <tr>\n\t\t      <th>Resource Type</th>\n\t\t      <th>Supported Profiles</th>\n\t\t      <th>Supported Search parameters</th>\n\t\t      <th>Supported _includes</th>\n\t\t    </tr>\n\t\t  </thead>\n\t\t  <tbody>\n\t\t    <tr>\n\t\t      <td><a href=\"#endpoint\">Endpoint</a></td>\n\t\t      <td>Argonaut Endpoint Profile</td>\n\t\t      <td>identifier, organization, name</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><a href=\"#location\">Location</a></td>\n\t\t      <td>Argonaut Location Profile</td>\n\t\t      <td>identifier, name, address</td>\n\t\t      <td>Location:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><a href=\"#organization\">Organization</a></td>\n\t\t      <td>Argonaut Organization Profile</td>\n\t\t      <td>identifier, name, address</td>\n\t\t      <td>Organization:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><a href=\"#practitioner\">Practitioner</a></td>\n\t\t      <td>Argonaut Practitioner Profile</td>\n\t\t      <td>identifier, name</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><a href=\"#practitionerrole\">PractitionerRole</a></td>\n\t\t      <td>Argonaut PractitionerRole Profile</td>\n\t\t      <td>practitioner, specialty</td>\n\t\t      <td>PractitionerRole:practitioner, PractitionerRole:endpoint</td>\n\t\t    </tr>\n\t\t  </tbody>\n\t\t</table>\n\n\t\t<h4 id=\"resource--details\">Resource  Details:</h4>\n\n\t\t<h5 id=\"endpoint\">1. Endpoint</h5>\n\n\t\t<p>Supported Profiles:  <a href=\"http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-endpoint.html\">Argonaut Endpoint Profile</a></p>\n\n\t\t<p>Search Criteria:</p>\n\n\t\t<p>A server <strong>SHALL</strong> be capable of fetching an Endpoint using:</p>\n\n\t\t<ul>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Endpoint?identifier=[system]|[code]</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Endpoint?organization=[id]</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Endpoint?name=[string]</code></li>\n\t\t</ul>\n\n\t\t<table class=\"grid\">\n\t\t  <thead>\n\t\t    <tr>\n\t\t      <th>Conformance</th>\n\t\t      <th>Parameter</th>\n\t\t      <th>Type</th>\n\t\t      <th>_include (see documentation)</th>\n\t\t    </tr>\n\t\t  </thead>\n\t\t  <tbody>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>identifier</td>\n\t\t      <td>token</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>name</td>\n\t\t      <td>string</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>organization</td>\n\t\t      <td>reference</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t  </tbody>\n\t\t</table>\n\n\t\t<h5 id=\"location\">2. Location</h5>\n\t\t<p>Supported Profiles:  <a href=\"http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-location.html\">Argonaut Location Profile</a></p>\n\n\t\t<p>Search Criteria:</p>\n\n\t\t<p>A server <strong>SHALL</strong> be capable of returning a Location using:</p>\n\n\t\t<ul>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Location?identifier=[system]|[code]{&amp;_include=Location:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Location?name=[string]{&amp;_include=Location:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Location?address=[string]{&amp;_include=Location:endpoint}</code></li>\n\t\t</ul>\n\n\t\t<p>Search Parameters:</p>\n\n\t\t<table class=\"grid\">\n\t\t  <thead>\n\t\t    <tr>\n\t\t      <th>Conformance</th>\n\t\t      <th>Parameter</th>\n\t\t      <th>Type</th>\n\t\t      <th>_include (see documentation)</th>\n\t\t    </tr>\n\t\t  </thead>\n\t\t  <tbody>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>identifier</td>\n\t\t      <td>token</td>\n\t\t      <td>Location:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>name</td>\n\t\t      <td>string</td>\n\t\t      <td>Location:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>address</td>\n\t\t      <td>string</td>\n\t\t      <td>Location:endpoint</td>\n\t\t    </tr>\n\t\t  </tbody>\n\t\t</table>\n\n\t\t<h5 id=\"organization\">3. Organization</h5>\n\t\t<p>Supported Profiles:  <a href=\"http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-organization.html\">Argonaut Organization Profile</a></p>\n\n\t\t<p>Search Criteria:</p>\n\n\t\t<p>A server <strong>SHALL</strong> be capable of returning an Organization using:</p>\n\n\t\t<ul>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Organization?identifier=[system]|[code]{&amp;_include=Organization:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Organization?name=[string]{&amp;_include=Organization:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Organization?address=[string]{&amp;_include=Organization:endpoint}</code></li>\n\t\t</ul>\n\n\t\t<table class=\"grid\">\n\t\t  <thead>\n\t\t    <tr>\n\t\t      <th>Conformance</th>\n\t\t      <th>Parameter</th>\n\t\t      <th>Type</th>\n\t\t      <th>_include (see documentation)</th>\n\t\t    </tr>\n\t\t  </thead>\n\t\t  <tbody>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>identifier</td>\n\t\t      <td>token</td>\n\t\t      <td>Organization:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>name</td>\n\t\t      <td>string</td>\n\t\t      <td>Organization:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>address</td>\n\t\t      <td>string</td>\n\t\t      <td>Organization:endpoint</td>\n\t\t    </tr>\n\t\t  </tbody>\n\t\t</table>\n\n\t\t<h5 id=\"practitioner\">4. Practitioner</h5>\n\t\t<p>Supported Profiles:  <a href=\"http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-practitioner.html\">Argonaut Practitioner Profile</a></p>\n\n\t\t<p>Search Criteria:</p>\n\n\t\t<p>A server <strong>SHALL</strong> be capable of returning a Practitioner using:</p>\n\n\t\t<ul>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Practitioner?identifier=[system]|[code]</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Practitioner?family=[string]&amp;given=[string]</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/Practitioner?name=[string]</code></li>\n\t\t</ul>\n\n\t\t<table class=\"grid\">\n\t\t  <thead>\n\t\t    <tr>\n\t\t      <th>Conformance</th>\n\t\t      <th>Parameter</th>\n\t\t      <th>Type</th>\n\t\t      <th>_include (see documentation)</th>\n\t\t    </tr>\n\t\t  </thead>\n\t\t  <tbody>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>identifier</td>\n\t\t      <td>token</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>given</td>\n\t\t      <td>string</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>family</td>\n\t\t      <td>string</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>name</td>\n\t\t      <td>string</td>\n\t\t      <td> </td>\n\t\t    </tr>\n\t\t  </tbody>\n\t\t</table>\n\n\t\t<h5 id=\"practitionerrole\">5. PractitionerRole</h5>\n\t\t<p>Supported Profiles:  <a href=\"http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-practitionerrole.html\">Argonaut PractitionerRole Profile</a></p>\n\n\t\t<p>Search Criteria:</p>\n\n\t\t<p>A server <strong>SHALL</strong> be capable of returning a PractitionerRole using:</p>\n\n\t\t<ul>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/PractitionerRole?practitioner.identifier=[system]|[code]{&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/PractitionerRole?practitioner.family=[string]&amp;given=[string]{&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/PractitionerRole?specialty=[system]|[code]{&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole:endpoint}</code></li>\n\t\t</ul>\n\n\t\t<p>A server <strong>MAY</strong> return a PractitionerRole using:</p>\n\n\t\t<ul>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/PractitionerRole?location.address-city=[city]{&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/PractitionerRole?location.address-city=[city]&amp;specialty=[string]{&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole:endpoint}</code></li>\n\t\t  <li><code class=\"highlighter-rouge\">GET [base]/PractitionerRole?location.near=[lat],[long]&amp;near-distance=[distance]{&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole:endpoint}</code></li>\n\t\t</ul>\n\n\t\t<p>Search Parameters:</p>\n\n\t\t<table class=\"grid\">\n\t\t  <thead>\n\t\t    <tr>\n\t\t      <th>Conformance</th>\n\t\t      <th>Parameter</th>\n\t\t      <th>Type</th>\n\t\t      <th>_include (see documentation)</th>\n\t\t    </tr>\n\t\t  </thead>\n\t\t  <tbody>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>practitioner.identifier</td>\n\t\t      <td>reference + token (chained parameter)</td>\n\t\t      <td>PractitionerRole:practitioner, PractitionerRole:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>practitioner.family</td>\n\t\t      <td>reference + string (chained parameter)</td>\n\t\t      <td>PractitionerRole:practitioner, PractitionerRole:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>SHALL</strong></td>\n\t\t      <td>specialty</td>\n\t\t      <td>token</td>\n\t\t      <td>PractitionerRole:practitioner, PractitionerRole:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>MAY</strong></td>\n\t\t      <td>location.address</td>\n\t\t      <td>reference + string (chained parameter)</td>\n\t\t      <td>PractitionerRole:practitioner, PractitionerRole:endpoint</td>\n\t\t    </tr>\n\t\t    <tr>\n\t\t      <td><strong>MAY</strong></td>\n\t\t      <td>location.near, location.distance</td>\n\t\t      <td>reference + token (chained parameter), reference + quantity (chained parameter)</td>\n\t\t      <td>PractitionerRole:practitioner, PractitionerRole:endpoint</td>\n\t\t    </tr>\n\t\t  </tbody>\n\t\t</table>\n\n\t\t<p><br/></p>\n\n\n\t</div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-pd/CapabilityStatement/server",
+  "version": "1.0.0",
+  "name": "Argonaut Provider Directory Server",
+  "status": "draft",
+  "date": "2017-04-15T00:00:00+10:00",
+  "publisher": "Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "{{ site.data.fhir.path }}"
+        }
+      ]
+    }
+  ],
+  "description": "This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide.",
+  "kind": "requirements",
+  "fhirVersion": "3.0.0",
+  "acceptUnknown": "extensions",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "profile": [
+    {
+      "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitioner"
+    },
+    {
+      "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-location"
+    },
+    {
+      "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint"
+    },
+    {
+      "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitionerrole"
+    },
+    {
+      "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-organization"
+    }
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:- Argonaut Provider Directory Endpoint- Argonaut Provider Directory Location- Argonaut Provider Directory Organization- Argonaut Provider Directory Practitioner- Argonaut Provider Directory PractitionerRole The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions.",
+      "security": {
+        "description": "Argonaut Provider Directory Servers SHALL implement the security requirements documented in the Argonaute Provider Directory IG."
+      },
+      "resource": [
+        {
+          "type": "Practitioner",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider by id"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://hl7.org/fhir/SearchParameter/Practitioner-name",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "family",
+              "definition": "http://hl7.org/fhir/SearchParameter/Practitioner-family",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "given",
+              "definition": "http://hl7.org/fhir/SearchParameter/Practitioner-given",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Practitioner-identifier",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "type": "Organization",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider Organization by id"
+            }
+          ],
+          "searchInclude": [
+            "Organization:endpoint"
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://hl7.org/fhir/SearchParameter/Organization-name",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "address",
+              "definition": "http://hl7.org/fhir/SearchParameter/Organization-address",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Organization-identifier",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "type": "Location",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider Location by id"
+            }
+          ],
+          "searchInclude": [
+            "Location:endpoint"
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://hl7.org/fhir/SearchParameter/Location-name",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "address",
+              "definition": "http://hl7.org/fhir/SearchParameter/Location-address",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Location-identifier",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "type": "Endpoint",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider Endpoint by id"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://hl7.org/fhir/SearchParameter/Endpoint-name",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "organization",
+              "definition": "http://hl7.org/fhir/SearchParameter/Endpoint-organization",
+              "type": "reference"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Endpoint-identifier",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "type": "PractitionerRole",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider PractitionerRole by id"
+            }
+          ],
+          "searchInclude": [
+            "PractitionerRole:practitioner",
+            "PractitionerRole:endpoint"
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "practitioner",
+              "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
+              "type": "reference"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "name": "location",
+              "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-location",
+              "type": "reference"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "specialty",
+              "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty",
+              "type": "token"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

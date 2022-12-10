@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="example-location-1"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-location"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-location-1</p><p><b>meta</b>: </p><p><b>identifier</b>: 29</p><p><b>status</b>: active</p><p><b>name</b>: Health Level Seven International - Amherst</p><p><b>description</b>: HL7 Headquarters - East</p><p><b>mode</b>: instance</p><p><b>type</b>: Sleep disorders unit <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/v3/RoleCode code 'SLEEP' = 'Sleep disorders unit', given as 'Sleep disorders unit'})</span></p><p><b>telecom</b>: ph: (+1) 734-677-7777, fax: (+1) 734-677-6622, hq@HL7.org</p><p><b>address</b>: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002</p><p><b>physicalType</b>: Building <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/location-physical-type code 'bu' = 'Building', given as 'Building'})</span></p><h3>Positions</h3><table class="grid"><tr><td>-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td>*</td><td>-72.519854</td><td>42.373222</td></tr></table><p><b>managingOrganization</b>: <a href="Organization-example-organization-2.html">Generated Summary: id: example-organization-2; 1063494177, 00-0000000; active; name: Saint Luke's Hospital of Kansas City; ph: (816)932-2000(WORK), http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city(WORK)</a></p></div>
+  </text>
+<!--    HL7 East    -->
+  <identifier>
+    <system value="http://www.acme.org/location"/>
+    <value value="29"/>
+  </identifier>
+  <status value="active"/>
+  <name value="Health Level Seven International - Amherst"/>
+  <description value="HL7 Headquarters - East"/>
+  <mode value="instance"/>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <code value="SLEEP"/>
+      <display value="Sleep disorders unit"/>
+    </coding>
+  </type>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) 734-677-7777"/>
+  </telecom>
+  <telecom>
+    <system value="fax"/>
+    <value value="(+1) 734-677-6622"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="hq@HL7.org"/>
+  </telecom>
+  <address>
+    <text value="3300 Washtenaw Avenue, Suite 227 Amherst MA 01002"/>
+    <line value="3300 Washtenaw Avenue, Suite 227"/>
+    <city value="Amherst"/>
+    <state value="MA"/>
+    <postalCode value="01002"/>
+    <country value="USA"/>
+  </address>
+  <physicalType>
+    <coding>
+      <system value="http://hl7.org/fhir/location-physical-type"/>
+      <code value="bu"/>
+      <display value="Building"/>
+    </coding>
+  </physicalType>
+  <position>
+    <longitude value="-72.519854"/>
+    <latitude value="42.373222"/>
+  </position>
+  <managingOrganization>
+    <reference value="Organization/example-organization-2"/>
+  </managingOrganization>
+</Location>

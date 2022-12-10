@@ -1,0 +1,78 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "client",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Provider Directory Client</h2><div><p>This profile defines the expected capabilities of a client when conforming to the Argonaut Provider Directory Implementation Guide.</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td>'''The Argonaut Provider Directory Client''' ''SHOULD'' support querying of one or more FHIR resources using appropriate Argonaut Provider Directory profile(s), RESTful operations defined for the profile and [[parameters.html|Search]] identified for the profile. - list - list</td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b>Read</b></th><th><b>V-Read</b></th><th><b>Search</b></th><th><b>Update</b></th><th><b>Updates</b></th><th><b>Create</b></th><th><b>Delete</b></th><th><b>History</b></th></tr><tr><td>Practitioner</td><td><a href=\"http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-practitioner\">http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-practitioner</a></td><td></td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Organization</td><td><a href=\"http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization\">http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization</a></td><td></td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr></table></div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-pd/CapabilityStatement/client",
+  "name": "Argonaut Provider Directory Client",
+  "status": "draft",
+  "date": "2016-11-13",
+  "publisher": "FHIR Project Team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "This profile defines the expected capabilities of a client when conforming to the Argonaut Provider Directory Implementation Guide.",
+  "kind": "requirements",
+  "fhirVersion": "STU3",
+  "acceptUnknown": "extensions",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "rest": [
+    {
+      "mode": "client",
+      "documentation": "'''The Argonaut Provider Directory Client''' ''SHOULD'' support querying of one or more FHIR resources using appropriate Argonaut Provider Directory profile(s), RESTful operations defined for the profile and [[parameters.html|Search]] identified for the profile. - list - list",
+      "security": {
+        "description": "Argonaut Provider Directory Clients SHALL implement applicable security requirements documented in the Argonaut Provider Directory IG."
+      },
+      "resource": [
+        {
+          "type": "Practitioner",
+          "profile": {
+            "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-practitioner"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) "
+            }
+          ]
+        },
+        {
+          "type": "Organization",
+          "profile": {
+            "reference": "http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Organization resources using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

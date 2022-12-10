@@ -1,0 +1,302 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Provider Directory Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Provider Directory CI Build <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a></b>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://build.fhir.orgindex.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">Definitions</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="capstmnts.html">Capability Statements</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+<!-- ============Breadcrumbs=============== -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Provider Directory Guide (v0.1.0: Release 1 Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. The current version which supercedes this version is <a href="http://fhir.org/guides/argonaut/pd/ImplementationGuide-ig.json.html">1.0.0</a>.  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!-- <h2>Implementation Guide Template</h2> -->
+
+<pre class="json">
+{
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide">resourceType</a>" : "ImplementationGuide",
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.id">id</a>" : "ig",
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.url">url</a>" : "http://fhir.org/guides/argonaut-pd/ImplementationGuide/ig",
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.name">name</a>" : "Implementation Guide Template",
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.experimental">experimental</a>" : true,
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "FHIR Project",
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package">package</a>" : [
+    {
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.name">name</a>" : "base",
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-provider-specialty.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/provider-specialty"
+          }
+        },
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-provider-role.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/provider-role"
+          }
+        },
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CapabilityStatement-server.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "CapabilityStatement/server"
+          }
+        },
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CapabilityStatement-client.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "CapabilityStatement/client"
+          }
+        }
+      ]
+    },
+    {
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.name">name</a>" : "C:\work\org.hl7.fhir.us\argonaut-pd\resources\endpoint-profile-spreadsheet",
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-argo-endpoint.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Argonaut Provider Directory Endpoint",
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/argo-endpoint"
+          }
+        }
+      ]
+    },
+    {
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.name">name</a>" : "C:\work\org.hl7.fhir.us\argonaut-pd\resources\location-profile-spreadsheet",
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-argo-location.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Argonaut Provider Directory Location",
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/argo-location"
+          }
+        }
+      ]
+    },
+    {
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.name">name</a>" : "C:\work\org.hl7.fhir.us\argonaut-pd\resources\organization-profile-spreadsheet",
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-argo-organization.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Argonaut Provider Directory Organization",
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/argo-organization"
+          }
+        }
+      ]
+    },
+    {
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.name">name</a>" : "C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitioner-profile-spreadsheet",
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-argo-practitioner.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Argonaut Provider Directory Practitioner",
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/argo-practitioner"
+          }
+        }
+      ]
+    },
+    {
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.name">name</a>" : "C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitionerrole-profile-spreadsheet",
+      "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-argo-practitionerrole.html"
+            }
+          ],
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Argonaut Provider Directory PractitionerRole",
+          "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://build.fhir.org/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/argo-practitionerrole"
+          }
+        }
+      ]
+    }
+  ],
+  "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.page">page</a>" : {
+    "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.page.source">source</a>" : "index.html",
+    "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.page.title">title</a>" : "blah",
+    "<a href="http://build.fhir.org/implementationguide.html#ImplementationGuide.page.kind">kind</a>" : "page"
+  }
+}</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Provider Directory fhir.argonaut.pd#0.1.0 generated on Fri, Dec 23, 2016 11:02+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://build.fhir.orglicense.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+

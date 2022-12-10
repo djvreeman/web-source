@@ -1,0 +1,611 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Provider Directory</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Provider Directory Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Provider Directory Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/STU3/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="guidance.html">Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="capstatements.html">Capability Statements</a></li>
+              <li><a href="future.html">Future Work</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Provider Directory Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/STU3">FHIR R3</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+
+<!-- ============BreadCrumb=============== -->
+
+<!--include breadcrumbs.html -->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Example: CapabilityStatement-client</h2>
+
+<p>
+Formats: <a href="CapabilityStatement-client.html">Narrative</a>, <a href="CapabilityStatement-client.xml.html">XML</a>, <a href="CapabilityStatement-client.json.html">JSON</a>, <a href="CapabilityStatement-client.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="CapabilityStatement-client.xml" download>xml</a>
+</p>
+
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement">CapabilityStatement</a> xmlns=&quot;http://hl7.org/fhir/STU3&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;client&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+
+
+		&lt;ul id=&quot;markdown-toc&quot;&gt;
+		  &lt;li&gt;&lt;a href=&quot;#conformance-requirements-for-the-argonaut-provider-directory-client&quot; id=&quot;markdown-toc-conformance-requirements-for-the-argonaut-provider-directory-client&quot;&gt;Conformance requirements for the Argonaut Provider Directory Client&lt;/a&gt;    &lt;ul&gt;
+		      &lt;li&gt;&lt;a href=&quot;#behavior-1&quot; id=&quot;markdown-toc-behavior-1&quot;&gt;Behavior&lt;/a&gt;&lt;/li&gt;
+		      &lt;li&gt;&lt;a href=&quot;#security-1&quot; id=&quot;markdown-toc-security-1&quot;&gt;Security&lt;/a&gt;&lt;/li&gt;
+		      &lt;li&gt;&lt;a href=&quot;#resource--details-1&quot; id=&quot;markdown-toc-resource--details-1&quot;&gt;Resource  Details:&lt;/a&gt;        &lt;ul&gt;
+		          &lt;li&gt;&lt;a href=&quot;#endpoint-1&quot; id=&quot;markdown-toc-endpoint-1&quot;&gt;1. Endpoint&lt;/a&gt;&lt;/li&gt;
+		          &lt;li&gt;&lt;a href=&quot;#location-1&quot; id=&quot;markdown-toc-location-1&quot;&gt;2. Location&lt;/a&gt;&lt;/li&gt;
+		          &lt;li&gt;&lt;a href=&quot;#organization-1&quot; id=&quot;markdown-toc-organization-1&quot;&gt;3. Organization&lt;/a&gt;&lt;/li&gt;
+		          &lt;li&gt;&lt;a href=&quot;#practitioner-1&quot; id=&quot;markdown-toc-practitioner-1&quot;&gt;4. Practitioner&lt;/a&gt;&lt;/li&gt;
+		          &lt;li&gt;&lt;a href=&quot;#practitionerrole-1&quot; id=&quot;markdown-toc-practitionerrole-1&quot;&gt;5. PractitionerRole&lt;/a&gt;&lt;/li&gt;
+		        &lt;/ul&gt;
+		      &lt;/li&gt;
+		    &lt;/ul&gt;
+		  &lt;/li&gt;
+		&lt;/ul&gt;
+
+		
+
+		&lt;h3 id=&quot;conformance-requirements-for-the-argonaut-provider-directory-client&quot;&gt;Conformance requirements for the Argonaut Provider Directory Client&lt;/h3&gt;
+
+		&lt;ul&gt;
+		  &lt;li&gt;FHIR Version: 3.0.0&lt;/li&gt;
+		  &lt;li&gt;Supported formats: xml, json&lt;/li&gt;
+		  &lt;li&gt;Published: 2017-04-30&lt;/li&gt;
+		  &lt;li&gt;Published by: Argonaut&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;p&gt;This section describes the expected capabilities of a client actor which is responsible for creating and initiating the queries for information. It is expected that this CapabilityStatement will be used in conjuction with the &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/capstatements.html#server&quot;&gt;Argonaut Provider Directory Server CapabilityStatement&lt;/a&gt;. Together they describe the basic expectations for the capabilities of a conformant client application.&lt;/p&gt;
+
+		&lt;h4 id=&quot;behavior-1&quot;&gt;Behavior&lt;/h4&gt;
+
+		&lt;p&gt;The Argonaut Provider Client &lt;strong&gt;SHALL&lt;/strong&gt; support fetching and querying of one or more Argonaut Provider profile(s), using the supported RESTful interactions and search parameters declared in the &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/capstatements.html#server&quot;&gt;Argonaut Provider Directory Server CapabilityStatement&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;The Argonaut Provider Client &lt;strong&gt;SHOULD&lt;/strong&gt; Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.&lt;/p&gt;
+
+		&lt;h4 id=&quot;security-1&quot;&gt;Security&lt;/h4&gt;
+
+		&lt;p&gt;Argonaut Clent &lt;strong&gt;SHALL&lt;/strong&gt; implement the security requirements documented in the &lt;a href=&quot;http://hl7.org/fhir/us/core/STU1/security.html&quot;&gt;US Core IG&lt;/a&gt;.&lt;/p&gt;
+
+		&lt;p&gt;&lt;strong&gt;Summary of Argonaut Provider search criteria&lt;/strong&gt;&lt;/p&gt;
+
+		&lt;p&gt;Specific client search capabilities are described in detail below in each of the resource sections. When a Server returns a PractitionerRole, Location, or Organization, an Endpoint &lt;strong&gt;MAY&lt;/strong&gt; be included. The client application &lt;strong&gt;SHALL&lt;/strong&gt; properly process a bundle when all resources are included, and be able to retrieve the Endpoint resource when not included.&lt;/p&gt;
+
+		&lt;h4 id=&quot;resource--details-1&quot;&gt;Resource  Details:&lt;/h4&gt;
+
+		&lt;h5 id=&quot;endpoint-1&quot;&gt;1. Endpoint&lt;/h5&gt;
+
+		&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-endpoint.html&quot;&gt;Argonaut Endpoint Profile&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;Search Criteria:&lt;/p&gt;
+
+		&lt;p&gt;A Client &lt;strong&gt;SHALL&lt;/strong&gt; be capable of fetching an Endpoint using:&lt;/p&gt;
+
+		&lt;ul&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Endpoint?identifier=[system]|[code]&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Endpoint?organization=[id]&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Endpoint?name=[string]&lt;/code&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;h5 id=&quot;location-1&quot;&gt;2. Location&lt;/h5&gt;
+		&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-location.html&quot;&gt;Argonaut Location Profile&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;Search Criteria:&lt;/p&gt;
+
+		&lt;p&gt;A client &lt;strong&gt;SHALL&lt;/strong&gt; be capable of fetching a Location using:&lt;/p&gt;
+
+		&lt;ul&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Location?identifier=[system]|[code]{&amp;amp;_include=Location:endpoint}&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Location?name=[string]{&amp;amp;_include=Location:endpoint}&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Location?address=[string]{&amp;amp;_include=Location:endpoint}&lt;/code&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;h5 id=&quot;organization-1&quot;&gt;3. Organization&lt;/h5&gt;
+		&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-organization.html&quot;&gt;Argonaut Organization Profile&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;Search Criteria:&lt;/p&gt;
+
+		&lt;p&gt;A client &lt;strong&gt;SHALL&lt;/strong&gt; be capable of fetching an Organization using:&lt;/p&gt;
+
+		&lt;ul&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Organization?identifier=[system]|[code]{&amp;amp;_include=Organization:endpoint}&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Organization?name=[string]{&amp;amp;_include=Organization:endpoint}&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Organization?address=[string]{&amp;amp;_include=Organization:endpoint}&lt;/code&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;h5 id=&quot;practitioner-1&quot;&gt;4. Practitioner&lt;/h5&gt;
+		&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-practitioner.html&quot;&gt;Argonaut Practitioner Profile&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;Search Criteria:&lt;/p&gt;
+
+		&lt;p&gt;A client &lt;strong&gt;SHALL&lt;/strong&gt; be capable of fetching a Practitioner using:&lt;/p&gt;
+
+		&lt;ul&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Practitioner?identifier=[system]|[code]&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Practitioner?family=[string]&amp;amp;given=[string]&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Practitioner?name=[string]&lt;/code&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;h5 id=&quot;practitionerrole-1&quot;&gt;5. PractitionerRole&lt;/h5&gt;
+		&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://fhir.org/guides/argonaut-pd/r3/StructureDefinition-argo-practitionerrole.html&quot;&gt;Argonaut PractitionerRole Profile&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;Search Criteria:&lt;/p&gt;
+
+		&lt;p&gt;A client &lt;strong&gt;SHALL&lt;/strong&gt; be capable of fetching a PractitionerRole using:&lt;/p&gt;
+
+		&lt;ul&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/PractitionerRole?practitioner.identifier=[system]|[code]{&amp;amp;_include=PractitionerRole:practitioner&amp;amp;_include=PractitionerRole:endpoint}&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/PractitionerRole?practitioner.family=[string]&amp;amp;given=[string]{&amp;amp;_include=PractitionerRole:practitioner&amp;amp;_include=PractitionerRole:endpoint}&lt;/code&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/PractitionerRole?specialty=[system]|[code]{&amp;amp;_include=PractitionerRole:practitioner&amp;amp;_include=PractitionerRole:endpoint}&lt;/code&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+
+		&lt;br/&gt;
+
+
+	&lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-pd/CapabilityStatement/client&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Provider Directory Client&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2016-11-13T00:00:00+11:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Project&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;other&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://argonautwiki.hl7.orgs/&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.description">description</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;This profile defines the expected capabilities of a client when conforming to the Argonaut Provider Directory Implementation Guide.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.kind">kind</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;requirements&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;STU3&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.acceptUnknown">acceptUnknown</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;xml&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitioner&quot;/&gt;
+  &lt;/profile&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-location&quot;/&gt;
+  &lt;/profile&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint&quot;/&gt;
+  &lt;/profile&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitionerrole&quot;/&gt;
+  &lt;/profile&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-organization&quot;/&gt;
+  &lt;/profile&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest">rest</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;client&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;&amp;#39;&amp;#39;&amp;#39;The Argonaut Provider Directory Client&amp;#39;&amp;#39;&amp;#39; &amp;#39;&amp;#39;SHOULD&amp;#39;&amp;#39; support querying of one or more FHIR resources using appropriate Argonaut Provider Directory profile(s), RESTful serach parameters and operations defined for the profile.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.security">security</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.security.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Provider Directory Clients SHALL implement applicable security requirements documented in the Argonaut Provider Directory IG.&quot;/&gt;
+    &lt;/security&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows retrieval of a specific Argonaut Provider Directory Provider by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Practitioner-name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;family&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Practitioner-family&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;given&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Practitioner-given&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Practitioner-identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
+      &lt;/searchParam&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Organization&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows retrieval of a specific Argonaut Provider Directory Provider Organization by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organization:endpoint&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Organization-name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;address&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Organization-address&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Organization-identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
+      &lt;/searchParam&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Location&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows retrieval of a specific Argonaut Provider Directory Provider Location by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Location:endpoint&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Location-name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;address&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Location-address&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Location-identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
+      &lt;/searchParam&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Endpoint&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows retrieval of a specific Argonaut Provider Directory Provider Endpoint by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Endpoint-name&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;string&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;organization&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Endpoint-organization&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;reference&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/Endpoint-identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
+      &lt;/searchParam&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;PractitionerRole&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the Argonaut Provider Directory Use Cases&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Allows retrieval of a specific Argonaut Provider Directory Provider PractitionerRole by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole:practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchInclude">searchInclude</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole:endpoint&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;practitioner&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/PractitionerRole-practitioner&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;reference&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;location&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/PractitionerRole-location&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;reference&quot;/&gt;
+      &lt;/searchParam&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/STU3/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;specialty&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/STU3/SearchParameter/PractitionerRole-specialty&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
+      &lt;/searchParam&gt;
+    &lt;/resource&gt;
+  &lt;/rest&gt;
+&lt;/CapabilityStatement&gt;</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Argonaut Provider Directory fhir.argonaut.pd#1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a>  generated on Thu, Jun 15, 2017 20:26+1000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+

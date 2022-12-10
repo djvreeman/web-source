@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ig"/>
+  <url value="http://fhir.org/guides/argonaut-pd/ImplementationGuide/ig"/>
+  <name value="Implementation Guide Template"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="FHIR Project"/>
+  <package>
+    <name value="base"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-provider-specialty.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/provider-specialty"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-provider-role.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/provider-role"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-server.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/server"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-client.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/client"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package>
+    <name value="C:\work\org.hl7.fhir.us\argonaut-pd\resources\endpoint-profile-spreadsheet"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-endpoint.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="Argonaut Provider Directory Endpoint"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-endpoint"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package>
+    <name value="C:\work\org.hl7.fhir.us\argonaut-pd\resources\location-profile-spreadsheet"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-location.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="Argonaut Provider Directory Location"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-location"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package>
+    <name value="C:\work\org.hl7.fhir.us\argonaut-pd\resources\organization-profile-spreadsheet"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-organization.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="Argonaut Provider Directory Organization"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-organization"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package>
+    <name value="C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitioner-profile-spreadsheet"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-practitioner.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="Argonaut Provider Directory Practitioner"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-practitioner"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package>
+    <name value="C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitionerrole-profile-spreadsheet"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-practitionerrole.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="Argonaut Provider Directory PractitionerRole"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-practitionerrole"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <page>
+    <source value="index.html"/>
+    <title value="blah"/>
+    <kind value="page"/>
+  </page>
+</ImplementationGuide>

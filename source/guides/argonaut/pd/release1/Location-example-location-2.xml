@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir/STU3">
+  <id value="example-location-2"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-location"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-location-2</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>identifier</b>: 29</p><p><b>status</b>: active</p><p><b>name</b>: Health Level Seven International - Amherst</p><p><b>description</b>: HL7 Headquarters - East</p><p><b>mode</b>: instance</p><p><b>type</b>: Sleep disorders unit <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/STU3/v3/RoleCode code 'SLEEP' = 'Sleep disorders unit', given as 'Sleep disorders unit'})</span></p><p><b>telecom</b>: ph: (+1) 734-677-7777, fax: (+1) 734-677-6622, hq@HL7.org</p><p><b>address</b>: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002</p><p><b>physicalType</b>: Building <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/STU3/location-physical-type code 'bu' = 'Building', given as 'Building'})</span></p><h3>Positions</h3><table class="grid"><tr><td>-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td>*</td><td>-72.519854</td><td>42.373222</td></tr></table><p><b>managingOrganization</b>: <a href="Organization-example-organization-1.html">Generated Summary: id: example-organization-1; 1144221847, 2523423456; active; <span title="Codes: {http://hl7.org/fhir/STU3/organization-type prov}">Healthcare Provider</span>; name: Acme Hospital; ph: (+1) 734-677-7777, hq@acme.org</a></p><p><b>endpoint</b>: unknown resource contained</p></div>
+  </text>
+  <contained>
+    <Endpoint>
+      <id value="71"/>
+      <status value="active"/>
+      <connectionType>
+        <system value="http://hl7.org/fhir/STU3/endpoint-connection-type"/>
+        <code value="direct-project"/>
+      </connectionType>
+      <name value="Dr. Ronald Bone Direct Address"/>
+      <managingOrganization>
+        <reference value="Organization/example-organization-1"/>
+      </managingOrganization>
+      <payloadType>
+        <coding>
+          <system value="urn:oid:1.3.6.1.4.1.19376.1.2.3"/>
+          <code value="urn:hl7-org:sdwg:ccda-structuredBody:1.1"/>
+        </coding>
+      </payloadType>
+      <payloadMimeType value="text/xml"/>
+      <address value="mailto:Interoperability@DirectAddress.com"/>
+    </Endpoint>
+  </contained>
+  <identifier>
+    <system value="http://www.acme.org/location"/>
+    <value value="29"/>
+  </identifier>
+  <status value="active"/>
+  <name value="Health Level Seven International - Amherst"/>
+  <description value="HL7 Headquarters - East"/>
+  <mode value="instance"/>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/STU3/v3/RoleCode"/>
+      <code value="SLEEP"/>
+      <display value="Sleep disorders unit"/>
+    </coding>
+  </type>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) 734-677-7777"/>
+  </telecom>
+  <telecom>
+    <system value="fax"/>
+    <value value="(+1) 734-677-6622"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="hq@HL7.org"/>
+  </telecom>
+  <address>
+    <text value="3300 Washtenaw Avenue, Suite 227 Amherst MA 01002"/>
+    <line value="3300 Washtenaw Avenue, Suite 227"/>
+    <city value="Amherst"/>
+    <state value="MA"/>
+    <postalCode value="01002"/>
+    <country value="USA"/>
+  </address>
+  <physicalType>
+    <coding>
+      <system value="http://hl7.org/fhir/STU3/location-physical-type"/>
+      <code value="bu"/>
+      <display value="Building"/>
+    </coding>
+  </physicalType>
+  <position>
+    <longitude value="-72.519854"/>
+    <latitude value="42.373222"/>
+  </position>
+  <managingOrganization>
+    <reference value="Organization/example-organization-1"/>
+  </managingOrganization>
+  <endpoint>
+    <reference value="#71"/>
+  </endpoint>
+</Location>

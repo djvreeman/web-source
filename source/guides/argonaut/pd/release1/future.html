@@ -1,0 +1,225 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Provider Directory</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Provider Directory Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Provider Directory Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/STU3/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="guidance.html">Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="capstatements.html">Capability Statements</a></li>
+              <li><a href="future.html">Future Work</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  <!-- ============BreadCrumb=============== -->
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Provider Directory Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/STU3">FHIR R3</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+<h2 id="future-work">Future Work</h2>
+<hr />
+
+<h4 id="additional-development-for-a-robust-provider-directory">Additional Development for a Robust Provider Directory</h4>
+
+<p>Throughout the development of the Argonaut Provider Directory several additional important items were reviewed for a robust Provider Directory. This page summarizes items under development, or things that should be considered for future efforts.</p>
+
+<h4 id="provider-specialty-provider-role-and-other-vocabularies">Provider Specialty, Provider Role, and Other Vocabularies</h4>
+
+<p>The Argonaut Provider Directory Implementation Guide uses NUCC for classification of the provider. The <a href="ValueSet-provider-specialty.html">Argonaut Provider Directory Provider Specialty (NUCC)</a> and <a href="ValueSet-provider-role.html">Argonaut Provider Directory Provider Role (NUCC)</a> value sets are included in this guide. The development team discussed the following limitations of NUCC:</p>
+
+<ul>
+  <li>Specialty Classification - NUCC isn’t hierarchal and doesn’t support the query ‘return all cardiologists’ without the creation of new value sets.</li>
+  <li>Missing Roles - There are several NUCC entries that don’t include a generic ‘Role’ Classification. For example, ‘Radiology’ doesn’t have a code.</li>
+  <li>Missing Specialties - ‘Music Therapist’ doesn’t include any specialties. When this occurs, this guide recommends populating both Role and Specialty with same code.</li>
+  <li>Mapping - Many systems don’t classify providers by NUCC in their clinical system. The use of NUCC, or another classification terminology, will require mapping for each system.</li>
+</ul>
+
+<p>Additionally, <a href="http://hl7.org/fhir/STU3/v3/ServiceDeliveryLocationRoleType/vs.html">Location.type</a> and <a href="http://hl7.org/fhir/STU3/valueset-organization-type.html">Organization.type</a> are built around classifying one specific type. These value sets should support a specific type and sub-organizations and sub-locations.</p>
+
+<p>When a Provider Directory is balloted, all value sets should be reviewed.</p>
+
+<h4 id="affiliate-relationships">Affiliate Relationships</h4>
+
+<p>A key aspect of Provider Directory is to describe relationships between two distinct organization and to track Affiliate Relationships.</p>
+
+<p>Participants in the Argonaut PD development discussed the use of extensions, and profiles on the <a href="http://hl7.org/fhir/STU3/basic.html">Basic</a> resource since FHIR STU3 does not include an appropriate resource for this use case. The development team, in conjunction with HL7 Patient Administration, has proposed a new <a href="http://wiki.hl7.org/index.php?title=OrganizationAffiliation_FHIR_Resource_Proposal">OrganizationAffiliation Resource</a>. This Resource needs additional work to be included in a future FHIR build.</p>
+
+<h4 id="provider-directory-operation">Provider Directory Operation</h4>
+
+<p>Healthcare facility and organization structures can be quite complex. In a future PD guide, the exact rules for walking the tree from location to organization, and the supporting FHIR <a href="http://hl7.org/fhir/STU3/operations.html">operations</a> to navigate them should be considered.</p>
+
+<h4 id="server-interactions">Server Interactions</h4>
+
+<p>On each profile page, and in the capability statements, the Argonaut IG defines the required searches a server and client must support. The Argonauts developed the initial searches during the virtual and onsite HL7 connectathons, and during requirements calls. Absent from the specification is specific server interactions:
+Batch download</p>
+
+<ul>
+  <li>Publish/Subscribe</li>
+  <li>Creation, Update, and Delete of content in the directory - define rules and technical approach</li>
+  <li>Differential downloads - only specific changes within a resource</li>
+  <li>Cache control - support for retrieval of resources based on update date or change</li>
+</ul>
+
+<p>Each of these server interactions is supported by FHIR even though specific new operations may be required to support the provider directory use case. These server interactions may be best defined within a specific network.</p>
+
+<h4 id="identifiers">Identifiers</h4>
+
+<p>There is not a unique code system, similar to NPI, for location identifiers. Additional work should be considered to develop a process to cross reference locations and organizations.</p>
+
+<h4 id="formal-hl7-balloting">Formal HL7 Balloting</h4>
+
+<p>The Arognaut Provider Directory work group developed the content of this Implementation Guide thorugh a series of conference calls, listserv discussions, and connectathons. Two virtual connectathons were hosted, and two in conjunction with HL7.</p>
+
+<p>The content in this guide is freely available to anyone.</p>
+
+<p>A formal HL7 ballot provides an additional level of rigor, and a place for regulators to reference for all industry participants. As part of the ballot additional examples, TestScripts, and conformance assessment of current servers should be considered. A Healthcare Directory Project Scope Statement is under discussion at HL7.</p>
+
+<h4 id="next-steps">Next Steps</h4>
+
+<p>The Argonauts built the Provider Directory through regular calls, virtual and onsite connectathons, and collaboration with HL7.</p>
+
+<p>The above future items are important and should be considered for further development within existing industry efforts such as the ONC Directory Initiative, <a href="http://sequoiaproject.org/">Sequoia CareQuality network</a>, and other Vendor networks.</p>
+
+
+<br />
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Argonaut Provider Directory fhir.argonaut.pd#1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a>  generated on Thu, Jun 15, 2017 20:26+1000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

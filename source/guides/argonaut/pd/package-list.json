@@ -1,0 +1,35 @@
+{
+  "canonical": "http://fhir.org/guides/argonaut/pd",
+  "package-id": "fhir.argonaut.pd",
+  "title": "Argonaut Provider Directory Guide",
+  "introduction": "The Argonaut Project is a joint project of major US EHR vendors to advance industry adoption of modern, open interoperability standards. For further information, see [About the Argonaut Project](http://argonautwiki.hl7.org/index.php?title\u003dMain_Page/Background). This Implementation Guide provides the specifications for a US Provider Directory Service. See the [full list of Argonaut Specifications](http://fhir.org/guides/argonaut). Note that this implementation guide is based on [the STU3 version of FHIR](http://hl7.org/fhir/STU3)",
+  "list": [
+    {
+      "current": true,
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/argonautproject/provider-directory",
+      "status": "ci-build",
+      "version": "current"
+    },
+    {
+      "current": true,
+      "date": "2017-06-15",
+      "desc": "Release 1",
+      "fhirversion": "3.0.1",
+      "path": "http://fhir.org/guides/argonaut/pd/release1",
+      "sequence": "Release 1",
+      "status": "release",
+      "version": "1.0.0"
+    },
+    {
+      "date": "2016-12-23",
+      "desc": "1st Published Draft",
+      "fhirversion": "1.9.0",
+      "path": "http://fhir.org/guides/argonaut/pd/draft1",
+      "sequence": "Release 1",
+      "status": "draft",
+      "version": "0.1.0"
+    }
+  ],
+  "category": "Administration"
+}

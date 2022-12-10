@@ -1,0 +1,159 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ig",
+  "url": "http://fhir.org/guides/argonaut-pd/ImplementationGuide/ig",
+  "name": "Implementation Guide Template",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "FHIR Project",
+  "package": [
+    {
+      "name": "base",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-provider-specialty.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet/provider-specialty"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-provider-role.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet/provider-role"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-server.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/server"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-client.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/client"
+          }
+        }
+      ]
+    },
+    {
+      "name": "C:\\work\\org.hl7.fhir.us\\argonaut-pd\\resources\\endpoint-profile-spreadsheet",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-argo-endpoint.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut Provider Directory Endpoint",
+          "sourceReference": {
+            "reference": "StructureDefinition/argo-endpoint"
+          }
+        }
+      ]
+    },
+    {
+      "name": "C:\\work\\org.hl7.fhir.us\\argonaut-pd\\resources\\location-profile-spreadsheet",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-argo-location.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut Provider Directory Location",
+          "sourceReference": {
+            "reference": "StructureDefinition/argo-location"
+          }
+        }
+      ]
+    },
+    {
+      "name": "C:\\work\\org.hl7.fhir.us\\argonaut-pd\\resources\\organization-profile-spreadsheet",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-argo-organization.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut Provider Directory Organization",
+          "sourceReference": {
+            "reference": "StructureDefinition/argo-organization"
+          }
+        }
+      ]
+    },
+    {
+      "name": "C:\\work\\org.hl7.fhir.us\\argonaut-pd\\resources\\practitioner-profile-spreadsheet",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-argo-practitioner.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut Provider Directory Practitioner",
+          "sourceReference": {
+            "reference": "StructureDefinition/argo-practitioner"
+          }
+        }
+      ]
+    },
+    {
+      "name": "C:\\work\\org.hl7.fhir.us\\argonaut-pd\\resources\\practitionerrole-profile-spreadsheet",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-argo-practitionerrole.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut Provider Directory PractitionerRole",
+          "sourceReference": {
+            "reference": "StructureDefinition/argo-practitionerrole"
+          }
+        }
+      ]
+    }
+  ],
+  "page": {
+    "source": "index.html",
+    "title": "blah",
+    "kind": "page"
+  }
+}

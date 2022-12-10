@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/STU3/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/ValueSet/provider-specialty> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "provider-specialty"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Provider Directory Provider Speciality (NUCC)</h2><div><p>Provider speciality roles codes which are composed of the <a href=\"http://nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40\">NUCC Health Care Provider Taxonomy Code Set for providers</a></p>\n</div><p><b>Copyright Statement:</b> This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association.  For commercial use, including sales or licensing, a license must be obtained.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://nucc.org/provider-taxonomy</code></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-pd/ValueSet/provider-specialty"];
+  fhir:ValueSet.version [ fhir:value "1.0.0"];
+  fhir:ValueSet.name [ fhir:value "Argonaut Provider Directory Provider Speciality (NUCC)"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2016-08-10T00:00:00+10:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org/" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Provider speciality roles codes which are composed of the [NUCC Health Care Provider Taxonomy Code Set for providers](http://nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40)"];
+  fhir:ValueSet.copyright [ fhir:value "This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association.  For commercial use, including sales or licensing, a license must be obtained."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://nucc.org/provider-taxonomy" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/ValueSet/provider-specialty.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

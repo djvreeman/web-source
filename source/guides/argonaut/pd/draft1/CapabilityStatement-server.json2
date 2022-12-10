@@ -1,0 +1,185 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "server",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Provider Directory Server</h2><div><p>This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td>The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:  - Argonaut Provider Directory Endpoint - Argonaut Provider Directory Location - Argonaut Provider Directory Organization - Argonaut Provider Directory Practitioner - Argonaut Provider Directory PractitionerRole   The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions.</td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b>Read</b></th><th><b>V-Read</b></th><th><b>Search</b></th><th><b>Update</b></th><th><b>Updates</b></th><th><b>Create</b></th><th><b>Delete</b></th><th><b>History</b></th></tr><tr><td>Practitioner</td><td><a href=\"http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html\">http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html</a></td><td>y</td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Organization</td><td><a href=\"http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html\">http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html</a></td><td>y</td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr></table></div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-pd/CapabilityStatement/server",
+  "name": "Argonaut Provider Directory Server",
+  "status": "draft",
+  "date": "2016-11-13",
+  "publisher": "FHIR Project Team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://build.fhir.org"
+        }
+      ]
+    }
+  ],
+  "description": "This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide.",
+  "kind": "requirements",
+  "fhirVersion": "1.7.0",
+  "acceptUnknown": "extensions",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "profile": [
+    {
+      "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html"
+    },
+    {
+      "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-locatino.html"
+    },
+    {
+      "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-endpoint.html"
+    },
+    {
+      "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitionerrole.html"
+    },
+    {
+      "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-organization.html"
+    }
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:  - Argonaut Provider Directory Endpoint - Argonaut Provider Directory Location - Argonaut Provider Directory Organization - Argonaut Provider Directory Practitioner - Argonaut Provider Directory PractitionerRole   The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions.",
+      "security": {
+        "description": "Argonaut Provider Directory Servers SHALL implement the security requirements documented in the Argonaute Provider Directory IG."
+      },
+      "resource": [
+        {
+          "type": "Practitioner",
+          "profile": {
+            "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) "
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider by id"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://build.fhir.org/practitioner.html#search",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "family",
+              "definition": "http://build.fhir.org/practitioner.html#search",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "given",
+              "definition": "http://build.fhir.org/practitioner.html#search",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://build.fhir.org/practitioner.html#search",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "type": "Organization",
+          "profile": {
+            "reference": "http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) "
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific Argonaut Provider Directory Provider Organization by id"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://build.fhir.org/Organization.html#search",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "address",
+              "definition": "http://build.fhir.org/Organization.html#search",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

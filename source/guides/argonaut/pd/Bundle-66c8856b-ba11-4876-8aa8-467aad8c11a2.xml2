@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="66c8856b-ba11-4876-8aa8-467aad8c11a2"/>
+  <type value="searchset"/>
+  <total value="1"/>
+  <link>
+    <relation value="self"/>
+    <url value="http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&amp;_include=PractitionerRole%3Apractitioner&amp;_include=PractitionerRole%3Aendpoint"/>
+  </link>
+  <entry>
+    <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1"/>
+    <resource>
+      <PractitionerRole>
+        <id value="PractitionerRole-1"/>
+        <meta>
+          <profile value="http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitionerrole"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: PractitionerRole-1</p><p><b>meta</b>: </p><p><b>practitioner</b>: <a href="Practitioner-example-practitioner-1.html">Brenda Jennings Richard MD. Generated Summary: id: example-practitioner-1; 9941339108, 25456; Ronald Heart </a></p><p><b>organization</b>: <a href="Organization-example-organization-1.html">Maple Leaf Clinic. Generated Summary: id: example-organization-1; 1144221847, 2523423456; active; <span title="Codes: {http://hl7.org/fhir/organization-type prov}">Healthcare Provider</span>; name: Acme Hospital; ph: (+1) 734-677-7777, hq@acme.org</a></p><p><b>code</b>: Doctor <span style="background: LightGoldenRodYellow">(Details : {http://nucc.org/provider-taxonomy code '261QP2300X' = 'Primary Care', given as 'Doctor'})</span></p><p><b>specialty</b>: General Practice <span style="background: LightGoldenRodYellow">(Details : {http://nucc.org/provider-taxonomy code '208D00000X' = 'General Practice', given as 'General Practice'})</span></p><p><b>location</b>: <a href="Location-example-location-1.html">Maple Leaf Clinic. Generated Summary: id: example-location-1; 29; status: active; name: Health Level Seven International - Amherst; description: HL7 Headquarters - East; mode: instance; <span title="Codes: {http://hl7.org/fhir/v3/RoleCode SLEEP}">Sleep disorders unit</span>; ph: (+1) 734-677-7777, fax: (+1) 734-677-6622, hq@HL7.org; <span title="Codes: {http://hl7.org/fhir/location-physical-type bu}">Building</span></a></p><p><b>endpoint</b>: </p><ul><li><a href="Endpoint-example-endpoint-2.html">Westwood Physicians Organization ADT. Generated Summary: id: example-endpoint-2; status: active; <span title="{http://hl7.org/fhir/endpoint-connection-type hl7v2-mllp}">HL7 v2 MLLP</span>; name: Westwood Physicians Organization ADT; <span title="Codes: {http://example.org HL7_ADT}">HL7_ADT</span>; payloadMimeType: text; address: http://exampl.org/open/ADT</a></li><li><a href="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71">Brenda.Jennings.Richard.MD@direct.argonaut.org</a></li></ul></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/example-practitioner-1"/>
+          <display value="Brenda Jennings Richard MD"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/example-organization-1"/>
+          <display value="Maple Leaf Clinic"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://nucc.org/provider-taxonomy"/>
+            <code value="261QP2300X"/>
+            <display value="Doctor"/>
+          </coding>
+        </code>
+        <specialty>
+          <coding>
+            <system value="http://nucc.org/provider-taxonomy"/>
+            <code value="208D00000X"/>
+            <display value="General Practice"/>
+          </coding>
+        </specialty>
+        <location>
+          <reference value="Location/example-location-1"/>
+          <display value="Maple Leaf Clinic"/>
+        </location>
+        <endpoint>
+          <reference value="Endpoint/example-endpoint-2"/>
+          <display value="Westwood Physicians Organization ADT"/>
+        </endpoint>
+        <endpoint>
+          <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+          <display value="Brenda.Jennings.Richard.MD@direct.argonaut.org"/>
+        </endpoint>
+      </PractitionerRole>
+    </resource>
+    <search>
+      <mode value="match"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011"/>
+    <resource>
+      <Practitioner>
+        <id value="Practitioner-1011"/>
+        <meta>
+          <profile value="http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitioner"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Practitioner-1011</p><p><b>meta</b>: </p><p><b>identifier</b>: US Social Security Number = 000001011 (OFFICIAL), US National Provider Identifier = 9999991011 (OFFICIAL), Michigan Common Key Service Identifier = d46f70565a1042f6a6ece48dd81b408f (OFFICIAL)</p><p><b>name</b>: Brenda Jennings Richard </p><p><b>telecom</b>: ph: 313-555-6868(HOME), ph: 313-555-6443(WORK)</p><p><b>address</b>: 346 W Plum Avenu Dearborn MI 48123</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 15/11/1976</p><h3>Qualifications</h3><table class="grid"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td>*</td><td>Michigan Medical License = LARA-1011 (OFFICIAL)</td><td>Medical Doctor <span style="background: LightGoldenRodYellow">(Details : {http://michigan.gov/lara/license-type code '4305' = '4305', given as 'Medical Doctor'})</span></td><td>Michigan Department of Licensing and Regulatory Affairs</td></tr></table></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://hl7.org/fhir/identifier-type"/>
+              <code value="SB"/>
+              <display value="Social Beneficiary Identifier"/>
+            </coding>
+            <text value="US Social Security Number"/>
+          </type>
+          <system value="http://hl7.org/fhir/sid/us-ssn"/>
+          <value value="000001011"/>
+        </identifier>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://hl7.org/fhir/v2/0203"/>
+              <code value="PRN"/>
+              <display value="Provider number"/>
+            </coding>
+            <text value="US National Provider Identifier"/>
+          </type>
+          <system value="http://hl7.org/fhir/sid/us-npi"/>
+          <value value="9999991011"/>
+        </identifier>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://hl7.org/fhir/identifier-type"/>
+              <code value="SB"/>
+              <display value="Social Beneficiary Identifier"/>
+            </coding>
+            <text value="Michigan Common Key Service Identifier"/>
+          </type>
+          <system value="http://mihin.org/fhir/cks"/>
+          <value value="d46f70565a1042f6a6ece48dd81b408f"/>
+        </identifier>
+        <name>
+          <family value="Richard"/>
+          <given value="Brenda"/>
+          <given value="Jennings"/>
+          <suffix value="MD"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="313-555-6868"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="313-555-6443"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <text value="346 W Plum Avenu Dearborn MI 48123"/>
+          <line value="346 W Plum Avenue"/>
+          <city value="Dearborn"/>
+          <state value="MI"/>
+          <postalCode value="48126"/>
+        </address>
+        <gender value="female"/>
+        <birthDate value="1976-11-15"/>
+        <qualification>
+          <identifier>
+            <use value="official"/>
+            <type>
+              <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="MD"/>
+                <display value="Medical License number"/>
+              </coding>
+              <text value="Michigan Medical License"/>
+            </type>
+            <system value="http://michigan.gov/fhir/medical-license"/>
+            <value value="LARA-1011"/>
+            <assigner>
+              <display value="State of Michigan"/>
+            </assigner>
+          </identifier>
+          <code>
+            <coding>
+              <system value="http://michigan.gov/lara/license-type"/>
+              <code value="4305"/>
+              <display value="Medical Doctor"/>
+            </coding>
+          </code>
+          <issuer>
+            <display value="Michigan Department of Licensing and Regulatory Affairs"/>
+          </issuer>
+        </qualification>
+      </Practitioner>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+    <resource>
+      <Endpoint>
+        <id value="71"/>
+        <meta>
+          <profile value="http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 71</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>connectionType</b>: Direct Project (Details: http://hl7.org/fhir/endpoint-connection-type code direct-project = 'Direct Project', stated as 'null')</p><p><b>name</b>: Brenda.Jennings.Richard.MD@direct.argonaut.org</p><p><b>managingOrganization</b>: <a href="Organization-example-organization-1.html">Generated Summary: id: example-organization-1; 1144221847, 2523423456; active; <span title="Codes: {http://hl7.org/fhir/organization-type prov}">Healthcare Provider</span>; name: Acme Hospital; ph: (+1) 734-677-7777, hq@acme.org</a></p><p><b>payloadType</b>: urn:hl7-org:sdwg:ccda-structuredBody:1.1 <span style="background: LightGoldenRodYellow">(Details : {urn:oid:1.3.6.1.4.1.19376.1.2.3 code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' = 'urn:hl7-org:sdwg:ccda-structuredBody:1.1)</span></p><p><b>payloadMimeType</b>: text/xml</p><p><b>address</b>: <a href="Brenda.Jennings.Richard.MD@direct.argonaut.org">Brenda.Jennings.Richard.MD@direct.argonaut.org</a></p></div>
+        </text>
+        <status value="active"/>
+        <connectionType>
+          <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+          <code value="direct-project"/>
+        </connectionType>
+        <name value="Brenda.Jennings.Richard.MD@direct.argonaut.org"/>
+        <managingOrganization>
+          <reference value="Organization/example-organization-1"/>
+        </managingOrganization>
+        <payloadType>
+          <coding>
+            <system value="urn:oid:1.3.6.1.4.1.19376.1.2.3"/>
+            <code value="urn:hl7-org:sdwg:ccda-structuredBody:1.1"/>
+          </coding>
+        </payloadType>
+        <payloadMimeType value="text/xml"/>
+        <address value="Brenda.Jennings.Richard.MD@direct.argonaut.org"/>
+      </Endpoint>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+</Bundle>

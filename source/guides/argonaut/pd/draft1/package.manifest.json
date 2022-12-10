@@ -1,0 +1,6 @@
+{
+  "version": "0.1.0",
+  "fhirVersion": "[1.9.0]",
+  "date": "20161223000000",
+  "name": "fhir.argonaut.pd"
+}

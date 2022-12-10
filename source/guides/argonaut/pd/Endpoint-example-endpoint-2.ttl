@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/Endpoint/example-endpoint-2> a fhir:Endpoint;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-endpoint-2"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-endpoint-2</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>connectionType</b>: HL7 v2 MLLP (Details: http://hl7.org/fhir/endpoint-connection-type code hl7v2-mllp = 'HL7 v2 MLLP', stated as 'null')</p><p><b>name</b>: Westwood Physicians Organization ADT</p><p><b>managingOrganization</b>: <a href=\"Organization-example-organization-1.html\">Generated Summary: id: example-organization-1; 1144221847, 2523423456; active; <span title=\"Codes: {http://hl7.org/fhir/organization-type prov}\">Healthcare Provider</span>; name: Acme Hospital; ph: (+1) 734-677-7777, hq@acme.org</a></p><p><b>payloadType</b>: HL7_ADT <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org code 'HL7_ADT' = 'HL7_ADT)</span></p><p><b>payloadMimeType</b>: text</p><p><b>address</b>: <a href=\"http://exampl.org/open/ADT\">http://exampl.org/open/ADT</a></p></div>"
+  ];
+  fhir:Endpoint.status [ fhir:value "active"];
+  fhir:Endpoint.connectionType [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/endpoint-connection-type" ];
+     fhir:Coding.code [ fhir:value "hl7v2-mllp" ]
+  ];
+  fhir:Endpoint.name [ fhir:value "Westwood Physicians Organization ADT"];
+  fhir:Endpoint.managingOrganization [
+     fhir:link <http://fhir.org/guides/argonaut-pd/Organization/example-organization-1>;
+     fhir:Reference.reference [ fhir:value "Organization/example-organization-1" ]
+  ];
+  fhir:Endpoint.payloadType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org" ];
+       fhir:Coding.code [ fhir:value "HL7_ADT" ]
+     ]
+  ];
+  fhir:Endpoint.payloadMimeType [
+     fhir:value "text";
+     fhir:index 0
+  ];
+  fhir:Endpoint.address [ fhir:value "http://exampl.org/open/ADT"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/Endpoint/example-endpoint-2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

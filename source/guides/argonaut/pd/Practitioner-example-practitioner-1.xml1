@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="example-practitioner-1"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-practitioner-1</p><p><b>meta</b>: </p><p><b>identifier</b>: 9941339108, 25456</p><p><b>name</b>: Ronald Heart </p><p><b>address</b>: 1002 Healthcare Drive Amherst MA 01002 (HOME)</p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org.fhir/sid/us-npi"/>
+    <value value="9941339108"/>
+  </identifier>
+  <identifier>
+    <system value="http://www.acme.org/practitioners"/>
+    <value value="25456"/>
+  </identifier>
+  <name>
+    <family value="Heart"/>
+    <given value="Ronald"/>
+    <prefix value="Dr"/>
+  </name>
+  <address>
+    <use value="home"/>
+    <line value="1002 Healthcare Drive"/>
+    <city value="Amherst"/>
+    <state value="MA"/>
+    <postalCode value="01002"/>
+  </address>
+</Practitioner>

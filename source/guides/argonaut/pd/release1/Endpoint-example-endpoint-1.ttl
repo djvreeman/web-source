@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/STU3/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/Endpoint/example-endpoint-1> a fhir:Endpoint;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-endpoint-1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-endpoint-1</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>connectionType</b>: Direct Project (Details: http://hl7.org/fhir/STU3/endpoint-connection-type code direct-project = 'Direct Project', stated as 'null')</p><p><b>name</b>: Dr. Ronald Bone Direct Address</p><p><b>managingOrganization</b>: <a href=\"Organization-example-organization-1.html\">Generated Summary: id: example-organization-1; 1144221847, 2523423456; active; <span title=\"Codes: {http://hl7.org/fhir/STU3/organization-type prov}\">Healthcare Provider</span>; name: Acme Hospital; ph: (+1) 734-677-7777, hq@acme.org</a></p><p><b>payloadType</b>: urn:hl7-org:sdwg:ccda-structuredBody:1.1 <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.3.6.1.4.1.19376.1.2.3 code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' = 'urn:hl7-org:sdwg:ccda-structuredBody:1.1)</span></p><p><b>payloadMimeType</b>: text/xml</p><p><b>address</b>: <a href=\"mailto:Interoperability@DirectAddress.com\">mailto:Interoperability@DirectAddress.com</a></p></div>"
+  ];
+  fhir:Endpoint.status [ fhir:value "active"];
+  fhir:Endpoint.connectionType [
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/STU3/endpoint-connection-type" ];
+     fhir:Coding.code [ fhir:value "direct-project" ]
+  ];
+  fhir:Endpoint.name [ fhir:value "Dr. Ronald Bone Direct Address"];
+  fhir:Endpoint.managingOrganization [
+     fhir:link <http://fhir.org/guides/argonaut-pd/Organization/example-organization-1>;
+     fhir:Reference.reference [ fhir:value "Organization/example-organization-1" ]
+  ];
+  fhir:Endpoint.payloadType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:oid:1.3.6.1.4.1.19376.1.2.3" ];
+       fhir:Coding.code [ fhir:value "urn:hl7-org:sdwg:ccda-structuredBody:1.1" ]
+     ]
+  ];
+  fhir:Endpoint.payloadMimeType [
+     fhir:value "text/xml";
+     fhir:index 0
+  ];
+  fhir:Endpoint.address [ fhir:value "mailto:Interoperability@DirectAddress.com"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-pd/Endpoint/example-endpoint-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

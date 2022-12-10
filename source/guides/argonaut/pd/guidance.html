@@ -1,0 +1,281 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Provider Directory</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Provider Directory Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Provider Directory Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhirindex.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="guidance.html">Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="capstatements.html">Capability Statements</a></li>
+              <li><a href="future.html">Future Work</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  <!-- ============BreadCrumb=============== -->
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Provider Directory Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/STU3">FHIR R3</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2 class="no_toc" id="general-guidance-and-definitions">General Guidance and Definitions</h2>
+
+<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+
+<ul id="markdown-toc">
+  <li><a href="#background-on-the-pd-resource-relationships" id="markdown-toc-background-on-the-pd-resource-relationships">Background on the PD Resource Relationships</a></li>
+  <li><a href="#organizational-hierarchies" id="markdown-toc-organizational-hierarchies">Organizational Hierarchies</a></li>
+  <li><a href="#facility-structure" id="markdown-toc-facility-structure">Facility Structure</a></li>
+</ul>
+
+<!-- end TOC -->
+
+<p>This section provides specific guidance for implementing the Argonaut Provider Directory guide.  The conformance verbs used are defined in <a href="http://hl7.org/fhir/conformance-rules.html#conflang">FHIR Conformance Rules</a>.</p>
+
+<!-- source pages/\_include/guidance.md  file -->
+
+<h3 id="background-on-the-pd-resource-relationships">Background on the PD Resource Relationships</h3>
+
+<h4 class="no_toc" id="relationships-between-practitioner-organization-location-and-endpoints">Relationships between Practitioner, Organization, Location, and Endpoints</h4>
+
+<p>This IG describes the basic resources and required elements to form a robust Provider Directory. During the development of the guide, the team discussed the relationships between resources and drafted several diagrams. Figure 1 is a basic diagram of single provider practice. The Practitioner has an Endpoint for Direct messaging, and the Organization has a Lab Endpoint for results.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/Single-provider-practice.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 1: Single Provider Practice.</strong></figcaption>
+  <img src="assets/images/Single-provider-practice.png" class="figure-img img-responsive img-rounded center-block" alt="Single-provider-practice.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Figure 2 represents a single practitioner working at multiple locations with different parent organizations. The Practitioner has an Endpoint, Direct address, at each Organization. The separate Organizations have their own Endpoints for Lab results.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/Multi-organization-practitioner.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 2: Provider Practicing at Multiple Organizations.</strong></figcaption>
+  <img src="assets/images/Multi-organization-practitioner.png" class="figure-img img-responsive img-rounded center-block" alt="Multi-organization-practitioner.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Figure 3 represents multiple practitioners practicing at multiple locations within a single Organization. The Practitioner has an Endpoint, Direct address, at each Organization.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/Multi-Location-provider-practice.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 3: Providers Practicing at Multiple Locations.</strong></figcaption>
+  <img src="assets/images/Multi-Location-provider-practice.png" class="figure-img img-responsive img-rounded center-block" alt="Multi-Location-provider-practice.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Figure 4 adds a parent organization to Figure 2. The single parent organization presides over the two sub-organizations and does not have a Location.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/Multi-organization-practitioner_with_parent.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 4: Provider Practicing at an Organization with multiple Locations, and Organizations.</strong></figcaption>
+  <img src="assets/images/Multi-organization-practitioner_with_parent.png" class="figure-img img-responsive img-rounded center-block" alt="Multi-organization-practitioner_with_parent.png" />
+</figure>
+
+<p></p>
+</div>
+
+<h3 id="organizational-hierarchies">Organizational Hierarchies</h3>
+
+<p>The Organization Resource ties Locations and Practitioners to the business entities.</p>
+
+<p><strong>How does the organization resource interact with location resource?</strong></p>
+
+<ul>
+  <li>Every Organization with a physical place where services are provided must have a location resource</li>
+  <li>Every Location resource SHALL be associated with an Organization</li>
+</ul>
+
+<p>The Location resource identifies the type of services available at a specific Location. The Location resource only allows a single address.</p>
+
+<p><strong>How does a client know if it has a department organization resource vs a top-level organization?</strong></p>
+
+<ul>
+  <li>The parent Organization is the Organization resource without an Organization.PartOf. A client traversing the tree can use the Organization.PartOf to find the parent.</li>
+</ul>
+
+<p>Figure 6 gives an example of a Health System with multiple organizations. It does not cover Affiliate relationships since <a href="future.html">additional work</a> is required.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/Organizational_Hierarcy.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 6: Example Organizational Hierarchy.</strong></figcaption>
+  <img src="assets/images/Organizational_Hierarcy.png" class="figure-img img-responsive img-rounded center-block" alt="Organizational_Hierarcy.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>The FHIR STU3 includes an <a href="http://hl7.org/fhir/organization.html#example">example Organization hierarchy</a>.</p>
+
+<h3 id="facility-structure">Facility Structure</h3>
+
+<p>FHIR supports a full location hierarchy to describe departments, rooms, beds, and other locations. Location hierarchies are important for local exchange and may be relevant for a Provider Directory. For location hierarchies, see the FHIR STU3 <a href="http://hl7.org/fhir/location.html#example">example Location hierarchy</a>. The finer granularity of facility structure is important for interorganizational exchange.
+The Argonaut Provider Directory guide focused on interorganizational exchange and provider relationships to those organizations.</p>
+
+
+<br />
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Argonaut Provider Directory fhir.argonaut.pd#1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR Version: 3.0.1</a>  generated on Thu, Jun 15, 2017 20:26+1000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhirlicense.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

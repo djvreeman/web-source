@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "provider-role",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Provider Directory Provider Role (NUCC)</h2><div><p>Provider roles codes which are composed of the <a href=\"http://nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40\">NUCC Health Care Provider Taxonomy Code Set for providers</a></p>\n</div><p><b>Copyright Statement:</b> This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association.  For commercial use, including sales or licensing, a license must be obtained.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://nucc.org/provider-taxonomy</code></li></ul></div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-pd/ValueSet/provider-role",
+  "version": "1.0.0",
+  "name": "Argonaut Provider Directory Provider Role (NUCC)",
+  "status": "draft",
+  "date": "2016-08-10T00:00:00+10:00",
+  "publisher": "Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://argonautwiki.hl7.org/"
+        }
+      ]
+    }
+  ],
+  "description": "Provider roles codes which are composed of the [NUCC Health Care Provider Taxonomy Code Set for providers](http://nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40)",
+  "copyright": "This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association.  For commercial use, including sales or licensing, a license must be obtained.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://nucc.org/provider-taxonomy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "resourceType": "Endpoint",
+  "id": "example-endpoint-2",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-endpoint-2</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>connectionType</b>: HL7 v2 MLLP (Details: http://hl7.org/fhir/STU3/endpoint-connection-type code hl7v2-mllp = 'HL7 v2 MLLP', stated as 'null')</p><p><b>name</b>: Westwood Physicians Organization ADT</p><p><b>managingOrganization</b>: <a href=\"Organization-example-organization-1.html\">Generated Summary: id: example-organization-1; 1144221847, 2523423456; active; <span title=\"Codes: {http://hl7.org/fhir/STU3/organization-type prov}\">Healthcare Provider</span>; name: Acme Hospital; ph: (+1) 734-677-7777, hq@acme.org</a></p><p><b>payloadType</b>: HL7_ADT <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org code 'HL7_ADT' = 'HL7_ADT)</span></p><p><b>payloadMimeType</b>: text</p><p><b>address</b>: <a href=\"http://exampl.org/open/ADT\">http://exampl.org/open/ADT</a></p></div>"
+  },
+  "status": "active",
+  "connectionType": {
+    "system": "http://hl7.org/fhir/STU3/endpoint-connection-type",
+    "code": "hl7v2-mllp"
+  },
+  "name": "Westwood Physicians Organization ADT",
+  "managingOrganization": {
+    "reference": "Organization/example-organization-1"
+  },
+  "payloadType": [
+    {
+      "coding": [
+        {
+          "system": "http://example.org",
+          "code": "HL7_ADT"
+        }
+      ]
+    }
+  ],
+  "payloadMimeType": [
+    "text"
+  ],
+  "address": "http://exampl.org/open/ADT"
+}

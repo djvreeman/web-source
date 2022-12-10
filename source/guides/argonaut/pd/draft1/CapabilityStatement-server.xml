@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="server"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut Provider Directory Server</h2><div><p>This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide.</p>
+</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td>The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:  - Argonaut Provider Directory Endpoint - Argonaut Provider Directory Location - Argonaut Provider Directory Organization - Argonaut Provider Directory Practitioner - Argonaut Provider Directory PractitionerRole   The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions.</td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b>Read</b></th><th><b>V-Read</b></th><th><b>Search</b></th><th><b>Update</b></th><th><b>Updates</b></th><th><b>Create</b></th><th><b>Delete</b></th><th><b>History</b></th></tr><tr><td>Practitioner</td><td><a href="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html">http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html</a></td><td>y</td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Organization</td><td><a href="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html">http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html</a></td><td>y</td><td></td><td>y</td><td></td><td></td><td></td><td></td><td></td></tr></table></div>
+  </text>
+  <url value="http://fhir.org/guides/argonaut-pd/CapabilityStatement/server"/>
+  <name value="Argonaut Provider Directory Server"/>
+  <status value="draft"/>
+  <date value="2016-11-13"/>
+  <publisher value="FHIR Project Team"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://build.fhir.org"/>
+    </telecom>
+  </contact>
+  <description value="This profile defines the expected capabilities of a server when conforming to the Argonaut Provider Directory Implementation Guide."/>
+  <kind value="requirements"/>
+  <fhirVersion value="1.7.0"/>
+  <acceptUnknown value="extensions"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <profile>
+    <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html"/>
+  </profile>
+  <profile>
+    <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-locatino.html"/>
+  </profile>
+  <profile>
+    <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-endpoint.html"/>
+  </profile>
+  <profile>
+    <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitionerrole.html"/>
+  </profile>
+  <profile>
+    <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-organization.html"/>
+  </profile>
+  <rest>
+    <mode value="server"/>
+    <documentation value="The Argonaut Provider Directory Server SHALL support the Argonaut Provider Directory Profile:  - Argonaut Provider Directory Endpoint - Argonaut Provider Directory Location - Argonaut Provider Directory Organization - Argonaut Provider Directory Practitioner - Argonaut Provider Directory PractitionerRole   The Argonaut Provider Directory Server SHALL implement REST behavior according to the FHIR specification. The Argonaut Provider Directory Server SHALL support both json and xml resource formats for all Argonaut Provider Directory interactions."/>
+    <security>
+      <description value="Argonaut Provider Directory Servers SHALL implement the security requirements documented in the Argonaute Provider Directory IG."/>
+    </security>
+    <resource>
+      <type value="Practitioner"/>
+      <profile>
+        <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-practitioner.html"/>
+      </profile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) "/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a specific Argonaut Provider Directory Provider by id"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="name"/>
+        <definition value="http://build.fhir.org/practitioner.html#search"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="family"/>
+        <definition value="http://build.fhir.org/practitioner.html#search"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="given"/>
+        <definition value="http://build.fhir.org/practitioner.html#search"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="identifier"/>
+        <definition value="http://build.fhir.org/practitioner.html#search"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Organization"/>
+      <profile>
+        <reference value="http://healthedatainc.com/go-ftp/Argo-PD/StructureDefinition-argo-rrganization.html"/>
+      </profile>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows discovery of existing Argonaut Provider Director Providers using search criteria defined for the [Argonaut Provider Directory Use Cases](index.html#usecases) "/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a specific Argonaut Provider Directory Provider Organization by id"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="name"/>
+        <definition value="http://build.fhir.org/Organization.html#search"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation ">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="address"/>
+        <definition value="http://build.fhir.org/Organization.html#search"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

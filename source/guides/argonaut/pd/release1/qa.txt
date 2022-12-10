@@ -1,0 +1,76 @@
+﻿Argonaut Provider Directory Implementation Guide : Validation Results
+=========================================
+
+Generated Thu Jun 15 20:27:45 AEST 2017. FHIR version 3.1.0 for 3.0.1
+
+ Build Errors : 1 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Endpoint_Example : 1 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Endpoint_Example2 : 1 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Location_Example1 : 1 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Location_Example2_with_EndPoint : 2 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Location_Example3_minimum : 1 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Organization_Example : 1 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Organization_Example_w_EndPoint : 2 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\PractitionerRole_Practitioner_Endpoint_Bundle_Example : 6 / 2
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Practitioner_Example1 : 0 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\examples\Practitioner_Example2 : 0 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\capabilitystatement-client : 0 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\capabilitystatement-server : 0 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\endpoint-profile-spreadsheet : 0 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\ig : 0 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\location-profile-spreadsheet : 0 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\organization-profile-spreadsheet : 0 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitioner-profile-spreadsheet : 0 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitionerrole-profile-spreadsheet : 0 / 1
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\valueset-provider-role : 0 / 0
+ C:\work\org.hl7.fhir.us\argonaut-pd\resources\valueset-provider-specialty : 0 / 0
+</table>
+== n/a ==
+ERROR: C:\work\org.hl7.fhir.us\argonaut-pd\output\Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.html#/html/body/div/div/div/div/div/div/p/a at Line 107, column 4076: The link 'Brenda.Jennings.Richard.MD@direct.argonaut.org' cannot be resolved
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Endpoint_Example.xml ==
+ERROR: Endpoint/example-endpoint-1: Endpoint.managingOrganization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+WARNING: Endpoint/example-endpoint-1: Endpoint.payloadType: None of the codes provided are in the value set http://hl7.org/fhir/STU3/ValueSet/endpoint-payload-type (http://hl7.org/fhir/STU3/ValueSet/endpoint-payload-type, and a code should come from this value set unless it has no suitable code) (codes = urn:oid:1.3.6.1.4.1.19376.1.2.3#urn:hl7-org:sdwg:ccda-structuredBody:1.1)
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Endpoint_Example2.xml ==
+ERROR: Endpoint/example-endpoint-2: Endpoint.managingOrganization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+WARNING: Endpoint/example-endpoint-2: Endpoint.payloadType: None of the codes provided are in the value set http://hl7.org/fhir/STU3/ValueSet/endpoint-payload-type (http://hl7.org/fhir/STU3/ValueSet/endpoint-payload-type, and a code should come from this value set unless it has no suitable code) (codes = http://example.org#HL7_ADT)
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Location_Example1.xml ==
+WARNING: Location/example-location-1: Location.address.state: The value provided ('MA') is not in the value set http://hl7.org/fhir/STU3/ValueSet/usps-state (http://hl7.org/fhir/STU3/ValueSet/usps-state, and a code should come from this value set unless it has no suitable code) (error message = com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 10 path $)
+ERROR: Location/example-location-1: Location.managingOrganization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Location_Example2_with_EndPoint.xml ==
+WARNING: Location/example-location-2: Location.address.state: The value provided ('MA') is not in the value set http://hl7.org/fhir/STU3/ValueSet/usps-state (http://hl7.org/fhir/STU3/ValueSet/usps-state, and a code should come from this value set unless it has no suitable code) (error message = com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 10 path $)
+ERROR: Location/example-location-2: Location.managingOrganization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+ERROR: Location/example-location-2: Location.endpoint: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-endpoint'
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Location_Example3_minimum.xml ==
+WARNING: Location/example-location-3: Location.address.state: The value provided ('MA') is not in the value set http://hl7.org/fhir/STU3/ValueSet/usps-state (http://hl7.org/fhir/STU3/ValueSet/usps-state, and a code should come from this value set unless it has no suitable code) (error message = com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 10 path $)
+ERROR: Location/example-location-3: Location.managingOrganization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Organization_Example.xml ==
+ERROR: Organization/example-organization-1: Organization.address.state: The value provided ('MA') is not in the value set http://hl7.org/fhir/STU3/ValueSet/usps-state (http://hl7.org/fhir/STU3/ValueSet/usps-state, and a code is required from this value set) (error message = com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 10 path $)
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Organization_Example_w_EndPoint.xml ==
+ERROR: Organization/example-organization-2: Organization.address.state: The value provided ('MA') is not in the value set http://hl7.org/fhir/STU3/ValueSet/usps-state (http://hl7.org/fhir/STU3/ValueSet/usps-state, and a code is required from this value set) (error message = com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 10 path $)
+ERROR: Organization/example-organization-2: Organization.endpoint: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-endpoint'
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\PractitionerRole_Practitioner_Endpoint_Bundle_Example.xml ==
+ERROR: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.practitioner: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-practitioner'
+ERROR: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.organization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+WARNING: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.code: Display Name for 261QP2300X must be 'Primary Care'
+ERROR: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.location: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-location'
+ERROR: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.endpoint[1]: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-endpoint'
+ERROR: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.endpoint[2]: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-endpoint'
+ERROR: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[3].resource.managingOrganization: Unable to resolve the profile reference 'http://fhir.org/guides/argonaut-pd/StructureDefinition-argo-organization'
+WARNING: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[3].resource.payloadType: None of the codes provided are in the value set http://hl7.org/fhir/STU3/ValueSet/endpoint-payload-type (http://hl7.org/fhir/STU3/ValueSet/endpoint-payload-type, and a code should come from this value set unless it has no suitable code) (codes = urn:oid:1.3.6.1.4.1.19376.1.2.3#urn:hl7-org:sdwg:ccda-structuredBody:1.1)
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Practitioner_Example1.xml ==
+== C:\work\org.hl7.fhir.us\argonaut-pd\examples\Practitioner_Example2.xml ==
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\capabilitystatement-client.xml ==
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\capabilitystatement-server.xml ==
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\endpoint-profile-spreadsheet.xml ==
+INFORMATION: C:\work\org.hl7.fhir.us\argonaut-pd\resources\endpoint-profile-spreadsheet: Resources generated by processing C:\work\org.hl7.fhir.us\argonaut-pd\resources\endpoint-profile-spreadsheet:  http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-endpoint ("Argonaut Provider Directory Endpoint")
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\ig.xml ==
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\location-profile-spreadsheet.xml ==
+INFORMATION: C:\work\org.hl7.fhir.us\argonaut-pd\resources\location-profile-spreadsheet: Resources generated by processing C:\work\org.hl7.fhir.us\argonaut-pd\resources\location-profile-spreadsheet:  http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-location ("Argonaut Provider Directory Location")
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\organization-profile-spreadsheet.xml ==
+INFORMATION: C:\work\org.hl7.fhir.us\argonaut-pd\resources\organization-profile-spreadsheet: Resources generated by processing C:\work\org.hl7.fhir.us\argonaut-pd\resources\organization-profile-spreadsheet:  http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-organization ("Argonaut Provider Directory Organization")
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitioner-profile-spreadsheet.xml ==
+INFORMATION: C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitioner-profile-spreadsheet: Resources generated by processing C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitioner-profile-spreadsheet:  http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitioner ("Argonaut Provider Directory Practitioner")
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitionerrole-profile-spreadsheet.xml ==
+INFORMATION: C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitionerrole-profile-spreadsheet: Resources generated by processing C:\work\org.hl7.fhir.us\argonaut-pd\resources\practitionerrole-profile-spreadsheet:  http://fhir.org/guides/argonaut-pd/StructureDefinition/argo-practitionerrole ("Argonaut Provider Directory PractitionerRole")
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\valueset-provider-role.xml ==
+== C:\work\org.hl7.fhir.us\argonaut-pd\resources\valueset-provider-specialty.xml ==
