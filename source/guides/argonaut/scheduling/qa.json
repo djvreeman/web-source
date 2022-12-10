@@ -1,0 +1,10 @@
+﻿{
+  "url" : "http://fhir.org/guides/argonaut-scheduling/ImplementationGuide/ig",
+  "name" : "Argo-Scheduling",
+  "date" : "Wed, 04 Apr, 2018 12:52:58 +1000",
+  "errs" : "0",
+  "warnings" : "0",
+  "hints" : "364",
+  "version" : "3.0.1",
+  "tool" : "3.3.0-13659"
+}

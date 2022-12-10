@@ -1,0 +1,26 @@
+{
+  "canonical": "http://fhir.org/guides/argonaut/scheduling",
+  "package-id": "fhir.argonaut.scheduling",
+  "title": "Argonaut Scheduling Implementation Guide",
+  "introduction": "The Argonaut Project is a joint project of major US EHR vendors to advance industry adoption of modern, open interoperability standards. For further information, see [About the Argonaut Project](http://argonautwiki.hl7.org/index.php?title\u003dMain_Page). This Implementation Guide provides the specifications for a US Scheduling Services. See the The [full list of Argonaut Specifications](http://fhir.org/guides/argonaut/).",
+  "list": [
+    {
+      "current": true,
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/argonautproject/scheduling",
+      "status": "ci-build",
+      "version": "current"
+    },
+    {
+      "current": true,
+      "date": "2018-04-23",
+      "desc": "Formal Release 1.0.0",
+      "fhirversion": "3.0.1",
+      "path": "http://fhir.org/guides/argonaut/scheduling/release1",
+      "sequence": "First Release",
+      "status": "release",
+      "version": "1.0.0"
+    }
+  ],
+  "category": "Administration"
+}

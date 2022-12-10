@@ -1,0 +1,15 @@
+﻿{
+  "name": "@fhir/argonaut-scheduling",
+  "version": "3.0.1",
+  "description": "Argo-Scheduling",
+  "license": "CC0-1.0",
+  "author": {
+    "name": "Argonaut Project"
+  },
+  "files": [
+    "validation.pack"
+  ],
+  "dependencies": {
+    "@fhir/fhir": "3.0.1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "fhirVersion": "[3.0.1]",
+  "date": "20180423000000",
+  "name": "fhir.argonaut.scheduling"
+}
