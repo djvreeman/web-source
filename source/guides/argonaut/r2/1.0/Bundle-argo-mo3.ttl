@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Bundle/argo-mo3> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Bundle.id [ fhir:value "argo-mo3"];
+  fhir:Bundle.type [ fhir:value "searchset"];
+  fhir:Bundle.total [ fhir:value "1"^^xsd:nonNegativeInteger];
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "self" ];
+     fhir:Bundle.link.url [ fhir:value "https://fhir-open-api-dstu2.smarthealthit.org/MedicationOrder/?_id=argo-mo3&_include=MedicationOrder:medication" ]
+  ];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://fhir-open-api-dstu2.smarthealthit.org/MedicationOrder/argo-mo3" ];
+     fhir:Bundle.entry.resource <https://fhir-open-api-dstu2.smarthealthit.org/MedicationOrder/argo-mo3>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med2" ];
+     fhir:Bundle.entry.resource <https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med2>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ] .
+
+<https://fhir-open-api-dstu2.smarthealthit.org/MedicationOrder/argo-mo3> a fhir:MedicationOrder;
+  fhir:MedicationOrder.id [ fhir:value "argo-mo3"];
+  fhir:MedicationOrder.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationorder";
+       fhir:index 0
+     ]
+  ];
+  fhir:MedicationOrder.dateWritten [ fhir:value "2008-04-05"^^xsd:date];
+  fhir:MedicationOrder.status [ fhir:value "active"];
+  fhir:MedicationOrder.patient [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:MedicationOrder.prescriber [
+     fhir:link <http://fhir.org/guides/argonaut/Practitioner/1234>;
+     fhir:Reference.reference [ fhir:value "Practitioner/1234" ];
+     fhir:Reference.display [ fhir:value "John Smith, MD" ]
+  ];
+  fhir:MedicationOrder.medicationReference [
+     fhir:link <http://fhir.org/guides/argonaut/Medication/argo-med2>;
+     fhir:Reference.reference [ fhir:value "Medication/argo-med2" ];
+     fhir:Reference.display [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "10 mL bid" ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2008-04-05"^^xsd:date ]
+         ]
+       ]
+     ]
+  ];
+  fhir:MedicationOrder.dispenseRequest [
+     fhir:MedicationOrder.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:MedicationOrder.dispenseRequest.quantity [
+       fhir:Quantity.value [ fhir:value "480"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mL" ]
+     ];
+     fhir:MedicationOrder.dispenseRequest.expectedSupplyDuration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "days" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "d" ]
+     ]
+  ] .
+
+<https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med2> a fhir:Medication;
+  fhir:Medication.id [ fhir:value "argo-med2"];
+  fhir:Medication.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medication";
+       fhir:index 0
+     ]
+  ];
+  fhir:Medication.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "582620" ];
+       fhir:Coding.display [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

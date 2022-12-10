@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ucum-vitals-common"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/ucum-vitals-common"/>
+  <name value="Argonaut Vital Signs Units"/>
+  <status value="draft"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-05-26T00:00:00+10:00"/>
+  <description value="This value set includes most codes from the  http://hl7.org/fhir/ValueSet/daf-ucum-vitals-common valueset and adds inches, pounds, grams and degree Fahrenheit to support English units of measures."/>
+  <immutable value="false"/>
+  <requirements value="Codes that are needed for implementation of the Argonaut Vital Signs IG and MU2015 certification."/>
+  <extensible value="false"/>
+  <compose>
+    <import value="http://hl7.org/fhir/ValueSet/daf-ucum-vitals-common"/>
+    <include/>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="[in_i]"/>
+        <display value="inch (international)"/>
+      </concept>
+      <concept>
+        <code value="[lb_av]"/>
+        <display value="pound (US and British)"/>
+      </concept>
+      <concept>
+        <code value="[degF]"/>
+        <display value="degree Fahrenheit"/>
+      </concept>
+      <concept>
+        <code value="g"/>
+        <display value="gram"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

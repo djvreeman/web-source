@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Procedure/rehab> a fhir:Procedure;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Procedure.id [ fhir:value "rehab"];
+  fhir:Procedure.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-procedure";
+       fhir:index 0
+     ]
+  ];
+  fhir:Procedure.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rehab</p><p><b>meta</b>: </p><p><b>subject</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>status</b>: completed</p><p><b>code</b>: Alcohol rehabilitation <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '35637008' = 'Alcohol rehabilitation (regime/therapy)', given as 'Alcohol rehabilitation'}; {http://www.icd10data.com/icd10pcs code 'HZ30ZZZ' = 'HZ30ZZZ', given as 'Individual Counseling for Substance Abuse Treatment, Cognitive'})</span></p><p><b>performed</b>: 23/05/2002</p></div>"
+  ];
+  fhir:Procedure.subject [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:Procedure.status [ fhir:value "completed"];
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:35637008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "35637008" ];
+       fhir:Coding.display [ fhir:value "Alcohol rehabilitation" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://www.icd10data.com/icd10pcs" ];
+       fhir:Coding.code [ fhir:value "HZ30ZZZ" ];
+       fhir:Coding.display [ fhir:value "Individual Counseling for Substance Abuse Treatment, Cognitive" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Alcohol rehabilitation" ]
+  ];
+  fhir:Procedure.performedDateTime [ fhir:value "2002-05-23"^^xsd:date] .
+
+# -------------------------------------------------------------------------------------
+

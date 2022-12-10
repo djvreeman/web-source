@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="usrealm-birthsex"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/usrealm-birthsex"/>
+  <name value="USRealm Birth Sex Value Set"/>
+  <status value="active"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-08-10T00:00:00+10:00"/>
+  <description value="Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)"/>
+  <immutable value="false"/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
+      <concept>
+        <code value="F"/>
+        <display value="Female"/>
+      </concept>
+      <concept>
+        <code value="M"/>
+        <display value="Male"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+      <concept>
+        <code value="UNK"/>
+        <display value="Unknown"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

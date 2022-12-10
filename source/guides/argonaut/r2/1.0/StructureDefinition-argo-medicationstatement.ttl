@@ -1,0 +1,1298 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:StructureDefinition.id [ fhir:value "argo-medicationstatement"];
+  fhir:StructureDefinition.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement"];
+  fhir:StructureDefinition.name [ fhir:value "Argonaut MedicationStatement Profile"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.publisher [ fhir:value "Argonaut Project"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:StructureDefinition.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ];
+       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+     ]
+  ];
+  fhir:StructureDefinition.date [ fhir:value "2016-10-18T00:00:00+11:00"^^xsd:dateTime];
+  fhir:StructureDefinition.fhirVersion [ fhir:value "1.0.2"];
+  fhir:StructureDefinition.mapping [
+     fhir:index 0;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM" ]
+  ], [
+     fhir:index 1;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "w5" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/fhir/w5" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "W5 Mapping" ]
+  ], [
+     fhir:index 2;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "v2" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v2" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "HL7 v2" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "resource"];
+  fhir:StructureDefinition.constrainedType [ fhir:value "MedicationStatement"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.base [ fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationStatement"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement" ];
+       fhir:ElementDefinition.name [ fhir:value "argoprofile" ];
+       fhir:ElementDefinition.short [ fhir:value "Argonaut MedicationStatement Profile" ];
+       fhir:ElementDefinition.definition [ fhir:value "A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from e.g. the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains   The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "mst-2" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Reason for use is only permitted if wasNotTaken is false" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(*[starts-with(local-name(.), 'reasonForUse')]) and f:wasNotTaken/@value=true())" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "mst-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Reason not taken is only permitted if wasNotTaken is true" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:reasonNotTaken) and f:wasNotTaken/@value=false())" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "clinical.medication" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.id" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.id" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.id" ];
+       fhir:ElementDefinition.short [ fhir:value "Logical id of this artifact" ];
+       fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ];
+       fhir:ElementDefinition.comments [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "id" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.meta" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.meta" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.meta" ];
+       fhir:ElementDefinition.short [ fhir:value "Metadata about the resource" ];
+       fhir:ElementDefinition.definition [ fhir:value "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.meta" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Meta" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.implicitRules" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.implicitRules" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.implicitRules" ];
+       fhir:ElementDefinition.short [ fhir:value "A set of rules under which this content was created" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." ];
+       fhir:ElementDefinition.comments [ fhir:value "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.implicitRules" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.language" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.language" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.language" ];
+       fhir:ElementDefinition.short [ fhir:value "Language of the resource content" ];
+       fhir:ElementDefinition.definition [ fhir:value "The base language in which the resource is written." ];
+       fhir:ElementDefinition.comments [ fhir:value "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.language" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
+         fhir:ElementDefinition.binding.valueSetUri [ fhir:value "http://tools.ietf.org/html/bcp47" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.text" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.text" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Text summary of the resource, for human interpretation" ];
+       fhir:ElementDefinition.definition [ fhir:value "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ];
+       fhir:ElementDefinition.comments [ fhir:value "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "narrative";
+         fhir:index 0
+       ], [
+         fhir:value "html";
+         fhir:index 1
+       ], [
+         fhir:value "xhtml";
+         fhir:index 2
+       ], [
+         fhir:value "display";
+         fhir:index 3
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Narrative" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.condition [
+         fhir:value "dom-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Act.text?" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.contained" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.contained" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.contained" ];
+       fhir:ElementDefinition.short [ fhir:value "Contained, inline Resources" ];
+       fhir:ElementDefinition.definition [ fhir:value "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ];
+       fhir:ElementDefinition.comments [ fhir:value "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "inline resources";
+         fhir:index 0
+       ], [
+         fhir:value "anonymous resources";
+         fhir:index 1
+       ], [
+         fhir:value "contained resources";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.contained" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Resource" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.extension" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.modifierExtension" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.identifier" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "External identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "External identifier - FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration.id" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.patient" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.patient" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.patient" ];
+       fhir:ElementDefinition.short [ fhir:value "Who is/was taking  the medication" ];
+       fhir:ElementDefinition.definition [ fhir:value "The person or animal who is/was taking the medication." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.patient" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-patient";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "PID-3-Patient ID List" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration->subject->Patient" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.focus" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.informationSource" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.informationSource" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.informationSource" ];
+       fhir:ElementDefinition.definition [ fhir:value "The person who provided the information about the taking of this medication." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.informationSource" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.source" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dateAsserted" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dateAsserted" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dateAsserted" ];
+       fhir:ElementDefinition.short [ fhir:value "When the statement was asserted?" ];
+       fhir:ElementDefinition.definition [ fhir:value "The date when the medication statement was asserted by the information source." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dateAsserted" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.status" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.status" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.status" ];
+       fhir:ElementDefinition.short [ fhir:value "active | completed | entered-in-error | intended" ];
+       fhir:ElementDefinition.definition [ fhir:value "A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally this will be active or completed." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-statement-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/medication-statement-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.wasNotTaken" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.wasNotTaken" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.wasNotTaken" ];
+       fhir:ElementDefinition.short [ fhir:value "True if medication is/was not being taken" ];
+       fhir:ElementDefinition.definition [ fhir:value "Set this to true if the record is saying that the medication was NOT taken." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.wasNotTaken" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If this is missing, then the medication was taken" ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration.actionNegationInd" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "status" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.reasonNotTaken" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.reasonNotTaken" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.reasonNotTaken" ];
+       fhir:ElementDefinition.short [ fhir:value "True if asserting medication was not given" ];
+       fhir:ElementDefinition.definition [ fhir:value "A code indicating why the medication was not taken." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.reasonNotTaken" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.condition [
+         fhir:value "mst-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A set of codes indicating the reason why the MedicationAdministration is negated." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration->Reason->Observation->Value" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.reasonForUse[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.reasonForUse[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.reasonForUse[x]" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reason for why the medication is being/was taken." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.reasonForUse[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Condition";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes identifying why the medication is being taken." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/condition-code>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/condition-code" ]
+         ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.effective[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.effective[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.effective[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Over what period was medication consumed?" ];
+       fhir:ElementDefinition.definition [ fhir:value "The interval of time during which it is being asserted that the patient was taking the medication (or was not taking, when the wasNotGiven element is true)." ];
+       fhir:ElementDefinition.comments [ fhir:value "If the medication is still being taken at the time the statement is recorded, the \"end\" date will be omitted." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.effective[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration.effectiveTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "when.done" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.note" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.note" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.note" ];
+       fhir:ElementDefinition.short [ fhir:value "Further information about the statement" ];
+       fhir:ElementDefinition.definition [ fhir:value "Provides extra information about the medication statement that is not conveyed by the other attributes." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.note" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.supportingInformation" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.supportingInformation" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.supportingInformation" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional supporting information" ];
+       fhir:ElementDefinition.definition [ fhir:value "Allows linking the MedicationStatement to the underlying MedicationOrder, or to other information that supports the MedicationStatement." ];
+       fhir:ElementDefinition.comments [ fhir:value "Likely references would be to MedicationOrder, MedicationDispense, Claim, Observation or QuestionnaireAnswers." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.supportingInformation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.medication[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.medication[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.medication[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "What medication was taken" ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications." ];
+       fhir:ElementDefinition.comments [ fhir:value "If only a code is specified, then it needs to be a code for a specific product.  If more information is required, then the use of the medication resource is recommended.  Note: do not use Medication.name to describe the medication this statement concerns. When the only available information is a text description of the medication, Medication.code.text should be used." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.medication[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medication";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Prescribable medications" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://fhir.org/guides/argonaut/ValueSet/medication-codes>;
+           fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/medication-codes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration>Component>SubstanceAdministrationRequest.consumable" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "what" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage" ];
+       fhir:ElementDefinition.short [ fhir:value "Details of how medication was taken" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates how the medication is/was used by the patient." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "SubstanceAdministration>Component>SubstanceAdministrationRequest" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.id" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.id" ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "id" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.extension" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.modifierExtension" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.text" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.text" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Reported dosage information" ];
+       fhir:ElementDefinition.definition [ fhir:value "Free text dosage information as reported about a patient's medication use. When coded dosage information is present, the free text may still be present for display to humans." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.timing" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.timing" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.timing" ];
+       fhir:ElementDefinition.short [ fhir:value "When/how often was medication taken" ];
+       fhir:ElementDefinition.definition [ fhir:value "The timing schedule for giving the medication to the patient.  The Schedule data type allows many different expressions, for example.  \"Every  8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\";  \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\"." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.timing" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Timing" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.asNeeded[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.asNeeded[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.asNeeded[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Take \"as needed\" (for x)" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).    Specifically if 'boolean' datatype is selected, then the following logic applies:  If set to True, this indicates that the medication is only taken when needed, within the specified schedule." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.asNeeded[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc." ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "boolean: .outboundRelationship[typeCode=PRCN].negationInd (inversed - so negationInd = true means asNeeded=false  CodeableConcept: .outboundRelationship[typCode=PRCN].target[classCode=OBS, moodCode=EVN, isCriterionInd=true, code=\"Assertion\"].value" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.site[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.site[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.site[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Where (on body) medication is/was administered" ];
+       fhir:ElementDefinition.definition [ fhir:value "A coded specification of or a reference to the anatomic site where the medication first enters the body." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.site[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/BodySite";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A coded concept describing the site location the medicine enters into or onto the body." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/approach-site-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/approach-site-codes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".approachSiteCode" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.route" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.route" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.route" ];
+       fhir:ElementDefinition.short [ fhir:value "How the medication entered the body" ];
+       fhir:ElementDefinition.definition [ fhir:value "A code specifying the route or physiological path of administration of a therapeutic agent into or onto a subject." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.route" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/route-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/route-codes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".routeCode" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.method" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.method" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.method" ];
+       fhir:ElementDefinition.short [ fhir:value "Technique used to administer medication" ];
+       fhir:ElementDefinition.definition [ fhir:value "A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV." ];
+       fhir:ElementDefinition.comments [ fhir:value "One of the reasons this attribute is not used often, is that the method is often pre-coordinated with the route and/or form of administration.  This means the codes used in route or form may pre-coordinate the method in the route code or the form code.  The implementation decision about what coding system to use for route or form code will determine how frequently the method code will be populated e.g. if route or form code pre-coordinate method code, then this attribute will not be populated often; if there is no pre-coordination then method code may  be used frequently." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.method" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A coded concept describing the technique by which the medicine is administered." ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".methodCode" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.quantity[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.quantity[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.quantity[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Amount administered in one dose" ];
+       fhir:ElementDefinition.definition [ fhir:value "The amount of therapeutic or other substance given at one administration event." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.quantity[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Quantity" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/SimpleQuantity";
+           fhir:index 0
+         ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Range" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".doseQuantity" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.rate[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.rate[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.rate[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Dose quantity per unit of time" ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifies the speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.   Currently we do not specify a default of '1' in the denominator, but this is being discussed. Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.rate[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Ratio" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Range" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".rateQuantity" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dosage.maxDosePerPeriod" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dosage.maxDosePerPeriod" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dosage.maxDosePerPeriod" ];
+       fhir:ElementDefinition.short [ fhir:value "Maximum dose that was consumed per unit of time" ];
+       fhir:ElementDefinition.definition [ fhir:value "The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time.  For example, 1000mg in 24 hours." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "MedicationStatement.dosage.maxDosePerPeriod" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:integer ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Ratio" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".maxDoseQuantity" ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement" ];
+       fhir:ElementDefinition.name [ fhir:value "argoprofile" ];
+       fhir:ElementDefinition.short [ fhir:value "Argonaut MedicationStatement Profile" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.patient" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.patient" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.patient" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-patient";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.dateAsserted" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.dateAsserted" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.dateAsserted" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.status" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.status" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.status" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-statement-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/medication-statement-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.effective[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.effective[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.effective[x]" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:ElementDefinition.id [ fhir:value "MedicationStatement:argoprofile.medication[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationStatement.medication[x]" ];
+       fhir:ElementDefinition.name [ fhir:value "MedicationStatement:argoprofile.medication[x]" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medication";
+           fhir:index 0
+         ]
+       ];
+       fhir:ElementDefinition.maxLength [ fhir:value "0"^^xsd:integer ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Prescribable medications" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://fhir.org/guides/argonaut/ValueSet/medication-codes>;
+           fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/medication-codes" ]
+         ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/medication-statement-status> a fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/condition-code> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/approach-site-codes> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/route-codes> a fhir:ValueSet .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Observation/heart-rate> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Observation.id [ fhir:value "heart-rate"];
+  fhir:Observation.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-vitalsigns";
+       fhir:index 0
+     ]
+  ];
+  fhir:Observation.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: heart-rate</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: heart_rate <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '8867-4' = 'Heart rate', given as 'heart_rate'})</span></p><p><b>subject</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>encounter</b>: <a href=\"Encounter-691.html\">Generated Summary: id: 691; status: in-progress; class: inpatient</a></p><p><b>effective</b>: 02/07/1999</p><p><b>value</b>: 44.0 {beats}/min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {beats}/min = '{beats}/min')</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/observation-category" ];
+       fhir:Coding.code [ fhir:value "vital-signs" ];
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Vital Signs" ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept fhir:LOINC8867-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "8867-4" ];
+       fhir:Coding.display [ fhir:value "heart_rate" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "heart_rate" ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:link <http://fhir.org/guides/argonaut/Encounter/691>;
+     fhir:Reference.reference [ fhir:value "Encounter/691" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "1999-07-02"^^xsd:date];
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "44.0"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "{beats}/min" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "{beats}/min" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

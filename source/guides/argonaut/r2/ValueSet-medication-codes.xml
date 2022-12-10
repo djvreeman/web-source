@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="medication-codes"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/medication-codes"/>
+  <name value="Medication Clinical Drug (RxNorm)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-05-25T16:59:08+10:00"/>
+  <description value="All prescribable medication formulations represented using  either a &#39;generic&#39; or &#39;brand-specific&#39; concept. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack), SCDG (semantic clinical drug group), SBDG (semantic brand drug group), SCDF (semantic clinical drug form), or SBDF (semantic brand drug form)"/>
+  <immutable value="false"/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <filter>
+        <property value="TTY"/>
+        <op value="in"/>
+        <value value="SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

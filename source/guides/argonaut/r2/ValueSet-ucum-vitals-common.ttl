@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/ValueSet/ucum-vitals-common> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ValueSet.id [ fhir:value "ucum-vitals-common"];
+  fhir:ValueSet.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/ucum-vitals-common"];
+  fhir:ValueSet.name [ fhir:value "Argonaut Vital Signs Units"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ];
+       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2016-05-26T00:00:00+10:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set includes most codes from the  http://hl7.org/fhir/ValueSet/daf-ucum-vitals-common valueset and adds inches, pounds, grams and degree Fahrenheit to support English units of measures."];
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.requirements [ fhir:value "Codes that are needed for implementation of the Argonaut Vital Signs IG and MU2015 certification."];
+  fhir:ValueSet.extensible [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.import [
+       fhir:value "http://hl7.org/fhir/ValueSet/daf-ucum-vitals-common";
+       fhir:index 0
+     ];
+     fhir:ValueSet.compose.include [ fhir:index 0 ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[in_i]" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "inch (international)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[lb_av]" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pound (US and British)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[degF]" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "degree Fahrenheit" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "g" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "gram" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

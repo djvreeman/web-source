@@ -1,0 +1,95 @@
+{
+  "resourceType": "Bundle",
+  "id": "argo-mo3",
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://fhir-open-api-dstu2.smarthealthit.org/MedicationOrder/?_id=argo-mo3&_include=MedicationOrder:medication"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://fhir-open-api-dstu2.smarthealthit.org/MedicationOrder/argo-mo3",
+      "resource": {
+        "resourceType": "MedicationOrder",
+        "id": "argo-mo3",
+        "meta": {
+          "profile": [
+            "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationorder"
+          ]
+        },
+        "dateWritten": "2008-04-05",
+        "status": "active",
+        "patient": {
+          "reference": "Patient/peter-chalmers",
+          "display": "Peter Chalmers"
+        },
+        "prescriber": {
+          "reference": "Practitioner/1234",
+          "display": "John Smith, MD"
+        },
+        "medicationReference": {
+          "reference": "Medication/argo-med2",
+          "display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mL bid",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2008-04-05"
+                }
+              }
+            }
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 1,
+          "quantity": {
+            "value": 480,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med2",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "argo-med2",
+        "meta": {
+          "profile": [
+            "http://fhir.org/guides/argonaut/StructureDefinition/argo-medication"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "582620",
+              "display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+            }
+          ],
+          "text": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

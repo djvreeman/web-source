@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/ValueSet/observation-ccdavitalsignresult> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ValueSet.id [ fhir:value "observation-ccdavitalsignresult"];
+  fhir:ValueSet.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/observation-ccdavitalsignresult"];
+  fhir:ValueSet.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.16.840.1.113883.3.88.12.80.62" ]
+  ];
+  fhir:ValueSet.version [ fhir:value "1.6.0"];
+  fhir:ValueSet.name [ fhir:value "Argonaut Vital Sign Codes"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/fhir" ];
+       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2016-08-10T00:00:00+10:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set indicates the allowed vital sign result types. The vocabulary selected for this value set  based on ONC 2015 Edition Common Clinical Data Set (CCDS) for vitals.    Note the concept Blood pressure systolic and diastolic (55284-4) is used to group the related observations Systolic blood pressure (8480-6) and Diastolic blood pressure (8462-4). It SHALL NOT be used alone, but both 8480-6 and 8462-2 SHALL also be valued."];
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"];
+  fhir:ValueSet.extensible [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8716-3" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9279-1" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8867-4" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59408-5" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8310-5" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8302-2" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8306-3" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8287-5" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29463-7" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "39156-5" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "55284-4" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8480-6" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8462-4" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

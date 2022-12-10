@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- =============BreadCrumbs============= -->
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Argonaut Get DocumentReferences</h2>
+
+<p>
+Formats: <a href="OperationDefinition-docref.xml.html">XML</a>, <a href="OperationDefinition-docref.json.html">JSON</a>, <a href="OperationDefinition-docref.ttl.html">Turtle</a>
+</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>OPERATION: Argonaut Fetch Patient DocumentReferences</p>
+<p>This operation is used to return all the references to documents related to a patient.</p>
+<p>The operation takes the input parameters:</p>
+<ul>
+<li>patient id</li>
+<li>start date</li>
+<li>end date</li>
+<li>document type</li>
+</ul>
+<p>and returns a <a href="http://hl7.org/fhir/bundle.html">Bundle</a> of type “searchset” containing <a href="StructureDefinition-argo-documentreference.html">Argonaut DocumentReference Profiles</a> for the patient. If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference profiles needed to support the records. The principle intended use for this operation is to provide a provider or patient with access to their available document information.</p>
+<p>The server SHOULD return at least all references for documents that it has made available in a document indexing system. This is the same as a simple query (<code>GET [base]/DocumentReference?patient=[id]</code>). This operaton differs from a simple query in that DocumentReferences may be created ‘on-the-fly’ in response to this operation. For example, in some cases the documents themselves may not exist but can be generated when needed so a reference to them can be generated using this operation. If no documents exist and an ‘on-demand’ document cannot be created then the operation will return an empty search bundle.</p>
+<p><code>URL: [base]/DocumentReference/$docref</code></p>
+<p>Parameters</p>
+
+<table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>patient</td><td>1..1</td><td>id</td><td/><td><div><p>The patient id to match against a patient resource.  If there is no match, an empty Bundle is returned</p>
+</div></td></tr><tr><td>IN</td><td>start</td><td>0..1</td><td>date</td><td/><td><div><p>The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no start date is provided, all documents prior to the end date are in scope.  If neither a start date nor an end date is provided, the most recent or current document is in scope.</p>
+</div></td></tr><tr><td>IN</td><td>end</td><td>0..1</td><td>date</td><td/><td><div><p>The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no end date is provided, all documents subsequent to the start date are in scope.   If neither a start date nor an end date is provided, the most recent or current document is in scope.</p>
+</div></td></tr><tr><td>IN</td><td>type</td><td>0..1</td><td>CodeableConcept</td><td><a href="http://hl7.org/fhir/ValueSet/c80-doc-typecodes">Document Type Value Set</a> (Required)</td><td><div><p>The type relates to document type e.g. the LOINC code for a C-CDA Clinical Summary of Care (CCD) is 34133-9 (Summary of episode note).  If no type is provided, the CCD document if available SHALL be in scope and all other document types MAY be in scope.</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td>Bundle</td><td/><td><div><p>The bundle type is &quot;searchset&quot;containing Argonaut DocumentReference Profiles</p>
+</div></td></tr></table>
+<ul>
+<li><p>The server is responsible for determining what resources to return as included resources (rather than the client specifying which ones). This frees the client from needing to determine what it could or should ask for.</p></li>
+<li><p>The document itself can be subsequently retrieved using the link provided from the DocumentQuery search results. The link could,for example, be a FHIR endpoint to a <a href="http://hl7.org/fhir/binary.html">Binary</a>  Resource or some other document repository.</p></li>
+</ul>
+<p>It is assumed that the server has identified and secured the context appropriately, and can either associate the authorization context with a single patient, or determine whether the context has the rights to the nominated patient, if there is one. If there is no nominated patient (e.g. the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user and patient records is outside the scope of this specification</p>
+
+		</div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+

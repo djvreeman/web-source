@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Goal/goal-1> a fhir:Goal;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Goal.id [ fhir:value "goal-1"];
+  fhir:Goal.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-goal";
+       fhir:index 0
+     ]
+  ];
+  fhir:Goal.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: goal-1</p><p><b>meta</b>: </p><p><b>subject</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>description</b>: Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs</p><p><b>status</b>: in-progress</p></div>"
+  ];
+  fhir:Goal.subject [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:Goal.description [ fhir:value "Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"];
+  fhir:Goal.status [ fhir:value "in-progress"] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/MedicationStatement/argo-ms2> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:MedicationStatement.id [ fhir:value "argo-ms2"];
+  fhir:MedicationStatement.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement";
+       fhir:index 0
+     ]
+  ];
+  fhir:MedicationStatement.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: argo-ms2</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>patient</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>dateAsserted</b>: 01/05/2016 4:13:03 PM</p><p><b>status</b>: active</p><p><b>effective</b>: 01/05/2010 --&gt; (ongoing)</p><p><b>medication</b>: lisinopril oral 10 mg. Generated Summary: unknown resource contained</p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Medication.id [ fhir:value "med1" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+         fhir:Coding.code [ fhir:value "206765" ];
+         fhir:Coding.display [ fhir:value "Lisinopril 10 MG Oral Tablet [Prinivil]" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "lisinopril oral 10 mg" ]
+     ]
+  ];
+  fhir:MedicationStatement.patient [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:MedicationStatement.dateAsserted [ fhir:value "2016-05-01T16:13:03Z"^^xsd:dateTime];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2010-05-01"^^xsd:date ]
+  ];
+  fhir:MedicationStatement.medicationReference [
+     fhir:Reference.reference [ fhir:value "#med1" ];
+     fhir:Reference.display [ fhir:value "lisinopril oral 10 mg" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

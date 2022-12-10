@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="languages"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/languages"/>
+  <name value="All Languages"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-11-02T09:04:05+11:00"/>
+  <description value="This value set includes all possible codes from BCP-47 (http://tools.ietf.org/html/bcp47)"/>
+  <immutable value="false"/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="urn:ietf:bcp:47"/>
+    </include>
+  </compose>
+</ValueSet>

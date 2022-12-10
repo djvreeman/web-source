@@ -1,0 +1,26 @@
+{
+  "canonical": "http://fhir.org/guides/argonaut/r2",
+  "package-id": "fhir.argonaut.r2",
+  "title": "Argonaut Data Query Implementation Guide",
+  "introduction": "The Argonaut Project is a joint project of major US EHR vendors to advance industry adoption of modern, open interoperability standards. For further information, see [About the Argonaut Project](http://argonautwiki.hl7.org/index.php?title\u003dMain_Page/Background). This Implementation Guide provides the specifications for basic access to EHR data. See the The [full list of Argonaut Specifications](http://fhir.org/guides/argonaut). Note that this implementation guide is based on [the DSTU2 version of FHIR](http://hl7.org/fhir/DSTU2).",
+  "list": [
+    {
+      "current": true,
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/argonautproject/data-query/",
+      "status": "ci-build",
+      "version": "current"
+    },
+    {
+      "current": true,
+      "date": "2016-12-23",
+      "desc": "Formal Release 1.0.0",
+      "fhirversion": "1.0.2",
+      "path": "http://fhir.org/guides/argonaut/r2/1.0",
+      "sequence": "First Release",
+      "status": "release",
+      "version": "1.0.0"
+    }
+  ],
+  "category": "EHR Access"
+}

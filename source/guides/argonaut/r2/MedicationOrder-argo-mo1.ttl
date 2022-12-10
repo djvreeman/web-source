@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/MedicationOrder/argo-mo1> a fhir:MedicationOrder;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:MedicationOrder.id [ fhir:value "argo-mo1"];
+  fhir:MedicationOrder.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationorder";
+       fhir:index 0
+     ]
+  ];
+  fhir:MedicationOrder.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: argo-mo1</p><p><b>meta</b>: </p><p><b>dateWritten</b>: 05/04/2008</p><p><b>status</b>: active</p><p><b>patient</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>prescriber</b>: <a href=\"Practitioner-1234.html\">Kathy Fielding, MD. Generated Summary: id: 1234; 23; active; Adam Careful </a></p><p><b>medication</b>: Nizatidine 15 MG/ML Oral Solution [Axid] <span style=\"background: LightGoldenRodYellow\">(Details : {RxNorm code '582620' = 'Nizatidine 15 MG/ML Oral Solution [Axid]', given as 'Nizatidine 15 MG/ML Oral Solution [Axid]'})</span></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td>-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td>*</td><td>10 mL bid</td><td>Starting 05/04/2008, Do Once</td></tr></table><h3>DispenseRequests</h3><table class=\"grid\"><tr><td>-</td><td><b>NumberOfRepeatsAllowed</b></td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td></tr><tr><td>*</td><td>1</td><td>480 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></td><td>30 days<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code d = 'd')</span></td></tr></table></div>"
+  ];
+  fhir:MedicationOrder.dateWritten [ fhir:value "2008-04-05"^^xsd:date];
+  fhir:MedicationOrder.status [ fhir:value "active"];
+  fhir:MedicationOrder.patient [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:MedicationOrder.prescriber [
+     fhir:link <http://fhir.org/guides/argonaut/Practitioner/1234>;
+     fhir:Reference.reference [ fhir:value "Practitioner/1234" ];
+     fhir:Reference.display [ fhir:value "Kathy Fielding, MD" ]
+  ];
+  fhir:MedicationOrder.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "582620" ];
+       fhir:Coding.display [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+  ];
+  fhir:MedicationOrder.dosageInstruction [
+     fhir:index 0;
+     fhir:MedicationOrder.dosageInstruction.text [ fhir:value "10 mL bid" ];
+     fhir:MedicationOrder.dosageInstruction.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2008-04-05"^^xsd:date ]
+         ]
+       ]
+     ]
+  ];
+  fhir:MedicationOrder.dispenseRequest [
+     fhir:MedicationOrder.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:MedicationOrder.dispenseRequest.quantity [
+       fhir:Quantity.value [ fhir:value "480"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mL" ]
+     ];
+     fhir:MedicationOrder.dispenseRequest.expectedSupplyDuration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "days" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "d" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

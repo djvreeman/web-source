@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/ValueSet/languages> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ValueSet.id [ fhir:value "languages"];
+  fhir:ValueSet.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/languages"];
+  fhir:ValueSet.name [ fhir:value "All Languages"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ];
+       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2016-11-02T09:04:05+11:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set includes all possible codes from BCP-47 (http://tools.ietf.org/html/bcp47)"];
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.extensible [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "urn:ietf:bcp:47" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Practitioner/1234> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Practitioner.id [ fhir:value "1234"];
+  fhir:Practitioner.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 1234</p><p><b>identifier</b>: 23</p><p><b>active</b>: true</p><p><b>name</b>: Adam Careful </p></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://www.acme.org/practitioners" ];
+     fhir:Identifier.value [ fhir:value "23" ]
+  ];
+  fhir:Practitioner.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Practitioner.name [
+     fhir:HumanName.family [
+       fhir:value "Careful";
+       fhir:index 0
+     ];
+     fhir:HumanName.given [
+       fhir:value "Adam";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr";
+       fhir:index 0
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

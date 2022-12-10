@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/DiagnosticReport/cbc> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:DiagnosticReport.id [ fhir:value "cbc"];
+  fhir:DiagnosticReport.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-diagnosticreport";
+       fhir:index 0
+     ]
+  ];
+  fhir:DiagnosticReport.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>Generated Narrative with Details</b>\n			</p>\n			<p>\n				<b>id</b>: cbc</p>\n			<p>\n				<b>meta</b>: </p>\n			<p>\n				<b>status</b>: final</p>\n			<p>\n				<b>category</b>: Hematology <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v2/0074 code 'HM' = 'Hematology', given as 'Hematology'})</span>\n			</p>\n			<p>\n				<b>code</b>: Complete blood count (hemogram) panel - Blood by Automated count <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '58410-2' = 'Complete blood count (hemogram) panel - Blood by Automated count', given as 'Complete blood count (hemogram) panel - Blood by Automated count'})</span>\n			</p>\n			<p>\n				<b>subject</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK)</a>\n			</p>\n			<p>\n				<b>effective</b>: Jul 5, 2005</p>\n			<p>\n				<b>issued</b>: Jul 6, 2005 11:45:33 AM</p>\n			<p>\n				<b>result</b>: </p>\n			<ul>\n				<li>\n					<a href=\"Observation-neutrophils.html\">NEUTROPHILS</a>\n				</li>\n				<li>\n					<a href=\"Observation-mchc.html\">MCHC</a>\n				</li>\n				<li>\n					<a href=\"Observation-hemoglobin.html\">HEMOGLOBIN</a>\n				</li>\n				<li>\n					<a href=\"Observation-erythrocytes.html\">ERYTHROCYTES</a>\n				</li>\n			</ul>\n		</div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0074" ];
+       fhir:Coding.code [ fhir:value "HM" ];
+       fhir:Coding.display [ fhir:value "Hematology" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept fhir:LOINC58410-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "58410-2" ];
+       fhir:Coding.display [ fhir:value "Complete blood count (hemogram) panel - Blood by Automated count" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2005-07-05"^^xsd:date];
+  fhir:DiagnosticReport.issued [ fhir:value "2005-07-06T11:45:33+11:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:link <http://fhir.org/guides/argonaut/Practitioner/1234>;
+     fhir:Reference.reference [ fhir:value "Practitioner/1234" ];
+     fhir:Reference.display [ fhir:value "Adam Careful, MD" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/neutrophils>;
+     fhir:Reference.reference [ fhir:value "Observation/neutrophils" ];
+     fhir:Reference.display [ fhir:value "NEUTROPHILS" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/mchc>;
+     fhir:Reference.reference [ fhir:value "Observation/mchc" ];
+     fhir:Reference.display [ fhir:value "MCHC" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/hemoglobin>;
+     fhir:Reference.reference [ fhir:value "Observation/hemoglobin" ];
+     fhir:Reference.display [ fhir:value "HEMOGLOBIN" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/erythrocytes>;
+     fhir:Reference.reference [ fhir:value "Observation/erythrocytes" ];
+     fhir:Reference.display [ fhir:value "ERYTHROCYTES" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

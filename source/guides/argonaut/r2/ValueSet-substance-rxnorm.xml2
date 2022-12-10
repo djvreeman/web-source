@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="substance-rxnorm"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/substance-rxnorm"/>
+  <name value="DAF Substance RxNorm Codes"/>
+  <status value="draft"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-18T00:00:00+11:00"/>
+  <description value="All RxNorm codes that have TTY = IN,PIN,MIN,BN, but TTY != OCD."/>
+  <immutable value="false"/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <filter>
+        <property value="TTY"/>
+        <op value="in"/>
+        <value value="IN,PIN,MIN,BN"/>
+      </filter>
+    </include>
+    <exclude>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <filter>
+        <property value="TTY"/>
+        <op value="="/>
+        <value value="OCD"/>
+      </filter>
+    </exclude>
+  </compose>
+</ValueSet>

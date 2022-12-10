@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/ValueSet/detailed-race> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ValueSet.id [ fhir:value "detailed-race"];
+  fhir:ValueSet.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/detailed-race"];
+  fhir:ValueSet.name [ fhir:value "US-Core Detailed Race"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ];
+       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2016-08-30T00:00:00+10:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "The 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes."];
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.extensible [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.import [
+       fhir:value "http://hl7.org/fhir/ValueSet/v3-Race";
+       fhir:index 0
+     ];
+     fhir:ValueSet.compose.exclude [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/v3/Race" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1002-5" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2028-9" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2054-5" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2076-8" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2106-3" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="vitals-panel"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut/StructureDefinition/argo-vitalsigns"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: vitals-panel</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: Vital signs panel (respiratory rate, heart rate, blood pressure) <span style="background: LightGoldenRodYellow">(Details : {LOINC code '8716-3' = 'Vital signs', given as 'Vital signs'})</span></p><p><b>subject</b>: <a href="Patient-peter-chalmers.html">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>encounter</b>: <a href="Encounter-691.html">Generated Summary: id: 691; status: in-progress; class: inpatient</a></p><p><b>effective</b>: 02/07/1999</p><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a href="Observation-respiratory-rate.html">Respiratory Rate. Generated Summary: id: respiratory-rate; <span title="Codes: {http://hl7.org/fhir/observation-category vital-signs}">Vital Signs</span>; <span title="Codes: {http://loinc.org 9279-1}">respiratory_rate</span>; Peter Chalmers; effective: 02/07/1999; 26.0 breaths per minute</a></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a href="Observation-heart-rate.html">Heart Rate. Generated Summary: id: heart-rate; <span title="Codes: {http://hl7.org/fhir/observation-category vital-signs}">Vital Signs</span>; <span title="Codes: {http://loinc.org 8867-4}">heart_rate</span>; Peter Chalmers; effective: 02/07/1999; 44.0 {beats}/min</a></p></blockquote><blockquote><p><b>related</b></p><p><b>type</b>: has-member</p><p><b>target</b>: <a href="Observation-blood-pressure.html">Blood Pressure. Generated Summary: id: blood-pressure; <span title="Codes: {http://hl7.org/fhir/observation-category vital-signs}">Vital Signs</span>; <span title="Codes: {http://loinc.org 55284-4}">Blood pressure systolic and diastolic</span>; Peter Chalmers; effective: 02/07/1999</a></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+    <text value="Vital Signs"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8716-3"/>
+      <display value="Vital signs"/>
+    </coding>
+    <text value="Vital signs panel (respiratory rate, heart rate, blood pressure)"/>
+  </code>
+  <subject>
+    <reference value="Patient/peter-chalmers"/>
+    <display value="Peter Chalmers"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/691"/>
+  </encounter>
+  <effectiveDateTime value="1999-07-02"/>
+  <related>
+    <type value="has-member"/>
+    <target>
+      <reference value="Observation/respiratory-rate"/>
+      <display value="Respiratory Rate"/>
+    </target>
+  </related>
+  <related>
+    <type value="has-member"/>
+    <target>
+      <reference value="Observation/heart-rate"/>
+      <display value="Heart Rate"/>
+    </target>
+  </related>
+  <related>
+    <type value="has-member"/>
+    <target>
+      <reference value="Observation/blood-pressure"/>
+      <display value="Blood Pressure"/>
+    </target>
+  </related>
+</Observation>

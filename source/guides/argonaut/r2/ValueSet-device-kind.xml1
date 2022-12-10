@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="device-kind"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/device-kind"/>
+  <name value="Argonaut Device Types"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-20T10:41:44+11:00"/>
+  <description value="Device Types :  Codes used to identify medical devices. This value set includes all children of SNOMED CT Concepts (US Extension and Core) from SCTID 49062001 Device (physical object)  and is provided as a suggestive example."/>
+  <immutable value="false"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="49062001"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

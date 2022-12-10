@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  <!-- ============BreadCrumb=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2 id="argonaut-data-query-implementation-guide">Argonaut Data Query Implementation Guide</h2>
+
+<p>The Argonaut Data Query Implementation Guide is based upon the core <strong><a href="http://hl7.org/fhir/DSTU2/index.html">FHIR DSTU2 API</a></strong> and it documents:</p>
+
+<ul>
+  <li>Security and Authorization</li>
+  <li>Data element query of the ONC Common Clinical Data Set</li>
+  <li>Document query of static documents</li>
+</ul>
+
+<h4 id="use-cases">Use Cases</h4>
+
+<p>This specification describes four use cases and sets search expectations for each. For complete details and background, see <a href="http://argonautwiki.hl7.org/images/e/ec/Argonaut_UseCasesV1-1.pdf">Use Cases</a> for the Argonaut Project.</p>
+
+<ol>
+  <li>Patient  uses  provider-approved  web  application  to  access  health  data</li>
+  <li>Patient  uses  provider-­approved  mobile  app  to  access  health  data</li>
+  <li>Clinician  uses  provider­-approved  web  application  to  access  health  data</li>
+  <li>Clinician  uses  provider­-approved  mobile  app  to  access  health  data</li>
+</ol>
+
+<p>Note, the Common MU Data Set referenced in the Use Cases is now the ONC 2015 Common Clinical Data Set .</p>
+
+<h4 id="security">Security</h4>
+
+<hr />
+
+<p>Argonaut uses SMART on FHIR authorization for apps that connect to EHR data. For details, see <a href="http://fhir-docs.smarthealthit.org/argonaut-dev/authorization/">SMART on FHIR Authorization Guide</a> and the <a href="https://github.com/argonautproject/implementation-program/wiki">Argonaut Sprint Definitions</a>.</p>
+
+<h4 id="data-element-query">Data Element Query</h4>
+
+<hr />
+
+<p>The Argonaut data element query IG is intended to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7) and Application Access – Data Category Request 170.315(g)(8). They were created for each of the 2015 Edition Common Clinical Data Set. Where applicable they are based on the HL7 U.S. <a href="http://hl7.org/fhir/DSTU2/daf/daf.html">Data Access Framework (DAF) FHIR DSTU2 Implementation Guide</a>. However, the Argonaut use case and requirements per resource are a subset of those of the DAF implementation guide.</p>
+
+<p>The table below lists the FHIR Resources used for the corresponding 2015 Edition Common Clinical Data Set (CCDS) Data elements:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>CCDS Data Element</th>
+      <th>FHR Resource</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(1)</td>
+      <td>Patient Name</td>
+      <td>Patient</td>
+    </tr>
+    <tr>
+      <td>(2)</td>
+      <td>Sex</td>
+      <td>Patient</td>
+    </tr>
+    <tr>
+      <td>(3)</td>
+      <td>Date of birth</td>
+      <td>Patient</td>
+    </tr>
+    <tr>
+      <td>(4)</td>
+      <td>Race</td>
+      <td>Patient</td>
+    </tr>
+    <tr>
+      <td>(5)</td>
+      <td>Ethnicity</td>
+      <td>Patient</td>
+    </tr>
+    <tr>
+      <td>(6)</td>
+      <td>Preferred language</td>
+      <td>Patient</td>
+    </tr>
+    <tr>
+      <td>(7)</td>
+      <td>Smoking status</td>
+      <td>Observation</td>
+    </tr>
+    <tr>
+      <td>(8)</td>
+      <td>Problems</td>
+      <td>Condition</td>
+    </tr>
+    <tr>
+      <td>(9)</td>
+      <td>Medications</td>
+      <td>Medication, MedicationStatement, MedicationOrder</td>
+    </tr>
+    <tr>
+      <td>(10)</td>
+      <td>Medication allergies</td>
+      <td>AllergyIntolerance</td>
+    </tr>
+    <tr>
+      <td>(11)</td>
+      <td>Laboratory test(s)</td>
+      <td>Observation, DiagnosticReport</td>
+    </tr>
+    <tr>
+      <td>(12)</td>
+      <td>Laboratory value(s)/result(s)</td>
+      <td>Observation, DiagnosticReport</td>
+    </tr>
+    <tr>
+      <td>(13)</td>
+      <td>Vital signs</td>
+      <td>Observation</td>
+    </tr>
+    <tr>
+      <td>(14)</td>
+      <td>(no longer required)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>(15)</td>
+      <td>Procedures</td>
+      <td>Procedure</td>
+    </tr>
+    <tr>
+      <td>(16)</td>
+      <td>Care team member(s)</td>
+      <td>CarePlan</td>
+    </tr>
+    <tr>
+      <td>(17)</td>
+      <td>Immunizations</td>
+      <td>Immunization</td>
+    </tr>
+    <tr>
+      <td>(18)</td>
+      <td>Unique device identifier(s) for a patient’s implantable device(s)</td>
+      <td>Device</td>
+    </tr>
+    <tr>
+      <td>(19)</td>
+      <td>Assessment and plan of treatment</td>
+      <td>CarePlan</td>
+    </tr>
+    <tr>
+      <td>(20)</td>
+      <td>Goals</td>
+      <td>Goal</td>
+    </tr>
+    <tr>
+      <td>(21)</td>
+      <td>Health concerns</td>
+      <td>Condition</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Argonaut Profiles for each of the data element queries is listed below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that <strong>MUST</strong> be present. Requirements and guidance are given in the profile narrative summary. A formal hierarchical table that presents a <a href="http://hl7.org/fhir/formats.html">logical view</a> of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.</p>
+
+<ul>
+  <li><a href="StructureDefinition-argo-allergyintolerance.html">Argonaut AllergyIntolerance Profile</a></li>
+  <li><a href="StructureDefinition-argo-careplan.html">Argonaut CarePlan Profile</a></li>
+  <li><a href="StructureDefinition-argo-careteam.html">Argonaut CareTeam Profile</a></li>
+  <li><a href="StructureDefinition-argo-condition.html">Argonaut Condition Profile</a></li>
+  <li><a href="StructureDefinition-argo-device.html">Argonaut Device Profile</a></li>
+  <li>Laboratory Tests and Results
+    <ul>
+      <li><a href="StructureDefinition-argo-diagnosticreport.html">Argonaut DiagnosticReport Profile</a></li>
+      <li><a href="StructureDefinition-argo-observationresults.html">Argonaut Observation Results Profile</a></li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-argo-goal.html">Argonaut Goal Profile</a></li>
+  <li><a href="StructureDefinition-argo-immunization.html">Argonaut Immunization Profile</a></li>
+  <li>Medications
+    <ul>
+      <li><a href="StructureDefinition-argo-medication.html">Argonaut Medication Profile</a></li>
+      <li><a href="StructureDefinition-argo-medicationorder.html">Argonaut MedicationOrder Profile</a></li>
+      <li><a href="StructureDefinition-argo-medicationstatement.html">Argonaut MedicationStatement Profile</a></li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-argo-patient.html">Argonaut Patient Profile</a></li>
+  <li><a href="StructureDefinition-argo-procedure.html">Argonaut Procedure Profile</a></li>
+  <li><a href="StructureDefinition-argo-smokingstatus.html">Argonaut Smoking Status Observation Profile</a></li>
+  <li><a href="StructureDefinition-argo-vitalsigns.html">Argonaut Vital Signs Observation Profile</a></li>
+</ul>
+
+<p><em>Note on Searches based on a date or date range:</em></p>
+
+<ol>
+  <li>Allergies, Immunizations, Medications, Problems and Health Concerns, UDI, Smoking Status do not require a date range search since a system should return all relevant resources.</li>
+  <li>Date range search requirements are included in the Quick Start section for the following resources - Vital Signs, Laboratory Results, Goals, Procedures, and Assessment and Plan of Treatment.</li>
+</ol>
+
+<h4 id="document-query">Document Query</h4>
+
+<hr />
+
+<p>The Argonaut Document Query Implementation guide defines how a provider or patient can retrieve a patient’s existing clinical document - specifically, transition of care and patient summary C-CDA <a href="https://en.wikipedia.org/wiki/Continuity_of_Care_Document">CCD documents</a> required for Meaningful Use.  However other document formats, such as PDF, can be retrieved too. These are exposed in FHIR using a <a href="http://hl7.org/fhir/DSTU2/documentreference.html">DocumentReference</a> Resource:  to index/search for them. This guide provides the minimal requirements to fetch a URL link to either a) patient’s existing documents which have been indexed or b) a “virtual” documents such as a CCD that could be created “on-demand”.</p>
+
+<p>The Document itself can be subsequently retrieved using the link provided from the DocumentQuery search results. The link could be, for example, a <a href="http://hl7.org/fhir/http.html">FHIR endpoint</a> (FHIR STU3) to a <a href="http://hl7.org/fhir/DSTU2/binary.html">Binary Resource</a>  or some other document repository. The details of how to retrieve the document are not covered in this guide.</p>
+
+<p><strong>Use Case</strong></p>
+
+<p>Patient or Provider search for a patient’s Documents</p>
+
+<p><strong>Example Search</strong></p>
+
+<ul>
+  <li>Locate a patient’s CCD document from a recent or current encounter</li>
+</ul>
+
+<p><strong>Assumptions and Preconditions</strong></p>
+
+<ul>
+  <li>Initial search for a reference to a document instead of documents itself (retrieval of actual document is a two-step process)</li>
+  <li>Documents may or may not already exist and be indexed prior to the search</li>
+  <li>Document references may be created “on-demand” when requested</li>
+  <li>Documents may be created “on-demand” when requested</li>
+  <li>Details of document retrieval is out of scope</li>
+</ul>
+
+<p><strong>Requirements</strong></p>
+
+<p>The <a href="StructureDefinition-argo-documentreference.html">Argonaut DocumentReference Profile</a> defines the minimum mandatory elements, extensions and terminology requirements that <strong>MUST</strong> be present.  Requirements and Guidance are given in a simple narrative summary. A formal hierarchical table
+that presents a [logical view:  of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.</p>
+
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+

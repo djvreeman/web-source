@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="ethnicity"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ethnicity</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut/SearchParameter/ethnicity">http://fhir.org/guides/argonaut/SearchParameter/ethnicity</a></p><p><b>name</b>: ArgonautEthnicity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>publisher</b>: Argonaut Project</p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Telecom</b></td></tr><tr><td>*</td><td>http://argonautwiki.hl7.org</td></tr></table><p><b>date</b>: 22/12/2016</p><p><b>code</b>: ethnicity</p><p><b>base</b>: Patient</p><p><b>type</b>: token</p><p><b>description</b>: Returns patients with an ethnicity extension matching the specified code.</p><p><b>xpath</b>: f:Patient/f:extension[@url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity']/f:extension[@url='ombCategory' or @url='detailed']</p><p><b>xpathUsage</b>: normal</p></div>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/SearchParameter/ethnicity"/>
+  <name value="ArgonautEthnicity"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+    </telecom>
+  </contact>
+  <date value="2016-12-22"/>
+  <code value="ethnicity"/>
+  <base value="Patient"/>
+  <type value="token"/>
+  <description value="Returns patients with an ethnicity extension matching the specified code."/>
+  <xpath value="f:Patient/f:extension[@url=&#39;http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity&#39;]/f:extension[@url=&#39;ombCategory&#39; or @url=&#39;detailed&#39;]"/>
+  <xpathUsage value="normal"/>
+</SearchParameter>

@@ -1,0 +1,68 @@
+{
+  "resourceType": "Bundle",
+  "id": "argo-ms3",
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://fhir-open-api-dstu2.smarthealthit.org/MedicationStatement/?_id=argo-ms2&_include=MedicationStatement:medication"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://fhir-open-api-dstu2.smarthealthit.org/MedicationStatement/argo-ms2",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "argo-ms2",
+        "meta": {
+          "versionId": "213289",
+          "lastUpdated": "2016-11-28T06:03:26.318+00:00",
+          "profile": [
+            "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement"
+          ]
+        },
+        "patient": {
+          "reference": "Patient/peter-chalmers",
+          "display": "Peter Chalmers"
+        },
+        "dateAsserted": "2016-05-01T16:13:03Z",
+        "status": "active",
+        "effectivePeriod": {
+          "start": "2010-05-01"
+        },
+        "medicationReference": {
+          "reference": "Medication/argo-med1",
+          "display": "lisinopril oral 10 mg"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med1",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "argo-med1",
+        "meta": {
+          "versionId": "213296",
+          "lastUpdated": "2016-11-28T06:04:11.469+00:00"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "206765",
+              "display": "Lisinopril 10 MG Oral Tablet [Prinivil]"
+            }
+          ],
+          "text": "lisinopril oral 10 mg"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

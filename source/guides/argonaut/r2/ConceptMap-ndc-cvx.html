@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<p>
+Formats: <a href="ConceptMap-ndc-cvx.xml.html">XML</a>, <a href="ConceptMap-ndc-cvx.json.html">JSON</a>, <a href="ConceptMap-ndc-cvx.ttl.html">Turtle</a>
+</p>
+
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut NDC to CVX Code Mapping (http://fhir.org/guides/argonaut/ConceptMap/ndc-cvx)</h2><p>Mapping from <a href="ValueSet-ndc-vaccine-codes.html">http://fhir.org/guides/argonaut/ValueSet/ndc-vaccine-codes</a> to <a href="http://hl7.org/fhir/DSTU2/daf/valueset-daf-cvx.html">http://hl7.org/fhir/ValueSet/daf-cvx</a></p><p>ACTIVE. Published on 06/06/2016 12:00:00 AM by Argonaut Project. </p><div><p>Unit of Use <a href="https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp">NDC code</a> mapping  to the <a href="https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">CVX Vaccine codes</a>.  Note: source = NDC and target = CVX</p>
+</div><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Equivalence</b></td><td><b>Destination Code</b></td></tr><tr><td>49281-0589-58</td><td>wider</td><td>114 (meningococcal MCV4P)</td></tr><tr><td>49281-0623-78</td><td>wider</td><td>158 (influenza, injectable, quadrivalent)</td></tr><tr><td>49281-0515-00</td><td>wider</td><td>161 (Influenza, injectable,quadrivalent, preservative free, pediatric)</td></tr><tr><td>49281-0415-88</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0415-58</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>33332-0115-11</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>33332-0015-02</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>66019-0302-01</td><td>wider</td><td>149 (influenza, live, intranasal, quadrivalent)</td></tr><tr><td>42874-0015-01</td><td>wider</td><td>155 (influenza, recombinant, injectable, preservative free)</td></tr><tr><td>66521-0118-12</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>66521-0118-11</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>58160-0883-41</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>66521-0000-11</td><td>wider</td><td>168</td></tr><tr><td>69401-0000-01</td><td>wider</td><td>25 (typhoid, oral)</td></tr><tr><td>66019-0301-01</td><td>wider</td><td>149 (influenza, live, intranasal, quadrivalent)</td></tr><tr><td>33332-0014-02</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>33332-0114-11</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>63851-0613-11</td><td>wider</td><td>153 (Influenza, injectable, MDCK, preservative free)</td></tr><tr><td>66521-0117-11</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>66521-0117-12</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>00006-4093-01</td><td>wider</td><td>8</td></tr><tr><td>00006-4094-01</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>00006-4095-01</td><td>wider</td><td>83 (Hep A, ped/adol, 2 dose)</td></tr><tr><td>00006-4096-01</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>00006-4963-01</td><td>wider</td><td>121 (zoster)</td></tr><tr><td>00006-4963-01</td><td>wider</td><td>121 (zoster)</td></tr><tr><td>42874-0014-01</td><td>wider</td><td>155 (influenza, recombinant, injectable, preservative free)</td></tr><tr><td>49281-0414-88</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0395-88</td><td>wider</td><td>135 (Influenza, high dose seasonal)</td></tr><tr><td>49281-0709-48</td><td>wider</td><td>144 (influenza, seasonal, intradermal, preservative free)</td></tr><tr><td>58160-0881-41</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>58160-0809-01</td><td>wider</td><td>148 (Meningococcal C/Y-HIB PRP)</td></tr><tr><td>62577-0613-11</td><td>wider</td><td>153 (Influenza, injectable, MDCK, preservative free)</td></tr><tr><td>19515-0893-02</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0621-78</td><td>wider</td><td>158 (influenza, injectable, quadrivalent)</td></tr><tr><td>00005-0100-01</td><td>wider</td><td>162 (meningococcal B, recombinant)</td></tr><tr><td>00005-0100-01</td><td>wider</td><td>162 (meningococcal B, recombinant)</td></tr><tr><td>00005-0100-01</td><td>wider</td><td>162 (meningococcal B, recombinant)</td></tr><tr><td>00006-4047-01</td><td>wider</td><td>116 (rotavirus, pentavalent)</td></tr><tr><td>00006-4109-01</td><td>wider</td><td>62 (HPV, quadrivalent)</td></tr><tr><td>62577-0613-11</td><td>wider</td><td>153 (Influenza, injectable, MDCK, preservative free)</td></tr><tr><td>00006-4121-01</td><td>wider</td><td>165</td></tr><tr><td>00006-4119-01</td><td>wider</td><td>165</td></tr><tr><td>00006-4119-01</td><td>wider</td><td>165</td></tr><tr><td>63851-0511-11</td><td>wider</td><td>18 (rabies, intramuscular injection)</td></tr><tr><td>49281-0562-58</td><td>wider</td><td>130 (DTaP-IPV)</td></tr><tr><td>46028-0114-11</td><td>wider</td><td>163 (meningococcal B, OMV)</td></tr><tr><td>46028-0114-11</td><td>wider</td><td>163 (meningococcal B, OMV)</td></tr><tr><td>00006-4171-01</td><td>wider</td><td>94 (MMRV)</td></tr><tr><td>13533-0131-00</td><td>wider</td><td>9</td></tr><tr><td>49281-0396-78</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0397-88</td><td>wider</td><td>135 (Influenza, high dose seasonal)</td></tr><tr><td>62577-0614-11</td><td>wider</td><td>153 (Influenza, injectable, MDCK, preservative free)</td></tr><tr><td>58160-0903-41</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>19515-0898-01</td><td>wider</td><td>158 (influenza, injectable, quadrivalent)</td></tr><tr><td>19515-0901-41</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0393-88</td><td>wider</td><td>135 (Influenza, high dose seasonal)</td></tr><tr><td>58160-0810-43</td><td>wider</td><td>20 (DTaP)</td></tr><tr><td>58160-0810-01</td><td>wider</td><td>20 (DTaP)</td></tr><tr><td>49281-0790-38</td><td>wider</td><td>101 (typhoid, ViCPs)</td></tr><tr><td>49281-0790-88</td><td>wider</td><td>101 (typhoid, ViCPs)</td></tr><tr><td>49281-0640-15</td><td>wider</td><td>127 (Novel influenza-H1N1-09)</td></tr><tr><td>49281-0650-10</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>49281-0650-90</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>49281-0650-25</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>49281-0650-70</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>49281-0650-50</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>49281-0707-48</td><td>wider</td><td>144 (influenza, seasonal, intradermal, preservative free)</td></tr><tr><td>66019-0110-01</td><td>wider</td><td>111 (influenza, live, intranasal)</td></tr><tr><td>00006-4681-01</td><td>wider</td><td>3</td></tr><tr><td>49281-0215-58</td><td>wider</td><td>113 (Td (adult) preservative free)</td></tr><tr><td>49281-0215-88</td><td>wider</td><td>113 (Td (adult) preservative free)</td></tr><tr><td>46028-0218-11</td><td>wider</td><td>136 (Meningococcal MCV4O)</td></tr><tr><td>49281-0387-65</td><td>wider</td><td>135 (Influenza, high dose seasonal)</td></tr><tr><td>49281-0386-15</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0010-10</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0010-25</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0010-50</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>54868-0980-00</td><td>wider</td><td>3</td></tr><tr><td>58160-0830-43</td><td>wider</td><td>118 (HPV, bivalent)</td></tr><tr><td>58160-0830-05</td><td>wider</td><td>118 (HPV, bivalent)</td></tr><tr><td>00005-1971-01</td><td>wider</td><td>133 (Pneumococcal conjugate PCV 13)</td></tr><tr><td>00005-1971-01</td><td>wider</td><td>133 (Pneumococcal conjugate PCV 13)</td></tr><tr><td>00005-1971-01</td><td>wider</td><td>133 (Pneumococcal conjugate PCV 13)</td></tr><tr><td>17478-0131-00</td><td>wider</td><td>9</td></tr><tr><td>58160-0812-43</td><td>wider</td><td>130 (DTaP-IPV)</td></tr><tr><td>58160-0812-01</td><td>wider</td><td>130 (DTaP-IPV)</td></tr><tr><td>66019-0108-01</td><td>wider</td><td>111 (influenza, live, intranasal)</td></tr><tr><td>00006-4898-01</td><td>wider</td><td>51 (Hib-Hep B)</td></tr><tr><td>58160-0809-01</td><td>wider</td><td>148 (Meningococcal C/Y-HIB PRP)</td></tr><tr><td>63851-0612-11</td><td>wider</td><td>153 (Influenza, injectable, MDCK, preservative free)</td></tr><tr><td>00006-4992-01</td><td>wider</td><td>44 (Hep B, dialysis)</td></tr><tr><td>00006-4981-01</td><td>wider</td><td>8</td></tr><tr><td>00006-4980-00</td><td>wider</td><td>8</td></tr><tr><td>00006-4093-01</td><td>wider</td><td>8</td></tr><tr><td>00006-4094-01</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>00006-4109-01</td><td>wider</td><td>62 (HPV, quadrivalent)</td></tr><tr><td>66521-0112-02</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>66521-0112-10</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>66019-0107-01</td><td>wider</td><td>111 (influenza, live, intranasal)</td></tr><tr><td>49281-0225-58</td><td>wider</td><td>28 (DT (pediatric))</td></tr><tr><td>49281-0705-55</td><td>wider</td><td>144 (influenza, seasonal, intradermal, preservative free)</td></tr><tr><td>42515-0001-00</td><td>wider</td><td>134 (Japanese Encephalitis IM)</td></tr><tr><td>58160-0879-41</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>58160-0880-41</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>58160-0820-01</td><td>wider</td><td>8</td></tr><tr><td>58160-0820-43</td><td>wider</td><td>8</td></tr><tr><td>58160-0821-01</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>58160-0821-43</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>58160-0821-05</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>42874-0012-01</td><td>wider</td><td>155 (influenza, recombinant, injectable, preservative free)</td></tr><tr><td>49281-0278-10</td><td>wider</td><td>28 (DT (pediatric))</td></tr><tr><td>66019-0109-01</td><td>wider</td><td>111 (influenza, live, intranasal)</td></tr><tr><td>19515-0890-02</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>19515-0889-02</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>58160-0900-41</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0860-78</td><td>wider</td><td>10 (IPV)</td></tr><tr><td>49281-0860-88</td><td>wider</td><td>10 (IPV)</td></tr><tr><td>49281-0389-65</td><td>wider</td><td>135 (Influenza, high dose seasonal)</td></tr><tr><td>49281-0388-15</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0011-10</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0011-50</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0703-55</td><td>wider</td><td>144 (influenza, seasonal, intradermal, preservative free)</td></tr><tr><td>49281-0111-25</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>66521-0200-10</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>66521-0200-02</td><td>wider</td><td>127 (Novel influenza-H1N1-09)</td></tr><tr><td>49281-0298-10</td><td>wider</td><td>20 (DTaP)</td></tr><tr><td>58160-0806-01</td><td>wider</td><td>48 (Hib (PRP-T))</td></tr><tr><td>33332-0013-02</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>33332-0113-11</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0391-65</td><td>wider</td><td>135 (Influenza, high dose seasonal)</td></tr><tr><td>49281-0012-50</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0012-10</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0112-25</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0390-15</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>00006-4897-01</td><td>wider</td><td>49 (Hib (PRP-OMP))</td></tr><tr><td>49281-0291-83</td><td>wider</td><td>113 (Td (adult) preservative free)</td></tr><tr><td>49281-0291-10</td><td>wider</td><td>113 (Td (adult) preservative free)</td></tr><tr><td>49281-0413-88</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0413-58</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0513-00</td><td>wider</td><td>161 (Influenza, injectable,quadrivalent, preservative free, pediatric)</td></tr><tr><td>66521-0113-02</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>66521-0113-10</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>00005-1970-49</td><td>wider</td><td>100 (pneumococcal conjugate PCV 7)</td></tr><tr><td>00006-4047-01</td><td>wider</td><td>116 (rotavirus, pentavalent)</td></tr><tr><td>58160-0811-43</td><td>wider</td><td>110 (DTaP-Hep B-IPV)</td></tr><tr><td>58160-0811-41</td><td>wider</td><td>110 (DTaP-Hep B-IPV)</td></tr><tr><td>00006-4827-01</td><td>wider</td><td>21 (varicella)</td></tr><tr><td>00006-4826-01</td><td>wider</td><td>21 (varicella)</td></tr><tr><td>58160-0842-41</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>58160-0842-01</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>58160-0842-43</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>58160-0842-05</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>66019-0300-01</td><td>wider</td><td>149 (influenza, live, intranasal, quadrivalent)</td></tr><tr><td>49281-0589-58</td><td>wider</td><td>114 (meningococcal MCV4P)</td></tr><tr><td>00006-4095-01</td><td>wider</td><td>83 (Hep A, ped/adol, 2 dose)</td></tr><tr><td>00006-4096-01</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>00006-4831-01</td><td>wider</td><td>83 (Hep A, ped/adol, 2 dose)</td></tr><tr><td>63851-0511-11</td><td>wider</td><td>18 (rabies, intramuscular injection)</td></tr><tr><td>66019-0200-01</td><td>wider</td><td>125 (Novel Influenza-H1N1-09, nasal)</td></tr><tr><td>14362-0111-03</td><td>wider</td><td>9</td></tr><tr><td>33332-0519-01</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>33332-0519-25</td><td>wider</td><td>126 (Novel influenza-H1N1-09, preservative-free)</td></tr><tr><td>33332-0629-10</td><td>wider</td><td>127 (Novel influenza-H1N1-09)</td></tr><tr><td>58160-0825-43</td><td>wider</td><td>83 (Hep A, ped/adol, 2 dose)</td></tr><tr><td>58160-0825-01</td><td>wider</td><td>83 (Hep A, ped/adol, 2 dose)</td></tr><tr><td>58160-0826-43</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>58160-0826-05</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>58160-0826-01</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>33332-0010-01</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>33332-0110-10</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>66521-0115-10</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>66521-0115-02</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>00006-4133-01</td><td>wider</td><td>9</td></tr><tr><td>54868-4320-09</td><td>wider</td><td>33 (pneumococcal polysaccharide PPV23)</td></tr><tr><td>54868-3339-09</td><td>wider</td><td>33 (pneumococcal polysaccharide PPV23)</td></tr><tr><td>00052-0603-01</td><td>wider</td><td>19 (BCG)</td></tr><tr><td>64678-0211-05</td><td>wider</td><td>24 (anthrax)</td></tr><tr><td>00006-4739-01</td><td>wider</td><td>33 (pneumococcal polysaccharide PPV23)</td></tr><tr><td>00006-4943-01</td><td>wider</td><td>33 (pneumococcal polysaccharide PPV23)</td></tr><tr><td>49281-0013-58</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0013-88</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0392-78</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0113-00</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0820-10</td><td>wider</td><td>35 (tetanus toxoid, adsorbed)</td></tr><tr><td>49281-0800-83</td><td>wider</td><td>35 (tetanus toxoid, adsorbed)</td></tr><tr><td>49281-0400-88</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>49281-0286-58</td><td>wider</td><td>106 (DTaP, 5 pertussis antigens)</td></tr><tr><td>49281-0286-58</td><td>wider</td><td>106 (DTaP, 5 pertussis antigens)</td></tr><tr><td>49281-0286-58</td><td>wider</td><td>106 (DTaP, 5 pertussis antigens)</td></tr><tr><td>58160-0815-41</td><td>wider</td><td>104 (Hep A-Hep B)</td></tr><tr><td>58160-0815-43</td><td>wider</td><td>104 (Hep A-Hep B)</td></tr><tr><td>58160-0815-05</td><td>wider</td><td>104 (Hep A-Hep B)</td></tr><tr><td>58160-0815-43</td><td>wider</td><td>104 (Hep A-Hep B)</td></tr><tr><td>58160-0815-01</td><td>wider</td><td>104 (Hep A-Hep B)</td></tr><tr><td>66521-0114-10</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>76420-0482-01</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>19515-0895-01</td><td>wider</td><td>158 (influenza, injectable, quadrivalent)</td></tr><tr><td>00006-4999-01</td><td>wider</td><td>94 (MMRV)</td></tr><tr><td>49281-0545-15</td><td>wider</td><td>120 (DTaP-Hib-IPV)</td></tr><tr><td>51285-0174-02</td><td>wider</td><td>143 (Adenovirus types 4 and 7)</td></tr><tr><td>49281-0248-58</td><td>wider</td><td>18 (rabies, intramuscular injection)</td></tr><tr><td>49281-0487-58</td><td>wider</td><td>32 (meningococcal MPSV4)</td></tr><tr><td>49281-0915-58</td><td>wider</td><td>37 (yellow fever)</td></tr><tr><td>49281-0547-58</td><td>wider</td><td>48 (Hib (PRP-T))</td></tr><tr><td>58160-0851-01</td><td>wider</td><td>119 (rotavirus, monovalent)</td></tr><tr><td>49281-0915-68</td><td>wider</td><td>37 (yellow fever)</td></tr><tr><td>49281-0488-78</td><td>wider</td><td>32 (meningococcal MPSV4)</td></tr><tr><td>46028-0219-11</td><td>wider</td><td>136 (Meningococcal MCV4O)</td></tr><tr><td>51285-0175-02</td><td>wider</td><td>143 (Adenovirus types 4 and 7)</td></tr><tr><td>49281-0560-05</td><td>wider</td><td>120 (DTaP-Hib-IPV)</td></tr><tr><td>49281-0400-58</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>49281-0400-58</td><td>wider</td><td>115 (Tdap)</td></tr><tr><td>42874-0013-01</td><td>wider</td><td>155 (influenza, recombinant, injectable, preservative free)</td></tr><tr><td>66521-0116-11</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>66521-0116-12</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>00006-4045-01</td><td>wider</td><td>62 (HPV, quadrivalent)</td></tr><tr><td>00006-4045-01</td><td>wider</td><td>62 (HPV, quadrivalent)</td></tr><tr><td>00006-4995-01</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>00006-4995-01</td><td>wider</td><td>43 (Hep B, adult)</td></tr><tr><td>00006-4841-01</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>00006-4841-01</td><td>wider</td><td>52 (Hep A, adult)</td></tr><tr><td>58160-0804-01</td><td>wider</td><td>160 (Influenza A monovalent (H5N1), ADJUVANTED-2013)</td></tr><tr><td>58160-0802-02</td><td>wider</td><td>160 (Influenza A monovalent (H5N1), ADJUVANTED-2013)</td></tr><tr><td>58160-0901-41</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>00006-4837-01</td><td>wider</td><td>33 (pneumococcal polysaccharide PPV23)</td></tr><tr><td>19515-0891-01</td><td>wider</td><td>158 (influenza, injectable, quadrivalent)</td></tr><tr><td>19515-0893-02</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>19515-0894-41</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr><tr><td>49281-0514-00</td><td>wider</td><td>161 (Influenza, injectable,quadrivalent, preservative free, pediatric)</td></tr><tr><td>49281-0394-78</td><td>wider</td><td>141 (Influenza, seasonal, injectable)</td></tr><tr><td>49281-0014-88</td><td>wider</td><td>140 (Influenza, seasonal, injectable, preservative free)</td></tr><tr><td>49281-0414-58</td><td>wider</td><td>150 (influenza, injectable, quadrivalent, preservative free)</td></tr></table></div>
+
+<p>
+Formats: <a href="ConceptMap-ndc-cvx.xml.html">XML</a>, <a href="ConceptMap-ndc-cvx.json.html">JSON</a>, <a href="ConceptMap-ndc-cvx.ttl.html">Turtle</a>
+</p>
+
+<p style="color: maroon; font-weight: bold">yet to be done: concept map summary</p>
+
+<p style="color: maroon; font-weight: bold">yet to be done: list of all places where concept map is used</p>
+
+<p style="color: maroon; font-weight: bold">yet to be done: table presentation of the concept map</p>
+
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+

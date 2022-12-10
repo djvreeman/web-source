@@ -1,0 +1,420 @@
+  <!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+
+<!-- Argonaut -->
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+
+<ul class="nav nav-tabs"><li><a href="StructureDefinition-argo-allergyintolerance.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="StructureDefinition-argo-allergyintolerance-mappings.html">Mappings</a></li>
+    <li><a href="StructureDefinition-argo-allergyintolerance.xml.html">XML</a></li>
+	<li><a href="StructureDefinition-argo-allergyintolerance.json.html">JSON</a></li>
+	<li><a href="StructureDefinition-argo-allergyintolerance.ttl.html">Turtle</a></li>
+</ul>
+
+
+<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition:Argonaut AllergyIntolerance Profile - Detailed Descriptions <a title="link to here" class="self-link" href="StructureDefinition-argo-allergyintolerance-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
+
+<p>Definitions for the StructureDefinition-argo-allergyintolerance Profile.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile"> </a><a name="AllergyIntolerance"> </a><b>AllergyIntolerance(argoprofile)</b></td></tr>
+  <tr><td>Definition</td><td><p>Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Allergy, Intolerance, Adverse Reaction</td></tr>
+  <tr><td>Comments</td><td><p>Substances include, but are not limited to: a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.id"> </a><a name="AllergyIntolerance.id"> </a><b>AllergyIntolerance.id</b></td></tr>
+  <tr><td>Definition</td><td><p>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">id</a></td></tr>
+  <tr><td>Comments</td><td><p>The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.meta"> </a><a name="AllergyIntolerance.meta"> </a><b>AllergyIntolerance.meta</b></td></tr>
+  <tr><td>Definition</td><td><p>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/resource.html#meta">Meta</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.implicitRules"> </a><a name="AllergyIntolerance.implicitRules"> </a><b>AllergyIntolerance.implicitRules</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.language"> </a><a name="AllergyIntolerance.language"> </a><b>AllergyIntolerance.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The base language in which the resource is written.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>A human language.<br/>The codes SHALL be taken from  <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.text"> </a><a name="AllergyIntolerance.text"> </a><b>AllergyIntolerance.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: dom-1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/narrative.html">Narrative</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>narrative, html, xhtml, display</td></tr>
+  <tr><td>Comments</td><td><p>Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.contained"> </a><a name="AllergyIntolerance.contained"> </a><b>AllergyIntolerance.contained</b></td></tr>
+  <tr><td>Definition</td><td><p>These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/resource.html">Resource</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>inline resources, anonymous resources, contained resources</td></tr>
+  <tr><td>Comments</td><td><p>This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.extension"> </a><a name="AllergyIntolerance.extension"> </a><b>AllergyIntolerance.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.modifierExtension"> </a><a name="AllergyIntolerance.modifierExtension"> </a><b>AllergyIntolerance.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.identifier"> </a><a name="AllergyIntolerance.identifier"> </a><b>AllergyIntolerance.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>This records identifiers associated with this allergy/intolerance concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="http://hl7.org/fhir/DSTU2/resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.onset"> </a><a name="AllergyIntolerance.onset"> </a><b>AllergyIntolerance.onset</b></td></tr>
+  <tr><td>Definition</td><td><p>Record of the date and/or time of the onset of the Allergy or Intolerance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.recordedDate"> </a><a name="AllergyIntolerance.recordedDate"> </a><b>AllergyIntolerance.recordedDate</b></td></tr>
+  <tr><td>Definition</td><td><p>Date when the sensitivity was recorded.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.recorder"> </a><a name="AllergyIntolerance.recorder"> </a><b>AllergyIntolerance.recorder</b></td></tr>
+  <tr><td>Definition</td><td><p>Individual who recorded the record and takes responsibility for its conten.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td>Choice of: <a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/practitioner.html" title="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>), <a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/patient.html" title="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>)</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Author</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.patient"> </a><a name="AllergyIntolerance.patient"> </a><b>AllergyIntolerance.patient</b></td></tr>
+  <tr><td>Definition</td><td><p>The patient who has the allergy or intolerance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="StructureDefinition-argo-patient.html" title="http://fhir.org/guides/argonaut/StructureDefinition/argo-patient">Argonaut Patient Profile</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Patient</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reporter"> </a><a name="AllergyIntolerance.reporter"> </a><b>AllergyIntolerance.reporter</b></td></tr>
+  <tr><td>Definition</td><td><p>The source of the information about the allergy that is recorded.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td>Choice of: <a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/patient.html" title="http://hl7.org/fhir/StructureDefinition/Patient">Patient</a>), <a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/relatedperson.html" title="http://hl7.org/fhir/StructureDefinition/RelatedPerson">RelatedPerson</a>), <a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/practitioner.html" title="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>)</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Source, Informant</td></tr>
+  <tr><td>Comments</td><td><p>The recorder takes repsonsibility for the content, but can reference the source from where they got it.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.substance"> </a><a name="AllergyIntolerance.substance"> </a><b>AllergyIntolerance.substance</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of a substance, or a class of substances, that is considered to be responsible for the adverse reaction risk.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Type of substance responsible for reaction.<br/>The codes SHALL be taken from <a href="ValueSet-substance.html">Argonaut Substance-Reactant for Intolerance and Negation Codes</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Agent</td></tr>
+  <tr><td>Comments</td><td><p>It is strongly recommended that the substance be coded with a terminology, where possible. For example, some terminologies used include RxNorm, SNOMED CT, DM+D, NDFRT, ICD-9, IDC-10, UNI, ATC and CPT. Plain text should only be used if there is no appropriate terminology available. Additional details about a substance can be specified in the text.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.status"> </a><a name="AllergyIntolerance.status"> </a><b>AllergyIntolerance.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified Substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>null<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/valueset-allergy-intolerance-status.html">AllergyIntoleranceStatus</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>State</td></tr>
+  <tr><td>Comments</td><td><p>Decision support would typically raise alerts for 'Unconfirmed', 'Confirmed', and 'Resolved' and ignore a 'Refuted' reaction. In particular, 'Refuted' may be useful for reconciliation of the Adverse Reaction List. Some implementations may choose to make this field mandatory.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.criticality"> </a><a name="AllergyIntolerance.criticality"> </a><b>AllergyIntolerance.criticality</b></td></tr>
+  <tr><td>Definition</td><td><p>Estimate of the potential clinical harm, or seriousness, of the reaction to the identified Substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Estimate of the potential clinical harm, or seriousness, of a reaction to an identified Substance.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/valueset-allergy-intolerance-criticality.html">AllergyIntoleranceCriticality</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Severity, Seriousness, Contra-indication, Risk</td></tr>
+  <tr><td>Comments</td><td><p>The default criticality value for any propensity to an adverse reaction should be 'Low Risk', indicating at the very least a relative contraindication to deliberate or voluntary exposure to the Substance. 'High Risk' is flagged if the clinician has identified a propensity for a more serious or potentially life-threatening reaction, such as anaphylaxis, and implies an absolute contraindication to deliberate or voluntary exposure to the substance. If this element is missing, the criticality is unknown (though it may be known elsewhere).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.type"> </a><a name="AllergyIntolerance.type"> </a><b>AllergyIntolerance.type</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the underlying physiological mechanism for the reaction risk.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Identification of the underlying physiological mechanism for a Reaction Risk.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/valueset-allergy-intolerance-type.html">AllergyIntoleranceType</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Category, Class</td></tr>
+  <tr><td>Comments</td><td><p>Allergic (typically immune-mediated) reactions have been traditionally regarded as an indicator for potential escalation to significant future risk. Contemporary knowledge suggests that some reactions previously thought to be immune-mediated are, in fact, non-immune, but in some cases can still pose a life threatening risk. It is acknowledged that many clinicians may not be in a position to distinguish the mechanism of a particular reaction. Often the term &quot;allergy&quot; is used rather generically and may overlap with the use of &quot;intolerance&quot; - in practice the boundaries between these two concepts may not be well-defined or understood. This data element is included nevertheless, because many legacy systems have captured this attribute. Immunologic testing may provide supporting evidence for the basis of the reaction and the causative substance, but no tests are 100% sensitive or specific for sensitivity to a particular substance. If, as is commonly the case, it is unclear whether the reaction is due to an allergy or an intolerance, then the type element should be omitted from the resource.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.category"> </a><a name="AllergyIntolerance.category"> </a><b>AllergyIntolerance.category</b></td></tr>
+  <tr><td>Definition</td><td><p>Category of the identified Substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Category of an identified Substance.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/valueset-allergy-intolerance-category.html">AllergyIntoleranceCategory</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Category, Type, Reaction Type, Class</td></tr>
+  <tr><td>Comments</td><td><p>This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the Substance where coding systems are used, and is effectively redundant in that situation.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.lastOccurence"> </a><a name="AllergyIntolerance.lastOccurence"> </a><b>AllergyIntolerance.lastOccurence</b></td></tr>
+  <tr><td>Definition</td><td><p>Represents the date and/or time of the last known occurrence of a reaction event.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td>Comments</td><td><p>This date may be replicated by one of the Onset of Reaction dates. Where a textual representation of the date of last occurrence is required e.g. 'In Childhood, '10 years ago' the Comment element should be used.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.note"> </a><a name="AllergyIntolerance.note"> </a><b>AllergyIntolerance.note</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#Annotation">Annotation</a></td></tr>
+  <tr><td>Comments</td><td><p>For example: including reason for flagging a seriousness of 'High Risk'; and instructions related to future exposure or administration of the Substance, such as administration within an Intensive Care Unit or under corticosteroid cover. The notes should be related to an allergy or intolerance as a condition in general and not related to any particular episode of it. For episode notes and descriptions, use AllergyIntolerance.event.description and  AllergyIntolerance.event.notes.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction"> </a><a name="AllergyIntolerance.reaction"> </a><b>AllergyIntolerance.reaction</b></td></tr>
+  <tr><td>Definition</td><td><p>Details about each adverse reaction event linked to exposure to the identified Substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/backboneelement.html">BackboneElement</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.id"> </a><a name="AllergyIntolerance.reaction.id"> </a><b>AllergyIntolerance.reaction.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.extension"> </a><a name="AllergyIntolerance.reaction.extension"> </a><b>AllergyIntolerance.reaction.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.modifierExtension"> </a><a name="AllergyIntolerance.reaction.modifierExtension"> </a><b>AllergyIntolerance.reaction.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.substance"> </a><a name="AllergyIntolerance.reaction.substance"> </a><b>AllergyIntolerance.reaction.substance</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the specific substance considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different to the substance identified as the cause of the risk, but must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite substance that includes the identified substance. It must be clinically safe to only process the AllergyIntolerance.substance and ignore the AllergyIntolerance.event.substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Codes defining the type of the substance.<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-substance-code.html">Substance Code</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Comments</td><td><p>Coding of the specific substance with a terminology capable of triggering decision support should be used wherever possible.  The substance field allows for the use of a specific substance or a group or class of substances, for example &quot;Penicillins&quot;. The specific substance field could be used for Amoxycillin. Duplication is acceptable when a specific substance has been recorded in the 'substance' field.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.certainty"> </a><a name="AllergyIntolerance.reaction.certainty"> </a><b>AllergyIntolerance.reaction.certainty</b></td></tr>
+  <tr><td>Definition</td><td><p>Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Statement about the degree of clinical certainty that a Specific Substance was the cause of the Manifestation in an reaction event.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/valueset-reaction-event-certainty.html">AllergyIntoleranceCertainty</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Cause</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.manifestation"> </a><a name="AllergyIntolerance.reaction.manifestation"> </a><b>AllergyIntolerance.reaction.manifestation</b></td></tr>
+  <tr><td>Definition</td><td><p>Clinical symptoms and/or signs that are observed or associated with the adverse reaction event.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event.<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-manifestation-codes.html">SNOMED CT Clinical Findings</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Symptoms, Signs</td></tr>
+  <tr><td>Comments</td><td><p>Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.  Terminologies commonly used include, but are not limited to, SNOMED CT or ICD10.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.description"> </a><a name="AllergyIntolerance.reaction.description"> </a><b>AllergyIntolerance.reaction.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Text description about the reaction as a whole, including details of the manifestation if required.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">string</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Narrative, Text</td></tr>
+  <tr><td>Comments</td><td><p>Use the description to provide any details of a particular event of the occurred reaction such as circumstances, reaction specifics, what happened before/after. Information, related to the event, but not describing a particular care should be captured in the comment field. For example: at the age of four, the patient was given penicillin for strep throat and subsequently developed severe hives.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.onset"> </a><a name="AllergyIntolerance.reaction.onset"> </a><b>AllergyIntolerance.reaction.onset</b></td></tr>
+  <tr><td>Definition</td><td><p>Record of the date and/or time of the onset of the Reaction.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.severity"> </a><a name="AllergyIntolerance.reaction.severity"> </a><b>AllergyIntolerance.reaction.severity</b></td></tr>
+  <tr><td>Definition</td><td><p>Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/valueset-reaction-event-severity.html">AllergyIntoleranceSeverity</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>It is acknowledged that this assessment is very subjective. There may be some some specific practice domains where objective scales have been applied. Objective scales can be included in this model as extensions.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.exposureRoute"> </a><a name="AllergyIntolerance.reaction.exposureRoute"> </a><b>AllergyIntolerance.reaction.exposureRoute</b></td></tr>
+  <tr><td>Definition</td><td><p>Identification of the route by which the subject was exposed to the substance.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-route-codes.html">SNOMED CT Route Codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Comments</td><td><p>Coding of the route of exposure with a terminology should be used wherever possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="AllergyIntolerance:argoprofile.reaction.note"> </a><a name="AllergyIntolerance.reaction.note"> </a><b>AllergyIntolerance.reaction.note</b></td></tr>
+  <tr><td>Definition</td><td><p>Additional text about the adverse reaction event not captured in other fields.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#Annotation">Annotation</a></td></tr>
+  <tr><td>Comments</td><td><p>Use this field to record information indirectly related to a particular event and not captured in the description. For example: Clinical records are no longer available, recorded based on information provided to the patient by her mother and her mother is deceased.</p>
+</td></tr>
+</table>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+
+</body>
+</html>

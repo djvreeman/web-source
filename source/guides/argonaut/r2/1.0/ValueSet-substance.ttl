@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/ValueSet/substance> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ValueSet.id [ fhir:value "substance"];
+  fhir:ValueSet.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2016-05-25T16:59:08.025+10:00"^^xsd:dateTime ]
+  ];
+  fhir:ValueSet.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut/ValueSet/substance"];
+  fhir:ValueSet.version [ fhir:value "1.6.0"];
+  fhir:ValueSet.name [ fhir:value "Argonaut Substance-Reactant for Intolerance and Negation Codes"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ];
+       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2016-10-18T00:00:00+11:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "A substance or other type of agent (e.g., sunshine) that may be associated with an intolerance reaction event or a propensity to such an event. These concepts are expected to be at a more general level of abstraction (ingredients versus more specific formulations). This value set is quite general and includes concepts that may never cause an adverse event, particularly the included SNOMED CT concepts. The code system-specific value sets in this grouping value set are intended to provide broad coverage of all kinds of agents, but the expectation for use is that the chosen concept identifier for a substance should be appropriately specific and drawn from the available code systems in the following priority order: NDFRT, then RXNORM, then SNOMED CT. This overarching grouping value set is intended to support identification of drug classes, individual medication ingredients, foods, general substances and environmental entities"];
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"];
+  fhir:ValueSet.extensible [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.import [
+       fhir:value "http://fhir.org/guides/argonaut/ValueSet/substance-ndfrt";
+       fhir:index 0
+     ], [
+       fhir:value "http://fhir.org/guides/argonaut/ValueSet/substance-rxnorm";
+       fhir:index 1
+     ], [
+       fhir:value "http://fhir.org/guides/argonaut/ValueSet/substance-sct";
+       fhir:index 2
+     ];
+     fhir:ValueSet.compose.include [ fhir:index 0 ], [ fhir:index 1 ], [ fhir:index 2 ], [
+       fhir:index 3;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "160244002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No Known Allergies" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "429625007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No Known Food Allergies" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "409137002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No Known Drug Allergies" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "428607008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No Known Environmental Allergy" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

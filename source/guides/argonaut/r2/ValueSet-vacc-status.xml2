@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vacc-status"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/vacc-status"/>
+  <name value="Argonaut Immunization Status"/>
+  <status value="draft"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-10-18T00:00:00+11:00"/>
+  <description value="Immunization codes constrained from the DSTU2 core to include only &#39;completed&#39; and &#39;enter-in-error&#39;  which are the only two clinically relevent values."/>
+  <immutable value="false"/>
+  <requirements value="Codes that may be used for implementation of the Argonaut Immunization IG and MU2015 certification."/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/medication-admin-status"/>
+      <concept>
+        <code value="completed"/>
+        <display value="Completed"/>
+        <designation>
+          <value value="All actions that are implied by the administration have occurred"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="entered-in-error"/>
+        <display value="Entered in Error"/>
+        <designation>
+          <value value="The administration was entered in error and therefore nullified"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

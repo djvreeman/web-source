@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/AllergyIntolerance/23> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:AllergyIntolerance.id [ fhir:value "23"];
+  fhir:AllergyIntolerance.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-allergyintolerance";
+       fhir:index 0
+     ]
+  ];
+  fhir:AllergyIntolerance.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 23</p><p><b>meta</b>: </p><p><b>recordedDate</b>: 01/01/2000</p><p><b>patient</b>: <a href=\"Patient-peter-chalmers.html\">Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>substance</b>: sulfonamide antibacterial <span style=\"background: LightGoldenRodYellow\">(Details : {http://rxnav.nlm.nih.gov/REST/Ndfrt code 'N0000175503' = 'N0000175503', given as 'sulfonamide antibacterial'})</span></p><p><b>status</b>: confirmed</p><p><b>criticality</b>: CRITL</p><p><b>category</b>: medication</p><h3>Reactions</h3><table class=\"grid\"><tr><td>-</td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td>*</td><td>skin rash <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '271807003' = 'Eruption of skin (disorder)', given as 'skin rash'})</span></td><td>mild</td></tr></table></div>"
+  ];
+  fhir:AllergyIntolerance.recordedDate [ fhir:value "2000"^^xsd:gYear];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ]
+  ];
+  fhir:AllergyIntolerance.substance [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://rxnav.nlm.nih.gov/REST/Ndfrt" ];
+       fhir:Coding.code [ fhir:value "N0000175503" ];
+       fhir:Coding.display [ fhir:value "sulfonamide antibacterial" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "sulfonamide antibacterial" ]
+  ];
+  fhir:AllergyIntolerance.status [ fhir:value "confirmed"];
+  fhir:AllergyIntolerance.criticality [ fhir:value "CRITL"];
+  fhir:AllergyIntolerance.category [ fhir:value "medication"];
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0;
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:271807003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "271807003" ];
+         fhir:Coding.display [ fhir:value "skin rash" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "skin rash" ]
+     ];
+     fhir:AllergyIntolerance.reaction.severity [ fhir:value "mild" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

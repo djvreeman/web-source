@@ -1,0 +1,1526 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/ImplementationGuide/ig> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ImplementationGuide.id [ fhir:value "ig"];
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/argonaut/ImplementationGuide/ig"];
+  fhir:ImplementationGuide.name [ fhir:value "Implementation Guide Template"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ImplementationGuide.publisher [ fhir:value "FHIR Project"];
+  fhir:ImplementationGuide.package [
+     fhir:index 0;
+     fhir:ImplementationGuide.package.name [ fhir:value "base" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-weight.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/weight>;
+         fhir:Reference.reference [ fhir:value "Observation/weight" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-vitals-panel.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/vitals-panel>;
+         fhir:Reference.reference [ fhir:value "Observation/vitals-panel" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-usg.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/usg>;
+         fhir:Reference.reference [ fhir:value "Observation/usg" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urobilinogen.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urobilinogen>;
+         fhir:Reference.reference [ fhir:value "Observation/urobilinogen" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-wbcs.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-wbcs>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-wbcs" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-sediment.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-sediment>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-sediment" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-rbcs.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-rbcs>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-rbcs" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-protein.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-protein>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-protein" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-ph.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-ph>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-ph" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-nitrite.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-nitrite>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-nitrite" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-leukocyte-esterase.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-leukocyte-esterase>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-leukocyte-esterase" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-ketone.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-ketone>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-ketone" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-hemoglobin.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-hemoglobin>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-hemoglobin" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-glucose.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-glucose>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-glucose" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-epi-cells.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-epi-cells>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-epi-cells" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-color.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-color>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-color" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-clarity.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-clarity>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-clarity" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-cells.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-cells>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-cells" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-bilirubin.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-bilirubin>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-bilirubin" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-urine-bacteria.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/urine-bacteria>;
+         fhir:Reference.reference [ fhir:value "Observation/urine-bacteria" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "DiagnosticReport-urinalysis.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/DiagnosticReport/urinalysis>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/urinalysis" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Device-udi-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Device/udi-1>;
+         fhir:Reference.reference [ fhir:value "Device/udi-1" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-temperature.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/temperature>;
+         fhir:Reference.reference [ fhir:value "Observation/temperature" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-some-day-smoker.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/some-day-smoker>;
+         fhir:Reference.reference [ fhir:value "Observation/some-day-smoker" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-total-bilirubin.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-total-bilirubin>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-total-bilirubin" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-sodium.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-sodium>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-sodium" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-potassium.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-potassium>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-potassium" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-creatinine.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-creatinine>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-creatinine" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-co2.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-co2>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-co2" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-chloride.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-chloride>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-chloride" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-serum-calcium.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/serum-calcium>;
+         fhir:Reference.reference [ fhir:value "Observation/serum-calcium" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-respiratory-rate.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/respiratory-rate>;
+         fhir:Reference.reference [ fhir:value "Observation/respiratory-rate" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Procedure-rehab.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Procedure/rehab>;
+         fhir:Reference.reference [ fhir:value "Procedure/rehab" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Patient-peter-chalmers.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+         fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-oxygen-saturation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/oxygen-saturation>;
+         fhir:Reference.reference [ fhir:value "Observation/oxygen-saturation" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-neutrophils.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/neutrophils>;
+         fhir:Reference.reference [ fhir:value "Observation/neutrophils" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "DiagnosticReport-metabolic-panel.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/DiagnosticReport/metabolic-panel>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/metabolic-panel" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mchc.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/mchc>;
+         fhir:Reference.reference [ fhir:value "Observation/mchc" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Condition-liveborn-birth.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Condition/liveborn-birth>;
+         fhir:Reference.reference [ fhir:value "Condition/liveborn-birth" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-length.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/length>;
+         fhir:Reference.reference [ fhir:value "Observation/length" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Immunization-imm-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Immunization/imm-1>;
+         fhir:Reference.reference [ fhir:value "Immunization/imm-1" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-hemoglobin.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/hemoglobin>;
+         fhir:Reference.reference [ fhir:value "Observation/hemoglobin" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-height.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/height>;
+         fhir:Reference.reference [ fhir:value "Observation/height" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-heart-rate.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/heart-rate>;
+         fhir:Reference.reference [ fhir:value "Observation/heart-rate" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-head-circumference.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/head-circumference>;
+         fhir:Reference.reference [ fhir:value "Observation/head-circumference" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Condition-hc1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Condition/hc1>;
+         fhir:Reference.reference [ fhir:value "Condition/hc1" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Goal-goal-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Goal/goal-1>;
+         fhir:Reference.reference [ fhir:value "Goal/goal-1" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-erythrocytes.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/erythrocytes>;
+         fhir:Reference.reference [ fhir:value "Observation/erythrocytes" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "DocumentReference-episode-summary.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/DocumentReference/episode-summary>;
+         fhir:Reference.reference [ fhir:value "DocumentReference/episode-summary" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CarePlan-colonoscopy.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/CarePlan/colonoscopy>;
+         fhir:Reference.reference [ fhir:value "CarePlan/colonoscopy" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "DiagnosticReport-cbc.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/DiagnosticReport/cbc>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/cbc" ]
+       ]
+     ], [
+       fhir:index 51;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CarePlan-careteam-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/CarePlan/careteam-1>;
+         fhir:Reference.reference [ fhir:value "CarePlan/careteam-1" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-bun.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/bun>;
+         fhir:Reference.reference [ fhir:value "Observation/bun" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-bp-data-absent.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/bp-data-absent>;
+         fhir:Reference.reference [ fhir:value "Observation/bp-data-absent" ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-bmi.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/bmi>;
+         fhir:Reference.reference [ fhir:value "Observation/bmi" ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-blood-pressure.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/blood-pressure>;
+         fhir:Reference.reference [ fhir:value "Observation/blood-pressure" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-blood-glucose.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Observation/blood-glucose>;
+         fhir:Reference.reference [ fhir:value "Observation/blood-glucose" ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Bundle-argo-ms3.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Bundle/argo-ms3>;
+         fhir:Reference.reference [ fhir:value "Bundle/argo-ms3" ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-argo-ms2.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/MedicationStatement/argo-ms2>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/argo-ms2" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-argo-ms1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/MedicationStatement/argo-ms1>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/argo-ms1" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Bundle-argo-mo3.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Bundle/argo-mo3>;
+         fhir:Reference.reference [ fhir:value "Bundle/argo-mo3" ]
+       ]
+     ], [
+       fhir:index 61;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationOrder-argo-mo2.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/MedicationOrder/argo-mo2>;
+         fhir:Reference.reference [ fhir:value "MedicationOrder/argo-mo2" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationOrder-argo-mo1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/MedicationOrder/argo-mo1>;
+         fhir:Reference.reference [ fhir:value "MedicationOrder/argo-mo1" ]
+       ]
+     ], [
+       fhir:index 63;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Medication-argo-med2.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Medication/argo-med2>;
+         fhir:Reference.reference [ fhir:value "Medication/argo-med2" ]
+       ]
+     ], [
+       fhir:index 64;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Medication-argo-med1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Medication/argo-med1>;
+         fhir:Reference.reference [ fhir:value "Medication/argo-med1" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Encounter-691.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Encounter/691>;
+         fhir:Reference.reference [ fhir:value "Encounter/691" ]
+       ]
+     ], [
+       fhir:index 66;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Practitioner-1234.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Practitioner/1234>;
+         fhir:Reference.reference [ fhir:value "Practitioner/1234" ]
+       ]
+     ], [
+       fhir:index 67;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "AllergyIntolerance-23.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/AllergyIntolerance/23>;
+         fhir:Reference.reference [ fhir:value "AllergyIntolerance/23" ]
+       ]
+     ], [
+       fhir:index 68;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Practitioner-5678.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Practitioner/5678>;
+         fhir:Reference.reference [ fhir:value "Practitioner/5678" ]
+       ]
+     ], [
+       fhir:index 69;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-vacc-status.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/vacc-status>;
+         fhir:Reference.reference [ fhir:value "ValueSet/vacc-status" ]
+       ]
+     ], [
+       fhir:index 70;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-usrealm-birthsex.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/usrealm-birthsex>;
+         fhir:Reference.reference [ fhir:value "ValueSet/usrealm-birthsex" ]
+       ]
+     ], [
+       fhir:index 71;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-ucum.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/ucum>;
+         fhir:Reference.reference [ fhir:value "ValueSet/ucum" ]
+       ]
+     ], [
+       fhir:index 72;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-ucum-vitals-common.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/ucum-vitals-common>;
+         fhir:Reference.reference [ fhir:value "ValueSet/ucum-vitals-common" ]
+       ]
+     ], [
+       fhir:index 73;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-substance.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/substance>;
+         fhir:Reference.reference [ fhir:value "ValueSet/substance" ]
+       ]
+     ], [
+       fhir:index 74;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-substance-sct.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/substance-sct>;
+         fhir:Reference.reference [ fhir:value "ValueSet/substance-sct" ]
+       ]
+     ], [
+       fhir:index 75;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-substance-rxnorm.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/substance-rxnorm>;
+         fhir:Reference.reference [ fhir:value "ValueSet/substance-rxnorm" ]
+       ]
+     ], [
+       fhir:index 76;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-substance-ndfrt.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/substance-ndfrt>;
+         fhir:Reference.reference [ fhir:value "ValueSet/substance-ndfrt" ]
+       ]
+     ], [
+       fhir:index 77;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-provider-role.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/provider-role>;
+         fhir:Reference.reference [ fhir:value "ValueSet/provider-role" ]
+       ]
+     ], [
+       fhir:index 78;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-procedure-type.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/procedure-type>;
+         fhir:Reference.reference [ fhir:value "ValueSet/procedure-type" ]
+       ]
+     ], [
+       fhir:index 79;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-procedure-icd10pcs.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/procedure-icd10pcs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/procedure-icd10pcs" ]
+       ]
+     ], [
+       fhir:index 80;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-omb-race.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/omb-race>;
+         fhir:Reference.reference [ fhir:value "ValueSet/omb-race" ]
+       ]
+     ], [
+       fhir:index 81;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-omb-ethnicity.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/omb-ethnicity>;
+         fhir:Reference.reference [ fhir:value "ValueSet/omb-ethnicity" ]
+       ]
+     ], [
+       fhir:index 82;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-observation-value-codes.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/observation-value-codes>;
+         fhir:Reference.reference [ fhir:value "ValueSet/observation-value-codes" ]
+       ]
+     ], [
+       fhir:index 83;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-observation-ccdavitalsignresult.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/observation-ccdavitalsignresult>;
+         fhir:Reference.reference [ fhir:value "ValueSet/observation-ccdavitalsignresult" ]
+       ]
+     ], [
+       fhir:index 84;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-observation-ccdasmokingstatus.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/observation-ccdasmokingstatus>;
+         fhir:Reference.reference [ fhir:value "ValueSet/observation-ccdasmokingstatus" ]
+       ]
+     ], [
+       fhir:index 85;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-ndc-vaccine-codes.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/ndc-vaccine-codes>;
+         fhir:Reference.reference [ fhir:value "ValueSet/ndc-vaccine-codes" ]
+       ]
+     ], [
+       fhir:index 86;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-narrative-status.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/narrative-status>;
+         fhir:Reference.reference [ fhir:value "ValueSet/narrative-status" ]
+       ]
+     ], [
+       fhir:index 87;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-medication-codes.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/medication-codes>;
+         fhir:Reference.reference [ fhir:value "ValueSet/medication-codes" ]
+       ]
+     ], [
+       fhir:index 88;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-languages.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/languages>;
+         fhir:Reference.reference [ fhir:value "ValueSet/languages" ]
+       ]
+     ], [
+       fhir:index 89;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-device-kind.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/device-kind>;
+         fhir:Reference.reference [ fhir:value "ValueSet/device-kind" ]
+       ]
+     ], [
+       fhir:index 90;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-detailed-race.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/detailed-race>;
+         fhir:Reference.reference [ fhir:value "ValueSet/detailed-race" ]
+       ]
+     ], [
+       fhir:index 91;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-detailed-ethnicity.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/detailed-ethnicity>;
+         fhir:Reference.reference [ fhir:value "ValueSet/detailed-ethnicity" ]
+       ]
+     ], [
+       fhir:index 92;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-condition-category.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/condition-category>;
+         fhir:Reference.reference [ fhir:value "ValueSet/condition-category" ]
+       ]
+     ], [
+       fhir:index 93;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-argo-codesystem.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ValueSet/argo-codesystem>;
+         fhir:Reference.reference [ fhir:value "ValueSet/argo-codesystem" ]
+       ]
+     ], [
+       fhir:index 94;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-resource-documentation.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-resource-documentation" ]
+       ]
+     ], [
+       fhir:index 95;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-race.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-race>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-race" ]
+       ]
+     ], [
+       fhir:index 96;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-profile-link.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-profile-link" ]
+       ]
+     ], [
+       fhir:index 97;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-ethnicity.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-ethnicity>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-ethnicity" ]
+       ]
+     ], [
+       fhir:index 98;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-birthsex.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-birthsex>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-birthsex" ]
+       ]
+     ], [
+       fhir:index 99;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "SearchParameter-race.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/SearchParameter/race>;
+         fhir:Reference.reference [ fhir:value "SearchParameter/race" ]
+       ]
+     ], [
+       fhir:index 100;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "SearchParameter-ethnicity.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/SearchParameter/ethnicity>;
+         fhir:Reference.reference [ fhir:value "SearchParameter/ethnicity" ]
+       ]
+     ], [
+       fhir:index 101;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "OperationDefinition-docref.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/OperationDefinition/docref>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/docref" ]
+       ]
+     ], [
+       fhir:index 102;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Conformance-server.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Conformance/server>;
+         fhir:Reference.reference [ fhir:value "Conformance/server" ]
+       ]
+     ], [
+       fhir:index 103;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Conformance-client.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.purpose [ fhir:value "example" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/Conformance/client>;
+         fhir:Reference.reference [ fhir:value "Conformance/client" ]
+       ]
+     ], [
+       fhir:index 104;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-ndc-cvx.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/ConceptMap/ndc-cvx>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/ndc-cvx" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\allergyintolerance-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-allergyintolerance.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut AllergyIntolerance Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-allergyintolerance>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-allergyintolerance" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\careplan-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-careplan.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut CarePlan Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-careplan>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-careplan" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\careteam-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-careteam.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut CareTeam Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-careteam>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-careteam" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\condition-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-condition.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Condition Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-condition" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\device-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-device.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Device Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-device>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-device" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\diagnosticreport-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-diagnosticreport.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut DiagnosticReport Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-diagnosticreport>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-diagnosticreport" ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\documentreference-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-documentreference.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut DocumentReference Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-documentreference>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-documentreference" ]
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\goal-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-goal.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Goal Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-goal>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-goal" ]
+       ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\immunization-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-immunization.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Immunization Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-immunization>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-immunization" ]
+       ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\medication-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-medication.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Medication Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-medication>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-medication" ]
+       ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\medicationorder-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-medicationorder.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut MedicationOrder Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationorder>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-medicationorder" ]
+       ]
+     ]
+  ], [
+     fhir:index 12;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\medicationstatement-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-medicationstatement.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut MedicationStatement Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-medicationstatement" ]
+       ]
+     ]
+  ], [
+     fhir:index 13;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\observationresults-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-observationresults.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Observation Results Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-observationresults>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-observationresults" ]
+       ]
+     ]
+  ], [
+     fhir:index 14;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\patient-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-patient.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Patient Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-patient" ]
+       ]
+     ]
+  ], [
+     fhir:index 15;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\procedure-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-procedure.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Procedure Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-procedure>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-procedure" ]
+       ]
+     ]
+  ], [
+     fhir:index 16;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\smokingstatus-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-smokingstatus.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Smoking Status Observation Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-smokingstatus>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-smokingstatus" ]
+       ]
+     ]
+  ], [
+     fhir:index 17;
+     fhir:ImplementationGuide.package.name [ fhir:value "C:\\work\\org.hl7.fhir.us\\argonaut-r2\\resources\\vitalsigns-argonaut-profile-spreadsheet" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-argo-vitalsigns.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut Vital Signs Observation Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut/StructureDefinition/argo-vitalsigns>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-vitalsigns" ]
+       ]
+     ]
+  ];
+  fhir:ImplementationGuide.page [
+     fhir:ImplementationGuide.page.source [ fhir:value "index.html" ];
+     fhir:ImplementationGuide.page.name [ fhir:value "blah" ];
+     fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

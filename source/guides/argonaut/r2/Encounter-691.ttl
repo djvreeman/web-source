@@ -1,0 +1,23 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Encounter/691> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Encounter.id [ fhir:value "691"];
+  fhir:Encounter.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 691</p><p><b>status</b>: in-progress</p><p><b>class</b>: inpatient</p><p><b>patient</b>: <a href=\"Patient-peter-chalmers.html\">Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "in-progress"];
+  fhir:Encounter.class [ fhir:value "inpatient"];
+  fhir:Encounter.patient [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

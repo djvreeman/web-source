@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- =============BreadCrumbs============= -->
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Argonaut Data Query Implementation Guide Client</h2>
+
+<p>
+Formats: <a href="Conformance-client.xml.html">XML</a>, <a href="Conformance-client.json.html">JSON</a>, <a href="Conformance-client.ttl.html">Turtle</a>
+</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+			<span style="font-size:larger; font-weight:bold; ">Argonaut Data Query Implementation Guide Client</span>
+			<hr/>
+			<p>
+				<span>FHIR Version: </span>
+				<span>1.0.2</span>
+				<br/>
+				<span>Supported formats: </span>
+				<span>xml</span>
+				<span>, </span>
+				<span>json</span>
+				<br/>
+				<span>Published: </span>
+				<span>2016-10-18</span>
+				<br/>
+				<span>Published by: </span>
+				<span>Argonaut Project</span>
+			</p>
+			<p>
+				<span>This Conformance instance defines the expected capabilities of a client when conforming to the Argonaut Data Query Implementation Guide.</span>
+			</p>
+			<br/>
+			<h4>
+				<span style="font-size:larger; font-weight:bold; ">RESTful Behavior</span>
+			</h4>
+			<br/>
+			<hr/>
+			<div>
+				<span>Description: </span>    <p><strong>The Argonaut client SHOULD:</strong></p> <ol> <li>Support fetching and querying of one or more Argonaut profile(s), using the supported RESTful interactions and search parameters declared in the <a href="Conformance-server.html">Argonaut Server Conformance Statement</a></li> </ol>  <br/></div>
+			<div>
+				<span>Security: </span>  <p><strong>Argonaut Data Query clients SHALL</strong> implement the <a href="index.html#security">security requirements</a> documented in this guide </p>  <br/></div>
+			<span>Supported Operations: </span>
+			<span style="font-weight:bold;">SHALL</span>
+			<span> Support </span>
+			<a href="http://fhir.org/guides/argonaut/OperationDefinition/docref">
+				<span>docref</span>
+			</a>
+			<h4>
+				<span style="font-weight:bold; ">Resource&nbsp; Details:</span>
+			</h4>
+			<br/>
+			<ol>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Patient">
+						<span style="font-weight:bold; ">Patient</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-patient.html">
+							<span>Argonaut Data Query Patient Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>    <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-patient</h4> <ul> <li>A client has connected to a server and fetched a patient using GET [base]/Patient/[id].</li> <li>A client has connected to a server and searched through available Patients using at least 2 (example name and gender) of the following search parameters: <ul> <li>name</li> <li>gender</li> <li>birthdate</li> </ul> </li> </ul> <p>To limit overly broad search results, a client search with gender <strong>SHOULD</strong> include family and given name search parameters.</p>           <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="AllergyIntolerance">
+						<span style="font-weight:bold; ">AllergyIntolerance</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-allergyintolerance.html">
+							<span>Argonaut Data Query AllergyIntolerance Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>    <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-allergintolerance</h4> <ul> <li>A client has connected to a server and fetched a patient's allergies using GET /AllergyIntolerance?patient=[id].</li> </ul>            <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="CarePlan">
+						<span style="font-weight:bold; ">CarePlan</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-careplan.html">
+							<span>Argonaut Data Query CarePlan Profile</span>
+							<br/>
+						</a>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-careteam.html">
+							<span>Argonaut Data Query CareTeam Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>   <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-careplan</h4> <ul> <li>c of a patient's Assessment and Plan of Treatment information using GET /CarePlan?patient=[id]&amp;category=assess-plan.</li> <li>A client has connected to a server and fetched all of a patient's Assessment and Plan of Treatment information over a specified time period using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;date=[date].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching all of a patient's active Assessment and Plan of Treatment information using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active.</li> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching all of a patient's active Assessment and Plan of Treatment information over a specified time period using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active&amp;date=[date].</li> </ul>     <h4 id="summary-of-argonaut-search-criteria-for-structuredefinition-argo-careteam">Summary of Argonaut Search Criteria for StructureDefinition-argo-careteam</h4>      <ul>      <li>A client has connected to a server and fetched a patients current care team members using GET[base]/CarePlan?patient=[id]&amp;category=careteam&amp;status=active</li>      </ul>       <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Condition">
+						<span style="font-weight:bold; ">Condition</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-condition.html">
+							<span>Argonaut Data Query Condition Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>  <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-condition</h4> <ul> <li>A client connected to a server and fetched all problems and health concerns for a patient, including current as well as historical problems and health concerns using GET/Condition?patient=[id]</li> </ul>        <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Device">
+						<span style="font-weight:bold; ">Device</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-device.html">
+							<span>Argonaut Data Query Device Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>   <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-device</h4> <ul> <li>A client has connected to a server and fetched all Unique device identifier(s)(UDI)for a patient's implantable device(s)using GET /Device?patient=[id].</li> </ul>    <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="DocumentReference">
+						<span style="font-weight:bold; ">DocumentReference</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-documentreference.html">
+							<span>Argonaut Data Query Document Reference Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p> <h4>Search Criteria for StructureDefinition-argo-documentreference</h4>     <p> The Server <strong>SHALL</strong> support fetching document references using either the direct query for DocumentReference resources as described here or the <a href="OperationDefinition-docref.html">$docref operation</a>.  The Client <strong>SHALL</strong> support both methods.</p>  <p>A client has connected to a server and fetches document references for a patient:</p><ul><li><code>GET [base]/DocumentReference/$docref?patient=[id]</code></li></ul><p>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching references for a patient searched by type and/or date using:</p><ul><li><code>GET [base]/DocumentReference/$docref?patient=[id]{&amp;type=[type]}{&amp;period=[date]}</code></li></ul>     <p/><p/><p>
+						<span>Supported Search Combinations:</span>
+						<span>patient</span>
+						<span> + </span>
+						<span>type</span>
+						<span> + </span>
+						<span>period</span>
+					</p><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Goal">
+						<span style="font-weight:bold; ">Goal</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-goal.html">
+							<span>Argonaut Data Query Goal Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>         <h4>Summary of US Core Search Criteria for StructureDefinition-us-core-goal</h4> <ul> <li>A client has connected to a server and fetched all of a patient's goals using GET [base]/Goal?patient=[id].</li> <li>A client has connected to a server and fetched all of a patient's goals over a specified time period using GET [base]/Goal?patient=[id]&amp;date=[date]{&amp;date=[date]}.</li> </ul>      <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Immunization">
+						<span style="font-weight:bold; ">Immunization</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-immunization.html">
+							<span>Argonaut Data Query Immunization Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>     <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-immunization</h4> <ul> <li>A client has connected to a server and fetched all immunizations for a patient using GET /Immunization?patient=[id].</li> </ul>         <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="DiagnosticReport">
+						<span style="font-weight:bold; ">DiagnosticReport</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-diagnosticreport.html">
+							<span>Argonaut Data Query DiagnosticReport Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>      <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-diagnosticreport</h4> <ul> <li>A client has connected to a server and fetched all of a patient's laboratory diagnostic reports by searching by category using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB.</li> <li>A client has connected to a server and fetched all of a patient's laboratory diagnostic reports searching by category code and date range using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched all of all of a patient's laboratory diagnostic reports searching by category and code using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's laboratory diagnostic reports searching by category and one or more codes and date range using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}.</li> </ul>        <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Observation">
+						<span style="font-weight:bold; ">Observation</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-observationresults.html">
+							<span>Argonaut Data Query Result Observation Profile</span>
+							<br/>
+						</a>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-vitalsigns.html">
+							<span>Argonaut Data Query Vital Signs Profile</span>
+							<br/>
+						</a>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-smokingstatus.html">
+							<span>Argonaut Data Query Smoking Status Observation Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>       <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-observationresults</h4> <ul> <li>A client has connected to a server and fetched all of a patient's laboratory results by searching by category using GET [base]/Observation?patient=[id]&amp;category=laboratory.</li> <li>A client has connected to a server and fetched all of a patient's laboratory results searching by category code and date range using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched all of all of a patient's laboratory results searching by category and code using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's laboratory results searching by category and one or more codes and date range using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}.</li> </ul> <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-smokingstatus</h4> <ul> <li>A client has connected to a server and fetched a patient's smoking status using GET [base]/Observation?patient=[id]&amp;code=72166-2.</li> </ul> <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-vitalsigns</h4> <ul> <li>A client has connected to a server and fetched all of a patient's vital signs by searching by category using GET [base]/Observation?patient=[id]&amp;category=vital-signs.</li> <li>A client has connected to a server and fetched all of a patient's vital signs searching by category code and date range using GET [base]/Observation?patient=[id]&amp;category=vital-signs&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched any of a patient's vital signs by searching by one or more of the codes listed below using GET [base]/Observation?patient=[id]&amp;code[vital sign LOINC{,LOINC2,LOINC3,...}].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's vital signs searching by one or more of the codes listed below and date range using GET [base]/Observation?patient=[id]&amp;code=[LOINC{,LOINC2...}]vital-signs&amp;date=[date]{&amp;date=[date]}.</li> </ul>      <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Medication">
+						<span style="font-weight:bold; ">Medication</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-medication.html">
+							<span>Argonaut Data Query Medication Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>    <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a [Medication] resource.  If the Medication Resource is used in a MedicationStatement or a MedicationOrder,  then the READ and SEARCH Criteria <strong>SHALL</strong> be supported.</p>       <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="MedicationStatement">
+						<span style="font-weight:bold; ">MedicationStatement</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-medicationstatement.html">
+							<span>Argonaut Data Query MedicationStatement Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>     <p><strong>Summary of US Core Search Criteria for StructureDefinition-us-core-medicationstatement</strong></p> <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a Medication resource. When referencing a Medication resource, the resource may be <a href="http://hl7.org/fhir/2017Jan/references.html#contained">contained</a> or an external resource. The server application can choose any one way or more than one method, but <strong>IF</strong> the an external reference to Medication is used, the server <strong>SHALL</strong> support the <a href="http://hl7.org/fhir/2017Jan/references.html#include">include</a> parameter for searching this element. The client application <strong>SHALL</strong> support both methods.</p> <ul> <li>A client has connected to a server and fetched a patient's medications using:</li> </ul> <ol> <li>GET /MedicationStatement?patient=[id]</li> <li>GET /MedicationStatement?patient=[id]&amp;_include=MedicationStatement:medication</li> </ol>        <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="MedicationOrder">
+						<span style="font-weight:bold; ">MedicationOrder</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-MedicationOrder.html">
+							<span>Argonaut Data Query MedicationOrder Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>   <p><strong>Summary of US Core Search Criteria for StructureDefinition-us-core-medicationorder</strong></p> <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a Medication resource. When referencing a Medication resource, the resource may be <a href="http://hl7.org/fhir/references.html#contained">contained</a> or an external resource. The server application can choose any one way or more than one method, but <strong>IF</strong> the an external reference to Medication is used, the server <strong>SHALL</strong> support the <a href="http://hl7.org/fhir/references.html#include">include</a> parameter for searching this element. The client application <strong>SHALL</strong> support both methods.</p> <ul> <li>A client has connected to a server and fetched a patient's medications using:</li> </ul> <ol> <li>GET /MedicationOrder?patient=[id]</li> <li>GET /MedicationOrder?patient=[id]&amp;_include=MedicationOrder:medication</li> </ol>        <p/><p/><p/><hr/></li>
+				<li>
+					<span style="font-weight:bold; ">Resource Type: </span>
+					<a name="Procedure">
+						<span style="font-weight:bold; ">Procedure</span>
+					</a>
+					<p>
+						<span>Supported Profiles:&nbsp; </span>
+						<a href="http://fhir.org/guides/argonaut/StructureDefinition-argo-procedure.html">
+							<span>Argonaut Data Query Procedure Profile</span>
+							<br/>
+						</a>
+						<br/>
+					</p>   <h4>Summary of US Core Search Criteria for StructureDefinition-us-core-procedure</h4> <ul> <li>A client connected to a server and fetched all procedures for a patient, including current as well as historical Procedures GET/Procedure?patient=[id].</li> <li>A client has connected to a server and fetched all of a patient's procedures over a specified time period using GET /Procedure?patient=[id]&amp;date=[date]{&amp;date=[date]}.</li> </ul>          <p/><p/><p/><hr/></li>
+			</ol>
+			<br/>
+			<br/>
+			<br/>
+		</div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+

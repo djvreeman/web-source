@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/DiagnosticReport/metabolic-panel> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:DiagnosticReport.id [ fhir:value "metabolic-panel"];
+  fhir:DiagnosticReport.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-diagnosticreport";
+       fhir:index 0
+     ]
+  ];
+  fhir:DiagnosticReport.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: metabolic-panel</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v2/0074 code 'LAB' = 'Laboratory', given as 'Laboratory'})</span></p><p><b>code</b>: Comprehensive metabolic 2000 panel - Serum or Plasma <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '24323-8' = 'Comprehensive metabolic 2000 panel - Serum or Plasma', given as 'Comprehensive metabolic 2000 panel - Serum or Plasma'})</span></p><p><b>subject</b>: <a href=\"Patient-peter-chalmers.html\">Peter Chalmers. Generated Summary: id: peter-chalmers; Medical Record Number = 1032702; active; Peter James Chalmers (OFFICIAL); ph: (555)555-5555(WORK), person@example.org(WORK); gender: male; birthDate: 19/06/1964</a></p><p><b>effective</b>: 04/07/2005</p><p><b>issued</b>: 06/07/2005 11:45:33 AM</p><p><b>performer</b>: <a href=\"Practitioner-1234.html\">Adam Careful, MD. Generated Summary: id: 1234; 23; active; Adam Careful </a></p><p><b>result</b>: </p><ul><li><a href=\"Observation-serum-total-bilirubin.html\">TOTAL BILIRUBIN. Generated Summary: id: serum-total-bilirubin; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 1975-2}\">Bilirub SerPl-mCnc</span>; Peter Chalmers; effective: 07/07/2005; 8.6 mg/dL</a></li><li><a href=\"Observation-serum-sodium.html\">SODIUM. Generated Summary: id: serum-sodium; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 2951-2}\">Sodium SerPl-sCnc</span>; Peter Chalmers; effective: 05/07/2005; 137.0 mmol/L</a></li><li><a href=\"Observation-serum-potassium.html\">Potassium. Generated Summary: id: serum-potassium; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 2823-3}\">Potassium SerPl-sCnc</span>; Peter Chalmers; effective: 05/07/2005; 5.4 mmol/L</a></li><li><a href=\"Observation-serum-creatinine.html\">CREATININE. Generated Summary: id: serum-creatinine; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 2160-0}\">Creat SerPl-mCnc</span>; Peter Chalmers; effective: 05/07/2005; 1.0 mg/dL</a></li><li><a href=\"Observation-serum-co2.html\">TOTAL CO2. Generated Summary: id: serum-co2; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 2028-9}\">CO2 SerPl-sCnc</span>; Peter Chalmers; effective: 05/07/2005; 24.0 mmol/L</a></li><li><a href=\"Observation-serum-chloride.html\">CHLORIDE. Generated Summary: id: serum-chloride; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 2075-0}\">Chloride SerPl-sCnc</span>; Peter Chalmers; effective: 05/07/2005; 105.0 mmol/L</a></li><li><a href=\"Observation-serum-calcium.html\">CALCIUM. Generated Summary: id: serum-calcium; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 17861-6}\">Calcium SerPl-mCnc</span>; Peter Chalmers; effective: 05/07/2005; 7.7 mg/dL</a></li><li><a href=\"Observation-bun.html\">BUN. Generated Summary: id: bun; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 3094-0}\">BUN SerPl-mCnc</span>; Peter Chalmers; effective: 05/07/2005; 10.0 mg/dL</a></li><li><a href=\"Observation-blood-glucose.html\">GLUCOSE. Generated Summary: id: blood-glucose; <span title=\"Codes: {http://hl7.org/fhir/observation-category laboratory}\">Laboratory</span>; <span title=\"Codes: {http://loinc.org 2339-0}\">Glucose Bld-mCnc</span>; Peter Chalmers; effective: 05/07/2005; 76.0 mg/dL</a></li></ul></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0074" ];
+       fhir:Coding.code [ fhir:value "LAB" ];
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept fhir:LOINC24323-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "24323-8" ];
+       fhir:Coding.display [ fhir:value "Comprehensive metabolic 2000 panel - Serum or Plasma" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2005-07-04"^^xsd:date];
+  fhir:DiagnosticReport.issued [ fhir:value "2005-07-06T11:45:33+11:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:link <http://fhir.org/guides/argonaut/Practitioner/1234>;
+     fhir:Reference.reference [ fhir:value "Practitioner/1234" ];
+     fhir:Reference.display [ fhir:value "Adam Careful, MD" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-total-bilirubin>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-total-bilirubin" ];
+     fhir:Reference.display [ fhir:value "TOTAL BILIRUBIN" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-sodium>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-sodium" ];
+     fhir:Reference.display [ fhir:value "SODIUM" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-potassium>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-potassium" ];
+     fhir:Reference.display [ fhir:value "Potassium" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-creatinine>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-creatinine" ];
+     fhir:Reference.display [ fhir:value "CREATININE" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-co2>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-co2" ];
+     fhir:Reference.display [ fhir:value "TOTAL CO2" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-chloride>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-chloride" ];
+     fhir:Reference.display [ fhir:value "CHLORIDE" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/serum-calcium>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-calcium" ];
+     fhir:Reference.display [ fhir:value "CALCIUM" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/bun>;
+     fhir:Reference.reference [ fhir:value "Observation/bun" ];
+     fhir:Reference.display [ fhir:value "BUN" ]
+  ], [
+     fhir:index 8;
+     fhir:link <http://fhir.org/guides/argonaut/Observation/blood-glucose>;
+     fhir:Reference.reference [ fhir:value "Observation/blood-glucose" ];
+     fhir:Reference.display [ fhir:value "GLUCOSE" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

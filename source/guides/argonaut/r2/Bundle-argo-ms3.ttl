@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Bundle/argo-ms3> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Bundle.id [ fhir:value "argo-ms3"];
+  fhir:Bundle.type [ fhir:value "searchset"];
+  fhir:Bundle.total [ fhir:value "1"^^xsd:nonNegativeInteger];
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "self" ];
+     fhir:Bundle.link.url [ fhir:value "https://fhir-open-api-dstu2.smarthealthit.org/MedicationStatement/?_id=argo-ms2&_include=MedicationStatement:medication" ]
+  ];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://fhir-open-api-dstu2.smarthealthit.org/MedicationStatement/argo-ms2" ];
+     fhir:Bundle.entry.resource <https://fhir-open-api-dstu2.smarthealthit.org/MedicationStatement/argo-ms2>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med1" ];
+     fhir:Bundle.entry.resource <https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med1>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ] .
+
+<https://fhir-open-api-dstu2.smarthealthit.org/MedicationStatement/argo-ms2> a fhir:MedicationStatement;
+  fhir:MedicationStatement.id [ fhir:value "argo-ms2"];
+  fhir:MedicationStatement.meta [
+     fhir:Meta.versionId [ fhir:value "213289" ];
+     fhir:Meta.lastUpdated [ fhir:value "2016-11-28T06:03:26.318+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement";
+       fhir:index 0
+     ]
+  ];
+  fhir:MedicationStatement.patient [
+     fhir:link <http://fhir.org/guides/argonaut/Patient/peter-chalmers>;
+     fhir:Reference.reference [ fhir:value "Patient/peter-chalmers" ];
+     fhir:Reference.display [ fhir:value "Peter Chalmers" ]
+  ];
+  fhir:MedicationStatement.dateAsserted [ fhir:value "2016-05-01T16:13:03Z"^^xsd:dateTime];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2010-05-01"^^xsd:date ]
+  ];
+  fhir:MedicationStatement.medicationReference [
+     fhir:link <http://fhir.org/guides/argonaut/Medication/argo-med1>;
+     fhir:Reference.reference [ fhir:value "Medication/argo-med1" ];
+     fhir:Reference.display [ fhir:value "lisinopril oral 10 mg" ]
+  ] .
+
+<https://fhir-open-api-dstu2.smarthealthit.org/Medication/argo-med1> a fhir:Medication;
+  fhir:Medication.id [ fhir:value "argo-med1"];
+  fhir:Medication.meta [
+     fhir:Meta.versionId [ fhir:value "213296" ];
+     fhir:Meta.lastUpdated [ fhir:value "2016-11-28T06:04:11.469+00:00"^^xsd:dateTime ]
+  ];
+  fhir:Medication.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "206765" ];
+       fhir:Coding.display [ fhir:value "Lisinopril 10 MG Oral Tablet [Prinivil]" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "lisinopril oral 10 mg" ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

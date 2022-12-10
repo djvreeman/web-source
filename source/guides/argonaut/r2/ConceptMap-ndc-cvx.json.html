@@ -1,0 +1,2740 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  <!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Argonaut NDC to CVX Code Mapping</h2>
+
+
+
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.id">id</a>" : "ndc-cvx",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/DSTU2/narrative.html#Narrative.status">status</a>" : "generated"
+  },
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.url">url</a>" : "http://fhir.org/guides/argonaut/ConceptMap/ndc-cvx",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.name">name</a>" : "Argonaut NDC to CVX Code Mapping",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.publisher">publisher</a>" : "Argonaut Project",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.date">date</a>" : "2016-06-06T00:00:00+10:00",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.description">description</a>" : "Unit of Use [NDC code] (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.requirements">requirements</a>" : "Based upon the 2015 Edition Certification Requirements, the NDC vaccine codes SHOULD be supported as translations to the CVX vaccine codes.",
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.source[x]">sourceReference</a>" : {
+    "<a href="http://hl7.org/fhir/DSTU2/references.html#reference#Reference.reference">reference</a>" : "http://fhir.org/guides/argonaut/ValueSet/ndc-vaccine-codes",
+    "<a href="http://hl7.org/fhir/DSTU2/references.html#reference#Reference.display">display</a>" : "NDC Codes"
+  },
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.target[x]">targetReference</a>" : {
+    "<a href="http://hl7.org/fhir/DSTU2/references.html#reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/daf-cvx",
+    "<a href="http://hl7.org/fhir/DSTU2/references.html#reference#Reference.display">display</a>" : "CVX Codes"
+  },
+  "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element">element</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0589-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "114",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0623-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "158",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0515-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "161",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0415-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0415-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0115-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0015-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0302-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "149",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "42874-0015-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "155",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0118-12",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0118-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0883-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0000-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "168",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "69401-0000-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "25",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0301-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "149",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0014-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0114-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "63851-0613-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "153",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0117-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0117-12",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4093-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "8",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4094-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4095-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "83",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4096-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4963-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "121",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4963-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "121",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "42874-0014-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "155",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0414-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0395-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "135",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0709-48",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "144",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0881-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0809-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "148",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "62577-0613-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "153",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0893-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0621-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "158",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-0100-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "162",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-0100-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "162",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-0100-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "162",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4047-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "116",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4109-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "62",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "62577-0613-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "153",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4121-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "165",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4119-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "165",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4119-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "165",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "63851-0511-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "18",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0562-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "130",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "46028-0114-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "163",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "46028-0114-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "163",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4171-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "94",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "13533-0131-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "9",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0396-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0397-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "135",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "62577-0614-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "153",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0903-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0898-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "158",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0901-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0393-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "135",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0810-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "20",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0810-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "20",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0790-38",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "101",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0790-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "101",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0640-15",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "127",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0650-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0650-90",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0650-25",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0650-70",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0650-50",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0707-48",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "144",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0110-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "111",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4681-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "3",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0215-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "113",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0215-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "113",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "46028-0218-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "136",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0387-65",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "135",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0386-15",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0010-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0010-25",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0010-50",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "54868-0980-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "3",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0830-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "118",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0830-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "118",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-1971-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "133",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-1971-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "133",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-1971-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "133",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "17478-0131-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "9",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0812-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "130",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0812-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "130",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0108-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "111",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4898-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "51",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0809-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "148",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "63851-0612-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "153",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4992-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "44",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4981-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "8",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4980-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "8",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4093-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "8",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4094-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4109-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "62",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0112-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0112-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0107-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "111",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0225-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "28",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0705-55",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "144",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "42515-0001-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "134",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0879-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0880-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0820-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "8",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0820-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "8",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0821-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0821-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0821-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "42874-0012-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "155",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0278-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "28",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0109-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "111",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0890-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0889-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0900-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0860-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "10",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0860-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "10",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0389-65",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "135",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0388-15",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0011-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0011-50",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0703-55",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "144",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0111-25",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0200-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0200-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "127",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0298-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "20",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0806-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "48",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0013-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0113-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0391-65",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "135",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0012-50",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0012-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0112-25",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0390-15",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4897-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "49",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0291-83",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "113",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0291-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "113",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0413-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0413-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0513-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "161",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0113-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0113-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00005-1970-49",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "100",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4047-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "116",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0811-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "110",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0811-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "110",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4827-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "21",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4826-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "21",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0842-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0842-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0842-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0842-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0300-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "149",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0589-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "114",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4095-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "83",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4096-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4831-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "83",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "63851-0511-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "18",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66019-0200-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "125",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "14362-0111-03",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "9",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0519-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0519-25",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "126",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0629-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "127",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0825-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "83",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0825-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "83",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0826-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0826-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0826-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0010-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "33332-0110-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0115-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0115-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4133-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "9",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "54868-4320-09",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "33",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "54868-3339-09",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "33",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00052-0603-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "19",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "64678-0211-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "24",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4739-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "33",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4943-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "33",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0013-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0013-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0392-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0113-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0820-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "35",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0800-83",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "35",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0400-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0286-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "106",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0286-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "106",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0286-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "106",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0815-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "104",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0815-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "104",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0815-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "104",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0815-43",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "104",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0815-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "104",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0114-10",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "76420-0482-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0895-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "158",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4999-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "94",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0545-15",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "120",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "51285-0174-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "143",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0248-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "18",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0487-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "32",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0915-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "37",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0547-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "48",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0851-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "119",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0915-68",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "37",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0488-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "32",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "46028-0219-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "136",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "51285-0175-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "143",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0560-05",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "120",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0400-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0400-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "115",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "42874-0013-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "155",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0116-11",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "66521-0116-12",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4045-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "62",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4045-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "62",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4995-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4995-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "43",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4841-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4841-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "52",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0804-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "160",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0802-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "160",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "58160-0901-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "00006-4837-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "33",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0891-01",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "158",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0893-02",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "19515-0894-41",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0514-00",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "161",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0394-78",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "141",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0014-88",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "140",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/ndc",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.code">code</a>" : "49281-0414-58",
+      "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target">target</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.codeSystem">codeSystem</a>" : "http://hl7.org/fhir/sid/cvx",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/DSTU2/conceptmap.html#ConceptMap.element.target.equivalence">equivalence</a>" : "wider"
+        }
+      ]
+    }
+  ]
+}</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+

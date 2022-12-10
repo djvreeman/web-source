@@ -1,0 +1,881 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut/Conformance/client> a fhir:Conformance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Conformance.id [ fhir:value "client"];
+  fhir:Conformance.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<span style=\"font-size:larger; font-weight:bold; \">Argonaut Data Query Implemenation Guide Client</span>\n			<hr/>\n			<p>\n				<span>FHIR Version: </span>\n				<span>1.0.2</span>\n				<br/>\n				<span>Supported formats: </span>\n				<span>xml</span>\n				<span>, </span>\n				<span>json</span>\n				<br/>\n				<span>Published: </span>\n				<span>2016-10-18</span>\n				<br/>\n				<span>Published by: </span>\n				<span>Argonaut Project</span>\n			</p>\n			<p>\n				<span>This Conformance instance defines the expected capabilities of a client when conforming to the Argonaut Data Query Implementation Guide.</span>\n			</p>\n			<br/>\n			<h4>\n				<span style=\"font-size:larger; font-weight:bold; \">RESTful Behavior</span>\n			</h4>\n			<br/>\n			<hr/>\n			<div>\n				<span>Description: </span>    <p><strong>The Argonaut client SHOULD:</strong></p> <ol> <li>Support fetching and querying of one or more Argonaut profile(s), using the supported RESTful interactions and search parameters declared in the <a href=\"Conformance-server.html\">Argonaut Server Conformance Statement</a></li> </ol>  <br/></div>\n			<div>\n				<span>Security: </span>  <p><strong>Argonaut Data Query clients SHALL</strong> implement the <a href=\"index.html#security\">security requirements</a> documented in this guide </p>  <br/></div>\n			<span>Supported Operations: </span>\n			<span style=\"font-weight:bold;\">SHALL</span>\n			<span> Support </span>\n			<a href=\"http://fhir.org/guides/argonaut/OperationDefinition/docref\">\n				<span>docref</span>\n			</a>\n			<h4>\n				<span style=\"font-weight:bold; \">Resource  Details:</span>\n			</h4>\n			<br/>\n			<ol>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Patient\">\n						<span style=\"font-weight:bold; \">Patient</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-patient.html\">\n							<span>Argonaut Data Query Patient Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>    <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-patient</h4> <ul> <li>A client has connected to a server and fetched a patient using GET [base]/Patient/[id].</li> <li>A client has connected to a server and searched through available Patients using at least 2 (example name and gender) of the following search parameters: <ul> <li>name</li> <li>gender</li> <li>birthdate</li> </ul> </li> </ul> <p>To limit overly broad search results, a client search with gender <strong>SHOULD</strong> include family and given name search parameters.</p>           <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"AllergyIntolerance\">\n						<span style=\"font-weight:bold; \">AllergyIntolerance</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-allergyintolerance.html\">\n							<span>Argonaut Data Query AllergyIntolerance Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>    <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-allergintolerance</h4> <ul> <li>A client has connected to a server and fetched a patient's allergies using GET /AllergyIntolerance?patient=[id].</li> </ul>            <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"CarePlan\">\n						<span style=\"font-weight:bold; \">CarePlan</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-careplan.html\">\n							<span>Argonaut Data Query CarePlan Profile</span>\n							<br/>\n						</a>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-careteam.html\">\n							<span>Argonaut Data Query CareTeam Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>   <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-careplan</h4> <ul> <li>c of a patient's Assessment and Plan of Treatment information using GET /CarePlan?patient=[id]&amp;category=assess-plan.</li> <li>A client has connected to a server and fetched all of a patient's Assessment and Plan of Treatment information over a specified time period using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;date=[date].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching all of a patient's active Assessment and Plan of Treatment information using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active.</li> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching all of a patient's active Assessment and Plan of Treatment information over a specified time period using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active&amp;date=[date].</li> </ul>     <h4 id=\"summary-of-argonaut-search-criteria-for-structuredefinition-argo-careteam\">Summary of Argonaut Search Criteria for StructureDefinition-argo-careteam</h4>      <ul>      <li>A client has connected to a server and fetched a patients current care team members using GET[base]/CarePlan?patient=[id]&amp;category=careteam&amp;status=active</li>      </ul>       <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Condition\">\n						<span style=\"font-weight:bold; \">Condition</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-condition.html\">\n							<span>Argonaut Data Query Condition Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>  <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-condition</h4> <ul> <li>A client connected to a server and fetched all problems and health concerns for a patient, including current as well as historical problems and health concerns using GET/Condition?patient=[id]</li> </ul>        <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Device\">\n						<span style=\"font-weight:bold; \">Device</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-device.html\">\n							<span>Argonaut Data Query Device Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>   <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-device</h4> <ul> <li>A client has connected to a server and fetched all Unique device identifier(s)(UDI)for a patient's implantable device(s)using GET /Device?patient=[id].</li> </ul>    <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"DocumentReference\">\n						<span style=\"font-weight:bold; \">DocumentReference</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-documentreference.html\">\n							<span>Argonaut Data Query Document Reference Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p> <h4>Search Criteria for StructureDefinition-argo-documentreference</h4>     <p> The Server <strong>SHALL</strong> support fetching document references using either the direct query for DocumentReference resources as described here or the <a href=\"OperationDefinition-docref.html\">$docref operation</a>.  The Client <strong>SHALL</strong> support both methods.</p>  <p>A client has connected to a server and fetches document references for a patient:</p><ul><li><code>GET [base]/DocumentReference/$docref?patient=[id]</code></li></ul><p>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching references for a patient searched by type and/or date using:</p><ul><li><code>GET [base]/DocumentReference/$docref?patient=[id]{&amp;type=[type]}{&amp;period=[date]}</code></li></ul>     <p/><p/><p>\n						<span>Supported Search Combinations:</span>\n						<span>patient</span>\n						<span> + </span>\n						<span>type</span>\n						<span> + </span>\n						<span>period</span>\n					</p><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Goal\">\n						<span style=\"font-weight:bold; \">Goal</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-goal.html\">\n							<span>Argonaut Data Query Goal Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>         <h4>Summary of US Core Search Criteria for StructureDefinition-us-core-goal</h4> <ul> <li>A client has connected to a server and fetched all of a patient's goals using GET [base]/Goal?patient=[id].</li> <li>A client has connected to a server and fetched all of a patient's goals over a specified time period using GET [base]/Goal?patient=[id]&amp;date=[date]{&amp;date=[date]}.</li> </ul>      <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Immunization\">\n						<span style=\"font-weight:bold; \">Immunization</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-immunization.html\">\n							<span>Argonaut Data Query Immunization Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>     <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-immunization</h4> <ul> <li>A client has connected to a server and fetched all immunizations for a patient using GET /Immunization?patient=[id].</li> </ul>         <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"DiagnosticReport\">\n						<span style=\"font-weight:bold; \">DiagnosticReport</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-diagnosticreport.html\">\n							<span>Argonaut Data Query DiagnosticReport Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>      <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-diagnosticreport</h4> <ul> <li>A client has connected to a server and fetched all of a patient's laboratory diagnostic reports by searching by category using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB.</li> <li>A client has connected to a server and fetched all of a patient's laboratory diagnostic reports searching by category code and date range using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched all of all of a patient's laboratory diagnostic reports searching by category and code using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's laboratory diagnostic reports searching by category and one or more codes and date range using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}.</li> </ul>        <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Observation\">\n						<span style=\"font-weight:bold; \">Observation</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-observationresults.html\">\n							<span>Argonaut Data Query Result Observation Profile</span>\n							<br/>\n						</a>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-vitalsigns.html\">\n							<span>Argonaut Data Query Vital Signs Profile</span>\n							<br/>\n						</a>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-smokingstatus.html\">\n							<span>Argonaut Data Query Smoking Status Observation Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>       <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-observationresults</h4> <ul> <li>A client has connected to a server and fetched all of a patient's laboratory results by searching by category using GET [base]/Observation?patient=[id]&amp;category=laboratory.</li> <li>A client has connected to a server and fetched all of a patient's laboratory results searching by category code and date range using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched all of all of a patient's laboratory results searching by category and code using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's laboratory results searching by category and one or more codes and date range using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}.</li> </ul> <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-smokingstatus</h4> <ul> <li>A client has connected to a server and fetched a patient's smoking status using GET [base]/Observation?patient=[id]&amp;code=72166-2.</li> </ul> <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-vitalsigns</h4> <ul> <li>A client has connected to a server and fetched all of a patient's vital signs by searching by category using GET [base]/Observation?patient=[id]&amp;category=vital-signs.</li> <li>A client has connected to a server and fetched all of a patient's vital signs searching by category code and date range using GET [base]/Observation?patient=[id]&amp;category=vital-signs&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched any of a patient's vital signs by searching by one or more of the codes listed below using GET [base]/Observation?patient=[id]&amp;code[vital sign LOINC{,LOINC2,LOINC3,...}].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's vital signs searching by one or more of the codes listed below and date range using GET [base]/Observation?patient=[id]&amp;code=[LOINC{,LOINC2...}]vital-signs&amp;date=[date]{&amp;date=[date]}.</li> </ul>      <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Medication\">\n						<span style=\"font-weight:bold; \">Medication</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-medication.html\">\n							<span>Argonaut Data Query Medication Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>    <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a [Medication] resource.  If the Medication Resource is used in a MedicationStatement or a MedicationOrder,  then the READ and SEARCH Criteria <strong>SHALL</strong> be supported.</p>       <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"MedicationStatement\">\n						<span style=\"font-weight:bold; \">MedicationStatement</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-medicationstatement.html\">\n							<span>Argonaut Data Query MedicationStatement Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>     <p><strong>Summary of US Core Search Criteria for StructureDefinition-us-core-medicationstatement</strong></p> <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a Medication resource. When referencing a Medication resource, the resource may be <a href=\"http://hl7.org/fhir/2017Jan/references.html#contained\">contained</a> or an external resource. The server application can choose any one way or more than one method, but <strong>IF</strong> the an external reference to Medication is used, the server <strong>SHALL</strong> support the <a href=\"http://hl7.org/fhir/2017Jan/references.html#include\">include</a> parameter for searching this element. The client application <strong>SHALL</strong> support both methods.</p> <ul> <li>A client has connected to a server and fetched a patient's medications using:</li> </ul> <ol> <li>GET /MedicationStatement?patient=[id]</li> <li>GET /MedicationStatement?patient=[id]&amp;_include=MedicationStatement:medication</li> </ol>        <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"MedicationOrder\">\n						<span style=\"font-weight:bold; \">MedicationOrder</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-MedicationOrder.html\">\n							<span>Argonaut Data Query MedicationOrder Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>   <p><strong>Summary of US Core Search Criteria for StructureDefinition-us-core-medicationorder</strong></p> <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a Medication resource. When referencing a Medication resource, the resource may be <a href=\"http://hl7.org/fhir/references.html#contained\">contained</a> or an external resource. The server application can choose any one way or more than one method, but <strong>IF</strong> the an external reference to Medication is used, the server <strong>SHALL</strong> support the <a href=\"http://hl7.org/fhir/references.html#include\">include</a> parameter for searching this element. The client application <strong>SHALL</strong> support both methods.</p> <ul> <li>A client has connected to a server and fetched a patient's medications using:</li> </ul> <ol> <li>GET /MedicationOrder?patient=[id]</li> <li>GET /MedicationOrder?patient=[id]&amp;_include=MedicationOrder:medication</li> </ol>        <p/><p/><p/><hr/></li>\n				<li>\n					<span style=\"font-weight:bold; \">Resource Type: </span>\n					<a name=\"Procedure\">\n						<span style=\"font-weight:bold; \">Procedure</span>\n					</a>\n					<p>\n						<span>Supported Profiles:  </span>\n						<a href=\"http://fhir.org/guides/argonaut/StructureDefinition-argo-procedure.html\">\n							<span>Argonaut Data Query Procedure Profile</span>\n							<br/>\n						</a>\n						<br/>\n					</p>   <h4>Summary of US Core Search Criteria for StructureDefinition-us-core-procedure</h4> <ul> <li>A client connected to a server and fetched all procedures for a patient, including current as well as historical Procedures GET/Procedure?patient=[id].</li> <li>A client has connected to a server and fetched all of a patient's procedures over a specified time period using GET /Procedure?patient=[id]&amp;date=[date]{&amp;date=[date]}.</li> </ul>          <p/><p/><p/><hr/></li>\n			</ol>\n			<br/>\n			<br/>\n			<br/>\n		</div>"
+  ];
+  fhir:Conformance.url [ fhir:value "http://fhir.org/guides/argonaut/Conformance/client"];
+  fhir:Conformance.name [ fhir:value "Argonaut Data Query Implemenation Guide Client"];
+  fhir:Conformance.status [ fhir:value "draft"];
+  fhir:Conformance.publisher [ fhir:value "Argonaut Project"];
+  fhir:Conformance.contact [
+     fhir:index 0;
+     fhir:Conformance.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ]
+     ]
+  ];
+  fhir:Conformance.date [ fhir:value "2016-10-18"^^xsd:date];
+  fhir:Conformance.description [ fhir:value "This Conformance instance defines the expected capabilities of a client when conforming to the Argonaut Data Query Implementation Guide."];
+  fhir:Conformance.kind [ fhir:value "requirements"];
+  fhir:Conformance.fhirVersion [ fhir:value "1.0.2"];
+  fhir:Conformance.acceptUnknown [ fhir:value "extensions"];
+  fhir:Conformance.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:Conformance.profile [
+     fhir:index 0;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-allergyintolerance.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "AllergyIntolerance" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-allergyintolerance.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query AllergyIntolerance Profile" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-careplan.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "CarePlan" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-careplan.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query CarePlan Profile" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-careteam.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "CarePlan" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-careteam.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query CareTeam Profile" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-condition.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Condition" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-condition.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Condition Profile" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-documentreference.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "DocumentReference" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-documentreference.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Document Reference Profile" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-device.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Device" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-device.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Device Profile" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-goal.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Goal" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-goal.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Goal Profile" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-immunization.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Immunization" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-immunization.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Immunization Profile" ]
+  ], [
+     fhir:index 8;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-diagnosticreport.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "DiagnosticReport" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-diagnosticreport.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query DiagnosticReport Profile" ]
+  ], [
+     fhir:index 9;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-observationresults.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Observation" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-observationresults.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Result Observation Profile" ]
+  ], [
+     fhir:index 10;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-medication.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Medication" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-medication.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Medication Profile" ]
+  ], [
+     fhir:index 11;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-MedicationOrder.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "MedicationOrder" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-MedicationOrder.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query MedicationOrder Profile" ]
+  ], [
+     fhir:index 12;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-medicationstatement.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "MedicationStatement" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-medicationstatement.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query MedicationStatement Profile" ]
+  ], [
+     fhir:index 13;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-vitalsigns.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Observation" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-vitalsigns.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Vital Signs Profile" ]
+  ], [
+     fhir:index 14;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-smokingstatus.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Observation" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-smokingstatus.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Smoking Status Observation Profile" ]
+  ], [
+     fhir:index 15;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-patient.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Patient" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-patient.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Patient Profile" ]
+  ], [
+     fhir:index 16;
+     fhir:link <http://fhir.org/guides/argonaut/StructureDefinition-argo-procedure.html>;
+     fhir:Reference.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-profile-link" ];
+       fhir:Extension.valueCode [ fhir:value "Procedure" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition-argo-procedure.html" ];
+     fhir:Reference.display [ fhir:value "Argonaut Data Query Procedure Profile" ]
+  ];
+  fhir:Conformance.rest [
+     fhir:index 0;
+     fhir:Conformance.rest.mode [ fhir:value "client" ];
+     fhir:Conformance.rest.documentation [ fhir:value "    <p><strong>The Argonaut client SHOULD:</strong></p> <ol> <li>Support fetching and querying of one or more Argonaut profile(s), using the supported RESTful interactions and search parameters declared in the <a href=\"Conformance-server.html\">Argonaut Server Conformance Statement</a></li> </ol>  " ];
+     fhir:Conformance.rest.security [
+       fhir:Conformance.rest.security.description [ fhir:value "  <p><strong>Argonaut Data Query clients SHALL</strong> implement the <a href=\"index.html#security\">security requirements</a> documented in this guide </p>  " ]
+     ];
+     fhir:Conformance.rest.resource [
+       fhir:index 0;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "    <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-patient</h4> <ul> <li>A client has connected to a server and fetched a patient using GET [base]/Patient/[id].</li> <li>A client has connected to a server and searched through available Patients using at least 2 (example name and gender) of the following search parameters: <ul> <li>name</li> <li>gender</li> <li>birthdate</li> </ul> </li> </ul> <p>To limit overly broad search results, a client search with gender <strong>SHOULD</strong> include family and given name search parameters.</p>           " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Patient" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query patient resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query patients by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query patient instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query patient instance" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "    <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-allergintolerance</h4> <ul> <li>A client has connected to a server and fetched a patient's allergies using GET /AllergyIntolerance?patient=[id].</li> </ul>            " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "AllergyIntolerance" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query AllergyIntolerance resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query AllergyIntolerance by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query AllergyIntolerance instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query AllergyIntolerance instance" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "   <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-careplan</h4> <ul> <li>c of a patient's Assessment and Plan of Treatment information using GET /CarePlan?patient=[id]&amp;category=assess-plan.</li> <li>A client  <strong>SHOULD</strong> be capable of connecting to a server and fetched all of a patient's Assessment and Plan of Treatment information over a specified time period using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;date=[date].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching all of a patient's active Assessment and Plan of Treatment information using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active.</li> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching all of a patient's active Assessment and Plan of Treatment information over a specified time period using GET /CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active&amp;date=[date].</li> </ul>     <h4 id=\"summary-of-argonaut-search-criteria-for-structuredefinition-argo-careteam\">Summary of Argonaut Search Criteria for StructureDefinition-argo-careteam</h4>      <ul>      <li>A client has connected to a server and fetched a patients current care team members using GET[base]/CarePlan?patient=[id]&amp;category=careteam&amp;status=active</li>      </ul>       " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "CarePlan" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query careplan resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query careplan by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query careplan instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query careplan instance" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "  <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-condition</h4> <ul> <li>A client connected to a server and fetched all problems and health concerns for a patient, including current as well as historical problems and health concerns using GET/Condition?patient=[id]</li> </ul>        " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Condition" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query condition resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query condition by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query condition instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query condition instance" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "   <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-device</h4> <ul> <li>A client has connected to a server and fetched all Unique device identifier(s)(UDI)for a patient's implantable device(s)using GET /Device?patient=[id].</li> </ul>    " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Device" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query device resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query device by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query device instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query device instance" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value " <h4>Search Criteria for StructureDefinition-argo-documentreference</h4>     <p> The Server <strong>SHALL</strong> support fetching document references using either the direct query for DocumentReference resources as described here or the <a href=\"OperationDefinition-docref.html\">$docref operation</a>.  The Client <strong>SHALL</strong> support both methods.</p>  <p>A client has connected to a server and fetches document references for a patient:</p><ul><li><code>GET [base]/DocumentReference/$docref?patient=[id]</code></li></ul><p>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching references for a patient searched by type and/or date using:</p><ul><li><code>GET [base]/DocumentReference/$docref?patient=[id]{&amp;type=[type]}{&amp;period=[date]}</code></li></ul>     " ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-search-parameter-combination" ];
+         fhir:Extension.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "patient" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "type" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "period" ]
+         ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "DocumentReference" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Document Query DocumentReference resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Document Query DocumentReference by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Document Query DocumentReference instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Document Query DocumentReference instance" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "         <h4>Summary of US Core Search Criteria for StructureDefinition-us-core-goal</h4> <ul> <li>A client has connected to a server and fetched all of a patient's goals using GET [base]/Goal?patient=[id].</li> <li>A client has connected to a server and fetched all of a patient's goals over a specified time period using GET [base]/Goal?patient=[id]&amp;date=[date]{&amp;date=[date]}.</li> </ul>      " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Goal" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query goal resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query goal by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query goal instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query goal instance" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "     <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-immunization</h4> <ul> <li>A client has connected to a server and fetched all immunizations for a patient using GET /Immunization?patient=[id].</li> </ul>         " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Immunization" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query immunization resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query immunization by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query immunization instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query immunization instance" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "      <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-diagnosticreport</h4> <ul> <li>A client has connected to a server and fetched all of a patient's laboratory diagnostic reports by searching by category using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB.</li> <li>A client has connected to a server and fetched all of a patient's laboratory diagnostic reports searching by category code and date range using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched all of all of a patient's laboratory diagnostic reports searching by category and code using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's laboratory diagnostic reports searching by category and one or more codes and date range using GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}.</li> </ul>        " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "DiagnosticReport" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query diagnosticreport resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query diagnosticreport by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query diagnosticreport instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query diagnosticreport instance" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "       <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-observationresults</h4> <ul> <li>A client has connected to a server and fetched all of a patient's laboratory results by searching by category using GET [base]/Observation?patient=[id]&amp;category=laboratory.</li> <li>A client has connected to a server and fetched all of a patient's laboratory results searching by category code and date range using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched all of all of a patient's laboratory results searching by category and code using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's laboratory results searching by category and one or more codes and date range using GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}.</li> </ul> <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-smokingstatus</h4> <ul> <li>A client has connected to a server and fetched a patient's smoking status using GET [base]/Observation?patient=[id]&amp;code=72166-2.</li> </ul> <h4>Summary of Argonaut Search Criteria for StructureDefinition-us-core-vitalsigns</h4> <ul> <li>A client has connected to a server and fetched all of a patient's vital signs by searching by category using GET [base]/Observation?patient=[id]&amp;category=vital-signs.</li> <li>A client has connected to a server and fetched all of a patient's vital signs searching by category code and date range using GET [base]/Observation?patient=[id]&amp;category=vital-signs&amp;date=[date]{&amp;date=[date]}.</li> <li>A client has connected to a server and fetched any of a patient's vital signs by searching by one or more of the codes listed below using GET [base]/Observation?patient=[id]&amp;code[vital sign LOINC{,LOINC2,LOINC3,...}].</li> </ul> <ul> <li>A client <strong>SHOULD</strong> be capable of connecting to a server and fetching any of a patient's vital signs searching by one or more of the codes listed below and date range using GET [base]/Observation?patient=[id]&amp;code=[LOINC{,LOINC2...}]vital-signs&amp;date=[date]{&amp;date=[date]}.</li> </ul>      " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Observation" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query resultobs resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query resultobs by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query resultobs instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query resultobs instance" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "    <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a [Medication] resource.  If the Medication Resource is used in a MedicationStatement or a MedicationOrder,  then the READ and SEARCH Criteria <strong>SHALL</strong> be supported.</p>       " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Medication" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query medicationstatement resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query medicationstatement by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query medicationstatement instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query medicationstatement instance" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "     <p><strong>Summary of US Core Search Criteria for StructureDefinition-us-core-medicationstatement</strong></p> <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a Medication resource. When referencing a Medication resource, the resource may be <a href=\"http://hl7.org/fhir/2017Jan/references.html#contained\">contained</a> or an external resource. The server application can choose any one way or more than one method, but <strong>IF</strong> the an external reference to Medication is used, the server <strong>SHALL</strong> support the <a href=\"http://hl7.org/fhir/2017Jan/references.html#include\">include</a> parameter for searching this element. The client application <strong>SHALL</strong> support both methods.</p> <ul> <li>A client has connected to a server and fetched a patient's medications using:</li> </ul> <ol> <li>GET /MedicationStatement?patient=[id]</li> <li>GET /MedicationStatement?patient=[id]&amp;_include=MedicationStatement:medication</li> </ol>        " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "MedicationStatement" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query medicationstatement resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query medicationstatement by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query medicationstatement instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query medicationstatement instance" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "   <p><strong>Summary of US Core Search Criteria for StructureDefinition-us-core-medicationorder</strong></p> <p>The MedicationStatement and MedicationOrder resources can represent a medication, using either a code or refer to a Medication resource. When referencing a Medication resource, the resource may be <a href=\"http://hl7.org/fhir/references.html#contained\">contained</a> or an external resource. The server application can choose any one way or more than one method, but <strong>IF</strong> the an external reference to Medication is used, the server <strong>SHALL</strong> support the <a href=\"http://hl7.org/fhir/references.html#include\">include</a> parameter for searching this element. The client application <strong>SHALL</strong> support both methods.</p> <ul> <li>A client has connected to a server and fetched a patient's medications using:</li> </ul> <ol> <li>GET /MedicationOrder?patient=[id]</li> <li>GET /MedicationOrder?patient=[id]&amp;_include=MedicationOrder:medication</li> </ol>        " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "MedicationOrder" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query medicationorder resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query medicationorder by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query medicationorder instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query medicationorder instance" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Conformance.rest.resource.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut/StructureDefinition/argo-resource-documentation" ];
+         fhir:Extension.valueMarkdown [ fhir:value "   <h4>Summary of US Core Search Criteria for StructureDefinition-us-core-procedure</h4> <ul> <li>A client connected to a server and fetched all procedures for a patient, including current as well as historical Procedures GET/Procedure?patient=[id].</li> <li>A client has connected to a server and fetched all of a patient's procedures over a specified time period using GET /Procedure?patient=[id]&amp;date=[date]{&amp;date=[date]}.</li> </ul>          " ]
+       ];
+       fhir:Conformance.rest.resource.type [ fhir:value "Procedure" ];
+       fhir:Conformance.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows discovery of existing Argonaut Data Query procedure resources using different search criteria" ]
+       ], [
+         fhir:index 1;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a specific Argonaut Data Query procedure by id" ]
+       ], [
+         fhir:index 2;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "history-instance" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows review of changes to Argonaut Data Query procedure instance over time" ]
+       ], [
+         fhir:index 3;
+         fhir:Conformance.rest.resource.interaction.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:Conformance.rest.resource.interaction.code [ fhir:value "vread" ];
+         fhir:Conformance.rest.resource.interaction.documentation [ fhir:value "Allows retrieval of a historical version of a Argonaut Data Query procedure instance" ]
+       ]
+     ];
+     fhir:Conformance.rest.operation [
+       fhir:index 0;
+       fhir:Conformance.rest.operation.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/conformance-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ];
+       fhir:Conformance.rest.operation.name [ fhir:value "docref" ];
+       fhir:Conformance.rest.operation.definition [
+         fhir:link <http://fhir.org/guides/argonaut/OperationDefinition/docref>;
+         fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut/OperationDefinition/docref" ];
+         fhir:Reference.display [ fhir:value "Argonaut Get DocumentReferences" ]
+       ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

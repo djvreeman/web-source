@@ -1,0 +1,502 @@
+  <!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Data Query IG</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Argonaut Implementation Guide" />
+<meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+<!--
+   <a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+  -->
+   <div id="IG-status" style="font-size:30px">
+  <b>Argonaut Data Query Implementation Guide</b> Version 1.0.0<a id="argo-logo" no-external="true" href="http://argonautwiki.hl7.org"><img height="50" width="120" style="float:right;border:1px solid black" alt="Argonaut Project Logo" src="assets/images/ArgonautProject_logo.png"/> </a>
+</div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="US-Core" src="assets/images/usbanner.png"/></a></div>
+-->
+
+  </div>
+
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="definitions.html">General Guidance</a></li>
+              <li><a href="profiles.html">Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="valuesets.html">ValueSets</a></li>
+              <li><a href="opdefs.html">Operations</a></li>
+              <li><a href="searchparams.html">Search Parameters</a></li>
+              <li><a href="capstmnts.html">Conformance</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+
+<!-- Argonaut -->
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the Argonaut Data Query Implementation Guide (v1.0.0: Release) based on <a href="http://hl7.org/fhir/DSTU2">FHIR R2</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+
+<ul class="nav nav-tabs"><li><a href="StructureDefinition-argo-immunization.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="StructureDefinition-argo-immunization-mappings.html">Mappings</a></li>
+    <li><a href="StructureDefinition-argo-immunization.xml.html">XML</a></li>
+	<li><a href="StructureDefinition-argo-immunization.json.html">JSON</a></li>
+	<li><a href="StructureDefinition-argo-immunization.ttl.html">Turtle</a></li>
+</ul>
+
+
+<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition:Argonaut Immunization Profile - Detailed Descriptions <a title="link to here" class="self-link" href="StructureDefinition-argo-immunization-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
+
+<p>Definitions for the StructureDefinition-argo-immunization Profile.</p>
+
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile"> </a><a name="Immunization"> </a><b>Immunization(argoprofile)</b></td></tr>
+  <tr><td>Definition</td><td><p>Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">imm-1</b>: If immunization was not administred (wasNotGiven=true) then there SHALL be no reaction nor explanation.reason present (: )<br/><b title="Formal Invariant Identifier">imm-2</b>: If immunization was administered (wasNotGiven=false) then explanation.reasonNotGiven SHALL be absent. (: )</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.id"> </a><a name="Immunization.id"> </a><b>Immunization.id</b></td></tr>
+  <tr><td>Definition</td><td><p>The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">id</a></td></tr>
+  <tr><td>Comments</td><td><p>The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.meta"> </a><a name="Immunization.meta"> </a><b>Immunization.meta</b></td></tr>
+  <tr><td>Definition</td><td><p>The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/resource.html#meta">Meta</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.implicitRules"> </a><a name="Immunization.implicitRules"> </a><b>Immunization.implicitRules</b></td></tr>
+  <tr><td>Definition</td><td><p>A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.language"> </a><a name="Immunization.language"> </a><b>Immunization.language</b></td></tr>
+  <tr><td>Definition</td><td><p>The base language in which the resource is written.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>A human language.<br/>The codes SHALL be taken from  <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td>Comments</td><td><p>Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.text"> </a><a name="Immunization.text"> </a><b>Immunization.text</b></td></tr>
+  <tr><td>Definition</td><td><p>A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: dom-1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/narrative.html">Narrative</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>narrative, html, xhtml, display</td></tr>
+  <tr><td>Comments</td><td><p>Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.contained"> </a><a name="Immunization.contained"> </a><b>Immunization.contained</b></td></tr>
+  <tr><td>Definition</td><td><p>These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/resource.html">Resource</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>inline resources, anonymous resources, contained resources</td></tr>
+  <tr><td>Comments</td><td><p>This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.extension"> </a><a name="Immunization.extension"> </a><b>Immunization.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.modifierExtension"> </a><a name="Immunization.modifierExtension"> </a><b>Immunization.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.identifier"> </a><a name="Immunization.identifier"> </a><b>Immunization.identifier</b></td></tr>
+  <tr><td>Definition</td><td><p>A unique identifier assigned to this immunization record.</p>
+</td></tr>
+  <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="http://hl7.org/fhir/DSTU2/resource.html#identifiers">discussion</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#Identifier">Identifier</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.status"> </a><a name="Immunization.status"> </a><b>Immunization.status</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the current status of the vaccination event.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>Constrained list of immunizaiotn status<br/>The codes SHALL be taken from <a href="ValueSet-vacc-status.html">Argonaut Immunization Status</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>Will generally be set to show that the immunization has been completed.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.date"> </a><a name="Immunization.date"> </a><b>Immunization.date</b></td></tr>
+  <tr><td>Definition</td><td><p>Date vaccine administered or was to be administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>When immunizations are given a specific date and time should always be known.   When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccineCode"> </a><a name="Immunization.vaccineCode"> </a><b>Immunization.vaccineCode</b></td></tr>
+  <tr><td>Definition</td><td><p>Vaccine that was administered or was to be administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The CVX (vaccine administered) code system<br/>The codes SHALL be taken from <a href="http://hl7.org/fhir/DSTU2/daf/valueset-daf-cvx.html">Vaccine Administered Value Set</a>; other codes may be used where these codes are not suitable</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">arg-1</b>: SHOULD have a translation to the to the NDC value set (: coding.where(system='http://hl7.org/fhir/sid/ndc').empty())</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.patient"> </a><a name="Immunization.patient"> </a><b>Immunization.patient</b></td></tr>
+  <tr><td>Definition</td><td><p>The patient who either received or did not receive the immunization.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="StructureDefinition-argo-patient.html" title="http://fhir.org/guides/argonaut/StructureDefinition/argo-patient">Argonaut Patient Profile</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>Patient</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.wasNotGiven"> </a><a name="Immunization.wasNotGiven"> </a><b>Immunization.wasNotGiven</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates if the vaccination was or was not given.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reported"> </a><a name="Immunization.reported"> </a><b>Immunization.reported</b></td></tr>
+  <tr><td>Definition</td><td><p>True if this administration was reported rather than directly administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+  <tr><td>Comments</td><td><p>May need source of reported info (e.g. parent), but leave out for now.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.performer"> </a><a name="Immunization.performer"> </a><b>Immunization.performer</b></td></tr>
+  <tr><td>Definition</td><td><p>Clinician who administered the vaccine.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/practitioner.html" title="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.requester"> </a><a name="Immunization.requester"> </a><b>Immunization.requester</b></td></tr>
+  <tr><td>Definition</td><td><p>Clinician who ordered the vaccination.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/practitioner.html" title="http://hl7.org/fhir/StructureDefinition/Practitioner">Practitioner</a>)</td></tr>
+  <tr><td>Comments</td><td><p>Other participants - delegate to Provenance resource.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.encounter"> </a><a name="Immunization.encounter"> </a><b>Immunization.encounter</b></td></tr>
+  <tr><td>Definition</td><td><p>The visit or admission or other contact between patient and health care provider the immunization was performed as part of.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/encounter.html" title="http://hl7.org/fhir/StructureDefinition/Encounter">Encounter</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.manufacturer"> </a><a name="Immunization.manufacturer"> </a><b>Immunization.manufacturer</b></td></tr>
+  <tr><td>Definition</td><td><p>Name of vaccine manufacturer.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/organization.html" title="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.location"> </a><a name="Immunization.location"> </a><b>Immunization.location</b></td></tr>
+  <tr><td>Definition</td><td><p>The service delivery location where the vaccine administration occurred.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/location.html" title="http://hl7.org/fhir/StructureDefinition/Location">Location</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.lotNumber"> </a><a name="Immunization.lotNumber"> </a><b>Immunization.lotNumber</b></td></tr>
+  <tr><td>Definition</td><td><p>Lot number of the  vaccine product.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.expirationDate"> </a><a name="Immunization.expirationDate"> </a><b>Immunization.expirationDate</b></td></tr>
+  <tr><td>Definition</td><td><p>Date vaccine batch expires.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#date">date</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.site"> </a><a name="Immunization.site"> </a><b>Immunization.site</b></td></tr>
+  <tr><td>Definition</td><td><p>Body site where vaccine was administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The site at which the vaccine was administered<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-immunization-site.html">Codes for Immunization Site of Administration</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.route"> </a><a name="Immunization.route"> </a><b>Immunization.route</b></td></tr>
+  <tr><td>Definition</td><td><p>The path by which the vaccine product is taken into the body.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The route by which the vaccine was administered<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-immunization-route.html">Immunization Route Codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.doseQuantity"> </a><a name="Immunization.doseQuantity"> </a><b>Immunization.doseQuantity</b></td></tr>
+  <tr><td>Definition</td><td><p>The quantity of vaccine product that was administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#Quantity">Quantity</a>(<a href="http://hl7.org/fhir/DSTU2/datatypes.html#SimpleQuantity" title="http://hl7.org/fhir/StructureDefinition/SimpleQuantity">SimpleQuantity</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.note"> </a><a name="Immunization.note"> </a><b>Immunization.note</b></td></tr>
+  <tr><td>Definition</td><td><p>Extra information about the immunization that is not conveyed by the other attributes.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#Annotation">Annotation</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.explanation"> </a><a name="Immunization.explanation"> </a><b>Immunization.explanation</b></td></tr>
+  <tr><td>Definition</td><td><p>Reasons why a vaccine was or was not administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/backboneelement.html">BackboneElement</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.explanation.id"> </a><a name="Immunization.explanation.id"> </a><b>Immunization.explanation.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.explanation.extension"> </a><a name="Immunization.explanation.extension"> </a><b>Immunization.explanation.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.explanation.modifierExtension"> </a><a name="Immunization.explanation.modifierExtension"> </a><b>Immunization.explanation.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.explanation.reason"> </a><a name="Immunization.explanation.reason"> </a><b>Immunization.explanation.reason</b></td></tr>
+  <tr><td>Definition</td><td><p>Reasons why a vaccine was administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The reason why a vaccine was administered<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-immunization-reason.html">Immunization Reason Codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.explanation.reasonNotGiven"> </a><a name="Immunization.explanation.reasonNotGiven"> </a><b>Immunization.explanation.reasonNotGiven</b></td></tr>
+  <tr><td>Definition</td><td><p>Reason why a vaccine was not administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The reason why a vaccine was not administered<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-no-immunization-reason.html">Immunization Reasons for Not Immunizing Codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction"> </a><a name="Immunization.reaction"> </a><b>Immunization.reaction</b></td></tr>
+  <tr><td>Definition</td><td><p>Categorical data indicating that an adverse event is associated in time to an immunization.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/backboneelement.html">BackboneElement</a></td></tr>
+  <tr><td>Comments</td><td><p>A reaction may be an indication of an allergy or intolerance and, if this is determined to be the case,  it should be recorded as a new <a href="http://hl7.org/fhir/DSTU2/allergyintolerance.html">AllergyIntolerance</a> resource instance as most systems will not query against  past Immunization.reaction elements.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction.id"> </a><a name="Immunization.reaction.id"> </a><b>Immunization.reaction.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction.extension"> </a><a name="Immunization.reaction.extension"> </a><b>Immunization.reaction.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction.modifierExtension"> </a><a name="Immunization.reaction.modifierExtension"> </a><b>Immunization.reaction.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction.date"> </a><a name="Immunization.reaction.date"> </a><b>Immunization.reaction.date</b></td></tr>
+  <tr><td>Definition</td><td><p>Date of reaction to the immunization.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">dateTime</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction.detail"> </a><a name="Immunization.reaction.detail"> </a><b>Immunization.reaction.detail</b></td></tr>
+  <tr><td>Definition</td><td><p>Details of the reaction.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/observation.html" title="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.reaction.reported"> </a><a name="Immunization.reaction.reported"> </a><b>Immunization.reaction.reported</b></td></tr>
+  <tr><td>Definition</td><td><p>Self-reported indicator.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol"> </a><a name="Immunization.vaccinationProtocol"> </a><b>Immunization.vaccinationProtocol</b></td></tr>
+  <tr><td>Definition</td><td><p>Contains information about the protocol(s) under which the vaccine was administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/backboneelement.html">BackboneElement</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.id"> </a><a name="Immunization.vaccinationProtocol.id"> </a><b>Immunization.vaccinationProtocol.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references).</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">id</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.extension"> </a><a name="Immunization.vaccinationProtocol.extension"> </a><b>Immunization.vaccinationProtocol.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.modifierExtension"> </a><a name="Immunization.vaccinationProtocol.modifierExtension"> </a><b>Immunization.vaccinationProtocol.modifierExtension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension">Extension</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.doseSequence"> </a><a name="Immunization.vaccinationProtocol.doseSequence"> </a><b>Immunization.vaccinationProtocol.doseSequence</b></td></tr>
+  <tr><td>Definition</td><td><p>Nominal position in a series.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.description"> </a><a name="Immunization.vaccinationProtocol.description"> </a><b>Immunization.vaccinationProtocol.description</b></td></tr>
+  <tr><td>Definition</td><td><p>Contains the description about the protocol under which the vaccine was administered.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.authority"> </a><a name="Immunization.vaccinationProtocol.authority"> </a><b>Immunization.vaccinationProtocol.authority</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates the authority who published the protocol.  E.g. ACIP.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/references.html#reference">Reference</a>(<a href="http://hl7.org/fhir/DSTU2/organization.html" title="http://hl7.org/fhir/StructureDefinition/Organization">Organization</a>)</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.series"> </a><a name="Immunization.vaccinationProtocol.series"> </a><b>Immunization.vaccinationProtocol.series</b></td></tr>
+  <tr><td>Definition</td><td><p>One possible path to achieve presumed immunity against a disease - within the context of an authority.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.seriesDoses"> </a><a name="Immunization.vaccinationProtocol.seriesDoses"> </a><b>Immunization.vaccinationProtocol.seriesDoses</b></td></tr>
+  <tr><td>Definition</td><td><p>The recommended number of doses to achieve immunity.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#positiveInt">positiveInt</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.targetDisease"> </a><a name="Immunization.vaccinationProtocol.targetDisease"> </a><b>Immunization.vaccinationProtocol.targetDisease</b></td></tr>
+  <tr><td>Definition</td><td><p>The targeted disease.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The disease target of the vaccination protocol<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-vaccination-protocol-dose-target.html">Vaccination Protocol Dose Target Codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.doseStatus"> </a><a name="Immunization.vaccinationProtocol.doseStatus"> </a><b>Immunization.vaccinationProtocol.doseStatus</b></td></tr>
+  <tr><td>Definition</td><td><p>Indicates if the immunization event should &quot;count&quot; against  the protocol.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The status of the vaccination protocol (i.e. should this count)<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-vaccination-protocol-dose-status.html">Vaccination Protocol Dose Status codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+  <tr><td>Comments</td><td><p>May need to differentiate between status declarations by a provider vs. a CDS engine.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Immunization:argoprofile.vaccinationProtocol.doseStatusReason"> </a><a name="Immunization.vaccinationProtocol.doseStatusReason"> </a><b>Immunization.vaccinationProtocol.doseStatusReason</b></td></tr>
+  <tr><td>Definition</td><td><p>Provides an explanation as to why an immunization event should or should not count against the protocol.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/terminologies.html">Binding</a></td><td>The reason for the determining if a vaccination should count or why vaccination should not count.<br/>For example codes, see <a href="http://hl7.org/fhir/DSTU2/valueset-vaccination-protocol-dose-status-reason.html">Vaccination Protocol Dose Status Reason codes</a></td></tr>
+  <tr><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+</table>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        Argonaut Data Query fhir.argonaut.r2#1.0.0 &copy; FHIR DSTU2 (IG Publisher v1.9.0-11142) generated on Wed, Feb 15, 2017 08:37+1100. |
+             <!--  <a style="color: #81BEF7" rel="license" <!-- <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/DSTU2license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+</body>
+</html>
+
+</body>
+</html>

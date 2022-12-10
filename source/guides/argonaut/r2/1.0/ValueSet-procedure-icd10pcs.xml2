@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="procedure-icd10pcs"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <url value="http://fhir.org/guides/argonaut/ValueSet/procedure-icd10pcs"/>
+  <name value="Argonaut Procedure Type ICD-10-PCS Codes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://argonautwiki.hl7.org"/>
+      <rank value="0"/>
+    </telecom>
+  </contact>
+  <date value="2016-08-10T00:00:00+10:00"/>
+  <description value="This value set defines a set of codes from ICD10-PCS that can be used to indicate a type of procedure performed"/>
+  <immutable value="false"/>
+  <copyright value="The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS).  CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS."/>
+  <extensible value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.icd10data.com/icd10pcs"/>
+    </include>
+  </compose>
+</ValueSet>
