@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:fhir="http://hl7.org/fhir/feed" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>FHIR Foundation FHIR Publications</title>
+    <description>New publications by FHIR Foundation></description>
+    <link>http://fhir.org/guides/package-feed.xml</link>
+    <generator>HL7, Inc FHIR Publication tooling</generator>
+    <lastBuildDate>Thu, 25 Nov 2021 03:17:52 GMT</lastBuildDate>
+    <atom:link href="http://fhir.org/guides/package-feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 25 Nov 2021 03:17:52 +0200</pubDate>
+    <language>en</language>
+    <ttl>600</ttl>
+    <item>
+      <title>CDC Opioid MME Calculator</title>
+      <description>Release 1</description>
+      <link>http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 25 Nov 2021 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Clinical Quality Framework Common FHIR Assets</title>
+      <description>Release 1</description>
+      <link>http://fhir.org/guides/cqf/common/4.0.1/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/cqf/common/4.0.1/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 12 Nov 2021 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Argonaut Clinical Notes Implementation Guide</title>
+      <description> First published version (1.0.0)</description>
+      <link>http://fhir.org/guides/argonaut/clinicalnotes/1.0.0/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/clinicalnotes/1.0.0/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 18 Apr 2019 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Argonaut Questionnaire Implementation Guide</title>
+      <description> First published version (1.0.0)</description>
+      <link>http://fhir.org/guides/argonaut/questionnaire/1.0.0/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/questionnaire/1.0.0/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 18 Apr 2019 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Argonaut Scheduling Implementation Guide</title>
+      <description>Formal Release 1.0.0</description>
+      <link>http://fhir.org/guides/argonaut/scheduling/release1/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/scheduling/release1/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Mon, 23 Apr 2018 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Argonaut Provider Directory Guide</title>
+      <description>Release 1</description>
+      <link>http://fhir.org/guides/argonaut/pd/release1/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/pd/release1/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 15 Jun 2017 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Argonaut Provider Directory Guide</title>
+      <description>1st Published Draft</description>
+      <link>http://fhir.org/guides/argonaut/pd/draft1/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/pd/draft1/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>1.9.0</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 23 Dec 2016 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Argonaut Data Query Implementation Guide</title>
+      <description>Formal Release 1.0.0</description>
+      <link>http://fhir.org/guides/argonaut/r2/1.0/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/r2/1.0/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>1.0.2</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 23 Dec 2016 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>HSPC FHIR Implementation Guide</title>
+      <description>Draft</description>
+      <link>http://fhir.org/guides/hspc/core/0.1.0/index.html</link>
+      <guid isPermaLink="true">http://fhir.org/guides/hspc/core/0.1.0/index.html</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>1.9.0</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 23 Dec 2016 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

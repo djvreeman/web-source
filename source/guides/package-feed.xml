@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:fhir="http://hl7.org/fhir/feed" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>FHIR Foundation FHIR Packages</title>
+    <description>New Packages published by FHIR Foundation></description>
+    <link>http://fhir.org/guides/package-feed.xml</link>
+    <generator>HL7, Inc FHIR Publication tooling</generator>
+    <lastBuildDate>Thu, 25 Nov 2021 03:17:51 GMT</lastBuildDate>
+    <atom:link href="http://fhir.org/guides/package-feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 25 Nov 2021 03:17:51 -0200</pubDate>
+    <language>en</language>
+    <ttl>600</ttl>
+    <!-- manually register Chilean packages -->
+    <!-- CL core latest release as of 17-11-2022 -->
+    <item>
+      <title>hl7.fhir.cl.corecl#1.7.0</title>
+      <description>El Core FHIR Chileno (built Thu, Jul 09, 2022 00:00+0000)</description>
+      <link>http://fhir.org/guides/chile/hl7.fhir.cl.corecl.1.7.0.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/chile/hl7.fhir.cl.corecl.1.7.0.tgz</guid>
+      <dc:creator>HL7 Chile</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 09 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
+    <!-- CL Core current stable release as of 17-11-2022 -->
+    <item>
+      <title>hl7.fhir.cl.corecl#1.0.0</title>
+      <description>El Core FHIR Chileno (built Thu, Jan 15, 2022 00:00+0000)</description>
+      <link>http://fhir.org/guides/chile/hl7.fhir.cl.corecl.1.0.0.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/chile/hl7.fhir.cl.corecl.1.0.0.tgz</guid>
+      <dc:creator>HL7 Chile</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 15 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <!-- Guía de Implementación Receta-CL Current stable release -->
+    <item>
+      <title>hl7.fhir.cl.recetachile#1.0.0</title>
+      <description>Guía de Implementación Receta-CL  (built Thu, Sep 29, 2022 00:00+0000)</description>
+      <link>http://fhir.org/guides/chile/hl7.fhir.cl.recetachile.0.9.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/chile/hl7.fhir.cl.recetachile.0.9.tgz</guid>
+      <dc:creator>HL7 Chile</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
+    </item>
+    <!-- end manually registered chilean packages -->    
+    <item>
+      <title>fhir.cdc.opioid-mme-r4#3.0.0</title>
+      <description>Opioid Morphine Milligram Equivalent (MME) calculation logic in FHIR and Clinical Quality Language (CQL) (built Thu, Nov 25, 2021 15:13+1100+11:00)</description>
+      <link>http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 25 Nov 2021 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.cqf.common#4.0.1</title>
+      <description>This implementation guide contains common FHIR assets for use in CQFramework content IGs, including FHIRHelpers and the FHIR-ModelInfo libraries. (built Fri, Nov 12, 2021 16:25+1100+11:00)</description>
+      <link>http://fhir.org/guides/cqf/common/4.0.1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/cqf/common/4.0.1/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 12 Nov 2021 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.argonaut.clinicalnotes#1.0.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/argonaut/clinicalnotes/1.0.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/clinicalnotes/1.0.0/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 18 Apr 2019 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.argonaut.questionnaire#1.0.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/argonaut/questionnaire/1.0.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/questionnaire/1.0.0/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 18 Apr 2019 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.argonaut.scheduling#1.0.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/argonaut/scheduling/release1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/scheduling/release1/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Mon, 23 Apr 2018 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.argonaut.pd#1.0.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/argonaut/pd/release1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/pd/release1/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>3.0.1</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Thu, 15 Jun 2017 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.argonaut.pd#0.1.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/argonaut/pd/draft1/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/pd/draft1/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>1.9.0</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 23 Dec 2016 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.argonaut.r2#1.0.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/argonaut/r2/1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/argonaut/r2/1.0/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>1.0.2</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 23 Dec 2016 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>fhir.hspc.core#0.1.0</title>
+      <description></description>
+      <link>http://fhir.org/guides/hspc/core/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/guides/hspc/core/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Foundation</dc:creator>
+      <fhir:version>1.9.0</fhir:version>
+      <fhir:kind>fhir.ig</fhir:kind>
+      <pubDate>Fri, 23 Dec 2016 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
