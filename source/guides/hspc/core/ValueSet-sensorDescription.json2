@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "sensorDescription",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/sensorDescription",
+  "version": "0.01",
+  "name": "HSPC Sensor Description value set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "Select Intermountain Healthcare Sensor Description code system codes.",
+  "immutable": true,
+  "copyright": "Intermountain Healthcare",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/sensorDescription"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1555 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>Profile hspc-allergyintolerance</h2>
+
+<pre class="json">
+{
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html">resourceType</a>" : "StructureDefinition",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.id">id</a>" : "hspc-allergyintolerance",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.url">url</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-allergyintolerance",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.name">name</a>" : "Profile hspc-allergyintolerance",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "HSPC",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact.telecom">telecom</a>" : [
+        {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://healthcaresoa.org"
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.date">date</a>" : "2015-07-28",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "rim",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v3",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "RIM Mapping"
+    },
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "w5",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/fhir/w5",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "W5 Mapping"
+    },
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "v2",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v2",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "HL7 v2 Mapping"
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.kind">kind</a>" : "resource",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.type">type</a>" : "AllergyIntolerance",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "HSPC AllergyIntolerance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Allergy or Intolerance (generally: Risk of adverse reaction to a substance)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Substances include, but are not limited to: a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Allergy",
+          "Intolerance",
+          "Adverse Reaction"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Observation[classCode=OBS, moodCode=EVN]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "clinical.general"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Logical id of this artifact",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "id"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.meta",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.meta",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Metadata about the resource",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.meta",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Meta"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.implicitRules",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.implicitRules",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A set of rules under which this content was created",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.implicitRules",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.language",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.language",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Language of the resource content",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The base language in which the resource is written.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.language",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+            {
+              "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.value[x]">valueReference</a>" : {
+                "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
+              }
+            }
+          },
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A human language.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Text summary of the resource, for human interpretation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.text",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Narrative"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "dom-1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Act.text?"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.contained",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.contained",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contained, inline Resources",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.contained",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.id">id</a>" : "20",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            "url"
+          },
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">ordered</a>" : false,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension:dateofresolution$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "DateOfResolution",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension:patientifnormedindicator$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "PatientIfnormedIndicator",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of values to indicate affirmative or negative",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v2-0136"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension:causeofdeathinidcator$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "CauseOfDeathInidcator",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of values to indicate affirmative or negative",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v2-0136"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.modifierExtension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.identifier",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.identifier",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "External ids for this item",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "This records identifiers associated with this allergy/intolerance concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.identifier",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IAM-7"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "id"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "id"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "active | active-confirmed | inactive | resolved | refuted | entered-in-error",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Decision support would typically raise alerts for 'active' and 'active-confirmed' (and potetially 'resolved') and ignore a 'refuted' reaction. In particular, 'refuted' may be useful for reconciliation of the Adverse Reaction List. Some implementations may choose to make this field mandatory.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "State"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.status",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-status"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IAM-17"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "statusCode"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "status"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.type",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.type",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "allergy | intolerance - Underlying mechanism (if known)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identification of the underlying physiological mechanism for the reaction risk.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Allergic (typically immune-mediated) reactions have been traditionally regarded as an indicator for potential escalation to significant future risk. Contemporary knowledge suggests that some reactions previously thought to be immune-mediated are, in fact, non-immune, but in some cases can still pose a life threatening risk. It is acknowledged that many clinicians may not be in a position to distinguish the mechanism of a particular reaction. Often the term &quot;allergy&quot; is used rather generically and may overlap with the use of &quot;intolerance&quot; - in practice the boundaries between these two concepts may not be well-defined or understood. This data element is included nevertheless, because many legacy systems have captured this attribute. Immunologic testing may provide supporting evidence for the basis of the reaction and the causative substance, but no tests are 100% sensitive or specific for sensitivity to a particular substance. If, as is commonly the case, it is unclear whether the reaction is due to an allergy or an intolerance, then the type element should be omitted from the resource.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Category",
+          "Class"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.type",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Identification of the underlying physiological mechanism for a Reaction Risk.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-type"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IAM-9"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "code"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "class"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.category",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.category",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "food | medication | environment",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Category of the identified substance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the substance where coding systems are used, and is effectively redundant in that situation.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Category",
+          "Type",
+          "Reaction Type",
+          "Class"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.category",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Category of an identified substance.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-category"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AL1-2"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "value &lt; IntoleranceValue (Agent)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "class"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.criticality",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.criticality",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "low | high | unable-to-assess",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "The default criticality value for any propensity to an adverse reaction should be 'Low Risk', indicating at the very least a relative contraindication to deliberate or voluntary exposure to the substance. 'High Risk' is flagged if the clinician has identified a propensity for a more serious or potentially life-threatening reaction, such as anaphylaxis, and implies an absolute contraindication to deliberate or voluntary exposure to the substance. If this element is missing, the criticality is unknown (though it may be known elsewhere).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Severity",
+          "Seriousness",
+          "Contra-indication",
+          "Risk"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.criticality",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AL1-4"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "grade"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Allergy or intolerance code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Code for an allergy or intolerance statement (either a positive or a negated/excluded statement).  This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., &quot;Latex&quot;), an allergy or intolerance condition (e.g., &quot;Latex allergy&quot;), or a negated/excluded code for a specific substance or class (e.g., &quot;No latex allergy&quot;) or a general or categorical negated statement (e.g.,  &quot;No known allergy&quot;, &quot;No known drug allergies&quot;).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "It is strongly recommended that this element be populated using a terminology, where possible. For example, some terminologies used include RxNorm, SNOMED CT, DM+D, NDFRT, ICD-9, IDC-10, UNI, ATC and CPT. Plain text should only be used if there is no appropriate terminology available. Additional details can be specified in the text.  When a substance or product code is specified for the 'code' element, the &quot;default&quot; semantic context is that this is a positive statement of an allergy or intolerance (depending on the value of the 'type' element, if present) condition to the specified substance/product.  In the corresponding SNOMED CT allergy model, the specified substance/product is the target (destination) of the &quot;Causative agent&quot; relationship.  The 'substanceExposureRisk' extension is available as a structured and more flexible alternative to the 'code' element for making positive or negative allergy or intolerance statements.  This extension provides the capability to make &quot;no known allergy&quot; (or &quot;no risk of adverse reaction&quot;) statements regarding any coded substance/product (including cases when a pre-coordinated &quot;no allergy to x&quot; concept for that substance/product does not exist).  If the 'substanceExposureRisk' extension is present, the AllergyIntolerance.code element SHALL be omitted.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Code"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.code",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AL1-3 / IAM-3"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "substance/product:  .participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]  negated/excluded substance/product:  .participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]  positive or negated/excluded condition/situation:  Observation.code=ASSERTION; Observation.value"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "what"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.patient",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.patient",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Who the sensitivity is for",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The patient who has the allergy or intolerance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Patient"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.patient",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Patient"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(PID-3)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".participation[typeCode=SBJ].role[classCode=PAT]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "who.focus"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.attestedDate",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.attestedDate",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Date record was believed accurate",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates the most recent date on which the recorder has asserted that the information represented by this AllergyIntolerance record is accurate.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This is typically the date of last change, but it's possible to update this date without changing any other data if you just want to say 'this allergy/intolerance record is up to date as of now.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.attestedDate",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IAM-20"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".participation[typeCode=AUT].time"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "when.recorded"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.recorder:documented",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.recorder",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "Documented",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Who recorded the sensitivity",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Individual who recorded the record and takes responsibility for its content.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Author"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.recorder",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".participation[typeCode=AUT].role"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "who.author"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reporter:reportedreceived",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reporter",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "ReportedReceived",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Source of the information about the allergy",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The source of the information about the allergy that is recorded.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "The recorder takes repsonsibility for the content, but can reference the source from where they got it.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Source",
+          "Informant"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reporter",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IAM-14 (if patient) / IAM-18 (if practitioner)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".participation[typeCode=INF].role"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "who.source"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.onset",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.onset",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Date(/time) when manifestations showed",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Record of the date and/or time of the onset of the Allergy or Intolerance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.onset",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "effectiveTime.low"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.lastOccurrence",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.lastOccurrence",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Date(/time) of last known occurrence of a reaction",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Represents the date and/or time of the last known occurrence of a reaction event.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This date may be replicated by one of the Onset of Reaction dates. Where a textual representation of the date of last occurrence is required e.g. 'In Childhood, '10 years ago' the Comment element should be used.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.lastOccurrence",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)].effectiveTime"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.note",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.note",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional text not captured in other fields",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "For example: including reason for flagging a seriousness of 'High Risk'; and instructions related to future exposure or administration of the substance, such as administration within an Intensive Care Unit or under corticosteroid cover. The notes should be related to an allergy or intolerance as a condition in general and not related to any particular episode of it. For episode notes and descriptions, use AllergyIntolerance.event.description and  AllergyIntolerance.event.notes.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.note",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Annotation"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "subjectOf.observationEvent[code=&quot;annotation&quot;].value"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Adverse Reaction Events linked to exposure to substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Details about each adverse reaction event linked to exposure to the identified substance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "BackboneElement"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content",
+          "modifiers"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BackboneElement.modifierExtension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Specific substance or pharmaceutical product considered to be responsible for event",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identification of the specific substance (or pharmaceutical product) considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Coding of the specific substance (or pharmaceutical product) with a terminology capable of triggering decision support should be used wherever possible.  The 'code' element allows for the use of a specific substance or pharmaceutical product, or a group or class of substances. In the case of an allergy or intolerance to a class of substances, (for example, &quot;penicillins&quot;), the 'reaction.substance' element could be used to code the specific substance that was identifed as having caused the reaction (for example, &quot;amoxycillin&quot;). Duplication of the value in the 'code' and 'reaction.substance' elements is acceptable when a specific substance has been recorded in 'code'.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.substance",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Codes defining the type of the substance (including pharmaceutical products).",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.certainty",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.certainty",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "unlikely | likely | confirmed - clinical certainty about the specific substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Cause"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.certainty",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Statement about the degree of clinical certainty that a specific substance was the cause of the manifestation in an reaction event.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/reaction-event-certainty"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "uncertaintyCode"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.manifestation:reactiontosubstance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.manifestation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "ReactionToSubstance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Clinical symptoms/signs associated with the Event",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Clinical symptoms and/or signs that are observed or associated with the adverse reaction event.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.  Terminologies commonly used include, but are not limited to, SNOMED CT or ICD10.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Symptoms",
+          "Signs"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.manifestation",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of codes that descibe the findings of a reaction",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/clinicalFinding"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AL1-5"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "code"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.description",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.description",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Description of the event as a whole",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Text description about the reaction as a whole, including details of the manifestation if required.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Use the description to provide any details of a particular event of the occurred reaction such as circumstances, reaction specifics, what happened before/after. Information, related to the event, but not describing a particular care should be captured in the comment field. For example: at the age of four, the patient was given penicillin for strep throat and subsequently developed severe hives.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Narrative",
+          "Text"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.description",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "text"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.onset",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.onset",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Date(/time) when manifestations showed",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Record of the date and/or time of the onset of the Reaction.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.onset",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AL1-6"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "effectiveTime.low"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.severity",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.severity",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "mild | moderate | severe (of event as a whole)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "It is acknowledged that this assessment is very subjective. There may be some some specific practice domains where objective scales have been applied. Objective scales can be included in this model as extensions.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.severity",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/reaction-event-severity"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.exposureRoute",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.exposureRoute",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "How the subject was exposed to the substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identification of the route by which the subject was exposed to the substance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Coding of the route of exposure with a terminology should be used wherever possible.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.exposureRoute",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of codes that describe the means by which a substance got into or onto a patient that caused a reaction.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v3-RouteOfAdministration"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].routeCode"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.note",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.note",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Text about event not captured in other fields",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Additional text about the adverse reaction event not captured in other fields.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Use this field to record information indirectly related to a particular event and not captured in the description. For example: Clinical records are no longer available, recorded based on information provided to the patient by her mother and her mother is deceased.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "AllergyIntolerance.reaction.note",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Annotation"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "subjectOf.observationEvent[code=&quot;annotation&quot;].value"
+          }
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "HSPC AllergyIntolerance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.substance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A set of codes that describe materials or matter",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/substance"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension:dateofresolution$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "DateOfResolution",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension:patientifnormedindicator$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "PatientIfnormedIndicator",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of values to indicate affirmative or negative",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v2-0136"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.extension:causeofdeathinidcator$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "CauseOfDeathInidcator",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of values to indicate affirmative or negative",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v2-0136"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.recorder:documented",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.recorder",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "Documented",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reporter:reportedreceived",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reporter",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "ReportedReceived",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.manifestation:reactiontosubstance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.manifestation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "ReactionToSubstance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of codes that descibe the findings of a reaction",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/clinicalFinding"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "AllergyIntolerance:hspcallergyintolerance.reaction.exposureRoute",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "AllergyIntolerance.reaction.exposureRoute",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of codes that describe the means by which a substance got into or onto a patient that caused a reaction.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v3-RouteOfAdministration"
+          }
+        }
+      }
+    }
+  }
+}</pre>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

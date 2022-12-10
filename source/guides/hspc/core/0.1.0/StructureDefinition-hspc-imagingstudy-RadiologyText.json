@@ -1,0 +1,615 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hspc-imagingstudy-RadiologyText",
+  "url": "http://fhir.org/guides/hspc/StructureDefinition/hspc-imagingstudy-RadiologyText",
+  "name": "Radiology Text",
+  "display": "Radiology Text",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2016-02-03",
+  "description": "The textual report given by the radiologist.",
+  "fhirVersion": "1.5.0",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "contextType": "resource",
+  "context": [
+    "ImagingStudy"
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Extension:radiologytext",
+        "path": "Extension",
+        "name": "RadiologyText",
+        "short": "Extension",
+        "definition": "The textual report given by the radiologist.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Extension:radiologytext.id",
+        "path": "Extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "id": "36",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection",
+        "path": "Extension.extension",
+        "name": "TextSection",
+        "short": "Extension",
+        "definition": "The textual report for the specific, numerical section of the Radiology Text.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection.extension",
+        "path": "Extension.extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection.valueAttachment",
+        "path": "Extension.extension.valueAttachment",
+        "short": "Content in a format defined elsewhere",
+        "definition": "For referring to data content defined in other formats.",
+        "comments": "When providing a summary view (for example with Observation.value[x]) Attachment should be represented with a brief display text such as \"Attachment\".",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Attachment",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Attachment"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "att-1",
+            "severity": "error",
+            "human": "It the Attachment has data, it SHALL have a contentType",
+            "expression": "data.empty() or contentType.exists()",
+            "xpath": "not(exists(f:data)) or exists(f:contentType)"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ED/RP"
+          },
+          {
+            "identity": "rim",
+            "map": "ED"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber",
+        "path": "Extension.extension",
+        "name": "SequenceNumber",
+        "short": "Extension",
+        "definition": "A number that denotes the order in which the Text Sections should appear.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber.extension",
+        "path": "Extension.extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber.valueUnsignedInt",
+        "path": "Extension.extension.valueUnsignedInt",
+        "short": "Primitive Type unsignedInt",
+        "definition": "An integer with a value that is not negative (e.g. >= 0)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt",
+            "profile": "http://hl7.org/fhir/StructureDefinition/unsignedInt"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.url",
+        "path": "Extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://fhir.org/guides/hspc/StructureDefinition/hspc-imagingstudy-RadiologyText",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "code"
+          },
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "decimal"
+          },
+          {
+            "code": "id"
+          },
+          {
+            "code": "instant"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "markdown"
+          },
+          {
+            "code": "oid"
+          },
+          {
+            "code": "positiveInt"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "unsignedInt"
+          },
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Address"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Annotation"
+          },
+          {
+            "code": "Attachment"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "ContactPoint"
+          },
+          {
+            "code": "Count"
+          },
+          {
+            "code": "Distance"
+          },
+          {
+            "code": "Duration"
+          },
+          {
+            "code": "HumanName"
+          },
+          {
+            "code": "Identifier"
+          },
+          {
+            "code": "Money"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "Reference"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "Signature"
+          },
+          {
+            "code": "Timing"
+          },
+          {
+            "code": "Meta"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Extension:radiologytext",
+        "path": "Extension",
+        "name": "RadiologyText",
+        "definition": "The textual report given by the radiologist.",
+        "min": 0,
+        "max": "*",
+        "isModifier": false
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection",
+        "path": "Extension.extension",
+        "name": "TextSection",
+        "definition": "The textual report for the specific, numerical section of the Radiology Text.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Extension:radiologytext.extension:textsection.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Attachment",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Attachment"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber",
+        "path": "Extension.extension",
+        "name": "SequenceNumber",
+        "definition": "A number that denotes the order in which the Text Sections should appear.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Extension:radiologytext.extension:sequencenumber.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "unsignedInt",
+            "profile": "http://hl7.org/fhir/StructureDefinition/unsignedInt"
+          }
+        ]
+      },
+      {
+        "id": "Extension:radiologytext.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhir.org/guides/hspc/StructureDefinition/hspc-imagingstudy-RadiologyText"
+      }
+    ]
+  }
+}

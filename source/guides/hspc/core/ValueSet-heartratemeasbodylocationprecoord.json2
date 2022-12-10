@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "heartratemeasbodylocationprecoord",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/heartratemeasbodylocationprecoord",
+  "version": "0.01",
+  "name": "HSPC Heart Rate Measurement Body Location Precoodinated",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-06-11",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "181332001",
+            "display": "Radial artery"
+          },
+          {
+            "code": "13383001",
+            "display": "Apex of heart"
+          }
+        ]
+      }
+    ]
+  }
+}

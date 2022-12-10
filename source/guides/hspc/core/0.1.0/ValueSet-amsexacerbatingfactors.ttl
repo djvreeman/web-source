@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/amsexacerbatingfactors> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "amsexacerbatingfactors"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/amsexacerbatingfactors"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Altered Mental Status Exacerbating Factors Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Health Services Platform Consortium (HSPC)"];
+  fhir:ValueSet.date [ fhir:value "2015-02-09"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "SELECT SNOMED CT code system values describing things that worsen altered mental status"];
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "73595000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stress (finding)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "64572001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Disease (disorder)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "279046003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pressure - physical agent (physical force)" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "386476006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Touch (regime/therapy)" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "130989002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sleep deprivation (finding)" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "255641001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Caffeine (substance)" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "39953003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tobacco (substance)" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "53041004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alcohol (substance)" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "256235009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Exercise (observable entity)" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "80638004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Work-related activity, function (observable entity)" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "provenance-hspc-action-method",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/provenance-hspc-action-method",
+  "name": "Action Method",
+  "status": "active",
+  "publisher": "CIMI",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://cimi.org/valueset/attribution/action-method"
+        }
+      ]
+    },
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://www.cimi.org/"
+        }
+      ]
+    }
+  ],
+  "description": "Type codes for HSPC Attribution action method",
+  "compose": {
+    "include": [
+      {
+        "system": "http://cimi.org/vs/attribution/action-method",
+        "concept": [
+          {
+            "code": "1",
+            "display": "Verbal"
+          },
+          {
+            "code": "2",
+            "display": "Written"
+          },
+          {
+            "code": "3",
+            "display": "Telephone"
+          }
+        ]
+      }
+    ]
+  }
+}

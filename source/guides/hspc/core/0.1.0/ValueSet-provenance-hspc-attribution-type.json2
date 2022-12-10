@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "provenance-hspc-attribution-type",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/provenance-hspc-attribution-type",
+  "name": "Attribution Code",
+  "status": "active",
+  "publisher": "CIMI",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://cimi.org/valueset/attribution"
+        }
+      ]
+    },
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://www.cimi.org/"
+        }
+      ]
+    }
+  ],
+  "description": "Type codes for HSPC Attribution provenance construct",
+  "compose": {
+    "include": [
+      {
+        "system": "http://cimi.org/vs/patient/attribution-type",
+        "concept": [
+          {
+            "code": "1",
+            "display": "Observed"
+          },
+          {
+            "code": "2",
+            "display": "Updated"
+          },
+          {
+            "code": "3",
+            "display": "Verified"
+          }
+        ]
+      }
+    ]
+  }
+}

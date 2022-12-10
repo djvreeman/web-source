@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/amsalleviatingfactors> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "amsalleviatingfactors"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/amsalleviatingfactors"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Altered Mental Status Alleviating Factors Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Health Services Platform Consortium (HSPC)"];
+  fhir:ValueSet.date [ fhir:value "2015-02-09"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "SELECT SNOMED CT code system values that describe things that help mitigate altered mental status."];
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "258157001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rest (observable entity)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "414039005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Distraction (procedure)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "228563004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Simonton technique (regime/therapy)" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "64299003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Relaxation training therapy (regime/therapy)" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21065008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Music therapy (regime/therapy)" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18512000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Individual psychotherapy (regime/therapy)" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "76168009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Group psychotherapy (regime/therapy)" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "85614001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Environmental intervention (regime/therapy)" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "304891004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cognitive - behavior therapy (regime/therapy)" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "166001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral therapy (regime/therapy)" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "182832007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Procedure related to management of drug administration (procedure)" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "276049006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Self-help group support (finding)" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "266707007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Drug addiction therapy (regime/therapy)" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

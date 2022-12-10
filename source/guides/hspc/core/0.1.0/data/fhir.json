@@ -1,0 +1,11 @@
+﻿{
+  "path": "c:\\work\\org.hl7.fhir\\build\\publish",
+  "canonical": "http://fhir.org/guides/hspc",
+  "errorCount": 4324,
+  "version": "1.5.0",
+  "revision": "9083",
+  "versionFull": "1.5.0-9083",
+  "totalFiles": 480,
+  "processedFiles": 282,
+  "genDate": "Tue, Jul 19, 2016 17:27+1000"
+}

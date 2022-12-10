@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "specialArrangement",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/specialArrangement",
+  "name": "HSPC Special Arrangement value set",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "description": "The list of codes that describe how the data came into being.",
+  "copyright": "Intermountain Healthcare HDD",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/specialArrangement"
+      }
+    ]
+  }
+}

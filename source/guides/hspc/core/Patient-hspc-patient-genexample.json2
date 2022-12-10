@@ -1,0 +1,34 @@
+{
+  "resourceType": "Patient",
+  "id": [
+    null
+  ],
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "text": "137 Nowhere Street, Erewhon 9132",
+      "line": [
+        "137 Nowhere Street"
+      ],
+      "city": "Erewhon",
+      "district": "Madison",
+      "postalCode": "9132",
+      "period": {
+        "start": "2010-03-23",
+        "end": "2010-07-01"
+      }
+    }
+  ],
+  "contact": {
+    "relationship": {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/ValueSet/patient-contact-relationship",
+          "code": "emergency",
+          "display": "Emergency"
+        }
+      ]
+    }
+  }
+}

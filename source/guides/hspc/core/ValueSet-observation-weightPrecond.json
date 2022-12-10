@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "observation-weightPrecond",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/observation-weightPrecond",
+  "version": "0.01",
+  "name": "HSPC Body Weight Associated Precondition",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-05-19",
+  "description": "SNOMED CT code system values descending from the following:'body position finding' 9851009",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "445541000",
+            "display": "Dry body weight (observable entity)"
+          },
+          {
+            "code": "424927000",
+            "display": "Body weight with shoes (observable entity)"
+          },
+          {
+            "code": "425024002",
+            "display": "Body weight without shoes (observable entity)"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/observation-hspc-weightPrecond"
+      }
+    ]
+  }
+}

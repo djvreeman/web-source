@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bodytempbodylocation",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/bodytempbodylocation",
+  "version": "0.01",
+  "name": "HSPC Body Temperature Measurement Body Location",
+  "immutable": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "description": "SELECT SNOMED CT code system values.",
+  "copyright": "TBD",
+  "status": "draft",
+  "extensible": true,
+  "date": "2015-06-11",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "362732006",
+            "display": "axilla"
+          },
+          {
+            "code": "1910005",
+            "display": "ear"
+          },
+          {
+            "code": "21082005",
+            "display": "mouth"
+          },
+          {
+            "code": "181261002",
+            "display": "rectum"
+          },
+          {
+            "code": "39937001",
+            "display": "skin"
+          },
+          {
+            "code": "362620003",
+            "display": "entire temporal region"
+          },
+          {
+            "code": "89837001",
+            "display": "urinary bladder"
+          }
+        ]
+      }
+    ]
+  }
+}

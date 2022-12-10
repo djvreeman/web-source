@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bodylaterality",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/bodylaterality",
+  "version": "0.01",
+  "name": "HSPC Body Laterality Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-09-07",
+  "description": "SELECT SNOMED CT code system values descending from 'Side' (182353008).",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "182353008"
+          }
+        ]
+      }
+    ]
+  }
+}

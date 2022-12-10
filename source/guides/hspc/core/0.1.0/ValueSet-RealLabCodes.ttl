@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/RealLabCodes> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "RealLabCodes"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/RealLabCodes"];
+  fhir:ValueSet.name [ fhir:value "HSPC Real Labs"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2015-02-20T13:44:49+11:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "Ordinal LOINC codes used in HSPC"];
+  fhir:ValueSet.copyright [ fhir:value "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2964-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Specific gravity of Body fluid" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2965-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Specific gravity of Urine" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38875-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "INR in Unspecified specimen by Coagulation assay|INR in Platelet poor plasma or blood by Coagulation assay" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9322-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol.total/Cholesterol in HDL [Percentile]" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

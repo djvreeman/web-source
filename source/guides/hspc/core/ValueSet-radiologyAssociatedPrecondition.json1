@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "radiologyAssociatedPrecondition",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/radiologyAssociatedPrecondition",
+  "version": "0.01",
+  "name": "HSPC Radiology Associated Precondition value set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "275879008",
+            "display": "On examination - deaf (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

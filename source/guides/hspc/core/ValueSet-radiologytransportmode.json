@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "radiologytransportmode",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/radiologytransportmode",
+  "version": "0.01",
+  "name": "HSPC Radiology Transport Mode",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "701374003",
+            "display": "Bed transporter (physical object)"
+          },
+          {
+            "code": "89149003",
+            "display": "Stretcher, device (physical object)"
+          },
+          {
+            "code": "255327002",
+            "display": "Ambulatory (qualifier value)"
+          },
+          {
+            "code": "85455005",
+            "display": "Cart, device (physical object)"
+          },
+          {
+            "code": "58938008",
+            "display": "Wheel chair, device (physical object)"
+          }
+        ]
+      }
+    ]
+  }
+}

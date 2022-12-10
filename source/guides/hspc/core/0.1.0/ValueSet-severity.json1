@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "severity",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/severity",
+  "version": "0.01",
+  "name": "HSPC Severities Value Set Definition",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values descending from 'Severities (qualifier value)' (272141005).",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "272141005"
+          }
+        ]
+      }
+    ]
+  }
+}

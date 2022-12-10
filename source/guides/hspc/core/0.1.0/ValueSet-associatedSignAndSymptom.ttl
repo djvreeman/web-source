@@ -1,0 +1,131 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/associatedSignAndSymptom> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "associatedSignAndSymptom"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/associatedSignAndSymptom"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Associated Sign and Symptom value set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2015-05-19"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "The set of concepts that describe any signs or symptoms that may be correlated to the observed condition."];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "84229001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fatigue (finding)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "247347003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Discomfort (finding)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "193462001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insomnia (disorder)" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "424272000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Inadequate immune status (finding)" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "48079002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Disturbance in mood (finding)" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21134002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Disability (finding)" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "230145002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Difficulty breathing (finding)" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21762000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Decreased vascular flow (finding)" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "275520000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Claudication (finding)" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23583003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Inflammation (morphologic abnormality)" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3723001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arthritis (disorder)" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "71393004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Soreness (finding)" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "255365009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tightness sensation quality (qualifier value)" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "271587009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stiffness (finding)" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "307077003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Feeling hopeless (finding)" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1402001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fear (finding)" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35489007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Depressive disorder (disorder)" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "55929007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Feeling irritable (finding)" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "48694002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anxiety (finding)" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "73595000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stress (finding)" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "131148009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bleeding (finding)" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3006004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Disturbance of consciousness (finding)" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

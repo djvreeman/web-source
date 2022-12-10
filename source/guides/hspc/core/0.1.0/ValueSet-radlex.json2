@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "radlex",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/radlex",
+  "name": "RadLex",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-10-15",
+  "description": "All codes contained in the RadLex code system.",
+  "copyright": "This content is licensed under the copyright of RSNA RadLex © and subject to RSNA license guidelines (http://www.rsna.org/uploadedFiles/RSNA/Content/Informatics/RadLex_License_Agreement_and_Terms_of_Use_V2_Final.pdf)",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.radlex.org"
+      }
+    ]
+  }
+}

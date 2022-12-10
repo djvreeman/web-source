@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "LOINCOrderables",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/LOINCOrderables",
+  "name": "HSPC LOINC Orderable Codes",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-10-15",
+  "description": "LOINC codes that are marked as 'orderable' or 'both'.",
+  "copyright": "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Both"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Order"
+          }
+        ]
+      }
+    ]
+  }
+}

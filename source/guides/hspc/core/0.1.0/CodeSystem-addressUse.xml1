@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="addressUse"/>
+  <url value="http://fhir.org/guides/hspc/CodeSystem/addressUse"/>
+  <name value="HSPCPractitionerAddressUse"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+    </telecom>
+  </contact>
+  <description value="A set of codes that describe the manner in which an addressed is used."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://fhir.org/guides/hspc/ValueSet/addressUse"/>
+  <content value="complete"/>
+  <concept>
+    <code value="BAD"/>
+    <display value="Bad address"/>
+  </concept>
+  <concept>
+    <code value="PHYS"/>
+    <display value="Physical visit address"/>
+  </concept>
+  <concept>
+    <code value="PST"/>
+    <display value="Postal address"/>
+  </concept>
+  <concept>
+    <code value="HP"/>
+    <display value="Primary home"/>
+  </concept>
+  <concept>
+    <code value="PUB"/>
+    <display value="Public"/>
+  </concept>
+  <concept>
+    <code value="TMP"/>
+    <display value="Temporary address"/>
+  </concept>
+  <concept>
+    <code value="HV"/>
+    <display value="Vacation home"/>
+  </concept>
+  <concept>
+    <code value="WP"/>
+    <display value="Work place"/>
+  </concept>
+  <concept>
+    <code value="H"/>
+    <display value="Home address"/>
+  </concept>
+  <concept>
+    <code value="DIR"/>
+    <display value="Direct address"/>
+  </concept>
+  <concept>
+    <code value="CONF"/>
+    <display value="Conficential address"/>
+  </concept>
+</CodeSystem>

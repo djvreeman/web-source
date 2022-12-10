@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "id": "observation-dataOriginationMode",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/observation-dataOriginationMode",
+  "version": "0.01",
+  "name": "HSPC Data Origination Mode",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-05-19",
+  "description": "The description of how the data came into being.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "414135002",
+            "display": "Estimated"
+          },
+          {
+            "code": "258104002",
+            "display": "Measured"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/observation-hspc-dataOriginationMode"
+      }
+    ]
+  }
+}

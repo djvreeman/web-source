@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??CodeSystem/telecomUse> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "telecomUse"];
+  fhir:CodeSystem.url [ fhir:value "http://fhir.org/guides/hspc/CodeSystem/telecomUse"];
+  fhir:CodeSystem.name [ fhir:value "TelecomUse"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:CodeSystem.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "A set of codes that describe the type of usage for a telecom value."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://fhir.org/guides/hspc/ValueSet/telecomUse"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "NS" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Not specified" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The type of telecom system was not specified for the given number." ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

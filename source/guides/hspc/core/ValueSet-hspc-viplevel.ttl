@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/hspc-viplevel> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hspc-viplevel"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/hspc-viplevel"];
+  fhir:ValueSet.name [ fhir:value "HSPC VIP Level"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "A set of codes that describe the kind of documentation used to validate a date of birth."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/v3/PatientImportance" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "BM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Board member" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FD" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Financial donor" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FOR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Foreign dignitary" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "GOVT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Government dignitary" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "DFM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician family member" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SFM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Staff family member" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "STF" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Staff memeber" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "DR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Staff physician" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "VIP" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Very important person" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

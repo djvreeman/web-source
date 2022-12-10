@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bodytempmethoddevice",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/bodytempmethoddevice",
+  "version": "0.01",
+  "name": "HSPC Body Temperature Measurement Method/Device",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-06-11",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "467862000",
+            "display": "capillary patient thermometer, mercury"
+          },
+          {
+            "code": "462983001",
+            "display": "liquid-crystal patient thermometer"
+          },
+          {
+            "code": "118376009",
+            "display": "thermocouple"
+          }
+        ]
+      },
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/bodytempmethoddevice"
+      }
+    ]
+  }
+}

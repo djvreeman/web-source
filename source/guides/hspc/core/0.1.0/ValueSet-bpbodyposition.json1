@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bpbodyposition",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/bpbodyposition",
+  "version": "0.01",
+  "name": "HSPC Systolic Blood Pressure Measurement Body Position",
+  "immutable": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "description": "SELECT SNOMED CT code system values.",
+  "copyright": "TBD",
+  "status": "draft",
+  "extensible": true,
+  "date": "2015-06-11",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "40199007",
+            "display": "Supine body position (finding)"
+          },
+          {
+            "code": "33586001",
+            "display": "Sitting position (finding)"
+          },
+          {
+            "code": "10904000",
+            "display": "Orthostatic body position (finding)"
+          },
+          {
+            "code": "414585002",
+            "display": "Left lateral tilt (finding)"
+          },
+          {
+            "code": "415346000",
+            "display": "Right lateral tilt (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

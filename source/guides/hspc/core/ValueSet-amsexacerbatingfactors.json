@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "amsexacerbatingfactors",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/amsexacerbatingfactors",
+  "version": "0.01",
+  "name": "HSPC Altered Mental Status Exacerbating Factors Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values describing things that worsen altered mental status",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "73595000",
+            "display": "Stress (finding)"
+          },
+          {
+            "code": "64572001",
+            "display": "Disease (disorder)"
+          },
+          {
+            "code": "279046003",
+            "display": "Pressure - physical agent (physical force)"
+          },
+          {
+            "code": "386476006",
+            "display": "Touch (regime/therapy)"
+          },
+          {
+            "code": "130989002",
+            "display": "Sleep deprivation (finding)"
+          },
+          {
+            "code": "255641001",
+            "display": "Caffeine (substance)"
+          },
+          {
+            "code": "39953003",
+            "display": "Tobacco (substance)"
+          },
+          {
+            "code": "53041004",
+            "display": "Alcohol (substance)"
+          },
+          {
+            "code": "256235009",
+            "display": "Exercise (observable entity)"
+          },
+          {
+            "code": "80638004",
+            "display": "Work-related activity, function (observable entity)"
+          }
+        ]
+      }
+    ]
+  }
+}

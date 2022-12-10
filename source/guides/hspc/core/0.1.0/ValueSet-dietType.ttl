@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/dietType> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "dietType"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/dietType"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Diet Type value set."];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Health Services Platform Consortium (HSPC)"];
+  fhir:ValueSet.date [ fhir:value "2015-08-06"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "Select HL7 ActCode codes."];
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "BR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "breikost(GE)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "DM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diabetes mellitus diet" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FAST" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "fasting" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FORMULA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "formula diet" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "GF" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gluten Free" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LF" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Low Fat" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LP" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Low Protein" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LQ" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Liquid" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LS" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Low Sodium" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "N" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Normal Diet" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NF" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No Fat" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PAF" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phenylalanine Free" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PAR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parenteral" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "RD" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reduction Diet" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SCH" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Schonkost (GE)" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SUPPLEMENT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "nutritional supplement" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "T" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tea only" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "VLI" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Low Valin, Leucine, Isoleucine" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

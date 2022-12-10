@@ -1,0 +1,936 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>Profile hspc-laborder</h2>
+
+<pre class"rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+<??StructureDefinition/hspc-laborder> a fhir:StructureDefinition;
+  <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.id">fhir:Resource.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;hspc-laborder&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.url">fhir:StructureDefinition.url</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/StructureDefinition/hspc-laborder&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.name">fhir:StructureDefinition.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Profile hspc-laborder&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.status">fhir:StructureDefinition.status</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.publisher">fhir:StructureDefinition.publisher</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact">fhir:StructureDefinition.contact</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact.telecom">fhir:StructureDefinition.contact.telecom</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://healthcaresoa.org&quot; ]     ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.date">fhir:StructureDefinition.date</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#dateTime">fhir:value</a> &quot;2015-10-15&quot;^^xsd:date];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping">fhir:StructureDefinition.mapping</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">fhir:StructureDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;qdm&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">fhir:StructureDefinition.mapping.uri</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://www.healthit.gov/quality-data-model&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">fhir:StructureDefinition.mapping.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Quality Data Model&quot; ]
+  ], [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">fhir:StructureDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">fhir:StructureDefinition.mapping.uri</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/v3&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">fhir:StructureDefinition.mapping.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;RIM Mapping&quot; ]
+  ], [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">fhir:StructureDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">fhir:StructureDefinition.mapping.uri</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/w5&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">fhir:StructureDefinition.mapping.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;W5 Mapping&quot; ]
+  ], [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">fhir:StructureDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;v2&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">fhir:StructureDefinition.mapping.uri</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/v2&quot; ];
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">fhir:StructureDefinition.mapping.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HL7 v2 Mapping&quot; ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.kind">fhir:StructureDefinition.kind</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;resource&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.abstract">fhir:StructureDefinition.abstract</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.type">fhir:StructureDefinition.type</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;DiagnosticRequest&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.baseDefinition">fhir:StructureDefinition.baseDefinition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/DiagnosticRequest&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.derivation">fhir:StructureDefinition.derivation</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;constraint&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot">fhir:StructureDefinition.snapshot</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot.element">fhir:StructureDefinition.snapshot.element</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">fhir:ElementDefinition.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC Lab Order&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;A request for a diagnostic service&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;A record of a request for a diagnostic investigation service to be performed.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Observation[classCode=OBS, moodCode=RQO, code&lt;\&quot;diagnostic order\&quot;]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;clinical.diagnostics&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;qdm&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Patient Characteristic&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.id&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.id&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Logical id of this artifact&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The only time that a resource does not have an id is when it is being submitted to the server using a create operation.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Resource.id&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;id&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.meta&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.meta&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Metadata about the resource&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Resource.meta&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Meta&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.implicitRules&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.implicitRules&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;A set of rules under which this content was created&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Resource.implicitRules&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;uri&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 4;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.language&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.language&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Language of the resource content&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The base language in which the resource is written.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Resource.language&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;code&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">fhir:extension</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet&quot; ];
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueReference</a> [
+             <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/all-languages&gt;;
+             <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/all-languages&quot; ]           ]         ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;extensible&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;A human language.&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/languages&gt;;
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/languages&quot; ]         ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 5;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.text&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.text&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Text summary of the resource, for human interpretation&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \&quot;text blob\&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">fhir:ElementDefinition.alias</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;narrative&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;html&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;xhtml&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;display&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DomainResource.text&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Narrative&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;dom-1&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Act.text?&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 6;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.contained&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.contained&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Contained, inline Resources&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">fhir:ElementDefinition.alias</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;inline resources&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;anonymous resources&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;contained resources&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DomainResource.contained&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Resource&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 7;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.extension&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.extension&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Additional Content defined by implementations&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">fhir:ElementDefinition.alias</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;extensions&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;user content&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DomainResource.extension&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Extension&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 8;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.modifierExtension&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.modifierExtension&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Extensions that cannot be ignored&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">fhir:ElementDefinition.alias</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;extensions&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;user content&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DomainResource.modifierExtension&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Extension&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 9;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.identifier&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.identifier&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Identifiers assigned to this order&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Identifiers assigned to this order instance by the orderer and/or  the receiver and/or order fulfiller.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2). For further discussion and examples see the [notes section](DiagnosticRequest.html#4.22.4) below.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.identifier&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Identifier&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.id&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;id&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 10;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.definition&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.definition&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Protocol or definition&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Protocol or definition followed by this request.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.definition&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 11;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.basedOn&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.basedOn&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;What request fulfills&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Plan/proposal/order fulfilled by this request.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.basedOn&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 12;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.replaces&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.replaces&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;What request replaces&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The request takes the place of the referenced completed or terminated request(s).&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.replaces&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 13;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.requisition&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.requisition&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Identifier of composite request&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Composite request this is part of.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.requisition&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Identifier&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 14;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.status&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.status&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;draft | active | suspended | completed | entered-in-error | cancelled&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The status of the order.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Typically the system placing the order sets the status to \&quot;requested\&quot;. Thereafter, the order is maintained by the receiver that updates the status as the request is handled.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.status&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;code&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;required&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;The status of a diagnostic order.&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/request-status&gt;;
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/request-status&quot; ]         ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.statusCode also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;status&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 15;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.stage&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.stage&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;proposal | plan | orig. order | encoded +&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Whether the request is a proposal, plan, an original order or a reflex order.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.stage&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;CodeableConcept&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;extensible&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;The kind of diagnostic request&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/diagnostic-request-stage&gt;;
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/diagnostic-request-stage&quot; ]         ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;class&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 16;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.code&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.code&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;What’s being requested/ordered&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.code&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;CodeableConcept&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;preferred&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;The set of LOINC codes that represent orderable tests.&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ValueSet/LOINCOrderables&quot; ]         ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;v2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;OBX-4&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.code&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;what&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 17;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.subject&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.subject&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Information about an individual or animal receiving health care services&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Demographics and other administrative information about an individual or animal receiving care or other health-related services.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">fhir:ElementDefinition.alias</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;SubjectOfCare Client Resident&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.subject&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/StructureDefinition/hspc-patient&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Patient[classCode=PAT]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;cda&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ClinicalDocument.recordTarget.patientRole&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;administrative.individual&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;qdm&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Patient Characteristic&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 18;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.context&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.context&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Encounter or Episode during which request was created&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;An encounter or episode of care that provides additional information about the healthcare context in which this request is made.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.context&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Encounter&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/EpisodeOfCare&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;context&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 19;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.occurrence[x]&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.occurrence[x]&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;When testing should occur&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The date/time at which the diagnostic testing should occur.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.occurrence[x]&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;dateTime&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Period&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Timing&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.effectiveTime&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;when.planned&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 20;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.authored&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.authored&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Date request signed&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;When the request transitioned to being actionable.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.authored&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;dateTime&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;when.recorded&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 21;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.requester&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.requester&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;A person with a  formal responsibility in the provisioning of healthcare or related services&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;A person who is directly or indirectly involved in the provisioning of healthcare.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Note that a cab driver no longer fits the bill. You probably would be interested in the organization rather than the individual?&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.requester&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;v2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;PRD (as one example)&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Role&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;servd&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Provider&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;administrative.individual&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 22;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.performerType&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.performerType&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Performer role&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Desired type of performer for doing the diagnostic testing. (.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;this is a  role, not  aparticipation type.  I.e. doesn’t describe the task, describes the capacity.  Examples “compounding pharmacy” or “psychiatrist” or “internal referral”.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.performerType&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;CodeableConcept&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;example&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Indicates specific responsibility of an individual within the care team, such as \&quot;Primary physician\&quot;, \&quot;Team coordinator\&quot;, \&quot;Caregiver\&quot;, etc.&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/participant-role&gt;;
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/participant-role&quot; ]         ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;who.actor&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 23;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.performer&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.performer&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Requested perfomer&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;The desired perfomer for doing the diagnostic testing.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Use the standard [XXX extension]() for listing alternative  alternative performers and/or roles and/or preference.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.performer&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Organization&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Device&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 4;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.participation[AUT or PFM]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;who.actor&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 24;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.reason&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.reason&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Explanation/Justification for test&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;An explanation or justification for why this diagnostic investigation is being requested.   This is often for billing purposes.  May relate to the resources referred to in supportingInformation.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.   Use CodeableConcept text element if the data is free (uncoded) text as shown in the [CT Scan example](diagnosticrequest-example-di.html).&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.reason&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;CodeableConcept&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;example&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Diagnosis or problem codes justifying the reason for requesting the diagnostic investigation.&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/condition-code&gt;;
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/condition-code&quot; ]         ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.reasonCode&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;why&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 25;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.supportingInformation&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.supportingInformation&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Additional clinical information&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Additional clinical information about the patient or specimen that may influence test interpretations.  This includes observations explicitly requested by the producer(filler) to provide context or supporting information needed to complete the order.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as \&quot;ask at order entry questions (AOEs)\&quot;. Examples include reporting the amount of inspired oxygen for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">fhir:ElementDefinition.alias</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Ask at order entry question&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;AOE&quot;;
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.supportingInformation&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;v2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;OBR-13&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;outboundRelationship[typeCode=SPRT]/target[classCode=ACT, moodCode=EVN]&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 26;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.note&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.note&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Comments&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Any other notes and comments made about the service request. (e.g. \&quot;patient hates needles\&quot;).&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.note&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Annotation&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;.inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\&quot;annotation\&quot;].value&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 27;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.relevantHistory&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.relevantHistory&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Request provenance&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Key events in the history of the request.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">fhir:ElementDefinition.comments</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;This may not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.relevantHistory&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:int ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Provenance&quot; ]       ]     ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential">fhir:StructureDefinition.differential</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential.element">fhir:StructureDefinition.differential.element</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">fhir:ElementDefinition.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC Lab Order&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;qdm&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Patient Characteristic&quot; ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.encounter&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.encounter&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/StructureDefinition/hspc-genencounter&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.event&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.event&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;*&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.event.actor&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.event.actor&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 4;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.priority&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.priority&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 5;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.status&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.status&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 6;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.code&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.code&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:int ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;preferred&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;The set of LOINC codes that represent orderable tests.&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">fhir:ElementDefinition.binding.valueSetReference</a> [
+           <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ValueSet/LOINCOrderables&quot; ]         ]       ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 7;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.subject&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.subject&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/StructureDefinition/hspc-patient&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ], [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 8;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest:hspclaborder.requester&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;DiagnosticRequest.requester&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;Reference&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:ElementDefinition.type.profile</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract&quot; ]       ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:ElementDefinition.mustSupport</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ]
+  ].
+
+</pre>
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

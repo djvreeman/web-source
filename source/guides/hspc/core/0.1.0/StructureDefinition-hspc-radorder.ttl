@@ -1,0 +1,983 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??StructureDefinition/hspc-radorder> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hspc-radorder"];
+  fhir:StructureDefinition.url [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-radorder"];
+  fhir:StructureDefinition.name [ fhir:value "Profile hspc-radorder"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.publisher [ fhir:value "HSPC"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:StructureDefinition.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.date [ fhir:value "2015-10-15"^^xsd:date];
+  fhir:StructureDefinition.mapping [
+     fhir:index 0;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "qdm" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://www.healthit.gov/quality-data-model" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "Quality Data Model" ]
+  ], [
+     fhir:index 1;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM Mapping" ]
+  ], [
+     fhir:index 2;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "w5" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/fhir/w5" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "W5 Mapping" ]
+  ], [
+     fhir:index 3;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "v2" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v2" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "HL7 v2 Mapping" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "resource"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.type [ fhir:value "DiagnosticRequest"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/DiagnosticRequest"];
+  fhir:StructureDefinition.derivation [ fhir:value "constraint"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest" ];
+       fhir:ElementDefinition.name [ fhir:value "HSPC Radiology Order" ];
+       fhir:ElementDefinition.short [ fhir:value "A request for a diagnostic service" ];
+       fhir:ElementDefinition.definition [ fhir:value "A record of a request for a diagnostic investigation service to be performed." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "clinical.diagnostics" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "qdm" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Patient Characteristic" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.id" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.id" ];
+       fhir:ElementDefinition.short [ fhir:value "Logical id of this artifact" ];
+       fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ];
+       fhir:ElementDefinition.comments [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "id" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.meta" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.meta" ];
+       fhir:ElementDefinition.short [ fhir:value "Metadata about the resource" ];
+       fhir:ElementDefinition.definition [ fhir:value "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.meta" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Meta" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.implicitRules" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.implicitRules" ];
+       fhir:ElementDefinition.short [ fhir:value "A set of rules under which this content was created" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." ];
+       fhir:ElementDefinition.comments [ fhir:value "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.implicitRules" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.language" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.language" ];
+       fhir:ElementDefinition.short [ fhir:value "Language of the resource content" ];
+       fhir:ElementDefinition.definition [ fhir:value "The base language in which the resource is written." ];
+       fhir:ElementDefinition.comments [ fhir:value "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.language" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet" ];
+           fhir:Extension.valueReference [
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>;
+             fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/all-languages" ]
+           ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.text" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Text summary of the resource, for human interpretation" ];
+       fhir:ElementDefinition.definition [ fhir:value "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ];
+       fhir:ElementDefinition.comments [ fhir:value "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "narrative";
+         fhir:index 0
+       ], [
+         fhir:value "html";
+         fhir:index 1
+       ], [
+         fhir:value "xhtml";
+         fhir:index 2
+       ], [
+         fhir:value "display";
+         fhir:index 3
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Narrative" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "dom-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Act.text?" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.contained" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.contained" ];
+       fhir:ElementDefinition.short [ fhir:value "Contained, inline Resources" ];
+       fhir:ElementDefinition.definition [ fhir:value "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ];
+       fhir:ElementDefinition.comments [ fhir:value "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "inline resources";
+         fhir:index 0
+       ], [
+         fhir:value "anonymous resources";
+         fhir:index 1
+       ], [
+         fhir:value "contained resources";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.contained" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Resource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Identifiers assigned to this order" ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifiers assigned to this order instance by the orderer and/or  the receiver and/or order fulfiller." ];
+       fhir:ElementDefinition.comments [ fhir:value "The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2). For further discussion and examples see the [notes section](DiagnosticRequest.html#4.22.4) below." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".id" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.definition" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.definition" ];
+       fhir:ElementDefinition.short [ fhir:value "Protocol or definition" ];
+       fhir:ElementDefinition.definition [ fhir:value "Protocol or definition followed by this request." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.definition" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.basedOn" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.basedOn" ];
+       fhir:ElementDefinition.short [ fhir:value "What request fulfills" ];
+       fhir:ElementDefinition.definition [ fhir:value "Plan/proposal/order fulfilled by this request." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.basedOn" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.replaces" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.replaces" ];
+       fhir:ElementDefinition.short [ fhir:value "What request replaces" ];
+       fhir:ElementDefinition.definition [ fhir:value "The request takes the place of the referenced completed or terminated request(s)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.replaces" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.requisition" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.requisition" ];
+       fhir:ElementDefinition.short [ fhir:value "Identifier of composite request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Composite request this is part of." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.requisition" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.status" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.status" ];
+       fhir:ElementDefinition.short [ fhir:value "draft | active | suspended | completed | entered-in-error | cancelled" ];
+       fhir:ElementDefinition.definition [ fhir:value "The status of the order." ];
+       fhir:ElementDefinition.comments [ fhir:value "Typically the system placing the order sets the status to \"requested\". Thereafter, the order is maintained by the receiver that updates the status as the request is handled." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The status of a diagnostic order." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/request-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/request-status" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".statusCode also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "status" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.stage" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.stage" ];
+       fhir:ElementDefinition.short [ fhir:value "proposal | plan | orig. order | encoded +" ];
+       fhir:ElementDefinition.definition [ fhir:value "Whether the request is a proposal, plan, an original order or a reflex order." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.stage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The kind of diagnostic request" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/diagnostic-request-stage>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/diagnostic-request-stage" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "class" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.code" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.code" ];
+       fhir:ElementDefinition.short [ fhir:value "What’s being requested/ordered" ];
+       fhir:ElementDefinition.definition [ fhir:value "A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested." ];
+       fhir:ElementDefinition.comments [ fhir:value "Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.code" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "RadLex is a lexicon of radiologic terms.  This value set contains all terms from the RadLex Playbook which is a subset of RadLex containing prodedure and ordareable radiological terms" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <??/ValueSet/radlex>;
+           fhir:Reference.reference [ fhir:value "ValueSet/radlex" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "OBX-4" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".code" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "what" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.subject" ];
+       fhir:ElementDefinition.short [ fhir:value "Information about an individual or animal receiving health care services" ];
+       fhir:ElementDefinition.definition [ fhir:value "Demographics and other administrative information about an individual or animal receiving care or other health-related services." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "SubjectOfCare Client Resident";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Patient[classCode=PAT]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "ClinicalDocument.recordTarget.patientRole" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "administrative.individual" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "qdm" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Patient Characteristic" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.context" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.context" ];
+       fhir:ElementDefinition.short [ fhir:value "Encounter or Episode during which request was created" ];
+       fhir:ElementDefinition.definition [ fhir:value "An encounter or episode of care that provides additional information about the healthcare context in which this request is made." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.context" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Encounter" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "context" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.occurrence[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.occurrence[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "When testing should occur" ];
+       fhir:ElementDefinition.definition [ fhir:value "The date/time at which the diagnostic testing should occur." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.occurrence[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Timing" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "when.planned" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.authored" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.authored" ];
+       fhir:ElementDefinition.short [ fhir:value "Date request signed" ];
+       fhir:ElementDefinition.definition [ fhir:value "When the request transitioned to being actionable." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.authored" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "when.recorded" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.requester" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.requester" ];
+       fhir:ElementDefinition.short [ fhir:value "Who/what is requesting diagnostics" ];
+       fhir:ElementDefinition.definition [ fhir:value "Who/what is requesting diagnostics.  The practitioner that holds legal responsibility for ordering the investigation." ];
+       fhir:ElementDefinition.comments [ fhir:value "This not the dispatcher, but rather who is authorizing." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.requester" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=AUT].role" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.author" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.performerType" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.performerType" ];
+       fhir:ElementDefinition.short [ fhir:value "Performer role" ];
+       fhir:ElementDefinition.definition [ fhir:value "Desired type of performer for doing the diagnostic testing. (." ];
+       fhir:ElementDefinition.comments [ fhir:value "this is a  role, not  aparticipation type.  I.e. doesn’t describe the task, describes the capacity.  Examples “compounding pharmacy” or “psychiatrist” or “internal referral”." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.performerType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Indicates specific responsibility of an individual within the care team, such as \"Primary physician\", \"Team coordinator\", \"Caregiver\", etc." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/participant-role>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/participant-role" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.actor" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.performer" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.performer" ];
+       fhir:ElementDefinition.short [ fhir:value "Requested perfomer" ];
+       fhir:ElementDefinition.definition [ fhir:value "The desired perfomer for doing the diagnostic testing." ];
+       fhir:ElementDefinition.comments [ fhir:value "Use the standard [XXX extension]() for listing alternative  alternative performers and/or roles and/or preference." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.performer" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ]
+       ], [
+         fhir:index 4;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[AUT or PFM]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.actor" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.reason" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.reason" ];
+       fhir:ElementDefinition.short [ fhir:value "Explanation/Justification for test" ];
+       fhir:ElementDefinition.definition [ fhir:value "An explanation or justification for why this diagnostic investigation is being requested.   This is often for billing purposes.  May relate to the resources referred to in supportingInformation." ];
+       fhir:ElementDefinition.comments [ fhir:value "This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.   Use CodeableConcept text element if the data is free (uncoded) text as shown in the [CT Scan example](diagnosticrequest-example-di.html)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.reason" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Diagnosis or problem codes justifying the reason for requesting the diagnostic investigation." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/condition-code>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/condition-code" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "why" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.supportingInformation" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.supportingInformation" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional clinical information" ];
+       fhir:ElementDefinition.definition [ fhir:value "Additional clinical information about the patient or specimen that may influence test interpretations.  This includes observations explicitly requested by the producer(filler) to provide context or supporting information needed to complete the order." ];
+       fhir:ElementDefinition.comments [ fhir:value "This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as \"ask at order entry questions (AOEs)\". Examples include reporting the amount of inspired oxygen for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "Ask at order entry question";
+         fhir:index 0
+       ], [
+         fhir:value "AOE";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.supportingInformation" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "OBR-13" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "outboundRelationship[typeCode=SPRT]/target[classCode=ACT, moodCode=EVN]" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.note" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.note" ];
+       fhir:ElementDefinition.short [ fhir:value "Comments" ];
+       fhir:ElementDefinition.definition [ fhir:value "Any other notes and comments made about the service request. (e.g. \"patient hates needles\")." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.note" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Annotation" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"annotation\"].value" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.relevantHistory" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.relevantHistory" ];
+       fhir:ElementDefinition.short [ fhir:value "Request provenance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Key events in the history of the request." ];
+       fhir:ElementDefinition.comments [ fhir:value "This may not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DiagnosticRequest.relevantHistory" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Provenance" ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest" ];
+       fhir:ElementDefinition.name [ fhir:value "HSPC Radiology Order" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "qdm" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Patient Characteristic" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.encounter" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.encounter" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-genencounter" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.event" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.event" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.event.actor" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.event.actor" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.orderer" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.orderer" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.priority" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.priority" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.status" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.status" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.code" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.code" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "RadLex is a lexicon of radiologic terms.  This value set contains all terms from the RadLex Playbook which is a subset of RadLex containing prodedure and ordareable radiological terms" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <??/ValueSet/radlex>;
+           fhir:Reference.reference [ fhir:value "ValueSet/radlex" ]
+         ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "DiagnosticRequest:hspcradiologyorder.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "DiagnosticRequest.subject" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

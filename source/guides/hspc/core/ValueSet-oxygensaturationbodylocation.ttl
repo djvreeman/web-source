@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/oxygensaturationbodylocation> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "oxygensaturationbodylocation"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/oxygensaturationbodylocation"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Oxygen Saturation Body Location value set."];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Health Services Platform Consortium (HSPC)"];
+  fhir:ValueSet.date [ fhir:value "2015-09-07"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "SELECT SNOMED CT code system values descending from 'Body structure' (123037004)."];
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "83738005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Index finger structure (body structure)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "48800003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ear lobule structure (body structure)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "52795006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Forehead structure (body structure)" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "76853006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Heel structure (body structure)" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29707007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Toe structure (body structure)" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "65531009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Middle finger structure (body structure)" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "82002001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ring finger structure (body structure)" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "302545001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Entire foot (body structure)" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

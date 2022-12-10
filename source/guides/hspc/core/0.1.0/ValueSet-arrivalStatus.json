@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "arrivalStatus",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/arrivalStatus",
+  "name": "HSPC Patient Arrival Status",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "description": "The codes that describe whether or not the patient has arrived at the specified location for the encounter.",
+  "copyright": "This value set includes content from and copyrighted by Intermountain Healthcare HDD",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/arrivalStatus"
+      }
+    ]
+  }
+}

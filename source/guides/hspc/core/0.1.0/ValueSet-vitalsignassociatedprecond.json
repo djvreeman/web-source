@@ -1,0 +1,83 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vitalsignassociatedprecond",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/vitalsignassociatedprecond",
+  "version": "0.01",
+  "name": "HSPC Vital Sign Associated Precondition",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-06-11",
+  "description": "SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "255214003",
+            "display": "after exercise"
+          },
+          {
+            "code": "307166007",
+            "display": "before exercise"
+          },
+          {
+            "code": "309604004",
+            "display": "during exercise"
+          },
+          {
+            "code": "263678003",
+            "display": "at rest"
+          },
+          {
+            "code": "276986009",
+            "display": "antepartum"
+          },
+          {
+            "code": "255410009",
+            "display": "postpartum"
+          },
+          {
+            "code": "307159006",
+            "display": "intrapartum"
+          },
+          {
+            "code": "255566006",
+            "display": "post-dose"
+          },
+          {
+            "code": "255235001",
+            "display": "pre-dose"
+          },
+          {
+            "code": "262068006",
+            "display": "preoperative"
+          },
+          {
+            "code": "262061000",
+            "display": "postoperative"
+          },
+          {
+            "code": "277671009",
+            "display": "intraoperative"
+          },
+          {
+            "code": "884001",
+            "display": "initial"
+          }
+        ]
+      },
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/vitalsignassociatedprecond"
+      }
+    ]
+  }
+}

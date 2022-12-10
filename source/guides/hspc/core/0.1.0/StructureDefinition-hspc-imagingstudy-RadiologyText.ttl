@@ -1,0 +1,603 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??StructureDefinition/hspc-imagingstudy-RadiologyText> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hspc-imagingstudy-RadiologyText"];
+  fhir:StructureDefinition.url [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-imagingstudy-RadiologyText"];
+  fhir:StructureDefinition.name [ fhir:value "Radiology Text"];
+  fhir:StructureDefinition.display [ fhir:value "Radiology Text"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.publisher [ fhir:value "HSPC"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:StructureDefinition.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:StructureDefinition.date [ fhir:value "2016-02-03"^^xsd:date];
+  fhir:StructureDefinition.description [ fhir:value "The textual report given by the radiologist."];
+  fhir:StructureDefinition.fhirVersion [ fhir:value "1.5.0"];
+  fhir:StructureDefinition.mapping [
+     fhir:index 0;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM Mapping" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "complex-type"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.contextType [ fhir:value "resource"];
+  fhir:StructureDefinition.context [
+     fhir:value "ImagingStudy";
+     fhir:index 0
+  ];
+  fhir:StructureDefinition.type [ fhir:value "Extension"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension"];
+  fhir:StructureDefinition.derivation [ fhir:value "constraint"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "Extension:radiologytext" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension" ];
+       fhir:ElementDefinition.name [ fhir:value "RadiologyText" ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "The textual report given by the radiologist." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension" ];
+       fhir:ElementDefinition.slicing [
+         fhir:Element.id [ fhir:value "36" ];
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value "url";
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "An Extension" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension" ];
+       fhir:ElementDefinition.name [ fhir:value "TextSection" ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "The textual report for the specific, numerical section of the Radiology Text." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection.url" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.url" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "identifies the meaning of the extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "Source of the definition for the extension code - a logical name or a URL." ];
+       fhir:ElementDefinition.comments [ fhir:value "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension.url" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection.valueAttachment" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.valueAttachment" ];
+       fhir:ElementDefinition.short [ fhir:value "Content in a format defined elsewhere" ];
+       fhir:ElementDefinition.definition [ fhir:value "For referring to data content defined in other formats." ];
+       fhir:ElementDefinition.comments [ fhir:value "When providing a summary view (for example with Observation.value[x]) Attachment should be represented with a brief display text such as \"Attachment\"." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension.value[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Attachment" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "att-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "It the Attachment has data, it SHALL have a contentType" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "data.empty() or contentType.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:data)) or exists(f:contentType)" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "ED/RP" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "ED" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension" ];
+       fhir:ElementDefinition.name [ fhir:value "SequenceNumber" ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "A number that denotes the order in which the Text Sections should appear." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber.url" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.url" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "identifies the meaning of the extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "Source of the definition for the extension code - a logical name or a URL." ];
+       fhir:ElementDefinition.comments [ fhir:value "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension.url" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber.valueUnsignedInt" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.valueUnsignedInt" ];
+       fhir:ElementDefinition.short [ fhir:value "Primitive Type unsignedInt" ];
+       fhir:ElementDefinition.definition [ fhir:value "An integer with a value that is not negative (e.g. >= 0)" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension.value[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "unsignedInt" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/unsignedInt" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.url" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.url" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "identifies the meaning of the extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "Source of the definition for the extension code - a logical name or a URL." ];
+       fhir:ElementDefinition.comments [ fhir:value "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension.url" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.fixedUri [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-imagingstudy-RadiologyText" ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.value[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.value[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Value of extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Extension.value[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "base64Binary" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ], [
+         fhir:index 4;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 5;
+         fhir:ElementDefinition.type.code [ fhir:value "decimal" ]
+       ], [
+         fhir:index 6;
+         fhir:ElementDefinition.type.code [ fhir:value "id" ]
+       ], [
+         fhir:index 7;
+         fhir:ElementDefinition.type.code [ fhir:value "instant" ]
+       ], [
+         fhir:index 8;
+         fhir:ElementDefinition.type.code [ fhir:value "integer" ]
+       ], [
+         fhir:index 9;
+         fhir:ElementDefinition.type.code [ fhir:value "markdown" ]
+       ], [
+         fhir:index 10;
+         fhir:ElementDefinition.type.code [ fhir:value "oid" ]
+       ], [
+         fhir:index 11;
+         fhir:ElementDefinition.type.code [ fhir:value "positiveInt" ]
+       ], [
+         fhir:index 12;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ], [
+         fhir:index 13;
+         fhir:ElementDefinition.type.code [ fhir:value "time" ]
+       ], [
+         fhir:index 14;
+         fhir:ElementDefinition.type.code [ fhir:value "unsignedInt" ]
+       ], [
+         fhir:index 15;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ], [
+         fhir:index 16;
+         fhir:ElementDefinition.type.code [ fhir:value "Address" ]
+       ], [
+         fhir:index 17;
+         fhir:ElementDefinition.type.code [ fhir:value "Age" ]
+       ], [
+         fhir:index 18;
+         fhir:ElementDefinition.type.code [ fhir:value "Annotation" ]
+       ], [
+         fhir:index 19;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
+       ], [
+         fhir:index 20;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 21;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ], [
+         fhir:index 22;
+         fhir:ElementDefinition.type.code [ fhir:value "ContactPoint" ]
+       ], [
+         fhir:index 23;
+         fhir:ElementDefinition.type.code [ fhir:value "Count" ]
+       ], [
+         fhir:index 24;
+         fhir:ElementDefinition.type.code [ fhir:value "Distance" ]
+       ], [
+         fhir:index 25;
+         fhir:ElementDefinition.type.code [ fhir:value "Duration" ]
+       ], [
+         fhir:index 26;
+         fhir:ElementDefinition.type.code [ fhir:value "HumanName" ]
+       ], [
+         fhir:index 27;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ], [
+         fhir:index 28;
+         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
+       ], [
+         fhir:index 29;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ], [
+         fhir:index 30;
+         fhir:ElementDefinition.type.code [ fhir:value "Quantity" ]
+       ], [
+         fhir:index 31;
+         fhir:ElementDefinition.type.code [ fhir:value "Range" ]
+       ], [
+         fhir:index 32;
+         fhir:ElementDefinition.type.code [ fhir:value "Ratio" ]
+       ], [
+         fhir:index 33;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ]
+       ], [
+         fhir:index 34;
+         fhir:ElementDefinition.type.code [ fhir:value "SampledData" ]
+       ], [
+         fhir:index 35;
+         fhir:ElementDefinition.type.code [ fhir:value "Signature" ]
+       ], [
+         fhir:index 36;
+         fhir:ElementDefinition.type.code [ fhir:value "Timing" ]
+       ], [
+         fhir:index 37;
+         fhir:ElementDefinition.type.code [ fhir:value "Meta" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "Extension:radiologytext" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension" ];
+       fhir:ElementDefinition.name [ fhir:value "RadiologyText" ];
+       fhir:ElementDefinition.definition [ fhir:value "The textual report given by the radiologist." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension" ];
+       fhir:ElementDefinition.name [ fhir:value "TextSection" ];
+       fhir:ElementDefinition.definition [ fhir:value "The textual report for the specific, numerical section of the Radiology Text." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:textsection.value[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.value[x]" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Attachment" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension" ];
+       fhir:ElementDefinition.name [ fhir:value "SequenceNumber" ];
+       fhir:ElementDefinition.definition [ fhir:value "A number that denotes the order in which the Text Sections should appear." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.extension:sequencenumber.value[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.extension.value[x]" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "unsignedInt" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/unsignedInt" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "Extension:radiologytext.url" ];
+       fhir:ElementDefinition.path [ fhir:value "Extension.url" ];
+       fhir:ElementDefinition.fixedUri [ fhir:value "http://fhir.org/guides/hspc/StructureDefinition/hspc-imagingstudy-RadiologyText" ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

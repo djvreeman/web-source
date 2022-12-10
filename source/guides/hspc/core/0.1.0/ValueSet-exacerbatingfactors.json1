@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "exacerbatingfactors",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/exacerbatingfactors",
+  "version": "0.01",
+  "name": "HSPC Exacerbating Factors Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values descending from 'Activity' (257733005).",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "257733005"
+          }
+        ]
+      }
+    ]
+  }
+}

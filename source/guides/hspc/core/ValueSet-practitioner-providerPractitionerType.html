@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC ProviderPractitioner Type</h2>
+
+<p>
+Formats: <a href="ValueSet-practitioner-providerPractitionerType.xml.html">XML</a>, <a href="ValueSet-practitioner-providerPractitionerType.json.html">JSON</a>, <a href="ValueSet-practitioner-providerPractitionerType.ttl.html">Turtle</a>
+</p>
+
+<div><h2>HSPC ProviderPractitioner Type</h2><div><p>A set of values that describe the general type of practice for a provider.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://www.nucc.org<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>20</td><td>Allopathic and Osteopathic Physicians</td><td/></tr><tr><td>10</td><td>Behavioral Health and Social Service Providers</td><td/></tr><tr><td>11</td><td>Chiropractic Providers</td><td/></tr><tr><td>12</td><td>Dental Providers</td><td/></tr><tr><td>13</td><td>Dietary and Nutritional Service Providers</td><td/></tr><tr><td>14</td><td>Emergency Medical Service Providers</td><td/></tr><tr><td>15</td><td>Eye and Vision Service Providers</td><td/></tr><tr><td>19</td><td>Group</td><td/></tr><tr><td>16</td><td>Nursing Service Providers</td><td/></tr><tr><td>37</td><td>Nursing Service Related Providers</td><td/></tr><tr><td>17</td><td>Other Service Providers</td><td/></tr><tr><td>18</td><td>Pharmacy Service Providers</td><td/></tr><tr><td>36</td><td>Physician Assistant and Advanced Practice Nursing Providers</td><td/></tr><tr><td>21</td><td>Podiatric Medicine and Surgery Service Providers</td><td/></tr><tr><td>22</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers</td><td/></tr><tr><td>23</td><td>Speech, Language and Hearing Service Providers</td><td/></tr><tr><td>39</td><td>Student, Health Care</td><td/></tr><tr><td>24</td><td>Technologists, Technicians and Other Technical Service Providers</td><td/></tr><tr><td>32</td><td>Residential Treatment Facilities</td><td/></tr><tr><td>28</td><td>Hospitals</td><td/></tr><tr><td>33</td><td>Suppliers</td><td/></tr><tr><td>26</td><td>Ambulatory Health Care Facilities</td><td/></tr><tr><td>31</td><td>Nursing and Custodial Care Facilities</td><td/></tr><tr><td>34</td><td>Transportation Services</td><td/></tr><tr><td>25</td><td>Agencies</td><td/></tr><tr><td>27</td><td>Managed Care Organizations</td><td/></tr><tr><td>29</td><td>Laboratories</td><td/></tr><tr><td>30</td><td>Respite Care Facility</td><td/></tr><tr><td>38</td><td>Hospital Units</td><td/></tr></table></li></ul></div>
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

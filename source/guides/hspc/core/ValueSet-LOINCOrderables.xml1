@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="LOINCOrderables"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <url value="http://fhir.org/guides/hspc/ValueSet/LOINCOrderables"/>
+  <name value="HSPC LOINC Orderable Codes"/>
+  <status value="draft"/>
+  <publisher value="HSPC"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://healthcaresoa.org"/>
+    </telecom>
+  </contact>
+  <date value="2015-10-15"/>
+  <description value="LOINC codes that are marked as &#39;orderable&#39; or &#39;both&#39;."/>
+  <copyright value="This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="ORDER_OBS"/>
+        <op value="="/>
+        <value value="Both"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="ORDER_OBS"/>
+        <op value="="/>
+        <value value="Order"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,614 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC ProviderPractitioner Classification</h2>
+
+<pre class"rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/practitioner-providerClassification> a fhir:ValueSet;
+  <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;practitioner-providerClassification&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.meta">fhir:Resource.meta</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&quot;;
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0     ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/ValueSet/practitioner-providerClassification&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC ProviderPractitioner Classification&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+     <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact.telecom">fhir:ValueSet.contact.telecom</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://healthcaresoa.org&quot; ]     ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;A set of codes that describe the class of health care a practitioner provides.&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://www.nucc.org&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">fhir:ValueSet.compose.include.concept</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207K00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Allergy and Immunology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207L00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Anesthesiology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208U00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Clinical Pharmacology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208C00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Colon and Rectal Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 4;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207N00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Dermatology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 5;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;204R00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Electrodiagnostic Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 6;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207P00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Emergency Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 7;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207Q00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Family Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 8;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208D00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians General Practice&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 9;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208M00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Hospitalist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 10;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;202C00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Independent Medical Examiner&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 11;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207R00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Internal Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 12;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;209800000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Legal Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 13;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207T00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Neurological Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 14;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;204D00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Neuromusculoskeletal Medicine and OMM&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 15;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;204C00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Neuromusculoskeletal Medicine, Sports Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 16;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207U00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Nuclear Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 17;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207V00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Obstetrics and Gynecology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 18;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207W00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Ophthalmology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 19;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;204E00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Oral and Maxillofacial Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 20;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207X00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Orthopaedic Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 21;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;207Y00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Otolaryngology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 22;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208000000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Pediatrics&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 23;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;202K00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Phlebology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 24;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208100000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Physical Medicine and Rehabilitation&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 25;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208200000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Plastic Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 26;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208600000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 27;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208G00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Thoracic Surgery (Cardiothoracic Vascular Surgery)&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 28;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;204F00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Transplant Surgery&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 29;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;208800000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Allopathic and Osteopathic Physicians Urology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 30;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;103K00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Behavioral Analyst&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 31;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;103G00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Clinical Neuropsychologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 32;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;101Y00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Counselor&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 33;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;106H00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Marriage and Family Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 34;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;102X00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Poetry Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 35;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;102L00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Psychoanalyst&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 36;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;103T00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Psychologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 37;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;104100000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Behavioral Health and Social Service Providers Social Worker&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 38;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;111N00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Chiropractic Providers Chiropractor&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 39;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;125K00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Advanced Practice Dental Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 40;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;126800000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Dental Assistant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 41;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;124Q00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Dental Hygienist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 42;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;126900000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Dental Laboratory Technician&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 43;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;125J00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Dental Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 44;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;122300000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Dentist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 45;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;122400000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dental Providers Denturist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 46;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;132700000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dietary and Nutritional Service Providers Dietary Manager&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 47;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;136A00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dietary and Nutritional Service Providers Dietetic Technician, Registered&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 48;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;133V00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dietary and Nutritional Service Providers Dietitian, Registered&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 49;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;133N00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Dietary and Nutritional Service Providers Nutritionist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 50;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;146N00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Emergency Medical Service Providers Emergency Medical Technician, Basic&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 51;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;146M00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Emergency Medical Service Providers Emergency Medical Technician, Intermediate&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 52;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;146L00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Emergency Medical Service Providers Emergency Medical Technician, Paramedic&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 53;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;146D00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Emergency Medical Service Providers Personal Emergency Response Attendant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 54;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;152W00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Eye and Vision Services Providers Optometrist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 55;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;156F00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Eye and Vision Services Providers Technician/Technologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 56;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;193200000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Group Multi Specialty&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 57;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;193400000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Group Single Specialty&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 58;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;164W00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Providers Licensed Practical Nurse&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 59;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;167G00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Providers Licensed Psychiatric Technician&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 60;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;164X00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Providers Licensed Vocational Nurse&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 61;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;163W00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Providers Registered Nurse&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 62;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;372600000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Adult Companion&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 63;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;372500000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Chore Provider&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 64;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;373H00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Day Training/Habilitation Specialist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 65;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;374J00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Doula&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 66;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;374U00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Home Health Aide&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 67;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;376J00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Homemaker&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 68;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;376K00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Nurse's Aide&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 69;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;376G00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Nursing Home Administrator&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 70;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;374T00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Religious Nonmedical Nursing Personnel&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 71;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;374K00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Religious Nonmedical Practitioner&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 72;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;374700000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nursing Service Related Providers Technician&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 73;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;171100000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Acupuncturist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 74;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;171M00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Case Manager/Care Coordinator&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 75;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;174V00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Clinical Ethicist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 76;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;172V00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Community Health Worker&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 77;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;171W00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Contractor&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 78;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;172A00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Driver&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 79;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;176P00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Funeral Director&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 80;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;170300000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Genetic Counselor, MS&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 81;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;174H00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Health Educator&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 82;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;175L00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Homeopath&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 83;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;171R00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Interpreter&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 84;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;174N00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Lactation Consultant, Non RN&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 85;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;173000000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Legal Medicine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 86;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;177F00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Lodging&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 87;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;174200000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Meals&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 88;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;172M00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Mechanotherapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 89;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;170100000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Medical Genetics, Ph.D. Medical Genetics&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 90;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;176B00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Midwife&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 91;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;175M00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Midwife, Lay&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 92;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;171000000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Military Health Care Provider&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 93;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;172P00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Naprapath&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 94;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;175F00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Naturopath&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 95;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;175T00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Peer Specialist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 96;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;173C00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Reflexologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 97;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;173F00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Sleep Specialist, PhD&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 98;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;174400000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Specialist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 99;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;174M00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Other Service Providers Veterinarian&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 100;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;183500000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Pharmacy Service Providers Pharmacist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 101;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;183700000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Pharmacy Service Providers Pharmacy Technician&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 102;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;367A00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Physician Assistants and Advanced Practice Nursing Providers Advanced Practice Midwife&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 103;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;367H00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Physician Assistants and Advanced Practice Nursing Providers Anesthesiologist Assistant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 104;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;364S00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Physician Assistants and Advanced Practice Nursing Providers Clinical Nurse Specialist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 105;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;367500000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Physician Assistants and Advanced Practice Nursing Providers Nurse Anesthetist, Certified Registered&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 106;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;363L00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Physician Assistants and Advanced Practice Nursing Providers Nurse Practitioner&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 107;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;363A00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Physician Assistants and Advanced Practice Nursing Providers Physician Assistant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 108;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;211D00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Podiatric Medicine and Surgery Service Providers Assistant, Podiatric&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 109;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;213E00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Podiatric Medicine and Surgery Service Providers Podiatrist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 110;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;229N00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Anaplastologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 111;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;221700000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Art Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 112;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;224Y00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Clinical Exercise Physiologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 113;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225600000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Dance Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 114;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;222Q00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Developmental Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 115;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;226300000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Kinesiotherapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 116;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225700000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Massage Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 117;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;224900000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Mastectomy Fitter&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 118;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225A00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Music Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 119;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225X00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Occupational Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 120;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;224Z00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Occupational Therapy Assistant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 121;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225000000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Orthotic Fitter&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 122;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;222Z00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Orthotist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 123;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;224L00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Pedorthist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 124;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225100000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Physical Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 125;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225200000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Physical Therapy Assistant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 126;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;224P00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Prosthetist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 127;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225B00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Pulmonary Function Technologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 128;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225800000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Recreation Therapist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 129;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225C00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Rehabilitation Counselor&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 130;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225400000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Rehabilitation Practitioner&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 131;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;227800000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Respiratory Therapist, Certified&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 132;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;227900000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Respiratory Therapist, Registered&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 133;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;225500000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Respiratory, Developmental, Rehabilitative and Restorative Service Providers Specialist/Technologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 134;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;231H00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Speech, Language and Hearing Service Providers Audiologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 135;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;237600000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Speech, Language and Hearing Service Providers Audiologist Hearing Aid Fitter&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 136;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;237700000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Speech, Language and Hearing Service Providers Hearing Instrument Specialist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 137;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;235500000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Speech, Language and Hearing Service Providers Specialist/Technologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 138;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;235Z00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Speech, Language and Hearing Service Providers Speech Language Pathologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 139;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;390200000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Student, Health Care Student in an Organized Health Care Education/Training Program&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 140;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;242T00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Perfusionist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 141;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;247100000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Radiologic Technologist&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 142;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;243U00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Radiology Practitioner Assistant&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 143;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;246X00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Spec/Tech, Cardiovascular&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 144;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;246Y00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Spec/Tech, Health Info&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 145;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;246Q00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Spec/Tech, Pathology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 146;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;246Z00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Specialist/Technologist, Other&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 147;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;246W00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Technician, Cardiology&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 148;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;247000000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Technician, Health Information&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 149;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;247200000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Technician, Other&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 150;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;246R00000X&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Technologists, Technicians and Other Technical Service Providers Technician, Pathology&quot; ]       ]     ]
+  ].
+
+</pre>
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

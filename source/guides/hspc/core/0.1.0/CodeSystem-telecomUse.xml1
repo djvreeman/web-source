@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="telecomUse"/>
+  <url value="http://fhir.org/guides/hspc/CodeSystem/telecomUse"/>
+  <name value="TelecomUse"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+    </telecom>
+  </contact>
+  <description value="A set of codes that describe the type of usage for a telecom value."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://fhir.org/guides/hspc/ValueSet/telecomUse"/>
+  <content value="complete"/>
+  <concept>
+    <code value="NS"/>
+    <display value="Not specified"/>
+    <definition value="The type of telecom system was not specified for the given number."/>
+  </concept>
+</CodeSystem>

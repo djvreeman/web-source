@@ -1,0 +1,1989 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>Profile hspc-servicedeliverylocation</h2>
+
+<pre class="json">
+{
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html">resourceType</a>" : "StructureDefinition",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.id">id</a>" : "hspc-servicedeliverylocation",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.url">url</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-servicedeliverylocation",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.name">name</a>" : "Profile hspc-servicedeliverylocation",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "HSPC",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact.telecom">telecom</a>" : [
+        {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://healthcaresoa.org"
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.date">date</a>" : "2015-03-13",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "rim",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v3",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "RIM Mapping"
+    },
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "w5",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/fhir/w5",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "W5 Mapping"
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.kind">kind</a>" : "resource",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.type">type</a>" : "Location",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.org/fhir/StructureDefinition/Location",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "HSPCServiceDeliveryLocation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Details and position information for a physical place",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".Role[classCode=SDLC]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "administrative.entity"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Logical id of this artifact",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "id"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.meta",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.meta",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Metadata about the resource",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.meta",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Meta"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.implicitRules",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.implicitRules",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A set of rules under which this content was created",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.implicitRules",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.language",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.language",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Language of the resource content",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The base language in which the resource is written.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.language",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+            {
+              "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.value[x]">valueReference</a>" : {
+                "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
+              }
+            }
+          },
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A human language.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Text summary of the resource, for human interpretation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.text",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Narrative"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "dom-1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Act.text?"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.contained",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.contained",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contained, inline Resources",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.contained",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.modifierExtension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.identifier",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.identifier",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unique code or number identifying the location to its users",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Unique code or number identifying the location to its users.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Organization label locations in registries, need to keep track of those.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.identifier",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".id"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "id"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "active | suspended | inactive",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "active | suspended | inactive.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.status",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Indicates whether the location is still in use.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/location-status"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".statusCode"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "status"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Name of the location as used by humans",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Name of the location as used by humans. Does not need to be unique.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "If the name of an location changes, consider putting the old name in the alias column so that it can still be located through searches.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.name",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".name"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "string.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "id"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.id">id</a>" : "6",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            "url"
+          },
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">ordered</a>" : false,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "string.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.extension:nameuse$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "NameUse",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "string.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.extension:period$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "Period",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "string.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.value",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.value",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Primitive value for string",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The actual value",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "string.value",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.maxLength">maxLength</a>" : 1048576
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.alias",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.alias",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A list of alternate names that the location is known as, or was known as in the past",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A list of alternate names that the location is known as, or was known as in the past.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Over time locations and organizations go through many changes and can be known by different names.  For searching knowing previous names that the location was known by can be very useful.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.alias",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.description",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.description",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional details about the location that could be displayed as further information to identify the location beyond its name",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Description of the Location, which helps in finding or referencing the place.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Humans need additional information to verify a correct location has been identified.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.description",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".playingEntity[classCode=PLC determinerCode=INSTANCE].desc"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.mode",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.mode",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "instance | kind",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates whether a resource instance represents a specific location or a class of locations.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "When using a Location resource for scheduling or orders, we need to be able to refer to a class of Locations instead of a specific Location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.mode",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Indicates whether a resource instance represents a specific location or a class of locations.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/location-mode"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".playingEntity[classCode=PLC].determinerCode"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "class"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.type",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.type",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Type of function performed",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates the type of function performed at the location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.type",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Indicates the type of function performed at the location.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/v3-ServiceDeliveryLocationRoleType"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".code"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "class"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contact details of the location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.telecom",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "ContactPoint"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".telecom"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.extension:telecompreferred$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "telecom.preferred",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.system",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.system",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "phone | fax | email | pager | other",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Telecommunications form for contact point - what communications system is required to make use of the contact.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "ContactPoint.system",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "cpt-2"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Telecommunications form for contact point",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/contact-point-system"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XTN.3"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./scheme"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./ContactPointType"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.value",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.value",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The actual contact point details",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need to support legacy numbers that are not in a tightly controlled format.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "ContactPoint.value",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XTN.1 (or XTN.12)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./url"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./Value"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.use",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.use",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "home | work | temp | old | mobile - purpose of this contact point",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identifies the purpose for the contact point.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old contact etc.for a current/permanent one. Applications can assume that a contact is current unless it explicitly says that it is temporary or old.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "ContactPoint.use",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Use of contact point",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/contact-point-use"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XTN.2 - but often indicated by field"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "unique(./use)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./ContactPointPurpose"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.rank",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.rank",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Specify preferred order of use (1 = highest)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Specifies a preferred order in which to use a set of contacts. Contacts are ranked with lower values coming before higher values.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Note that rank does not necessarily follow the order in which the contacts are represented in the instance.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "ContactPoint.rank",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "positiveInt"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.period",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.period",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Time period when the contact point was/is in use",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Time period when the contact point was/is in use.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "ContactPoint.period",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Period"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./useablePeriod[type=&quot;IVL&lt;TS&gt;&quot;]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./StartDate and ./EndDate"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Physical location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Physical location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This was kept as 0..1 as there is no use property on the address, so wouldn't be able to identify different address types.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "If locations can be visited, we need to keep track of their address.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.address",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Address"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".addr"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.id">id</a>" : "7",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            "url"
+          },
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">ordered</a>" : false,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.extension:primaryindicator$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "PrimaryIndicator",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.extension:addresstype$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "AddressType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.use",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.use",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "home | work | temp | old - purpose of this address",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The purpose of this address.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Allows an appropriate address to be chosen from a list of many.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.use",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleCode</a>" : "home",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The use of an address",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/address-use"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.7"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "unique(./use)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./AddressPurpose"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.type",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.type",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "postal | physical | both",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.type",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleCode</a>" : "both",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The type of an address (physical / postal)",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/address-type"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.18"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "unique(./use)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "address type parameter"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Text representation of the address",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A full text representation of the address.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Can provide both a text representation and parts.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "A renderable, unencoded form.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.text",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleString</a>" : "137 Nowhere Street, Erewhon 9132",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./formatted"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "address label parameter"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.line",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.line",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Street name, number, direction &amp; P.O. Box etc.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "home | work | temp | old - purpose of this address.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.line",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleString</a>" : "137 Nowhere Street",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AD.part[parttype = AL]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "street"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./StreetAddress (newline delimitted)"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.city",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.city",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Name of city, town etc.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The name of the city, town, village or other community or delivery center.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Municpality"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.city",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleString</a>" : "Erewhon",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.3"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AD.part[parttype = CTY]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "locality"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./Jurisdiction"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.district",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.district",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "District name (aka county)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The name of the administrative area (county).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "County"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.district",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleString</a>" : "Madison",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.9"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AD.part[parttype = CNT | CPA]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.state",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.state",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Sub-unit of country (abbreviations ok)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Province",
+          "Territory"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.state",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.4"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AD.part[parttype = STA]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "region"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./Region"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.postalCode",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.postalCode",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Postal code for area",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A postal code designating a region defined by the postal service.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Zip"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.postalCode",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">exampleString</a>" : "9132",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.5"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AD.part[parttype = ZIP]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "code"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./PostalIdentificationCode"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.country",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.country",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Country (can be ISO 3166 3 letter code)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Country - a nation as commonly understood or generally accepted.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "ISO 3166 3 letter codes can be used in place of a full country name.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.country",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.6"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "AD.part[parttype = CNT]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "vcard",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "country"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./Country"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.period",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.period",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Time period when address was/is in use",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Time period when address was/is in use.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Allows addresses to be placed in historical context.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Address.period",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Period"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.example[x]">examplePeriod</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Period#Period.start">start</a>" : "2010-03-23",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Period#Period.end">end</a>" : "2010-07-01"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "XAD.12 / XAD.13 + XAD.14"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./usablePeriod[type=&quot;IVL&lt;TS&gt;&quot;]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "./StartDate and ./EndDate"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.physicalType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.physicalType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Physical form of the location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Physical form of the location, e.g. building, room, vehicle, road.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "For purposes of showing relevant locations in queries, we need to categorize locations.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.physicalType",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The kinds of service delivery locations",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/location-serviceDeliveryLocation-key-value-set"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".playingEntity [classCode=PLC].code"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "class"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The absolute geographic location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "For mobile applications and automated route-finding knowing the exact location of the Location is required.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.position",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "BackboneElement"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".playingEntity [classCode=PLC determinerCode=INSTANCE].positionText"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content",
+          "modifiers"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BackboneElement.modifierExtension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position.longitude",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position.longitude",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Longitude with WGS84 datum",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.position.longitude",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "decimal"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position.latitude",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position.latitude",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Latitude with WGS84 datum",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.position.latitude",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "decimal"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.position.altitude",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.position.altitude",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Altitude with WGS84 datum",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.position.altitude",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "decimal"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.managingOrganization",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.managingOrganization",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Organization responsible for provisioning and upkeep",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The organization responsible for the provisioning and upkeep of the location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This can also be used as the part of the organization hierarchy where this location provides services. These services can be defined through the HealthcareService resource.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need to know who manages the location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.managingOrganization",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Organization"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".scopingEntity[classCode=ORG determinerKind=INSTANCE]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.partOf",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.partOf",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Another Location this one is physically part of",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Another Location which this Location is physically part of.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "For purposes of location, display and identification, knowing which locations are located within other locations is important.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.partOf",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Location"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".inboundLink[typeCode=PART].source[classCode=SDLC]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.endpoint",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.endpoint",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Technical endpoints providing access to services operated for the location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Technical endpoints providing access to services operated for the location.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Organizations may have different systems at different locations that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Location.endpoint",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Endpoint"
+          }
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "HSPCServiceDeliveryLocation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.extension:nameuse$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "NameUse",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.name.extension:period$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.name.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "Period",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.telecom.extension:telecompreferred$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.telecom.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "telecom.preferred",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.extension:primaryindicator$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "PrimaryIndicator",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.address.extension:addresstype$Extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.address.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "AddressType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Location:hspcservicedeliverylocation.physicalType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Location.physicalType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The kinds of service delivery locations",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/location-serviceDeliveryLocation-key-value-set"
+          }
+        }
+      }
+    }
+  }
+}</pre>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

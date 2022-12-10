@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/gestagemeasmethdev> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gestagemeasmethdev"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/gestagemeasmethdev"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Gestational Age at Birth Meas Method Device"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Health Services Platform Consortium (HSPC)"];
+  fhir:ValueSet.date [ fhir:value "2015-02-09"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "SELECT SNOMED CT code system values and LOINC system code values."];
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21840007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "date of last menstrual period" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "248986005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "estimated date of conception" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16310003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "ultrasound" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34536000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "amniocentesis" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11881-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Uterus Fundal height Tape measure" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11850-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gestational sac Mean diameter US" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11957-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fetal Crown Rump length US" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11820-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fetal Head Diameter.biparietal US" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11963-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fetal Femur diaphysis [Length] US" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11979-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fetal Abdomen Circumference US" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11984-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fetal Head Circumference US" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

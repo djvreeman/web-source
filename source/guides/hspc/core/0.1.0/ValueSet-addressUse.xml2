@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="addressUse"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+  </meta>
+  <url value="http://fhir.org/guides/hspc/ValueSet/addressUse"/>
+  <name value="HSPCPractitionerAddressUse"/>
+  <status value="draft"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+    </telecom>
+  </contact>
+  <description value="A set of codes that describe the manner in which an addressed is used."/>
+  <compose>
+    <include>
+      <system value="http://fhir.org/guides/hspc/CodeSystem/addressUse"/>
+    </include>
+  </compose>
+</ValueSet>

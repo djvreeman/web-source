@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "observation-heightPrecond",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/observation-heightPrecond",
+  "version": "0.01",
+  "name": "HSPC Height Meas Associated Precondition",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-05-19",
+  "description": "The conditions during which an individual's height was measured.",
+  "immutable": true,
+  "copyright": "Intermountain Healthcare",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7,org/fhir/observation-hspc-heightPrecond"
+      }
+    ]
+  }
+}

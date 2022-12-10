@@ -1,0 +1,64 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hspc",
+  "url": "http://hl7.org/fhir/hspc",
+  "name": "HSPC Implementation Guide",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Health Services Platform Consortium",
+  "dependency": [
+    {
+      "type": "reference",
+      "uri": "http://hl7.org/fhir/qicore"
+    },
+    {
+      "type": "reference",
+      "uri": "http://hl7.org/fhir/daf"
+    }
+  ],
+  "package": [
+    {
+      "name": "base",
+      "resource": [
+        {
+          "example": false,
+          "name": "HSPC Quantitative Labs dictionary",
+          "sourceReference": {
+            "reference": "Bundle/hspc-qnlab-de"
+          }
+        }
+      ]
+    }
+  ],
+  "page": {
+    "source": "hspc.html",
+    "title": "Home Page",
+    "kind": "page",
+    "page": [
+      {
+        "source": "hspc-toc.html",
+        "title": "Table of Contents",
+        "kind": "toc"
+      },
+      {
+        "source": "registry.html",
+        "title": "Registry",
+        "kind": "list",
+        "type": [
+          "Conformance",
+          "StructureDefinition",
+          "ValueSet",
+          "ConceptMap"
+        ]
+      },
+      {
+        "source": "hspc-qnlab-de.xml",
+        "title": "Observations Dictionary",
+        "kind": "dictionary",
+        "type": [
+          "DataElement"
+        ]
+      }
+    ]
+  }
+}

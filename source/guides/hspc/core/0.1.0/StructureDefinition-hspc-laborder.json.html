@@ -1,0 +1,1125 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>Profile hspc-laborder</h2>
+
+<pre class="json">
+{
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html">resourceType</a>" : "StructureDefinition",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.id">id</a>" : "hspc-laborder",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.url">url</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-laborder",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.name">name</a>" : "Profile hspc-laborder",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "HSPC",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.contact.telecom">telecom</a>" : [
+        {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://healthcaresoa.org"
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.date">date</a>" : "2015-10-15",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "qdm",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://www.healthit.gov/quality-data-model",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "Quality Data Model"
+    },
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "rim",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v3",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "RIM Mapping"
+    },
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "w5",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/fhir/w5",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "W5 Mapping"
+    },
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "v2",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v2",
+      "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "HL7 v2 Mapping"
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.kind">kind</a>" : "resource",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.type">type</a>" : "DiagnosticRequest",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.org/fhir/StructureDefinition/DiagnosticRequest",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "HSPC Lab Order",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A request for a diagnostic service",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A record of a request for a diagnostic investigation service to be performed.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "clinical.diagnostics"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "qdm",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient Characteristic"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.id",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Logical id of this artifact",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.id",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "id"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.meta",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.meta",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Metadata about the resource",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.meta",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Meta"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.implicitRules",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.implicitRules",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A set of rules under which this content was created",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.implicitRules",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.language",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.language",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Language of the resource content",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The base language in which the resource is written.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.language",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+            {
+              "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Extension#Extension.value[x]">valueReference</a>" : {
+                "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
+              }
+            }
+          },
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A human language.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.text",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Text summary of the resource, for human interpretation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded in formation is added later.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.text",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Narrative"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "dom-1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Act.text?"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.contained",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.contained",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contained, inline Resources",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.contained",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.extension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.modifierExtension",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.modifierExtension",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.identifier",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.identifier",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identifiers assigned to this order",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identifiers assigned to this order instance by the orderer and/or  the receiver and/or order fulfiller.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2). For further discussion and examples see the [notes section](DiagnosticRequest.html#4.22.4) below.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.identifier",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".id"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "id"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.definition",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.definition",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Protocol or definition",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Protocol or definition followed by this request.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.definition",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.basedOn",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.basedOn",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "What request fulfills",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Plan/proposal/order fulfilled by this request.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.basedOn",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.replaces",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.replaces",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "What request replaces",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The request takes the place of the referenced completed or terminated request(s).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.replaces",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.requisition",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.requisition",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identifier of composite request",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Composite request this is part of.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.requisition",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "draft | active | suspended | completed | entered-in-error | cancelled",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The status of the order.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Typically the system placing the order sets the status to &quot;requested&quot;. Thereafter, the order is maintained by the receiver that updates the status as the request is handled.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.status",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The status of a diagnostic order.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/request-status"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".statusCode also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "status"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.stage",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.stage",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "proposal | plan | orig. order | encoded +",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Whether the request is a proposal, plan, an original order or a reflex order.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.stage",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The kind of diagnostic request",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/diagnostic-request-stage"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "class"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "What’s being requested/ordered",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.code",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of LOINC codes that represent orderable tests.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/LOINCOrderables"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "OBX-4"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".code"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "what"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.subject",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.subject",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Information about an individual or animal receiving health care services",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Demographics and other administrative information about an individual or animal receiving care or other health-related services.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "SubjectOfCare Client Resident"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.subject",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient[classCode=PAT]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "cda",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ClinicalDocument.recordTarget.patientRole"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "administrative.individual"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "qdm",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient Characteristic"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.context",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.context",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Encounter or Episode during which request was created",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An encounter or episode of care that provides additional information about the healthcare context in which this request is made.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.context",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Encounter"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "context"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.occurrence[x]",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.occurrence[x]",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "When testing should occur",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The date/time at which the diagnostic testing should occur.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.occurrence[x]",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Period"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Timing"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".effectiveTime"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "when.planned"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.authored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.authored",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Date request signed",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "When the request transitioned to being actionable.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.authored",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "when.recorded"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.requester",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.requester",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A person with a  formal responsibility in the provisioning of healthcare or related services",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A person who is directly or indirectly involved in the provisioning of healthcare.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Note that a cab driver no longer fits the bill. You probably would be interested in the organization rather than the individual?",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.requester",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PRD (as one example)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Role"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "servd",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Provider"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "administrative.individual"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.performerType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.performerType",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Performer role",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Desired type of performer for doing the diagnostic testing. (.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "this is a  role, not  aparticipation type.  I.e. doesn’t describe the task, describes the capacity.  Examples “compounding pharmacy” or “psychiatrist” or “internal referral”.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.performerType",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Indicates specific responsibility of an individual within the care team, such as &quot;Primary physician&quot;, &quot;Team coordinator&quot;, &quot;Caregiver&quot;, etc.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/participant-role"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "who.actor"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.performer",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.performer",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Requested perfomer",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The desired perfomer for doing the diagnostic testing.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "Use the standard [XXX extension]() for listing alternative  alternative performers and/or roles and/or preference.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.performer",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Organization"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Patient"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Device"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".participation[AUT or PFM]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "who.actor"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.reason",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.reason",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Explanation/Justification for test",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An explanation or justification for why this diagnostic investigation is being requested.   This is often for billing purposes.  May relate to the resources referred to in supportingInformation.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.   Use CodeableConcept text element if the data is free (uncoded) text as shown in the [CT Scan example](diagnosticrequest-example-di.html).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.reason",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Diagnosis or problem codes justifying the reason for requesting the diagnostic investigation.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/condition-code"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".reasonCode"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "w5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "why"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.supportingInformation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.supportingInformation",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional clinical information",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Additional clinical information about the patient or specimen that may influence test interpretations.  This includes observations explicitly requested by the producer(filler) to provide context or supporting information needed to complete the order.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as &quot;ask at order entry questions (AOEs)&quot;. Examples include reporting the amount of inspired oxygen for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "Ask at order entry question",
+          "AOE"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.supportingInformation",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "OBR-13"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "outboundRelationship[typeCode=SPRT]/target[classCode=ACT, moodCode=EVN]"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.note",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.note",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Comments",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Any other notes and comments made about the service request. (e.g. &quot;patient hates needles&quot;).",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.note",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Annotation"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.relevantHistory",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.relevantHistory",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Request provenance",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Key events in the history of the request.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.comments">comments</a>" : "This may not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DiagnosticRequest.relevantHistory",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org/fhir/StructureDefinition/Provenance"
+          }
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.name">name</a>" : "HSPC Lab Order",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "qdm",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patient Characteristic"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.encounter",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.encounter",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-genencounter"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.event",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.event",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.event.actor",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.event.actor",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.priority",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.priority",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.status",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.code",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "The set of LOINC codes that represent orderable tests.",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/LOINCOrderables"
+          }
+        }
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.subject",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.subject",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-patient"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      },
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticRequest:hspclaborder.requester",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticRequest.requester",
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
+            "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://fhir.org/guides/hspc/StructureDefinition/hspc-provpract"
+          }
+        },
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false
+      }
+    }
+  }
+}</pre>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

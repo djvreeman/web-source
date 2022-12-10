@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/weightmassunits> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "weightmassunits"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/weightmassunits"];
+  fhir:ValueSet.name [ fhir:value "HSPC Weight Units of Measure Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "The list of codes that describe the mass units used for weight."];
+  fhir:ValueSet.copyright [ fhir:value "This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[lb_av]" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pound [mass]" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[oz_av]" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ounce [mass]" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "kg" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Kilogram [SI Mass Units]" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "g" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gram [mass]" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

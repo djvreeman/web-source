@@ -1,0 +1,526 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC Narrative Labs</h2>
+
+<pre class"rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/NarrativeLabCodes> a fhir:ValueSet;
+  <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">fhir:value</a> &quot;NarrativeLabCodes&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.meta">fhir:Resource.meta</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&quot;;
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0     ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/hspc/ValueSet/NarrativeLabCodes&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC Narrative Labs&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HSPC&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+     <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact.telecom">fhir:ValueSet.contact.telecom</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;http://healthcaresoa.org&quot; ]     ]
+  ];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#dateTime">fhir:value</a> &quot;2015-02-20T13:44:49+11:00&quot;^^xsd:dateTime];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">fhir:value</a> &quot;Ordinal LOINC codes used in HSPC&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.copyright">fhir:ValueSet.copyright</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use&quot;];
+  <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+       <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">fhir:ValueSet.compose.include.concept</a> [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 0;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;1006-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Direct antiglobulin test.IgG specific reagent [interpretation] on Red Blood Cells&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 1;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10333-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Appearance of Cerebral spinal fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 2;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10335-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Color of Cerebral spinal fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 3;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10524-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Cervix by Cyto stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 4;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10569-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Color of Semen&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 5;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10573-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Ferning [Type] in Cervical mucus&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 6;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10701-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Ova+Parasites identified in Stool by Concentration|Ova and parasites identified in Stool by Concentration&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 7;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;10762-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Blood by Hemosiderin stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 8;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;11019-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Blood or Marrow by Sudan black B stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 9;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;11158-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Appearance of Serum&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 10;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;11546-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Unspecified specimen by Other stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 11;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;12286-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Drugs identified in Urine by Screen method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 12;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;1250-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Major crossmatch [interpretation]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 13;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;13306-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HLA-DR beta [Type]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 14;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;13440-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Immunofixation [interpretation] for Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 15;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;13501-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Herpes simplex virus 2 Ab pattern [interpretation] in Serum&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 16;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;13510-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Bone marrow by Myeloperoxidase stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 17;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;14575-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibody investigation [interpretation] in Plasma or RBC&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 18;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;14611-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Nuclear Ab pattern [interpretation] in Serum&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 19;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;14618-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Appearance of Stone|Appearance in Stone&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 20;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;14869-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Pathologist review of Blood tests&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 21;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;14884-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Porphyrins [interpretation] in Stool&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 22;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;15200-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Osmolality of Body fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 23;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;16112-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Estrogen receptor [interpretation] in Tissue&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 24;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;16113-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Progesterone receptor [interpretation] in Tissue&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 25;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;16793-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Drugs identified in Unknown substance by Screen method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 26;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;19066-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood bank comment&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 27;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;19144-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Reason for drug test [interpretation]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 28;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;19146-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Reference lab test results&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 29;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;19156-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Susceptibility method - Unspecified specimen|Susceptibility method [Identifier] in Unspecified specimen|Susceptibility method [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 30;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;20431-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Unspecified specimen by Smear&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 31;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;20510-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Lipoprotein fractions [interpretation] in Serum or Plasma by Electrophoresis&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 32;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;20671-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Amino acids [interpretation] in Serum or Plasma|Deprecated Amino acids [interpretation] in Serum or Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 33;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;20785-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Drugs identified in Serum or Plasma by Screen method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 34;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;20787-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Drugs identified in Unspecified specimen by Screen method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 35;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;20990-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;APC gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 36;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;21299-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Gestational age method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 37;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;21412-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Myocardium Ab pattern [interpretation] in Serum&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 38;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;21667-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;F5 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 39;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;27034-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Drugs identified in Hair by Screen method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 40;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;29495-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 41;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;30554-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HIV reverse transcriptase gene mutations detected [Identifier] in Isolate|HIV reverse transcriptase gene mutations detected [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 42;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;30934-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Natriuretic peptide B [Mass/volume] in Serum or Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 43;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;31208-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Specimen source [Identifier] of Unspecified specimen&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 44;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;3152-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Inhaled oxygen mechanism Dose&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 45;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;31868-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Legionella pneumophila 1 Ag [Presence] in Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 46;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;32286-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Hepatitis C virus genotype [Identifier] in Serum or Plasma by Probe and target amplification method|Hepatitis C virus genotype [Identifier] in Serum or Plasma by Probe and target amplification method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 47;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;32297-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Amino acids [interpretation] in Urine|Deprecated Amino acids [interpretation] in Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 48;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;32624-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Race&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 49;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;32700-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Blood by Malaria smear&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 50;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;32769-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Alpha 1 antitrypsin phenotyping [interpretation] in Serum or Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 51;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;33050-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Pseudocholinesterase phenotype [Identifier] in Serum or Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 52;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;33271-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Blood by Malaria thin smear&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 53;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;33511-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Appearance of Unspecified specimen&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 54;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;33630-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HIV protease gene mutations detected [Identifier] in Isolate|HIV protease gene mutations detected [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 55;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34474-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ABO + Rh group [Type] in Cord blood|ABO and Rh group [Type] in Cord blood|ABO and Rh group [Type] in Cord blood&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 56;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34477-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies present [Identifier] in Serum or Plasma by Elution&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 57;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34478-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies present [Identifier] in Blood by Chromogenic method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 58;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34479-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies present [Identifier] in Serum or Plasma by Cold absorption&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 59;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34480-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies present [Identifier] in Serum or Plasma by Cold incubation&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 60;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34481-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies present [Identifier] in Serum or Plasma by Warm incubation&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 61;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34482-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies present [Identifier] in Serum or Plasma by Warm absorption&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 62;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34959-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Blood by Myeloperoxidase stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 63;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34960-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HLA Ab [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 64;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34961-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Rh [Type] in Blood by Confirmatory method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 65;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;34964-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Osmotic fragility [interpretation] of Red Blood Cells&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 66;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;38348-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Herpes virus 6 DNA [Identifier] in Unspecified specimen by Probe and target amplification method|Herpes virus 6 DNA [Identifier] in Unspecified specimen by Probe and target amplification method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 67;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;41048-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;TPMT gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 68;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;41273-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Alpha-1-Fetoprotein interpretation [interpretation] in Amniotic fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 69;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;41274-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Alpha-1-Fetoprotein interpretation [interpretation] in Serum or Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 70;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;42675-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HLA Ag [interpretation]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 71;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;43284-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Spermatozoa IgA binding location [Identifier] in Semen&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 72;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;43287-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Spermatozoa IgG binding location [Identifier] in Semen&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 73;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;43370-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;CFTR gene p.IVS8 PolyT [Presence] in Blood or Tissue by Molecular genetics method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 74;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;43804-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Amino acids [interpretation] in Cerebral spinal fluid|Amino acid pattern [interpretation] in Cerebral spinal fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 75;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;44014-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Porphyrins [interpretation] in Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 76;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;44074-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Arbovirus Ab [interpretation] in Serum by Immunofluorescence&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 77;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;4465-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Hamster Ova Penetration Test [interpretation] in Semen&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 78;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;44838-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Catecholamines [interpretation] in Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 79;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;45175-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HIV nucleoside reverse transcriptase gene mutations detected [Identifier] in Isolate|HIV nucleoside reverse transcriptase gene mutations detected [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 80;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;45176-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HIV nonnucleoside reverse transcriptase gene mutations detected [Identifier] in Isolate|HIV nonnucleoside reverse transcriptase gene mutations detected [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 81;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;47938-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Specimen source [Identifier] of Body fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 82;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;48818-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Karyotype [Identifier] in Blood or Tissue by High resolution Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 83;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;49024-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Differential cell count method - Blood|Differential cell count method [Type] in Blood&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 84;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;49541-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Fasting status [Presence] - Reported|Fasting status - Reported&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 85;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;50008-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Mixing studies [interpretation] in Platelet poor plasma Narrative&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 86;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;50595-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Pathologist interpretation of Unspecified specimen tests&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 87;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;50722-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;VKORC1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 88;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;55192-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Chromosome analysis.interphase [interpretation] in Amniotic fluid by Fluorescent in situ hybridization (FISH) Narrative&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 89;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;56164-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;CYP2C9 gene allele 2 [Identifier] in Blood by Molecular genetics method Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 90;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;56165-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;CYP2C9 gene allele 3 [Identifier] in Blood by Molecular genetics method Nominal&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 91;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;5767-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Appearance of Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 92;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;5778-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Color of Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 93;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;5779-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Crystals [type] in Bile fluid by Light microscopy&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 94;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;5781-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Crystals [type] in Synovial fluid by Light microscopy&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 95;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;5909-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood smear finding [Identifier] in Blood by Light microscopy&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 96;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;59465-5&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Pathologist review [interpretation] in Unspecified specimen Narrative|Pathologist review of results&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 97;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;6013-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;von Willebrand factor (vWf) multimers in Platelet poor plasma by Immunoblot (IB)&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 98;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;6262-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Swine epithelium IgE Ab [Units/volume] in Serum&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 99;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;62862-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microsatellite instability [Presence] in Tissue by Immune stain&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 100;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;63558-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;HLA-DQB1*0602 [Presence]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 101;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;637-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Blood by Malaria thick smear&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 102;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;64013-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Escherichia coli shiga-like toxin 1 and 2 Ag [Identifier] in Stool by Immunoassay&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 103;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;675-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Enterobius vermicularis [Presence] in Unspecified specimen by Pinworm exam|Enterobius vermicularis [Presence] in Unspecified specimen Qualitative by Pinworm exam|Enterobius vermicularis [Identifier] in Unspecified specimen by Pinworm exam&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 104;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;6824-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Color of Body fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 105;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;6825-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Crystals [type] in Body fluid by Light microscopy&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 106;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;881-3&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ABO + Rh group [Type] in Serum or Plasma from Blood product unit|ABO and Rh group [Type] in Serum or Plasma from Blood product unit|ABO and Rh group [Type] in Serum or Plasma from Blood product unit&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 107;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;882-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ABO + Rh group [Type] in Blood|ABO and Rh group [Type] in Blood|ABO and Rh group [Type] in Blood&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 108;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;883-9&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;ABO group [Type] in Blood&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 109;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;888-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antibodies identified in Serum or Plasma&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 110;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;906-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood group antigens present [Identifier] in Blood&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 111;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;9109-0&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood loss.total intraoperative [Volume] Cell saver&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 112;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;9194-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Type of Urine collection method&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 113;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;925-8&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood product disposition [Type]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 114;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;927-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood product.pooled [Identifier]&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 115;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;933-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Blood product type&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 116;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;9335-1&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Appearance of Body fluid&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 117;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;9409-4&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Anabolic steroids [Identifier] in Urine&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 118;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;9785-7&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Microscopic observation [Identifier] in Stool by Ova and Parasite Preparation|Deprecated Microscopic observation [Identifier] in Stool by Ova and Parasite Preparation&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 119;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;9795-6&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Composition in Stone&quot; ]       ], [
+         <a href="c:\work\org.hl7.fhir\build\publish/rdf.html#index">fhir:index</a> 120;
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">fhir:value</a> &quot;66759-2&quot; ];
+         <a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">fhir:value</a> &quot;Heparin neutralization [Presence] in Blood by Thromboelastography&quot; ]       ]     ]
+  ].
+
+</pre>
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

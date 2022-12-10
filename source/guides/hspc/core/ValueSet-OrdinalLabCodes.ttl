@@ -1,0 +1,1457 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/OrdinalLabCodes> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "OrdinalLabCodes"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/OrdinalLabCodes"];
+  fhir:ValueSet.name [ fhir:value "HSPC Ordinal Labs"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2015-02-20T13:44:49+11:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "Ordinal LOINC codes used in HSPC"];
+  fhir:ValueSet.copyright [ fhir:value "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1004-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Direct antiglobulin test.complement specific reagent [Presence] on Red Blood Cells" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1007-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10374-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helmet cells [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10378-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Polychromasia [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10380-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Stomatocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10381-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Target cells [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10900-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11060-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reducing substances [Presence] in Stool" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11259-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method|Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11281-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Auer rods [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11483-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Varicella zoster virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Varicella zoster virus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12239-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oligosaccharides [Presence] in Urine" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12454-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urate crystals amorphous [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12598-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fat.neutral [Presence] in Stool" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12853-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Purkinje cells Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13248-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis D virus Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13532-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Xanthochromia [Presence] of Cerebral spinal fluid|Xanthochromia of Cerebral spinal fluid Qualitative" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13533-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acid hemolysis [Presence] of Blood" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13578-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Promazine [Presence] in Serum or Plasma" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13655-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leukocytes [Presence] in Stool by Light microscopy" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13931-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Striated muscle Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13949-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus IgG Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13950-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis A virus IgM Ab [Presence] in Serum by Immunoassay|Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13951-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis A virus Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13952-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus core Ab [Presence] in Serum by Immunoassay|Hepatitis B virus core Ab [Presence] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13953-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus e Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14249-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Purkinje cells Ab [Presence] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14273-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reticulin IgA Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14564-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin.gastrointestinal [Presence] in Stool --2nd specimen" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14565-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin.gastrointestinal [Presence] in Stool --3rd specimen" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15151-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus fumigatus 3 Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15179-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fibrin D-dimer [Presence] in Platelet poor plasma" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16128-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis C virus Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16369-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amphetamines [Presence] in Urine by Confirmatory method" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16933-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus core Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16942-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16955-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus 2 IgG Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17257-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mesothelial cells [Presence] in Body fluid by Light microscopy" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17726-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treponema pallidum IgG Ab [Presence] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17783-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemosiderin [Presence] in Urine by Light microscopy" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17850-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus 1 IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18282-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cannabinoids [Presence] in Urine by Screen method" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18311-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pelger Huet cells [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18312-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Platelet satellitism [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18390-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Opiates [Presence] in Urine by Confirmatory method" ]
+       ], [
+         fhir:index 45;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18481-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pyogenes Ag [Presence] in Throat" ]
+       ], [
+         fhir:index 46;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19162-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Varicella zoster virus IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 47;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19252-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Megakaryocytes/100 leukocytes in Blood" ]
+       ], [
+         fhir:index 48;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1928-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunoglobulin light chains [Presence] in Urine" ]
+       ], [
+         fhir:index 49;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19429-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Propoxyphene [Presence] in Urine by Screen method" ]
+       ], [
+         fhir:index 50;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19554-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methamphetamine [Presence] in Urine by Screen method" ]
+       ], [
+         fhir:index 51;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1977-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bilirubin [Presence] in Urine|Bilirubin.total [Presence] in Urine" ]
+       ], [
+         fhir:index 52;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20404-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fibronectin.fetal [Presence] in Vaginal fluid" ]
+       ], [
+         fhir:index 53;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20411-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barbiturates [Mass/volume] in Urine by Confirmatory method" ]
+       ], [
+         fhir:index 54;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20421-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barbiturates [Presence] in Serum or Plasma by Screen method" ]
+       ], [
+         fhir:index 55;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20507-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reagin Ab [Presence] in Serum by RPR" ]
+       ], [
+         fhir:index 56;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2106-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Choriogonadotropin (pregnancy test) [Presence] in Urine" ]
+       ], [
+         fhir:index 57;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2118-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Choriogonadotropin (pregnancy test) [Presence] in Serum or Plasma" ]
+       ], [
+         fhir:index 58;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21233-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cryptosporidium sp Ag [Presence] in Stool" ]
+       ], [
+         fhir:index 59;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21348-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HTLV 1+2 IgG Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 60;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21518-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "SCL-70 extractable nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 61;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21523-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Smith extractable nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 62;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21560-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thermoactinomyces candidus Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 63;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21561-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thermoactinomyces sacchari Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 64;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21695-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HFE gene p.C282Y [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 65;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21696-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HFE gene p.H63D [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 66;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21747-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HC gene rearrangements [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 67;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21753-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TCRG gene rearrangements [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 68;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22239-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 69;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22295-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus early IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 70;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22310-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helicobacter pylori Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 71;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22362-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HTLV 1+2 Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 72;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22415-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mumps virus IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 73;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22566-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pyogenes enzyme Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 74;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22572-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Saccharomonospora viridis Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 75;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2334-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin.gastrointestinal [Presence] in Gastric fluid" ]
+       ], [
+         fhir:index 76;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2335-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin.gastrointestinal [Presence] in Stool" ]
+       ], [
+         fhir:index 77;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2349-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Presence] in Urine" ]
+       ], [
+         fhir:index 78;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2350-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 79;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23785-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trypanosoma cruzi Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 80;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23820-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus flavus Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 81;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23826-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bordetella pertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method|Bordetella pertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 82;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23867-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hantavirus sin nombre IgG Ab [Titer] in Serum" ]
+       ], [
+         fhir:index 83;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23868-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hantavirus sin nombre IgM Ab [Titer] in Serum" ]
+       ], [
+         fhir:index 84;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23929-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ribonucleoprotein extractable nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 85;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23980-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Borrelia burgdorferi IgG Ab [Presence] in Body fluid by Immunoblot (IB)" ]
+       ], [
+         fhir:index 86;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23982-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Borrelia burgdorferi IgM Ab [Presence] in Body fluid by Immunoblot (IB)" ]
+       ], [
+         fhir:index 87;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24015-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A+B Ag [Presence] in Unspecified specimen" ]
+       ], [
+         fhir:index 88;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24027-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae Ag [Presence] in Urine" ]
+       ], [
+         fhir:index 89;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24111-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neisseria gonorrhoeae DNA [Presence] in Unspecified specimen by Probe and target amplification method|Neisseria gonorrhoeae DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 90;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24113-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus core IgM Ab [Presence] in Serum by Immunoassay|Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 91;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24114-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus capsid IgG Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 92;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24115-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus capsid IgM Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 93;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24119-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus IgM Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 94;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24312-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treponema pallidum Ab [Presence] in Serum by Agglutination" ]
+       ], [
+         fhir:index 95;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2432-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Homogentisate [Presence] in Urine" ]
+       ], [
+         fhir:index 96;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2474-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Indicans [Presence] in Urine" ]
+       ], [
+         fhir:index 97;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2514-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ketones [Presence] in Urine by Test strip" ]
+       ], [
+         fhir:index 98;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "25514-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rubella virus IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 99;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2606-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Melanin [Presence] in Urine" ]
+       ], [
+         fhir:index 100;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26620-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hantavirus IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 101;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26960-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trypsin [Presence] in Stool" ]
+       ], [
+         fhir:index 102;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27270-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "4-Hydroxyphenylacetate [Presence] in Urine" ]
+       ], [
+         fhir:index 103;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27420-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phosphatidylglycerol [Units/volume] in Amniotic fluid" ]
+       ], [
+         fhir:index 104;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2761-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phenylketones [Presence] in Blood" ]
+       ], [
+         fhir:index 105;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28005-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "MTHFR gene p.C677T [Presence] in Blood or Tissue by Molecular genetics method|MTHFR gene c.677C>T [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 106;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28060-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "MTHFR gene p.A1298C [Presence] in Blood or Tissue by Molecular genetics method|MTHFR gene c.1298A>C [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 107;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28067-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin F [Presence] in Amniotic fluid" ]
+       ], [
+         fhir:index 108;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2887-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein [Presence] in Urine" ]
+       ], [
+         fhir:index 109;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29257-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mycoplasma pneumoniae DNA [Presence] in Unspecified specimen by Probe and target amplification method|Mycoplasma pneumoniae DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 110;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29495-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 111;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29497-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Platelet associated IgG Ab [Presence] in Blood by Flow cytometry (FC)" ]
+       ], [
+         fhir:index 112;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29498-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Platelet associated IgM Ab [Presence] in Blood by Flow cytometry (FC)" ]
+       ], [
+         fhir:index 113;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29591-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 114;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29610-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus DNA [Presence] in Serum or Plasma by Probe and target amplification method|Hepatitis B virus DNA [Presence] in Serum or Plasma by Probe and target amplification method" ]
+       ], [
+         fhir:index 115;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29672-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bordetella pertussis IgA Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 116;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29673-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bordetella pertussis IgM Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 117;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29674-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bordetella pertussis IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 118;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29723-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bordetella parapertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method|Bordetella parapertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 119;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29771-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin.gastrointestinal [Presence] in Stool by Immunologic method" ]
+       ], [
+         fhir:index 120;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29778-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "West Nile virus IgM Ab [Presence] in Unspecified specimen by Immunoassay" ]
+       ], [
+         fhir:index 121;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29891-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helicobacter pylori [Presence] in Stomach by urea breath test" ]
+       ], [
+         fhir:index 122;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29899-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gamma globulin [Presence] in 24 hour Urine" ]
+       ], [
+         fhir:index 123;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29901-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HTLV 1+2 Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 124;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29908-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parainfluenza virus 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 125;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29909-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parainfluenza virus 2 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 2 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 126;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29910-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parainfluenza virus 3 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 3 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 127;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29945-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 1 globulin [Presence] in 24 hour Urine by Electrophoresis" ]
+       ], [
+         fhir:index 128;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29947-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 2 globulin [Presence] in 24 hour Urine by Electrophoresis" ]
+       ], [
+         fhir:index 129;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29950-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nuclear IgG Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 130;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29951-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta globulin [Presence] in 24 hour Urine" ]
+       ], [
+         fhir:index 131;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29990-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spermatozoa [Presence] in Semen by Light microscopy --post vasectomy" ]
+       ], [
+         fhir:index 132;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29994-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basement membrane IgG Ab [Presence] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 133;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29995-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basement membrane IgA Ab [Presence] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 134;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30036-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus fumigatus 2 Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 135;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30167-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe and signal amplification method" ]
+       ], [
+         fhir:index 136;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30219-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coxsackievirus A9 Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 137;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30246-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus DNA [Presence] in Serum or Plasma by Probe and target amplification method|Cytomegalovirus DNA [Presence] in Serum or Plasma by Probe and target amplification method" ]
+       ], [
+         fhir:index 138;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30361-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 2 Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 139;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30557-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Smooth muscle IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 140;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30577-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "2-methyl,3-hydroxybutyrate (C5-OH) [Presence] in Urine" ]
+       ], [
+         fhir:index 141;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31153-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coccidioides sp Ab [Presence] in Unspecified specimen by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 142;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31201-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 1+2 Ab [Presence] in Serum by Immunoassay|HIV 1+2 Ab [Presence] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 143;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31539-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neuronal nuclear type 2 Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 144;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31545-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 145;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31588-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ribonucleoprotein extractable nuclear IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 146;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31625-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sjogrens syndrome-A extractable nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 147;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31626-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sjogrens syndrome-B extractable nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 148;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31627-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Smith extractable nuclear Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 149;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31788-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cryptococcus sp Ag [Presence] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 150;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31843-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helicobacter pylori Ag [Presence] in Stool" ]
+       ], [
+         fhir:index 151;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31859-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A Ag [Presence] in Unspecified specimen" ]
+       ], [
+         fhir:index 152;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31864-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus B Ag [Presence] in Unspecified specimen" ]
+       ], [
+         fhir:index 153;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31969-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae Ag [Presence] in Unspecified specimen" ]
+       ], [
+         fhir:index 154;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32131-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hantavirus IgM Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 155;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32356-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Yeast [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 156;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32358-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein fractions.oligoclonal bands [Presence] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 157;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3241-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coagulation factor XIII coagulum dissolution at 24H [Presence] in Platelet poor plasma by Coagulation assay|Coagulation factor XIII coagulum dissolution at 24 hours [Presence] in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 158;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32637-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urease [Presence] in Tissue" ]
+       ], [
+         fhir:index 159;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32765-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Yeast [Presence] in Unspecified specimen by Wet preparation" ]
+       ], [
+         fhir:index 160;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32789-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Viscosity of Semen Qualitative" ]
+       ], [
+         fhir:index 161;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33031-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sodium urate crystals [#/area] in Urine sediment by Microscopy low power field" ]
+       ], [
+         fhir:index 162;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33032-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spermatozoa Progressive [Presence] in Semen" ]
+       ], [
+         fhir:index 163;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33291-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus 1 IgG Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 164;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33422-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amphiphysin Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 165;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3349-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amphetamines [Presence] in Urine" ]
+       ], [
+         fhir:index 166;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33615-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neuronal nuclear type 1 Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 167;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3376-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barbiturates [Presence] in Serum, Plasma or Blood" ]
+       ], [
+         fhir:index 168;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3377-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barbiturates [Presence] in Urine" ]
+       ], [
+         fhir:index 169;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33861-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Starch granules [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 170;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3390-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Benzodiazepines [Presence] in Urine" ]
+       ], [
+         fhir:index 171;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33923-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemosiderin [Presence] in Unspecified specimen" ]
+       ], [
+         fhir:index 172;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33930-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lupus anticoagulant neutralization hexagonal phase phospholipid [Presence] in Platelet poor plasma|aPTT W excess hexagonal phospholipid (StaClot LA confirm)" ]
+       ], [
+         fhir:index 173;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3414-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Buprenorphine [Presence] in Urine" ]
+       ], [
+         fhir:index 174;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34469-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leukocytes [Presence] in Bile fluid by Light microscopy" ]
+       ], [
+         fhir:index 175;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34470-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Giardia lamblia Ag [Presence] in Bile fluid" ]
+       ], [
+         fhir:index 176;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34471-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium bilirubinate crystals [Presence] in Bile fluid by Light microscopy" ]
+       ], [
+         fhir:index 177;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34472-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol crystals [Presence] in Bile fluid by Light microscopy" ]
+       ], [
+         fhir:index 178;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34473-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils.vacuolated+Segmented [Presence] in Blood" ]
+       ], [
+         fhir:index 179;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34487-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 180;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34701-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ab [Presence] in Serum|Platelet Ab.heparin induced [Presence] in Serum|Heparin induced platelet Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 181;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34706-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CFTR gene p.3199 del6 [Presence] in Blood or Tissue by Molecular genetics method|CFTR gene c.3199del6 [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 182;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34713-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clostridium difficile toxin A+B [Presence] in Stool" ]
+       ], [
+         fhir:index 183;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34729-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CFTR gene p.R117H+5T variant [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 184;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34892-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "West Nile virus RNA [Presence] in Unspecified specimen by Probe and target amplification method|West Nile virus RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 185;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35270-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Candida sp Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 186;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35271-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Candida sp Ag [Presence] in Serum by Latex agglutination" ]
+       ], [
+         fhir:index 187;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35272-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Centromere IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 188;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35277-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Myocardium IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 189;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35284-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histone IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 190;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35471-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HLA Ab [Presence]" ]
+       ], [
+         fhir:index 191;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35492-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] by Probe and target amplification method|Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] by Probe and target amplification method" ]
+       ], [
+         fhir:index 192;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35503-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arterial patency Wrist artery --pre arterial puncture" ]
+       ], [
+         fhir:index 193;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35729-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chlamydia sp DNA [Presence] in Unspecified specimen by Probe and target amplification method|Chlamydia sp DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 194;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3773-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methadone [Presence] in Urine" ]
+       ], [
+         fhir:index 195;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38380-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HFE gene p.S65C [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 196;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3879-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Opiates [Presence] in Urine" ]
+       ], [
+         fhir:index 197;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38917-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Human metapneumovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human metapneumovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 198;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3936-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phencyclidine [Presence] in Urine" ]
+       ], [
+         fhir:index 199;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "39528-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adenovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Adenovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 200;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4027-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secobarbital [Presence] in Serum or Plasma" ]
+       ], [
+         fhir:index 201;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "40473-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thermoactinomyces vulgaris 1 Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 202;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "40703-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lactoferrin [Presence] in Stool by Immunoassay" ]
+       ], [
+         fhir:index 203;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "40729-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus IgM Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 204;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4073-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tricyclic antidepressants [Presence] in Serum or Plasma" ]
+       ], [
+         fhir:index 205;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4093-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Verapamil [Presence] in Serum or Plasma" ]
+       ], [
+         fhir:index 206;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "40982-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus B RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus B RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 207;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "40988-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory syncytial virus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Respiratory syncytial virus RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 208;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "40991-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rhinovirus+Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Rhinovirus+Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 209;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "41005-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Human coronavirus NL63 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human coronavirus NL63 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 210;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "41010-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parainfluenza virus 4 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 4 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 211;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "41400-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Yersinia sp IgA Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 212;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "41401-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Yersinia sp IgG Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 213;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42241-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cocaine+Benzoylecgonine [Presence] in Urine by Screen method" ]
+       ], [
+         fhir:index 214;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42481-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe and signal amplification method" ]
+       ], [
+         fhir:index 215;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42714-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "t(9,22)(ABL1,BCR) p210 Translocation [Presence] in Blood or Tissue by Molecular genetics method|t(9;22)(q34.1;q11)(ABL1,BCR) b2a2+b3a2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 216;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42938-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CFTR gene allele 1 [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 217;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42939-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CFTR gene allele 2 [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 218;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "43249-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "X ray dye crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 219;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "43399-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "JAK2 gene p.V617F [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 220;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "43597-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Inner Ear 68kD Ab [Presence] in Serum or Plasma by Immunoblot (IB)" ]
+       ], [
+         fhir:index 221;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44099-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Galactomannan Ag [Presence] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 222;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44332-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Jo-1 extractable nuclear IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 223;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44754-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis D virus Ag [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 224;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44877-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insulin dependent diabetes mellitus [Presence]" ]
+       ], [
+         fhir:index 225;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44938-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis D virus IgM Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 226;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "45153-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HLA Ab in Serum" ]
+       ], [
+         fhir:index 227;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4579-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin F [Presence] in Blood" ]
+       ], [
+         fhir:index 228;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4631-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin F [Presence] in Stool by Apt-Downey method" ]
+       ], [
+         fhir:index 229;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4639-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Unstable Hemoglobin [Presence] in Red Blood Cells" ]
+       ], [
+         fhir:index 230;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "46740-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin disorders newborn screen interpretation" ]
+       ], [
+         fhir:index 231;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "46771-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Classical galactosemia newborn screen interpretation" ]
+       ], [
+         fhir:index 232;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "47238-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treponema pallidum IgG Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 233;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "47251-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BK virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|BK virus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 234;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49524-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A H3 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A H3 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 235;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49541-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fasting status [Presence] - Reported|Fasting status - Reported" ]
+       ], [
+         fhir:index 236;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49795-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "t(9,22)(ABL1,BCR) p190 Translocation [Presence] in Blood or Tissue by Molecular genetics method|t(9;22)(q34.1;q11)(ABL1,BCR) e1a2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 237;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5000-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Cytomegalovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 238;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5005-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Epstein Barr virus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 239;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5010-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis C virus RNA [Presence] in Blood by Probe and target amplification method|Hepatitis C virus RNA [Presence] in Blood by Probe and target amplification method" ]
+       ], [
+         fhir:index 240;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5014-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes simplex virus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 241;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5018-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|HIV 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 242;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5020-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Legionella sp rRNA [Presence] in Unspecified specimen by DNA probe" ]
+       ], [
+         fhir:index 243;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5028-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neisseria gonorrhoeae rRNA [Presence] in Unspecified specimen by DNA probe" ]
+       ], [
+         fhir:index 244;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "50322-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "MLH-1 Ag [Presence] in Tissue by Immune stain" ]
+       ], [
+         fhir:index 245;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "50323-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "MSH-2 Ag [Presence] in Tissue by Immune stain" ]
+       ], [
+         fhir:index 246;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "50324-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "MSH-6 Ag [Presence] in Tissue by Immune stain" ]
+       ], [
+         fhir:index 247;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "50328-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "PMS-2 Ag [Presence] in Tissue by Immune stain" ]
+       ], [
+         fhir:index 248;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "50385-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha-1-Microglobulin.placental [Presence] in Vaginal fluid" ]
+       ], [
+         fhir:index 249;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5052-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus sp Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 250;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5058-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Blastomyces dermatitidis Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 251;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "51006-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Direct antiglobulin test.unspecified reagent [Presence] on Red Blood Cells" ]
+       ], [
+         fhir:index 252;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5117-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cryoglobulin [Presence] in Serum" ]
+       ], [
+         fhir:index 253;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5156-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus nuclear IgG Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 254;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5195-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus surface Ag [Presence] in Serum" ]
+       ], [
+         fhir:index 255;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5196-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus surface Ag [Presence] in Serum by Immunoassay|Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 256;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5199-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis C virus Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 257;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5213-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Heterophile Ab [Presence] in Serum by Latex agglutination" ]
+       ], [
+         fhir:index 258;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5218-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histoplasma capsulatum Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 259;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5290-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reagin Ab [Presence] in Cerebral spinal fluid by VDRL" ]
+       ], [
+         fhir:index 260;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5292-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reagin Ab [Presence] in Serum by VDRL" ]
+       ], [
+         fhir:index 261;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5297-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rheumatoid factor [Presence] in Serum by Latex agglutination" ]
+       ], [
+         fhir:index 262;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5358-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Smooth muscle Ab [Titer] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 263;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5393-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treponema pallidum Ab [Presence] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 264;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "54067-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clostridium difficile toxin genes [Presence] in Stool by Probe and target amplification method|Clostridium difficile toxin genes [Presence] in Stool by Probe and target amplification method" ]
+       ], [
+         fhir:index 265;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "54142-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Candida sp DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Candida sp DNA [Presence] in Vaginal fluid by Probe and signal amplification method" ]
+       ], [
+         fhir:index 266;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "54143-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gardnerella vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Gardnerella vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method" ]
+       ], [
+         fhir:index 267;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "54144-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trichomonas vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Trichomonas vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method" ]
+       ], [
+         fhir:index 268;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "54905-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Norovirus 1 RNA [Presence] in Stool by Probe and target amplification method|Norovirus 1 RNA [Presence] in Stool by Probe and target amplification method|Norovirus Genogroup I RNA [Presence] in Stool by Probe and target amplification method" ]
+       ], [
+         fhir:index 269;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "54906-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Norovirus 2 RNA [Presence] in Stool by Probe and target amplification method|Norovirus 2 RNA [Presence] in Stool by Probe and target amplification method|Norovirus Genogroup II RNA [Presence] in Stool by Probe and target amplification method" ]
+       ], [
+         fhir:index 270;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "550-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bordetella pertussis Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 271;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "55464-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A swine origin RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A swine origin RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 272;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "55465-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A H1 2009 pandemic RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A H1 2009 pandemic RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 273;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5766-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ammonium urate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 274;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5770-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bilirubin [Presence] in Urine by Test strip|Bilirubin.total [Presence] in Urine by Test strip" ]
+       ], [
+         fhir:index 275;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5771-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bilirubin crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 276;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5773-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium carbonate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 277;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5774-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium oxalate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 278;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5775-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium phosphate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 279;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5777-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 280;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5783-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Unidentified crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 281;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5784-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cystine crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 282;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57901-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clostridium difficile glutamate dehydrogenase [Presence] in Stool" ]
+       ], [
+         fhir:index 283;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5794-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin [Presence] in Urine by Test strip" ]
+       ], [
+         fhir:index 284;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5795-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hippurate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 285;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5799-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leukocyte esterase [Presence] in Urine by Test strip" ]
+       ], [
+         fhir:index 286;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "58012-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Natalizumab Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 287;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5802-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nitrite [Presence] in Urine by Test strip" ]
+       ], [
+         fhir:index 288;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5809-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reducing substances [Presence] in Urine" ]
+       ], [
+         fhir:index 289;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5813-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Trichomonas vaginalis [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 290;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5814-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triple phosphate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 291;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5815-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tyrosine crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 292;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5817-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urate crystals [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 293;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "58415-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BRAF gene p.V600E [Presence] in Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 294;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "58416-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "MLH1 gene methylation [Presence] in Tissue by Molecular genetics method" ]
+       ], [
+         fhir:index 295;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5846-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus 1 Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 296;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5849-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus 2 Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 297;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5863-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus A Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 298;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5867-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Influenza virus B Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 299;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "58751-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treponema pallidum IgG Ab [Presence] in Cerebral spinal fluid by Immunofluorescence" ]
+       ], [
+         fhir:index 300;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5876-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory syncytial virus Ag [Presence] in Unspecified specimen by Immunoassay" ]
+       ], [
+         fhir:index 301;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5880-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rotavirus Ag [Presence] in Stool by Immunoassay" ]
+       ], [
+         fhir:index 302;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "588-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Legionella pneumophila Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 303;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59262-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leukocyte esterase [Presence] in Cerebral spinal fluid by Test strip" ]
+       ], [
+         fhir:index 304;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59420-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Human papilloma virus16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe and signal amplification method" ]
+       ], [
+         fhir:index 305;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59838-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus Ab [Presence] in Serum or Plasma by Latex agglutination" ]
+       ], [
+         fhir:index 306;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59839-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urate crystals [Presence] in Tissue by Light microscopy" ]
+       ], [
+         fhir:index 307;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "60340-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Crystals.amorphous [Presence] in Urine sediment by Light microscopy" ]
+       ], [
+         fhir:index 308;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "61404-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Staphylococcus aureus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Staphylococcus aureus DNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 309;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "62423-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Human coronavirus HKU1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human coronavirus HKU1 RNA [Presence] in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 310;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "62862-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Microsatellite instability [Presence] in Tissue by Immune stain" ]
+       ], [
+         fhir:index 311;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6306-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adenovirus C(40)+B(41) Ag [Presence] in Stool by Immunoassay|Adenovirus 40+41 Ag [Presence] in Stool by Immunoassay" ]
+       ], [
+         fhir:index 312;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6320-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Borrelia burgdorferi IgG Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 313;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6321-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Borrelia burgdorferi IgM Ab [Presence] in Serum by Immunoblot (IB)" ]
+       ], [
+         fhir:index 314;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "63379-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "DNA double strand IgG Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 315;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6355-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chlamydia trachomatis Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 316;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "63558-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HLA-DQB1*0602 [Presence]" ]
+       ], [
+         fhir:index 317;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6362-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clostridium difficile toxin A+B [Presence] in Stool by Cytotoxin tissue culture assay" ]
+       ], [
+         fhir:index 318;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6443-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lactoferrin [Presence] in Stool by Latex agglutination" ]
+       ], [
+         fhir:index 319;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6447-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Legionella pneumophila Ag [Presence] in Urine by Immunoassay" ]
+       ], [
+         fhir:index 320;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6733-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pigeon serum Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 321;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6808-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus fumigatus 1 Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 322;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6809-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus fumigatus 6 Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 323;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6810-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aureobasidium pullulans Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 324;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6818-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Saccharopolyspora rectivirgula Ab [Presence] in Serum by Immune diffusion (ID)" ]
+       ], [
+         fhir:index 325;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "700-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pneumocystis jiroveci Ag [Presence] in Unspecified specimen by Immunofluorescence" ]
+       ], [
+         fhir:index 326;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "702-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anisocytosis [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 327;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "703-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basophilic stippling [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 328;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "716-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Heinz bodies [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 329;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "728-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hypochromia [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 330;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "733-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lymphocytes Variant [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 331;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "738-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Macrocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 332;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "741-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Microcytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 333;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "765-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils.hypersegmented [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 334;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "774-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ovalocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 335;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7789-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acanthocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 336;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7790-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Burr cells [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 337;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7791-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dacrocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 338;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7792-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dohle body [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 339;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7793-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Howell-Jolly bodies [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 340;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7795-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pappenheimer bodies [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 341;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7796-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Platelet clump [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 342;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7797-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rouleaux [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 343;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7798-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Smudge cells [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 344;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "779-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Poikilocytosis [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 345;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7918-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 1+2 Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 346;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "800-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Schistocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 347;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "801-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sickle cells [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 348;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "802-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spherocytes [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 349;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "803-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Toxic granules [Presence] in Blood by Light microscopy" ]
+       ], [
+         fhir:index 350;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8041-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Treponema pallidum Ab [Presence] in Serum by Hemagglutination" ]
+       ], [
+         fhir:index 351;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8061-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nuclear Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 352;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8091-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ribonucleoprotein extractable nuclear Ab [Presence] in Serum" ]
+       ], [
+         fhir:index 353;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8092-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "SCL-70 extractable nuclear Ab [Presence] in Serum" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

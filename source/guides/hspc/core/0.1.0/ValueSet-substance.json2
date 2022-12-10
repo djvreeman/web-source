@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substance",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/substance",
+  "version": "0.01",
+  "name": "HSPC Substance Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT and RcNorm code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "105590001",
+            "display": "Substance (substance)"
+          }
+        ]
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "filter": [
+          {
+            "property": "TTY",
+            "op": "in",
+            "value": "SCD,SBD"
+          }
+        ]
+      }
+    ]
+  }
+}

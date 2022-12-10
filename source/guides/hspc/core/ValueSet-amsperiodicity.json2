@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "id": "amsperiodicity",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/amsperiodicity",
+  "version": "0.01",
+  "name": "HSPC Altered Mental Status Periodicity Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values describing how frequent an altered mental status occurs.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "255227004",
+            "display": "Recurrent (qualifier value)"
+          },
+          {
+            "code": "278499009",
+            "display": "Episodic (qualifier value)"
+          },
+          {
+            "code": "255238004",
+            "display": "Continuous (qualifier value)"
+          },
+          {
+            "code": "7087005",
+            "display": "Intermittent (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

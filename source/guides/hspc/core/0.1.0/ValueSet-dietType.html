@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC Diet Type value set.</h2>
+
+<p>
+Formats: <a href="ValueSet-dietType.xml.html">XML</a>, <a href="ValueSet-dietType.json.html">JSON</a>, <a href="ValueSet-dietType.ttl.html">Turtle</a>
+</p>
+
+<div><h2>HSPC Diet Type value set.</h2><div><p>Select HL7 ActCode codes.</p>
+</div><p><b>Copyright Statement:</b> TBD</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="c:/work/org.hl7.fhir/build/publish/v3/ActCode/cs.html">http://hl7.org/fhir/v3/ActCode</a><table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>BR</td><td>breikost(GE)</td><td>A diet exclusively composed of oatmeal, semolina, or rice, to be extremely easy to eat and digest.</td></tr><tr><td>DM</td><td>Diabetes mellitus diet</td><td>A diet that uses carbohydrates sparingly.  Typically with a restriction in daily energy content (e.g. 1600-2000 kcal).</td></tr><tr><td>FAST</td><td>fasting</td><td>No enteral intake of foot or liquids  whatsoever, no smoking.  Typically 6 to 8 hours before anesthesia.</td></tr><tr><td>FORMULA</td><td>formula diet</td><td>A diet consisting of a formula feeding, either for an infant or an adult, to provide nutrition either orally or through the gastrointestinal tract via tube, catheter or stoma.</td></tr><tr><td>GF</td><td>Gluten Free</td><td>Gluten free diet for celiac disease.</td></tr><tr><td>LF</td><td>Low Fat</td><td>A diet low in fat, particularly to patients with hepatic diseases.</td></tr><tr><td>LP</td><td>Low Protein</td><td>A low protein diet for patients with renal failure.</td></tr><tr><td>LQ</td><td>Liquid</td><td>A strictly liquid diet, that can be fully absorbed in the intestine, and therefore may not contain fiber.  Used before enteral surgeries.</td></tr><tr><td>LS</td><td>Low Sodium</td><td>A diet low in sodium for patients with congestive heart failure and/or renal failure.</td></tr><tr><td>N</td><td>Normal Diet</td><td>A normal diet, i.e. no special preparations or restrictions for medical reasons. This is notwithstanding any preferences the patient might have regarding special foods, such as vegetarian, kosher, etc.</td></tr><tr><td>NF</td><td>No Fat</td><td>A no fat diet for acute hepatic diseases.</td></tr><tr><td>PAF</td><td>Phenylalanine Free</td><td>Phenylketonuria diet.</td></tr><tr><td>PAR</td><td>Parenteral</td><td>Patient is supplied with parenteral nutrition, typically described in terms of i.v. medications.</td></tr><tr><td>RD</td><td>Reduction Diet</td><td>A diet that seeks to reduce body fat, typically low energy content (800-1600 kcal).</td></tr><tr><td>SCH</td><td>Schonkost (GE)</td><td>A diet that avoids ingredients that might cause digestion problems, e.g., avoid excessive fat, avoid too much fiber (cabbage, peas, beans).</td></tr><tr><td>SUPPLEMENT</td><td>nutritional supplement</td><td>A diet that is not intended to be complete but is added to other diets.</td></tr><tr><td>T</td><td>Tea only</td><td>This is not really a diet, since it contains little nutritional value, but is essentially just water.  Used before coloscopy examinations.</td></tr><tr><td>VLI</td><td>Low Valin, Leucine, Isoleucine</td><td>Diet with low content of the amino-acids valin, leucin, and isoleucin, for &quot;maple syrup disease.&quot;</td></tr></table></li></ul></div>
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

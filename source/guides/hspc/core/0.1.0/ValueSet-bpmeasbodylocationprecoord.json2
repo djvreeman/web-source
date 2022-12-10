@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bpmeasbodylocationprecoord",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/bpmeasbodylocationprecoord",
+  "version": "0.01",
+  "name": "HSPC Systolic Blood Pressure Measurement Body Location Precoodinated",
+  "immutable": true,
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "description": "SELECT SNOMED CT code system values.",
+  "copyright": "TBD",
+  "status": "draft",
+  "extensible": true,
+  "date": "2015-06-11",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "241784008",
+            "display": "Left ankle (body structure)"
+          },
+          {
+            "code": "241699003",
+            "display": "Right ankle (body structure)"
+          },
+          {
+            "code": "182245002",
+            "display": "Arm (body structure)"
+          },
+          {
+            "code": "72098002",
+            "display": "Left arm (body structure)"
+          },
+          {
+            "code": "59126009",
+            "display": "Right arm (body structure)"
+          },
+          {
+            "code": "209672000",
+            "display": "Left thigh (body structure)"
+          },
+          {
+            "code": "209570001",
+            "display": "Right thigh (body structure)"
+          }
+        ]
+      }
+    ]
+  }
+}

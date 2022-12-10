@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extensions - HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+<h1>Extensions - HSPC Implementation Guide</h1>
+
+ <li><a href="StructureDefinition-extensions-dataOriginationMode.html">DataOriginationMode</a> The means by which the data came into being.</li>
+ <li><a href="StructureDefinition-extensions-associatedPrecondition.html">associatedPrecondition</a> Conditions that exist during measurement.</li>
+ <li><a href="StructureDefinition-extensions-alleviatingFactor.html">alleviatingFactor</a> Actions taken that reduce or resolve a condition or problem.</li>
+ <li><a href="StructureDefinition-extensions-exacerbatingFactor.html">exacerbatingFactor</a> Actions or influences that increase the severity of a condition or problem.</li>
+ <li><a href="StructureDefinition-extensions-periodicity.html">periodicity</a> How often or specific time frames in which a condition exists.</li>
+ <li><a href="StructureDefinition-extensions-associatedSignAndSymptom.html">associatedSignAndSymptom</a> Conditions or problems that are related to the asserted condition or problem.</li>
+ <li><a href="StructureDefinition-extensions-course.html">course</a> The developemental sequence for a condition or problem.</li>
+ <li><a href="StructureDefinition-extensions-deltaFlag.html">deltaFlag</a> The qualitative change in the value relative to the previous measurement. Usually only recorded if the change is clinically significant.</li>
+ <li><a href="StructureDefinition-extensions-bodyPosition.html">bodyPosition</a> The position of the body when the observation was done, e.g. standing, sitting. To be used only when the body position in not precoordinated in the observation code.</li>
+ <li><a href="StructureDefinition-extensions-focalSubject.html">FocalSubject</a> The focus of an observation when not the patient of record.</li>
+ <li><a href="StructureDefinition-extensions-bodyLaterality.html">bodyLaterality</a> The set of concepts that describe the side of the body an observation refers to.</li>
+ <li><a href="StructureDefinition-extensions-historyIndicator.html">History Indicator</a> An indication that the patient has a history of the clincal assertion being made and may or may not currently be exibiting the condition.</li>
+ <li><a href="StructureDefinition-extensions-likelihood.html">Likelihood</a> A code that identifies the data that defines the level of surety of the logical assertion.</li>
+ <li><a href="StructureDefinition-extensions-riskForIndicator.html">Risk for Indicator</a> An indication that there is a probability to have the stated condition.</li>
+ <li><a href="StructureDefinition-extensions-dateOfResolution.html">Date of Resolution</a> The date that a allergy or intolerance was resolved.</li>
+ <li><a href="StructureDefinition-extensions-patientInformedInd.html">Patient Informed Indicator</a> An indication that the patient was given information.</li>
+ <li><a href="StructureDefinition-extensions-causeOfDeathInd.html">Cause of Death Indicator</a> An indicator that the allergy or intolerance was the cause of death.</li>
+ <li><a href="StructureDefinition-extensions-supportingInformationIdentifier.html">SupportingInformationId</a> An identifier for the data that supports the logical assertion.</li>
+ <li><a href="StructureDefinition-extensions-supportingInformationText.html">SupportingInformationText</a> A textual representation of the data that supports the logical assertion.</li>
+ <li><a href="StructureDefinition-extensions-knowledgeDocumentIdentifier.html">KnowledgeDocumentId</a> A code that identifies a document that contains information about the logical assertion.</li>
+ <li><a href="StructureDefinition-extensions-dateOfOnset.html">Date of Onset</a> The date that an asserted condition began.</li>
+ <li><a href="StructureDefinition-extensions-credentialEligibilityInd.html">CredentialEligibilityIndicator</a> An indication that the individual is in procedings or eligible to obtain credentials.</li>
+ <li><a href="StructureDefinition-extensions-communicationMode.html">CommunicationMode</a> The method one uses to communicate.</li>
+ <li><a href="StructureDefinition-extensions-practiceAffiliationType.html">AffiliationType</a> The kind of practice affilation a provider has with the organization.</li>
+ <li><a href="StructureDefinition-extensions-practitionerPrivilege.html">PractitionerPrivilege</a> The level at which a provider is allowed to practice at a specific institution.</li>
+ <li><a href="StructureDefinition-extensions-primaryIndicator.html">PrimaryInd</a> This indicatest that this is the principal address.</li>
+ <li><a href="StructureDefinition-extensions-addressType.html">AddressType</a> The kind of address, e.g. home, work, etc.</li>
+ <li><a href="StructureDefinition-extensions-patientImportance.html">Patient Importance</a> A set of codes that describe the sensitivity level of a patient's information.</li>
+ <li><a href="StructureDefinition-extensions-multipleBirthOrderNumber.html">Multiple Birth Order Number</a> The place number for the patient if part of a multiple birth.</li>
+ <li><a href="StructureDefinition-extensions-citezenship.html">Citezenship</a> The list of codes that describe the country state a patient claims membership to.</li>
+ <li><a href="StructureDefinition-extensions-citezenshipPeriod.html">Citezenship Period</a> The start time and end time an individual claims to be or have been a member of a country.</li>
+ <li><a href="StructureDefinition-extensions-adoptionInfo.html">Adoption Info</a> A set of codes that describe patient info viewing privileges base on adoption status.</li>
+ <li><a href="StructureDefinition-extensions-birthDateVerificationMethod.html">Birth Date Verification Method</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="StructureDefinition-extensions-deceasedDateTime.html">Deceased DateTime</a> The date and time that an individual passed away.</li>
+ <li><a href="StructureDefinition-extensions-preferenceIndicator.html">Preference Indicator</a> An indication that the stated value is the preferred value, i.e. address, phone number, etc.</li>
+ <li><a href="StructureDefinition-extensions-confidentiality.html">Confidentiality</a> A set of codes that describes the individuals allowed to view the given data.</li>
+ <li><a href="StructureDefinition-extensions-priority.html">Priority</a> A set of codes that describe the urgency level.</li>
+ <li><a href="StructureDefinition-extensions-reportingPriority.html">Reporting Priority</a> A set of codes that describe the urgency at which the report should be given to the clinician.</li>
+ <li><a href="StructureDefinition-extensions-resultCopiesTo.html">Result Copies To</a> The results need to be copied and given to the provider indicated.</li>
+ <li><a href="StructureDefinition-extensions-radiologyTransportMode.html">Radiology Transport Mode</a> The set of codes that describe the different means used to get a patient to the diagnostic imaging department.</li>
+ <li><a href="StructureDefinition-extensions-methodDevice.html">MethodDevice</a> A set of codes that describe the means by which a condition was determined.</li>
+ <li><a href="StructureDefinition-hspc-patient-ContactPartyId.html">Contact Party Identifier</a> Codes or numbers that serve as system identifiers for an individual's contact.</li>
+ <li><a href="StructureDefinition-hspc-provenance-attribution-attributionCode.html">attributionCode</a> The type of attribution: Observed, verified, etc….</li>
+ <li><a href="StructureDefinition-hspc-provenance-attribution-individualPerson.html">individualPerson</a> IndividualPerson is the identifying information that describes an individual: name, ID.</li>
+ <li><a href="StructureDefinition-hspc-provenance-attribution-patientLocation.html">patientLocation</a> PatientLocation indicates the place where the patient is currently located.</li>
+ <li><a href="StructureDefinition-hspc-provenance-attribution-providerLocation.html">providerLocation</a> ProviderLocation captures the information about where the provider is.</li>
+ <li><a href="StructureDefinition-hspc-provenance-attribution-actionMethod.html">actionMethod</a> ActionMethod is an abstract model for Method. This component captures what method used in Attribution models. For instance, in Verified, it captures how verification is achieved (verbal, written, telephone, etc.).</li>
+ <li><a href="StructureDefinition-hspc-reporting-priority.html">HSPC ReportingPriority Extension</a> the urgency level for which results must be reported to a provider or responsible individual.</li>
+ <li><a href="StructureDefinition-hspc-delta-flag.html">HSPC DeltaFlag Extension</a> Takes a value from the valueset listed in the model to indicate the data value in the containing model is a change from a previous instance of the same model.</li>
+ <li><a href="StructureDefinition-hspc-verified.html">HSPC Verified Extension</a> Whether the information in the element that contains this extension has been verified with the source.</li>
+ <li><a href="StructureDefinition-hspc-updated.html">HSPC Updated Date Extension</a> When this information in the element that contains this extension was last updated.</li>
+ <li><a href="StructureDefinition-hspc-location-servicedeliverylocationLocationNameUse.html">NameUse</a> A particular use for the name of the service delivery location, e.g. abbreviation, alias, financial code,.</li>
+ <li><a href="StructureDefinition-hspc-location-servicedeliverylocationPeriod.html">Period</a> This is the range of dates that the particular location has the role of Service Delivery Location.</li>
+ <li><a href="StructureDefinition-hspc-location-servicedeliverylocationPrimaryIndicator.html">PrimaryInd</a> This indicatest that this is the principal address.</li>
+ <li><a href="StructureDefinition-hspc-location-servicedeliverylocationAddressType.html">AddressType</a> The kind of address, e.g. home, work, etc.</li>
+ <li><a href="StructureDefinition-hspc-organization-HSPC-OrganizationNameUse.html">OrganizationNameUse</a> A particular use for the name of an organization.</li>
+ <li><a href="StructureDefinition-hspc-organization-primaryLanguage.html">PrimaryLanguage</a> The contact's preferred language used to communicate.</li>
+ <li><a href="StructureDefinition-hspc-allergyintolerance-DateOfResolution.html">Date of Resolution</a> The date that a allergy or intolerance was resolved.</li>
+ <li><a href="StructureDefinition-hspc-allergyintolerance-PatientInformedInd.html">Patient Informed Indicator</a> An indication that the patient was given information.</li>
+ <li><a href="StructureDefinition-hspc-allergyintolerance-CauseOfDeathInd.html">Cause of Death Indicator</a> An indicator that the allergy or intolerance was the cause of death.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-hospitalService.html">Hospital Service</a> The particular medical team or specialty group that is responsible for the patient's care during the encounter.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-VipLevel.html">VIP Level</a> An indication of the level of relationship with the healthcare organization.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-PatientArrivalStatus.html">Patient Arrival Status</a> An indication of the patient being at a location.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-ServiceDeliveryLocationCondition.html">Service Delivery Location Condition</a> The state of readyness of the location that a patient will receive care at.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-ProviderService.html">Provider Service</a> The particular specialty or healthcare service that a provider is affiliated with for the encounter.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-AmbulatoryStatus.html">Ambulatory Status</a> An indication of the patient's level of ability to ambulate.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-PreAdmitTestInd.html">Pre-Admission Test Indicator</a> An indication that testing was done on the patient prior to admission.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-ReAdmitInd.html">Re-Admission Indicator</a> An indication that the patient is being re-admitted.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-departedByTransportation.html">Departed by Transportation</a> The means by which the patient departed.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-arrivedByTransportation.html">Arrived by transportation</a> The means by which the patient arrived.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-ChiefComplaintId.html">Chief Complaint Identifier</a> The identifying information that refers to the data for the chief complaint.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-Comirbidity.html">Comorbidity</a> Any problems, conditions, or other indications that exacerbate or worsen the primary indication, issue or problem the patient has.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-AdmitMedicationId.html">Admission Medication Identifier</a> The identifying information that refers to the data that describes any and all medications a patient may be taking prior to admission.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-DischargeMedicationId.html">Dishcarge Medication Identifier</a> The identifying information that refers to the data that describes the medication that was prescribed to a patient upon discharge.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-CommunicationMode.html">Communication Mode</a> The means by which a patient communicates with others.</li>
+ <li><a href="StructureDefinition-hspc-genencounter-AdministrativeEncounterId.html">Administrative Encounter Identifier</a> The indentifying information that refers to the data of an administrative type of encounter (business encounter).</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-hospitalService.html">Hospital Service</a> The particular medical team or specialty group that is responsible for the patient's care during the encounter.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-VipLevel.html">VIP Level</a> An indication of the level of relationship with the healthcare organization.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-PatientArrivalStatus.html">Patient Arrival Status</a> An indication of the patient being at a location.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-ServiceDeliveryLocationCondition.html">Service Delivery Location Condition</a> The state of readyness of the location that a patient will receive care at.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-ProviderService.html">Provider Service</a> The particular specialty or healthcare service that a provider is affiliated with for the encounter.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-AmbulatoryStatus.html">Ambulatory Status</a> An indication of the patient's level of ability to ambulate.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-PreAdmitTestInd.html">Pre-Admission Test Indicator</a> An indication that testing was done on the patient prior to admission.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-ReAdmitInd.html">Re-Admission Indicator</a> An indication that the patient is being re-admitted.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-departedByTransportation.html">Departed by Transportation</a> The means by which the patient departed.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-arrivedByTransportation.html">Arrived by transportation</a> The means by which the patient arrived.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-ChiefComplaintId.html">Chief Complaint Identifier</a> The identifying information that refers to the data for the chief complaint.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-Comirbidity.html">Comorbidity</a> Any problems, conditions, or other indications that exacerbate or worsen the primary indication, issue or problem the patient has.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-AdmitMedicationId.html">Admission Medication Identifier</a> The identifying information that refers to the data that describes any and all medications a patient may be taking prior to admission.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-DischargeMedicationId.html">Dishcarge Medication Identifier</a> The identifying information that refers to the data that describes the medication that was prescribed to a patient upon discharge.</li>
+ <li><a href="StructureDefinition-hspc-ipencounter-AdministrativeEncounterId.html">Administrative Encounter Identifier</a> The indentifying information that refers to the data of an administrative type of encounter (business encounter).</li>
+ <li><a href="StructureDefinition-hspc-opencounter-hospitalService.html">Hospital Service</a> The particular medical team or specialty group that is responsible for the patient's care during the encounter.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-VipLevel.html">VIP Level</a> An indication of the level of relationship with the healthcare organization.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-PatientArrivalStatus.html">Patient Arrival Status</a> An indication of the patient being at a location.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-ServiceDeliveryLocationCondition.html">Service Delivery Location Condition</a> The state of readyness of the location that a patient will receive care at.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-ProviderService.html">Provider Service</a> The particular specialty or healthcare service that a provider is affiliated with for the encounter.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-AmbulatoryStatus.html">Ambulatory Status</a> An indication of the patient's level of ability to ambulate.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-PreAdmitTestInd.html">Pre-Admission Test Indicator</a> An indication that testing was done on the patient prior to admission.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-ReAdmitInd.html">Re-Admission Indicator</a> An indication that the patient is being re-admitted.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-departedByTransportation.html">Departed by Transportation</a> The means by which the patient departed.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-arrivedByTransportation.html">Arrived by transportation</a> The means by which the patient arrived.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-AdmitMedicationId.html">Admission Medication Identifier</a> The identifying information that refers to the data that describes any and all medications a patient may be taking prior to admission.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-DischargeMedicationId.html">Dishcarge Medication Identifier</a> The identifying information that refers to the data that describes the medication that was prescribed to a patient upon discharge.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-CommunicationMode.html">Communication Mode</a> The means by which a patient communicates with others.</li>
+ <li><a href="StructureDefinition-hspc-opencounter-AdministrativeEncounterId.html">Administrative Encounter Identifier</a> The indentifying information that refers to the data of an administrative type of encounter (business encounter).</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-hospitalService.html">Hospital Service</a> The particular medical team or specialty group that is responsible for the patient's care during the encounter.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-VipLevel.html">VIP Level</a> An indication of the level of relationship with the healthcare organization.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-PatientArrivalStatus.html">Patient Arrival Status</a> An indication of the patient being at a location.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-ServiceDeliveryLocationCondition.html">Service Delivery Location Condition</a> The state of readyness of the location that a patient will receive care at.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-ProviderService.html">Provider Service</a> The particular specialty or healthcare service that a provider is affiliated with for the encounter.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-AmbulatoryStatus.html">Ambulatory Status</a> An indication of the patient's level of ability to ambulate.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-ChiefComplaintId.html">Chief Complaint Identifier</a> The identifying information that refers to the data for the chief complaint.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-DischargeMedicationId.html">Dishcarge Medication Identifier</a> The identifying information that refers to the data that describes the medication that was prescribed to a patient upon discharge.</li>
+ <li><a href="StructureDefinition-hspc-emergencyencounter-AdministrativeEncounterId.html">Administrative Encounter Identifier</a> The indentifying information that refers to the data of an administrative type of encounter (business encounter).</li>
+ <li><a href="StructureDefinition-hspc-imagingstudy-TranscribedDateTime.html">Transcribed DateTime</a> The date and time that the report was transcribed from dictation to the information system.</li>
+ <li><a href="StructureDefinition-hspc-imagingstudy-CorrectedDateTime.html">Corrected DateTime</a> The date and time that a report was changed to correct errors.</li>
+ <li><a href="StructureDefinition-hspc-imagingstudy-RadiologyText.html">Radiology Text</a> The textual report given by the radiologist.</li>
+ <li><a href="StructureDefinition-hspc-deliveredoxygenairwayInterfaceType.html">Airway Interface Type</a> The device used as an interface between a patient and the therapeutic gas being delivered.</li>
+ <li><a href="StructureDefinition-hspc-oxygensaturationarterialbloodmeassensorDescription.html">Airway Interface Type</a> The kind of sensor used in determining the patient's oxygen saturation via pulse oximetry.</li>
+ <li><a href="StructureDefinition-hspc-oxygensaturationarterialbloodmeasPersonIdentifier.html">Person Identifier</a> A code that uniquely identifies an individual.</li>
+ <li><a href="StructureDefinition-hspc-oxygensaturationarterialbloodmeasName.html">Name</a> A textual representation of an individual's name.</li>
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

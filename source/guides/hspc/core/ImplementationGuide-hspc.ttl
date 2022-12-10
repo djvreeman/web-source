@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ImplementationGuide/hspc> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hspc"];
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/hspc"];
+  fhir:ImplementationGuide.name [ fhir:value "HSPC Implementation Guide"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ImplementationGuide.publisher [ fhir:value "Health Services Platform Consortium"];
+  fhir:ImplementationGuide.dependency [
+     fhir:index 0;
+     fhir:ImplementationGuide.dependency.type [ fhir:value "reference" ];
+     fhir:ImplementationGuide.dependency.uri [ fhir:value "http://hl7.org/fhir/qicore" ]
+  ], [
+     fhir:index 1;
+     fhir:ImplementationGuide.dependency.type [ fhir:value "reference" ];
+     fhir:ImplementationGuide.dependency.uri [ fhir:value "http://hl7.org/fhir/daf" ]
+  ];
+  fhir:ImplementationGuide.package [
+     fhir:index 0;
+     fhir:ImplementationGuide.package.name [ fhir:value "base" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "HSPC Quantitative Labs dictionary" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <??/Bundle/hspc-qnlab-de>;
+         fhir:Reference.reference [ fhir:value "Bundle/hspc-qnlab-de" ]
+       ]
+     ]
+  ];
+  fhir:ImplementationGuide.page [
+     fhir:ImplementationGuide.page.source [ fhir:value "hspc.html" ];
+     fhir:ImplementationGuide.page.title [ fhir:value "Home Page" ];
+     fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+     fhir:ImplementationGuide.page.page [
+       fhir:index 0;
+       fhir:ImplementationGuide.page.source [ fhir:value "hspc-toc.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "toc" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.page.source [ fhir:value "registry.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Registry" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "list" ];
+       fhir:ImplementationGuide.page.type [
+         fhir:value "Conformance";
+         fhir:index 0
+       ], [
+         fhir:value "StructureDefinition";
+         fhir:index 1
+       ], [
+         fhir:value "ValueSet";
+         fhir:index 2
+       ], [
+         fhir:value "ConceptMap";
+         fhir:index 3
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.page.source [ fhir:value "hspc-qnlab-de.xml" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Observations Dictionary" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "dictionary" ];
+       fhir:ImplementationGuide.page.type [
+         fhir:value "DataElement";
+         fhir:index 0
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "logicalassert",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/logicalassert",
+  "version": "0.01",
+  "name": "HSPC Logical Assertion Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "363346000",
+            "display": "Malignant neoplastic disease (disorder)"
+          },
+          {
+            "code": "266987004",
+            "display": "History of malignant enoplasm (situation)"
+          },
+          {
+            "code": "161505003",
+            "display": "History of heart failure (situation)"
+          },
+          {
+            "code": "414415007",
+            "display": "History of chronic lung disease (situation)"
+          },
+          {
+            "code": "428904003",
+            "display": "History of thromboembolism of vein (situation)"
+          }
+        ]
+      }
+    ]
+  }
+}

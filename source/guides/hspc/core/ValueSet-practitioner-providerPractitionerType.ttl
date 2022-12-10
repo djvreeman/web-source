@@ -1,0 +1,155 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/practitioner-providerPractitionerType> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "practitioner-providerPractitionerType"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/practitioner-providerPractitionerType"];
+  fhir:ValueSet.name [ fhir:value "HSPC ProviderPractitioner Type"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "A set of values that describe the general type of practice for a provider."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.nucc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic and Osteopathic Physicians" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health and Social Service Providers" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dietary and Nutritional Service Providers" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Emergency Medical Service Providers" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Service Providers" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Group" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "37" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Related Providers" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "36" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistant and Advanced Practice Nursing Providers" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine and Surgery Service Providers" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Speech, Language and Hearing Service Providers" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "39" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Student, Health Care" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians and Other Technical Service Providers" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Residential Treatment Facilities" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing and Custodial Care Facilities" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "25" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agencies" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Managed Care Organizations" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Laboratories" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respite Care Facility" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospital Units" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

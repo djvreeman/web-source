@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bpmeasmethoddevice",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/bpmeasmethoddevice",
+  "name": "HSPC Blood Pressure Measurement Method/Device Value Set",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "description": "A set of codes that describe the method or device used to measure a systolic blood pressure.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/bpmeasmethoddevice"
+      }
+    ]
+  }
+}

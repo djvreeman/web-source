@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/airwayInterfaceType> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "airwayInterfaceType"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/airwayInterfaceType"];
+  fhir:ValueSet.version [ fhir:value "0.01"];
+  fhir:ValueSet.name [ fhir:value "HSPC Aiway Interface Type value set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "Health Services Platform Consortium (HSPC)"];
+  fhir:ValueSet.date [ fhir:value "2015-02-09"^^xsd:date];
+  fhir:ValueSet.description [ fhir:value "SELECT SNOMED CT code system values."];
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "TBD"];
+  fhir:ValueSet.extensible [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "469609003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Manual pulmonary resuscitator, single-use (physical object)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "425478008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Blow by oxygen mask (physical object)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "425994007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen mist tent (physical object)" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "429375002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Esophageal tracheal double lumen supraglottic airway device (physical object)" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "463388008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Esophageal-obturating/tracheal airway, single-use (physical object)" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "706226000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Continuous positive airway pressure/Bilevel positive airway pressure mask (physical object)" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "466033006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Resuscitator face mask, single-use (physical object)" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26412008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Endotracheal tube, device (physical object)" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "426294006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Face tent oxygen delivery device (physical object)" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "426854004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "High flow oxygen nasal cannula (physical object)" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "73027007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Infant incubator, device (physical object)" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "257268009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Laryngeal mask (physical object)" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "336623009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen nasal cannula (physical object)" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261974006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nasal prongs (physical object)" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "61330002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nasopharyngeal airway device (physical object)" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "427591007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nonrebreather oxygen mask (physical object)" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32667006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oropharyngeal airway device (physical object)" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "427594004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxyhood (physical object)" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20428008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen tent, device (physical object)" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "425926003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Partial rebreather oxygen mask (physical object)" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "415700003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "T piece without bag (physical object)" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "465839001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tracheostomy mask, oxygen (physical object)" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "129121000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tracheostomy tube, device (physical object)" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "428285009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Venturi mask (physical object)" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

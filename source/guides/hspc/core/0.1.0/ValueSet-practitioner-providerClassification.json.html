@@ -1,0 +1,762 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC ProviderPractitioner Classification</h2>
+
+<pre class="json">
+{
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html">resourceType</a>" : "ValueSet",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.id">id</a>" : "practitioner-providerClassification",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.meta">meta</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.url">url</a>" : "http://fhir.org/guides/hspc/ValueSet/practitioner-providerClassification",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.name">name</a>" : "HSPC ProviderPractitioner Classification",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.status">status</a>" : "draft",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.publisher">publisher</a>" : "HSPC",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact.telecom">telecom</a>" : [
+        {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://healthcaresoa.org"
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.description">description</a>" : "A set of codes that describe the class of health care a practitioner provides.",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.system">system</a>" : "http://www.nucc.org",
+        "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207K00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Allergy and Immunology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207L00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Anesthesiology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208U00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Clinical Pharmacology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208C00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Colon and Rectal Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207N00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Dermatology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "204R00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Electrodiagnostic Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207P00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Emergency Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207Q00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Family Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208D00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians General Practice"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208M00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Hospitalist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "202C00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Independent Medical Examiner"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207R00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Internal Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "209800000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Legal Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207T00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Neurological Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "204D00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Neuromusculoskeletal Medicine and OMM"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "204C00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Neuromusculoskeletal Medicine, Sports Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207U00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Nuclear Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207V00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Obstetrics and Gynecology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207W00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Ophthalmology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "204E00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Oral and Maxillofacial Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207X00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Orthopaedic Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "207Y00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Otolaryngology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208000000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Pediatrics"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "202K00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Phlebology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208100000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Physical Medicine and Rehabilitation"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208200000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Plastic Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208600000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208G00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Thoracic Surgery (Cardiothoracic Vascular Surgery)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "204F00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Transplant Surgery"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "208800000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Allopathic and Osteopathic Physicians Urology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "103K00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Behavioral Analyst"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "103G00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Clinical Neuropsychologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "101Y00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Counselor"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "106H00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Marriage and Family Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "102X00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Poetry Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "102L00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Psychoanalyst"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "103T00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Psychologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "104100000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Behavioral Health and Social Service Providers Social Worker"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "111N00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chiropractic Providers Chiropractor"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "125K00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Advanced Practice Dental Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "126800000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Dental Assistant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "124Q00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Dental Hygienist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "126900000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Dental Laboratory Technician"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "125J00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Dental Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "122300000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Dentist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "122400000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dental Providers Denturist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "132700000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dietary and Nutritional Service Providers Dietary Manager"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "136A00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dietary and Nutritional Service Providers Dietetic Technician, Registered"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "133V00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dietary and Nutritional Service Providers Dietitian, Registered"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "133N00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dietary and Nutritional Service Providers Nutritionist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "146N00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Emergency Medical Service Providers Emergency Medical Technician, Basic"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "146M00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Emergency Medical Service Providers Emergency Medical Technician, Intermediate"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "146L00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Emergency Medical Service Providers Emergency Medical Technician, Paramedic"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "146D00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Emergency Medical Service Providers Personal Emergency Response Attendant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "152W00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Eye and Vision Services Providers Optometrist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "156F00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Eye and Vision Services Providers Technician/Technologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "193200000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Group Multi Specialty"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "193400000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Group Single Specialty"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "164W00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Providers Licensed Practical Nurse"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "167G00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Providers Licensed Psychiatric Technician"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "164X00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Providers Licensed Vocational Nurse"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "163W00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Providers Registered Nurse"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "372600000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Adult Companion"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "372500000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Chore Provider"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "373H00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Day Training/Habilitation Specialist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "374J00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Doula"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "374U00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Home Health Aide"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "376J00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Homemaker"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "376K00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Nurse's Aide"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "376G00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Nursing Home Administrator"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "374T00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Religious Nonmedical Nursing Personnel"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "374K00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Religious Nonmedical Practitioner"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "374700000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nursing Service Related Providers Technician"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "171100000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Acupuncturist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "171M00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Case Manager/Care Coordinator"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "174V00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Clinical Ethicist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "172V00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Community Health Worker"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "171W00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Contractor"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "172A00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Driver"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "176P00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Funeral Director"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "170300000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Genetic Counselor, MS"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "174H00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Health Educator"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "175L00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Homeopath"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "171R00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Interpreter"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "174N00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Lactation Consultant, Non RN"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "173000000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Legal Medicine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "177F00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Lodging"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "174200000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Meals"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "172M00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Mechanotherapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "170100000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Medical Genetics, Ph.D. Medical Genetics"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "176B00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Midwife"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "175M00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Midwife, Lay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "171000000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Military Health Care Provider"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "172P00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Naprapath"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "175F00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Naturopath"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "175T00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Peer Specialist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "173C00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Reflexologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "173F00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Sleep Specialist, PhD"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "174400000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Specialist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "174M00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other Service Providers Veterinarian"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "183500000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pharmacy Service Providers Pharmacist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "183700000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pharmacy Service Providers Pharmacy Technician"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "367A00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician Assistants and Advanced Practice Nursing Providers Advanced Practice Midwife"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "367H00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician Assistants and Advanced Practice Nursing Providers Anesthesiologist Assistant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "364S00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician Assistants and Advanced Practice Nursing Providers Clinical Nurse Specialist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "367500000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician Assistants and Advanced Practice Nursing Providers Nurse Anesthetist, Certified Registered"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "363L00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician Assistants and Advanced Practice Nursing Providers Nurse Practitioner"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "363A00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician Assistants and Advanced Practice Nursing Providers Physician Assistant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "211D00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Podiatric Medicine and Surgery Service Providers Assistant, Podiatric"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "213E00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Podiatric Medicine and Surgery Service Providers Podiatrist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "229N00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Anaplastologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "221700000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Art Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "224Y00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Clinical Exercise Physiologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225600000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Dance Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "222Q00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Developmental Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "226300000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Kinesiotherapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225700000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Massage Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "224900000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Mastectomy Fitter"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225A00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Music Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225X00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Occupational Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "224Z00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Occupational Therapy Assistant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225000000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Orthotic Fitter"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "222Z00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Orthotist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "224L00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Pedorthist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225100000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Physical Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225200000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Physical Therapy Assistant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "224P00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Prosthetist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225B00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Pulmonary Function Technologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225800000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Recreation Therapist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225C00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Rehabilitation Counselor"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225400000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Rehabilitation Practitioner"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "227800000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Respiratory Therapist, Certified"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "227900000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Respiratory Therapist, Registered"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "225500000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory, Developmental, Rehabilitative and Restorative Service Providers Specialist/Technologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "231H00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Speech, Language and Hearing Service Providers Audiologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "237600000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Speech, Language and Hearing Service Providers Audiologist Hearing Aid Fitter"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "237700000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Speech, Language and Hearing Service Providers Hearing Instrument Specialist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "235500000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Speech, Language and Hearing Service Providers Specialist/Technologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "235Z00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Speech, Language and Hearing Service Providers Speech Language Pathologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "390200000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Student, Health Care Student in an Organized Health Care Education/Training Program"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "242T00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Perfusionist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "247100000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Radiologic Technologist"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "243U00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Radiology Practitioner Assistant"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "246X00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Spec/Tech, Cardiovascular"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "246Y00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Spec/Tech, Health Info"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "246Q00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Spec/Tech, Pathology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "246Z00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Specialist/Technologist, Other"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "246W00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Technician, Cardiology"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "247000000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Technician, Health Information"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "247200000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Technician, Other"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "246R00000X",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Technologists, Technicians and Other Technical Service Providers Technician, Pathology"
+          }
+        }
+      }
+    }
+  }
+}</pre>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id/>
+  <address>
+    <use value="home"/>
+    <type value="both"/>
+    <text value="137 Nowhere Street, Erewhon 9132"/>
+    <line value="137 Nowhere Street"/>
+    <city value="Erewhon"/>
+    <district value="Madison"/>
+    <postalCode value="9132"/>
+    <period>
+      <start value="2010-03-23"/>
+      <end value="2010-07-01"/>
+    </period>
+  </address>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://hl7.org/fhir/ValueSet/patient-contact-relationship"/>
+        <code value="emergency"/>
+        <display value="Emergency"/>
+      </coding>
+    </relationship>
+  </contact>
+</Patient>

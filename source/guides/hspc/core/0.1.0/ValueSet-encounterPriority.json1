@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "encounterPriority",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/encounterPriority",
+  "version": "0.01",
+  "name": "HSPC SNOMED Priorities",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-12-03",
+  "description": "SELECT SNOMED CT code system values descending from 'Priorities' (272125009).",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "272125009"
+          }
+        ]
+      }
+    ]
+  }
+}

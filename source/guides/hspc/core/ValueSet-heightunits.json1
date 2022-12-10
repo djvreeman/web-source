@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "heightunits",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/heightunits",
+  "name": "HSPC Height Units of Measure Value Set",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "description": "The list of codes that describe the length units used for height.",
+  "copyright": "This value set includes content from UCUM. Implementer use of UCUM is not covered by this agreement",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "[in_us]",
+            "display": "Inch [length]"
+          },
+          {
+            "code": "[ft_us]",
+            "display": "Foot [length]"
+          },
+          {
+            "code": "cm",
+            "display": "Centimeter [SI Length Units]"
+          }
+        ]
+      }
+    ]
+  }
+}

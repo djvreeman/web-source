@@ -1,0 +1,2443 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/practitioner-providerPractitionerSpecialty> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "practitioner-providerPractitionerSpecialty"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/practitioner-providerPractitionerSpecialty"];
+  fhir:ValueSet.name [ fhir:value "HSPC ProviderPractitioner Specialty"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "A set of values that describe the specialty practice for a provider."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.nucc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207KA0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Allergy   Immunology-Allergy" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207KI0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Allergy   Immunology-Clinical   Laboratory Immunology" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207LA0401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Anesthesiology-Addiction Medicine" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207LC0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Anesthesiology-Critical Care Medicine" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207LH0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Anesthesiology-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207LP2900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Anesthesiology-Pain Medicine" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207LP3000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Anesthesiology-Pediatric Anesthesiology" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207NI0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Dermatology-Clinical   Laboratory Dermatological Immunology" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ND0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Dermatology-Dermatopathology" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ND0101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Dermatology-MOHS-Micrographic Surgery" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207NP0225X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Dermatology-Pediatric Dermatology" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207NS0135X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Dermatology-Procedural Dermatology" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207PE0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Emergency Medicine-Emergency Medical Services" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207PH0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Emergency Medicine-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207PT0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Emergency Medicine-Medical Toxicology" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207PP0204X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Emergency Medicine-Pediatric Emergency Medicine" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207PS0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Emergency Medicine-Sports Medicine" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207PE0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Emergency Medicine-Undersea and Hyperbaric Medicine" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QA0401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Addiction Medicine" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QA0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Adolescent Medicine" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QA0505X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Adult Medicine" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QB0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Bariatric Medicine" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QG0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Geriatric Medicine" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QH0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QS1201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Sleep Medicine" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207QS0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Family Medicine-Sports Medicine" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RA0401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Addiction Medicine" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RA0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Adolescent Medicine" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RA0201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Allergy   Immunology" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RB0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Bariatric Medicine" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RC0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Cardiovascular Disease" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RI0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Clinical   Laboratory Immunology" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RC0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Clinical Cardiac Electrophysiology" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RC0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Critical Care Medicine" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RE0101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Endocrinology, Diabetes   Metabolism" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RG0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Gastroenterology" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RG0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Geriatric Medicine" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RH0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Hematology" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RH0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Hematology   Oncology" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RI0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Hepatology" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RH0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RH0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Hypertension Specialist" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RI0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Infectious Disease" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RI0011X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Interventional Cardiology" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RM1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Magnetic Resonance Imaging (MRI)" ]
+       ], [
+         fhir:index 45;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RX0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Medical Oncology" ]
+       ], [
+         fhir:index 46;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RN0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Nephrology" ]
+       ], [
+         fhir:index 47;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RP1001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Pulmonary Disease" ]
+       ], [
+         fhir:index 48;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RR0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Rheumatology" ]
+       ], [
+         fhir:index 49;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RS0012X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Sleep Medicine" ]
+       ], [
+         fhir:index 50;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RS0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Sports Medicine" ]
+       ], [
+         fhir:index 51;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207RT0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Internal Medicine-Transplant Hepatology" ]
+       ], [
+         fhir:index 52;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207SG0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Medical Genetics-Clinical Biochemical Genetics" ]
+       ], [
+         fhir:index 53;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207SC0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Medical Genetics-Clinical Cytogenetic" ]
+       ], [
+         fhir:index 54;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207SG0201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Medical Genetics-Clinical Genetics (M.D.)" ]
+       ], [
+         fhir:index 55;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207SG0203X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Medical Genetics-Clinical Molecular Genetics" ]
+       ], [
+         fhir:index 56;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207SM0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Medical Genetics-Molecular Genetic Pathology" ]
+       ], [
+         fhir:index 57;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207SG0205X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Medical Genetics-Ph.D. Medical Genetics" ]
+       ], [
+         fhir:index 58;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207UN0903X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Nuclear Medicine-In Vivo   In Vitro Nuclear Medicine" ]
+       ], [
+         fhir:index 59;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207UN0901X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Nuclear Medicine-Nuclear Cardiology" ]
+       ], [
+         fhir:index 60;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207UN0902X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Nuclear Medicine-Nuclear Imaging   Therapy" ]
+       ], [
+         fhir:index 61;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VB0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Bariatric Medicine" ]
+       ], [
+         fhir:index 62;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VC0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Critical Care Medicine" ]
+       ], [
+         fhir:index 63;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VF0040X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Female Pelvic Medicine and Reconstructive Surgery" ]
+       ], [
+         fhir:index 64;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VX0201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Gynecologic Oncology" ]
+       ], [
+         fhir:index 65;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VG0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Gynecology" ]
+       ], [
+         fhir:index 66;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VH0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 67;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VM0101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Maternal   Fetal Medicine" ]
+       ], [
+         fhir:index 68;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VX0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Obstetrics" ]
+       ], [
+         fhir:index 69;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207VE0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Obstetrics   Gynecology-Reproductive Endocrinology" ]
+       ], [
+         fhir:index 70;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XS0114X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Adult Reconstructive Orthopaedic Surgery" ]
+       ], [
+         fhir:index 71;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XX0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Foot and Ankle Surgery" ]
+       ], [
+         fhir:index 72;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XS0106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Hand Surgery" ]
+       ], [
+         fhir:index 73;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XS0117X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Orthopaedic Surgery of the Spine" ]
+       ], [
+         fhir:index 74;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XX0801X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Orthopaedic Trauma" ]
+       ], [
+         fhir:index 75;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XP3100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Pediatric Orthopaedic Surgery" ]
+       ], [
+         fhir:index 76;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207XX0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Orthopaedic Surgery-Sports Medicine" ]
+       ], [
+         fhir:index 77;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YS0123X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Facial Plastic Surgery" ]
+       ], [
+         fhir:index 78;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YX0602X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Otolaryngic Allergy" ]
+       ], [
+         fhir:index 79;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YX0905X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Otolaryngology/Facial Plastic Surgery" ]
+       ], [
+         fhir:index 80;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YX0901X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Otology   Neurotology" ]
+       ], [
+         fhir:index 81;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YP0228X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Pediatric Otolaryngology" ]
+       ], [
+         fhir:index 82;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YX0007X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Plastic Surgery within the Head   Neck" ]
+       ], [
+         fhir:index 83;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207YS0012X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Otolaryngology-Sleep Medicine" ]
+       ], [
+         fhir:index 84;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "208VP0014X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pain Medicine-Interventional Pain Medicine" ]
+       ], [
+         fhir:index 85;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "208VP0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pain Medicine-Pain Medicine" ]
+       ], [
+         fhir:index 86;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZP0101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Anatomic Pathology" ]
+       ], [
+         fhir:index 87;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZP0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Anatomic Pathology   Clinical Pathology" ]
+       ], [
+         fhir:index 88;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZB0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Blood Banking   Transfusion Medicine" ]
+       ], [
+         fhir:index 89;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZP0104X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Chemical Pathology" ]
+       ], [
+         fhir:index 90;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZC0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Clinical Informatics" ]
+       ], [
+         fhir:index 91;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZC0006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Clinical Pathology" ]
+       ], [
+         fhir:index 92;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZP0105X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Clinical Pathology/Laboratory Medicine" ]
+       ], [
+         fhir:index 93;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZC0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Cytopathology" ]
+       ], [
+         fhir:index 94;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZD0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Dermatopathology" ]
+       ], [
+         fhir:index 95;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZF0201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Forensic Pathology" ]
+       ], [
+         fhir:index 96;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZH0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Hematology" ]
+       ], [
+         fhir:index 97;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZI0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Immunopathology" ]
+       ], [
+         fhir:index 98;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZM0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Medical Microbiology" ]
+       ], [
+         fhir:index 99;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZP0007X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Molecular Genetic Pathology" ]
+       ], [
+         fhir:index 100;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZN0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Neuropathology" ]
+       ], [
+         fhir:index 101;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "207ZP0213X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pathology-Pediatric Pathology" ]
+       ], [
+         fhir:index 102;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080A0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Adolescent Medicine" ]
+       ], [
+         fhir:index 103;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080C0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Child Abuse Pediatrics" ]
+       ], [
+         fhir:index 104;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080I0007X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Clinical   Laboratory Immunology" ]
+       ], [
+         fhir:index 105;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Developmental ñ Behavioral Pediatrics" ]
+       ], [
+         fhir:index 106;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080H0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 107;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080T0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Medical Toxicology" ]
+       ], [
+         fhir:index 108;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080N0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Neonatal-Perinatal Medicine" ]
+       ], [
+         fhir:index 109;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Neurodevelopmental Disabilities" ]
+       ], [
+         fhir:index 110;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Allergy/Immunology" ]
+       ], [
+         fhir:index 111;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Cardiology" ]
+       ], [
+         fhir:index 112;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0203X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Critical Care Medicine" ]
+       ], [
+         fhir:index 113;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0204X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Emergency Medicine" ]
+       ], [
+         fhir:index 114;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0205X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Endocrinology" ]
+       ], [
+         fhir:index 115;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0206X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Gastroenterology" ]
+       ], [
+         fhir:index 116;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0207X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Hematology-Oncology" ]
+       ], [
+         fhir:index 117;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0208X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Infectious Diseases" ]
+       ], [
+         fhir:index 118;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0210X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Nephrology" ]
+       ], [
+         fhir:index 119;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0214X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Pulmonology" ]
+       ], [
+         fhir:index 120;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080P0216X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Rheumatology" ]
+       ], [
+         fhir:index 121;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080T0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Pediatric Transplant Hepatology" ]
+       ], [
+         fhir:index 122;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080S0012X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Sleep Medicine" ]
+       ], [
+         fhir:index 123;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2080S0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Pediatrics-Sports Medicine" ]
+       ], [
+         fhir:index 124;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2081H0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Physical Medicine   Rehabilitation-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 125;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2081N0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Physical Medicine   Rehabilitation-Neuromuscular Medicine" ]
+       ], [
+         fhir:index 126;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2081P2900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Physical Medicine   Rehabilitation-Pain Medicine" ]
+       ], [
+         fhir:index 127;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2081P0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Physical Medicine   Rehabilitation-Pediatric Rehabilitation Medicine" ]
+       ], [
+         fhir:index 128;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2081P0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Physical Medicine   Rehabilitation-Spinal Cord Injury Medicine" ]
+       ], [
+         fhir:index 129;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2081S0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Physical Medicine   Rehabilitation-Sports Medicine" ]
+       ], [
+         fhir:index 130;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2082S0099X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Plastic Surgery-Plastic Surgery Within the Head and Neck" ]
+       ], [
+         fhir:index 131;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2082S0105X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Plastic Surgery-Surgery of the Hand" ]
+       ], [
+         fhir:index 132;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083A0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Aerospace Medicine" ]
+       ], [
+         fhir:index 133;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083C0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Clinical Informatics" ]
+       ], [
+         fhir:index 134;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083T0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Medical Toxicology" ]
+       ], [
+         fhir:index 135;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083X0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Occupational Medicine" ]
+       ], [
+         fhir:index 136;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083P0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Preventive Medicine/Occupational Environmental Medicine" ]
+       ], [
+         fhir:index 137;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083P0901X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Public Health   General Preventive Medicine" ]
+       ], [
+         fhir:index 138;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083S0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Sports Medicine" ]
+       ], [
+         fhir:index 139;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2083P0011X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Preventive Medicine-Undersea and Hyperbaric Medicine" ]
+       ], [
+         fhir:index 140;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084A0401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Addiction Medicine" ]
+       ], [
+         fhir:index 141;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P0802X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Addiction Psychiatry" ]
+       ], [
+         fhir:index 142;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084B0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Bariatric Medicine" ]
+       ], [
+         fhir:index 143;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084B0040X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Behavioral Neurology   Neuropsychiatry" ]
+       ], [
+         fhir:index 144;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P0804X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Child   Adolescent Psychiatry" ]
+       ], [
+         fhir:index 145;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084N0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Clinical Neurophysiology" ]
+       ], [
+         fhir:index 146;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084D0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Diagnostic Neuroimaging" ]
+       ], [
+         fhir:index 147;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084F0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Forensic Psychiatry" ]
+       ], [
+         fhir:index 148;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P0805X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Geriatric Psychiatry" ]
+       ], [
+         fhir:index 149;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084H0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 150;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Neurodevelopmental Disabilities" ]
+       ], [
+         fhir:index 151;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084N0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Neurology" ]
+       ], [
+         fhir:index 152;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084N0402X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Neurology with Special Qualifications in Child Neurology" ]
+       ], [
+         fhir:index 153;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084N0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Neuromuscular Medicine" ]
+       ], [
+         fhir:index 154;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P2900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Pain Medicine" ]
+       ], [
+         fhir:index 155;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Psychiatry" ]
+       ], [
+         fhir:index 156;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084P0015X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Psychosomatic Medicine" ]
+       ], [
+         fhir:index 157;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084S0012X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Sleep Medicine" ]
+       ], [
+         fhir:index 158;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084S0010X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Sports Medicine" ]
+       ], [
+         fhir:index 159;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2084V0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Psychiatry   Neurology-Vascular Neurology" ]
+       ], [
+         fhir:index 160;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085B0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Body Imaging" ]
+       ], [
+         fhir:index 161;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085D0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Diagnostic Neuroimaging" ]
+       ], [
+         fhir:index 162;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085R0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Diagnostic Radiology" ]
+       ], [
+         fhir:index 163;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085U0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Diagnostic Ultrasound" ]
+       ], [
+         fhir:index 164;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085H0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 165;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085N0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Neuroradiology" ]
+       ], [
+         fhir:index 166;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085N0904X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Nuclear Radiology" ]
+       ], [
+         fhir:index 167;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085P0229X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Pediatric Radiology" ]
+       ], [
+         fhir:index 168;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085R0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Radiation Oncology" ]
+       ], [
+         fhir:index 169;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085R0205X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Radiological Physics" ]
+       ], [
+         fhir:index 170;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085R0203X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Therapeutic Radiology" ]
+       ], [
+         fhir:index 171;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085R0204X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Radiology-Vascular   Interventional Radiology" ]
+       ], [
+         fhir:index 172;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086H0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Hospice and Palliative Medicine" ]
+       ], [
+         fhir:index 173;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086S0120X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Pediatric Surgery" ]
+       ], [
+         fhir:index 174;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086S0122X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Plastic and Reconstructive Surgery" ]
+       ], [
+         fhir:index 175;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086S0105X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Surgery of the Hand" ]
+       ], [
+         fhir:index 176;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086S0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Surgical Critical Care" ]
+       ], [
+         fhir:index 177;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086X0206X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Surgical Oncology" ]
+       ], [
+         fhir:index 178;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086S0127X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Trauma Surgery" ]
+       ], [
+         fhir:index 179;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2086S0129X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Surgery-Vascular Surgery" ]
+       ], [
+         fhir:index 180;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2088F0040X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Urology-Female Pelvic Medicine and Reconstructive Surgery" ]
+       ], [
+         fhir:index 181;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2088P0231X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Allopathic   Osteopathic Physicians-Urology-Pediatric Urology" ]
+       ], [
+         fhir:index 182;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103GC0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Clinical Neuropsychologist-Clinical" ]
+       ], [
+         fhir:index 183;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "101YA0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Counselor-Addiction (Substance Use Disorder)" ]
+       ], [
+         fhir:index 184;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "101YM0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Counselor-Mental Health" ]
+       ], [
+         fhir:index 185;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "101YP1600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Counselor-Pastoral" ]
+       ], [
+         fhir:index 186;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "101YP2500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Counselor-Professional" ]
+       ], [
+         fhir:index 187;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "101YS0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Counselor-School" ]
+       ], [
+         fhir:index 188;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TA0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Addiction (Substance Use Disorder)" ]
+       ], [
+         fhir:index 189;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TA0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Adult Development   Aging" ]
+       ], [
+         fhir:index 190;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TC0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Clinical" ]
+       ], [
+         fhir:index 191;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TC2200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Clinical Child   Adolescent" ]
+       ], [
+         fhir:index 192;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TB0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Cognitive   Behavioral" ]
+       ], [
+         fhir:index 193;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TC1900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Counseling" ]
+       ], [
+         fhir:index 194;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TE1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Educational" ]
+       ], [
+         fhir:index 195;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TE1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Exercise   Sports" ]
+       ], [
+         fhir:index 196;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TF0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Family" ]
+       ], [
+         fhir:index 197;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TF0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Forensic" ]
+       ], [
+         fhir:index 198;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TP2701X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Group Psychotherapy" ]
+       ], [
+         fhir:index 199;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TH0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Health" ]
+       ], [
+         fhir:index 200;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TH0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Health Service" ]
+       ], [
+         fhir:index 201;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TM1700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Men   Masculinity" ]
+       ], [
+         fhir:index 202;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TM1800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Mental Retardation   Developmental Disabilities" ]
+       ], [
+         fhir:index 203;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TP0016X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Prescribing (Medical)" ]
+       ], [
+         fhir:index 204;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TP0814X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Psychoanalysis" ]
+       ], [
+         fhir:index 205;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TP2700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Psychotherapy" ]
+       ], [
+         fhir:index 206;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TR0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Rehabilitation" ]
+       ], [
+         fhir:index 207;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TS0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-School" ]
+       ], [
+         fhir:index 208;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "103TW0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Psychologist-Women" ]
+       ], [
+         fhir:index 209;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1041C0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Social Worker-Clinical" ]
+       ], [
+         fhir:index 210;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1041S0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Behavioral Health   Social Service Providers-Social Worker-School" ]
+       ], [
+         fhir:index 211;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NI0013X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Independent Medical Examiner" ]
+       ], [
+         fhir:index 212;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NI0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Internist" ]
+       ], [
+         fhir:index 213;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NN0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Neurology" ]
+       ], [
+         fhir:index 214;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NN1001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Nutrition" ]
+       ], [
+         fhir:index 215;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NX0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Occupational Health" ]
+       ], [
+         fhir:index 216;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NX0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Orthopedic" ]
+       ], [
+         fhir:index 217;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NP0017X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Pediatric Chiropractor" ]
+       ], [
+         fhir:index 218;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NR0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Radiology" ]
+       ], [
+         fhir:index 219;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NR0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Rehabilitation" ]
+       ], [
+         fhir:index 220;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NS0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Sports Physician" ]
+       ], [
+         fhir:index 221;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111NT0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chiropractic Providers-Chiropractor-Thermography" ]
+       ], [
+         fhir:index 222;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223D0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Dental Public Health" ]
+       ], [
+         fhir:index 223;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223D0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Dentist Anesthesiologist" ]
+       ], [
+         fhir:index 224;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223E0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Endodontics" ]
+       ], [
+         fhir:index 225;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223G0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-General Practice" ]
+       ], [
+         fhir:index 226;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223P0106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Oral and Maxillofacial Pathology" ]
+       ], [
+         fhir:index 227;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223X0008X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Oral and Maxillofacial Radiology" ]
+       ], [
+         fhir:index 228;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223S0112X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Oral and Maxillofacial Surgery" ]
+       ], [
+         fhir:index 229;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223X0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Orthodontics and Dentofacial Orthopedics" ]
+       ], [
+         fhir:index 230;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223P0221X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Pediatric Dentistry" ]
+       ], [
+         fhir:index 231;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223P0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Periodontics" ]
+       ], [
+         fhir:index 232;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1223P0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Providers-Dentist-Prosthodontics" ]
+       ], [
+         fhir:index 233;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "133VN1006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dietary   Nutritional Service Providers-Dietitian, Registered-Nutrition, Metabolic" ]
+       ], [
+         fhir:index 234;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "133VN1004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dietary   Nutritional Service Providers-Dietitian, Registered-Nutrition, Pediatric" ]
+       ], [
+         fhir:index 235;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "133VN1005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dietary   Nutritional Service Providers-Dietitian, Registered-Nutrition, Renal" ]
+       ], [
+         fhir:index 236;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "133NN1002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dietary   Nutritional Service Providers-Nutritionist-Nutrition, Education" ]
+       ], [
+         fhir:index 237;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "152WC0802X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Optometrist-Corneal and Contact Management" ]
+       ], [
+         fhir:index 238;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "152WL0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Optometrist-Low Vision Rehabilitation" ]
+       ], [
+         fhir:index 239;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "152WX0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Optometrist-Occupational Vision" ]
+       ], [
+         fhir:index 240;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "152WP0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Optometrist-Pediatrics" ]
+       ], [
+         fhir:index 241;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "152WS0006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Optometrist-Sports Vision" ]
+       ], [
+         fhir:index 242;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "152WV0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Optometrist-Vision Therapy" ]
+       ], [
+         fhir:index 243;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FC0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Contact Lens" ]
+       ], [
+         fhir:index 244;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FC0801X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Contact Lens Fitter" ]
+       ], [
+         fhir:index 245;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Ocularist" ]
+       ], [
+         fhir:index 246;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Ophthalmic" ]
+       ], [
+         fhir:index 247;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Ophthalmic Assistant" ]
+       ], [
+         fhir:index 248;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Optician" ]
+       ], [
+         fhir:index 249;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Optometric Assistant" ]
+       ], [
+         fhir:index 250;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Optometric Technician" ]
+       ], [
+         fhir:index 251;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "156FX1900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eye and Vision Services Providers-Technician/Technologist-Orthoptist" ]
+       ], [
+         fhir:index 252;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WA0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Addiction (Substance Use Disorder)" ]
+       ], [
+         fhir:index 253;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WA2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Administrator" ]
+       ], [
+         fhir:index 254;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP2201X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Ambulatory Care" ]
+       ], [
+         fhir:index 255;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC3500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Cardiac Rehabilitation" ]
+       ], [
+         fhir:index 256;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Case Management" ]
+       ], [
+         fhir:index 257;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC1400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-College Health" ]
+       ], [
+         fhir:index 258;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Community Health" ]
+       ], [
+         fhir:index 259;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC2100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Continence Care" ]
+       ], [
+         fhir:index 260;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC1600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Continuing Education/Staff Development" ]
+       ], [
+         fhir:index 261;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WC0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Critical Care Medicine" ]
+       ], [
+         fhir:index 262;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WD0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Diabetes Educator" ]
+       ], [
+         fhir:index 263;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WD1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Dialysis, Peritoneal" ]
+       ], [
+         fhir:index 264;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WE0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Emergency" ]
+       ], [
+         fhir:index 265;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WE0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Enterostomal Therapy" ]
+       ], [
+         fhir:index 266;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WF0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Flight" ]
+       ], [
+         fhir:index 267;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WG0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Gastroenterology" ]
+       ], [
+         fhir:index 268;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WG0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-General Practice" ]
+       ], [
+         fhir:index 269;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WG0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Gerontology" ]
+       ], [
+         fhir:index 270;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WH0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Hemodialysis" ]
+       ], [
+         fhir:index 271;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WH0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Home Health" ]
+       ], [
+         fhir:index 272;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WH1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Hospice" ]
+       ], [
+         fhir:index 273;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WI0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Infection Control" ]
+       ], [
+         fhir:index 274;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WI0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Infusion Therapy" ]
+       ], [
+         fhir:index 275;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WL0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Lactation Consultant" ]
+       ], [
+         fhir:index 276;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WM0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Maternal Newborn" ]
+       ], [
+         fhir:index 277;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WM0705X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Medical-Surgical" ]
+       ], [
+         fhir:index 278;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WN0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Neonatal Intensive Care" ]
+       ], [
+         fhir:index 279;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WN0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Neonatal, Low-Risk" ]
+       ], [
+         fhir:index 280;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WN0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Nephrology" ]
+       ], [
+         fhir:index 281;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WN0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Neuroscience" ]
+       ], [
+         fhir:index 282;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WM1400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Nurse Massage Therapist (NMT)" ]
+       ], [
+         fhir:index 283;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WN1003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Nutrition Support" ]
+       ], [
+         fhir:index 284;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Obstetric, High-Risk" ]
+       ], [
+         fhir:index 285;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Obstetric, Inpatient" ]
+       ], [
+         fhir:index 286;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX0106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Occupational Health" ]
+       ], [
+         fhir:index 287;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Oncology" ]
+       ], [
+         fhir:index 288;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Ophthalmic" ]
+       ], [
+         fhir:index 289;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Orthopedic" ]
+       ], [
+         fhir:index 290;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Ostomy Care" ]
+       ], [
+         fhir:index 291;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WX0601X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Otorhinolaryngology   Head-Neck" ]
+       ], [
+         fhir:index 292;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Pain Management" ]
+       ], [
+         fhir:index 293;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP0218X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Pediatric Oncology" ]
+       ], [
+         fhir:index 294;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Pediatrics" ]
+       ], [
+         fhir:index 295;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP1700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Perinatal" ]
+       ], [
+         fhir:index 296;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WS0121X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Plastic Surgery" ]
+       ], [
+         fhir:index 297;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP0808X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Psych/Mental Health" ]
+       ], [
+         fhir:index 298;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP0809X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Psych/Mental Health, Adult" ]
+       ], [
+         fhir:index 299;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WP0807X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Psych/Mental Health, Child   Adolescent" ]
+       ], [
+         fhir:index 300;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WR0006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Registered Nurse First Assistant" ]
+       ], [
+         fhir:index 301;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WR0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Rehabilitation" ]
+       ], [
+         fhir:index 302;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WR1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Reproductive Endocrinology/Infertility" ]
+       ], [
+         fhir:index 303;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WS0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-School" ]
+       ], [
+         fhir:index 304;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WU0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Urology" ]
+       ], [
+         fhir:index 305;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WW0101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Women's Health Care, Ambulatory" ]
+       ], [
+         fhir:index 306;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "163WW0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Providers-Registered Nurse-Wound Care" ]
+       ], [
+         fhir:index 307;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3747A0650X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Related Providers-Technician-Attendant Care Provider" ]
+       ], [
+         fhir:index 308;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3747P1801X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing Service Related Providers-Technician-Personal Care Attendant" ]
+       ], [
+         fhir:index 309;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "171WH0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Contractor-Home Modifications" ]
+       ], [
+         fhir:index 310;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "171WV0202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Contractor-Vehicle Modifications" ]
+       ], [
+         fhir:index 311;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1710I1002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Military Health Care Provider-Independent Duty Corpsman" ]
+       ], [
+         fhir:index 312;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1710I1003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Military Health Care Provider-Independent Duty Medical Technicians" ]
+       ], [
+         fhir:index 313;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1744G0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Specialist-Graphics Designer" ]
+       ], [
+         fhir:index 314;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1744P3200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Specialist-Prosthetics Case Management" ]
+       ], [
+         fhir:index 315;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1744R1103X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Specialist-Research Data Abstracter/Coder" ]
+       ], [
+         fhir:index 316;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1744R1102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Specialist-Research Study" ]
+       ], [
+         fhir:index 317;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "174MM1900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Service Providers-Veterinarian-Medical Research" ]
+       ], [
+         fhir:index 318;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835G0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-General Practice" ]
+       ], [
+         fhir:index 319;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835G0303X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Geriatric" ]
+       ], [
+         fhir:index 320;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835N0905X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Nuclear" ]
+       ], [
+         fhir:index 321;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835N1003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Nutrition Support" ]
+       ], [
+         fhir:index 322;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835X0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Oncology" ]
+       ], [
+         fhir:index 323;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835P0018X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Pharmacist Clinician (PhC)/ Clinical Pharmacy Specialist" ]
+       ], [
+         fhir:index 324;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835P1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Pharmacotherapy" ]
+       ], [
+         fhir:index 325;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1835P1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Service Providers-Pharmacist-Psychiatric" ]
+       ], [
+         fhir:index 326;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SA2100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Acute Care" ]
+       ], [
+         fhir:index 327;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SA2200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Adult Health" ]
+       ], [
+         fhir:index 328;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SC2300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Chronic Care" ]
+       ], [
+         fhir:index 329;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SC1501X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Community Health/Public Health" ]
+       ], [
+         fhir:index 330;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SC0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Critical Care Medicine" ]
+       ], [
+         fhir:index 331;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SE0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Emergency" ]
+       ], [
+         fhir:index 332;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SE1400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Ethics" ]
+       ], [
+         fhir:index 333;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SF0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Family Health" ]
+       ], [
+         fhir:index 334;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SG0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Gerontology" ]
+       ], [
+         fhir:index 335;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SH1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Holistic" ]
+       ], [
+         fhir:index 336;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SH0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Home Health" ]
+       ], [
+         fhir:index 337;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SI0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Informatics" ]
+       ], [
+         fhir:index 338;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SL0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Long-Term Care" ]
+       ], [
+         fhir:index 339;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SM0705X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Medical-Surgical" ]
+       ], [
+         fhir:index 340;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SN0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Neonatal" ]
+       ], [
+         fhir:index 341;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SN0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Neuroscience" ]
+       ], [
+         fhir:index 342;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SX0106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Occupational Health" ]
+       ], [
+         fhir:index 343;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SX0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Oncology" ]
+       ], [
+         fhir:index 344;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SX0204X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Oncology, Pediatrics" ]
+       ], [
+         fhir:index 345;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Pediatrics" ]
+       ], [
+         fhir:index 346;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP1700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Perinatal" ]
+       ], [
+         fhir:index 347;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP2800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Perioperative" ]
+       ], [
+         fhir:index 348;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0808X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health" ]
+       ], [
+         fhir:index 349;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0809X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health, Adult" ]
+       ], [
+         fhir:index 350;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0807X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health, Child   Adolescent" ]
+       ], [
+         fhir:index 351;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0810X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health, Child   Family" ]
+       ], [
+         fhir:index 352;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0811X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health, Chronically Ill" ]
+       ], [
+         fhir:index 353;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0812X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health, Community" ]
+       ], [
+         fhir:index 354;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SP0813X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Psych/Mental Health, Geropsychiatric" ]
+       ], [
+         fhir:index 355;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SR0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Rehabilitation" ]
+       ], [
+         fhir:index 356;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SS0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-School" ]
+       ], [
+         fhir:index 357;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364ST0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Transplantation" ]
+       ], [
+         fhir:index 358;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "364SW0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Clinical Nurse Specialist-Women's Health" ]
+       ], [
+         fhir:index 359;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LA2100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Acute Care" ]
+       ], [
+         fhir:index 360;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LA2200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Adult Health" ]
+       ], [
+         fhir:index 361;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LC1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Community Health" ]
+       ], [
+         fhir:index 362;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LC0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Critical Care Medicine" ]
+       ], [
+         fhir:index 363;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LF0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Family" ]
+       ], [
+         fhir:index 364;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LG0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Gerontology" ]
+       ], [
+         fhir:index 365;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LN0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Neonatal" ]
+       ], [
+         fhir:index 366;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LN0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Neonatal, Critical Care" ]
+       ], [
+         fhir:index 367;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LX0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Obstetrics   Gynecology" ]
+       ], [
+         fhir:index 368;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LX0106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Occupational Health" ]
+       ], [
+         fhir:index 369;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LP0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Pediatrics" ]
+       ], [
+         fhir:index 370;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LP0222X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Pediatrics, Critical Care" ]
+       ], [
+         fhir:index 371;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LP1700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Perinatal" ]
+       ], [
+         fhir:index 372;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LP2300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Primary Care" ]
+       ], [
+         fhir:index 373;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LP0808X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Psych/Mental Health" ]
+       ], [
+         fhir:index 374;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LS0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-School" ]
+       ], [
+         fhir:index 375;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363LW0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Nurse Practitioner-Women's Health" ]
+       ], [
+         fhir:index 376;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363AM0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Physician Assistant-Medical" ]
+       ], [
+         fhir:index 377;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363AS0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Assistants   Advanced Practice Nursing Providers-Physician Assistant-Surgical" ]
+       ], [
+         fhir:index 378;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213ES0103X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-Foot   Ankle Surgery" ]
+       ], [
+         fhir:index 379;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213ES0131X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-Foot Surgery" ]
+       ], [
+         fhir:index 380;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213EG0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-General Practice" ]
+       ], [
+         fhir:index 381;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213EP1101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-Primary Podiatric Medicine" ]
+       ], [
+         fhir:index 382;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213EP0504X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-Public Medicine" ]
+       ], [
+         fhir:index 383;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213ER0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-Radiology" ]
+       ], [
+         fhir:index 384;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "213ES0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatric Medicine   Surgery Service Providers-Podiatrist-Sports Medicine" ]
+       ], [
+         fhir:index 385;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XR0403X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Driving and Community Mobility" ]
+       ], [
+         fhir:index 386;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XE0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Environmental Modification" ]
+       ], [
+         fhir:index 387;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XE1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Ergonomics" ]
+       ], [
+         fhir:index 388;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XF0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Feeding, Eating   Swallowing" ]
+       ], [
+         fhir:index 389;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XG0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Gerontology" ]
+       ], [
+         fhir:index 390;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XH1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Hand" ]
+       ], [
+         fhir:index 391;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XH1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Human Factors" ]
+       ], [
+         fhir:index 392;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XL0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Low Vision" ]
+       ], [
+         fhir:index 393;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XM0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Mental Health" ]
+       ], [
+         fhir:index 394;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XN1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Neurorehabilitation" ]
+       ], [
+         fhir:index 395;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XP0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Pediatrics" ]
+       ], [
+         fhir:index 396;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225XP0019X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapist-Physical Rehabilitation" ]
+       ], [
+         fhir:index 397;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "224ZR0403X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapy Assistant-Driving and Community Mobility" ]
+       ], [
+         fhir:index 398;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "224ZE0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapy Assistant-Environmental Modification" ]
+       ], [
+         fhir:index 399;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "224ZF0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapy Assistant-Feeding, Eating   Swallowing" ]
+       ], [
+         fhir:index 400;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "224ZL0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Occupational Therapy Assistant-Low Vision" ]
+       ], [
+         fhir:index 401;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251C2600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Cardiopulmonary" ]
+       ], [
+         fhir:index 402;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251E1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Electrophysiology, Clinical" ]
+       ], [
+         fhir:index 403;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251E1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Ergonomics" ]
+       ], [
+         fhir:index 404;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251G0304X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Geriatrics" ]
+       ], [
+         fhir:index 405;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251H1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Hand" ]
+       ], [
+         fhir:index 406;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251H1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Human Factors" ]
+       ], [
+         fhir:index 407;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251N0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Neurology" ]
+       ], [
+         fhir:index 408;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251X0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Orthopedic" ]
+       ], [
+         fhir:index 409;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251P0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Pediatrics" ]
+       ], [
+         fhir:index 410;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251S0007X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Physical Therapist-Sports" ]
+       ], [
+         fhir:index 411;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225CA2400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Rehabilitation Counselor-Assistive Technology Practitioner" ]
+       ], [
+         fhir:index 412;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225CA2500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Rehabilitation Counselor-Assistive Technology Supplier" ]
+       ], [
+         fhir:index 413;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "225CX0006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Rehabilitation Counselor-Orientation and Mobility Training Provider" ]
+       ], [
+         fhir:index 414;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278C0205X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Critical Care" ]
+       ], [
+         fhir:index 415;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278E1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Educational" ]
+       ], [
+         fhir:index 416;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278E0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Emergency Care" ]
+       ], [
+         fhir:index 417;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278G1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-General Care" ]
+       ], [
+         fhir:index 418;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278G0305X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Geriatric Care" ]
+       ], [
+         fhir:index 419;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278H0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Home Health" ]
+       ], [
+         fhir:index 420;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278P3900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Neonatal/Pediatrics" ]
+       ], [
+         fhir:index 421;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278P3800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Palliative/Hospice" ]
+       ], [
+         fhir:index 422;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278P4000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Patient Transport" ]
+       ], [
+         fhir:index 423;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278P1004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Pulmonary Diagnostics" ]
+       ], [
+         fhir:index 424;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278P1006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Pulmonary Function Technologist" ]
+       ], [
+         fhir:index 425;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278P1005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-Pulmonary Rehabilitation" ]
+       ], [
+         fhir:index 426;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2278S1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Certified-SNF/Subacute Care" ]
+       ], [
+         fhir:index 427;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279C0205X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Critical Care" ]
+       ], [
+         fhir:index 428;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279E1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Educational" ]
+       ], [
+         fhir:index 429;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279E0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Emergency Care" ]
+       ], [
+         fhir:index 430;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279G1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-General Care" ]
+       ], [
+         fhir:index 431;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279G0305X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Geriatric Care" ]
+       ], [
+         fhir:index 432;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279H0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Home Health" ]
+       ], [
+         fhir:index 433;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279P3900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Neonatal/Pediatrics" ]
+       ], [
+         fhir:index 434;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279P3800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Palliative/Hospice" ]
+       ], [
+         fhir:index 435;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279P4000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Patient Transport" ]
+       ], [
+         fhir:index 436;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279P1004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Pulmonary Diagnostics" ]
+       ], [
+         fhir:index 437;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279P1006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Pulmonary Function Technologist" ]
+       ], [
+         fhir:index 438;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279P1005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-Pulmonary Rehabilitation" ]
+       ], [
+         fhir:index 439;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2279S1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Respiratory Therapist, Registered-SNF/Subacute Care" ]
+       ], [
+         fhir:index 440;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2255A2300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Specialist/Technologist-Athletic Trainer" ]
+       ], [
+         fhir:index 441;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2255R0406X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory, Developmental, Rehabilitative and Restorative Service Providers-Specialist/Technologist-Rehabilitation, Blind" ]
+       ], [
+         fhir:index 442;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "231HA2400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Speech, Language and Hearing Service Providers-Audiologist-Assistive Technology Practitioner" ]
+       ], [
+         fhir:index 443;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "231HA2500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Speech, Language and Hearing Service Providers-Audiologist-Assistive Technology Supplier" ]
+       ], [
+         fhir:index 444;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2355A2700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Speech, Language and Hearing Service Providers-Specialist/Technologist-Audiology Assistant" ]
+       ], [
+         fhir:index 445;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2355S0801X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Speech, Language and Hearing Service Providers-Specialist/Technologist-Speech-Language Assistant" ]
+       ], [
+         fhir:index 446;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "247ZC0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Pathology-Clinical Laboratory Director, Non-physician" ]
+       ], [
+         fhir:index 447;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471B0102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Bone Densitometry" ]
+       ], [
+         fhir:index 448;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471C1106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Cardiac-Interventional Technology" ]
+       ], [
+         fhir:index 449;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471C1101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Cardiovascular-Interventional Technology" ]
+       ], [
+         fhir:index 450;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471C3401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Computed Tomography" ]
+       ], [
+         fhir:index 451;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471M1202X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Magnetic Resonance Imaging" ]
+       ], [
+         fhir:index 452;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471M2300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Mammography" ]
+       ], [
+         fhir:index 453;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471N0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Nuclear Medicine Technology" ]
+       ], [
+         fhir:index 454;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471Q0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Quality Management" ]
+       ], [
+         fhir:index 455;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471R0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Radiation Therapy" ]
+       ], [
+         fhir:index 456;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471C3402X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Radiography" ]
+       ], [
+         fhir:index 457;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471S1302X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Sonography" ]
+       ], [
+         fhir:index 458;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471V0105X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Vascular Sonography" ]
+       ], [
+         fhir:index 459;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2471V0106X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Radiologic Technologist-Vascular-Interventional Technology" ]
+       ], [
+         fhir:index 460;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246XC2901X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Cardiovascular-Cardiovascular Invasive Specialist" ]
+       ], [
+         fhir:index 461;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246XS1301X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Cardiovascular-Sonography" ]
+       ], [
+         fhir:index 462;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246XC2903X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Cardiovascular-Vascular Specialist" ]
+       ], [
+         fhir:index 463;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246YC3301X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Health Info-Coding Specialist, Hospital Based" ]
+       ], [
+         fhir:index 464;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246YC3302X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Health Info-Coding Specialist, Physician Office Based" ]
+       ], [
+         fhir:index 465;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246YR1600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Health Info-Registered Record Administrator" ]
+       ], [
+         fhir:index 466;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QB0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Blood Banking" ]
+       ], [
+         fhir:index 467;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QC1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Chemistry" ]
+       ], [
+         fhir:index 468;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QC2700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Cytotechnology" ]
+       ], [
+         fhir:index 469;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QH0401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Hemapheresis Practitioner" ]
+       ], [
+         fhir:index 470;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QH0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Hematology" ]
+       ], [
+         fhir:index 471;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QH0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Histology" ]
+       ], [
+         fhir:index 472;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QI0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Immunology" ]
+       ], [
+         fhir:index 473;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QL0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Laboratory Management" ]
+       ], [
+         fhir:index 474;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QL0901X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Laboratory Management, Diplomate" ]
+       ], [
+         fhir:index 475;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QM0706X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Medical Technologist" ]
+       ], [
+         fhir:index 476;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246QM0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Spec/Tech, Pathology-Microbiology" ]
+       ], [
+         fhir:index 477;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZA2600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Art, Medical" ]
+       ], [
+         fhir:index 478;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZB0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Biochemist" ]
+       ], [
+         fhir:index 479;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZB0301X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Biomedical Engineering" ]
+       ], [
+         fhir:index 480;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZB0302X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Biomedical Photographer" ]
+       ], [
+         fhir:index 481;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZB0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Biostatistician" ]
+       ], [
+         fhir:index 482;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZE0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-EEG" ]
+       ], [
+         fhir:index 483;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZE0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Electroneurodiagnostic" ]
+       ], [
+         fhir:index 484;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZG1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Geneticist, Medical (PhD)" ]
+       ], [
+         fhir:index 485;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZG0701X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Graphics Methods" ]
+       ], [
+         fhir:index 486;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZI1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Illustration, Medical" ]
+       ], [
+         fhir:index 487;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZN0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Nephrology" ]
+       ], [
+         fhir:index 488;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZX2200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Orthopedic Assistant" ]
+       ], [
+         fhir:index 489;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZC0007X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Surgical Assistant" ]
+       ], [
+         fhir:index 490;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246ZS0410X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Specialist/Technologist, Other-Surgical Technologist" ]
+       ], [
+         fhir:index 491;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2470A2800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Health Information-Assistant Record Technician" ]
+       ], [
+         fhir:index 492;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2472B0301X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Other-Biomedical Engineering" ]
+       ], [
+         fhir:index 493;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2472D0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Other-Darkroom" ]
+       ], [
+         fhir:index 494;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2472E0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Other-EEG" ]
+       ], [
+         fhir:index 495;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2472R0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Other-Renal Dialysis" ]
+       ], [
+         fhir:index 496;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2472V0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Other-Veterinary" ]
+       ], [
+         fhir:index 497;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246RH0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Pathology-Histology" ]
+       ], [
+         fhir:index 498;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246RM2200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Pathology-Medical Laboratory" ]
+       ], [
+         fhir:index 499;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "246RP1900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Technologists, Technicians   Other Technical Service Providers-Technician, Pathology-Phlebotomy" ]
+       ], [
+         fhir:index 500;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM0855X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Adolescent and Children Mental Health" ]
+       ], [
+         fhir:index 501;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QA0600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Adult Day Care" ]
+       ], [
+         fhir:index 502;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM0850X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Adult Mental Health" ]
+       ], [
+         fhir:index 503;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QA0005X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Ambulatory Family Planning Facility" ]
+       ], [
+         fhir:index 504;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QA0006X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Ambulatory Fertility Facility" ]
+       ], [
+         fhir:index 505;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QA1903X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Ambulatory Surgical" ]
+       ], [
+         fhir:index 506;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QA0900X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Amputee" ]
+       ], [
+         fhir:index 507;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QA3000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Augmentative Communication" ]
+       ], [
+         fhir:index 508;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QB0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Birthing" ]
+       ], [
+         fhir:index 509;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QC1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Community Health" ]
+       ], [
+         fhir:index 510;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QC1800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Corporate Health" ]
+       ], [
+         fhir:index 511;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QC0050X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Critical Access Hospital" ]
+       ], [
+         fhir:index 512;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QD0000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Dental" ]
+       ], [
+         fhir:index 513;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QD1600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Developmental Disabilities" ]
+       ], [
+         fhir:index 514;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QE0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Emergency Care" ]
+       ], [
+         fhir:index 515;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QE0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-End-Stage Renal Disease (ESRD) Treatment" ]
+       ], [
+         fhir:index 516;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QE0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Endoscopy" ]
+       ], [
+         fhir:index 517;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QF0050X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Family Planning, Non-Surgical" ]
+       ], [
+         fhir:index 518;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QF0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Federally Qualified Health Center (FQHC)" ]
+       ], [
+         fhir:index 519;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QG0250X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Genetics" ]
+       ], [
+         fhir:index 520;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QH0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Health Service" ]
+       ], [
+         fhir:index 521;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QH0700X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Hearing and Speech" ]
+       ], [
+         fhir:index 522;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QI0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Infusion Therapy" ]
+       ], [
+         fhir:index 523;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QL0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Lithotripsy" ]
+       ], [
+         fhir:index 524;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Magnetic Resonance Imaging (MRI)" ]
+       ], [
+         fhir:index 525;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM2500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Medical Specialty" ]
+       ], [
+         fhir:index 526;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM3000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Medically Fragile Intants and Children Day Care" ]
+       ], [
+         fhir:index 527;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM0801X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Mental Health (Including Community Mental Health Center)" ]
+       ], [
+         fhir:index 528;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM2800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Methadone Clinic" ]
+       ], [
+         fhir:index 529;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Migrant Health" ]
+       ], [
+         fhir:index 530;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1103X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Military Ambulatory Procedure Visits Operational (Transportable)" ]
+       ], [
+         fhir:index 531;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1101X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Military and U.S. Coast Guard Ambulatory Procedure" ]
+       ], [
+         fhir:index 532;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1102X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Military Outpatient Operational (Transportable) Component" ]
+       ], [
+         fhir:index 533;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Military/U.S. Coast Guard Outpatient" ]
+       ], [
+         fhir:index 534;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QM1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Multi-Specialty" ]
+       ], [
+         fhir:index 535;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QX0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Occupational Medicine" ]
+       ], [
+         fhir:index 536;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QX0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Oncology" ]
+       ], [
+         fhir:index 537;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QX0203X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Oncology, Radiation" ]
+       ], [
+         fhir:index 538;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QS0132X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Ophthalmologic Surgery" ]
+       ], [
+         fhir:index 539;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QS0112X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Oral and Maxillofacial Surgery" ]
+       ], [
+         fhir:index 540;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP3300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Pain" ]
+       ], [
+         fhir:index 541;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Physical Therapy" ]
+       ], [
+         fhir:index 542;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Podiatric" ]
+       ], [
+         fhir:index 543;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP2300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Primary Care" ]
+       ], [
+         fhir:index 544;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP2400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Prison Health" ]
+       ], [
+         fhir:index 545;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP0904X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Public Health, Federal" ]
+       ], [
+         fhir:index 546;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QP0905X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Public Health, State or Local" ]
+       ], [
+         fhir:index 547;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Radiology" ]
+       ], [
+         fhir:index 548;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0206X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Radiology, Mammography" ]
+       ], [
+         fhir:index 549;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0208X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Radiology, Mobile" ]
+       ], [
+         fhir:index 550;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0207X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Radiology, Mobile Mammography" ]
+       ], [
+         fhir:index 551;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Recovery Care" ]
+       ], [
+         fhir:index 552;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Rehabilitation" ]
+       ], [
+         fhir:index 553;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0404X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Rehabilitation, Cardiac Facilities" ]
+       ], [
+         fhir:index 554;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0401X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Rehabilitation, Comprehensive Outpatient Rehabilitation Facility (CORF)" ]
+       ], [
+         fhir:index 555;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR0405X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Rehabilitation, Substance Use Disorder" ]
+       ], [
+         fhir:index 556;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR1100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Research" ]
+       ], [
+         fhir:index 557;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QR1300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Rural Health" ]
+       ], [
+         fhir:index 558;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QS1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Sleep Disorder Diagnostic" ]
+       ], [
+         fhir:index 559;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QS1000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Student Health" ]
+       ], [
+         fhir:index 560;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QU0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-Urgent Care" ]
+       ], [
+         fhir:index 561;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "261QV0200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ambulatory Health Care Facilities-Clinic/Center-VA" ]
+       ], [
+         fhir:index 562;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "281PC2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-Chronic Disease Hospital-Children" ]
+       ], [
+         fhir:index 563;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "282NC2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-General Acute Care Hospital-Children" ]
+       ], [
+         fhir:index 564;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "282NC0060X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-General Acute Care Hospital-Critical Access" ]
+       ], [
+         fhir:index 565;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "282NR1301X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-General Acute Care Hospital-Rural" ]
+       ], [
+         fhir:index 566;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "282NW0100X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-General Acute Care Hospital-Women" ]
+       ], [
+         fhir:index 567;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2865C1500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-Military Hospital-Community Health" ]
+       ], [
+         fhir:index 568;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2865M2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-Military Hospital-Military General Acute Care Hospital" ]
+       ], [
+         fhir:index 569;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2865X1600X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-Military Hospital-Military General Acute Care Hospital. Operational (Transportable)" ]
+       ], [
+         fhir:index 570;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "283XC2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospitals-Rehabilitation Hospital-Children" ]
+       ], [
+         fhir:index 571;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3104A0630X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing   Custodial Care Facilities-Assisted Living Facility-Assisted Living, Behavioral Disturbances" ]
+       ], [
+         fhir:index 572;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3104A0625X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing   Custodial Care Facilities-Assisted Living Facility-Assisted Living, Mental Illness" ]
+       ], [
+         fhir:index 573;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "311ZA0620X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing   Custodial Care Facilities-Custodial Care Facility-Adult Care Home" ]
+       ], [
+         fhir:index 574;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3140N1450X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing   Custodial Care Facilities-Skilled Nursing Facility-Nursing Care, Pediatric" ]
+       ], [
+         fhir:index 575;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3245S0500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Residential Treatment Facilities-Substance Abuse Rehabilitation Facility-Substance Abuse Treatment, Children" ]
+       ], [
+         fhir:index 576;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385HR2050X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respite Care Facility-Respite Care-Respite Care Camp" ]
+       ], [
+         fhir:index 577;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385HR2055X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respite Care Facility-Respite Care-Respite Care, Mental Illness, Child" ]
+       ], [
+         fhir:index 578;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385HR2060X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respite Care Facility-Respite Care-Respite Care, Mental Retardation and/or Developmental Disabilities, Child" ]
+       ], [
+         fhir:index 579;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "385HR2065X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respite Care Facility-Respite Care-Respite Care, Physical Disabilities, Child" ]
+       ], [
+         fhir:index 580;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "332BC3200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Durable Medical Equipment   Medical Supplies-Customized Equipment" ]
+       ], [
+         fhir:index 581;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "332BD1200X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Durable Medical Equipment   Medical Supplies-Dialysis Equipment   Supplies" ]
+       ], [
+         fhir:index 582;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "332BN1400X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Durable Medical Equipment   Medical Supplies-Nursing Facility Supplies" ]
+       ], [
+         fhir:index 583;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "332BX2000X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Durable Medical Equipment   Medical Supplies-Oxygen Equipment   Supplies" ]
+       ], [
+         fhir:index 584;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "332BP3500X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Durable Medical Equipment   Medical Supplies-Parenteral   Enteral Nutrition" ]
+       ], [
+         fhir:index 585;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336C0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Clinic Pharmacy" ]
+       ], [
+         fhir:index 586;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336C0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Community/Retail Pharmacy" ]
+       ], [
+         fhir:index 587;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336C0004X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Compounding Pharmacy" ]
+       ], [
+         fhir:index 588;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336H0001X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Home Infusion Therapy Pharmacy" ]
+       ], [
+         fhir:index 589;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336I0012X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Institutional Pharmacy" ]
+       ], [
+         fhir:index 590;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336L0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Long Term Care Pharmacy" ]
+       ], [
+         fhir:index 591;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336M0002X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Mail Order Pharmacy" ]
+       ], [
+         fhir:index 592;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336M0003X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Managed Care Organization Pharmacy" ]
+       ], [
+         fhir:index 593;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336N0007X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Nuclear Pharmacy" ]
+       ], [
+         fhir:index 594;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3336S0011X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Suppliers-Pharmacy-Specialty Pharmacy" ]
+       ], [
+         fhir:index 595;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3416A0800X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services-Ambulance-Air Transport" ]
+       ], [
+         fhir:index 596;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3416L0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services-Ambulance-Land Transport" ]
+       ], [
+         fhir:index 597;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3416S0300X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services-Ambulance-Water Transport" ]
+       ], [
+         fhir:index 598;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3418M1120X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services-Military/U.S. Coast Guard Transport-Military or U.S. Coast Guard Ambulance, Air Transport" ]
+       ], [
+         fhir:index 599;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3418M1110X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services-Military/U.S. Coast Guard Transport-Military or U.S. Coast Guard Ambulance, Ground Transport" ]
+       ], [
+         fhir:index 600;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3418M1130X" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transportation Services-Military/U.S. Coast Guard Transport-Military or U.S. Coast Guard Ambulance, Water Transport" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

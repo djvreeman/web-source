@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>LabNullFlavor</h2>
+
+<pre class="xml">
+
+&lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.id">id</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#id">value</a>=&quot;LabNullFlavor&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.meta">meta</a>&gt;
+    &lt;<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.url">url</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/hspc/ValueSet/LabNullFlavor&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.version">version</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;0.01&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.name">name</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;LabNullFlavor&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.status">status</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.publisher">publisher</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Intermountain Healthcare&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact">contact</a>&gt;
+    &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact.telecom">telecom</a>&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;other&quot;/&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;http://www.clinicaleleement.com&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.date">date</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#dateTime">value</a>=&quot;2014-06-25&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.description">description</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#markdown">value</a>=&quot;A list of reasons why a lab result may have no value&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.copyright">copyright</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;IHC&quot;/&gt;
+  &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose">compose</a>&gt;
+    &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include">include</a>&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.system">system</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#uri">value</a>=&quot;http://ihc.org/fhir/Namespace/cks&quot;/&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;49a7a867-503b-4e43-bf79-08af2ee332f0&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Canceled per nurse&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;92320c47-f253-475c-ba8b-71ff331675ec&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Canceled per physician&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;4bccaae4-c331-4137-836e-8f847a45589b&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Cancelled&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;5b150233-f70f-410b-8472-5ad92c1bbd15&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Cancelled on HIS&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;0727cc30-12bc-4584-889e-0af6df7d6c13&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Color Interference&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;6269026c-e3bb-4d86-b1c3-a8298894304c&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Contaminated&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;c02ed2a6-f895-4b02-9e17-e318641ba5eb&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Duplicate request&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;1cb9d854-adc4-4944-8ece-c8f067562edc&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Duplicate request, charges credited&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;42aa13ed-8d25-470a-90ac-9ff1e24c7753&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Erroneous patient information provide by requestor, result does not belong to this patient, charge credited and requestor notified.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;fc454c3c-69c9-40be-a6e5-4eb3f47fbe78&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Error in Entry&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;70c1c9c8-d114-48cb-a279-083e51a54314&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Improper storage of specimen&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;a6c6ae50-0c81-4e42-ae17-b5f52b1b2654&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Improper tube/specimen type&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;b08f262d-b576-4c95-92df-9d574f2b28e7&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Information Not Available&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;52cab8b0-1410-45c1-b02e-f52984756667&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Instrument Malfunction&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;25cb9668-8428-433c-b475-f668e2a2bef8&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Interference. Test not resultable.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;52361403-d4bb-4ea4-bfcb-dd191bde9159&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Keystroke Error&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;5460493d-1fe8-4e1d-bfb2-c8a12cfeeda9&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Lab error, result does not belong to this patient, charge credited and requestor notified.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;39596a63-3008-403c-a4dc-67eef8a91617&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Name discrepancy on specimen label&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;5395a867-1773-4578-8175-505e3ec75c23&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;No label on specimen&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;5b774082-f098-417d-ba16-c75216c3ce2a&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;No specimen&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;b81219c7-ae0a-43e9-ac36-0d9b541914c4&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Not Applicable&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;NM&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Not Measured&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;024a267e-fb28-4c01-099a-0da22388c49e&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Not ordered&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;31127ea2-5a39-4d0a-9845-962caabab8bb&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Order error&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;7f5ab90c-711d-4c1e-8c8e-a6945ece1ee0&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Order error by requestor, wrong patient tested, charges credited.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;ce21c897-4b1e-4159-be58-97f985a32da7&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Order error, charges credited.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;7f269821-bf7f-48ff-96e3-0abb4bf7aab4&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Order error, wrong test performed, charges credited.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;c5673f76-3728-4e6c-8b9e-fe69b494fa72&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Patient did not return for specimen collection&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;2711ca7e-8a6d-46ed-b1ee-97876ae5c37e&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Patient discharged&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;f556ce34-315f-4be6-a57f-e6417f2bc31c&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Patient Expired&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;df5468b8-a2c8-46aa-9fa9-00e4c9476f24&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Patient refused procedure.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;a67b5327-a5b4-4ee5-b7c9-288fddee7426&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Patient unable to collect urine specimen.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;f8d6d9e1-402f-4825-a1dc-0011d33285b9&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;QNS for spun microscopic&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;5678c6cc-5be3-4adb-a7c2-008719533e4b&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Quantity not sufficient&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;afbc04fa-30d8-439b-b1de-052de5a22cee&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Request credited&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;f01e186a-dde6-4c13-826b-a5d7705c48a9&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen clotted&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;ddcf4e3b-2570-4cd9-98a2-fbc624675217&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen does not appear to be adequate for requested assay&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;f8d2e84c-32ff-4edc-b5f8-731f66a68f3b&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen improperly collected&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;2fc27fb8-2e66-476c-9a98-10b2c2f4e0c9&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen lab was missing required information&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;bd4b099c-507e-4367-b68d-d5a463a074ab&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen leaked in transit. Request new sample.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;39a12ccf-53e3-45df-ad4e-10396b87f772&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen lost due to laboratory accident&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;1224ed73-7d5a-419f-0b05-08d49cede2f6&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen mislabeled&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;4e218713-c092-42d9-0aee-009a5cce8890&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen not collected&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;2ee7ef2a-f889-4277-b5d1-141f512ef75a&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen not received as of 1 month post order. Charges adjusted accordingly.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;6b493527-dec3-481d-8ec6-bff42c149233&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen not received in the lab&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;f2648f40-5892-4855-817f-2954d2b0569d&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen unacceptable; request new specimen&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;3dd4c625-3638-4a78-9196-cb432d70fe40&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen Unlabeled - Identification Questionable&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;de9fa7f6-6931-4866-ab33-2c713fb179b6&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Specimen unsatisfactory&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;2bce731b-33f8-4f07-8eeb-f5f366c04036&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Test not performed on formed stools&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;30a959fb-d5d0-47e0-8d16-dc3181a33baa&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;The specimen was not received at Intermountain Central Lab for testing. The sending site was notified.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;7be123d9-90b8-436a-9c4b-25ea89c29c37&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Typical lab null flavor value&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;710d794f-ba1f-44c8-81cf-5d661a84428d&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Unable to calculate&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;b34cb8af-0f9e-4ed9-0ab1-8028bd3a5b38&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Unable to determine due to color interference&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;979df33f-64d0-4d9a-0a31-ecb3d3a33987&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Unable to report&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;e8f610ba-29f9-48cf-89cd-8e53544b5890&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>
+                 <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Unable to report platelet count due to platelet clumping; platelets appear adequate on smear&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;1087ab09-9ca1-49d2-0840-0f8f875270d0&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Unknown&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;cf14dea1-34a7-4bfe-b9e6-00711abd3336&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Wrong exam ordered.&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#code">value</a>=&quot;71e55163-1cf8-4223-99fc-04c7ed16a16c&quot;/&gt;
+        &lt;<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#string">value</a>=&quot;Wrong Patient&quot;/&gt;
+      &lt;/concept&gt;
+    &lt;/include&gt;
+  &lt;/compose&gt;
+&lt;/ValueSet&gt;</pre>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

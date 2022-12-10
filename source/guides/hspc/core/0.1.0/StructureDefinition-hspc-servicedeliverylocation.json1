@@ -1,0 +1,1864 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hspc-servicedeliverylocation",
+  "url": "http://fhir.org/guides/hspc/StructureDefinition/hspc-servicedeliverylocation",
+  "name": "Profile hspc-servicedeliverylocation",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "date": "2015-03-13",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/w5",
+      "name": "W5 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Location:hspcservicedeliverylocation",
+        "path": "Location",
+        "name": "HSPCServiceDeliveryLocation",
+        "short": "Details and position information for a physical place",
+        "definition": "Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".Role[classCode=SDLC]"
+          },
+          {
+            "identity": "w5",
+            "map": "administrative.entity"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.id",
+        "path": "Location.id",
+        "short": "Logical id of this artifact",
+        "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.meta",
+        "path": "Location.meta",
+        "short": "Metadata about the resource",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.meta",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.implicitRules",
+        "path": "Location.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.implicitRules",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.language",
+        "path": "Location.language",
+        "short": "Language of the resource content",
+        "definition": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.language",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueReference": {
+                "reference": "http://hl7.org/fhir/ValueSet/all-languages"
+              }
+            }
+          ],
+          "strength": "extensible",
+          "description": "A human language.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.text",
+        "path": "Location.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later.",
+        "alias": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.text",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "dom-1"
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.contained",
+        "path": "Location.contained",
+        "short": "Contained, inline Resources",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "alias": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.contained",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.extension",
+        "path": "Location.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.modifierExtension",
+        "path": "Location.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.identifier",
+        "path": "Location.identifier",
+        "short": "Unique code or number identifying the location to its users",
+        "definition": "Unique code or number identifying the location to its users.",
+        "requirements": "Organization label locations in registries, need to keep track of those.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "w5",
+            "map": "id"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.status",
+        "path": "Location.status",
+        "short": "active | suspended | inactive",
+        "definition": "active | suspended | inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": true,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "description": "Indicates whether the location is still in use.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode"
+          },
+          {
+            "identity": "w5",
+            "map": "status"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name",
+        "path": "Location.name",
+        "short": "Name of the location as used by humans",
+        "definition": "Name of the location as used by humans. Does not need to be unique.",
+        "comments": "If the name of an location changes, consider putting the old name in the alias column so that it can still be located through searches.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".name"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.id",
+        "path": "Location.name.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "string.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.extension",
+        "path": "Location.name.extension",
+        "slicing": {
+          "id": "6",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "string.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.extension:nameuse$Extension",
+        "path": "Location.name.extension",
+        "name": "NameUse",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "string.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.extension:period$Extension",
+        "path": "Location.name.extension",
+        "name": "Period",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "string.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.value",
+        "path": "Location.name.value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Primitive value for string",
+        "definition": "The actual value",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "string.value",
+          "min": 0,
+          "max": "1"
+        },
+        "maxLength": 1048576
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.alias",
+        "path": "Location.alias",
+        "short": "A list of alternate names that the location is known as, or was known as in the past",
+        "definition": "A list of alternate names that the location is known as, or was known as in the past.",
+        "comments": "There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the location.",
+        "requirements": "Over time locations and organizations go through many changes and can be known by different names.  For searching knowing previous names that the location was known by can be very useful.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.alias",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.description",
+        "path": "Location.description",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name",
+        "definition": "Description of the Location, which helps in finding or referencing the place.",
+        "requirements": "Humans need additional information to verify a correct location has been identified.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.description",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".playingEntity[classCode=PLC determinerCode=INSTANCE].desc"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.mode",
+        "path": "Location.mode",
+        "short": "instance | kind",
+        "definition": "Indicates whether a resource instance represents a specific location or a class of locations.",
+        "requirements": "When using a Location resource for scheduling or orders, we need to be able to refer to a class of Locations instead of a specific Location.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.mode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "Indicates whether a resource instance represents a specific location or a class of locations.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-mode"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".playingEntity[classCode=PLC].determinerCode"
+          },
+          {
+            "identity": "w5",
+            "map": "class"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.type",
+        "path": "Location.type",
+        "short": "Type of function performed",
+        "definition": "Indicates the type of function performed at the location.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Indicates the type of function performed at the location.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-ServiceDeliveryLocationRoleType"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".code"
+          },
+          {
+            "identity": "w5",
+            "map": "class"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom",
+        "path": "Location.telecom",
+        "short": "Contact details of the location",
+        "definition": "The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "mustSupport": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".telecom"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.id",
+        "path": "Location.telecom.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.extension:telecompreferred$Extension",
+        "path": "Location.telecom.extension",
+        "name": "telecom.preferred",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.system",
+        "path": "Location.telecom.system",
+        "short": "phone | fax | email | pager | other",
+        "definition": "Telecommunications form for contact point - what communications system is required to make use of the contact.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "condition": [
+          "cpt-2"
+        ],
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "Telecommunications form for contact point",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contact-point-system"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XTN.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./scheme"
+          },
+          {
+            "identity": "servd",
+            "map": "./ContactPointType"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.value",
+        "path": "Location.telecom.value",
+        "short": "The actual contact point details",
+        "definition": "The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).",
+        "comments": "Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.",
+        "requirements": "Need to support legacy numbers that are not in a tightly controlled format.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.value",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XTN.1 (or XTN.12)"
+          },
+          {
+            "identity": "rim",
+            "map": "./url"
+          },
+          {
+            "identity": "servd",
+            "map": "./Value"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.use",
+        "path": "Location.telecom.use",
+        "short": "home | work | temp | old | mobile - purpose of this contact point",
+        "definition": "Identifies the purpose for the contact point.",
+        "comments": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old contact etc.for a current/permanent one. Applications can assume that a contact is current unless it explicitly says that it is temporary or old.",
+        "requirements": "Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.use",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "Use of contact point",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contact-point-use"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XTN.2 - but often indicated by field"
+          },
+          {
+            "identity": "rim",
+            "map": "unique(./use)"
+          },
+          {
+            "identity": "servd",
+            "map": "./ContactPointPurpose"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.rank",
+        "path": "Location.telecom.rank",
+        "short": "Specify preferred order of use (1 = highest)",
+        "definition": "Specifies a preferred order in which to use a set of contacts. Contacts are ranked with lower values coming before higher values.",
+        "comments": "Note that rank does not necessarily follow the order in which the contacts are represented in the instance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.rank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.period",
+        "path": "Location.telecom.period",
+        "short": "Time period when the contact point was/is in use",
+        "definition": "Time period when the contact point was/is in use.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.period",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./useablePeriod[type=\"IVL<TS>\"]"
+          },
+          {
+            "identity": "servd",
+            "map": "./StartDate and ./EndDate"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address",
+        "path": "Location.address",
+        "short": "Physical location",
+        "definition": "Physical location.",
+        "comments": "This was kept as 0..1 as there is no use property on the address, so wouldn't be able to identify different address types.",
+        "requirements": "If locations can be visited, we need to keep track of their address.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Address"
+          }
+        ],
+        "mustSupport": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".addr"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.id",
+        "path": "Location.address.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.extension",
+        "path": "Location.address.extension",
+        "slicing": {
+          "id": "7",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.extension:primaryindicator$Extension",
+        "path": "Location.address.extension",
+        "name": "PrimaryIndicator",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.extension:addresstype$Extension",
+        "path": "Location.address.extension",
+        "name": "AddressType",
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.use",
+        "path": "Location.address.use",
+        "short": "home | work | temp | old - purpose of this address",
+        "definition": "The purpose of this address.",
+        "comments": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old.",
+        "requirements": "Allows an appropriate address to be chosen from a list of many.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.use",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "exampleCode": "home",
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "The use of an address",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/address-use"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.7"
+          },
+          {
+            "identity": "rim",
+            "map": "unique(./use)"
+          },
+          {
+            "identity": "servd",
+            "map": "./AddressPurpose"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.type",
+        "path": "Location.address.type",
+        "short": "postal | physical | both",
+        "definition": "Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "exampleCode": "both",
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "The type of an address (physical / postal)",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/address-type"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.18"
+          },
+          {
+            "identity": "rim",
+            "map": "unique(./use)"
+          },
+          {
+            "identity": "vcard",
+            "map": "address type parameter"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.text",
+        "path": "Location.address.text",
+        "short": "Text representation of the address",
+        "definition": "A full text representation of the address.",
+        "comments": "Can provide both a text representation and parts.",
+        "requirements": "A renderable, unencoded form.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "exampleString": "137 Nowhere Street, Erewhon 9132",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6"
+          },
+          {
+            "identity": "rim",
+            "map": "./formatted"
+          },
+          {
+            "identity": "vcard",
+            "map": "address label parameter"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.line",
+        "path": "Location.address.line",
+        "short": "Street name, number, direction & P.O. Box etc.",
+        "definition": "This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.",
+        "requirements": "home | work | temp | old - purpose of this address.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Address.line",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "exampleString": "137 Nowhere Street",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)"
+          },
+          {
+            "identity": "rim",
+            "map": "AD.part[parttype = AL]"
+          },
+          {
+            "identity": "vcard",
+            "map": "street"
+          },
+          {
+            "identity": "servd",
+            "map": "./StreetAddress (newline delimitted)"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.city",
+        "path": "Location.address.city",
+        "short": "Name of city, town etc.",
+        "definition": "The name of the city, town, village or other community or delivery center.",
+        "alias": [
+          "Municpality"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.city",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "exampleString": "Erewhon",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.3"
+          },
+          {
+            "identity": "rim",
+            "map": "AD.part[parttype = CTY]"
+          },
+          {
+            "identity": "vcard",
+            "map": "locality"
+          },
+          {
+            "identity": "servd",
+            "map": "./Jurisdiction"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.district",
+        "path": "Location.address.district",
+        "short": "District name (aka county)",
+        "definition": "The name of the administrative area (county).",
+        "comments": "District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.",
+        "alias": [
+          "County"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.district",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "exampleString": "Madison",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.9"
+          },
+          {
+            "identity": "rim",
+            "map": "AD.part[parttype = CNT | CPA]"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.state",
+        "path": "Location.address.state",
+        "short": "Sub-unit of country (abbreviations ok)",
+        "definition": "Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes).",
+        "alias": [
+          "Province",
+          "Territory"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.state",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.4"
+          },
+          {
+            "identity": "rim",
+            "map": "AD.part[parttype = STA]"
+          },
+          {
+            "identity": "vcard",
+            "map": "region"
+          },
+          {
+            "identity": "servd",
+            "map": "./Region"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.postalCode",
+        "path": "Location.address.postalCode",
+        "short": "Postal code for area",
+        "definition": "A postal code designating a region defined by the postal service.",
+        "alias": [
+          "Zip"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.postalCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "exampleString": "9132",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.5"
+          },
+          {
+            "identity": "rim",
+            "map": "AD.part[parttype = ZIP]"
+          },
+          {
+            "identity": "vcard",
+            "map": "code"
+          },
+          {
+            "identity": "servd",
+            "map": "./PostalIdentificationCode"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.country",
+        "path": "Location.address.country",
+        "short": "Country (can be ISO 3166 3 letter code)",
+        "definition": "Country - a nation as commonly understood or generally accepted.",
+        "comments": "ISO 3166 3 letter codes can be used in place of a full country name.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.country",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.6"
+          },
+          {
+            "identity": "rim",
+            "map": "AD.part[parttype = CNT]"
+          },
+          {
+            "identity": "vcard",
+            "map": "country"
+          },
+          {
+            "identity": "servd",
+            "map": "./Country"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.period",
+        "path": "Location.address.period",
+        "short": "Time period when address was/is in use",
+        "definition": "Time period when address was/is in use.",
+        "requirements": "Allows addresses to be placed in historical context.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Address.period",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "examplePeriod": {
+          "start": "2010-03-23",
+          "end": "2010-07-01"
+        },
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "XAD.12 / XAD.13 + XAD.14"
+          },
+          {
+            "identity": "rim",
+            "map": "./usablePeriod[type=\"IVL<TS>\"]"
+          },
+          {
+            "identity": "servd",
+            "map": "./StartDate and ./EndDate"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.physicalType",
+        "path": "Location.physicalType",
+        "short": "Physical form of the location",
+        "definition": "Physical form of the location, e.g. building, room, vehicle, road.",
+        "requirements": "For purposes of showing relevant locations in queries, we need to categorize locations.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.physicalType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "description": "The kinds of service delivery locations",
+          "valueSetReference": {
+            "reference": "ValueSet/location-serviceDeliveryLocation-key-value-set"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".playingEntity [classCode=PLC].code"
+          },
+          {
+            "identity": "w5",
+            "map": "class"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position",
+        "path": "Location.position",
+        "short": "The absolute geographic location",
+        "definition": "The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).",
+        "requirements": "For mobile applications and automated route-finding knowing the exact location of the Location is required.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.position",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".playingEntity [classCode=PLC determinerCode=INSTANCE].positionText"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position.id",
+        "path": "Location.position.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position.extension",
+        "path": "Location.position.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position.modifierExtension",
+        "path": "Location.position.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position.longitude",
+        "path": "Location.position.longitude",
+        "short": "Longitude with WGS84 datum",
+        "definition": "Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.position.longitude",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position.latitude",
+        "path": "Location.position.latitude",
+        "short": "Latitude with WGS84 datum",
+        "definition": "Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.position.latitude",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.position.altitude",
+        "path": "Location.position.altitude",
+        "short": "Altitude with WGS84 datum",
+        "definition": "Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.position.altitude",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.managingOrganization",
+        "path": "Location.managingOrganization",
+        "short": "Organization responsible for provisioning and upkeep",
+        "definition": "The organization responsible for the provisioning and upkeep of the location.",
+        "comments": "This can also be used as the part of the organization hierarchy where this location provides services. These services can be defined through the HealthcareService resource.",
+        "requirements": "Need to know who manages the location.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.managingOrganization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Organization"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".scopingEntity[classCode=ORG determinerKind=INSTANCE]"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.partOf",
+        "path": "Location.partOf",
+        "short": "Another Location this one is physically part of",
+        "definition": "Another Location which this Location is physically part of.",
+        "requirements": "For purposes of location, display and identification, knowing which locations are located within other locations is important.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Location"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundLink[typeCode=PART].source[classCode=SDLC]"
+          }
+        ]
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.endpoint",
+        "path": "Location.endpoint",
+        "short": "Technical endpoints providing access to services operated for the location",
+        "definition": "Technical endpoints providing access to services operated for the location.",
+        "requirements": "Organizations may have different systems at different locations that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.endpoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Endpoint"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Location:hspcservicedeliverylocation",
+        "path": "Location",
+        "name": "HSPCServiceDeliveryLocation",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.status",
+        "path": "Location.status",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name",
+        "path": "Location.name",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.extension:nameuse$Extension",
+        "path": "Location.name.extension",
+        "name": "NameUse",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.name.extension:period$Extension",
+        "path": "Location.name.extension",
+        "name": "Period",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom",
+        "path": "Location.telecom",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.telecom.extension:telecompreferred$Extension",
+        "path": "Location.telecom.extension",
+        "name": "telecom.preferred",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address",
+        "path": "Location.address",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.extension:primaryindicator$Extension",
+        "path": "Location.address.extension",
+        "name": "PrimaryIndicator",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.address.extension:addresstype$Extension",
+        "path": "Location.address.extension",
+        "name": "AddressType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Location:hspcservicedeliverylocation.physicalType",
+        "path": "Location.physicalType",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "description": "The kinds of service delivery locations",
+          "valueSetReference": {
+            "reference": "ValueSet/location-serviceDeliveryLocation-key-value-set"
+          }
+        }
+      }
+    ]
+  }
+}

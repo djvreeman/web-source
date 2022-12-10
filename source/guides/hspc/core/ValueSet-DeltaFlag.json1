@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DeltaFlag",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/DeltaFlag",
+  "version": "0.01",
+  "name": "DeltaFlag",
+  "status": "draft",
+  "publisher": "Intermountain Healthcare",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://www.clinicaleleement.com"
+        }
+      ]
+    }
+  ],
+  "date": "2014-06-25",
+  "description": "SNOMED CT* SELECT SNOMED CT code system values descending from 'change values' (288533004).",
+  "copyright": "IHC",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "288533004"
+          }
+        ]
+      }
+    ]
+  }
+}

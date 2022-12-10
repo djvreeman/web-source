@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??CodeSystem/addressUse> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "addressUse"];
+  fhir:CodeSystem.url [ fhir:value "http://fhir.org/guides/hspc/CodeSystem/addressUse"];
+  fhir:CodeSystem.name [ fhir:value "HSPCPractitionerAddressUse"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:CodeSystem.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "A set of codes that describe the manner in which an addressed is used."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://fhir.org/guides/hspc/ValueSet/addressUse"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "BAD" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Bad address" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "PHYS" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Physical visit address" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "PST" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Postal address" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "HP" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Primary home" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "PUB" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Public" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "TMP" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Temporary address" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "HV" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Vacation home" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "WP" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Work place" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "H" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Home address" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "DIR" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Direct address" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "CONF" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Conficential address" ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

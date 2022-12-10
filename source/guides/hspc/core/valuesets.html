@@ -1,0 +1,559 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ValueSets - HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+<h1>ValueSets - HSPC Implementation Guide</h1>
+
+ <li><a href="ValueSet-telecomUse.html">TelecomUse</a> A set of codes that describe the type of usage for a telecom value.</li>
+ <li><a href="ValueSet-administrativeGender.html">HSPCAdministrativeGender</a> The gender of a person used for administrative purposes</li>
+ <li><a href="ValueSet-addressUse.html">HSPCAddressUse</a> A set of codes that describe the manner in which an addressed is used.</li>
+ <li><a href="ValueSet-patient-telecomSystem.html">HSPC Telecom System</a> A set of values that describe the type of system the telecom value belongs to.</li>
+ <li><a href="ValueSet-patient-telecomSystem.html">HSPC Telecom System</a> A set of values that describe the type of system the telecom value belongs to.</li>
+ <li><a href="ValueSet-hspc-bdverifiedmethod.html">HSPC Verification Method Value Set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-hspc-bdverifiedmethod.html">HSPC Verification Method Value Set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-patient-adoptionInfo.html">HSPC Adoption Info</a> A set of codes that describe patient info viewing privileges base on adoption status.</li>
+ <li><a href="ValueSet-patient-adoptionInfo.html">HSPC Adoption Info</a> A set of codes that describe patient info viewing privileges base on adoption status.</li>
+ <li><a href="ValueSet-patient-maritalStatus.html">HSPC Marital Status value set</a> SELECT SNOMED CT code system values descending from 'Finding of marital or partnership status (finding)' (365581002).</li>
+ <li><a href="ValueSet-patient-maritalStatus.html">HSPC Marital Status value set</a> SELECT SNOMED CT code system values descending from 'Finding of marital or partnership status (finding)' (365581002).</li>
+ <li><a href="ValueSet-patient-PersonNameUse.html">HSPC Person Name Use value set</a> The set of values that describe the manner an individual uses a name.</li>
+ <li><a href="ValueSet-patient-PersonNameUse.html">HSPC Person Name Use value set</a> The set of values that describe the manner an individual uses a name.</li>
+ <li><a href="ValueSet-patient-veteranMilitaryStatus.html">HSPC Veteran Military Status</a> A set of codes that describe the individual's current military status</li>
+ <li><a href="ValueSet-patient-veteranMilitaryStatus.html">HSPC Veteran Military Status</a> A set of codes that describe the individual's current military status</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-telecomUse.html">HSPCPractitionerTelecomUse</a> A set of codes that describe what the given telecom value is used for</li>
+ <li><a href="ValueSet-addressUse.html">HSPCPractitionerAddressUse</a> A set of codes that describe the manner in which an addressed is used.</li>
+ <li><a href="ValueSet-practitioner-telecomSystem.html">HSPC Telecom System</a> A set of values that describe the type of system the telecom value belongs to.</li>
+ <li><a href="ValueSet-practitioner-telecomSystem.html">HSPC Telecom System</a> A set of values that describe the type of system the telecom value belongs to.</li>
+ <li><a href="ValueSet-practitioner-providerPractitionerType.html">HSPC ProviderPractitioner Type</a> A set of values that describe the general type of practice for a provider.</li>
+ <li><a href="ValueSet-practitioner-providerPractitionerType.html">HSPC ProviderPractitioner Type</a> A set of values that describe the general type of practice for a provider.</li>
+ <li><a href="ValueSet-practitioner-privilege.html">HSPC ProviderPractitioner Privilege</a> A set of codes that describe the level of authorization given to a provider to practice medicine at an institution.</li>
+ <li><a href="ValueSet-practitioner-privilege.html">HSPC ProviderPractitioner Privilege</a> A set of codes that describe the level of authorization given to a provider to practice medicine at an institution.</li>
+ <li><a href="ValueSet-practitioner-providerPractitionerSpecialty.html">HSPC ProviderPractitioner Specialty</a> A set of values that describe the specialty practice for a provider.</li>
+ <li><a href="ValueSet-practitioner-providerPractitionerSpecialty.html">HSPC ProviderPractitioner Specialty</a> A set of values that describe the specialty practice for a provider.</li>
+ <li><a href="ValueSet-practitioner-practiceAffiliationType.html">HSPC Practice Affiliation Type</a> A set of codes that describe how a provider is affiliated with an organization pertaining to the practice of medicine.</li>
+ <li><a href="ValueSet-practitioner-practiceAffiliationType.html">HSPC Practice Affiliation Type</a> A set of codes that describe how a provider is affiliated with an organization pertaining to the practice of medicine.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-practitioner-providerClassification.html">HSPC ProviderPractitioner Classification</a> A set of codes that describe the class of health care a practitioner provides.</li>
+ <li><a href="ValueSet-practitioner-providerClassification.html">HSPC ProviderPractitioner Classification</a> A set of codes that describe the class of health care a practitioner provides.</li>
+ <li><a href="ValueSet-provenance-hspc-attribution-type.html">Attribution Code</a> Type codes for HSPC Attribution provenance construct</li>
+ <li><a href="ValueSet-provenance-hspc-attribution-type.html">Attribution Code</a> Type codes for HSPC Attribution provenance construct</li>
+ <li><a href="ValueSet-provenance-hspc-action-method.html">Action Method</a> Type codes for HSPC Attribution action method</li>
+ <li><a href="ValueSet-provenance-hspc-action-method.html">Action Method</a> Type codes for HSPC Attribution action method</li>
+ <li><a href="ValueSet-reporting-priority.html">HSPC Reporting Priority</a> HL7 V3: ActPriority* HL7 V3: ActPriority (2.16.840.1.113883.5.7) code system values.</li>
+ <li><a href="ValueSet-reporting-priority.html">HSPC Reporting Priority</a> HL7 V3: ActPriority* HL7 V3: ActPriority (2.16.840.1.113883.5.7) code system values.</li>
+ <li><a href="ValueSet-Ordinal-Abnormal-Union.html">Ordinal Assessment or Interpretation</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-Ordinal-Abnormal-Union.html">Ordinal Assessment or Interpretation</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-DeltaFlag.html">DeltaFlag</a> SNOMED CT* SELECT SNOMED CT code system values descending from 'change values' (288533004).</li>
+ <li><a href="ValueSet-DeltaFlag.html">DeltaFlag</a> SNOMED CT* SELECT SNOMED CT code system values descending from 'change values' (288533004).</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-QuantitativeLabCodes.html">HSPC Quantitative Labs</a> Quantitative LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-QuantitativeLabCodes.html">HSPC Quantitative Labs</a> Quantitative LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-status.html">Status</a> The state of the service delivery location</li>
+ <li><a href="ValueSet-location-serviceDeliveryLocationNameUse.html">ServiceDeliveryLocation name use value set</a> The set of values that describe how usage of the service delivery location name.</li>
+ <li><a href="ValueSet-location-serviceDeliveryLocationNameUse.html">ServiceDeliveryLocation name use value set</a> The set of values that describe how usage of the service delivery location name.</li>
+ <li><a href="ValueSet-location-serviceDeliveryLocation-key-value-set.html">ServiceDeliveryLocation key value set</a> This value set defines the set of codes used to identify the service delivery location.</li>
+ <li><a href="ValueSet-location-serviceDeliveryLocation-key-value-set.html">ServiceDeliveryLocation key value set</a> This value set defines the set of codes used to identify the service delivery location.</li>
+ <li><a href="ValueSet-location-addressType.html">Address Type value set</a> A set of value that describe different kinds of addresses.</li>
+ <li><a href="ValueSet-location-addressType.html">Address Type value set</a> A set of value that describe different kinds of addresses.</li>
+ <li><a href="ValueSet-ageUOM.html">HSPC Age Units of Measure Value Set</a> The list of codes used as units of measure for an individual's age.</li>
+ <li><a href="ValueSet-ageUOM.html">HSPC Age Units of Measure Value Set</a> The list of codes used as units of measure for an individual's age.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observation-heightPrecond.html">HSPC Height Meas Associated Precondition</a> The conditions during which an individual's height was measured.</li>
+ <li><a href="ValueSet-observation-heightPrecond.html">HSPC Height Meas Associated Precondition</a> The conditions during which an individual's height was measured.</li>
+ <li><a href="ValueSet-observation-heightMeasMethodDevice.html">HSPC Height Meas Method Device</a> The set of codes that describe the methods or devices used to measure an individual's height.</li>
+ <li><a href="ValueSet-observation-heightMeasMethodDevice.html">HSPC Height Meas Method Device</a> The set of codes that describe the methods or devices used to measure an individual's height.</li>
+ <li><a href="ValueSet-heightunits.html">HSPC Height Units of Measure Value Set</a> The list of codes that describe the length units used for height.</li>
+ <li><a href="ValueSet-heightunits.html">HSPC Height Units of Measure Value Set</a> The list of codes that describe the length units used for height.</li>
+ <li><a href="ValueSet-observation-bodyPosition.html">HSPC Body Position</a> SNOMED CT code system values descending from the following:'body position finding' 9851009</li>
+ <li><a href="ValueSet-observation-bodyPosition.html">HSPC Body Position</a> SNOMED CT code system values descending from the following:'body position finding' 9851009</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-CodedLabCodes.html">HSPC Coded Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-CodedLabCodes.html">HSPC Coded Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-deltaFlag-codedNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-codedNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-CodedNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-CodedNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-LabNullFlavor.html">LabNullFlavor</a> A list of reasons why a lab result may have no value</li>
+ <li><a href="ValueSet-LabNullFlavor.html">LabNullFlavor</a> A list of reasons why a lab result may have no value</li>
+ <li><a href="ValueSet-IVLPQLabCodes.html">HSPC Interval Physical Quantity Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-IVLPQLabCodes.html">HSPC Interval Physical Quantity Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-NarrativeLabCodes.html">HSPC Narrative Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-NarrativeLabCodes.html">HSPC Narrative Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-RealLabCodes.html">HSPC Real Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-RealLabCodes.html">HSPC Real Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-TiterLabCodes.html">HSPC Titer Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-TiterLabCodes.html">HSPC Titer Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-observation-findings.html">HSPC SNOMED Findings Value Set Definition</a> SELECT SNOMED CT code system values descending from 'change values' (288533004).</li>
+ <li><a href="ValueSet-observation-findings.html">HSPC SNOMED Findings Value Set Definition</a> SELECT SNOMED CT code system values descending from 'change values' (288533004).</li>
+ <li><a href="ValueSet-OrdinalLabCodes.html">HSPC Ordinal Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-OrdinalLabCodes.html">HSPC Ordinal Labs</a> Ordinal LOINC codes used in HSPC</li>
+ <li><a href="ValueSet-observation-weightPrecond.html">HSPC Body Weight Associated Precondition</a> SNOMED CT code system values descending from the following:'body position finding' 9851009</li>
+ <li><a href="ValueSet-observation-weightPrecond.html">HSPC Body Weight Associated Precondition</a> SNOMED CT code system values descending from the following:'body position finding' 9851009</li>
+ <li><a href="ValueSet-weightmassunits.html">HSPC Weight Units of Measure Value Set</a> The list of codes that describe the mass units used for weight.</li>
+ <li><a href="ValueSet-weightmassunits.html">HSPC Weight Units of Measure Value Set</a> The list of codes that describe the mass units used for weight.</li>
+ <li><a href="ValueSet-observation-weightMeasMethodDevice.html">HSPC Weight Meas Method Device</a> The set of codes that describe the methods or devices used to measure an individual's weight.</li>
+ <li><a href="ValueSet-observation-weightMeasMethodDevice.html">HSPC Weight Meas Method Device</a> The set of codes that describe the methods or devices used to measure an individual's weight.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-heartratemeasmethoddevice.html">HSPC Heart Rate Measurement Method Device</a> SNOMED CT code system values.</li>
+ <li><a href="ValueSet-heartratemeasmethoddevice.html">HSPC Heart Rate Measurement Method Device</a> SNOMED CT code system values.</li>
+ <li><a href="ValueSet-heartratemeasbodylocationprecoord.html">HSPC Heart Rate Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-heartratemeasbodylocationprecoord.html">HSPC Heart Rate Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-heartratebodyposition.html">HSPC Heart Rate Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-heartratebodyposition.html">HSPC Heart Rate Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-organization-organizationnameuse.html">HSPC Organization Name Use</a> The set of codes that describe use of an organization's name.</li>
+ <li><a href="ValueSet-organization-organizationnameuse.html">HSPC Organization Name Use</a> The set of codes that describe use of an organization's name.</li>
+ <li><a href="ValueSet-organization-language.html">BCP-47 IETF Language tag</a> The codes and descriptions that make up the IETF BCP-47 language tags.</li>
+ <li><a href="ValueSet-organization-language.html">BCP-47 IETF Language tag</a> The codes and descriptions that make up the IETF BCP-47 language tags.</li>
+ <li><a href="ValueSet-organization-organizationtype.html">HSPC Organization Type</a> The set of codes that describe a kind of organization.</li>
+ <li><a href="ValueSet-organization-organizationtype.html">HSPC Organization Type</a> The set of codes that describe a kind of organization.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-headcircumferenceUOM.html">HSPC Head Circumference Units of Measure Value Set</a> The list of codes used for the units of measure for head circumference.</li>
+ <li><a href="ValueSet-headcircumferenceUOM.html">HSPC Head Circumference Units of Measure Value Set</a> The list of codes used for the units of measure for head circumference.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-fetalestimationmethod.html">HSPC Fetal Estimation Method value set</a> Select SNOMED CT code system values and selected local codes from Intermountain Healthcare.</li>
+ <li><a href="ValueSet-fetalestimationmethod.html">HSPC Fetal Estimation Method value set</a> Select SNOMED CT code system values and selected local codes from Intermountain Healthcare.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-boneageUOM.html">HSPC Bone Age Units of Measure Value Set</a> The list of codes used as units of measure for bone age.</li>
+ <li><a href="ValueSet-boneageUOM.html">HSPC Bone Age Units of Measure Value Set</a> The list of codes used as units of measure for bone age.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-respratemethoddevice.html">HSPC Respiratory Rate Measurement Method/Device value set</a> Select SNOMED CT code system values.</li>
+ <li><a href="ValueSet-respratemethoddevice.html">HSPC Respiratory Rate Measurement Method/Device value set</a> Select SNOMED CT code system values.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-respiratoryUOM.html">HSPC Respiratory Rate Units of Measure Value Set</a> The list of codes that describe the units of measure used for respiratory rate.</li>
+ <li><a href="ValueSet-respiratoryUOM.html">HSPC Respiratory Rate Units of Measure Value Set</a> The list of codes that describe the units of measure used for respiratory rate.</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-gestationalAgeUOM.html">HSPC Age Units of Measure Value Set</a> The list of codes used as units of measure for an individual's age.</li>
+ <li><a href="ValueSet-gestationalAgeUOM.html">HSPC Age Units of Measure Value Set</a> The list of codes used as units of measure for an individual's age.</li>
+ <li><a href="ValueSet-gestagemeasmethdev.html">HSPC Gestational Age at Birth Meas Method Device</a> SELECT SNOMED CT code system values and LOINC system code values.</li>
+ <li><a href="ValueSet-gestagemeasmethdev.html">HSPC Gestational Age at Birth Meas Method Device</a> SELECT SNOMED CT code system values and LOINC system code values.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-bodytempbodylocation.html">HSPC Body Temperature Measurement Body Location</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bodytempbodylocation.html">HSPC Body Temperature Measurement Body Location</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-temperatureUOM.html">HSPC Temperature Units of Measure Value Set</a> The codes that describe the units of measure used for temperature.</li>
+ <li><a href="ValueSet-temperatureUOM.html">HSPC Temperature Units of Measure Value Set</a> The codes that describe the units of measure used for temperature.</li>
+ <li><a href="ValueSet-bodytempmethoddevice.html">HSPC Body Temperature Measurement Method/Device</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bodytempmethoddevice.html">HSPC Body Temperature Measurement Method/Device</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-bpmeasmethoddevice.html">HSPC Blood Pressure Measurement Method/Device Value Set</a> A set of codes that describe the method or device used to measure a systolic blood pressure.</li>
+ <li><a href="ValueSet-bpmeasmethoddevice.html">HSPC Blood Pressure Measurement Method/Device Value Set</a> A set of codes that describe the method or device used to measure a systolic blood pressure.</li>
+ <li><a href="ValueSet-bpmeasbodylocationprecoord.html">HSPC Systolic Blood Pressure Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpmeasbodylocationprecoord.html">HSPC Systolic Blood Pressure Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpbodyposition.html">HSPC Systolic Blood Pressure Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpbodyposition.html">HSPC Systolic Blood Pressure Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-bpmeasmethoddevice.html">HSPC Blood Pressure Measurement Method/Device Value Set</a> A set of codes that describe the method or device used to measure a systolic blood pressure.</li>
+ <li><a href="ValueSet-bpmeasmethoddevice.html">HSPC Blood Pressure Measurement Method/Device Value Set</a> A set of codes that describe the method or device used to measure a systolic blood pressure.</li>
+ <li><a href="ValueSet-bpmeasbodylocationprecoord.html">HSPC Systolic Blood Pressure Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpmeasbodylocationprecoord.html">HSPC Systolic Blood Pressure Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpbodyposition.html">HSPC Systolic Blood Pressure Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpbodyposition.html">HSPC Systolic Blood Pressure Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-vitalsignassociatedprecond.html">HSPC Vital Sign Associated Precondition</a> SELECT SNOMED CT code system values descending from 'Qualifier value' (362981000).</li>
+ <li><a href="ValueSet-bpmeasmethoddevice.html">HSPC Blood Pressure Measurement Method/Device Value Set</a> A set of codes that describe the method or device used to measure a systolic blood pressure.</li>
+ <li><a href="ValueSet-bpmeasmethoddevice.html">HSPC Blood Pressure Measurement Method/Device Value Set</a> A set of codes that describe the method or device used to measure a systolic blood pressure.</li>
+ <li><a href="ValueSet-bpmeasbodylocationprecoord.html">HSPC Systolic Blood Pressure Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpmeasbodylocationprecoord.html">HSPC Systolic Blood Pressure Measurement Body Location Precoodinated</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpbodyposition.html">HSPC Systolic Blood Pressure Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-bpbodyposition.html">HSPC Systolic Blood Pressure Measurement Body Position</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-logicalassert.html">HSPC Logical Assertion Value Set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-logicalassert.html">HSPC Logical Assertion Value Set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-likelihood.html">HSPC Likelihood Value Set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-likelihood.html">HSPC Likelihood Value Set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-doseForm.html">HSPC Dose Form Value Set</a> SELECT RcNorm code system values.</li>
+ <li><a href="ValueSet-doseForm.html">HSPC Dose Form Value Set</a> SELECT RcNorm code system values.</li>
+ <li><a href="ValueSet-allergyIntoleranceStatus.html">HSPC Allergy/Intolerance Status Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-allergyIntoleranceStatus.html">HSPC Allergy/Intolerance Status Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-severity.html">HSPC Severities Value Set Definition</a> SELECT SNOMED CT code system values descending from 'Severities (qualifier value)' (272141005).</li>
+ <li><a href="ValueSet-severity.html">HSPC Severities Value Set Definition</a> SELECT SNOMED CT code system values descending from 'Severities (qualifier value)' (272141005).</li>
+ <li><a href="ValueSet-substance.html">HSPC Substance Value Set</a> SELECT SNOMED CT and RcNorm code system values.</li>
+ <li><a href="ValueSet-substance.html">HSPC Substance Value Set</a> SELECT SNOMED CT and RcNorm code system values.</li>
+ <li><a href="ValueSet-allergyIntoleranceType.html">HSPC Allergy Intolerance Type Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-allergyIntoleranceType.html">HSPC Allergy Intolerance Type Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-clinicalFinding.html">HSPC SNOMED Clinical Findings Value Set Definition</a> SELECT SNOMED CT code system values descending from 'Clinical finding' (404684003).</li>
+ <li><a href="ValueSet-clinicalFinding.html">HSPC SNOMED Clinical Findings Value Set Definition</a> SELECT SNOMED CT code system values descending from 'Clinical finding' (404684003).</li>
+ <li><a href="ValueSet-substanceCategory.html">HSPC Substance Category Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-substanceCategory.html">HSPC Substance Category Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-associatedprecondition.html">HSPC Associated Precondition Value Set Definition</a> SELECT SNOMED CT code system values representing associated preconditions.</li>
+ <li><a href="ValueSet-associatedprecondition.html">HSPC Associated Precondition Value Set Definition</a> SELECT SNOMED CT code system values representing associated preconditions.</li>
+ <li><a href="ValueSet-observation-bodysite-precoordinated.html">HSPC Body Site Precoordinated Value Set Definition</a> SELECT SNOMED CT code system values representing precoordinated body sites.</li>
+ <li><a href="ValueSet-observation-bodysite-precoordinated.html">HSPC Body Site Precoordinated Value Set Definition</a> SELECT SNOMED CT code system values representing precoordinated body sites.</li>
+ <li><a href="ValueSet-clinicalAssertStatus.html">HSPC Clinical Assert Status Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-clinicalAssertStatus.html">HSPC Clinical Assert Status Value Set</a> SELECT SNOMED CT and Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-likelihood.html">HSPC Likelihood Value Set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-likelihood.html">HSPC Likelihood Value Set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-clinicalFinding.html">HSPC SNOMED Clinical Findings Value Set Definition</a> SELECT SNOMED CT code system values descending from 'Clinical finding' (404684003).</li>
+ <li><a href="ValueSet-clinicalFinding.html">HSPC SNOMED Clinical Findings Value Set Definition</a> SELECT SNOMED CT code system values descending from 'Clinical finding' (404684003).</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-alleviatingfactors.html">HSPC Alleviating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-alleviatingfactors.html">HSPC Alleviating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-periodicity.html">HSPC Periodicity Value Set</a> SELECT SNOMED CT code system values descending from 'Frequencies' (272123002).</li>
+ <li><a href="ValueSet-periodicity.html">HSPC Periodicity Value Set</a> SELECT SNOMED CT code system values descending from 'Frequencies' (272123002).</li>
+ <li><a href="ValueSet-course.html">HSPC Course Value Set</a> SELECT SNOMED CT code system values descending from 'Change values' (288533004) and 'Courses' (288524001).</li>
+ <li><a href="ValueSet-course.html">HSPC Course Value Set</a> SELECT SNOMED CT code system values descending from 'Change values' (288533004) and 'Courses' (288524001).</li>
+ <li><a href="ValueSet-exacerbatingfactors.html">HSPC Exacerbating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-exacerbatingfactors.html">HSPC Exacerbating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-alleviatingfactors.html">HSPC Alleviating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-alleviatingfactors.html">HSPC Alleviating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-bodylaterality.html">HSPC Body Laterality Value Set</a> SELECT SNOMED CT code system values descending from 'Side' (182353008).</li>
+ <li><a href="ValueSet-bodylaterality.html">HSPC Body Laterality Value Set</a> SELECT SNOMED CT code system values descending from 'Side' (182353008).</li>
+ <li><a href="ValueSet-painseverity.html">HSPC Pain Severity Value Set</a> SELECT SNOMED CT code system values descending from 'Severities' (272141005).</li>
+ <li><a href="ValueSet-painseverity.html">HSPC Pain Severity Value Set</a> SELECT SNOMED CT code system values descending from 'Severities' (272141005).</li>
+ <li><a href="ValueSet-periodicity.html">HSPC Periodicity Value Set</a> SELECT SNOMED CT code system values descending from 'Frequencies' (272123002).</li>
+ <li><a href="ValueSet-periodicity.html">HSPC Periodicity Value Set</a> SELECT SNOMED CT code system values descending from 'Frequencies' (272123002).</li>
+ <li><a href="ValueSet-course.html">HSPC Course Value Set</a> SELECT SNOMED CT code system values descending from 'Change values' (288533004) and 'Courses' (288524001).</li>
+ <li><a href="ValueSet-course.html">HSPC Course Value Set</a> SELECT SNOMED CT code system values descending from 'Change values' (288533004) and 'Courses' (288524001).</li>
+ <li><a href="ValueSet-exacerbatingfactors.html">HSPC Exacerbating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-exacerbatingfactors.html">HSPC Exacerbating Factors Value Set</a> SELECT SNOMED CT code system values descending from 'Activity' (257733005).</li>
+ <li><a href="ValueSet-associatedSignAndSymptom.html">HSPC Associated Sign and Symptom value set</a> The set of concepts that describe any signs or symptoms that may be correlated to the observed condition.</li>
+ <li><a href="ValueSet-associatedSignAndSymptom.html">HSPC Associated Sign and Symptom value set</a> The set of concepts that describe any signs or symptoms that may be correlated to the observed condition.</li>
+ <li><a href="ValueSet-bodystructure.html">HSPC SNOMED Body Structures</a> SELECT SNOMED CT code system values descending from 'Body structure' (123037004).</li>
+ <li><a href="ValueSet-bodystructure.html">HSPC SNOMED Body Structures</a> SELECT SNOMED CT code system values descending from 'Body structure' (123037004).</li>
+ <li><a href="ValueSet-LOINCOrderables.html">HSPC LOINC Orderable Codes</a> LOINC codes that are marked as 'orderable' or 'both'.</li>
+ <li><a href="ValueSet-LOINCOrderables.html">HSPC LOINC Orderable Codes</a> LOINC codes that are marked as 'orderable' or 'both'.</li>
+ <li><a href="ValueSet-radlex.html">RadLex</a> All codes contained in the RadLex code system.</li>
+ <li><a href="ValueSet-radlex.html">RadLex</a> All codes contained in the RadLex code system.</li>
+ <li><a href="ValueSet-amsalleviatingfactors.html">HSPC Altered Mental Status Alleviating Factors Value Set</a> SELECT SNOMED CT code system values that describe things that help mitigate altered mental status.</li>
+ <li><a href="ValueSet-amsalleviatingfactors.html">HSPC Altered Mental Status Alleviating Factors Value Set</a> SELECT SNOMED CT code system values that describe things that help mitigate altered mental status.</li>
+ <li><a href="ValueSet-amsexacerbatingfactors.html">HSPC Altered Mental Status Exacerbating Factors Value Set</a> SELECT SNOMED CT code system values describing things that worsen altered mental status</li>
+ <li><a href="ValueSet-amsexacerbatingfactors.html">HSPC Altered Mental Status Exacerbating Factors Value Set</a> SELECT SNOMED CT code system values describing things that worsen altered mental status</li>
+ <li><a href="ValueSet-amsperiodicity.html">HSPC Altered Mental Status Periodicity Value Set</a> SELECT SNOMED CT code system values describing how frequent an altered mental status occurs.</li>
+ <li><a href="ValueSet-amsperiodicity.html">HSPC Altered Mental Status Periodicity Value Set</a> SELECT SNOMED CT code system values describing how frequent an altered mental status occurs.</li>
+ <li><a href="ValueSet-course.html">HSPC Course Value Set</a> SELECT SNOMED CT code system values descending from 'Change values' (288533004) and 'Courses' (288524001).</li>
+ <li><a href="ValueSet-course.html">HSPC Course Value Set</a> SELECT SNOMED CT code system values descending from 'Change values' (288533004) and 'Courses' (288524001).</li>
+ <li><a href="ValueSet-associatedSignAndSymptom.html">HSPC Associated Sign and Symptom value set</a> The set of concepts that describe any signs or symptoms that may be correlated to the observed condition.</li>
+ <li><a href="ValueSet-associatedSignAndSymptom.html">HSPC Associated Sign and Symptom value set</a> The set of concepts that describe any signs or symptoms that may be correlated to the observed condition.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-observationstatusbasic.html">ObservationStatusBasic</a> A set of codes that describe the state of the observation</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-specialArrangement.html">HSPC Special Arrangement value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalStatus.html">HSPC Patient Arrival Status</a> The codes that describe whether or not the patient has arrived at the specified location for the encounter.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-arrivalTransportMode.html">HSPC Arrival Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-dietType.html">HSPC Diet Type value set.</a> Select HL7 ActCode codes.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-hspc-viplevel.html">HSPC VIP Level</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-communicationMode.html">HSPC Communication Mode</a> A set of codes that describe the method by which an individual communicates.  These values are taken from the HL7 v3 LanguageAbilityMode code system.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-departureTransportMode.html">HSPC Departure Transport Mode value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-encounterPriority.html">HSPC SNOMED Priorities</a> SELECT SNOMED CT code system values descending from 'Priorities' (272125009).</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-reasonCancelled.html">HSPC Reason Cancelled value set.</a> Select HL7 Act Reason and SNOMED codes.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-transportPriority.html">HSPC Transport Priority value set</a> A set of codes that describe the kind of documentation used to validate a date of birth.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-admissionSource.html">HSPC Admission Source value set</a> Select Intermountain Healthcare HDD code system values.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-encounterReason.html">HSPC Encounter Reason</a> HL7 V3: ActReason* HL7 V3: ActREason (2.16.840.1.113883.5.8) code system values,  and CKS ECIDS.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-locationCondition.html">HSPC Service Delivery Location Condition value set</a> The list of codes that describe how the data came into being.</li>
+ <li><a href="ValueSet-radiologyAssociatedPrecondition.html">HSPC Radiology Associated Precondition value set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-radiologyAssociatedPrecondition.html">HSPC Radiology Associated Precondition value set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-reporting-priority.html">HSPC Reporting Priority</a> HL7 V3: ActPriority* HL7 V3: ActPriority (2.16.840.1.113883.5.7) code system values.</li>
+ <li><a href="ValueSet-reporting-priority.html">HSPC Reporting Priority</a> HL7 V3: ActPriority* HL7 V3: ActPriority (2.16.840.1.113883.5.7) code system values.</li>
+ <li><a href="ValueSet-teststatus.html">HSPC Test Status</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-teststatus.html">HSPC Test Status</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-radiologytransportmode.html">HSPC Radiology Transport Mode</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-radiologytransportmode.html">HSPC Radiology Transport Mode</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-airwayInterfaceType.html">HSPC Aiway Interface Type value set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-airwayInterfaceType.html">HSPC Aiway Interface Type value set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-sensorDescription.html">HSPC Sensor Description value set</a> Select Intermountain Healthcare Sensor Description code system codes.</li>
+ <li><a href="ValueSet-sensorDescription.html">HSPC Sensor Description value set</a> Select Intermountain Healthcare Sensor Description code system codes.</li>
+ <li><a href="ValueSet-airwayInterfaceType.html">HSPC Aiway Interface Type value set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-airwayInterfaceType.html">HSPC Aiway Interface Type value set</a> SELECT SNOMED CT code system values.</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-oxygensaturationbodylocation.html">HSPC Oxygen Saturation Body Location value set.</a> SELECT SNOMED CT code system values descending from 'Body structure' (123037004).</li>
+ <li><a href="ValueSet-oxygensaturationbodylocation.html">HSPC Oxygen Saturation Body Location value set.</a> SELECT SNOMED CT code system values descending from 'Body structure' (123037004).</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-focalSubject.html">HSPC FocalSubject</a> The set of codes that describe the subject of an obsevation when not the patient of record.</li>
+ <li><a href="ValueSet-observation-heightPrecond.html">HSPC Height Meas Associated Precondition</a> The conditions during which an individual's height was measured.</li>
+ <li><a href="ValueSet-observation-heightPrecond.html">HSPC Height Meas Associated Precondition</a> The conditions during which an individual's height was measured.</li>
+ <li><a href="ValueSet-observation-heightMeasMethodDevice.html">HSPC Height Meas Method Device</a> The set of codes that describe the methods or devices used to measure an individual's height.</li>
+ <li><a href="ValueSet-observation-heightMeasMethodDevice.html">HSPC Height Meas Method Device</a> The set of codes that describe the methods or devices used to measure an individual's height.</li>
+ <li><a href="ValueSet-heightunits.html">HSPC Height Units of Measure Value Set</a> The list of codes that describe the length units used for height.</li>
+ <li><a href="ValueSet-heightunits.html">HSPC Height Units of Measure Value Set</a> The list of codes that describe the length units used for height.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-observation-dataOriginationMode.html">HSPC Data Origination Mode</a> The description of how the data came into being.</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-deltaFlag-numericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+ <li><a href="ValueSet-abnInt-NumericNom.html">Abnormal Interpretation Numeric Nom</a> HL7 V3:ObservationInterpretation OID: 2.16.840.1.113883.5.83 + SNOMED CT SNOMED CT concepts from the Degree findings (qualifier value)272520006, Presence findings (qualifier value)260411009, Absence findings (qualifier value)272519000</li>
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

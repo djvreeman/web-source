@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceCategory",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/substanceCategory",
+  "version": "0.01",
+  "name": "HSPC Substance Category Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-08-05",
+  "description": "SELECT SNOMED CT and Intermountain Healthcare HDD code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "406465008",
+            "display": "food allergen (substance)"
+          },
+          {
+            "code": "406463001",
+            "display": "drug allergen (substance)"
+          }
+        ]
+      },
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/substancecategory"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "fetalestimationmethod",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/fetalestimationmethod",
+  "version": "0.01",
+  "name": "HSPC Fetal Estimation Method value set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-06-15",
+  "description": "Select SNOMED CT code system values and selected local codes from Intermountain Healthcare.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "268445003",
+            "display": "Ultrasound scan - obstetric"
+          },
+          {
+            "code": "248986005",
+            "display": "Estimated date of conception"
+          }
+        ]
+      },
+      {
+        "system": "http://fhir.org/guides/hspc/CodeSystem/fetalestimationmethod"
+      }
+    ]
+  }
+}

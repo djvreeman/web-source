@@ -1,0 +1,70 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "addressUse",
+  "url": "http://fhir.org/guides/hspc/CodeSystem/addressUse",
+  "name": "HSPCPractitionerAddressUse",
+  "status": "draft",
+  "experimental": false,
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other"
+        },
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "description": "A set of codes that describe the manner in which an addressed is used.",
+  "caseSensitive": true,
+  "valueSet": "http://fhir.org/guides/hspc/ValueSet/addressUse",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "BAD",
+      "display": "Bad address"
+    },
+    {
+      "code": "PHYS",
+      "display": "Physical visit address"
+    },
+    {
+      "code": "PST",
+      "display": "Postal address"
+    },
+    {
+      "code": "HP",
+      "display": "Primary home"
+    },
+    {
+      "code": "PUB",
+      "display": "Public"
+    },
+    {
+      "code": "TMP",
+      "display": "Temporary address"
+    },
+    {
+      "code": "HV",
+      "display": "Vacation home"
+    },
+    {
+      "code": "WP",
+      "display": "Work place"
+    },
+    {
+      "code": "H",
+      "display": "Home address"
+    },
+    {
+      "code": "DIR",
+      "display": "Direct address"
+    },
+    {
+      "code": "CONF",
+      "display": "Conficential address"
+    }
+  ]
+}

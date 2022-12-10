@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "id": "practitioner-privilege",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/practitioner-privilege",
+  "name": "HSPC ProviderPractitioner Privilege",
+  "status": "draft",
+  "publisher": "HSPC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://healthcaresoa.org"
+        }
+      ]
+    }
+  ],
+  "description": "A set of codes that describe the level of authorization given to a provider to practice medicine at an institution.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/practitioner-hspc-privilege"
+      }
+    ]
+  }
+}

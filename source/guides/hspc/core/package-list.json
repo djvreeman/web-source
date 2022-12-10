@@ -1,0 +1,26 @@
+{
+  "canonical": "http://fhir.org/guides/hspc/core",
+  "introduction": "Base HSPC guide (introduction todo)",
+  "list": [
+    {
+      "current": true,
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/hspc/core",
+      "status": "ci-build",
+      "version": "current"
+    },
+    {
+      "date": "2016-12-23",
+      "desc": "Draft",
+      "fhirversion": "1.9.0",
+      "path": "http://fhir.org/guides/hspc/core/0.1.0",
+      "sequence": "Daft For Comment",
+      "status": "draft",
+      "version": "0.1.0",
+      "current": true
+    }
+  ],
+  "package-id": "fhir.hspc.core",
+  "title": "HSPC FHIR Implementation Guide",
+  "category": "EHR Access"
+}

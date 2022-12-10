@@ -1,0 +1,2685 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<??ValueSet/QuantitativeLabCodes> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "QuantitativeLabCodes"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition";
+       fhir:index 0
+     ]
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/hspc/ValueSet/QuantitativeLabCodes"];
+  fhir:ValueSet.name [ fhir:value "HSPC Quantitative Labs"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.publisher [ fhir:value "HSPC"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ValueSet.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "other" ];
+       fhir:ContactPoint.value [ fhir:value "http://healthcaresoa.org" ]
+     ]
+  ];
+  fhir:ValueSet.date [ fhir:value "2015-02-20T13:44:49+11:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "Quantitative LOINC codes used in HSPC"];
+  fhir:ValueSet.copyright [ fhir:value "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7155-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Boxelder IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3298-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acetaminophen [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5568-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acetone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11034-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acetylcholine receptor binding Ab [Moles/volume] in Serum" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30192-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Acetylcholine receptor modulation Ab/Acetylcholine Ab.total in Serum" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20420-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prostatic acid phosphatase [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34661-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Actin IgG Ab [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1742-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20636-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alanine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1747-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Albumin [Mass/volume] in Body fluid" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1746-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Albumin [Mass/volume] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2862-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Albumin [Mass/volume] in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1751-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Albumin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14956-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Microalbumin [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13992-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Albumin/Protein.total in Urine by Electrophoresis" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1761-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aldolase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1763-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aldosterone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1777-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alkaline phosphatase.bone [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6768-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1779-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alkaline phosphatase.liver [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1825-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 1 antitrypsin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2865-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 1 globulin [Mass/volume] in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13990-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 1 globulin/Protein.total in Urine by Electrophoresis" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2868-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 2 globulin [Mass/volume] in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13993-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha 2 globulin/Protein.total in Urine by Electrophoresis" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1834-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20450-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alpha-1-Fetoprotein [Multiple of the median] in Serum or Plasma" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6020-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alternaria alternata IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6085-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Common Ragweed IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "16362-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ammonia [Moles/volume] in Plasma" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1795-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amylase [Enzymatic activity/volume] in Body fluid" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1798-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amylase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33915-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anabasine [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6718-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cashew Nut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1848-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Androstanolone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1854-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Androstenedione [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2742-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Angiotensin converting enzyme [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10466-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anion gap 3 in Serum or Plasma" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27811-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Antithrombin actual/normal in Platelet poor plasma by Chromogenic method" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1869-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Apolipoprotein A-I [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1871-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Apolipoprotein B-100 [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6206-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Peanut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20637-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arginine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5583-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arsenic [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6286-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Wormwood IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 45;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6183-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mugwort IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 46;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1903-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ascorbate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 47;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1920-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 48;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6025-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus fumigatus IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 49;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5053-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aspergillus sp Ab [Titer] in Serum by Complement fixation" ]
+       ], [
+         fhir:index 50;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6239-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lenscale IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 51;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6029-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aureobasidium pullulans IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 52;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6190-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oat IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 53;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9426-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barbiturates [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 54;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28637-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Base deficit in Venous cord blood" ]
+       ], [
+         fhir:index 55;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30318-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Base deficit in Blood" ]
+       ], [
+         fhir:index 56;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1925-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Base excess in Arterial blood by calculation" ]
+       ], [
+         fhir:index 57;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1926-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Base excess in Capillary blood by calculation" ]
+       ], [
+         fhir:index 58;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11555-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Base excess in Blood by calculation" ]
+       ], [
+         fhir:index 59;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1927-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Base excess in Venous blood by calculation" ]
+       ], [
+         fhir:index 60;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "706-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basophils/100 leukocytes in Blood by Automated count" ]
+       ], [
+         fhir:index 61;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "707-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basophils/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 62;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12179-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basophils/100 leukocytes in Body fluid by Manual count" ]
+       ], [
+         fhir:index 63;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13519-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basophils/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 64;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "704-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basophils [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 65;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6039-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beef IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 66;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9428-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Benzodiazepines [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 67;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6050-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Brazil Nut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 68;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44447-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta 2 glycoprotein 1 IgA Ab [Units/volume] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 69;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44448-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta 2 glycoprotein 1 IgG Ab [Units/volume] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 70;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44449-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta 2 glycoprotein 1 IgM Ab [Units/volume] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 71;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2871-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta globulin [Mass/volume] in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 72;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13994-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta globulin/Protein.total in Urine by Electrophoresis" ]
+       ], [
+         fhir:index 73;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6873-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta hydroxybutyrate [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 74;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1952-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Beta-2-Microglobulin [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 75;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15283-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Silver Birch IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 76;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1960-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicarbonate [Moles/volume] in Arterial blood" ]
+       ], [
+         fhir:index 77;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28640-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicarbonate [Moles/volume] in Arterial cord blood" ]
+       ], [
+         fhir:index 78;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28641-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicarbonate [Moles/volume] in Venous cord blood" ]
+       ], [
+         fhir:index 79;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1961-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicarbonate [Moles/volume] in Capillary blood" ]
+       ], [
+         fhir:index 80;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1959-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicarbonate [Moles/volume] in Blood" ]
+       ], [
+         fhir:index 81;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14627-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bicarbonate [Moles/volume] in Venous blood" ]
+       ], [
+         fhir:index 82;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1975-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bilirubin.total [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 83;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1971-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bilirubin.indirect [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 84;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5057-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Blastomyces dermatitidis Ab [Titer] in Serum by Complement fixation" ]
+       ], [
+         fhir:index 85;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "709-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Blasts/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 86;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6078-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cockroach IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 87;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19839-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Breath rate spontaneous --on ventilator" ]
+       ], [
+         fhir:index 88;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3422-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Caffeine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 89;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49543-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcidiol+Calciferol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 90;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1989-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcidiol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 91;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2236-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calciferol (Vit D2) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 92;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1992-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcitonin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 93;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1649-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcitriol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 94;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1994-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium.ionized [Moles/volume] in Blood" ]
+       ], [
+         fhir:index 95;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1995-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium.ionized [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 96;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17861-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 97;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17862-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 98;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6874-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calcium [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 99;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10334-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cancer Ag 125 [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 100;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6875-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cancer Ag 15-3 [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 101;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "24108-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cancer Ag 19-9 [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 102;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17842-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cancer Ag 27-29 [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 103;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6092-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Crab IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 104;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6059-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Candida albicans IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 105;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3432-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbamazepine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 106;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2019-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide [Partial pressure] in Arterial blood" ]
+       ], [
+         fhir:index 107;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28644-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide [Partial pressure] in Arterial cord blood" ]
+       ], [
+         fhir:index 108;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28645-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide [Partial pressure] in Venous cord blood" ]
+       ], [
+         fhir:index 109;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33022-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide [Partial pressure] in Capillary blood by Transcutaneous CO2 monitor" ]
+       ], [
+         fhir:index 110;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2021-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide [Partial pressure] in Venous blood" ]
+       ], [
+         fhir:index 111;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20565-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide, total [Moles/volume] in Blood" ]
+       ], [
+         fhir:index 112;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2028-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carbon dioxide, total [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 113;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2030-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carboxyhemoglobin/Hemoglobin.total in Arterial blood" ]
+       ], [
+         fhir:index 114;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20563-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carboxyhemoglobin/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 115;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2032-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carboxyhemoglobin/Hemoglobin.total in Venous blood" ]
+       ], [
+         fhir:index 116;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2039-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 117;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3181-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiolipin IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 118;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3182-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiolipin IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 119;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14288-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carnitine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 120;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19074-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carnitine esters [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 121;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14286-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carnitine free (C0) [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 122;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6208-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pecan or Hickory Nut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 123;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6209-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pecan or Hickory Tree IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 124;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6062-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Casein IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 125;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6833-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cat dander IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 126;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8117-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD19 cells/100 cells in Blood" ]
+       ], [
+         fhir:index 127;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20593-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD19 cells/100 cells in Unspecified specimen" ]
+       ], [
+         fhir:index 128;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8116-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD19 cells [#/volume] in Blood" ]
+       ], [
+         fhir:index 129;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8118-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD2 cells/100 cells in Blood" ]
+       ], [
+         fhir:index 130;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9557-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD2 cells [#/volume] in Blood" ]
+       ], [
+         fhir:index 131;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8124-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD3 cells/100 cells in Blood" ]
+       ], [
+         fhir:index 132;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14135-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD3+CD8+ (T8 suppressor cells) cells [#/volume] in Blood" ]
+       ], [
+         fhir:index 133;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8112-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD3-CD16+CD56+ (Natural killer) cells/100 cells in Blood" ]
+       ], [
+         fhir:index 134;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8122-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD3 cells [#/volume] in Blood" ]
+       ], [
+         fhir:index 135;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8130-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "CD45 (Lymphs) cells/100 cells in Blood" ]
+       ], [
+         fhir:index 136;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11282-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cells Counted Total [#] in Blood" ]
+       ], [
+         fhir:index 137;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38256-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cells Counted Total [#] in Body fluid" ]
+       ], [
+         fhir:index 138;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19075-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cells Counted Total [#] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 139;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2064-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ceruloplasmin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 140;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6156-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Goosefoot IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 141;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2075-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chloride [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 142;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2077-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chloride [Moles/volume] in Sweat" ]
+       ], [
+         fhir:index 143;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2078-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chloride [Moles/volume] in Urine" ]
+       ], [
+         fhir:index 144;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6073-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chocolate IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 145;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2085-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol in HDL [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 146;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13457-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation" ]
+       ], [
+         fhir:index 147;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18262-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay" ]
+       ], [
+         fhir:index 148;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2089-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol in LDL [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 149;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13458-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol in VLDL [Mass/volume] in Serum or Plasma by calculation" ]
+       ], [
+         fhir:index 150;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2093-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 151;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "43396-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol non HDL [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 152;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9830-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cholesterol.total/Cholesterol in HDL [Mass Ratio] in Serum or Plasma" ]
+       ], [
+         fhir:index 153;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19080-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Choriogonadotropin [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 154;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21198-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 155;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20465-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Choriogonadotropin [Multiple of the median] in Serum or Plasma" ]
+       ], [
+         fhir:index 156;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9811-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chromogranin A [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 157;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6687-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Citrate [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 158;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20640-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Citrulline [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 159;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6194-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Orange IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 160;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7415-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cladosporium sphaerospermum IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 161;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22203-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clostridium tetani IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 162;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3184-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Activated clotting time in Blood by Coagulation assay" ]
+       ], [
+         fhir:index 163;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15359-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dilute Russell viper venom time (dRVVT) actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 164;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "43397-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dilute Russell viper venom time (dRVVT) factor substitution in Platelet poor plasma by Coagulation assay --immediately after addition of normal plasma" ]
+       ], [
+         fhir:index 165;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6303-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dilute Russell viper venom time (dRVVT) in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 166;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3187-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coagulation factor IX activity actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 167;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3193-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coagulation factor V activity actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 168;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3198-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coagulation factor VII activity actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 169;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3209-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coagulation factor VIII activity actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 170;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3218-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coagulation factor X activity actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 171;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5946-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Activated partial thromboplastin time (aPTT).factor substitution in Platelet poor plasma by Coagulation assay --immediately after addition of normal plasma" ]
+       ], [
+         fhir:index 172;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14979-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Activated partial thromboplastin time (aPTT) in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 173;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3243-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thrombin time in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 174;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5959-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prothrombin time (PT) factor substitution in Platelet poor plasma by Coagulation assay --immediately after addition of normal plasma" ]
+       ], [
+         fhir:index 175;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29893-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 1 Ab [Presence] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 176;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5902-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prothrombin time (PT) in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 177;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2132-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 178;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6081-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Coconut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 179;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14115-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collagen crosslinked N-telopeptide/Creatinine [Molar ratio] in Urine" ]
+       ], [
+         fhir:index 180;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13362-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collection duration of Urine" ]
+       ], [
+         fhir:index 181;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19087-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collection of urine specimen end time" ]
+       ], [
+         fhir:index 182;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19089-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collection of urine specimen start time" ]
+       ], [
+         fhir:index 183;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13358-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collection time of Semen" ]
+       ], [
+         fhir:index 184;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49049-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Collection time of Unspecified specimen" ]
+       ], [
+         fhir:index 185;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4477-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Complement C1 esterase inhibitor [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 186;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4485-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Complement C3 [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 187;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4498-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Complement C4 [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 188;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4532-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Complement total hemolytic CH50 [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 189;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5631-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Copper [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 190;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2141-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Corticotropin [Mass/volume] in Plasma" ]
+       ], [
+         fhir:index 191;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9812-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cortisol [Mass/volume] in Serum or Plasma --PM trough specimen" ]
+       ], [
+         fhir:index 192;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2147-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cortisol Free [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 193;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2142-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cortisol [Mass/volume] in Saliva (oral fluid)" ]
+       ], [
+         fhir:index 194;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2143-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cortisol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 195;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9813-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cortisol [Mass/volume] in Serum or Plasma --AM peak specimen" ]
+       ], [
+         fhir:index 196;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6136-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hazelnut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 197;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13227-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Corynebacterium diphtheriae IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 198;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10366-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cotinine [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 199;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7774-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cow whey IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 200;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1986-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "C peptide [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 201;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30522-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" ]
+       ], [
+         fhir:index 202;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1988-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "C reactive protein [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 203;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15048-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine kinase.BB/Creatine kinase.total in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 204;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2157-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine kinase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 205;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26019-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine Kinase.macromolecular type 1/Creatine kinase.total in Serum or Plasma" ]
+       ], [
+         fhir:index 206;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26020-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine Kinase.macromolecular type 2/Creatine kinase.total in Serum or Plasma" ]
+       ], [
+         fhir:index 207;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32673-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine kinase.MB [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 208;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12187-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine kinase.MB/Creatine kinase.total in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 209;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20569-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine kinase.MB/Creatine kinase.total in Serum or Plasma" ]
+       ], [
+         fhir:index 210;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15049-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatine kinase.MM/Creatine kinase.total in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 211;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12190-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatinine [Mass/volume] in Body fluid" ]
+       ], [
+         fhir:index 212;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2160-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatinine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 213;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2161-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatinine [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 214;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2162-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Creatinine [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 215;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33935-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cyclic citrullinated peptide IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 216;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3520-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cyclosporine [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 217;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6041-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bermuda grass IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 218;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5124-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 219;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5126-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 220;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33006-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cytomegalovirus DNA [#/volume] (viral load) in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 221;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6195-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cocksfoot IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 222;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35789-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Daptomycin [Susceptibility]" ]
+       ], [
+         fhir:index 223;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6061-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carrot IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 224;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2193-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dehydroepiandrosterone (DHEA) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 225;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2191-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dehydroepiandrosterone sulfate (DHEA-S) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 226;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11778-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Delivery date Estimated" ]
+       ], [
+         fhir:index 227;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6095-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American house dust mite IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 228;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6096-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "European house dust mite IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 229;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10535-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Digoxin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 230;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14207-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcal DNAse B [Titer] in Serum" ]
+       ], [
+         fhir:index 231;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6098-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dog dander IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 232;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6099-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dog epithelium IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 233;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2216-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dopamine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 234;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2218-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dopamine [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 235;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6106-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Egg white IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 236;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6107-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Egg yolk IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 237;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9784-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ehrlichia chaffeensis IgM Ab [Titer] in Serum" ]
+       ], [
+         fhir:index 238;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10863-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Endomysium IgA Ab [Titer] in Serum" ]
+       ], [
+         fhir:index 239;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "713-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eosinophils/100 leukocytes in Blood by Automated count" ]
+       ], [
+         fhir:index 240;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "714-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eosinophils/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 241;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12209-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eosinophils/100 leukocytes in Body fluid by Manual count" ]
+       ], [
+         fhir:index 242;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12208-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eosinophils/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 243;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "711-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eosinophils [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 244;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2232-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epinephrine [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 245;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5787-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epithelial cells [#/area] in Urine sediment by Microscopy high power field" ]
+       ], [
+         fhir:index 246;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5157-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus capsid IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 247;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7885-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus capsid IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 248;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5159-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus capsid IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 249;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32585-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus DNA [#/volume] (viral load) in Unspecified specimen by Probe and target amplification method" ]
+       ], [
+         fhir:index 250;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30083-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus nuclear IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 251;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31374-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Epstein Barr virus nuclear IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 252;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "788-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocyte distribution width [Ratio] by Automated count" ]
+       ], [
+         fhir:index 253;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "786-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocyte mean corpuscular hemoglobin concentration [Mass/volume] by Automated count" ]
+       ], [
+         fhir:index 254;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "785-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocyte mean corpuscular hemoglobin [Entitic mass] by Automated count" ]
+       ], [
+         fhir:index 255;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30341-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocyte sedimentation rate" ]
+       ], [
+         fhir:index 256;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4537-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocyte sedimentation rate by Westergren method" ]
+       ], [
+         fhir:index 257;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13945-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocytes [#/area] in Urine sediment by Microscopy high power field" ]
+       ], [
+         fhir:index 258;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "789-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocytes [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 259;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6741-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocytes [#/volume] in Body fluid by Manual count" ]
+       ], [
+         fhir:index 260;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26454-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocytes [#/volume] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 261;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20409-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocytes [#/volume] in Urine by Test strip" ]
+       ], [
+         fhir:index 262;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "58413-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nucleated erythrocytes/100 leukocytes [Ratio] in Blood by Automated count" ]
+       ], [
+         fhir:index 263;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18309-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nucleated erythrocytes/100 leukocytes [Ratio] in Blood by Manual count" ]
+       ], [
+         fhir:index 264;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15061-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythropoietin (EPO) [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 265;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27353-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose mean value [Mass/volume] in Blood Estimated from glycated hemoglobin" ]
+       ], [
+         fhir:index 266;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2243-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Estradiol (E2) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 267;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2251-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Estriol (E3) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 268;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2250-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Estriol (E3).unconjugated [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 269;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20466-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Estriol (E3).unconjugated [Multiple of the median] in Serum or Plasma" ]
+       ], [
+         fhir:index 270;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2254-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Estrogen [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 271;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5643-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ethanol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 272;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5646-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ethylene glycol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 273;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6113-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gum-Tree IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 274;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2276-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ferritin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 275;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11878-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Number of fetuses by US" ]
+       ], [
+         fhir:index 276;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "48065-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fibrin D-dimer FEU [Mass/volume] in Platelet poor plasma" ]
+       ], [
+         fhir:index 277;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3255-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fibrinogen [Mass/volume] in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 278;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2283-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Folate [Mass/volume] in Red Blood Cells" ]
+       ], [
+         fhir:index 279;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2284-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Folate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 280;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15067-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Follitropin [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 281;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6257-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Strawberry IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 282;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6278-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "White Ash IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 283;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15069-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fructosamine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 284;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6121-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fusarium moniliforme IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 285;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6082-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Codfish IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 286;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44357-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Galactomannan Ag [Units/volume] in Serum or Plasma by Immunoassay" ]
+       ], [
+         fhir:index 287;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2873-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gamma globulin [Mass/volume] in Cerebral spinal fluid by Electrophoresis" ]
+       ], [
+         fhir:index 288;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2874-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gamma globulin [Mass/volume] in Serum or Plasma by Electrophoresis" ]
+       ], [
+         fhir:index 289;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13995-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gamma globulin/Protein.total in Urine by Electrophoresis" ]
+       ], [
+         fhir:index 290;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2324-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 291;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19941-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen gas flow Oxygen delivery system" ]
+       ], [
+         fhir:index 292;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2333-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gastrin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 293;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35668-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gentamicin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 294;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3663-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gentamicin [Mass/volume] in Serum or Plasma --peak" ]
+       ], [
+         fhir:index 295;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3665-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gentamicin [Mass/volume] in Serum or Plasma --trough" ]
+       ], [
+         fhir:index 296;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18185-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gestational age" ]
+       ], [
+         fhir:index 297;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33914-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" ]
+       ], [
+         fhir:index 298;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1501-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Serum or Plasma --1 hour post 100 g glucose PO" ]
+       ], [
+         fhir:index 299;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1504-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Serum or Plasma --1 hour post 50 g glucose PO" ]
+       ], [
+         fhir:index 300;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1514-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Serum or Plasma --2 hours post 100 g glucose PO" ]
+       ], [
+         fhir:index 301;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1530-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Serum or Plasma --3 hours post 100 g glucose PO" ]
+       ], [
+         fhir:index 302;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2344-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Body fluid" ]
+       ], [
+         fhir:index 303;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2342-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 304;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2350-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 305;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5792-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose [Mass/volume] in Urine by Test strip" ]
+       ], [
+         fhir:index 306;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32546-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glucose-6-Phosphate dehydrogenase [Enzymatic activity/mass] in Red Blood Cells" ]
+       ], [
+         fhir:index 307;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1558-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fasting glucose [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 308;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20642-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glutamate [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 309;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20643-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glutamine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 310;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6125-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gluten IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 311;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6248-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Soybean IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 312;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20644-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Glycine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 313;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6420-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helicobacter pylori IgA Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 314;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5176-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helicobacter pylori IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 315;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5177-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Helicobacter pylori IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 316;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31100-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hematocrit [Volume Fraction] of Blood by Impedance" ]
+       ], [
+         fhir:index 317;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20570-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hematocrit [Volume Fraction] of Blood" ]
+       ], [
+         fhir:index 318;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4545-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hematocrit [Volume Fraction] of Blood by Centrifugation" ]
+       ], [
+         fhir:index 319;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11153-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hematocrit [Volume Fraction] of Body fluid" ]
+       ], [
+         fhir:index 320;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17856-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin A1c/Hemoglobin.total in Blood by HPLC" ]
+       ], [
+         fhir:index 321;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4548-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin A1c/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 322;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4547-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin A1/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 323;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4551-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin A2/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 324;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4563-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin C/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 325;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4575-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin E/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 326;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42810-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin [Entitic mass] in Reticulocytes" ]
+       ], [
+         fhir:index 327;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4633-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin F/Hemoglobin.total in Blood by Kleihauer-Betke method" ]
+       ], [
+         fhir:index 328;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4576-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin F/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 329;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "721-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Free Hemoglobin [Mass/volume] in Plasma" ]
+       ], [
+         fhir:index 330;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4635-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Free Hemoglobin [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 331;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30313-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin [Mass/volume] in Arterial blood" ]
+       ], [
+         fhir:index 332;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "718-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 333;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30350-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin [Mass/volume] in Venous blood" ]
+       ], [
+         fhir:index 334;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4625-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hemoglobin S/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 335;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29615-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus DNA [#/volume] (viral load) in Serum or Plasma by Probe and target amplification method" ]
+       ], [
+         fhir:index 336;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5193-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 337;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38180-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatitis C virus RNA [log units/volume] (viral load) in Serum or Plasma by Probe and target amplification method" ]
+       ], [
+         fhir:index 338;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27948-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Herpes simplex virus 1+2 IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 339;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20645-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histidine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 340;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20573-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histoplasma capsulatum mycelial phase Ab [Titer] in Serum by Complement fixation" ]
+       ], [
+         fhir:index 341;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20574-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Histoplasma capsulatum yeast phase Ab [Titer] in Serum by Complement fixation" ]
+       ], [
+         fhir:index 342;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29539-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 1 RNA [Log #/volume] (viral load) in Plasma by Probe and signal amplification method" ]
+       ], [
+         fhir:index 343;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20447-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV 1 RNA [#/volume] (viral load) in Serum or Plasma by Probe and target amplification method" ]
+       ], [
+         fhir:index 344;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6165-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lobster IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 345;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13965-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Homocysteine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 346;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6037-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barley IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 347;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5796-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hyaline casts [#/area] in Urine sediment by Microscopy low power field" ]
+       ], [
+         fhir:index 348;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2458-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgA [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 349;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19113-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgE [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 350;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14117-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG index in Serum and CSF" ]
+       ], [
+         fhir:index 351;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2464-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG [Mass/volume] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 352;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2465-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 353;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2466-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG subclass 1 [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 354;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2467-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG subclass 2 [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 355;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2468-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG subclass 3 [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 356;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2469-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG subclass 4 [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 357;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14116-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgG synthesis rate [Mass/time] in Serum and CSF by calculation" ]
+       ], [
+         fhir:index 358;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2472-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "IgM [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 359;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "36916-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunoglobulin light chains.kappa.free [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 360;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15189-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunoglobulin light chains.kappa/Immunoglobulin light chains.lambda [Mass Ratio] in Serum" ]
+       ], [
+         fhir:index 361;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11050-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunoglobulin light chains.kappa [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 362;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33944-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunoglobulin light chains.lambda.free [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 363;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11051-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunoglobulin light chains.lambda [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 364;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23883-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Inhibin A [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 365;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20448-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insulin [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 366;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6901-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insulin Free [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 367;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2483-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insulin-like growth factor binding protein 3 [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 368;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2484-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insulin-like growth factor-I [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 369;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2500-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Iron binding capacity [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 370;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2498-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Iron [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 371;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2502-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Iron saturation [Mass Fraction] in Serum or Plasma" ]
+       ], [
+         fhir:index 372;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31209-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Islet cell 512 Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 373;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20648-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Isoleucine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 374;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5669-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Isopropanol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 375;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6273-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Walnut IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 376;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6178-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mountain Juniper IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 377;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5797-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ketones [Mass/volume] in Urine by Test strip" ]
+       ], [
+         fhir:index 378;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2529-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lactate dehydrogenase [Enzymatic activity/volume] in Body fluid" ]
+       ], [
+         fhir:index 379;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2518-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lactate [Moles/volume] in Arterial blood" ]
+       ], [
+         fhir:index 380;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32133-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lactate [Moles/volume] in Plasma venous" ]
+       ], [
+         fhir:index 381;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2524-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lactate [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 382;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6948-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lamotrigine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 383;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6158-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Latex IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 384;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5671-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lead [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 385;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14976-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lecithin/Sphingomyelin [Ratio] in Amniotic fluid" ]
+       ], [
+         fhir:index 386;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20649-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leucine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 387;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5821-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leukocytes [#/area] in Urine sediment by Microscopy high power field" ]
+       ], [
+         fhir:index 388;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6690-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leukocytes [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 389;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30471-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Levetiracetam [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 390;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3714-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lidocaine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 391;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7632-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Privet IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 392;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10835-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lipoprotein a [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 393;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3719-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lithium [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 394;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7369-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Perennial rye grass IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 395;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3284-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lupus anticoagulant neutralization platelet [Time] in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 396;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10501-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lutropin [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 397;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6266-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tomato IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 398;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "736-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lymphocytes/100 leukocytes in Blood by Automated count" ]
+       ], [
+         fhir:index 399;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "737-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lymphocytes/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 400;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11031-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lymphocytes/100 leukocytes in Body fluid" ]
+       ], [
+         fhir:index 401;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10328-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lymphocytes/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 402;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "731-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lymphocytes [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 403;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20650-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lysine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 404;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12230-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Macrophages/100 leukocytes in Body fluid by Manual count" ]
+       ], [
+         fhir:index 405;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12229-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Macrophages/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 406;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19123-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Magnesium [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 407;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2597-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Magnesium [Moles/volume] in Red Blood Cells" ]
+       ], [
+         fhir:index 408;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6021-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Apple IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 409;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "787-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Erythrocyte mean corpuscular volume [Entitic volume] by Automated count" ]
+       ], [
+         fhir:index 410;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5244-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Measles virus IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 411;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5685-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mercury [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 412;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12234-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mesothelial cells/100 leukocytes in Body fluid by Manual count" ]
+       ], [
+         fhir:index 413;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "740-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metamyelocytes/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 414;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "739-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metamyelocytes [#/volume] in Blood by Manual count" ]
+       ], [
+         fhir:index 415;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19049-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metanephrine [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 416;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "25473-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metanephrine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 417;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5693-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methanol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 418;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2615-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methemoglobin/Hemoglobin.total in Arterial blood" ]
+       ], [
+         fhir:index 419;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2614-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methemoglobin/Hemoglobin.total in Blood" ]
+       ], [
+         fhir:index 420;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20651-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methionine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 421;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14836-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methotrexate [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 422;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13964-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Methylmalonate [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 423;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6174-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Milk IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 424;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14251-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mitochondria M2 IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 425;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5905-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Monocytes/100 leukocytes in Blood by Automated count" ]
+       ], [
+         fhir:index 426;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "744-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Monocytes/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 427;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10329-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Monocytes/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 428;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "742-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Monocytes [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 429;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "743-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Monocytes [#/volume] in Blood by Manual count" ]
+       ], [
+         fhir:index 430;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6281-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "White mulberry IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 431;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6182-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mucor racemosus IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 432;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38476-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mullerian inhibiting substance [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 433;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "25418-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 434;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7966-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mumps virus IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 435;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6035-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Banana IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 436;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "23905-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mycophenolate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 437;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5255-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 438;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5256-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mycoplasma pneumoniae IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 439;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2638-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Myelin basic protein [Mass/volume] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 440;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "749-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Myelocytes/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 441;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "748-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Myelocytes [#/volume] in Blood by Manual count" ]
+       ], [
+         fhir:index 442;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6969-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Myeloperoxidase Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 443;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2639-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Myoglobin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 444;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30934-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Natriuretic peptide B [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 445;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29967-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophil cytoplasmic IgG Ab [Titer] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 446;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14278-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophil cytoplasmic Ab.perinuclear [Titer] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 447;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "770-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils/100 leukocytes in Blood by Automated count" ]
+       ], [
+         fhir:index 448;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12238-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils/100 leukocytes in Body fluid by Manual count" ]
+       ], [
+         fhir:index 449;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13516-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 450;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "764-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils.band form/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 451;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26510-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils.band form/100 leukocytes in Body fluid" ]
+       ], [
+         fhir:index 452;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12278-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils.band form/100 leukocytes in Cerebral spinal fluid by Manual count" ]
+       ], [
+         fhir:index 453;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "751-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 454;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "769-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neutrophils.segmented/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 455;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3854-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nicotine [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 456;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2668-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Norepinephrine [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 457;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2671-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Normetanephrine [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 458;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "25489-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Normetanephrine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 459;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33917-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nornicotine [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 460;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29953-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nuclear Ab [Titer] in Serum" ]
+       ], [
+         fhir:index 461;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31019-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "10-Hydroxycarbazepine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 462;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1668-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "17-Hydroxyprogesterone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 463;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1695-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 464;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "42176-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "1,3 beta glucan [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 465;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8220-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Opiates [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 466;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20652-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ornithine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 467;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6230-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rice IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 468;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2692-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Osmolality of Serum or Plasma" ]
+       ], [
+         fhir:index 469;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2695-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Osmolality of Urine" ]
+       ], [
+         fhir:index 470;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5788-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oval fat bodies (globules) [#/area] in Urine sediment by Microscopy high power field" ]
+       ], [
+         fhir:index 471;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2701-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxalate [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 472;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2703-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen [Partial pressure] in Arterial blood" ]
+       ], [
+         fhir:index 473;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28648-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen [Partial pressure] in Arterial cord blood" ]
+       ], [
+         fhir:index 474;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28649-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen [Partial pressure] in Venous cord blood" ]
+       ], [
+         fhir:index 475;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2705-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen [Partial pressure] in Venous blood" ]
+       ], [
+         fhir:index 476;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2708-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen saturation in Arterial blood" ]
+       ], [
+         fhir:index 477;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2711-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oxygen saturation in Venous blood" ]
+       ], [
+         fhir:index 478;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2714-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fractional oxyhemoglobin in Arterial blood" ]
+       ], [
+         fhir:index 479;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2716-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fractional oxyhemoglobin in Venous blood" ]
+       ], [
+         fhir:index 480;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6246-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Shrimp IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 481;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2731-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parathyrin.intact [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 482;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7983-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parvovirus B19 IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 483;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7984-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Parvovirus B19 IgM Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 484;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6034-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bahia grass IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 485;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7691-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Scallop IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 486;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6212-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Penicillium notatum IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 487;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33254-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Arterial blood adjusted to patients actual temperature" ]
+       ], [
+         fhir:index 488;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3948-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phenobarbital [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 489;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14875-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phenylalanine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 490;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3969-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phenytoin Free [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 491;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3968-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phenytoin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 492;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6265-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Timothy IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 493;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2744-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Arterial blood" ]
+       ], [
+         fhir:index 494;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28646-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Arterial cord blood" ]
+       ], [
+         fhir:index 495;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28647-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Venous cord blood" ]
+       ], [
+         fhir:index 496;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2745-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Capillary blood" ]
+       ], [
+         fhir:index 497;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11558-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Blood" ]
+       ], [
+         fhir:index 498;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2746-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Venous blood" ]
+       ], [
+         fhir:index 499;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2748-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Body fluid" ]
+       ], [
+         fhir:index 500;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2749-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Gastric fluid" ]
+       ], [
+         fhir:index 501;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2753-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Serum or Plasma" ]
+       ], [
+         fhir:index 502;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2756-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Urine" ]
+       ], [
+         fhir:index 503;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5803-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "pH of Urine by Test strip" ]
+       ], [
+         fhir:index 504;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2777-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phosphate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 505;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2778-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phosphate [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 506;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2779-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phosphate [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 507;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14246-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Phosphatidylserine IgM Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 508;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "7613-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pistachio IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 509;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6110-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "English Plantain IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 510;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13047-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Plasma cells/100 leukocytes in Blood" ]
+       ], [
+         fhir:index 511;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6263-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American Sycamore IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 512;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32623-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Platelet mean volume [Entitic volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 513;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "777-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Platelets [#/volume] in Blood by Automated count" ]
+       ], [
+         fhir:index 514;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6153-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Kentucky blue grass IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 515;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6090-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cottonwood IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 516;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6219-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pork IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 517;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2823-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Potassium [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 518;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2828-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Potassium [Moles/volume] in Urine" ]
+       ], [
+         fhir:index 519;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14338-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prealbumin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 520;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32046-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pregnancy associated plasma protein A [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 521;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2837-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pregnenolone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 522;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2839-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Progesterone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 523;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2842-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prolactin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 524;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20655-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Proline [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 525;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "783-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Promyelocytes/100 leukocytes in Blood by Manual count" ]
+       ], [
+         fhir:index 526;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "26523-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Promyelocytes [#/volume] in Blood" ]
+       ], [
+         fhir:index 527;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3545-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Propoxyphene [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 528;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10886-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prostate Specific Ag Free [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 529;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "12841-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prostate Specific Ag Free/Prostate specific Ag.total in Serum or Plasma" ]
+       ], [
+         fhir:index 530;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2857-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prostate specific Ag [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 531;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6968-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Proteinase 3 Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 532;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27819-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein C actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 533;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27820-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein C Ag actual/normal in Platelet poor plasma by Immunologic method" ]
+       ], [
+         fhir:index 534;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2890-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein/Creatinine [Mass Ratio] in Urine" ]
+       ], [
+         fhir:index 535;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2881-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein [Mass/volume] in Body fluid" ]
+       ], [
+         fhir:index 536;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2880-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein [Mass/volume] in Cerebral spinal fluid" ]
+       ], [
+         fhir:index 537;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2885-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 538;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2888-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 539;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2889-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 540;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27822-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein S actual/normal in Platelet poor plasma by Coagulation assay" ]
+       ], [
+         fhir:index 541;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27823-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protein S Ag actual/normal in Platelet poor plasma by Immunologic method" ]
+       ], [
+         fhir:index 542;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2892-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protoporphyrin Free [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 543;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2895-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Protoporphyrin.zinc [Mass/volume] in Red Blood Cells" ]
+       ], [
+         fhir:index 544;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6019-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Almond IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 545;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2900-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pyridoxine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 546;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14121-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pyruvate [Moles/volume] in Blood" ]
+       ], [
+         fhir:index 547;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6189-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "White Oak IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 548;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6164-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Virginia Live Oak IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 549;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31147-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reagin Ab [Titer] in Serum by RPR" ]
+       ], [
+         fhir:index 550;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2915-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Renin [Enzymatic activity/volume] in Plasma" ]
+       ], [
+         fhir:index 551;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31112-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reticulocytes/100 erythrocytes in Blood by Manual" ]
+       ], [
+         fhir:index 552;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "14196-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reticulocytes [#/volume] in Blood" ]
+       ], [
+         fhir:index 553;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2923-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Retinol [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 554;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38496-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Retinyl palmitate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 555;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11572-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rheumatoid factor [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 556;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8014-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rubella virus IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 557;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5335-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rubella virus IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 558;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6076-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Clam IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 559;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31032-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Baker's yeast IgA Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 560;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35538-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Baker's yeast IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 561;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4024-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Salicylates [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 562;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6237-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Salmon IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 563;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6234-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Saltwort IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 564;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27416-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "SCL-70 extractable nuclear Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 565;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5724-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Selenium [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 566;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20656-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Serine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 567;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6242-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sesame Seed IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 568;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13967-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sex hormone binding globulin [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 569;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10587-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sexual abstinence duration" ]
+       ], [
+         fhir:index 570;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29247-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sirolimus [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 571;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17791-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sjogrens syndrome-B extractable nuclear Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 572;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5358-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Smooth muscle Ab [Titer] in Serum by Immunofluorescence" ]
+       ], [
+         fhir:index 573;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2951-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sodium [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 574;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2955-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sodium [Moles/volume] in Urine" ]
+       ], [
+         fhir:index 575;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2956-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sodium [Moles/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 576;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6220-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Potato IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 577;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2963-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Somatotropin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 578;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6152-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Johnson grass IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 579;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2965-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Specific gravity of Urine" ]
+       ], [
+         fhir:index 580;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3167-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Volume of 24 hour Urine" ]
+       ], [
+         fhir:index 581;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3160-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Volume of Semen" ]
+       ], [
+         fhir:index 582;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28009-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Volume of Urine" ]
+       ], [
+         fhir:index 583;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "19153-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Volume of unspecified time Urine" ]
+       ], [
+         fhir:index 584;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33247-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Weight of Sweat" ]
+       ], [
+         fhir:index 585;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6800-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spermatozoa Motile/100 spermatozoa in Semen" ]
+       ], [
+         fhir:index 586;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9780-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spermatozoa [#/volume] in Semen" ]
+       ], [
+         fhir:index 587;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10622-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spermatozoa Normal/100 spermatozoa in Semen" ]
+       ], [
+         fhir:index 588;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27374-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 12 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 589;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27387-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 14 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 590;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27390-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 19 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 591;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27092-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 1 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 592;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27389-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 23 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 593;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27118-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 26 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 594;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27096-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 3 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 595;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27094-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 4 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 596;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "25296-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 51 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 597;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "30153-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 68 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 598;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27113-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 8 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 599;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "27392-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptococcus pneumoniae 9 IgG Ab [Mass/volume] in Serum" ]
+       ], [
+         fhir:index 600;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "22568-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Streptolysin O Ab [Titer] in Serum" ]
+       ], [
+         fhir:index 601;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11253-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tacrolimus [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 602;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20657-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Taurine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 603;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2991-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Testosterone Free [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 604;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15432-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Testosterone Free/Testosterone.total in Serum or Plasma" ]
+       ], [
+         fhir:index 605;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49041-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Testosterone [Mass/volume] in Serum or Plasma by Detection limit <= 1.0 ng/dL" ]
+       ], [
+         fhir:index 606;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2986-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Testosterone [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 607;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4049-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Theophylline [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 608;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2998-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thiamine [Mass/volume] in Blood" ]
+       ], [
+         fhir:index 609;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2999-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thiamine [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 610;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20658-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Threonine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 611;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6270-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tuna IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 612;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8098-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroglobulin Ab [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 613;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3013-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroglobulin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 614;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38505-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroglobulin recovery in Serum or Plasma" ]
+       ], [
+         fhir:index 615;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8099-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroperoxidase Ab [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 616;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3016-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyrotropin [Units/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 617;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3024-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroxine (T4) free [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 618;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31144-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroxine (T4) [Mass/volume] in Dried blood spot" ]
+       ], [
+         fhir:index 619;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3026-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thyroxine (T4) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 620;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "31017-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tissue transglutaminase IgA Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 621;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32998-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tissue transglutaminase IgG Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 622;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "35670-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tobramycin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 623;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4057-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tobramycin [Mass/volume] in Serum or Plasma --peak" ]
+       ], [
+         fhir:index 624;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4059-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tobramycin [Mass/volume] in Serum or Plasma --trough" ]
+       ], [
+         fhir:index 625;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "17713-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Topiramate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 626;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3034-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Transferrin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 627;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "15212-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lipase [Enzymatic activity/volume] in Body fluid" ]
+       ], [
+         fhir:index 628;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3040-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lipase [Enzymatic activity/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 629;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2571-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triglyceride [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 630;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3051-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triiodothyronine (T3) Free [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 631;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3053-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triiodothyronine (T3) [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 632;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3050-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triiodothyronine resin uptake (T3RU) in Serum or Plasma" ]
+       ], [
+         fhir:index 633;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3052-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Triiodothyronine (T3).reverse [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 634;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6276-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Wheat IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 635;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "10839-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Troponin I.cardiac [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 636;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "21582-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tryptase [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 637;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20660-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tyrosine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 638;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6109-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "White Elm IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 639;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3084-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 640;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3086-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urate [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 641;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3087-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urate [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 642;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3094-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urea nitrogen [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 643;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3095-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urea nitrogen [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 644;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3096-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urea nitrogen [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 645;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3107-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urobilinogen [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 646;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6186-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nettle IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 647;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20661-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Valine [Moles/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 648;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4086-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Valproate [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 649;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "20578-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vancomycin [Mass/volume] in Serum or Plasma" ]
+       ], [
+         fhir:index 650;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4090-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vancomycin [Mass/volume] in Serum or Plasma --peak" ]
+       ], [
+         fhir:index 651;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4092-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vancomycin [Mass/volume] in Serum or Plasma --trough" ]
+       ], [
+         fhir:index 652;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9624-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vanillylmandelate [Mass/volume] in Urine" ]
+       ], [
+         fhir:index 653;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3122-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vanillylmandelate [Mass/time] in 24 hour Urine" ]
+       ], [
+         fhir:index 654;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5403-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 655;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5404-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Varicella zoster virus IgM Ab [Units/volume] in Serum by Immunoassay" ]
+       ], [
+         fhir:index 656;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6012-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "von Willebrand factor (vWf) Ag [Units/volume] in Platelet poor plasma by Immunologic method" ]
+       ], [
+         fhir:index 657;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6014-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "von Willebrand factor (vWf) ristocetin cofactor actual/normal in Platelet poor plasma by Aggregation" ]
+       ], [
+         fhir:index 658;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "9804-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Weight of Stone" ]
+       ], [
+         fhir:index 659;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6087-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Corn IgE Ab [Units/volume] in Serum" ]
+       ], [
+         fhir:index 660;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "5763-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Zinc [Mass/volume] in Serum or Plasma" ]
+       ]
+     ]
+  ].
+
+# -------------------------------------------------------------------------------------
+

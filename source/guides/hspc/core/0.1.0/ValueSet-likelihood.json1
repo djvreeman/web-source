@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "likelihood",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/likelihood",
+  "version": "0.01",
+  "name": "HSPC Likelihood Value Set",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-02-09",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "410594000",
+            "display": "Definitely NOT present (qualifier value)"
+          },
+          {
+            "code": "410593006",
+            "display": "Probably NOT present (qualifier value)"
+          },
+          {
+            "code": "410590009",
+            "display": "Known possible (qualifier value)"
+          },
+          {
+            "code": "410592001",
+            "display": "Probably present (qualifier value)"
+          },
+          {
+            "code": "255545003",
+            "display": "Definite (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

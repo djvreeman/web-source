@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "heartratebodyposition",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "url": "http://fhir.org/guides/hspc/ValueSet/heartratebodyposition",
+  "version": "0.01",
+  "name": "HSPC Heart Rate Measurement Body Position",
+  "status": "draft",
+  "publisher": "Health Services Platform Consortium (HSPC)",
+  "date": "2015-06-11",
+  "description": "SELECT SNOMED CT code system values.",
+  "immutable": true,
+  "copyright": "TBD",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "40199007",
+            "display": "Supine body position"
+          },
+          {
+            "code": "33586001",
+            "display": "Sitting position"
+          },
+          {
+            "code": "10904000",
+            "display": "Orthostatic body position"
+          }
+        ]
+      }
+    ]
+  }
+}

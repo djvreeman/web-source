@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version.  For a full list of available versions, see the <a href="history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC ProviderPractitioner Classification</h2>
+
+<p>
+Formats: <a href="ValueSet-practitioner-providerClassification.xml.html">XML</a>, <a href="ValueSet-practitioner-providerClassification.json.html">JSON</a>, <a href="ValueSet-practitioner-providerClassification.ttl.html">Turtle</a>
+</p>
+
+<div><h2>HSPC ProviderPractitioner Classification</h2><div><p>A set of codes that describe the class of health care a practitioner provides.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in http://www.nucc.org<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>207K00000X</td><td>Allopathic and Osteopathic Physicians Allergy and Immunology</td><td/></tr><tr><td>207L00000X</td><td>Allopathic and Osteopathic Physicians Anesthesiology</td><td/></tr><tr><td>208U00000X</td><td>Allopathic and Osteopathic Physicians Clinical Pharmacology</td><td/></tr><tr><td>208C00000X</td><td>Allopathic and Osteopathic Physicians Colon and Rectal Surgery</td><td/></tr><tr><td>207N00000X</td><td>Allopathic and Osteopathic Physicians Dermatology</td><td/></tr><tr><td>204R00000X</td><td>Allopathic and Osteopathic Physicians Electrodiagnostic Medicine</td><td/></tr><tr><td>207P00000X</td><td>Allopathic and Osteopathic Physicians Emergency Medicine</td><td/></tr><tr><td>207Q00000X</td><td>Allopathic and Osteopathic Physicians Family Medicine</td><td/></tr><tr><td>208D00000X</td><td>Allopathic and Osteopathic Physicians General Practice</td><td/></tr><tr><td>208M00000X</td><td>Allopathic and Osteopathic Physicians Hospitalist</td><td/></tr><tr><td>202C00000X</td><td>Allopathic and Osteopathic Physicians Independent Medical Examiner</td><td/></tr><tr><td>207R00000X</td><td>Allopathic and Osteopathic Physicians Internal Medicine</td><td/></tr><tr><td>209800000X</td><td>Allopathic and Osteopathic Physicians Legal Medicine</td><td/></tr><tr><td>207T00000X</td><td>Allopathic and Osteopathic Physicians Neurological Surgery</td><td/></tr><tr><td>204D00000X</td><td>Allopathic and Osteopathic Physicians Neuromusculoskeletal Medicine and OMM</td><td/></tr><tr><td>204C00000X</td><td>Allopathic and Osteopathic Physicians Neuromusculoskeletal Medicine, Sports Medicine</td><td/></tr><tr><td>207U00000X</td><td>Allopathic and Osteopathic Physicians Nuclear Medicine</td><td/></tr><tr><td>207V00000X</td><td>Allopathic and Osteopathic Physicians Obstetrics and Gynecology</td><td/></tr><tr><td>207W00000X</td><td>Allopathic and Osteopathic Physicians Ophthalmology</td><td/></tr><tr><td>204E00000X</td><td>Allopathic and Osteopathic Physicians Oral and Maxillofacial Surgery</td><td/></tr><tr><td>207X00000X</td><td>Allopathic and Osteopathic Physicians Orthopaedic Surgery</td><td/></tr><tr><td>207Y00000X</td><td>Allopathic and Osteopathic Physicians Otolaryngology</td><td/></tr><tr><td>208000000X</td><td>Allopathic and Osteopathic Physicians Pediatrics</td><td/></tr><tr><td>202K00000X</td><td>Allopathic and Osteopathic Physicians Phlebology</td><td/></tr><tr><td>208100000X</td><td>Allopathic and Osteopathic Physicians Physical Medicine and Rehabilitation</td><td/></tr><tr><td>208200000X</td><td>Allopathic and Osteopathic Physicians Plastic Surgery</td><td/></tr><tr><td>208600000X</td><td>Allopathic and Osteopathic Physicians Surgery</td><td/></tr><tr><td>208G00000X</td><td>Allopathic and Osteopathic Physicians Thoracic Surgery (Cardiothoracic Vascular Surgery)</td><td/></tr><tr><td>204F00000X</td><td>Allopathic and Osteopathic Physicians Transplant Surgery</td><td/></tr><tr><td>208800000X</td><td>Allopathic and Osteopathic Physicians Urology</td><td/></tr><tr><td>103K00000X</td><td>Behavioral Health and Social Service Providers Behavioral Analyst</td><td/></tr><tr><td>103G00000X</td><td>Behavioral Health and Social Service Providers Clinical Neuropsychologist</td><td/></tr><tr><td>101Y00000X</td><td>Behavioral Health and Social Service Providers Counselor</td><td/></tr><tr><td>106H00000X</td><td>Behavioral Health and Social Service Providers Marriage and Family Therapist</td><td/></tr><tr><td>102X00000X</td><td>Behavioral Health and Social Service Providers Poetry Therapist</td><td/></tr><tr><td>102L00000X</td><td>Behavioral Health and Social Service Providers Psychoanalyst</td><td/></tr><tr><td>103T00000X</td><td>Behavioral Health and Social Service Providers Psychologist</td><td/></tr><tr><td>104100000X</td><td>Behavioral Health and Social Service Providers Social Worker</td><td/></tr><tr><td>111N00000X</td><td>Chiropractic Providers Chiropractor</td><td/></tr><tr><td>125K00000X</td><td>Dental Providers Advanced Practice Dental Therapist</td><td/></tr><tr><td>126800000X</td><td>Dental Providers Dental Assistant</td><td/></tr><tr><td>124Q00000X</td><td>Dental Providers Dental Hygienist</td><td/></tr><tr><td>126900000X</td><td>Dental Providers Dental Laboratory Technician</td><td/></tr><tr><td>125J00000X</td><td>Dental Providers Dental Therapist</td><td/></tr><tr><td>122300000X</td><td>Dental Providers Dentist</td><td/></tr><tr><td>122400000X</td><td>Dental Providers Denturist</td><td/></tr><tr><td>132700000X</td><td>Dietary and Nutritional Service Providers Dietary Manager</td><td/></tr><tr><td>136A00000X</td><td>Dietary and Nutritional Service Providers Dietetic Technician, Registered</td><td/></tr><tr><td>133V00000X</td><td>Dietary and Nutritional Service Providers Dietitian, Registered</td><td/></tr><tr><td>133N00000X</td><td>Dietary and Nutritional Service Providers Nutritionist</td><td/></tr><tr><td>146N00000X</td><td>Emergency Medical Service Providers Emergency Medical Technician, Basic</td><td/></tr><tr><td>146M00000X</td><td>Emergency Medical Service Providers Emergency Medical Technician, Intermediate</td><td/></tr><tr><td>146L00000X</td><td>Emergency Medical Service Providers Emergency Medical Technician, Paramedic</td><td/></tr><tr><td>146D00000X</td><td>Emergency Medical Service Providers Personal Emergency Response Attendant</td><td/></tr><tr><td>152W00000X</td><td>Eye and Vision Services Providers Optometrist</td><td/></tr><tr><td>156F00000X</td><td>Eye and Vision Services Providers Technician/Technologist</td><td/></tr><tr><td>193200000X</td><td>Group Multi Specialty</td><td/></tr><tr><td>193400000X</td><td>Group Single Specialty</td><td/></tr><tr><td>164W00000X</td><td>Nursing Service Providers Licensed Practical Nurse</td><td/></tr><tr><td>167G00000X</td><td>Nursing Service Providers Licensed Psychiatric Technician</td><td/></tr><tr><td>164X00000X</td><td>Nursing Service Providers Licensed Vocational Nurse</td><td/></tr><tr><td>163W00000X</td><td>Nursing Service Providers Registered Nurse</td><td/></tr><tr><td>372600000X</td><td>Nursing Service Related Providers Adult Companion</td><td/></tr><tr><td>372500000X</td><td>Nursing Service Related Providers Chore Provider</td><td/></tr><tr><td>373H00000X</td><td>Nursing Service Related Providers Day Training/Habilitation Specialist</td><td/></tr><tr><td>374J00000X</td><td>Nursing Service Related Providers Doula</td><td/></tr><tr><td>374U00000X</td><td>Nursing Service Related Providers Home Health Aide</td><td/></tr><tr><td>376J00000X</td><td>Nursing Service Related Providers Homemaker</td><td/></tr><tr><td>376K00000X</td><td>Nursing Service Related Providers Nurse's Aide</td><td/></tr><tr><td>376G00000X</td><td>Nursing Service Related Providers Nursing Home Administrator</td><td/></tr><tr><td>374T00000X</td><td>Nursing Service Related Providers Religious Nonmedical Nursing Personnel</td><td/></tr><tr><td>374K00000X</td><td>Nursing Service Related Providers Religious Nonmedical Practitioner</td><td/></tr><tr><td>374700000X</td><td>Nursing Service Related Providers Technician</td><td/></tr><tr><td>171100000X</td><td>Other Service Providers Acupuncturist</td><td/></tr><tr><td>171M00000X</td><td>Other Service Providers Case Manager/Care Coordinator</td><td/></tr><tr><td>174V00000X</td><td>Other Service Providers Clinical Ethicist</td><td/></tr><tr><td>172V00000X</td><td>Other Service Providers Community Health Worker</td><td/></tr><tr><td>171W00000X</td><td>Other Service Providers Contractor</td><td/></tr><tr><td>172A00000X</td><td>Other Service Providers Driver</td><td/></tr><tr><td>176P00000X</td><td>Other Service Providers Funeral Director</td><td/></tr><tr><td>170300000X</td><td>Other Service Providers Genetic Counselor, MS</td><td/></tr><tr><td>174H00000X</td><td>Other Service Providers Health Educator</td><td/></tr><tr><td>175L00000X</td><td>Other Service Providers Homeopath</td><td/></tr><tr><td>171R00000X</td><td>Other Service Providers Interpreter</td><td/></tr><tr><td>174N00000X</td><td>Other Service Providers Lactation Consultant, Non RN</td><td/></tr><tr><td>173000000X</td><td>Other Service Providers Legal Medicine</td><td/></tr><tr><td>177F00000X</td><td>Other Service Providers Lodging</td><td/></tr><tr><td>174200000X</td><td>Other Service Providers Meals</td><td/></tr><tr><td>172M00000X</td><td>Other Service Providers Mechanotherapist</td><td/></tr><tr><td>170100000X</td><td>Other Service Providers Medical Genetics, Ph.D. Medical Genetics</td><td/></tr><tr><td>176B00000X</td><td>Other Service Providers Midwife</td><td/></tr><tr><td>175M00000X</td><td>Other Service Providers Midwife, Lay</td><td/></tr><tr><td>171000000X</td><td>Other Service Providers Military Health Care Provider</td><td/></tr><tr><td>172P00000X</td><td>Other Service Providers Naprapath</td><td/></tr><tr><td>175F00000X</td><td>Other Service Providers Naturopath</td><td/></tr><tr><td>175T00000X</td><td>Other Service Providers Peer Specialist</td><td/></tr><tr><td>173C00000X</td><td>Other Service Providers Reflexologist</td><td/></tr><tr><td>173F00000X</td><td>Other Service Providers Sleep Specialist, PhD</td><td/></tr><tr><td>174400000X</td><td>Other Service Providers Specialist</td><td/></tr><tr><td>174M00000X</td><td>Other Service Providers Veterinarian</td><td/></tr><tr><td>183500000X</td><td>Pharmacy Service Providers Pharmacist</td><td/></tr><tr><td>183700000X</td><td>Pharmacy Service Providers Pharmacy Technician</td><td/></tr><tr><td>367A00000X</td><td>Physician Assistants and Advanced Practice Nursing Providers Advanced Practice Midwife</td><td/></tr><tr><td>367H00000X</td><td>Physician Assistants and Advanced Practice Nursing Providers Anesthesiologist Assistant</td><td/></tr><tr><td>364S00000X</td><td>Physician Assistants and Advanced Practice Nursing Providers Clinical Nurse Specialist</td><td/></tr><tr><td>367500000X</td><td>Physician Assistants and Advanced Practice Nursing Providers Nurse Anesthetist, Certified Registered</td><td/></tr><tr><td>363L00000X</td><td>Physician Assistants and Advanced Practice Nursing Providers Nurse Practitioner</td><td/></tr><tr><td>363A00000X</td><td>Physician Assistants and Advanced Practice Nursing Providers Physician Assistant</td><td/></tr><tr><td>211D00000X</td><td>Podiatric Medicine and Surgery Service Providers Assistant, Podiatric</td><td/></tr><tr><td>213E00000X</td><td>Podiatric Medicine and Surgery Service Providers Podiatrist</td><td/></tr><tr><td>229N00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Anaplastologist</td><td/></tr><tr><td>221700000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Art Therapist</td><td/></tr><tr><td>224Y00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Clinical Exercise Physiologist</td><td/></tr><tr><td>225600000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Dance Therapist</td><td/></tr><tr><td>222Q00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Developmental Therapist</td><td/></tr><tr><td>226300000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Kinesiotherapist</td><td/></tr><tr><td>225700000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Massage Therapist</td><td/></tr><tr><td>224900000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Mastectomy Fitter</td><td/></tr><tr><td>225A00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Music Therapist</td><td/></tr><tr><td>225X00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Occupational Therapist</td><td/></tr><tr><td>224Z00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Occupational Therapy Assistant</td><td/></tr><tr><td>225000000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Orthotic Fitter</td><td/></tr><tr><td>222Z00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Orthotist</td><td/></tr><tr><td>224L00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Pedorthist</td><td/></tr><tr><td>225100000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Physical Therapist</td><td/></tr><tr><td>225200000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Physical Therapy Assistant</td><td/></tr><tr><td>224P00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Prosthetist</td><td/></tr><tr><td>225B00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Pulmonary Function Technologist</td><td/></tr><tr><td>225800000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Recreation Therapist</td><td/></tr><tr><td>225C00000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Rehabilitation Counselor</td><td/></tr><tr><td>225400000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Rehabilitation Practitioner</td><td/></tr><tr><td>227800000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Respiratory Therapist, Certified</td><td/></tr><tr><td>227900000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Respiratory Therapist, Registered</td><td/></tr><tr><td>225500000X</td><td>Respiratory, Developmental, Rehabilitative and Restorative Service Providers Specialist/Technologist</td><td/></tr><tr><td>231H00000X</td><td>Speech, Language and Hearing Service Providers Audiologist</td><td/></tr><tr><td>237600000X</td><td>Speech, Language and Hearing Service Providers Audiologist Hearing Aid Fitter</td><td/></tr><tr><td>237700000X</td><td>Speech, Language and Hearing Service Providers Hearing Instrument Specialist</td><td/></tr><tr><td>235500000X</td><td>Speech, Language and Hearing Service Providers Specialist/Technologist</td><td/></tr><tr><td>235Z00000X</td><td>Speech, Language and Hearing Service Providers Speech Language Pathologist</td><td/></tr><tr><td>390200000X</td><td>Student, Health Care Student in an Organized Health Care Education/Training Program</td><td/></tr><tr><td>242T00000X</td><td>Technologists, Technicians and Other Technical Service Providers Perfusionist</td><td/></tr><tr><td>247100000X</td><td>Technologists, Technicians and Other Technical Service Providers Radiologic Technologist</td><td/></tr><tr><td>243U00000X</td><td>Technologists, Technicians and Other Technical Service Providers Radiology Practitioner Assistant</td><td/></tr><tr><td>246X00000X</td><td>Technologists, Technicians and Other Technical Service Providers Spec/Tech, Cardiovascular</td><td/></tr><tr><td>246Y00000X</td><td>Technologists, Technicians and Other Technical Service Providers Spec/Tech, Health Info</td><td/></tr><tr><td>246Q00000X</td><td>Technologists, Technicians and Other Technical Service Providers Spec/Tech, Pathology</td><td/></tr><tr><td>246Z00000X</td><td>Technologists, Technicians and Other Technical Service Providers Specialist/Technologist, Other</td><td/></tr><tr><td>246W00000X</td><td>Technologists, Technicians and Other Technical Service Providers Technician, Cardiology</td><td/></tr><tr><td>247000000X</td><td>Technologists, Technicians and Other Technical Service Providers Technician, Health Information</td><td/></tr><tr><td>247200000X</td><td>Technologists, Technicians and Other Technical Service Providers Technician, Other</td><td/></tr><tr><td>246R00000X</td><td>Technologists, Technicians and Other Technical Service Providers Technician, Pathology</td><td/></tr></table></li></ul></div>
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>

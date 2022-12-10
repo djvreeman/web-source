@@ -1,0 +1,1576 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSPC Implementation Guide</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+ <link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+<body>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b> - HSPC Implementation Guide</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hspc-logo" no-external="true" href="https://www.hspconsortium.org/">
+     <img src="https://www.hspconsortium.org/static/imgs/old-hspc-logo.png" width="120" alt="HSPC Project Logo" style="float:right;border:1px solid black" height="30">
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+  </div>
+</div>  <!-- /segment-header -->
+
+ <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+    <li><b><a href="index.html">Home</a></b></li>
+    <li><b><a href="profiles.html">Profiles</a></b></li>
+    <li><b><a href="extensions.html">Extensions</a></b></li>
+    <li><b><a href="valuesets.html">Value Sets</a></b></li>
+    <li><b><a href="codesystems.html">Code Systems</a></b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9"><!--ReleaseHeader--><p id="publish-box">This page is part of the HSPC FHIR Implementation Guide (v0.1.0: Daft For Comment Draft) based on <a href="http://hl7.org/fhir/1.9.0">FHIR v1.9.0</a>. This is the current published version in it's permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="../history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+href="assets/ico/favicon.png"/>
+
+<h2>HSPC Ordinal Labs</h2>
+
+<pre class="json">
+{
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html">resourceType</a>" : "ValueSet",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.id">id</a>" : "OrdinalLabCodes",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.meta">meta</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.url">url</a>" : "http://fhir.org/guides/hspc/ValueSet/OrdinalLabCodes",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.name">name</a>" : "HSPC Ordinal Labs",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.status">status</a>" : "draft",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.publisher">publisher</a>" : "HSPC",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.contact.telecom">telecom</a>" : [
+        {
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="c:\work\org.hl7.fhir\build\publish/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://healthcaresoa.org"
+        }
+      }
+    }
+  },
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.date">date</a>" : "2015-02-20T13:44:49+11:00",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.description">description</a>" : "Ordinal LOINC codes used in HSPC",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.copyright">copyright</a>" : "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.system">system</a>" : "http://loinc.org",
+        "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1004-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Direct antiglobulin test.complement specific reagent [Presence] on Red Blood Cells"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1007-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "10374-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Helmet cells [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "10378-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Polychromasia [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "10380-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Stomatocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "10381-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Target cells [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "10900-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11060-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Reducing substances [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11259-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method|Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11281-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Auer rods [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11483-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Varicella zoster virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Varicella zoster virus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12239-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Oligosaccharides [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12454-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Urate crystals amorphous [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12598-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fat.neutral [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12853-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Purkinje cells Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13248-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis D virus Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13532-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Xanthochromia [Presence] of Cerebral spinal fluid|Xanthochromia of Cerebral spinal fluid Qualitative"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13533-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Acid hemolysis [Presence] of Blood"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13578-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Promazine [Presence] in Serum or Plasma"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13655-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Leukocytes [Presence] in Stool by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13931-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Striated muscle Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13949-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cytomegalovirus IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13950-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis A virus IgM Ab [Presence] in Serum by Immunoassay|Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13951-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis A virus Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13952-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus core Ab [Presence] in Serum by Immunoassay|Hepatitis B virus core Ab [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13953-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus e Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "14249-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Purkinje cells Ab [Presence] in Serum by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "14273-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Reticulin IgA Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "14564-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin.gastrointestinal [Presence] in Stool --2nd specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "14565-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin.gastrointestinal [Presence] in Stool --3rd specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15151-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aspergillus fumigatus 3 Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15179-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fibrin D-dimer [Presence] in Platelet poor plasma"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "16128-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis C virus Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "16369-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Amphetamines [Presence] in Urine by Confirmatory method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "16933-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus core Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "16942-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "16955-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus 2 IgG Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "17257-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mesothelial cells [Presence] in Body fluid by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "17726-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Treponema pallidum IgG Ab [Presence] in Serum by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "17783-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemosiderin [Presence] in Urine by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "17850-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus 1 IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "18282-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cannabinoids [Presence] in Urine by Screen method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "18311-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pelger Huet cells [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "18312-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Platelet satellitism [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "18390-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Opiates [Presence] in Urine by Confirmatory method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "18481-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Streptococcus pyogenes Ag [Presence] in Throat"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "19162-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Varicella zoster virus IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "19252-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Megakaryocytes/100 leukocytes in Blood"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1928-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Immunoglobulin light chains [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "19429-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Propoxyphene [Presence] in Urine by Screen method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "19554-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Methamphetamine [Presence] in Urine by Screen method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "1977-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bilirubin [Presence] in Urine|Bilirubin.total [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20404-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fibronectin.fetal [Presence] in Vaginal fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20411-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Barbiturates [Mass/volume] in Urine by Confirmatory method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20421-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Barbiturates [Presence] in Serum or Plasma by Screen method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20507-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Reagin Ab [Presence] in Serum by RPR"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2106-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Choriogonadotropin (pregnancy test) [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2118-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Choriogonadotropin (pregnancy test) [Presence] in Serum or Plasma"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21233-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cryptosporidium sp Ag [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21348-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HTLV 1+2 IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21518-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCL-70 extractable nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21523-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Smith extractable nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21560-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Thermoactinomyces candidus Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21561-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Thermoactinomyces sacchari Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21695-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HFE gene p.C282Y [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21696-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HFE gene p.H63D [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21747-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HC gene rearrangements [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "21753-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "TCRG gene rearrangements [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22239-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cytomegalovirus Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22295-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Epstein Barr virus early IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22310-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Helicobacter pylori Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22362-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HTLV 1+2 Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22415-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mumps virus IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22566-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Streptococcus pyogenes enzyme Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "22572-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Saccharomonospora viridis Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2334-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin.gastrointestinal [Presence] in Gastric fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2335-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin.gastrointestinal [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2349-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Glucose [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2350-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Glucose [Mass/volume] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23785-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Trypanosoma cruzi Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23820-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aspergillus flavus Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23826-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bordetella pertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method|Bordetella pertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23867-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hantavirus sin nombre IgG Ab [Titer] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23868-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hantavirus sin nombre IgM Ab [Titer] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23929-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ribonucleoprotein extractable nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23980-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Borrelia burgdorferi IgG Ab [Presence] in Body fluid by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "23982-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Borrelia burgdorferi IgM Ab [Presence] in Body fluid by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24015-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A+B Ag [Presence] in Unspecified specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24027-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Streptococcus pneumoniae Ag [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24111-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neisseria gonorrhoeae DNA [Presence] in Unspecified specimen by Probe and target amplification method|Neisseria gonorrhoeae DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24113-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus core IgM Ab [Presence] in Serum by Immunoassay|Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24114-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Epstein Barr virus capsid IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24115-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Epstein Barr virus capsid IgM Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24119-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cytomegalovirus IgM Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "24312-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Treponema pallidum Ab [Presence] in Serum by Agglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2432-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Homogentisate [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2474-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Indicans [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2514-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ketones [Presence] in Urine by Test strip"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "25514-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rubella virus IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2606-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Melanin [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "26620-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hantavirus IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "26960-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Trypsin [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27270-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "4-Hydroxyphenylacetate [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27420-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Phosphatidylglycerol [Units/volume] in Amniotic fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2761-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Phenylketones [Presence] in Blood"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28005-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MTHFR gene p.C677T [Presence] in Blood or Tissue by Molecular genetics method|MTHFR gene c.677C&gt;T [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28060-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MTHFR gene p.A1298C [Presence] in Blood or Tissue by Molecular genetics method|MTHFR gene c.1298A&gt;C [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28067-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin F [Presence] in Amniotic fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "2887-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Protein [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29257-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mycoplasma pneumoniae DNA [Presence] in Unspecified specimen by Probe and target amplification method|Mycoplasma pneumoniae DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29495-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes virus 6 DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29497-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Platelet associated IgG Ab [Presence] in Blood by Flow cytometry (FC)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29498-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Platelet associated IgM Ab [Presence] in Blood by Flow cytometry (FC)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29591-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29610-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus DNA [Presence] in Serum or Plasma by Probe and target amplification method|Hepatitis B virus DNA [Presence] in Serum or Plasma by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29672-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bordetella pertussis IgA Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29673-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bordetella pertussis IgM Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29674-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bordetella pertussis IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29723-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bordetella parapertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method|Bordetella parapertussis DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29771-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin.gastrointestinal [Presence] in Stool by Immunologic method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29778-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "West Nile virus IgM Ab [Presence] in Unspecified specimen by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29891-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Helicobacter pylori [Presence] in Stomach by urea breath test"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29899-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gamma globulin [Presence] in 24 hour Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29901-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HTLV 1+2 Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29908-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Parainfluenza virus 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29909-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Parainfluenza virus 2 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 2 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29910-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Parainfluenza virus 3 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 3 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29945-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Alpha 1 globulin [Presence] in 24 hour Urine by Electrophoresis"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29947-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Alpha 2 globulin [Presence] in 24 hour Urine by Electrophoresis"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29950-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nuclear IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29951-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Beta globulin [Presence] in 24 hour Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29990-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spermatozoa [Presence] in Semen by Light microscopy --post vasectomy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29994-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Basement membrane IgG Ab [Presence] in Serum by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "29995-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Basement membrane IgA Ab [Presence] in Serum by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30036-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aspergillus fumigatus 2 Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30167-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe and signal amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30219-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Coxsackievirus A9 Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30246-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cytomegalovirus DNA [Presence] in Serum or Plasma by Probe and target amplification method|Cytomegalovirus DNA [Presence] in Serum or Plasma by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30361-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HIV 2 Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30557-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Smooth muscle IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30577-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "2-methyl,3-hydroxybutyrate (C5-OH) [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31153-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Coccidioides sp Ab [Presence] in Unspecified specimen by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31201-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HIV 1+2 Ab [Presence] in Serum by Immunoassay|HIV 1+2 Ab [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31539-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neuronal nuclear type 2 Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31545-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31588-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ribonucleoprotein extractable nuclear IgG Ab [Units/volume] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31625-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sjogrens syndrome-A extractable nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31626-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sjogrens syndrome-B extractable nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31627-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Smith extractable nuclear Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31788-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cryptococcus sp Ag [Presence] in Cerebral spinal fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31843-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Helicobacter pylori Ag [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31859-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A Ag [Presence] in Unspecified specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31864-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus B Ag [Presence] in Unspecified specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31969-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Streptococcus pneumoniae Ag [Presence] in Unspecified specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "32131-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hantavirus IgM Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "32356-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yeast [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "32358-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Protein fractions.oligoclonal bands [Presence] in Cerebral spinal fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3241-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Coagulation factor XIII coagulum dissolution at 24H [Presence] in Platelet poor plasma by Coagulation assay|Coagulation factor XIII coagulum dissolution at 24 hours [Presence] in Platelet poor plasma by Coagulation assay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "32637-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Urease [Presence] in Tissue"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "32765-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yeast [Presence] in Unspecified specimen by Wet preparation"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "32789-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Viscosity of Semen Qualitative"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33031-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sodium urate crystals [#/area] in Urine sediment by Microscopy low power field"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33032-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spermatozoa Progressive [Presence] in Semen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33291-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus 1 IgG Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33422-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Amphiphysin Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3349-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Amphetamines [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33615-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neuronal nuclear type 1 Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3376-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Barbiturates [Presence] in Serum, Plasma or Blood"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3377-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Barbiturates [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33861-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Starch granules [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3390-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Benzodiazepines [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33923-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemosiderin [Presence] in Unspecified specimen"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33930-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lupus anticoagulant neutralization hexagonal phase phospholipid [Presence] in Platelet poor plasma|aPTT W excess hexagonal phospholipid (StaClot LA confirm)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3414-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Buprenorphine [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34469-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Leukocytes [Presence] in Bile fluid by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34470-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Giardia lamblia Ag [Presence] in Bile fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34471-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Calcium bilirubinate crystals [Presence] in Bile fluid by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34472-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cholesterol crystals [Presence] in Bile fluid by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34473-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neutrophils.vacuolated+Segmented [Presence] in Blood"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34487-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34701-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ab [Presence] in Serum|Platelet Ab.heparin induced [Presence] in Serum|Heparin induced platelet Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34706-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "CFTR gene p.3199 del6 [Presence] in Blood or Tissue by Molecular genetics method|CFTR gene c.3199del6 [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34713-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Clostridium difficile toxin A+B [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34729-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "CFTR gene p.R117H+5T variant [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34892-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "West Nile virus RNA [Presence] in Unspecified specimen by Probe and target amplification method|West Nile virus RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35270-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Candida sp Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35271-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Candida sp Ag [Presence] in Serum by Latex agglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35272-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Centromere IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35277-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Myocardium IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35284-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Histone IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35471-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HLA Ab [Presence]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35492-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] by Probe and target amplification method|Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35503-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arterial patency Wrist artery --pre arterial puncture"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35729-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chlamydia sp DNA [Presence] in Unspecified specimen by Probe and target amplification method|Chlamydia sp DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3773-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Methadone [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "38380-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HFE gene p.S65C [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3879-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Opiates [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "38917-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human metapneumovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human metapneumovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "3936-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Phencyclidine [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "39528-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Adenovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Adenovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "4027-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Secobarbital [Presence] in Serum or Plasma"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40473-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Thermoactinomyces vulgaris 1 Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40703-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lactoferrin [Presence] in Stool by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40729-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus IgM Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "4073-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tricyclic antidepressants [Presence] in Serum or Plasma"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "4093-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Verapamil [Presence] in Serum or Plasma"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40982-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus B RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus B RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40988-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory syncytial virus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Respiratory syncytial virus RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40991-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rhinovirus+Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method|Rhinovirus+Enterovirus RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "41005-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human coronavirus NL63 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human coronavirus NL63 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "41010-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Parainfluenza virus 4 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Parainfluenza virus 4 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "41400-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yersinia sp IgA Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "41401-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yersinia sp IgG Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "42241-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cocaine+Benzoylecgonine [Presence] in Urine by Screen method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "42481-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe and signal amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "42714-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "t(9,22)(ABL1,BCR) p210 Translocation [Presence] in Blood or Tissue by Molecular genetics method|t(9;22)(q34.1;q11)(ABL1,BCR) b2a2+b3a2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "42938-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "CFTR gene allele 1 [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "42939-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "CFTR gene allele 2 [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "43249-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "X ray dye crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "43399-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "JAK2 gene p.V617F [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "43597-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Inner Ear 68kD Ab [Presence] in Serum or Plasma by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "44099-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Galactomannan Ag [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "44332-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Jo-1 extractable nuclear IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "44754-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis D virus Ag [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "44877-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Insulin dependent diabetes mellitus [Presence]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "44938-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis D virus IgM Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "45153-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HLA Ab in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "4579-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin F [Presence] in Blood"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "4631-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin F [Presence] in Stool by Apt-Downey method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "4639-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unstable Hemoglobin [Presence] in Red Blood Cells"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "46740-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin disorders newborn screen interpretation"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "46771-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Classical galactosemia newborn screen interpretation"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "47238-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Treponema pallidum IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "47251-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "BK virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|BK virus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "49524-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A H3 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A H3 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "49541-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fasting status [Presence] - Reported|Fasting status - Reported"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "49795-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "t(9,22)(ABL1,BCR) p190 Translocation [Presence] in Blood or Tissue by Molecular genetics method|t(9;22)(q34.1;q11)(ABL1,BCR) e1a2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5000-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cytomegalovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Cytomegalovirus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5005-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Epstein Barr virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Epstein Barr virus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5010-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis C virus RNA [Presence] in Blood by Probe and target amplification method|Hepatitis C virus RNA [Presence] in Blood by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5014-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Herpes simplex virus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5018-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HIV 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|HIV 1 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5020-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Legionella sp rRNA [Presence] in Unspecified specimen by DNA probe"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5028-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neisseria gonorrhoeae rRNA [Presence] in Unspecified specimen by DNA probe"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50322-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MLH-1 Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50323-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MSH-2 Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50324-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MSH-6 Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50328-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "PMS-2 Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50385-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Alpha-1-Microglobulin.placental [Presence] in Vaginal fluid"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5052-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aspergillus sp Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5058-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Blastomyces dermatitidis Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "51006-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Direct antiglobulin test.unspecified reagent [Presence] on Red Blood Cells"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5117-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cryoglobulin [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5156-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Epstein Barr virus nuclear IgG Ab [Presence] in Serum by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5195-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus surface Ag [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5196-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B virus surface Ag [Presence] in Serum by Immunoassay|Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5199-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis C virus Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5213-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Heterophile Ab [Presence] in Serum by Latex agglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5218-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Histoplasma capsulatum Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5290-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Reagin Ab [Presence] in Cerebral spinal fluid by VDRL"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5292-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Reagin Ab [Presence] in Serum by VDRL"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5297-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rheumatoid factor [Presence] in Serum by Latex agglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5358-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Smooth muscle Ab [Titer] in Serum by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5393-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Treponema pallidum Ab [Presence] in Serum by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "54067-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Clostridium difficile toxin genes [Presence] in Stool by Probe and target amplification method|Clostridium difficile toxin genes [Presence] in Stool by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "54142-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Candida sp DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Candida sp DNA [Presence] in Vaginal fluid by Probe and signal amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "54143-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gardnerella vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Gardnerella vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "54144-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Trichomonas vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method|Trichomonas vaginalis DNA [Presence] in Vaginal fluid by Probe and signal amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "54905-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Norovirus 1 RNA [Presence] in Stool by Probe and target amplification method|Norovirus 1 RNA [Presence] in Stool by Probe and target amplification method|Norovirus Genogroup I RNA [Presence] in Stool by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "54906-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Norovirus 2 RNA [Presence] in Stool by Probe and target amplification method|Norovirus 2 RNA [Presence] in Stool by Probe and target amplification method|Norovirus Genogroup II RNA [Presence] in Stool by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "550-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bordetella pertussis Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "55464-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A swine origin RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A swine origin RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "55465-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A H1 2009 pandemic RNA [Presence] in Unspecified specimen by Probe and target amplification method|Influenza virus A H1 2009 pandemic RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5766-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ammonium urate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5770-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bilirubin [Presence] in Urine by Test strip|Bilirubin.total [Presence] in Urine by Test strip"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5771-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bilirubin crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5773-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Calcium carbonate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5774-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Calcium oxalate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5775-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Calcium phosphate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5777-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cholesterol crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5783-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unidentified crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5784-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cystine crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "57901-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Clostridium difficile glutamate dehydrogenase [Presence] in Stool"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5794-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemoglobin [Presence] in Urine by Test strip"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5795-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hippurate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5799-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Leukocyte esterase [Presence] in Urine by Test strip"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "58012-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Natalizumab Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5802-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nitrite [Presence] in Urine by Test strip"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5809-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Reducing substances [Presence] in Urine"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5813-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Trichomonas vaginalis [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5814-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Triple phosphate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5815-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tyrosine crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5817-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Urate crystals [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "58415-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "BRAF gene p.V600E [Presence] in Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "58416-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MLH1 gene methylation [Presence] in Tissue by Molecular genetics method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5846-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus 1 Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5849-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Herpes simplex virus 2 Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5863-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus A Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5867-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza virus B Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "58751-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Treponema pallidum IgG Ab [Presence] in Cerebral spinal fluid by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5876-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory syncytial virus Ag [Presence] in Unspecified specimen by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "5880-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rotavirus Ag [Presence] in Stool by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "588-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Legionella pneumophila Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "59262-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Leukocyte esterase [Presence] in Cerebral spinal fluid by Test strip"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "59420-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human papilloma virus16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe and signal amplification method|Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe and signal amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "59838-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cytomegalovirus Ab [Presence] in Serum or Plasma by Latex agglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "59839-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Urate crystals [Presence] in Tissue by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "60340-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Crystals.amorphous [Presence] in Urine sediment by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "61404-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Staphylococcus aureus DNA [Presence] in Unspecified specimen by Probe and target amplification method|Staphylococcus aureus DNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "62423-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human coronavirus HKU1 RNA [Presence] in Unspecified specimen by Probe and target amplification method|Human coronavirus HKU1 RNA [Presence] in Unspecified specimen by Probe and target amplification method"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "62862-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Microsatellite instability [Presence] in Tissue by Immune stain"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6306-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Adenovirus C(40)+B(41) Ag [Presence] in Stool by Immunoassay|Adenovirus 40+41 Ag [Presence] in Stool by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6320-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Borrelia burgdorferi IgG Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6321-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Borrelia burgdorferi IgM Ab [Presence] in Serum by Immunoblot (IB)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "63379-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "DNA double strand IgG Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6355-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chlamydia trachomatis Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "63558-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HLA-DQB1*0602 [Presence]"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6362-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Clostridium difficile toxin A+B [Presence] in Stool by Cytotoxin tissue culture assay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6443-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lactoferrin [Presence] in Stool by Latex agglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6447-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Legionella pneumophila Ag [Presence] in Urine by Immunoassay"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6733-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pigeon serum Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6808-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aspergillus fumigatus 1 Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6809-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aspergillus fumigatus 6 Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6810-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aureobasidium pullulans Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "6818-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Saccharopolyspora rectivirgula Ab [Presence] in Serum by Immune diffusion (ID)"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "700-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumocystis jiroveci Ag [Presence] in Unspecified specimen by Immunofluorescence"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "702-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Anisocytosis [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "703-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Basophilic stippling [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "716-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Heinz bodies [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "728-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hypochromia [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "733-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lymphocytes Variant [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "738-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Macrocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "741-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Microcytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "765-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Neutrophils.hypersegmented [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "774-0",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ovalocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7789-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Acanthocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7790-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Burr cells [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7791-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dacrocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7792-5",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dohle body [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7793-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Howell-Jolly bodies [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7795-8",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pappenheimer bodies [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7796-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Platelet clump [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7797-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rouleaux [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7798-2",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Smudge cells [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "779-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Poikilocytosis [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "7918-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "HIV 1+2 Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "800-3",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Schistocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "801-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sickle cells [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "802-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spherocytes [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "803-7",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Toxic granules [Presence] in Blood by Light microscopy"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "8041-6",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Treponema pallidum Ab [Presence] in Serum by Hemagglutination"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "8061-4",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nuclear Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "8091-1",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ribonucleoprotein extractable nuclear Ab [Presence] in Serum"
+          },
+          {
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "8092-9",
+            "<a href="c:\work\org.hl7.fhir\build\publish/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCL-70 extractable nuclear Ab [Presence] in Serum"
+          }
+        }
+      }
+    }
+  }
+}</pre>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; HSPC 2014+. FHIR STU3 Candidate (v) generated on . 
+               <a style="color: #81BEF7" rel="license" href="../license.html"><img style="border-style: none;" alt="CC0" src="../cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="../external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+</body>
+</html>
