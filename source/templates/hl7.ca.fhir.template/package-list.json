@@ -1,0 +1,24 @@
+﻿{
+  "package-id": "fhir.ca.template",
+  "title": "Base template for Canadian FHIR IGs",
+  "canonical": "http://fhir.org/templates/fhir.ca.template",
+  "introduction": "This is the basic template",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/HL7/ig-template-ca",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.1.0",
+      "desc": "First release of the template package",
+      "path": "http://fhir.org/templates/fhir.ca.template/0.1.0",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2021-11-25"
+    }
+  ]
+}
