@@ -1,0 +1,409 @@
+﻿{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Argonaut Clinical Notes CapabilityStatement",
+    "description": "This profile defines the expected capabilities of an Argonaut Data Query server when conforming to the Argonaut Data Query Clinical Notes IG. The CapabilityStatement resource includes the complete list of actual Clinical Notes profiles, RESTful operations, and search parameters supported by Argonaut Data Query Servers. Servers have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+    "license": {
+      "url": "http://spdx.org/licenses/CC0-1.0.html"
+    },
+    "version": "1.0.0",
+    "contact": {
+      "name": "The Argonaut Project"
+    }
+  },
+  "externalDocs": {
+    "url": "http://fhir.org/guides/argonaut/clinicalnotes/CapabilityStatement/argonaut-clinical-notes-server",
+    "description": "FHIR CapabilityStatement"
+  },
+  "paths": {
+    "/DocumentReference/{rid}": {
+      "summary": "Read/Write/etc resource instance of type DocumentReference",
+      "description": "Access to services to manage the state of a single resource of type DocumentReference",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readDocumentReference",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/DocumentReference"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/DocumentReference.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DocumentReference": {
+      "summary": "Manager for resources of type DocumentReference",
+      "description": "The Manager for resources of type DocumentReference: provides services to manage the collection of all the DocumentReference instances",
+      "put": {
+        "summary": "Create a new resource",
+        "operationId": "createDocumentReference",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/DocumentReference"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "http://hl7.org/fhir/STU3/DocumentReference.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/DocumentReference"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/DocumentReference.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DiagnosticReport/{rid}": {
+      "summary": "Read/Write/etc resource instance of type DiagnosticReport",
+      "description": "Access to services to manage the state of a single resource of type DiagnosticReport",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readDiagnosticReport",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/DiagnosticReport"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/DiagnosticReport.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/DiagnosticReport": {
+      "summary": "Manager for resources of type DiagnosticReport",
+      "description": "The Manager for resources of type DiagnosticReport: provides services to manage the collection of all the DiagnosticReport instances",
+      "put": {
+        "summary": "Create a new resource",
+        "operationId": "createDiagnosticReport",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/DiagnosticReport"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "http://hl7.org/fhir/STU3/DiagnosticReport.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/DiagnosticReport"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/DiagnosticReport.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Binary/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Binary",
+      "description": "Access to services to manage the state of a single resource of type Binary",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readBinary",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Binary"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/Binary.xsd"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/Components/parameters/summary"
+          },
+          {
+            "$ref": "#/Components/parameters/format"
+          },
+          {
+            "$ref": "#/Components/parameters/pretty"
+          },
+          {
+            "$ref": "#/Components/parameters/elements"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "summary": {
+        "summary": {
+          "name": "_summary",
+          "in": "query",
+          "description": "Requests the server to return a designated subset of the resource",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "true",
+              "text",
+              "data",
+              "count",
+              "false"
+            ]
+          }
+        }
+      },
+      "format": {
+        "format": {
+          "name": "_format",
+          "in": "query",
+          "description": "Specify alternative response formats by their MIME-types (when a client is unable acccess accept: header)",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "schema": {
+            "type": "string",
+            "format": "mime-type"
+          }
+        }
+      },
+      "pretty": {
+        "pretty": {
+          "name": "_pretty",
+          "in": "query",
+          "description": "Ask for a pretty printed response for human convenience",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      "elements": {
+        "elements": {
+          "name": "_elements",
+          "in": "query",
+          "description": "Requests the server to return a collection of elements from the resource",
+          "allowEmptyValue": true,
+          "style": "matrix",
+          "explode": false,
+          "schema": {
+            "type": "array",
+            "format": "string"
+          }
+        }
+      }
+    }
+  }
+}

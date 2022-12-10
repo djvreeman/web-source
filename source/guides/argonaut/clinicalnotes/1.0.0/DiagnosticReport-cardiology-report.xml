@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="cardiology-report"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut/clinicalnotes/StructureDefinition/argo-diagnosticreport-notes-and-reports"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: cardiology-report</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Radiology <span style="background: LightGoldenRodYellow">(Details : {LOINC code 'LP29684-5' = 'LP29684-5', given as 'Radiology'})</span></p><p><b>code</b>: MR Abdomen W contrast IV <span style="background: LightGoldenRodYellow">(Details : {LOINC code '36134-5' = 'MR Abdomen W contrast IV', given as 'MR Abdomen W contrast IV'})</span></p><p><b>subject</b>: <a href="Patient-example.html">Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: female; birthDate: 20/02/2007</a></p><p><b>effective</b>: 02/01/2011 8:39:30 AM</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LP29684-5"/>
+      <display value="Radiology"/>
+    </coding>
+    <text value="Radiology"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="36134-5"/>
+      <display value="MR Abdomen W contrast IV"/>
+    </coding>
+    <text value="MR Abdomen W contrast IV"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2011-01-01T21:39:30.000Z"/>
+</DiagnosticReport>

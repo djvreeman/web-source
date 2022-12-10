@@ -1,20 +1,5 @@
-/source/guides/argonaut/clinicalnotes
-/source/guides/argonaut/pd
-/source/guides/argonaut/questionnaire
-/source/guides/argonaut/r2
-/source/guides/argonaut/scheduling
-/source/guides/hspc/core
 /.sass-cache
 /output
-/source/packages/fhir.test.data/1.0.2/package.tgz
-/source/packages/fhir.test.data/3.0.1/package.tgz
-/source/packages/fhir.test.data/4.0.0/package.tgz
-/source/packages/fhir.tx.support/1.0.2/package.tgz
-/source/packages/fhir.tx.support/3.0.1/package.tgz
-/source/packages/fhir.tx.support/4.0.0/package.tgz
-/source/guides/package-feed.xml
-/source/guides/publication-feed.xml
-/source/archive/comparison.zip
 /source/.jekyll-cache
 
 # Created by https://www.toptal.com/developers/gitignore/api/jekyll,java-web,webstorm,intellij+all,ruby

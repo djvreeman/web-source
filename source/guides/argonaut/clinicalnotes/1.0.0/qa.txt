@@ -1,0 +1,103 @@
+﻿Argonaut Clinical Notes : Validation Results
+=========================================
+
+err = 4, warn = 26, info = 40
+Generated Thu Apr 18 13:16:36 AEST 2019. FHIR version 3.0.1 for fhir.argonaut.clinicalnotes#1.0.0 (canonical = http://fhir.org/guides/argonaut/clinicalnotes)
+
+ Build Errors : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\cardiology-report : 1 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\chest-xray-report : 1 / 1
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\discharge-summary-note : 0 / 1
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\patient-example : 0 / 4
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\progress-note : 0 / 1
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\CodeSystem-documentreference-category : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ValueSet-argonaut-clinical-note-type : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ValueSet-diagnosticreport-category : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ValueSet-documentreference-category : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\capabilitystatement-argonaut-clinical-notes-client : 0 / 13
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\capabilitystatement-argonaut-clinical-notes-server : 0 / 13
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ig : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\structuredefinition-argo-clinicalnotes : 0 / 0
+ C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\structuredefinition-argo-diagnosticreport-notes-and-reports : 0 / 0
+</table>
+
+== n/a ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\cardiology-report.json ==
+ERROR: DiagnosticReport/cardiology-report: DiagnosticReport.category.coding: The code "LP29684-5" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5) is not  valid in the value set All codes known to the system
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\chest-xray-report.json ==
+ERROR: DiagnosticReport/chest-xray-report: DiagnosticReport.category.coding: The code "LP29684-5" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5) is not  valid in the value set All codes known to the system
+WARNING: DiagnosticReport/chest-xray-report: DiagnosticReport.presentedForm.contentType: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\discharge-summary-note.json ==
+WARNING: DocumentReference/discharge-summary-note: DocumentReference.content.attachment.contentType: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\patient-example.xml ==
+WARNING: Patient/example: Patient.extension[1].extension[4].valueCoding: Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-race (http://hl7.org/fhir/us/core/ValueSet/detailed-race, and a code from this value set is required)
+WARNING: Patient/example: Patient.extension[1].extension[5].valueCoding: Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-race (http://hl7.org/fhir/us/core/ValueSet/detailed-race, and a code from this value set is required)
+WARNING: Patient/example: Patient.extension[2].extension[2].valueCoding: Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity, and a code from this value set is required)
+WARNING: Patient/example: Patient.extension[2].extension[3].valueCoding: Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity, and a code from this value set is required)
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\examples\progress-note.json ==
+WARNING: DocumentReference/progress-note: DocumentReference.content.attachment.contentType: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\CodeSystem-documentreference-category.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ValueSet-argonaut-clinical-note-type.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ValueSet-diagnosticreport-category.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ValueSet-documentreference-category.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\capabilitystatement-argonaut-clinical-notes-client.json ==
+WARNING: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.patchFormat: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[1].extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[1].extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[1].extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[1].extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[1].extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[2].extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[2].extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[2].extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[2].extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-client: CapabilityStatement.rest.resource[2].extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\capabilitystatement-argonaut-clinical-notes-server.json ==
+WARNING: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.patchFormat: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[1].extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[1].extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[1].extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[1].extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[1].extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[2].extension[2].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[2].extension[3].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[2].extension[4].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[2].extension[5].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/argonaut-clinical-notes-server: CapabilityStatement.rest.resource[2].extension[6].extension[1]: This element does not match any known slice for the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\ig.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\structuredefinition-argo-clinicalnotes.xml ==
+
+
+== C:\work\org.hl7.fhir.publish\fhir.argonaut.clinicalnotes#1.0.0\source\resources\structuredefinition-argo-diagnosticreport-notes-and-reports.xml ==
+
+
