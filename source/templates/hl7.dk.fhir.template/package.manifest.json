@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "date": "20220916133604",
-  "notForPublication": true,
-  "name": "hl7.dk.fhir.template"
+  "version" : "0.2.0",
+  "date" : "20221217231236",
+  "notForPublication" : true,
+  "name" : "hl7.dk.fhir.template"
 }

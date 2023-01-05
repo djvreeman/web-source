@@ -1,8 +1,8 @@
 {
-  "url": "http://fhir.org/templates/hl7.at.fhir.template",
-  "package-id": "hl7.at.fhir.template",
-  "ig-ver": "0.0.1",
-  "date": "Tue, 04 Oct, 2022 17:50:47 +1100",
-  "version": "5.0.0-ballot",
-  "tool": "5.0.0-ballot (3)"
+  "url" : "http://fhir.org/templates/hl7.at.fhir.template",
+  "package-id" : "hl7.at.fhir.template",
+  "ig-ver" : "0.1.0",
+  "date" : "Sat, 17 Dec, 2022 23:12:38 +1300",
+  "version" : "5.0.0-snapshot2",
+  "tool" : "5.0.0-snapshot2 (3)"
 }

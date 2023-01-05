@@ -1,6 +1,6 @@
 {
-  "version": "0.5.0",
-  "date": "20220916133611",
-  "notForPublication": true,
-  "name": "hl7.base.template"
+  "version" : "0.6.0",
+  "date" : "20221217231243",
+  "notForPublication" : true,
+  "name" : "hl7.base.template"
 }

@@ -1,8 +1,8 @@
 {
-  "url": "http://fhir.org/templates/fhir.base.template",
-  "package-id": "fhir.base.template",
-  "ig-ver": "0.2.2",
-  "date": "Fri, 03 Sep, 2021 07:28:40 +1000",
-  "version": "4.6.0",
-  "tool": "4.6.0 (3)"
+  "url" : "http://fhir.org/templates/fhir.base.template",
+  "package-id" : "fhir.base.template",
+  "ig-ver" : "0.4.0",
+  "date" : "Sat, 17 Dec, 2022 23:12:43 +1300",
+  "version" : "5.0.0-snapshot2",
+  "tool" : "5.0.0-snapshot2 (3)"
 }

@@ -1,14 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
   <channel>
     <title>FHIR Foundation FHIR Support Packages</title>
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/templates/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Tue, 04 Oct 2022 05:50:53 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 17 Dec 2022 11:12:44 +1300</lastBuildDate>
     <atom:link href="http://fhir.org/templates/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>cqf.opioidcds.fhir.template#0.2.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/cqf.opioidcds.fhir.template/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/cqf.opioidcds.fhir.template/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.davinci.template#0.4.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.davinci.template/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.davinci.template/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>ihe.fhir.template#0.7.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/ihe.fhir.template/0.7.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/ihe.fhir.template/0.7.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.utg.template#0.4.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.utg.template/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.utg.template/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.au.fhir.template#0.4.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.au.fhir.template/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.au.fhir.template/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.fhir.template#0.6.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.fhir.template/0.6.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.fhir.template/0.6.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>fhir.base.template#0.4.0</title>
+      <description>Fix bugs in xslt + add test tab</description>
+      <link>http://fhir.org/templates/fhir.base.template/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/fhir.base.template/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.at.fhir.template#0.1.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.at.fhir.template/0.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.at.fhir.template/0.1.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>cqf.fhir.template#0.2.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/cqf.fhir.template/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/cqf.fhir.template/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.cda.template#0.5.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.cda.template/0.5.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.cda.template/0.5.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.base.template#0.6.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.base.template/0.6.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.base.template/0.6.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.dk.fhir.template#0.2.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.dk.fhir.template/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.dk.fhir.template/0.2.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
+    <item>
+      <title>hl7.au.base.template#0.4.0</title>
+      <description>Upgrade for dependency on fhir.base.template</description>
+      <link>http://fhir.org/templates/hl7.au.base.template/0.4.0/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/hl7.au.base.template/0.4.0/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Sat, 17 Dec 2022 11:12:44 +1300</pubDate>
+    </item>
     <item>
       <title>hl7.at.fhir.template#0.0.1</title>
       <description>First release</description>

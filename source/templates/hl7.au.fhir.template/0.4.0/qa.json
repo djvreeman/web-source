@@ -1,0 +1,8 @@
+{
+  "url" : "http://fhir.org/templates/hl7.au.fhir.template",
+  "package-id" : "hl7.au.fhir.template",
+  "ig-ver" : "0.4.0",
+  "date" : "Sat, 17 Dec, 2022 23:12:41 +1300",
+  "version" : "5.0.0-snapshot2",
+  "tool" : "5.0.0-snapshot2 (3)"
+}

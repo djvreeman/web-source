@@ -1,6 +1,6 @@
 {
-  "version": "0.6.0",
-  "date": "20220916133609",
-  "notForPublication": true,
-  "name": "ihe.fhir.template"
+  "version" : "0.7.0",
+  "date" : "20221217231242",
+  "notForPublication" : true,
+  "name" : "ihe.fhir.template"
 }

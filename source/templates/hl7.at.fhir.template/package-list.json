@@ -1,24 +1,33 @@
 ﻿{
-  "package-id": "hl7.at.fhir.template",
-  "title": "Austrian FHIR® IG Base Template",
-  "introduction": "For use by anyone in the Austrian domain",
-  "canonical": "http://fhir.org/templates/hl7.at.fhir.template",
-  "list": [
+  "package-id" : "hl7.at.fhir.template",
+  "title" : "Austrian FHIR® IG Base Template",
+  "introduction" : "For use by anyone in the Austrian domain",
+  "canonical" : "http://fhir.org/templates/hl7.at.fhir.template",
+  "list" : [
     {
-      "version": "current",
-      "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/HL7Austria/at-fhir-ig-template/",
-      "status": "ci-build",
-      "current": true
+      "version" : "current",
+      "desc" : "Continuous Integration Build (latest in version control)",
+      "path" : "http://build.fhir.org/ig/HL7Austria/at-fhir-ig-template/",
+      "status" : "ci-build",
+      "current" : true
     },
     {
-      "version": "0.0.1",
-      "desc": "First release",
-      "path": "http://fhir.org/templates/hl7.at.fhir.template/0.0.1",
-      "status": "release",
-      "sequence": "Publications",
-      "current": true,
-      "date": "2022-10-04"
+      "version" : "0.1.0",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.1.0",
+      "status" : "release",
+      "sequence" : "Publications",
+      "fhirversion" : "4.0.1",
+      "desc" : "Upgrade for dependency on fhir.base.template",
+      "date" : "2022-12-17",
+      "current" : true
+    },
+    {
+      "version" : "0.0.1",
+      "desc" : "First release",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.0.1",
+      "status" : "release",
+      "sequence" : "Publications",
+      "date" : "2022-10-04"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "url": "http://github.com/HL7/ig-template-cda",
-  "package-id": "hl7.cda.template",
-  "ig-ver": "0.4.0",
-  "date": "Fri, 16 Sep, 2022 13:36:08 -0400",
-  "version": "5.0.0-ballot",
-  "tool": "5.0.0-ballot (3)"
+  "url" : "http://github.com/HL7/ig-template-cda",
+  "package-id" : "hl7.cda.template",
+  "ig-ver" : "0.5.0",
+  "date" : "Sat, 17 Dec, 2022 23:12:37 +1300",
+  "version" : "5.0.0-snapshot2",
+  "tool" : "5.0.0-snapshot2 (3)"
 }
