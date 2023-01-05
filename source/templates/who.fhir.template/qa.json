@@ -1,0 +1,8 @@
+{
+  "url" : "http://github.com/WorldHealthOrganization/smart-ig",
+  "package-id" : "who.fhir.template",
+  "ig-ver" : "0.0.2",
+  "date" : "Thu, 05 Jan, 2023 13:08:53 +1100",
+  "version" : "5.0.0-snapshot2",
+  "tool" : "5.0.0-snapshot2 (3)"
+}

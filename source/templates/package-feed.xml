@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
   <channel>
     <title>FHIR Foundation FHIR Support Packages</title>
     <description>New Support Packages published by FHIR Foundation</description>
     <link>http://fhir.org/templates/package-feed.xml</link>
     <generator>HL7 FHIR Publication tooling</generator>
-    <lastBuildDate>Sat, 17 Dec 2022 11:12:44 +1300</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jan 2023 02:32:27 +1100</lastBuildDate>
     <atom:link href="http://fhir.org/templates/package-feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Thu, 07 Nov 2019 03:11:36</pubDate>
     <language>en</language>
     <ttl>600</ttl>
+    <item>
+      <title>who.fhir.template#0.0.2</title>
+      <description>First Release</description>
+      <link>http://fhir.org/templates/who.fhir.template/0.0.2/package.tgz</link>
+      <guid isPermaLink="true">http://fhir.org/templates/who.fhir.template/0.0.2/package.tgz</guid>
+      <dc:creator>FHIR Project</dc:creator>
+      <fhir:kind>fhir.template</fhir:kind>
+      <pubDate>Thu, 05 Jan 2023 01:08:57 +1100</pubDate>
+    </item>
     <item>
       <title>cqf.opioidcds.fhir.template#0.2.0</title>
       <description>Upgrade for dependency on fhir.base.template</description>
