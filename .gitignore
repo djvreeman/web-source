@@ -1,6 +1,7 @@
 /.sass-cache
 /output
 /source/.jekyll-cache
+/fhir-foundation
 
 # Created by https://www.toptal.com/developers/gitignore/api/jekyll,java-web,webstorm,intellij+all,ruby
 # Edit at https://www.toptal.com/developers/gitignore?templates=jekyll,java-web,webstorm,intellij+all,ruby

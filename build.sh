@@ -1,1 +1,1 @@
-jekyll serve -s source -d output --incremental
+jekyll serve -s source -d fhir-foundation --incremental
