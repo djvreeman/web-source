@@ -12,24 +12,23 @@ Conformance testing maybe applied in 3 different ways:
  <li>Testing clients. A human user - or a special application test harness - exercises the client carefully, and tests are applied to the client requests, and known inputs returned, and application behavior tested. These are the most difficult tests to automate</li>
 </ul>
 
-<em>Resource Validation</em>
-
+<p><em>Resource Validation</em></p>
 <ul>
  <li>Schema: The FHIR specification provides <a href="http://hl7.org/fhir/downloads.html">schema for XML, JSON, and RDF (turtle)</a>. These are able to validate the content is structurally correct against the specification</li>
- <li>FHIR Validator: The FHIR community provides a validator for testing resources - see <a href="http://hl7.org/fhir/validation.html">Validating Resources</a>. This can validate that the terminology content of the resource is correct, and validate it against Implementation Guides</li>
- <li>(coming): Beyond what the FHIR validator can check, FHIR.org offers a manual validation service. In this service, FHIR experts will manually examine a resource and ensure that the content is valid against the rules that only a human can test</li>
+ <li>FHIR Validator: The FHIR community provides a validator for testing resources - see <a href="http://hl7.org/fhir/validation.html">Validating Resources</a>. This can validate that the terminology content of the resource is correct, and validate it against Implementation Guides. HL7 also provides a <a href="https://validator.fhir.org">web-based front-end to the FHIR Validator</a>.</li>
+ <li>The Inferno Framework provides a <a href="https://inferno.healthit.gov/validator">FHIR Resource Validator.</a></li>
+ <li>Additional information about <a href="https://confluence.hl7.org/display/FHIR/Public+FHIR+Validation+Services">Public FHIR Validation Services</a></li>
 </ul>
 
-<em>Server Testing</em>
+<p><em>Server Testing</em></p>
 
 FHIR includes a <a href="http://hl7.org/fhir/testscript.html">TestScript</a> resource that represents a set of actions and tests to be carried out on a server. The following services use the TestScript resource and other knowledge to test servers:
 <ul>
  <li><a href="https://touchstone.aegis.net/touchstone/">Touchstone</a> - AEGIS Testing Service</li>
- <li><a href="https://projectcrucible.org/">Crucible</a> - Mitre Test Service</li>
 </ul>
 
-<em>Client Testing</em>
+The U.S. Office of the National Coordinator for Health Information Technology has developed the <a href="https://inferno.healthit.gov/">Inferno Framework</a>, which is a rigorous and extensible testing development framework for FHIR.
 
-AEGIS <a href="https://touchstone.aegis.net/touchstone/">Touchstone</a> can also perform TestScript based testing of FHIR clients. 
+<p><em>Client Testing</em></p>
 
-To add additional testing services to this list, email the <a href="mailto:grahame@hl7.org">FHIR Product Director</a>.
+AEGIS <a href="https://touchstone.aegis.net/touchstone/">Touchstone</a> can also perform TestScript-based testing of FHIR clients.

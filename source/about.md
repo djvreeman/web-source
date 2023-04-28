@@ -15,7 +15,7 @@ HL7 is dedicated to the development and maintenance of healthcare-related intero
 
 **Main Address:** 3300 Washtenaw Ave Ste 227, Ann Arbor, MI 48104 United States
 
-**Email:** Email [the HL7 FHIR Foundation](mailto:fhirfoundation@hl7.org)
+**Email:** Contact [the HL7 FHIR Foundation](mailto:fhirfoundation@hl7.org)
 
 
 
